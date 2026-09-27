@@ -1,0 +1,1558 @@
+<!DOCTYPE html>
+
+<html lang="zh-Hans" xml:lang="zh-Hans" xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta charset="utf-8"/>
+<meta content="quarto-1.10.18" name="generator"/>
+<meta content="width=device-width, initial-scale=1.0, user-scalable=yes" name="viewport"/>
+<title>审计师效应 – 会计研究项目报告</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta content="./" name="quarto:offset"/>
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet"/>
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" id="quarto-text-highlighting-styles" rel="stylesheet"/>
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet"/>
+<link append-hash="true" data-mode="light" href="site_libs/bootstrap/bootstrap-261e60fdf64a0e003ec2340fd2db30d7.min.css" id="quarto-bootstrap" rel="stylesheet"/>
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "没有结果",
+    "search-matching-documents-text": "匹配的文档",
+    "search-copy-link-title": "复制搜索链接",
+    "search-hide-matches-text": "隐藏其它匹配结果",
+    "search-more-match-text": "更多匹配结果",
+    "search-more-matches-text": "更多匹配结果",
+    "search-clear-button-title": "清除",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "取消",
+    "search-submit-button-title": "提交",
+    "search-label": "搜索"
+  }
+}</script>
+<script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+<script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+<link href="styles.css" rel="stylesheet"/>
+<link href="empirical.css" rel="stylesheet"/>
+</head>
+<body class="nav-sidebar docked empirical-report quarto-light">
+<div id="quarto-search-results"></div>
+<header class="headroom fixed-top" id="quarto-header">
+<nav class="quarto-secondary-nav">
+<div class="container-fluid d-flex">
+<button aria-controls="quarto-sidebar" aria-expanded="false" aria-label="展开或折叠侧边栏导航" class="quarto-btn-toggle btn" data-bs-target=".quarto-sidebar-collapse-item" data-bs-toggle="collapse" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }" role="button" type="button">
+<i class="bi bi-layout-text-sidebar-reverse"></i>
+</button>
+<nav aria-label="breadcrumb" class="quarto-page-breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./24_auditor_quality.html">审计师效应</a></li></ol></nav>
+<a aria-controls="quarto-sidebar" aria-expanded="false" aria-label="展开或折叠侧边栏导航" class="flex-grow-1" data-bs-target=".quarto-sidebar-collapse-item" data-bs-toggle="collapse" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }" role="navigation">
+</a>
+<button aria-label="搜索" class="btn quarto-search-button" onclick="window.quartoOpenSearch();" type="button">
+<i class="bi bi-search"></i>
+</button>
+</div>
+</nav>
+</header>
+<!-- content -->
+<div class="quarto-container page-columns page-rows-contents page-layout-article" id="quarto-content">
+<!-- sidebar -->
+<nav class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto" id="quarto-sidebar">
+<div class="pt-lg-2 mt-2 text-left sidebar-header">
+<div class="sidebar-title mb-0 py-0">
+会计研究项目报告
+</div>
+</div>
+<div class="mt-2 flex-shrink-0 align-items-center">
+<div class="sidebar-search">
+<div class="" id="quarto-search" title="搜索"></div>
+</div>
+</div>
+<div class="sidebar-menu-container">
+<ul class="list-unstyled mt-1">
+<li class="sidebar-item">
+<div class="sidebar-item-container">
+<a class="sidebar-item-text sidebar-link" href="./01_core_summary.html">
+<span class="menu-text">核心摘要</span></a>
+</div>
+</li>
+<li class="sidebar-item">
+<div class="sidebar-item-container">
+<a class="sidebar-item-text sidebar-link" href="./02_core_results.html">
+<span class="menu-text">核心结果</span></a>
+</div>
+</li>
+<li class="sidebar-item">
+<div class="sidebar-item-container">
+<a class="sidebar-item-text sidebar-link" href="./03_background.html">
+<span class="menu-text">背景</span></a>
+</div>
+</li>
+<li class="sidebar-item">
+<div class="sidebar-item-container">
+<a class="sidebar-item-text sidebar-link" href="./21_adoption.html">
+<span class="menu-text">四大审计师的采用</span></a>
+</div>
+</li>
+<li class="sidebar-item">
+<div class="sidebar-item-container">
+<a class="sidebar-item-text sidebar-link" href="./22_diffusion.html">
+<span class="menu-text">企业网络传导</span></a>
+</div>
+</li>
+<li class="sidebar-item">
+<div class="sidebar-item-container">
+<a class="sidebar-item-text sidebar-link" href="./23_big4_effect.html">
+<span class="menu-text">四大事务所效应</span></a>
+</div>
+</li>
+<li class="sidebar-item">
+<div class="sidebar-item-container">
+<a class="sidebar-item-text sidebar-link active" href="./24_auditor_quality.html">
+<span class="menu-text">审计师效应</span></a>
+</div>
+</li>
+<li class="sidebar-item">
+<div class="sidebar-item-container">
+<a class="sidebar-item-text sidebar-link" href="./25_matching.html">
+<span class="menu-text">客户、事务所和审计师的匹配</span></a>
+</div>
+</li>
+<li class="sidebar-item">
+<div class="sidebar-item-container">
+<a class="sidebar-item-text sidebar-link" href="./26_akm.html">
+<span class="menu-text">AKM</span></a>
+</div>
+</li>
+<li class="sidebar-item">
+<div class="sidebar-item-container">
+<a class="sidebar-item-text sidebar-link" href="./31_biweekly_memo.html">
+<span class="menu-text">双周备忘录</span></a>
+</div>
+</li>
+<li class="sidebar-item">
+<div class="sidebar-item-container">
+<a class="sidebar-item-text sidebar-link" href="./32_active_tasks.html">
+<span class="menu-text">当前任务</span></a>
+</div>
+</li>
+<li class="sidebar-item">
+<div class="sidebar-item-container">
+<a class="sidebar-item-text sidebar-link" href="./33_data_pipeline.html">
+<span class="menu-text">数据流程</span></a>
+</div>
+</li>
+</ul>
+</div>
+</nav>
+<div class="quarto-sidebar-collapse-item" data-bs-target=".quarto-sidebar-collapse-item" data-bs-toggle="collapse" id="quarto-sidebar-glass"></div>
+<!-- margin-sidebar -->
+<div class="sidebar margin-sidebar" id="quarto-margin-sidebar">
+<nav class="toc-active" id="TOC" role="doc-toc">
+<h2 id="toc-title">该页面内容</h2>
+<ul>
+<li><a class="nav-link active" data-scroll-target="#概述" href="#概述" id="toc-概述">概述</a></li>
+<li><a class="nav-link" data-scroll-target="#核心结果" href="#核心结果" id="toc-核心结果">核心结果</a></li>
+<li><a class="nav-link" data-scroll-target="#研究问题与目前结论" href="#研究问题与目前结论" id="toc-研究问题与目前结论">1. 研究问题与目前结论</a></li>
+<li><a class="nav-link" data-scroll-target="#结果变量审计师质量与样本" href="#结果变量审计师质量与样本" id="toc-结果变量审计师质量与样本">2. 结果变量、审计师质量与样本</a>
+<ul class="collapse">
+<li><a class="nav-link" data-scroll-target="#同样本背景验证逐项与联合回归" href="#同样本背景验证逐项与联合回归" id="toc-同样本背景验证逐项与联合回归">2.1 同样本背景验证：逐项与联合回归</a></li>
+<li><a class="nav-link" data-scroll-target="#历史表现过去记录能否预测之后的结果" href="#历史表现过去记录能否预测之后的结果" id="toc-历史表现过去记录能否预测之后的结果">2.2 历史表现：过去记录能否预测之后的结果</a></li>
+<li><a class="nav-link" data-scroll-target="#旧规格补充task-7-基础回归" href="#旧规格补充task-7-基础回归" id="toc-旧规格补充task-7-基础回归">2.3 旧规格补充：Task 7 基础回归</a></li>
+</ul></li>
+<li><a class="nav-link" data-scroll-target="#质量转变与审计失败rotation-四版本比较" href="#质量转变与审计失败rotation-四版本比较" id="toc-质量转变与审计失败rotation-四版本比较">3. 质量转变与审计失败：rotation 四版本比较</a>
+<ul class="collapse">
+<li><a class="nav-link" data-scroll-target="#质量转变能维持多久两年三年窗口的动机" href="#质量转变能维持多久两年三年窗口的动机" id="toc-质量转变能维持多久两年三年窗口的动机">3.1 质量转变能维持多久：两年、三年窗口的动机</a></li>
+<li><a class="nav-link" data-scroll-target="#strict-样本中的质量转变与结果" href="#strict-样本中的质量转变与结果" id="toc-strict-样本中的质量转变与结果">3.2 Strict 样本中的质量转变与结果</a></li>
+<li><a class="nav-link" data-scroll-target="#rotation-的完整四版本表" href="#rotation-的完整四版本表" id="toc-rotation-的完整四版本表">3.3 rotation 的完整四版本表</a></li>
+</ul></li>
+<li><a class="nav-link" data-scroll-target="#新-a1-匹配业务量基础-ols-与候选池-iv" href="#新-a1-匹配业务量基础-ols-与候选池-iv" id="toc-新-a1-匹配业务量基础-ols-与候选池-iv">4. 新 A1 匹配：业务量、基础 OLS 与候选池 IV</a>
+<ul class="collapse">
+<li><a class="nav-link" data-scroll-target="#新-a1-匹配事件的-ols-基准" href="#新-a1-匹配事件的-ols-基准" id="toc-新-a1-匹配事件的-ols-基准">4.1 新 A1 匹配事件的 OLS 基准</a></li>
+<li><a class="nav-link" data-scroll-target="#候选池-iv上一年事务所候选供给" href="#候选池-iv上一年事务所候选供给" id="toc-候选池-iv上一年事务所候选供给">4.2 候选池 IV：上一年事务所候选供给</a></li>
+<li><a class="nav-link" data-scroll-target="#同所五年轮换的释放容量与接任前业务量-iv" href="#同所五年轮换的释放容量与接任前业务量-iv" id="toc-同所五年轮换的释放容量与接任前业务量-iv">4.3 同所五年轮换的释放容量与接任前业务量 IV</a></li>
+</ul></li>
+<li><a class="nav-link" data-scroll-target="#四大事务所平台与个人经历的补充比较" href="#四大事务所平台与个人经历的补充比较" id="toc-四大事务所平台与个人经历的补充比较">5. 四大事务所平台与个人经历的补充比较</a></li>
+<li><a class="nav-link" data-scroll-target="#证据边界与下一步核验" href="#证据边界与下一步核验" id="toc-证据边界与下一步核验">6. 证据边界与下一步核验</a></li>
+<li><a class="nav-link" data-scroll-target="#待解决问题与补充材料" href="#待解决问题与补充材料" id="toc-待解决问题与补充材料">待解决问题与补充材料</a></li>
+<li><a class="nav-link" data-scroll-target="#数据程序与输出记录" href="#数据程序与输出记录" id="toc-数据程序与输出记录">数据、程序与输出记录</a></li>
+</ul>
+</nav>
+</div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+<header class="quarto-title-block default" id="title-block-header">
+<div class="quarto-title">
+<h1 class="title">审计师效应</h1>
+</div>
+<div class="quarto-title-meta">
+</div>
+</header>
+<section class="level2" id="概述">
+<h2 class="anchored" data-anchor-id="概述">概述</h2>
+<p>本章在个人审计师层面研究服务提供者的可观察背景、历史记录和分配变化与审计结果的关系。基础回归、质量转变、匹配 OLS 和候选供给 IV 分别对应不同识别层级；精选 IV 是探索性展示，尚未确立统一的因果改善。</p>
+</section>
+<section class="level2" id="核心结果">
+<h2 class="anchored" data-anchor-id="核心结果">核心结果</h2>
+<p><strong>候选池 IV 中四组规格同时具有显著第一阶段和至少一个负向二阶段结果。</strong> 从含目的事务所固定效应及财务控制的 54 组规格中，按第一阶段 p&lt;0.05、至少一个二阶段 p&lt;0.10 且为负筛选；表中列出六项二阶段结果；这一筛选不表示其余规格同样成立。四组均为 All Matches，观测为新 A1 匹配事件；目的事务所与匹配年份固定效应，目的事务所聚类。控制前任同项特征、候选人数、首次入样指标，以及规模、杠杆、亏损、ROA、Z-score、杠杆变化、报告时滞、经营现金流、年龄及缺失指标；财务控制按原面板对应上一财年。候选池来自 t−1 的目的事务所 A1，并排除前任。各列 N、第一阶段 F 与 partial R² 见表；精确起止年份待逐列核验。历史无任何失败的 caseload 工具 F=5.76，仍有弱工具问题；显著性未作筛选调整。</p>
+<p><strong>回归设定（第一阶段与 2SLS）。</strong></p>
+<p><span class="math display">\[
+\begin{aligned}
+A_e&amp;=\pi Z_e+W_e'\rho+\mu_{f(e)}+\lambda_{t(e)}+v_e,\\
+Y_{e,h}&amp;=\beta_h\widehat A_e+W_e'\gamma_h
++\mu_{f(e)}+\lambda_{t(e)}+u_{e,h}.
+\end{aligned}
+\]</span></p>
+<p><span class="math inline">\(e\)</span> 为新 A1 匹配事件，<span class="math inline">\(A_e\)</span> 为表列接任审计师特征；<span class="math inline">\(Z_e\)</span> 为相应候选池占比或候选池平均业务量，逐列分别使用单一工具。<span class="math inline">\(Y_{e,h}\)</span> 为接任首年或任期内的综合失败、重述、违规，六项分别估计。<span class="math inline">\(W_e\)</span> 包括上段列明的财务控制及缺失指标、前任同项特征、候选人数和首次入样指标；<span class="math inline">\(\mu_{f(e)}\)</span>、<span class="math inline">\(\lambda_{t(e)}\)</span> 为目的事务所和匹配年份固定效应，按目的事务所聚类。<span class="math inline">\(\widehat A_e\)</span> 表示 2SLS 的投影，不是另做普通 OLS 后直接沿用其标准误。</p>
+<figure class="latex-table figure">
+<img alt="候选池 IV：第一阶段与六项审计失败的二阶段估计" class="figure-img" loading="lazy" src="tables/core_result/05_selected_caseload_iv.png"/>
+<figcaption>
+候选池 IV：第一阶段与六项审计失败的二阶段估计 · TeX · PDF
+</figcaption>
+</figure>
+<p><a href="#full-05_auditor_quality-4">完整候选池与容量 IV、OLS 及识别局限</a> · <a href="#full-05_auditor_quality-3">全部质量转变规格</a></p>
+<p><span id="full-05_auditor_quality-1"></span></p>
+<p><span id="settings-05_auditor_quality"></span></p>
+<p><strong>变量定义与样本处理。</strong> 财务控制组 <span class="math inline">\(C\)</span> 为 <code>size</code>（规模）、<code>lev</code>（杠杆）、<code>loss</code>（亏损）、<code>roa</code>、<code>zscore</code>、<code>chg_lev</code>（杠杆变化）、<code>report_lag</code>（报告时滞）、<code>cfo</code>（经营现金流）、<code>age</code>（公司年龄），以及各自缺失指标。控制组的原始计量单位、缩尾边界和上游变换仍待逐变量核验。37 候选池 IV 和 40/41 共用准备程序的注释明确：面板当年行已对应上一财年，不再额外滞后一次。37 按年中位数、再全样本均值补缺；40/41 按年中位数、再零补缺，不能把它们写成完全相同的样本处理。</p>
+<p>40/41 的历史暴露控制 <span class="math inline">\(E\)</span> 为 <span class="math inline">\(\log(1+历史报告数)\)</span> 及平方、<span class="math inline">\(\log(1+历史客户数)\)</span> 及平方，以及 <span class="math inline">\(\log(1+历史年数)\)</span>；排除目标客户，按历史披露截止构造。40 的逐项／联合背景回归为</p>
+<p><span class="math display">\[Y_{it}^{(3年披露窗口)}=Q_{a(i,t)}'\beta+C_{it}'\gamma+E_{it}'\rho+\mathrm{FE}+\varepsilon_{it}.\]</span></p>
+<p><span class="math inline">\(Q\)</span> 逐项或同时包括本科、硕士、博士、985/211、985 和历史四大背景，互斥类别另列。FE 按列依次为年份、公司加年份、公司加事务所加年份；各列沿用完整 FE 规格的同一 e(sample)，公司聚类。已完成输出的背景表 N=41,252，具体有效年份待核验。41 的公司面板使用公司、事务所和年份 FE；接任事件固定随访规格另控制前任历史状态和历史暴露，吸收目的事务所与接任年份，按目的事务所聚类。后者不与公司面板混写。</p>
+<p>33/34 的质量转变规格使用 <span class="math inline">\(C\)</span>、公司和年份 FE、公司聚类，不吸收事务所 FE；pooled 估计保持完整可观察年份，五年／较短任期比较从 2004 年开始。36 匹配 OLS 与 37 候选池 IV 吸收目的事务所和接任年份、按目的事务所聚类，并控制前任同项特征与首次入样状态；37 另控制候选池人数。38 同所容量 IV 的工具、前任特征与未知背景控制随处理变量变化，按第 4.3 节逐项解释。每列 N、聚类数、首年／任期风险暴露以及全部不显著结果保留在原表；未输出的逐列有效起止年份标记待核验。五年代理、候选池历史与排除限制不因这些控制而自动有效。</p>
+</section>
+<section class="level2" id="研究问题与目前结论">
+<h2 class="anchored" data-anchor-id="研究问题与目前结论">1. 研究问题与目前结论</h2>
+<p>本节只考察一个问题：质量较高的 A1 审计师是否对应更少的审计失败。质量用可观察的学历、院校和四大从业背景、接任前历史表现，以及 AKM 审计师固定效应分组衡量；AKM 指标的识别与可靠性诊断另见 <a href="./26_akm.html">AKM 章节</a>。审计结果以清洗后的综合失败、重述和违规为主。</p>
+<p><strong>回归／统计设定。</strong> 本节为证据层级和当前发现概述；各项回归设置分别见后文，个人质量转变、法定轮换代理和 IV 分配不混为同一处理。 <a href="#settings-05_auditor_quality">变量与回归设定</a>。</p>
+<p>证据按识别层级排列：公司年度基础回归给出条件关联；同一客户的质量转变在 Strict、Trim 和固定两年／三年窗口中比较；新 A1 匹配的 OLS 是事件基准；候选池 IV 和同所五年容量 IV 检验候选供给能否预测继任者质量。四大事务所平台与个人四大经历另作补充比较。</p>
+<p><strong>现有结论：</strong>新增的同样本背景验证中，本科及以上与较少综合失败存在较弱的负向关联；四大背景的负向关联在加入事务所固定效应后不显著。排除目标客户、按已披露历史构造的无重述／无违规指标，尚未显示继任者具有显著更好的后续审计结果。Strict 转变样本里低失败 AKM 状态与较低失败率相关，但五年与较短任期更换的系数差异不显著，且个人 FE 可能使用结果期信息。候选池 IV 的一阶段强度随指标和工具明显变化；同所五年容量 IV 的 45 个二阶段系数均不显著。这些结果支持进一步研究审计师分配，却尚不能确立统一的因果改善效应。</p>
+<p>政策分组只在五年／较短任期比较中从 2004 年起；全部匹配和 pooled 样本保留完整可观察年份。五年任期是代码识别的代理，并非直接观察到的监管强制命令。</p>
+<p><span id="full-05_auditor_quality-2"></span></p>
+</section>
+<section class="level2" id="结果变量审计师质量与样本">
+<h2 class="anchored" data-anchor-id="结果变量审计师质量与样本">2. 结果变量、审计师质量与样本</h2>
+<p>旧规格及后文 rotation/IV 的结果变量为清洗后的未预警综合失败、财务重述和财务违规（<code>*_clean</code>）。新增第 2.1–2.2 节使用 <code>y_fail_window</code>、<code>y_rest_window</code>、<code>y_viol_window</code>，按每个财年三年披露窗口构造；其结果定义及样本与旧规格不同，不能直接比较系数大小。审计师质量分别从三类预先构造的指标中读取：</p>
+<p><strong>回归／统计设定。</strong> 40 背景验证使用同一 e(sample)，年份／公司加年份／公司加事务所加年份 FE，客户聚类；41 历史预测另区分面板与接任事件。C 与 E 控制组、三年披露窗口及补缺差异已逐项列在本章设定说明。 <a href="#settings-05_auditor_quality">变量与回归设定</a>。</p>
+<ul>
+<li>可观察人力资本：学历、985/211 与四大背景；</li>
+<li>历史表现：在接任前形成的“无任一失败／无重述／无违规”等指标；</li>
+<li>AKM 表现：A1 审计师固定效应位于相应失败指标最低四分位的 <code>good</code> 指标，或位于最高四分位的 <code>bad</code> 指标。</li>
+</ul>
+<p>严格转变设计只使用连续年度来判断 A1 是否发生更换；将质量从 0 变为 1 且之后不再反转的公司视为升级，将 1 变为 0 且之后不反转的公司视为降级。严格版本保留始终为 0、始终为 1 或只有一个方向转变的公司，并整企剔除发生双向反转的公司。该报告的回归吸收客户公司和年度固定效应，<strong>不吸收事务所固定效应</strong>。</p>
+<p>这里的“恰好五年轮换”是算法识别的 A1 连续任期恰好五年、下一年发生 A1 更换；它是法定轮换的代理，不是直接观察到的监管强制标记，也不自动等同于同一事务所内的轮换。</p>
+<section class="level3" id="同样本背景验证逐项与联合回归">
+<h3 class="anchored" data-anchor-id="同样本背景验证逐项与联合回归">2.1 同样本背景验证：逐项与联合回归</h3>
+<p>每项背景单独展示，按年份 FE、加入客户公司 FE、再加入审计事务所 FE 逐步比较；各列使用同一完整样本。每张表依次列出综合失败、重述和违规，区分单项回归、六项背景联合回归，以及适用时的互斥类别比较。控制变量及历史暴露控制保持一致，标准误按客户公司聚类。</p>
+<p><strong>解释口径：</strong>单项回归的本科指标比较本科及以上与本科以下；联合回归同时包含本科、硕士和博士门槛，系数表示增量差异。互斥类别行另列“仅本科／仅硕士／博士”相对本科以下的比较；院校类别同理。学历来自可用履历快照，不能保证其在历史匹配时已经取得；四大经历按历史记录构造并排除目标客户。</p>
+<p>本科单项回归对综合失败的系数随 FE 加入由 −0.0083 变为 −0.0076、−0.0069，最后一列仅在 10% 水平显著；四大背景由 −0.0181 变为 −0.0147、−0.0077，最后一列不显著。因而本科关联较弱，四大经历的关联对事务所差异敏感；这些是条件相关性。</p>
+<p><strong>本科及以上</strong></p>
+<figure class="latex-table figure">
+<img alt='本科及以上。点击图片可放大；&lt;a href="tables/auditor_quality_validation/q_bachelor.tex"&gt;LaTeX 源表&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_validation/q_bachelor_full.png"/>
+<figcaption>
+本科及以上。点击图片可放大；LaTeX 源表。 · TeX · PDF
+</figcaption>
+</figure>
+<p><strong>历史四大背景</strong></p>
+<figure class="latex-table figure">
+<img alt='历史四大背景。点击图片可放大；&lt;a href="tables/auditor_quality_validation/q_big40.tex"&gt;LaTeX 源表&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_validation/q_big40_full.png"/>
+<figcaption>
+历史四大背景。点击图片可放大；LaTeX 源表。 · TeX · PDF
+</figcaption>
+</figure>
+<p><strong>硕士及以上</strong></p>
+<figure class="latex-table figure">
+<img alt='硕士及以上。点击图片可放大；&lt;a href="tables/auditor_quality_validation/q_master.tex"&gt;LaTeX 源表&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_validation/q_master_full.png"/>
+<figcaption>
+硕士及以上。点击图片可放大；LaTeX 源表。 · TeX · PDF
+</figcaption>
+</figure>
+<p><strong>博士</strong></p>
+<figure class="latex-table figure">
+<img alt='博士。点击图片可放大；&lt;a href="tables/auditor_quality_validation/q_doctor.tex"&gt;LaTeX 源表&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_validation/q_doctor_full.png"/>
+<figcaption>
+博士。点击图片可放大；LaTeX 源表。 · TeX · PDF
+</figcaption>
+</figure>
+<p><strong>985／211 院校</strong></p>
+<figure class="latex-table figure">
+<img alt='985／211 院校。点击图片可放大；&lt;a href="tables/auditor_quality_validation/q_elite.tex"&gt;LaTeX 源表&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_validation/q_elite_full.png"/>
+<figcaption>
+985／211 院校。点击图片可放大；LaTeX 源表。 · TeX · PDF
+</figcaption>
+</figure>
+<p><strong>985 院校</strong></p>
+<figure class="latex-table figure">
+<img alt='985 院校。点击图片可放大；&lt;a href="tables/auditor_quality_validation/q_985.tex"&gt;LaTeX 源表&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_validation/q_985_full.png"/>
+<figcaption>
+985 院校。点击图片可放大；LaTeX 源表。 · TeX · PDF
+</figcaption>
+</figure>
+</section>
+<section class="level3" id="历史表现过去记录能否预测之后的结果">
+<h3 class="anchored" data-anchor-id="历史表现过去记录能否预测之后的结果">2.2 历史表现：过去记录能否预测之后的结果</h3>
+<p>历史指标排除目标客户，只计入观察年 1 月 1 日之前已披露的信息；至少需要三份历史报告和两个历史年份，没有足够记录的审计师不被归为“清白”。结果使用固定披露窗口；新匹配样本分别要求接任当年起完整的一年、两年或三年随访。</p>
+<p>每项历史指标一张表：A、B 面板分别为年度单项和联合历史回归，吸收客户、事务所和年份 FE，按客户聚类；C–E 面板为真实更换事件的一至三年随访，同时列出继任者和前任者系数，吸收事务所和事件年份 FE，按事务所聚类。不同历史指标、结果及随访长度的有效样本不同，不能把列间变化全部归于随访长度。</p>
+<p><strong>结果：</strong>无重述历史的继任者对综合失败的一年、两年、三年系数分别为 −0.0043、−0.0135、−0.0185，均不显著；无违规历史的对应系数也不显著。三年综合失败列中，显著的 −0.0297 属于<strong>前任者</strong>无重述历史，不能作为“换入更好审计师改善结果”的证据。当前结果尚未支持历史记录对继任者后续表现有稳定预测力，也不能据此认定真实效应为零。</p>
+<figure class="latex-table figure">
+<img alt='历史无重述：年度预测与固定随访。点击图片可放大；&lt;a href="tables/auditor_quality_validation/clean_rest0.tex"&gt;LaTeX 源表&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_validation/clean_rest0_full.png"/>
+<figcaption>
+历史无重述：年度预测与固定随访。点击图片可放大；LaTeX 源表。 · TeX · PDF
+</figcaption>
+</figure>
+<figure class="latex-table figure">
+<img alt='历史无违规：年度预测与固定随访。点击图片可放大；&lt;a href="tables/auditor_quality_validation/clean_viol0.tex"&gt;LaTeX 源表&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_validation/clean_viol0_full.png"/>
+<figcaption>
+历史无违规：年度预测与固定随访。点击图片可放大；LaTeX 源表。 · TeX · PDF
+</figcaption>
+</figure>
+</section>
+<section class="level3" id="旧规格补充task-7-基础回归">
+<h3 class="anchored" data-anchor-id="旧规格补充task-7-基础回归">2.3 旧规格补充：Task 7 基础回归</h3>
+<details>
+<summary>
+展开旧 Task 7 联合回归及事务所类别交互结果（样本与上文不同）
+</summary>
+<p><strong>当前结果的准确范围：</strong>表 27 的四大事务所项在综合失败和违规列为负且显著，重述列不显著；这是事务所类别关联。表 28 学历面板的本科门槛，在参照事务所类别中对综合失败为 −0.010（0.005，5%）、对重述为 −0.006（0.003，10%），对违规为 −0.004（0.004，不显著）。所以当前结果不能概括成“本科主要改善违规”；六项特征联合、三组固定效应的主表仍未发现前三项失败结果的显著关联。</p>
+<p>这一节使用已重新运行的 <code>code/stata/30_partner_humancapital/31_auditor_mobility.do</code> Task 7。主表将六个 A1 人力资本 dummy 同时纳入回归：本科及以上、硕士及以上、博士及以上、985/211、985 和四大从业背景；不加入 <code>Big 4</code>／<code>Local 8</code> 事务所类别或其交互项，并吸收客户公司、审计事务所和年份固定效应。下方两张补充表保留事务所类别及交互项设定，吸收客户公司和年份固定效应。所有回归的标准误按客户公司聚类，表底逐项列出固定效应和控制变量。</p>
+<p>三张图片将模型列分成纵向面板，数值和规格未改变；对应的窄版 LaTeX 位于 tables/auditor_quality_human_capital_narrow/。</p>
+<p>主表的前三列为清洗后的综合失败、重述和违规，后六列为异常应计、审计意见及费用。六个指标在前三项失败结果列均不显著。例如，四大从业背景在综合失败列为 0.006（标准误 0.006），本科门槛为 −0.005（0.003），该列有 66,118 个公司年度观测值。费用列的四大从业背景系数为 0.043（0.011），但不能将这一条件关联解释为个人背景的因果回报。学历三个门槛在组内逐级嵌套，院校两个门槛也逐级嵌套；某一层级相对最低组的完整差异须累加对应门槛系数，并对线性组合单独检验。</p>
+<figure class="latex-table figure">
+<img alt="表 26：不分事务所类别的 A1 人力资本联合回归。点击表格可放大。" class="figure-img" loading="lazy" src="tables/auditor_quality_human_capital_narrow/human_capital_joint_three_fe_full_p01.png"/>
+<figcaption>
+表 26：不分事务所类别的 A1 人力资本联合回归。点击表格可放大。 · TeX · PDF
+</figcaption>
+</figure>
+<figure class="latex-table figure">
+<img alt="表 26：不分事务所类别的 A1 人力资本联合回归。点击表格可放大。" class="figure-img" loading="lazy" src="tables/auditor_quality_human_capital_narrow/human_capital_joint_three_fe_full_p02.png"/>
+<figcaption>
+表 26：不分事务所类别的 A1 人力资本联合回归。点击表格可放大。 · TeX · PDF
+</figcaption>
+</figure>
+<figure class="latex-table figure">
+<img alt="表 26：不分事务所类别的 A1 人力资本联合回归。点击表格可放大。" class="figure-img" loading="lazy" src="tables/auditor_quality_human_capital_narrow/human_capital_joint_three_fe_full_p03.png"/>
+<figcaption>
+表 26：不分事务所类别的 A1 人力资本联合回归。点击表格可放大。 · TeX · PDF
+</figcaption>
+</figure>
+<p><strong>事务所类别交互的补充结果</strong></p>
+<p>补充表中的 <code>Big 4</code>、<code>Local 8</code> 指事务所类别。表 27 的个人四大背景通过非四大类别与该背景的交互项呈现：本土八大 × A1 四大背景对综合失败的系数为 0.007（标准误 0.007），其他事务所 × A1 四大背景为 0.009（0.009），均不显著。<code>Big 4</code> 主效应为 −0.020（0.007），比较的是事务所类别，不是审计师个人四大经历。</p>
+<figure class="latex-table figure">
+<img alt="表 27：四大背景与事务所类别的交互回归。点击表格可放大。" class="figure-img" loading="lazy" src="tables/auditor_quality_human_capital_narrow/human_capital_big4_background_tier_full_p01.png"/>
+<figcaption>
+表 27：四大背景与事务所类别的交互回归。点击表格可放大。 · TeX · PDF
+</figcaption>
+</figure>
+<figure class="latex-table figure">
+<img alt="表 27：四大背景与事务所类别的交互回归。点击表格可放大。" class="figure-img" loading="lazy" src="tables/auditor_quality_human_capital_narrow/human_capital_big4_background_tier_full_p02.png"/>
+<figcaption>
+表 27：四大背景与事务所类别的交互回归。点击表格可放大。 · TeX · PDF
+</figcaption>
+</figure>
+<figure class="latex-table figure">
+<img alt="表 27：四大背景与事务所类别的交互回归。点击表格可放大。" class="figure-img" loading="lazy" src="tables/auditor_quality_human_capital_narrow/human_capital_big4_background_tier_full_p03.png"/>
+<figcaption>
+表 27：四大背景与事务所类别的交互回归。点击表格可放大。 · TeX · PDF
+</figcaption>
+</figure>
+<figure class="latex-table figure">
+<img alt="表 27：四大背景与事务所类别的交互回归。点击表格可放大。" class="figure-img" loading="lazy" src="tables/auditor_quality_human_capital_narrow/human_capital_big4_background_tier_full_p04.png"/>
+<figcaption>
+表 27：四大背景与事务所类别的交互回归。点击表格可放大。 · TeX · PDF
+</figcaption>
+</figure>
+<p>表 28 的学历组中，参照事务所类别的本科门槛在综合失败列为 −0.010（标准误 0.005），硕士和博士的额外门槛分别为 0.008（0.006）和 0.016（0.019）；本土八大 × 硕士门槛的交互系数为 −0.016（0.007）。院校组的 <code>985/211</code> 门槛和 <code>985</code> 额外门槛在综合失败列分别为 −0.007（0.005）和 0.005（0.007），均不显著。交互模型中的主效应只对应参照事务所类别；对其他类别须加上相应交互项并检验线性组合。补充表另有一列以 <strong>Client FE 为被解释变量</strong>，因此该列吸收审计事务所和年份固定效应，无法再吸收客户公司固定效应。三类设定使用的特征覆盖不同，综合失败列的样本量分别为 70,374、67,594 和 66,613，不能把它们与主表的系数差异单纯归于固定效应变化。</p>
+<figure class="latex-table figure">
+<img alt="表 28：累计学历与院校门槛的事务所类别交互回归。点击表格可放大。" class="figure-img" loading="lazy" src="tables/auditor_quality_human_capital_narrow/human_capital_education_school_tier_full_p01.png"/>
+<figcaption>
+表 28：累计学历与院校门槛的事务所类别交互回归。点击表格可放大。 · TeX · PDF
+</figcaption>
+</figure>
+<figure class="latex-table figure">
+<img alt="表 28：累计学历与院校门槛的事务所类别交互回归。点击表格可放大。" class="figure-img" loading="lazy" src="tables/auditor_quality_human_capital_narrow/human_capital_education_school_tier_full_p02.png"/>
+<figcaption>
+表 28：累计学历与院校门槛的事务所类别交互回归。点击表格可放大。 · TeX · PDF
+</figcaption>
+</figure>
+<figure class="latex-table figure">
+<img alt="表 28：累计学历与院校门槛的事务所类别交互回归。点击表格可放大。" class="figure-img" loading="lazy" src="tables/auditor_quality_human_capital_narrow/human_capital_education_school_tier_full_p03.png"/>
+<figcaption>
+表 28：累计学历与院校门槛的事务所类别交互回归。点击表格可放大。 · TeX · PDF
+</figcaption>
+</figure>
+<figure class="latex-table figure">
+<img alt="表 28：累计学历与院校门槛的事务所类别交互回归。点击表格可放大。" class="figure-img" loading="lazy" src="tables/auditor_quality_human_capital_narrow/human_capital_education_school_tier_full_p04.png"/>
+<figcaption>
+表 28：累计学历与院校门槛的事务所类别交互回归。点击表格可放大。 · TeX · PDF
+</figcaption>
+</figure>
+<p>这三张表均为公司年度基础回归，描述条件相关性；它们不与后文的轮换转变样本或 IV 估计共享同一个识别对象。</p>
+</details>
+<p><span id="full-05_auditor_quality-3"></span></p>
+</section>
+</section>
+<section class="level2" id="质量转变与审计失败rotation-四版本比较">
+<h2 class="anchored" data-anchor-id="质量转变与审计失败rotation-四版本比较">3. 质量转变与审计失败：rotation 四版本比较</h2>
+<p>轮换分析比较 Strict、Trim、固定两年及固定三年四种样本与随访规则。质量状态逆转的比例和持续时间，为考察固定后期窗口提供动机。</p>
+<p><strong>回归／统计设定。</strong> Strict、Trim、固定两年和三年窗口完整保留；公司与年份 FE、客户聚类，控制 C 及缺失指标，不含事务所 FE。五年／较短任期分组从 2004 年起；质量分数和例外处理按各指标解释。 <a href="#settings-05_auditor_quality">变量与回归设定</a>。</p>
+<p><strong>制度背景与当前代码口径：</strong>签字注册会计师定期轮换规定自 <strong>2004 年 1 月 1 日</strong>起实施，一般连续签字服务期限为五年。<a href="https://xyfj.bicpa.org.cn/upload/file17/2022/6/29/47b8ead0-1fa1-4252-8d08-c46d17928150.pdf">原规定</a> 本节 Pooled 列保留完整可观察年份；只有 mandatory／voluntary 交互列使用 <code>year &gt;= 2004</code>，不再细分政策阶段。任期和质量路径均由完整历史构造；恰好五年与短于五年的更换仍是按 A1 记录识别的分组代理。</p>
+<section class="level3" id="质量转变能维持多久两年三年窗口的动机">
+<h3 class="anchored" data-anchor-id="质量转变能维持多久两年三年窗口的动机">3.1 质量转变能维持多久：两年、三年窗口的动机</h3>
+<p>质量状态转变后，部分公司再次发生逆转。四大背景升级的 1,068 家转变公司中有 748 家观察到逆转（70.0%，逆转者中位持续两年），降级的 1,050 家中有 327 家逆转（31.1%，中位三年）。低失败 AKM 状态升级和降级的观察到的逆转比例分别为 60.7% 与 51.0%。这些是带右删失的描述统计，不是统一随访期的逆转风险；它们为考察两年、三年的短期效应提供动机，但不能单独证明窗口最优或识别有效。应进一步报告固定随访期内的逆转率、可观察年数和删失情况；窗口在看到回归显著性之前统一选择。</p>
+<details class="rotation-measure">
+<summary>
+查看全部人力资本、历史表现和 AKM 转变的逆转统计
+</summary>
+<figure class="latex-table figure">
+<img alt='表 51：人力资本转变的逆转统计。&lt;a href="tables/auditor_quality_run_20260925/narrow/descriptive/reversal_hc.tex"&gt;LaTeX&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_run_20260925/narrow/descriptive/reversal_hc_full_p01.png"/>
+<figcaption>
+表 51：人力资本转变的逆转统计。LaTeX。 · TeX · PDF
+</figcaption>
+</figure>
+<figure class="latex-table figure">
+<img alt='表 51：人力资本转变的逆转统计。&lt;a href="tables/auditor_quality_run_20260925/narrow/descriptive/reversal_hc.tex"&gt;LaTeX&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_run_20260925/narrow/descriptive/reversal_hc_full_p02.png"/>
+<figcaption>
+表 51：人力资本转变的逆转统计。LaTeX。 · TeX · PDF
+</figcaption>
+</figure>
+<figure class="latex-table figure">
+<img alt='表 52：历史表现转变的逆转统计。&lt;a href="tables/auditor_quality_run_20260925/narrow/descriptive/reversal_hist.tex"&gt;LaTeX&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_run_20260925/narrow/descriptive/reversal_hist_full_p01.png"/>
+<figcaption>
+表 52：历史表现转变的逆转统计。LaTeX。 · TeX · PDF
+</figcaption>
+</figure>
+<figure class="latex-table figure">
+<img alt='表 52：历史表现转变的逆转统计。&lt;a href="tables/auditor_quality_run_20260925/narrow/descriptive/reversal_hist.tex"&gt;LaTeX&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_run_20260925/narrow/descriptive/reversal_hist_full_p02.png"/>
+<figcaption>
+表 52：历史表现转变的逆转统计。LaTeX。 · TeX · PDF
+</figcaption>
+</figure>
+<figure class="latex-table figure">
+<img alt='表 53：AKM 质量转变的逆转统计。&lt;a href="tables/auditor_quality_run_20260925/narrow/descriptive/reversal_akm.tex"&gt;LaTeX&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_run_20260925/narrow/descriptive/reversal_akm_full_p01.png"/>
+<figcaption>
+表 53：AKM 质量转变的逆转统计。LaTeX。 · TeX · PDF
+</figcaption>
+</figure>
+<figure class="latex-table figure">
+<img alt='表 53：AKM 质量转变的逆转统计。&lt;a href="tables/auditor_quality_run_20260925/narrow/descriptive/reversal_akm.tex"&gt;LaTeX&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_run_20260925/narrow/descriptive/reversal_akm_full_p02.png"/>
+<figcaption>
+表 53：AKM 质量转变的逆转统计。LaTeX。 · TeX · PDF
+</figcaption>
+</figure>
+</details>
+<p>当前固定窗口代码保留首次转变当年及随后一／两年，窗口内继续使用当期质量状态；若期间逆转，处理变量也会随之变化。因此它目前检验的是短窗口内的质量状态关联，尚不等于将首次升级或降级固定为处理的事件 DID。</p>
+</section>
+<section class="level3" id="strict-样本中的质量转变与结果">
+<h3 class="anchored" data-anchor-id="strict-样本中的质量转变与结果">3.2 Strict 样本中的质量转变与结果</h3>
+<p>对每一个审计师质量指标 <span class="math inline">\(Q_{it}\)</span>，在升级或降级样本中分别估计：</p>
+<p><span class="math display">\[
+Y_{it}=\beta_M\bigl(Q_{it}\times D_i^M\bigr)
+       +\beta_V\bigl(Q_{it}\times D_i^V\bigr)
+       +X_{it}'\gamma+\alpha_i+\lambda_t+\varepsilon_{it}.
+\]</span></p>
+<p><span class="math inline">\(D_i^M\)</span> 表示首次质量转变发生在“前任 A1 连续任期恰好五年”的更换，<span class="math inline">\(D_i^V\)</span> 表示在较短任期更换；<span class="math inline">\(\alpha_i\)</span> 和 <span class="math inline">\(\lambda_t\)</span> 分别为客户公司与年度固定效应，标准误按客户公司聚类。<span class="math inline">\(X_{it}\)</span> 包含规模、杠杆、亏损、ROA、Z-score、杠杆变化、报告滞后、经营现金流和年龄，以及缺失值指示变量。下表是<strong>无事务所固定效应</strong>的严格样本结果。</p>
+<p>表中的系数是质量状态变化与结果的条件关联。星号检验该系数是否等于零，最后一列的差异 p 值检验两种更换类型的系数是否相等，两者不是同一个检验。尤其重要的是，<span class="math inline">\(\beta_M-\beta_V\)</span> 才检验“恰好五年轮换”下的关联是否与较短任期更换不同。</p>
+<figure class="latex-table figure">
+<img alt='严格样本：低失败 AKM A1 的升级与降级。&lt;a href="tables/auditor_quality_summary_latex/strict_akm.tex"&gt;LaTeX&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_summary_latex/strict_akm_full.png"/>
+<figcaption>
+严格样本：低失败 AKM A1 的升级与降级。LaTeX。 · TeX · PDF
+</figcaption>
+</figure>
+<p><strong>如何读这张表：</strong>这里 Q=1 表示低失败 AKM 审计师。升级是 Q 从 0 变为 1，五年组综合失败系数约为 −0.061（标准误 0.017，1% 水平显著），对应模型中的下降约 6.1 个百分点。降级是 Q 从 1 变为 0；回归仍报告 Q 的系数，因此降级行 −0.062 对应的事后减事前变化为 +0.062，不能读成降级也降低失败。两种方向使用不同样本，仍需分别审查事件图和处理公司数。右侧 p=0.990 检验的是升级样本中五年组与短任期组的系数差；它不显著，不否定两组系数各自显著。系数以概率单位报告，乘以 100 为百分点。</p>
+<p>这组结果显示低失败 AKM 状态与三个失败结果呈系统负相关；恰好五年与较短任期两组的系数差异均不显著。其识别仍可能受到事务所更换和审计师质量分组构造的影响，不应称为“强制轮换的净处理效应”。</p>
+<p><strong>三类质量指标的严格升级样本</strong></p>
+<p>这三类指标来自同一组 Strict TWFE 转变回归，不能视为独立检验。当前原始表中，这三类指标的升级系数均带星号；不显著的是这里展示的五年与短任期系数差。因果解释还要求质量度量不使用结果期信息、处理前趋势可比，以及更换与质量分配的选择能够得到解释。</p>
+<p>下表比较三个预先区分的质量升级指标。每行分别报告恰好五年更换、较短任期更换的系数及其标准误；最后一列的 <span class="math inline">\(p\)</span> 值直接检验两类更换的系数差异。所有行均吸收客户公司和年份固定效应，<strong>不吸收事务所固定效应</strong>，标准误按客户公司聚类。不同指标的非缺失样本和严格路径筛选不同，行与行之间不作系数大小的直接比较。</p>
+<figure class="latex-table figure">
+<img alt='严格升级：四大背景、历史表现与 AKM 质量指标。&lt;a href="tables/auditor_quality_summary_latex/quality_measures.tex"&gt;LaTeX&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_summary_latex/quality_measures_full.png"/>
+<figcaption>
+严格升级：四大背景、历史表现与 AKM 质量指标。LaTeX。 · TeX · PDF
+</figcaption>
+</figure>
+<p>表源：<code>results/tables/partner_humancapital/absorbing_transition_did_latex/</code> 中的 <code>absorbing_transition_big4_background_upgrade_no_auditfirm_fe.tex</code>、<code>absorbing_transition_clean_historical_any_failure_upgrade_no_auditfirm_fe.tex</code> 和 <code>absorbing_transition_akm_failure_good_upgrade_no_auditfirm_fe.tex</code>，均取 Panel B（Strict）。这些原表还列有 Trim、事后两年和事后三年窗口；表中恰好五年与较短任期更换的差异在严格样本均不显著。</p>
+</section>
+<section class="level3" id="rotation-的完整四版本表">
+<h3 class="anchored" data-anchor-id="rotation-的完整四版本表">3.3 rotation 的完整四版本表</h3>
+<p>质量转变回归<strong>不含事务所固定效应</strong>。每个质量指标分别估计升级与降级；综合失败、重述和违规各自包括 pooled 与五年／较短任期比较。<strong>Panel A–D 依次对应 Trim、Strict、固定两年和固定三年窗口。</strong></p>
+<p>“恰好五年”仍是前任 A1 任期代理；不同质量指标和转变方向的有效样本不尽相同。上方严格样本摘要只摘取了部分指标的 Panel B，完整结果及窗口敏感性以这里的原表为准。</p>
+<p><strong>可观察人力资本</strong></p>
+<details class="rotation-measure">
+<summary>
+本科及以上：升级／降级；Trim、Strict 与固定窗口
+</summary>
+<figure class="latex-table figure">
+<img alt='本科及以上 · 升级 · 无事务所固定效应（Trim／Strict／两年／三年窗口）。&lt;a href="tables/auditor_quality_rotation_reference/absorbing_transition_bachelor_plus_upgrade_no_auditfirm_fe.tex"&gt;LaTeX 原结构表&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_rotation_reference/absorbing_transition_bachelor_plus_upgrade_no_auditfirm_fe_full.png"/>
+<figcaption>
+本科及以上 · 升级 · 无事务所固定效应（Trim／Strict／两年／三年窗口）。LaTeX 原结构表。 · TeX · PDF
+</figcaption>
+</figure>
+<figure class="latex-table figure">
+<img alt='本科及以上 · 降级 · 无事务所固定效应（Trim／Strict／两年／三年窗口）。&lt;a href="tables/auditor_quality_rotation_reference/absorbing_transition_bachelor_plus_downgrade_no_auditfirm_fe.tex"&gt;LaTeX 原结构表&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_rotation_reference/absorbing_transition_bachelor_plus_downgrade_no_auditfirm_fe_full.png"/>
+<figcaption>
+本科及以上 · 降级 · 无事务所固定效应（Trim／Strict／两年／三年窗口）。LaTeX 原结构表。 · TeX · PDF
+</figcaption>
+</figure>
+</details>
+<details class="rotation-measure">
+<summary>
+硕士及以上：升级／降级；Trim、Strict 与固定窗口
+</summary>
+<figure class="latex-table figure">
+<img alt='硕士及以上 · 升级 · 无事务所固定效应（Trim／Strict／两年／三年窗口）。&lt;a href="tables/auditor_quality_rotation_reference/absorbing_transition_master_plus_upgrade_no_auditfirm_fe.tex"&gt;LaTeX 原结构表&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_rotation_reference/absorbing_transition_master_plus_upgrade_no_auditfirm_fe_full.png"/>
+<figcaption>
+硕士及以上 · 升级 · 无事务所固定效应（Trim／Strict／两年／三年窗口）。LaTeX 原结构表。 · TeX · PDF
+</figcaption>
+</figure>
+<figure class="latex-table figure">
+<img alt='硕士及以上 · 降级 · 无事务所固定效应（Trim／Strict／两年／三年窗口）。&lt;a href="tables/auditor_quality_rotation_reference/absorbing_transition_master_plus_downgrade_no_auditfirm_fe.tex"&gt;LaTeX 原结构表&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_rotation_reference/absorbing_transition_master_plus_downgrade_no_auditfirm_fe_full.png"/>
+<figcaption>
+硕士及以上 · 降级 · 无事务所固定效应（Trim／Strict／两年／三年窗口）。LaTeX 原结构表。 · TeX · PDF
+</figcaption>
+</figure>
+</details>
+<details class="rotation-measure">
+<summary>
+985 院校：升级／降级；Trim、Strict 与固定窗口
+</summary>
+<figure class="latex-table figure">
+<img alt='985 院校 · 升级 · 无事务所固定效应（Trim／Strict／两年／三年窗口）。&lt;a href="tables/auditor_quality_rotation_reference/absorbing_transition_school_985_upgrade_no_auditfirm_fe.tex"&gt;LaTeX 原结构表&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_rotation_reference/absorbing_transition_school_985_upgrade_no_auditfirm_fe_full.png"/>
+<figcaption>
+985 院校 · 升级 · 无事务所固定效应（Trim／Strict／两年／三年窗口）。LaTeX 原结构表。 · TeX · PDF
+</figcaption>
+</figure>
+<figure class="latex-table figure">
+<img alt='985 院校 · 降级 · 无事务所固定效应（Trim／Strict／两年／三年窗口）。&lt;a href="tables/auditor_quality_rotation_reference/absorbing_transition_school_985_downgrade_no_auditfirm_fe.tex"&gt;LaTeX 原结构表&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_rotation_reference/absorbing_transition_school_985_downgrade_no_auditfirm_fe_full.png"/>
+<figcaption>
+985 院校 · 降级 · 无事务所固定效应（Trim／Strict／两年／三年窗口）。LaTeX 原结构表。 · TeX · PDF
+</figcaption>
+</figure>
+</details>
+<details class="rotation-measure">
+<summary>
+985／211 院校：升级／降级；Trim、Strict 与固定窗口
+</summary>
+<figure class="latex-table figure">
+<img alt='985／211 院校 · 升级 · 无事务所固定效应（Trim／Strict／两年／三年窗口）。&lt;a href="tables/auditor_quality_rotation_reference/absorbing_transition_school_985_or_211_upgrade_no_auditfirm_fe.tex"&gt;LaTeX 原结构表&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_rotation_reference/absorbing_transition_school_985_or_211_upgrade_no_auditfirm_fe_full.png"/>
+<figcaption>
+985／211 院校 · 升级 · 无事务所固定效应（Trim／Strict／两年／三年窗口）。LaTeX 原结构表。 · TeX · PDF
+</figcaption>
+</figure>
+<figure class="latex-table figure">
+<img alt='985／211 院校 · 降级 · 无事务所固定效应（Trim／Strict／两年／三年窗口）。&lt;a href="tables/auditor_quality_rotation_reference/absorbing_transition_school_985_or_211_downgrade_no_auditfirm_fe.tex"&gt;LaTeX 原结构表&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_rotation_reference/absorbing_transition_school_985_or_211_downgrade_no_auditfirm_fe_full.png"/>
+<figcaption>
+985／211 院校 · 降级 · 无事务所固定效应（Trim／Strict／两年／三年窗口）。LaTeX 原结构表。 · TeX · PDF
+</figcaption>
+</figure>
+</details>
+<details class="rotation-measure">
+<summary>
+四大背景：升级／降级；Trim、Strict 与固定窗口
+</summary>
+<figure class="latex-table figure">
+<img alt='四大背景 · 升级 · 无事务所固定效应（Trim／Strict／两年／三年窗口）。&lt;a href="tables/auditor_quality_rotation_reference/absorbing_transition_big4_background_upgrade_no_auditfirm_fe.tex"&gt;LaTeX 原结构表&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_rotation_reference/absorbing_transition_big4_background_upgrade_no_auditfirm_fe_full.png"/>
+<figcaption>
+四大背景 · 升级 · 无事务所固定效应（Trim／Strict／两年／三年窗口）。LaTeX 原结构表。 · TeX · PDF
+</figcaption>
+</figure>
+<figure class="latex-table figure">
+<img alt='四大背景 · 降级 · 无事务所固定效应（Trim／Strict／两年／三年窗口）。&lt;a href="tables/auditor_quality_rotation_reference/absorbing_transition_big4_background_downgrade_no_auditfirm_fe.tex"&gt;LaTeX 原结构表&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_rotation_reference/absorbing_transition_big4_background_downgrade_no_auditfirm_fe_full.png"/>
+<figcaption>
+四大背景 · 降级 · 无事务所固定效应（Trim／Strict／两年／三年窗口）。LaTeX 原结构表。 · TeX · PDF
+</figcaption>
+</figure>
+</details>
+<p><strong>接任前历史记录</strong></p>
+<details class="rotation-measure">
+<summary>
+历史无任一失败：升级／降级；Trim、Strict 与固定窗口
+</summary>
+<figure class="latex-table figure">
+<img alt='历史无任一失败 · 升级 · 无事务所固定效应（Trim／Strict／两年／三年窗口）。&lt;a href="tables/auditor_quality_rotation_reference/absorbing_transition_clean_historical_any_failure_upgrade_no_auditfirm_fe.tex"&gt;LaTeX 原结构表&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_rotation_reference/absorbing_transition_clean_historical_any_failure_upgrade_no_auditfirm_fe_full.png"/>
+<figcaption>
+历史无任一失败 · 升级 · 无事务所固定效应（Trim／Strict／两年／三年窗口）。LaTeX 原结构表。 · TeX · PDF
+</figcaption>
+</figure>
+<figure class="latex-table figure">
+<img alt='历史无任一失败 · 降级 · 无事务所固定效应（Trim／Strict／两年／三年窗口）。&lt;a href="tables/auditor_quality_rotation_reference/absorbing_transition_clean_historical_any_failure_downgrade_no_auditfirm_fe.tex"&gt;LaTeX 原结构表&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_rotation_reference/absorbing_transition_clean_historical_any_failure_downgrade_no_auditfirm_fe_full.png"/>
+<figcaption>
+历史无任一失败 · 降级 · 无事务所固定效应（Trim／Strict／两年／三年窗口）。LaTeX 原结构表。 · TeX · PDF
+</figcaption>
+</figure>
+</details>
+<details class="rotation-measure">
+<summary>
+历史无重述：升级／降级；Trim、Strict 与固定窗口
+</summary>
+<figure class="latex-table figure">
+<img alt='历史无重述 · 升级 · 无事务所固定效应（Trim／Strict／两年／三年窗口）。&lt;a href="tables/auditor_quality_rotation_reference/absorbing_transition_clean_historical_restatement_upgrade_no_auditfirm_fe.tex"&gt;LaTeX 原结构表&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_rotation_reference/absorbing_transition_clean_historical_restatement_upgrade_no_auditfirm_fe_full.png"/>
+<figcaption>
+历史无重述 · 升级 · 无事务所固定效应（Trim／Strict／两年／三年窗口）。LaTeX 原结构表。 · TeX · PDF
+</figcaption>
+</figure>
+<figure class="latex-table figure">
+<img alt='历史无重述 · 降级 · 无事务所固定效应（Trim／Strict／两年／三年窗口）。&lt;a href="tables/auditor_quality_rotation_reference/absorbing_transition_clean_historical_restatement_downgrade_no_auditfirm_fe.tex"&gt;LaTeX 原结构表&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_rotation_reference/absorbing_transition_clean_historical_restatement_downgrade_no_auditfirm_fe_full.png"/>
+<figcaption>
+历史无重述 · 降级 · 无事务所固定效应（Trim／Strict／两年／三年窗口）。LaTeX 原结构表。 · TeX · PDF
+</figcaption>
+</figure>
+</details>
+<details class="rotation-measure">
+<summary>
+历史无违规：升级／降级；Trim、Strict 与固定窗口
+</summary>
+<figure class="latex-table figure">
+<img alt='历史无违规 · 升级 · 无事务所固定效应（Trim／Strict／两年／三年窗口）。&lt;a href="tables/auditor_quality_rotation_reference/absorbing_transition_clean_historical_violation_upgrade_no_auditfirm_fe.tex"&gt;LaTeX 原结构表&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_rotation_reference/absorbing_transition_clean_historical_violation_upgrade_no_auditfirm_fe_full.png"/>
+<figcaption>
+历史无违规 · 升级 · 无事务所固定效应（Trim／Strict／两年／三年窗口）。LaTeX 原结构表。 · TeX · PDF
+</figcaption>
+</figure>
+<figure class="latex-table figure">
+<img alt='历史无违规 · 降级 · 无事务所固定效应（Trim／Strict／两年／三年窗口）。&lt;a href="tables/auditor_quality_rotation_reference/absorbing_transition_clean_historical_violation_downgrade_no_auditfirm_fe.tex"&gt;LaTeX 原结构表&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_rotation_reference/absorbing_transition_clean_historical_violation_downgrade_no_auditfirm_fe_full.png"/>
+<figcaption>
+历史无违规 · 降级 · 无事务所固定效应（Trim／Strict／两年／三年窗口）。LaTeX 原结构表。 · TeX · PDF
+</figcaption>
+</figure>
+</details>
+<details class="rotation-measure">
+<summary>
+历史有任一失败：升级／降级；Trim、Strict 与固定窗口
+</summary>
+<figure class="latex-table figure">
+<img alt='历史有任一失败 · 升级 · 无事务所固定效应（Trim／Strict／两年／三年窗口）。&lt;a href="tables/auditor_quality_rotation_reference/absorbing_transition_bad_historical_any_failure_upgrade_no_auditfirm_fe.tex"&gt;LaTeX 原结构表&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_rotation_reference/absorbing_transition_bad_historical_any_failure_upgrade_no_auditfirm_fe_full.png"/>
+<figcaption>
+历史有任一失败 · 升级 · 无事务所固定效应（Trim／Strict／两年／三年窗口）。LaTeX 原结构表。 · TeX · PDF
+</figcaption>
+</figure>
+<figure class="latex-table figure">
+<img alt='历史有任一失败 · 降级 · 无事务所固定效应（Trim／Strict／两年／三年窗口）。&lt;a href="tables/auditor_quality_rotation_reference/absorbing_transition_bad_historical_any_failure_downgrade_no_auditfirm_fe.tex"&gt;LaTeX 原结构表&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_rotation_reference/absorbing_transition_bad_historical_any_failure_downgrade_no_auditfirm_fe_full.png"/>
+<figcaption>
+历史有任一失败 · 降级 · 无事务所固定效应（Trim／Strict／两年／三年窗口）。LaTeX 原结构表。 · TeX · PDF
+</figcaption>
+</figure>
+</details>
+<details class="rotation-measure">
+<summary>
+历史有重述：升级／降级；Trim、Strict 与固定窗口
+</summary>
+<figure class="latex-table figure">
+<img alt='历史有重述 · 升级 · 无事务所固定效应（Trim／Strict／两年／三年窗口）。&lt;a href="tables/auditor_quality_rotation_reference/absorbing_transition_bad_historical_restatement_upgrade_no_auditfirm_fe.tex"&gt;LaTeX 原结构表&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_rotation_reference/absorbing_transition_bad_historical_restatement_upgrade_no_auditfirm_fe_full.png"/>
+<figcaption>
+历史有重述 · 升级 · 无事务所固定效应（Trim／Strict／两年／三年窗口）。LaTeX 原结构表。 · TeX · PDF
+</figcaption>
+</figure>
+<figure class="latex-table figure">
+<img alt='历史有重述 · 降级 · 无事务所固定效应（Trim／Strict／两年／三年窗口）。&lt;a href="tables/auditor_quality_rotation_reference/absorbing_transition_bad_historical_restatement_downgrade_no_auditfirm_fe.tex"&gt;LaTeX 原结构表&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_rotation_reference/absorbing_transition_bad_historical_restatement_downgrade_no_auditfirm_fe_full.png"/>
+<figcaption>
+历史有重述 · 降级 · 无事务所固定效应（Trim／Strict／两年／三年窗口）。LaTeX 原结构表。 · TeX · PDF
+</figcaption>
+</figure>
+</details>
+<details class="rotation-measure">
+<summary>
+历史有违规：升级／降级；Trim、Strict 与固定窗口
+</summary>
+<figure class="latex-table figure">
+<img alt='历史有违规 · 升级 · 无事务所固定效应（Trim／Strict／两年／三年窗口）。&lt;a href="tables/auditor_quality_rotation_reference/absorbing_transition_bad_historical_violation_upgrade_no_auditfirm_fe.tex"&gt;LaTeX 原结构表&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_rotation_reference/absorbing_transition_bad_historical_violation_upgrade_no_auditfirm_fe_full.png"/>
+<figcaption>
+历史有违规 · 升级 · 无事务所固定效应（Trim／Strict／两年／三年窗口）。LaTeX 原结构表。 · TeX · PDF
+</figcaption>
+</figure>
+<figure class="latex-table figure">
+<img alt='历史有违规 · 降级 · 无事务所固定效应（Trim／Strict／两年／三年窗口）。&lt;a href="tables/auditor_quality_rotation_reference/absorbing_transition_bad_historical_violation_downgrade_no_auditfirm_fe.tex"&gt;LaTeX 原结构表&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_rotation_reference/absorbing_transition_bad_historical_violation_downgrade_no_auditfirm_fe_full.png"/>
+<figcaption>
+历史有违规 · 降级 · 无事务所固定效应（Trim／Strict／两年／三年窗口）。LaTeX 原结构表。 · TeX · PDF
+</figcaption>
+</figure>
+</details>
+<p><strong>AKM 分组</strong></p>
+<details class="rotation-measure">
+<summary>
+综合失败 AKM：低失败组：升级／降级；Trim、Strict 与固定窗口
+</summary>
+<figure class="latex-table figure">
+<img alt='综合失败 AKM：低失败组 · 升级 · 无事务所固定效应（Trim／Strict／两年／三年窗口）。&lt;a href="tables/auditor_quality_rotation_reference/absorbing_transition_akm_failure_good_upgrade_no_auditfirm_fe.tex"&gt;LaTeX 原结构表&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_rotation_reference/absorbing_transition_akm_failure_good_upgrade_no_auditfirm_fe_full.png"/>
+<figcaption>
+综合失败 AKM：低失败组 · 升级 · 无事务所固定效应（Trim／Strict／两年／三年窗口）。LaTeX 原结构表。 · TeX · PDF
+</figcaption>
+</figure>
+<figure class="latex-table figure">
+<img alt='综合失败 AKM：低失败组 · 降级 · 无事务所固定效应（Trim／Strict／两年／三年窗口）。&lt;a href="tables/auditor_quality_rotation_reference/absorbing_transition_akm_failure_good_downgrade_no_auditfirm_fe.tex"&gt;LaTeX 原结构表&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_rotation_reference/absorbing_transition_akm_failure_good_downgrade_no_auditfirm_fe_full.png"/>
+<figcaption>
+综合失败 AKM：低失败组 · 降级 · 无事务所固定效应（Trim／Strict／两年／三年窗口）。LaTeX 原结构表。 · TeX · PDF
+</figcaption>
+</figure>
+</details>
+<details class="rotation-measure">
+<summary>
+综合失败 AKM：高失败组：升级／降级；Trim、Strict 与固定窗口
+</summary>
+<figure class="latex-table figure">
+<img alt='综合失败 AKM：高失败组 · 升级 · 无事务所固定效应（Trim／Strict／两年／三年窗口）。&lt;a href="tables/auditor_quality_rotation_reference/absorbing_transition_akm_failure_bad_upgrade_no_auditfirm_fe.tex"&gt;LaTeX 原结构表&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_rotation_reference/absorbing_transition_akm_failure_bad_upgrade_no_auditfirm_fe_full.png"/>
+<figcaption>
+综合失败 AKM：高失败组 · 升级 · 无事务所固定效应（Trim／Strict／两年／三年窗口）。LaTeX 原结构表。 · TeX · PDF
+</figcaption>
+</figure>
+<figure class="latex-table figure">
+<img alt='综合失败 AKM：高失败组 · 降级 · 无事务所固定效应（Trim／Strict／两年／三年窗口）。&lt;a href="tables/auditor_quality_rotation_reference/absorbing_transition_akm_failure_bad_downgrade_no_auditfirm_fe.tex"&gt;LaTeX 原结构表&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_rotation_reference/absorbing_transition_akm_failure_bad_downgrade_no_auditfirm_fe_full.png"/>
+<figcaption>
+综合失败 AKM：高失败组 · 降级 · 无事务所固定效应（Trim／Strict／两年／三年窗口）。LaTeX 原结构表。 · TeX · PDF
+</figcaption>
+</figure>
+</details>
+<details class="rotation-measure">
+<summary>
+重述 AKM：低失败组：升级／降级；Trim、Strict 与固定窗口
+</summary>
+<figure class="latex-table figure">
+<img alt='重述 AKM：低失败组 · 升级 · 无事务所固定效应（Trim／Strict／两年／三年窗口）。&lt;a href="tables/auditor_quality_rotation_reference/absorbing_transition_akm_restatement_good_upgrade_no_auditfirm_fe.tex"&gt;LaTeX 原结构表&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_rotation_reference/absorbing_transition_akm_restatement_good_upgrade_no_auditfirm_fe_full.png"/>
+<figcaption>
+重述 AKM：低失败组 · 升级 · 无事务所固定效应（Trim／Strict／两年／三年窗口）。LaTeX 原结构表。 · TeX · PDF
+</figcaption>
+</figure>
+<figure class="latex-table figure">
+<img alt='重述 AKM：低失败组 · 降级 · 无事务所固定效应（Trim／Strict／两年／三年窗口）。&lt;a href="tables/auditor_quality_rotation_reference/absorbing_transition_akm_restatement_good_downgrade_no_auditfirm_fe.tex"&gt;LaTeX 原结构表&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_rotation_reference/absorbing_transition_akm_restatement_good_downgrade_no_auditfirm_fe_full.png"/>
+<figcaption>
+重述 AKM：低失败组 · 降级 · 无事务所固定效应（Trim／Strict／两年／三年窗口）。LaTeX 原结构表。 · TeX · PDF
+</figcaption>
+</figure>
+</details>
+<details class="rotation-measure">
+<summary>
+重述 AKM：高失败组：升级／降级；Trim、Strict 与固定窗口
+</summary>
+<figure class="latex-table figure">
+<img alt='重述 AKM：高失败组 · 升级 · 无事务所固定效应（Trim／Strict／两年／三年窗口）。&lt;a href="tables/auditor_quality_rotation_reference/absorbing_transition_akm_restatement_bad_upgrade_no_auditfirm_fe.tex"&gt;LaTeX 原结构表&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_rotation_reference/absorbing_transition_akm_restatement_bad_upgrade_no_auditfirm_fe_full.png"/>
+<figcaption>
+重述 AKM：高失败组 · 升级 · 无事务所固定效应（Trim／Strict／两年／三年窗口）。LaTeX 原结构表。 · TeX · PDF
+</figcaption>
+</figure>
+<figure class="latex-table figure">
+<img alt='重述 AKM：高失败组 · 降级 · 无事务所固定效应（Trim／Strict／两年／三年窗口）。&lt;a href="tables/auditor_quality_rotation_reference/absorbing_transition_akm_restatement_bad_downgrade_no_auditfirm_fe.tex"&gt;LaTeX 原结构表&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_rotation_reference/absorbing_transition_akm_restatement_bad_downgrade_no_auditfirm_fe_full.png"/>
+<figcaption>
+重述 AKM：高失败组 · 降级 · 无事务所固定效应（Trim／Strict／两年／三年窗口）。LaTeX 原结构表。 · TeX · PDF
+</figcaption>
+</figure>
+</details>
+<details class="rotation-measure">
+<summary>
+违规 AKM：低失败组：升级／降级；Trim、Strict 与固定窗口
+</summary>
+<figure class="latex-table figure">
+<img alt='违规 AKM：低失败组 · 升级 · 无事务所固定效应（Trim／Strict／两年／三年窗口）。&lt;a href="tables/auditor_quality_rotation_reference/absorbing_transition_akm_violation_good_upgrade_no_auditfirm_fe.tex"&gt;LaTeX 原结构表&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_rotation_reference/absorbing_transition_akm_violation_good_upgrade_no_auditfirm_fe_full.png"/>
+<figcaption>
+违规 AKM：低失败组 · 升级 · 无事务所固定效应（Trim／Strict／两年／三年窗口）。LaTeX 原结构表。 · TeX · PDF
+</figcaption>
+</figure>
+<figure class="latex-table figure">
+<img alt='违规 AKM：低失败组 · 降级 · 无事务所固定效应（Trim／Strict／两年／三年窗口）。&lt;a href="tables/auditor_quality_rotation_reference/absorbing_transition_akm_violation_good_downgrade_no_auditfirm_fe.tex"&gt;LaTeX 原结构表&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_rotation_reference/absorbing_transition_akm_violation_good_downgrade_no_auditfirm_fe_full.png"/>
+<figcaption>
+违规 AKM：低失败组 · 降级 · 无事务所固定效应（Trim／Strict／两年／三年窗口）。LaTeX 原结构表。 · TeX · PDF
+</figcaption>
+</figure>
+</details>
+<details class="rotation-measure">
+<summary>
+违规 AKM：高失败组：升级／降级；Trim、Strict 与固定窗口
+</summary>
+<figure class="latex-table figure">
+<img alt='违规 AKM：高失败组 · 升级 · 无事务所固定效应（Trim／Strict／两年／三年窗口）。&lt;a href="tables/auditor_quality_rotation_reference/absorbing_transition_akm_violation_bad_upgrade_no_auditfirm_fe.tex"&gt;LaTeX 原结构表&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_rotation_reference/absorbing_transition_akm_violation_bad_upgrade_no_auditfirm_fe_full.png"/>
+<figcaption>
+违规 AKM：高失败组 · 升级 · 无事务所固定效应（Trim／Strict／两年／三年窗口）。LaTeX 原结构表。 · TeX · PDF
+</figcaption>
+</figure>
+<figure class="latex-table figure">
+<img alt='违规 AKM：高失败组 · 降级 · 无事务所固定效应（Trim／Strict／两年／三年窗口）。&lt;a href="tables/auditor_quality_rotation_reference/absorbing_transition_akm_violation_bad_downgrade_no_auditfirm_fe.tex"&gt;LaTeX 原结构表&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_rotation_reference/absorbing_transition_akm_violation_bad_downgrade_no_auditfirm_fe_full.png"/>
+<figcaption>
+违规 AKM：高失败组 · 降级 · 无事务所固定效应（Trim／Strict／两年／三年窗口）。LaTeX 原结构表。 · TeX · PDF
+</figcaption>
+</figure>
+</details>
+<p><span id="full-05_auditor_quality-4"></span></p>
+</section>
+</section>
+<section class="level2" id="新-a1-匹配业务量基础-ols-与候选池-iv">
+<h2 class="anchored" data-anchor-id="新-a1-匹配业务量基础-ols-与候选池-iv">4. 新 A1 匹配：业务量、基础 OLS 与候选池 IV</h2>
+<p>候选池设计来自 <code>37_caseload_matching_iv_pool.do</code>。<strong>All Matches 使用完整可观察匹配年份；仅前任任期恰好五年的子样本限制接任年为 2004 年及以后。</strong>上一年候选池由完整历史构造；同所容量 IV 本身仅有五年事件，按 <code>rotation_year &gt;= 2004</code> 限制接任年。匹配 OLS 同样保留完整 All Matches；业务量整体描述也保留完整年份，仅五年／较短任期分组图采用 2004 年起样本。观察单位是 A1 matching event：连续年份中 A1 更换的报告年，或样本首次观察到且 A1 有效的匹配。对目标事务所 <span class="math inline">\(j\)</span>，候选池由 <span class="math inline">\(t-1\)</span> 年该所的 A1 roster 构成，并排除目标客户的前任 A1。</p>
+<p><strong>回归／统计设定。</strong> 匹配 OLS、候选池 IV 和同所释放容量 IV 分别估计，不能共用同一个工具定义。目的事务所与接任年份 FE、目的事务所聚类；C、前任特征、候选池与首次入样等控制按子节区分。IV 一二阶段方程、F、partial R²、N 及未显著结果完整保留。 <a href="#settings-05_auditor_quality">变量与回归设定</a>。</p>
+<p>下图先展示工作量的分布：在可观察的审计师—事务所服务区间内，负责一家上市公司的年度最常见，也能观察到没有上市客户的中间年份。这里的零值是描述性扩展；当前 IV 的 <span class="math inline">\(t-1\)</span> 年候选池仍由当年可观察到的在职 A1 构成，不能把图中的零值直接当作 IV 中可供分配的候选人。</p>
+<p><img alt="审计师在事务所服务区间内的上市客户工作量分布，分别展示全部审计师、四大背景、本科及以上和985或211院校背景。" class="img-fluid" data-fig-cap="审计师年度上市客户工作量分布。零值表示同一审计师在同一事务所首次与末次被观察年份之间、当年没有样本内上市客户；工作量不包括非上市客户。" src="figures/partner_humancapital/caseload_distribution/caseload_mean_distribution_4panel.png" style="width:100.0%"/></p>
+<p>匹配前的候选池构成也并不相同。下图中，四大背景 A1 的池内占比多数接近零；本科及以上占比的中位数为 75.0%，硕士及以上为 13.8%。后两者分别统计同一候选池中的不同学历门槛，硕士及以上包含于本科及以上。这些分布说明候选供给存在差异，但本身不能证明候选池构成或工作量冲击满足工具变量的排除限制。</p>
+<p><img alt="匹配前一年目标事务所候选池内，四大背景、985或211院校、本科及以上、硕士及以上审计师占比的四面板分布图。" class="img-fluid" data-fig-cap="匹配前候选池的人力资本占比分布。每条观测是一次 matching event；占比使用目标事务所上一年的候选 A1 名单计算。" src="figures/partner_humancapital/caseload_distribution/pool_share_distribution_4panel.png" style="width:100.0%"/></p>
+<p><code>35_matching_pool_caseload_distribution.do</code> 只描述业务量。全部审计师年度的平均业务量为 1.93，匹配事件中接任 A1 的平均业务量为 3.39；两类样本定义不同，不能把均值差解释为匹配事件导致业务量增加。业务量为零、一和至少八份的比例及各人力资本组分布都在下表。</p>
+<figure class="latex-table figure">
+<img alt='表 54：审计师年度与匹配事件接任 A1 的业务量分布。&lt;a href="tables/auditor_quality_run_20260925/narrow/descriptive/matching_caseload.tex"&gt;LaTeX&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_run_20260925/narrow/descriptive/matching_caseload_full_p01.png"/>
+<figcaption>
+表 54：审计师年度与匹配事件接任 A1 的业务量分布。LaTeX。 · TeX · PDF
+</figcaption>
+</figure>
+<figure class="latex-table figure">
+<img alt='表 54：审计师年度与匹配事件接任 A1 的业务量分布。&lt;a href="tables/auditor_quality_run_20260925/narrow/descriptive/matching_caseload.tex"&gt;LaTeX&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_run_20260925/narrow/descriptive/matching_caseload_full_p02.png"/>
+<figcaption>
+表 54：审计师年度与匹配事件接任 A1 的业务量分布。LaTeX。 · TeX · PDF
+</figcaption>
+</figure>
+<figure class="latex-table figure">
+<img alt='表 54：审计师年度与匹配事件接任 A1 的业务量分布。&lt;a href="tables/auditor_quality_run_20260925/narrow/descriptive/matching_caseload.tex"&gt;LaTeX&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_run_20260925/narrow/descriptive/matching_caseload_full_p03.png"/>
+<figcaption>
+表 54：审计师年度与匹配事件接任 A1 的业务量分布。LaTeX。 · TeX · PDF
+</figcaption>
+</figure>
+<section class="level3" id="新-a1-匹配事件的-ols-基准">
+<h3 class="anchored" data-anchor-id="新-a1-匹配事件的-ols-基准">4.1 新 A1 匹配事件的 OLS 基准</h3>
+<p>观察单位是公司发生新 A1 匹配的事件，样本分别为全部匹配和前任 A1 任期恰好五年的匹配。每一种继任者特征分别估计，不把九种特征同时放入同一式：</p>
+<p><span class="math display">\[Y_{e,h}=\beta_h H^{\mathrm{succ}}_e+\delta_h H^{\mathrm{pred}}_e+X_{e}'\gamma_h+\rho_h\mathrm{Entry}_e+\eta_{\mathrm{dest}(e)}+\lambda_{t(e)}+\varepsilon_{e,h}.\]</span></p>
+<p><span class="math inline">\(H\)</span> 依次是博士及以上、硕士及以上、本科及以上、985、985/211、四大背景，以及截至接任前没有综合失败／重述／违规的历史指标。全部匹配样本包含首次进入事件，以 <code>Entry</code> 控制；恰好五年样本不含这一项。All Matches 保留完整可观察年份，五年子样本从 2004 年接任事件开始。两个样本都吸收目的事务所和匹配年份固定效应，包含公司年度控制变量并控制前任同项特征，标准误按目的事务所聚类。<span class="math inline">\(h\)</span> 包括接任首年三类失败，以及<strong>继任 A1 在样本内完整任期中是否曾发生</strong>三类失败；后者的暴露年份数可能不同，解读时不能当成同长的首年风险。匹配样本包含 28,374 个全部匹配事件和 1,891 个前任恰好五年事件，实际逐列估计样本因特征缺失、历史门槛及固定效应剔除而变化。</p>
+<figure class="latex-table figure">
+<img alt='表 36：接任首年，九个特征 × 两类样本 × 三种结果。每列保留系数、聚类标准误、N、事务所聚类数和 R²。&lt;a href="tables/auditor_quality_run_20260925/narrow/matching_first_year.tex"&gt;LaTeX 源文件&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_run_20260925/narrow/matching_first_year_full_p01.png"/>
+<figcaption>
+表 36：接任首年，九个特征 × 两类样本 × 三种结果。每列保留系数、聚类标准误、N、事务所聚类数和 R²。LaTeX 源文件。 · TeX · PDF
+</figcaption>
+</figure>
+<figure class="latex-table figure">
+<img alt='表 36：接任首年，九个特征 × 两类样本 × 三种结果。每列保留系数、聚类标准误、N、事务所聚类数和 R²。&lt;a href="tables/auditor_quality_run_20260925/narrow/matching_first_year.tex"&gt;LaTeX 源文件&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_run_20260925/narrow/matching_first_year_full_p02.png"/>
+<figcaption>
+表 36：接任首年，九个特征 × 两类样本 × 三种结果。每列保留系数、聚类标准误、N、事务所聚类数和 R²。LaTeX 源文件。 · TeX · PDF
+</figcaption>
+</figure>
+<figure class="latex-table figure">
+<img alt='表 37：继任 A1 在样本内完整任期的对应 54 个规格，列的定义同表 36。&lt;a href="tables/auditor_quality_run_20260925/narrow/matching_tenure.tex"&gt;LaTeX 源文件&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_run_20260925/narrow/matching_tenure_full_p01.png"/>
+<figcaption>
+表 37：继任 A1 在样本内完整任期的对应 54 个规格，列的定义同表 36。LaTeX 源文件。 · TeX · PDF
+</figcaption>
+</figure>
+<figure class="latex-table figure">
+<img alt='表 37：继任 A1 在样本内完整任期的对应 54 个规格，列的定义同表 36。&lt;a href="tables/auditor_quality_run_20260925/narrow/matching_tenure.tex"&gt;LaTeX 源文件&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_run_20260925/narrow/matching_tenure_full_p02.png"/>
+<figcaption>
+表 37：继任 A1 在样本内完整任期的对应 54 个规格，列的定义同表 36。LaTeX 源文件。 · TeX · PDF
+</figcaption>
+</figure>
+<p>为排版时避免一张 54 规格表超出单页，两张汇总图也拆成六份按结果变量排列、可直接单独排版的 LaTeX 表：首年综合失败、首年重述、首年违规、任期综合失败、任期重述、任期违规。每张均含全部九类特征和两类样本。</p>
+<p>全部匹配样本中，学历、院校和四大背景在接任首年的三项失败结果上大多不显著。恰好五年样本里的博士及以上对应接任首年综合失败 −0.047（标准误 0.010）、重述 −0.028（0.005）、违规 −0.034（0.012），但该组回归只有 1,847 个观察值和 57 个目的事务所聚类；对九种特征与多个结果的共同检验、博士样本覆盖以及选择进入五年更换的机制仍需检验。接任前没有重述历史在全部匹配样本的首年三项结果上分别为 −0.012、−0.007、−0.007；这一指标的回归只有约 11,011 个观察值，不能与覆盖更广的学历规格直接比较系数。表 37 的任期内结果也受任期长度和样本截尾影响。这些 OLS 提供条件相关性，不构成轮换或 IV 的因果估计。</p>
+</section>
+<section class="level3" id="候选池-iv上一年事务所候选供给">
+<h3 class="anchored" data-anchor-id="候选池-iv上一年事务所候选供给">4.2 候选池 IV：上一年事务所候选供给</h3>
+<p><code>37_caseload_matching_iv_pool.do</code> 使用目标事务所在 <span class="math inline">\(t-1\)</span> 年可观察 A1 候选池的质量占比、平均业务量，或业务量不超过一的优质 A1 占比，分别预测新继任者的质量。第三种工具现为 <strong>Caseload <span class="math inline">\(\leq 1\)</span> share</strong>：分子为具有特征 <span class="math inline">\(k\)</span> 且上市客户数不超过一的候选 A1 人数，分母为全部具有特征 <span class="math inline">\(k\)</span> 的候选 A1 人数；不存在该类候选人时取缺失。当前 roster 尚未补入零客户年份，因此阈值放宽不等于已经纳入零客户候选人。每个审计师特征、每种工具和每个匹配样本单独估计；六个结果变量分别为接任首年及继任任期内的综合失败、重述和违规：</p>
+<p><span class="math display">\[H_{e}^{k}=\pi_{k,d}Z_{j,t-1}^{k,d}+W_{e}^{k\prime}\delta+\mu_j+\lambda_t+u_e,\qquad
+Y_{e,h}=\theta_{k,d,h}\widehat H_e^k+W_{e}^{k\prime}\rho+\mu_j+\lambda_t+\varepsilon_{e,h}. \]</span></p>
+<p><span class="math inline">\(W_e^k\)</span> 包含前任 A1 的同项特征、候选池人数、已在面板中对应上一财年的公司控制变量及缺失指示；全部匹配样本另含首次进入指示。所有当前表格均吸收目的事务所与匹配年份固定效应，按目的事务所聚类，且含财务控制。All Matches 保留完整可观察年份；前任恰好五年的子样本从 2004 年开始。不同特征的可用样本不同。</p>
+<p><strong>第一阶段：九项继任者特征</strong></p>
+<p>54 个“特征 × 工具 × 样本”第一阶段中，22 个工具系数在 10% 水平显著，11 个排除工具 F 值至少为 10。全部匹配中，四大背景候选池比例的一阶段系数为 0.246（标准误 0.0793，F=9.60），本科及以上为 0.223（0.0602，F=13.71）。四大背景的平均业务量工具显著为负（−0.00590，p=0.0366），但 <span class="math inline">\(\leq 1\)</span> share 不显著（0.00832，p=0.234）。历史无违规的平均业务量工具也显著为负（−0.0363，F=12.87）；历史无重述的 <span class="math inline">\(\leq 1\)</span> share 则为 −0.0669（p=0.0225，F=5.38），方向并不支持简单的“低工作量候选人占比越高，越容易匹配到该类审计师”的预测。每张表逐项报告系数、聚类标准误、F 与 partial <span class="math inline">\(R^2\)</span>，不按显著性筛行。F 衡量预测力，不能验证排除限制。</p>
+<figure class="latex-table figure">
+<img alt='全部匹配：九项特征的第一阶段。&lt;a href="tables/auditor_quality_pool_iv_current/pool_iv_first_stage_all.tex"&gt;LaTeX&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_pool_iv_current/pool_iv_first_stage_all_full.png"/>
+<figcaption>
+全部匹配：九项特征的第一阶段。LaTeX。 · TeX · PDF
+</figcaption>
+</figure>
+<figure class="latex-table figure">
+<img alt='前任恰好五年：九项特征的第一阶段。&lt;a href="tables/auditor_quality_pool_iv_current/pool_iv_first_stage_five_year.tex"&gt;LaTeX&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_pool_iv_current/pool_iv_first_stage_five_year_full.png"/>
+<figcaption>
+前任恰好五年：九项特征的第一阶段。LaTeX。 · TeX · PDF
+</figcaption>
+</figure>
+<p><strong>第二阶段：可观察背景与接任前历史质量</strong></p>
+<p>下面按继任者特征展开全部二阶段。每张表包含三种工具、两类匹配样本，以及首年和任期内的三类失败结果；行内同时列出同样本第一阶段 F。任期内结果的暴露长度不等，不能与首年概率直接比较。</p>
+<figure class="latex-table figure">
+<img alt='博士及以上：候选池 IV 二阶段。&lt;a href="tables/auditor_quality_pool_iv_current/pool_iv_second_stage_doctorate_plus.tex"&gt;LaTeX&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_pool_iv_current/pool_iv_second_stage_doctorate_plus_full.png"/>
+<figcaption>
+博士及以上：候选池 IV 二阶段。LaTeX。 · TeX · PDF
+</figcaption>
+</figure>
+<figure class="latex-table figure">
+<img alt='硕士及以上：候选池 IV 二阶段。&lt;a href="tables/auditor_quality_pool_iv_current/pool_iv_second_stage_master_plus.tex"&gt;LaTeX&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_pool_iv_current/pool_iv_second_stage_master_plus_full.png"/>
+<figcaption>
+硕士及以上：候选池 IV 二阶段。LaTeX。 · TeX · PDF
+</figcaption>
+</figure>
+<figure class="latex-table figure">
+<img alt='本科及以上：候选池 IV 二阶段。&lt;a href="tables/auditor_quality_pool_iv_current/pool_iv_second_stage_bachelor_plus.tex"&gt;LaTeX&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_pool_iv_current/pool_iv_second_stage_bachelor_plus_full.png"/>
+<figcaption>
+本科及以上：候选池 IV 二阶段。LaTeX。 · TeX · PDF
+</figcaption>
+</figure>
+<figure class="latex-table figure">
+<img alt='985 院校：候选池 IV 二阶段。&lt;a href="tables/auditor_quality_pool_iv_current/pool_iv_second_stage_985_school.tex"&gt;LaTeX&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_pool_iv_current/pool_iv_second_stage_985_school_full.png"/>
+<figcaption>
+985 院校：候选池 IV 二阶段。LaTeX。 · TeX · PDF
+</figcaption>
+</figure>
+<figure class="latex-table figure">
+<img alt='985／211 院校：候选池 IV 二阶段。&lt;a href="tables/auditor_quality_pool_iv_current/pool_iv_second_stage_985_or_211_school.tex"&gt;LaTeX&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_pool_iv_current/pool_iv_second_stage_985_or_211_school_full.png"/>
+<figcaption>
+985／211 院校：候选池 IV 二阶段。LaTeX。 · TeX · PDF
+</figcaption>
+</figure>
+<figure class="latex-table figure">
+<img alt='四大从业背景：候选池 IV 二阶段。&lt;a href="tables/auditor_quality_pool_iv_current/pool_iv_second_stage_big4_background.tex"&gt;LaTeX&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_pool_iv_current/pool_iv_second_stage_big4_background_full.png"/>
+<figcaption>
+四大从业背景：候选池 IV 二阶段。LaTeX。 · TeX · PDF
+</figcaption>
+</figure>
+<figure class="latex-table figure">
+<img alt='接任前无任一失败：候选池 IV 二阶段。&lt;a href="tables/auditor_quality_pool_iv_current/pool_iv_second_stage_zero_historical_any_failure.tex"&gt;LaTeX&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_pool_iv_current/pool_iv_second_stage_zero_historical_any_failure_full.png"/>
+<figcaption>
+接任前无任一失败：候选池 IV 二阶段。LaTeX。 · TeX · PDF
+</figcaption>
+</figure>
+<figure class="latex-table figure">
+<img alt='接任前无重述：候选池 IV 二阶段。&lt;a href="tables/auditor_quality_pool_iv_current/pool_iv_second_stage_zero_historical_restatement.tex"&gt;LaTeX&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_pool_iv_current/pool_iv_second_stage_zero_historical_restatement_full.png"/>
+<figcaption>
+接任前无重述：候选池 IV 二阶段。LaTeX。 · TeX · PDF
+</figcaption>
+</figure>
+<figure class="latex-table figure">
+<img alt='接任前无违规：候选池 IV 二阶段。&lt;a href="tables/auditor_quality_pool_iv_current/pool_iv_second_stage_zero_historical_violation.tex"&gt;LaTeX&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_pool_iv_current/pool_iv_second_stage_zero_historical_violation_full.png"/>
+<figcaption>
+接任前无违规：候选池 IV 二阶段。LaTeX。 · TeX · PDF
+</figcaption>
+</figure>
+<p>当前结果并未呈现跨指标、跨工具一致的改善。全部匹配中，本科及以上的候选池占比工具对应首年综合失败 −0.170（标准误 0.094）、任期综合失败 −0.256（0.105），其一阶段 F=13.71。四大背景占比工具对应首年综合失败 +0.248（0.140）、任期综合失败 +0.280（0.165），均在 10% 水平显著；其平均业务量与 <span class="math inline">\(\leq 1\)</span> share 工具的六项二阶段均不显著。历史无违规的平均业务量工具对应首年综合失败 −0.166（0.088）、重述 −0.119（0.053）、违规 −0.092（0.075），前两项分别在 10% 和 5% 水平显著，任期三项均不显著。历史无重述的 <span class="math inline">\(\leq 1\)</span> share 工具则对应首年综合失败 +0.570（0.271），在 5% 水平显著，但一阶段方向与简单供给预测相反，且 F=5.38。五年子样本里部分一阶段接近零，相应二阶段点估计和标准误不宜作效应解读。工具可能同时反映所内资源配置与客户风险，当前 IV 仍属于探索性证据。</p>
+<p>候选池 IV 的 2 张第一阶段表与 9 张第二阶段表覆盖 324 个二阶段模型。“Caseload at most 1 share” 对应候选池中业务量 <span class="math inline">\(\leq 1\)</span> 的占比。</p>
+</section>
+<section class="level3" id="同所五年轮换的释放容量与接任前业务量-iv">
+<h3 class="anchored" data-anchor-id="同所五年轮换的释放容量与接任前业务量-iv">4.3 同所五年轮换的释放容量与接任前业务量 IV</h3>
+<p>观察单位是前任 A1 恰好连续任职五年、下一年由同一事务所的新 A1 接任的事件；这与涵盖所有新匹配事件的候选池 IV 是两套样本和工具。样本包含 <strong>2004–2024 年的 1,438 个事件</strong>，其中 1,241 个有其他客户释放名额，但只有 147 个观察到继任者属于释放池；因此不能把“有释放名额”读成“目标公司获得释放池成员”。历史 CPA 质量在 975 个事件中可用。</p>
+<figure class="latex-table figure">
+<img alt='表 55：所有事件和各类处理变量、工具变量的覆盖度。&lt;a href="tables/auditor_quality_run_20260925/capacity_iv/capacity_iv_event_coverage.tex"&gt;LaTeX&lt;/a&gt;；&lt;a href="../tables/partner_humancapital/caseload_matching_iv_akm/caseload_matching_iv_akm_coverage.csv"&gt;逐年原始数据&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_run_20260925/capacity_iv/capacity_iv_event_coverage_full.png"/>
+<figcaption>
+表 55：所有事件和各类处理变量、工具变量的覆盖度。LaTeX；逐年原始数据。 · TeX · PDF
+</figcaption>
+</figure>
+<p>对事件 <span class="math inline">\(e=(i,j,t)\)</span>、继任者特征 <span class="math inline">\(D_e^k\)</span> 和 <span class="math inline">\(h\in\{0,1,2\}\)</span>，估计的第一阶段与二阶段可写成：</p>
+<p><span class="math display">\[D_e^k=\pi_k Z_{j,t}^{k,-i}+C_{e,t-1}^{k\prime}\rho+\mu_j+\lambda_t+u_e,\]</span></p>
+<p><span class="math display">\[Y_{i,t+h}=\beta_{k,h}\widehat D_e^k+C_{e,t-1}^{k\prime}\gamma+\mu_j+\lambda_t+\varepsilon_{e,h}.\]</span></p>
+<p><span class="math inline">\(Z^{k,-i}\)</span> 使用其他客户预定五年轮换释放的名额及其质量构成，或候选审计师在接任前一年的<strong>负业务量</strong>；构造释放容量时剔除目标客户前任的释放名额。<span class="math inline">\(\mu_j\)</span> 为审计事务所固定效应，<span class="math inline">\(\lambda_t\)</span> 为轮换年份固定效应，标准误按事务所聚类。<span class="math inline">\(C^k\)</span> 包含面板中已前置一期的公司控制变量（规模、杠杆、亏损、ROA、Z-score、杠杆变化、报告滞后、经营现金流、年龄及缺失指示），另按设计加入释放总量、质量未知的释放量、前任特征或候选池规模和总体业务量。结果变量是接任当年、下一年和第二年的非 MAO 综合失败、重述与违规；各时点因随访长度不同而有不同样本。</p>
+<p>释放池成员的职业年限提供一个重要的选择诊断。在同一事务所—年份内，释放池成员比非成员的已观察 CPA 职业年限高 4.938 年（标准误 0.238；17,067 条 CPA 记录，364 个同时有两类成员的事务所—年份）。原始均值分别为 12.96 和 7.786 年。释放池继任者可能因经验等特征而不同，不能把释放名额视为随机分配。</p>
+<figure class="latex-table figure">
+<img alt='表 56：同所同年释放池成员与非成员的已观察职业年限。&lt;a href="tables/auditor_quality_run_20260925/capacity_iv/capacity_iv_pool_tenure.tex"&gt;LaTeX&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_run_20260925/capacity_iv/capacity_iv_pool_tenure_full.png"/>
+<figcaption>
+表 56：同所同年释放池成员与非成员的已观察职业年限。LaTeX。 · TeX · PDF
+</figcaption>
+</figure>
+<p><strong>4.3.1 继任者质量的一阶段与接任前业务量</strong></p>
+<p>七种“其他客户释放容量质量”工具分别预测继任者的教育层级、本科及以上、硕士及以上、985、985/211、四大背景和事前 CPA 历史质量。表 57–59 给出接任当年、下一年和第二年<strong>各自二阶段样本上的一阶段</strong>。同一时点的三个失败结果使用相同事件，因此原始导出的三份一阶段数值完全相同；表中保留一份，不丢失独立信息。这七种工具的排除工具 F 在所有时点均只有 0.0467–3.428，不能支持常规强工具变量解释；四大背景在同样本当年的 F 为 0.473，<span class="math inline">\(N=1,424\)</span>。</p>
+<details class="rotation-measure">
+<summary>
+表 57–59：七种释放容量质量工具的完整一阶段
+</summary>
+<figure class="latex-table figure">
+<img alt='表 57：接任当年。&lt;a href="tables/auditor_quality_run_20260925/capacity_iv/capacity_iv_release_first_stage_h0.tex"&gt;LaTeX&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_run_20260925/capacity_iv/capacity_iv_release_first_stage_h0_full.png"/>
+<figcaption>
+表 57：接任当年。LaTeX。 · TeX · PDF
+</figcaption>
+</figure>
+<figure class="latex-table figure">
+<img alt='表 58：接任下一年。&lt;a href="tables/auditor_quality_run_20260925/capacity_iv/capacity_iv_release_first_stage_h1.tex"&gt;LaTeX&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_run_20260925/capacity_iv/capacity_iv_release_first_stage_h1_full.png"/>
+<figcaption>
+表 58：接任下一年。LaTeX。 · TeX · PDF
+</figcaption>
+</figure>
+<figure class="latex-table figure">
+<img alt='表 59：接任第二年。&lt;a href="tables/auditor_quality_run_20260925/capacity_iv/capacity_iv_release_first_stage_h2.tex"&gt;LaTeX&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_run_20260925/capacity_iv/capacity_iv_release_first_stage_h2_full.png"/>
+<figcaption>
+表 59：接任第二年。LaTeX。 · TeX · PDF
+</figcaption>
+</figure>
+</details>
+<p>四类接任前负业务量工具的一阶段另列于表 60。零历史失败和零历史违规候选人的工具系数分别约为 0.073 和 0.083，但排除工具 F 分别只有 6.196 和 5.532；零历史重述的 F 几乎为零。高人力资本业务量的一阶段 F 为 0.653，且这类规格没有导出二阶段，不能用它作质量效应结论。</p>
+<figure class="latex-table figure">
+<img alt='表 60：四类候选 CPA 接任前业务量的一阶段。&lt;a href="tables/auditor_quality_run_20260925/capacity_iv/capacity_iv_workload_first_stage.tex"&gt;LaTeX&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_run_20260925/capacity_iv/capacity_iv_workload_first_stage_full.png"/>
+<figcaption>
+表 60：四类候选 CPA 接任前业务量的一阶段。LaTeX。 · TeX · PDF
+</figcaption>
+</figure>
+<p><strong>4.3.2 五类处理变量的同样本一阶段和二阶段</strong></p>
+<p>聚焦版 2SLS 分别把“继任者来自其他客户的释放池”“继任者有四大背景”和“继任者事前没有综合失败／重述／违规”作为内生处理变量。相应工具分别是其他客户的释放名额、四大背景释放占比，以及三类负业务量。每一列的第一阶段都在对应二阶段的<strong>完全相同样本</strong>重估，表 61–63 报告系数、聚类标准误、排除工具 F 和样本量；表 64–66 报告全部 45 个二阶段系数及同样本 F。所有规格均吸收事务所和轮换年份固定效应，但释放池、四大背景和业务量设计的附加控制变量并不完全一样。</p>
+<details class="rotation-measure">
+<summary>
+表 61–63：五类处理变量的完整同样本一阶段
+</summary>
+<figure class="latex-table figure">
+<img alt='表 61：接任当年。&lt;a href="tables/auditor_quality_run_20260925/capacity_iv/capacity_iv_exact_first_stage_h0.tex"&gt;LaTeX&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_run_20260925/capacity_iv/capacity_iv_exact_first_stage_h0_full.png"/>
+<figcaption>
+表 61：接任当年。LaTeX。 · TeX · PDF
+</figcaption>
+</figure>
+<figure class="latex-table figure">
+<img alt='表 62：接任下一年。&lt;a href="tables/auditor_quality_run_20260925/capacity_iv/capacity_iv_exact_first_stage_h1.tex"&gt;LaTeX&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_run_20260925/capacity_iv/capacity_iv_exact_first_stage_h1_full.png"/>
+<figcaption>
+表 62：接任下一年。LaTeX。 · TeX · PDF
+</figcaption>
+</figure>
+<figure class="latex-table figure">
+<img alt='表 63：接任第二年。&lt;a href="tables/auditor_quality_run_20260925/capacity_iv/capacity_iv_exact_first_stage_h2.tex"&gt;LaTeX&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_run_20260925/capacity_iv/capacity_iv_exact_first_stage_h2_full.png"/>
+<figcaption>
+表 63：接任第二年。LaTeX。 · TeX · PDF
+</figcaption>
+</figure>
+</details>
+<p>“来自释放池”的当年一阶段 F=10.47，<span class="math inline">\(N=1,424\)</span>；下一年和第二年的 F 分别降为 7.230 和 4.469。其余四类处理变量三个时点的 F 均低于 10；四大背景只有 0.473、0.680、2.962，零历史重述的 F 更接近零。对应的 45 个二阶段系数都不显著。“来自释放池”对当年综合失败为 −0.017（0.146），下一年为 0.142（0.192），第二年为 −0.319（0.330），不存在稳定方向。零历史重述的一阶段 F 当年为 0.000250；此类极弱一阶段的二阶段点估计不宜解释为有经济意义的效应。即使当年释放池规格的 F 略高于 10，单一阈值也不证明排除限制或弱工具稳健推断成立。</p>
+<details class="rotation-measure">
+<summary>
+表 64–66：五类处理变量、三个时点与三个审计结果的全部 2SLS
+</summary>
+<figure class="latex-table figure">
+<img alt='表 64：接任当年。&lt;a href="tables/auditor_quality_run_20260925/capacity_iv/capacity_iv_second_stage_h0.tex"&gt;LaTeX&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_run_20260925/capacity_iv/capacity_iv_second_stage_h0_full.png"/>
+<figcaption>
+表 64：接任当年。LaTeX。 · TeX · PDF
+</figcaption>
+</figure>
+<figure class="latex-table figure">
+<img alt='表 65：接任下一年。&lt;a href="tables/auditor_quality_run_20260925/capacity_iv/capacity_iv_second_stage_h1.tex"&gt;LaTeX&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_run_20260925/capacity_iv/capacity_iv_second_stage_h1_full.png"/>
+<figcaption>
+表 65：接任下一年。LaTeX。 · TeX · PDF
+</figcaption>
+</figure>
+<figure class="latex-table figure">
+<img alt='表 66：接任第二年。&lt;a href="tables/auditor_quality_run_20260925/capacity_iv/capacity_iv_second_stage_h2.tex"&gt;LaTeX&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_run_20260925/capacity_iv/capacity_iv_second_stage_h2_full.png"/>
+<figcaption>
+表 66：接任第二年。LaTeX。 · TeX · PDF
+</figcaption>
+</figure>
+</details>
+<p><strong>4.3.3 轮换前安慰剂与证据边界</strong></p>
+<p>针对七类释放容量质量工具，安慰剂式以<strong>前任最后一年</strong>的目标客户综合失败为因变量：</p>
+<p><span class="math display">\[Y_{i,t-1}=\delta_k Z_{j,t}^{k,-i}+C_{e,t-1}^{k\prime}\psi+\mu_j+\lambda_t+\nu_e.\]</span></p>
+<p>七个工具的安慰剂系数都不显著（表 67）。这只说明在当前样本和检验精度下没有检测到与该项轮换前结果的相关性；它不检验业务量工具，也不能排除事务所年度需求或共同客户风险直接影响轮换后审计结果。尤其在多数一阶段较弱、释放池接任者具有明显年限差异的情况下，容量 IV 仍应放在识别诊断与探索性结果的位置。</p>
+<figure class="latex-table figure">
+<img alt='表 67：七类释放容量质量工具的轮换前安慰剂。&lt;a href="tables/auditor_quality_run_20260925/capacity_iv/capacity_iv_pre_rotation_placebo.tex"&gt;LaTeX&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_run_20260925/capacity_iv/capacity_iv_pre_rotation_placebo_full.png"/>
+<figcaption>
+表 67：七类释放容量质量工具的轮换前安慰剂。LaTeX。 · TeX · PDF
+</figcaption>
+</figure>
+<p><span id="full-05_auditor_quality-5"></span></p>
+</section>
+</section>
+<section class="level2" id="四大事务所平台与个人经历的补充比较">
+<h2 class="anchored" data-anchor-id="四大事务所平台与个人经历的补充比较">5. 四大事务所平台与个人经历的补充比较</h2>
+<p><code>39_rotation_big4_spillover_did.do</code> 另将 A1 划为四大所、非四大所但有四大从业背景，以及纯本土三组。水平式的省略组是纯本土；交互式再将前两组与两类更换相乘。各表标准误均按客户公司聚类，完整固定效应设置逐列列于表底。</p>
+<p><strong>回归／统计设定。</strong> 平台与个人经历为补充比较，沿用原表列出的 FE、控制和 Mandatory／Voluntary 样本，不能将平台系数解释为个人背景效应。未能从原表与代码双向确认的逐列年份、上游时点和单位待核验。 <a href="#settings-05_auditor_quality">变量与回归设定</a>。</p>
+<details class="rotation-measure">
+<summary>
+查看四大所、四大背景与纯本土的四套非重复回归表
+</summary>
+<figure class="latex-table figure">
+<img alt='补充表 A：全部与非四大所样本的事务所／个人背景水平式。&lt;a href="tables/auditor_quality_run_20260925/supplemental/big4_level.tex"&gt;LaTeX&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_run_20260925/supplemental/big4_level_full_p01.png"/>
+<figcaption>
+补充表 A：全部与非四大所样本的事务所／个人背景水平式。LaTeX。 · TeX · PDF
+</figcaption>
+</figure>
+<figure class="latex-table figure">
+<img alt='补充表 A：全部与非四大所样本的事务所／个人背景水平式。&lt;a href="tables/auditor_quality_run_20260925/supplemental/big4_level.tex"&gt;LaTeX&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_run_20260925/supplemental/big4_level_full_p02.png"/>
+<figcaption>
+补充表 A：全部与非四大所样本的事务所／个人背景水平式。LaTeX。 · TeX · PDF
+</figcaption>
+</figure>
+<figure class="latex-table figure">
+<img alt='补充表 B：恰好五年样本。&lt;a href="tables/auditor_quality_run_20260925/supplemental/big4_mandatory.tex"&gt;LaTeX&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_run_20260925/supplemental/big4_mandatory_full.png"/>
+<figcaption>
+补充表 B：恰好五年样本。LaTeX。 · TeX · PDF
+</figcaption>
+</figure>
+<figure class="latex-table figure">
+<img alt='补充表 C：较短任期样本。&lt;a href="tables/auditor_quality_run_20260925/supplemental/big4_voluntary.tex"&gt;LaTeX&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_run_20260925/supplemental/big4_voluntary_full.png"/>
+<figcaption>
+补充表 C：较短任期样本。LaTeX。 · TeX · PDF
+</figcaption>
+</figure>
+<figure class="latex-table figure">
+<img alt='补充表 D：三类事务所／个人背景 × 更换类型的同式交互。&lt;a href="tables/auditor_quality_run_20260925/supplemental/big4_interaction.tex"&gt;LaTeX&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_run_20260925/supplemental/big4_interaction_full.png"/>
+<figcaption>
+补充表 D：三类事务所／个人背景 × 更换类型的同式交互。LaTeX。 · TeX · PDF
+</figcaption>
+</figure>
+</details>
+<p>全部样本中，四大所相对纯本土的综合失败系数为 −0.015（标准误 0.007），而非四大所的四大背景 A1 系数为 0.006（0.006）；在限定非四大所并吸收事务所固定效应的列中，个人背景仍为 0.006（0.006）。交互式的“恰好五年 × 四大所”为 −0.033，“恰好五年 × 非四大所四大背景”为 −0.024；后者不显著。事务所类别与个人经历必须分开解读。原始附加 Wald 标签断裂，未将不完整检验值放入补充表 A–D。 <span id="full-05_auditor_quality-6"></span></p>
+</section>
+<section class="level2" id="证据边界与下一步核验">
+<h2 class="anchored" data-anchor-id="证据边界与下一步核验">6. 证据边界与下一步核验</h2>
+<ol type="1">
+<li><strong>基础关联。</strong>可观察人力资本的联合回归没有稳定的失败率改善；四大事务所类别的负向系数不能归给个人四大经历。本科门槛在部分分组列有负向关联，但其余学历和交互项并不形成一致梯度。</li>
+<li><strong>质量转变。</strong>Strict、Trim 与两年／三年窗口是同一套质量状态转变的不同样本与随访规则，不是四个独立的因果实验。系数上的星号检验各组是否为零；“五年与较短任期是否不同”须看差异检验。恰好五年的轮换时点相对可预测，接任者质量仍由分配决定。</li>
+<li><strong>匹配与工具变量。</strong>匹配 OLS 是关联；候选池 IV 的较强一阶段集中在部分指标和工具，二阶段方向并不一致。同所五年容量 IV 大多为弱一阶段。应补充同样本 reduced form、弱工具稳健区间，以及事务所年度资源冲击与客户风险配置的诊断，再讨论因果解释。</li>
+<li><strong>质量测量。</strong>接任前历史质量需确保排除目标客户与结果期；AKM 分组需检查估计信息泄漏及个人 FE 排名稳定性。相关诊断集中于 AKM 章节，不在本页重复。</li>
+</ol>
+</section>
+<section class="level2" id="待解决问题与补充材料">
+<h2 class="anchored" data-anchor-id="待解决问题与补充材料">待解决问题与补充材料</h2>
+<p><strong>仍需核验。</strong> 各批次逐列实际年份与上游财务控制单位；五年轮换的 IPO、双签延期及同所条件；候选池零客户年份与排除限制；弱工具及规格筛选；首年与任期风险暴露。</p>
+</section>
+<section class="level2" id="数据程序与输出记录">
+<h2 class="anchored" data-anchor-id="数据程序与输出记录">数据、程序与输出记录</h2>
+<p><strong>估计程序（存档）。</strong> 33_absorbing_transition_staggered_did.do · 34_absorbing_transition_window2y_did.do · 36_matching_humancapital_ols.do · 37_caseload_matching_iv_pool.do · 38_caseload_matching_iv_akm.do · 40_background_validation.do · 41_clean_history_prediction.do · quality_validation_helpers.do</p>
+<p>当前展示的 rotation 和 IV 数值来自 2026 年 9 月 25 日完成的 <code>32–39</code> 运行；第 2.1–2.2 节使用 2026 年 9 月 26 日完成的 40/41 输出，旧 Task 7 结果保留在第 2.3 节。</p>
+<p>页面的严格转变设计来自 <code>33_absorbing_transition_staggered_did.do</code> 于 9 月 25 日生成的总报告。它只使用</p>
+<p>本节来自 <code>40_background_validation.do</code> 的已完成输出。</p>
+<p>本节来自 <code>41_clean_history_prediction.do</code>。</p>
+<p><code>32_transition_reversal_duration_stats.do</code> 记录转变后发生逆转的比例和持续时间，下方 LaTeX 图片已从本轮整体样本统计重新生成。</p>
+<p>当前 rotation 主线使用 <code>33_absorbing_transition_staggered_did.do</code> 的 Strict／Trim 和 <code>34_absorbing_transition_window2y_did.do</code> 的固定两年／三年窗口。<code>32_transition_reversal_duration_stats.do</code> 的逆转期统计用于说明固定后期窗口的可行性，放在四版本完整表之前。</p>
+<p>以下先展示本轮<strong>无事务所固定效应</strong>的原结构 LaTeX 表：每个质量指标的升级或降级是一张七列表，三类结果变量并排，每类分别列出 pooled 与五年／较短任期比较；表内依次是 <strong>Panel A：Trim、Panel B：Strict、Panel C：固定两年窗口、Panel D：固定三年窗口</strong>，系数、标准误、差异检验、样本量与固定效应均保留。表格由本轮 <code>33</code>／<code>34</code> 汇总结果生成，<code>.tex</code> 可从每张图下方直接打开；图片显示的是该七列 <code>.tex</code> 的表内结构，点击可查看原尺寸。本节仅展示本轮无事务所固定效应的结果。</p>
+<p>本节上述 LaTeX 表由生成脚本从当前 CSV 和原始 108 列回归输出生成。</p>
+<p>本节全部表格由容量 IV 表转换脚本直接读取 9 月 25 日本轮新导出的 TXT 和 CSV 构建；原始一阶段、同样本一阶段、二阶段和安慰剂可逐项核对。旧的 <code>caseload_matching_iv_akm_estimates.xlsx</code> 时间戳为 8 月 8 日，未当作本轮结果。</p>
+<p>本页保留当前规格的完整表格及 LaTeX 来源。历史 dofile 与旧批次结果仍在原始结果目录供追溯，但不与当前输出混排。</p>
+<p>本小节使用本轮 <code>38_caseload_matching_iv_akm.do</code> 的新输出。</p>
+<p>核心结果表的 TeX 编译入口为 <code>tables/core_result/core_results_exhibits.tex</code>。</p>
+<p>本节 2 张第一阶段表和 9 张第二阶段表均由当前候选池 IV 转换脚本读取 2026 年 9 月 26 日的新输出生成，共覆盖 324 个二阶段模型。可核对原始 TXT和原始 XLSX；表中的 “Caseload at most 1 share” 对应上述 <span class="math inline">\(\leq 1\)</span> 定义。</p>
+</section>
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "已复制");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "已复制");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+</body></html>

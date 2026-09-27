@@ -1,0 +1,1443 @@
+<!DOCTYPE html>
+
+<html lang="zh-Hans" xml:lang="zh-Hans" xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta charset="utf-8"/>
+<meta content="quarto-1.10.18" name="generator"/>
+<meta content="width=device-width, initial-scale=1.0, user-scalable=yes" name="viewport"/>
+<title>四大事务所效应 – 会计研究项目报告</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta content="./" name="quarto:offset"/>
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet"/>
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" id="quarto-text-highlighting-styles" rel="stylesheet"/>
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet"/>
+<link append-hash="true" data-mode="light" href="site_libs/bootstrap/bootstrap-261e60fdf64a0e003ec2340fd2db30d7.min.css" id="quarto-bootstrap" rel="stylesheet"/>
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "没有结果",
+    "search-matching-documents-text": "匹配的文档",
+    "search-copy-link-title": "复制搜索链接",
+    "search-hide-matches-text": "隐藏其它匹配结果",
+    "search-more-match-text": "更多匹配结果",
+    "search-more-matches-text": "更多匹配结果",
+    "search-clear-button-title": "清除",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "取消",
+    "search-submit-button-title": "提交",
+    "search-label": "搜索"
+  }
+}</script>
+<script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+<script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+<link href="styles.css" rel="stylesheet"/>
+<link href="empirical.css" rel="stylesheet"/>
+</head>
+<body class="nav-sidebar docked empirical-report quarto-light">
+<div id="quarto-search-results"></div>
+<header class="headroom fixed-top" id="quarto-header">
+<nav class="quarto-secondary-nav">
+<div class="container-fluid d-flex">
+<button aria-controls="quarto-sidebar" aria-expanded="false" aria-label="展开或折叠侧边栏导航" class="quarto-btn-toggle btn" data-bs-target=".quarto-sidebar-collapse-item" data-bs-toggle="collapse" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }" role="button" type="button">
+<i class="bi bi-layout-text-sidebar-reverse"></i>
+</button>
+<nav aria-label="breadcrumb" class="quarto-page-breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./23_big4_effect.html">四大事务所效应</a></li></ol></nav>
+<a aria-controls="quarto-sidebar" aria-expanded="false" aria-label="展开或折叠侧边栏导航" class="flex-grow-1" data-bs-target=".quarto-sidebar-collapse-item" data-bs-toggle="collapse" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }" role="navigation">
+</a>
+<button aria-label="搜索" class="btn quarto-search-button" onclick="window.quartoOpenSearch();" type="button">
+<i class="bi bi-search"></i>
+</button>
+</div>
+</nav>
+</header>
+<!-- content -->
+<div class="quarto-container page-columns page-rows-contents page-layout-article" id="quarto-content">
+<!-- sidebar -->
+<nav class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto" id="quarto-sidebar">
+<div class="pt-lg-2 mt-2 text-left sidebar-header">
+<div class="sidebar-title mb-0 py-0">
+会计研究项目报告
+</div>
+</div>
+<div class="mt-2 flex-shrink-0 align-items-center">
+<div class="sidebar-search">
+<div class="" id="quarto-search" title="搜索"></div>
+</div>
+</div>
+<div class="sidebar-menu-container">
+<ul class="list-unstyled mt-1">
+<li class="sidebar-item">
+<div class="sidebar-item-container">
+<a class="sidebar-item-text sidebar-link" href="./01_core_summary.html">
+<span class="menu-text">核心摘要</span></a>
+</div>
+</li>
+<li class="sidebar-item">
+<div class="sidebar-item-container">
+<a class="sidebar-item-text sidebar-link" href="./02_core_results.html">
+<span class="menu-text">核心结果</span></a>
+</div>
+</li>
+<li class="sidebar-item">
+<div class="sidebar-item-container">
+<a class="sidebar-item-text sidebar-link" href="./03_background.html">
+<span class="menu-text">背景</span></a>
+</div>
+</li>
+<li class="sidebar-item">
+<div class="sidebar-item-container">
+<a class="sidebar-item-text sidebar-link" href="./21_adoption.html">
+<span class="menu-text">四大审计师的采用</span></a>
+</div>
+</li>
+<li class="sidebar-item">
+<div class="sidebar-item-container">
+<a class="sidebar-item-text sidebar-link" href="./22_diffusion.html">
+<span class="menu-text">企业网络传导</span></a>
+</div>
+</li>
+<li class="sidebar-item">
+<div class="sidebar-item-container">
+<a class="sidebar-item-text sidebar-link active" href="./23_big4_effect.html">
+<span class="menu-text">四大事务所效应</span></a>
+</div>
+</li>
+<li class="sidebar-item">
+<div class="sidebar-item-container">
+<a class="sidebar-item-text sidebar-link" href="./24_auditor_quality.html">
+<span class="menu-text">审计师效应</span></a>
+</div>
+</li>
+<li class="sidebar-item">
+<div class="sidebar-item-container">
+<a class="sidebar-item-text sidebar-link" href="./25_matching.html">
+<span class="menu-text">客户、事务所和审计师的匹配</span></a>
+</div>
+</li>
+<li class="sidebar-item">
+<div class="sidebar-item-container">
+<a class="sidebar-item-text sidebar-link" href="./26_akm.html">
+<span class="menu-text">AKM</span></a>
+</div>
+</li>
+<li class="sidebar-item">
+<div class="sidebar-item-container">
+<a class="sidebar-item-text sidebar-link" href="./31_biweekly_memo.html">
+<span class="menu-text">双周备忘录</span></a>
+</div>
+</li>
+<li class="sidebar-item">
+<div class="sidebar-item-container">
+<a class="sidebar-item-text sidebar-link" href="./32_active_tasks.html">
+<span class="menu-text">当前任务</span></a>
+</div>
+</li>
+<li class="sidebar-item">
+<div class="sidebar-item-container">
+<a class="sidebar-item-text sidebar-link" href="./33_data_pipeline.html">
+<span class="menu-text">数据流程</span></a>
+</div>
+</li>
+</ul>
+</div>
+</nav>
+<div class="quarto-sidebar-collapse-item" data-bs-target=".quarto-sidebar-collapse-item" data-bs-toggle="collapse" id="quarto-sidebar-glass"></div>
+<!-- margin-sidebar -->
+<div class="sidebar margin-sidebar" id="quarto-margin-sidebar">
+<nav class="toc-active" id="TOC" role="doc-toc">
+<h2 id="toc-title">该页面内容</h2>
+<ul>
+<li><a class="nav-link active" data-scroll-target="#概述" href="#概述" id="toc-概述">概述</a></li>
+<li><a class="nav-link" data-scroll-target="#核心结果" href="#核心结果" id="toc-核心结果">核心结果</a></li>
+<li><a class="nav-link" data-scroll-target="#中国审计市场的分层" href="#中国审计市场的分层" id="toc-中国审计市场的分层">1. 中国审计市场的分层</a>
+<ul class="collapse">
+<li><a class="nav-link" data-scroll-target="#市场长期趋势" href="#市场长期趋势" id="toc-市场长期趋势">市场长期趋势</a></li>
+<li><a class="nav-link" data-scroll-target="#其他结果事务所类型比较" href="#其他结果事务所类型比较" id="toc-其他结果事务所类型比较">其他结果：事务所类型比较</a></li>
+</ul></li>
+<li><a class="nav-link" data-scroll-target="#核心事实四大客户的审计失败更少" href="#核心事实四大客户的审计失败更少" id="toc-核心事实四大客户的审计失败更少">2. 核心事实：四大客户的审计失败更少</a>
+<ul class="collapse">
+<li><a class="nav-link" data-scroll-target="#重述何时被发现" href="#重述何时被发现" id="toc-重述何时被发现">重述何时被发现</a></li>
+<li><a class="nav-link" data-scroll-target="#审计失败事务所类型与审计意见样本" href="#审计失败事务所类型与审计意见样本" id="toc-审计失败事务所类型与审计意见样本">审计失败：事务所类型与审计意见样本</a></li>
+<li><a class="nav-link" data-scroll-target="#重述与违规跨年份总体比较" href="#重述与违规跨年份总体比较" id="toc-重述与违规跨年份总体比较">重述与违规：跨年份总体比较</a></li>
+<li><a class="nav-link" data-scroll-target="#客户与事务所的-akm-排序" href="#客户与事务所的-akm-排序" id="toc-客户与事务所的-akm-排序">客户与事务所的 AKM 排序</a></li>
+</ul></li>
+<li><a class="nav-link" data-scroll-target="#市场是否区别对待财报信息" href="#市场是否区别对待财报信息" id="toc-市场是否区别对待财报信息">3. 市场是否区别对待财报信息</a>
+<ul class="collapse">
+<li><a class="nav-link" data-scroll-target="#从财报生产质量到信息认证价值" href="#从财报生产质量到信息认证价值" id="toc-从财报生产质量到信息认证价值">1. 从财报生产质量到信息认证价值</a></li>
+<li><a class="nav-link" data-scroll-target="#财报更可信与市场奖励的具体含义" href="#财报更可信与市场奖励的具体含义" id="toc-财报更可信与市场奖励的具体含义">3. 财报更可信与市场奖励的具体含义</a></li>
+</ul></li>
+<li><a class="nav-link" data-scroll-target="#客户选择与审计意见四大如何形成较低风险的客户组合" href="#客户选择与审计意见四大如何形成较低风险的客户组合" id="toc-客户选择与审计意见四大如何形成较低风险的客户组合">4. 客户选择与审计意见：四大如何形成较低风险的客户组合</a>
+<ul class="collapse">
+<li><a class="nav-link" data-scroll-target="#客户筛选的证据与-mao-的解释边界" href="#客户筛选的证据与-mao-的解释边界" id="toc-客户筛选的证据与-mao-的解释边界">2. 客户筛选的证据与 MAO 的解释边界</a></li>
+<li><a class="nav-link" data-scroll-target="#mao-后换所变更公告中的具体线索" href="#mao-后换所变更公告中的具体线索" id="toc-mao-后换所变更公告中的具体线索">MAO 后换所：变更公告中的具体线索</a></li>
+<li><a class="nav-link" data-scroll-target="#综合机制表客户流动预警与风险构成" href="#综合机制表客户流动预警与风险构成" id="toc-综合机制表客户流动预警与风险构成">综合机制表：客户流动、预警与风险构成</a></li>
+</ul></li>
+<li><a class="nav-link" data-scroll-target="#识别检验换入和换出四大后是否改善" href="#识别检验换入和换出四大后是否改善" id="toc-识别检验换入和换出四大后是否改善">5. 识别检验：换入和换出四大后是否改善</a>
+<ul class="collapse">
+<li><a class="nav-link" data-scroll-target="#未预警失败四大客户差异与换所-did" href="#未预警失败四大客户差异与换所-did" id="toc-未预警失败四大客户差异与换所-did">未预警失败：四大客户差异与换所 DID</a></li>
+<li><a class="nav-link" data-scroll-target="#动态路径与稳健性" href="#动态路径与稳健性" id="toc-动态路径与稳健性">动态路径与稳健性</a></li>
+<li><a class="nav-link" data-scroll-target="#审计费用与费用增加" href="#审计费用与费用增加" id="toc-审计费用与费用增加">审计费用与费用增加</a></li>
+<li><a class="nav-link" data-scroll-target="#公司市值" href="#公司市值" id="toc-公司市值">公司市值</a></li>
+</ul></li>
+<li><a class="nav-link" data-scroll-target="#其他审计质量指标与局部证据" href="#其他审计质量指标与局部证据" id="toc-其他审计质量指标与局部证据">6. 其他审计质量指标与局部证据</a>
+<ul class="collapse">
+<li><a class="nav-link" data-scroll-target="#应计和真实盈余管理" href="#应计和真实盈余管理" id="toc-应计和真实盈余管理">应计和真实盈余管理</a></li>
+<li><a class="nav-link" data-scroll-target="#roe-门槛附近的四大客户差异" href="#roe-门槛附近的四大客户差异" id="toc-roe-门槛附近的四大客户差异">ROE 门槛附近的四大客户差异</a></li>
+<li><a class="nav-link" data-scroll-target="#roe-门槛与盈余管理交互" href="#roe-门槛与盈余管理交互" id="toc-roe-门槛与盈余管理交互">ROE 门槛与盈余管理交互</a></li>
+<li><a class="nav-link" data-scroll-target="#真实盈余管理分项及存货减值" href="#真实盈余管理分项及存货减值" id="toc-真实盈余管理分项及存货减值">真实盈余管理分项及存货减值</a></li>
+<li><a class="nav-link" data-scroll-target="#未预警失败的严重程度" href="#未预警失败的严重程度" id="toc-未预警失败的严重程度">未预警失败的严重程度</a></li>
+<li><a class="nav-link" data-scroll-target="#未预警失败子样本-did" href="#未预警失败子样本-did" id="toc-未预警失败子样本-did">未预警失败：子样本 DID</a></li>
+<li><a class="nav-link" data-scroll-target="#其他质量指标的分组比较" href="#其他质量指标的分组比较" id="toc-其他质量指标的分组比较">其他质量指标的分组比较</a></li>
+</ul></li>
+<li><a class="nav-link" data-scroll-target="#综合判断" href="#综合判断" id="toc-综合判断">7. 综合判断</a>
+<ul class="collapse">
+<li><a class="nav-link" data-scroll-target="#连接认证可信度与市场反应的关键检验" href="#连接认证可信度与市场反应的关键检验" id="toc-连接认证可信度与市场反应的关键检验">4. 连接认证、可信度与市场反应的关键检验</a></li>
+<li><a class="nav-link" data-scroll-target="#历史意见与客户选择的全部回归尝试" href="#历史意见与客户选择的全部回归尝试" id="toc-历史意见与客户选择的全部回归尝试">历史意见与客户选择的全部回归尝试</a></li>
+</ul></li>
+<li><a class="nav-link" data-scroll-target="#待解决问题与补充材料" href="#待解决问题与补充材料" id="toc-待解决问题与补充材料">待解决问题与补充材料</a></li>
+<li><a class="nav-link" data-scroll-target="#数据程序与输出记录" href="#数据程序与输出记录" id="toc-数据程序与输出记录">数据、程序与输出记录</a></li>
+</ul>
+</nav>
+</div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+<header class="quarto-title-block default" id="title-block-header">
+<div class="quarto-title">
+<h1 class="title">四大事务所效应</h1>
+</div>
+<div class="quarto-title-meta">
+</div>
+</header>
+<section class="level2" id="概述">
+<h2 class="anchored" data-anchor-id="概述">概述</h2>
+<p>本章考察四大事务所的客户风险差异、选择与预警机制、换所检验及财报信息的市场反应。客户群差异和认证机制线索较明确，但同一客户换入四大后的改善并不一致。</p>
+</section>
+<section class="level2" id="核心结果">
+<h2 class="anchored" data-anchor-id="核心结果">核心结果</h2>
+<p>四大客户在截面上表现出更低的审计失败率，且市场对其财报信息给予更强的认证溢价；但客户进退与预警后的风险差异表明，这一优势很大程度上由“客户筛选与风险组合动态调整（client selection &amp; portfolio rebalancing）”驱动，而非对同一客户带来无差异的增量治理改善。</p>
+<p><strong>核心实证发现：</strong></p>
+<ol type="1">
+<li><strong>审计失败率显著分层。</strong> 全样本中，四大、本土八大与其他事务所的综合审计失败率分别为 2.33%、6.60% 和 8.71%。在标准无保留意见子样本中，四大的失败率依然显著更低，表明这一差距并非仅由出具意见的类型构成差异所致。</li>
+<li><strong>市场对正向财报信息的认证溢价。</strong> 在使用公告前 180 天内分析师预测的样本中，四大和本土八大客户的正向盈余惊喜（earnings surprise &gt; 10%）对应着显著更强的公告期股价反应；而在使用较旧分析师预测的样本中，未能显现类似的分层模式。</li>
+<li><strong>风险意见驱动客户进退与预警缓冲。</strong> 四大客户收到重大审计意见（MAO）后，次年退出四大的概率显著上升 35.16 个百分点；非四大客户收到 MAO 后，次年进入四大的概率下降 0.293 个百分点。对于已被出具风险预警（MAO 或持续经营不确定性 GC）的存量客户，四大客户在次年的违规发生率分别显著低 5.30 和 8.87 个百分点。</li>
+<li><strong>换所证据揭示筛选而非治疗效应。</strong> 企业换入四大后承担了显著的审计费用溢价（对数费用增加约 0.370，换出减少约 0.242）；但在静态与动态双向固定效应模型下，同一企业换入四大后在财务重述与应计盈余质量上未出现持续且一致的改善，表明截面上的高质量更多体现为高质量客户与高声誉事务所的匹配结果。</li>
+</ol>
+<p>Panel A 考察风险预警对四大客户退出与非四大客户进入的动态影响：</p>
+<p><span class="math display">\[
+\operatorname{Transition}_{i,t+1} = \beta M_{it} + \mathbf{X}_{it}'\gamma + \alpha_i + \lambda_{j(i,t),t} + \varepsilon_{it}.
+\]</span></p>
+<p>Panel B 在全样本中检验四大与风险审计意见的交互效应：</p>
+<p><span class="math display">\[
+Y_{i,t+h} = \beta_B Big4_{it} + \beta_M M_{it} + \beta_{BM}(Big4_{it} \times M_{it}) + \mathbf{X}_{it}'\gamma + \alpha_i + \lambda_{j(i,t),t} + \varepsilon_{it}, \qquad h \in \{0, 1\}.
+\]</span></p>
+<p>其中 <span class="math inline">\(M_{it}\)</span> 分别为出具重大审计意见（MAO）或持续经营不确定性意见（GC）的指示变量；<span class="math inline">\(\beta_B + \beta_{BM}\)</span> 捕捉已获风险预警客户在四大下的增量违规与失败差异；<span class="math inline">\(Y\)</span> 分别对应当期审计失败、次年公告违规或次年财务重述。两式均控制公司固定效应（firm FE, <span class="math inline">\(\alpha_i\)</span>）与行业×年份固定效应（industry-year FE, <span class="math inline">\(\lambda_{j(i,t),t}\)</span>），并在公司层面聚类标准误。</p>
+<p><strong>市场反应事件研究设定。</strong> 基于盈余公告日前后的日度交易数据，估计正向盈余惊喜对对数股价的动态冲击：</p>
+<p><span class="math display">\[
+\log P_{i,t,d} = \sum_{k \ne -1} \beta_k^g \bigl(S_{it} \times \mathbf{1}\{\tau_{itd}=k\}\bigr) + \alpha_{it}^g + \lambda_{\tau_{itd}}^g + \delta_d^g + \varepsilon_{itd}, \qquad G_{it}=g.
+\]</span></p>
+<p><span class="math inline">\(S_{it}\)</span> 为正向盈余惊喜处理组（实际盈利超出分析师最新预期 10% 以上，对照组为预测误差在 <span class="math inline">\([-10\%, 10\%]\)</span> 区间）；<span class="math inline">\(g\)</span> 分别对应四大、本土八大与其他事务所组别。模型吸收公司×年份固定效应、事件时间固定效应与交易日固定效应，标准误在公司×年份层面聚类。</p>
+<figure class="latex-table figure">
+<img alt="精选机制结果：客户选择与预警后的风险" class="figure-img" loading="lazy" src="tables/core_result/client_selection_core.png"/>
+<figcaption>
+精选机制结果：客户选择与预警后的风险 · TeX · PDF
+</figcaption>
+</figure>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img class="img-fluid figure-img" src="tables/core_result/04_earnings_surprise.png" style="width:100.0%"/></p>
+<figcaption>精选市场结果：180 天内预测样本</figcaption>
+</figure>
+</div>
+<p><a href="#full-12_big4_effect-4">客户选择全部面板</a> · <a href="#full-12_big4_effect-3">完整市场图与认证讨论</a> · <a href="#full-12_big4_effect-5">全部换所与稳健性尝试</a></p>
+<p><span id="full-12_big4_effect-1"></span></p>
+<p><span id="settings-12_big4_effect"></span></p>
+<p><strong>样本与基准控制变量。</strong> 实证分析基于 1990—2024 年 A 股上市公司非平衡面板。控制变量集统一定义如下：<span class="math inline">\(C_F\)</span> 包含规模（<code>size</code>）、杠杆（<code>lev</code>）、亏损指示（<code>loss</code>）、资产回报率（<code>roa</code>）、Altman Z-score（<code>zscore</code>）、杠杆变动（<code>chg_lev</code>）、年报披露时滞（<code>report_lag</code>）、经营现金流（<code>cfo</code>）与上市年限（<code>age</code>）；<span class="math inline">\(C_M\)</span> 在 <span class="math inline">\(C_F\)</span> 基础上加入外部融资需求（<code>financing</code>）与滞后一期持续经营意见（<code>L.gc</code>）；<span class="math inline">\(C_E\)</span> 额外包含营业收入增长率、账面市值比与操纵性应计利润；<span class="math inline">\(C_A\)</span> 为基准规模与经营财务指标；<span class="math inline">\(C_V\)</span> 在 <span class="math inline">\(C_F\)</span> 基础上补充市值与成长性指标。变量缺失值采用行业—年份中位数结合全样本中位数填充，并引入缺失指示变量。</p>
+<p><strong>事务所差异与换所模型。</strong> 截面基准设定为 <span class="math inline">\(Y_{it} = \beta Big4_{it} + \mathbf{X}_{it}'\gamma + \text{FE} + \varepsilon_{it}\)</span>。换所分析设定为 <span class="math inline">\(Y_{it} = \theta D_{it}^{up/down} + \mathbf{X}_{it}'\gamma + \alpha_i + \lambda_{s(i),t} + \varepsilon_{it}\)</span>，区分单向换入（以持续聘用非四大为对照）与换出（以持续聘用四大为对照）样本，要求发生前后具备连续观察期，标准误按公司层面聚类。</p>
+</section>
+<section class="level2" id="中国审计市场的分层">
+<h2 class="anchored" data-anchor-id="中国审计市场的分层">1. 中国审计市场的分层</h2>
+<p>将事务所分为 Big 4、Local 8 和 Other。按审计费用衡量的份额展示市场结构随时间的变化；质量比较则以公司年度为单位。两种权重回答不同问题，收费份额不能直接视为质量份额。</p>
+<p><strong>回归／统计设定。</strong> 市场份额、三基线趋势为描述统计；类型比较表按自己的回归设定解释。原始输入 71,584 不等于每个结果有效 N；覆盖差异保留。 <a href="#settings-12_big4_effect">变量与回归设定</a>。</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img class="img-fluid figure-img" src="figures/audit_quality/market_share_by_audit_fee.png" style="width:100.0%"/></p>
+<figcaption>按审计费用计算的事务所市场份额</figcaption>
+</figure>
+</div>
+<p>四大客户在规模、审计费用及风险结构上明显不同。由此，四大与其他事务所的结果差异可能同时来自客户选择、审计服务和事件被发现的过程。以下先展示差异，再检验能否把它归因于事务所转换。</p>
+<section class="level3" id="市场长期趋势">
+<h3 class="anchored" data-anchor-id="市场长期趋势">市场长期趋势</h3>
+<p>本节估计全市场审计质量的宏观趋势。对每个指标 <span class="math inline">\(m\)</span> 和每个基线样本 <span class="math inline">\(s\)</span>，模型为：</p>
+<p><span class="math display">\[
+Y^m_{it}=&amp;#92;alpha_i+&amp;#92;sum_{&amp;#92;tau&amp;#92;neq2000}&amp;#92;eta^m_{&amp;#92;tau,s}&amp;#92;mathbf{1}&amp;#92;{Year=t&amp;#92;}
++X_{it}'&amp;#92;gamma_m+&amp;#92;varepsilon^m_{it}.
+\]</span></p>
+<p>系数以 2000 年为零点，吸收客户公司固定效应，并按客户公司聚类。三条线分别对应：</p>
+<ol type="1">
+<li>全部非平衡活跃公司—年度；</li>
+<li>长期存续基线：2000 年出现、并在 2000—2024 年间至少有 22 个观测的公司；</li>
+<li>本地五年连续基线：在当年 <span class="math inline">\([t-2,t+2]\)</span> 窗口内连续出现的公司（边界年份相应缩短窗口）。</li>
+</ol>
+<p>三基线的目的不是制造三种规格，而是检查退出、上市和暂时缺失是否改变宏观趋势。它们不能识别审计制度或事务所类型导致的变化。</p>
+<p><strong>审计失败趋势</strong></p>
+<p>综合失败率在三个基线下都显示 2008 年后上升、2016—2018 年达到较高水平、随后回落的非单调模式；但长期存续样本的上升幅度更大。2024 年全样本和本地五年基线低于或接近 2000 年，而长期存续样本仍高于基年。这说明“全市场审计失败是否长期恶化”不能由单一平衡样本的曲线回答。</p>
+<p><img alt="2000—2024 年综合审计失败率的三基线宏观趋势。" class="img-fluid" data-fig-cap="综合审计失败率的宏观趋势。点估计与 95% 置信区间均相对 2000 年；三条线的差异反映样本存续与连续观测要求。" src="figures/audit_quality/trend_any_failure_clean.png" style="width:100.0%"/></p>
+<p>重述与违规的图提供了同一结果的两个组成部分。它们应与综合失败率一起读：单个组成指标的变化可能来自监管披露、识别概率或记录覆盖的变化，而不单是审计质量本身。</p>
+<p><img alt="2000—2024 年财务重述率的三基线宏观趋势。" class="img-fluid" data-fig-cap="财务重述率的宏观趋势：相对 2000 年的公司固定效应条件均值。" src="figures/audit_quality/trend_restated_clean.png" style="width:100.0%"/></p>
+<p><img alt="2000—2024 年财务违规率的三基线宏观趋势。" class="img-fluid" data-fig-cap="财务违规率的宏观趋势：相对 2000 年的公司固定效应条件均值。" src="figures/audit_quality/trend_violated_clean.png" style="width:100.0%"/></p>
+<p><strong>盈余管理指标与覆盖率</strong></p>
+<p>Jones 异常应计绝对值也按同一三基线估计。它可用于判断财务报告质量的宏观变化是否与事后失败的走势一致，但不是对重述或违规的替代。</p>
+<p><img alt="2000—2024 年 Jones 异常应计绝对值的三基线宏观趋势。" class="img-fluid" data-fig-cap="Jones 异常应计绝对值的宏观趋势。不同基线的差异提醒读者注意上市、退出和指标可得性。" src="figures/audit_quality/trend_abs_da_jones.png" style="width:100.0%"/></p>
+<p>违规、重述、综合失败、MAO 和 GC 在该样本中的年度覆盖率为 100%。审计收费在 2000 年仅覆盖约 46%，2012 年后接近全覆盖；Jones DA、REM 与保守性等指标的覆盖率则在样本期内明显波动。因此，费用和盈余管理指标的长期图必须与覆盖率一起解释，不能把早年缺失或样本构成变化读为质量趋势。</p>
+<p><img alt="主要审计质量指标在 2000—2024 年的年度覆盖率。" class="img-fluid" data-fig-cap="主要指标的年度覆盖率，占当年 A 股上市公司总数的比例。" src="figures/audit_quality/00_all_metrics_coverage_rate_trend.png" style="width:100.0%"/></p>
+</section>
+<section class="level3" id="其他结果事务所类型比较">
+<h3 class="anchored" data-anchor-id="其他结果事务所类型比较">其他结果：事务所类型比较</h3>
+<p>四大客户也明显不同：其非标意见率为 2.24%，低于本土八大的 4.51% 和其他事务所的 9.44%；审计费均值约为本土八大的 3.7 倍，客户市值均值约为本土八大的 6.9 倍。异常应计的组均值较低，但真实盈余管理绝对值与另外两组接近。客户规模和风险结构差异足以影响上述简单比较。</p>
+<figure class="latex-table figure" id="latex-table-2">
+<img alt="Table 2: Other Outcomes by Audit-Firm Group" class="figure-img" loading="lazy" src="tables/big4_effect_latex/02_other_outcomes_descriptive_full.png"/>
+<figcaption>
+Table 2: Other Outcomes by Audit-Firm Group · TeX · PDF
+</figcaption>
+</figure>
+<p><span id="full-12_big4_effect-2"></span></p>
+</section>
+</section>
+<section class="level2" id="核心事实四大客户的审计失败更少">
+<h2 class="anchored" data-anchor-id="核心事实四大客户的审计失败更少">2. 核心事实：四大客户的审计失败更少</h2>
+<p>这里的“未预警失败”是在全部有效公司年度中，发生重述或违规且当年未收到非标审计意见的联合事件，对应的发生率为 <span class="math inline">\(P(\mathrm{AnyFailure}=1,\ \mathrm{MAO}=0)\)</span>。其中 <span class="math inline">\(\mathrm{AnyFailure}=1\)</span> 表示重述或违规；重述与违规单项分别用相同形式定义。分母是全部有效公司年度，没有按审计意见筛掉观测。它也不意味着审计师对该项事件完全没有其他形式的提示。重述按被重述的会计年度匹配，违规按违规涉及年度匹配。</p>
+<p><strong>回归／统计设定。</strong> 类型差异及未预警联合失败指标的条件关联，不等于换所处理效应。基础模型的三套 FE、C_F 控制组与客户聚类见本章设定；AKM 排序另说明其识别网络。 <a href="#settings-12_big4_effect">变量与回归设定</a>。</p>
+<p>描述性比较呈现三类事务所的客户群；失败指标与其他结果的有效样本数不同。回归中的四大客户系数分别在行业×年份、公司与年份、公司与行业×年份固定效应下估计；换入四大的处理组与始终非四大客户比较，换出组与始终四大客户比较。换所组要求换所前连续三年、从换所年起连续三年保持事务所类型。固定效应和控制变量减少部分可观测差异，但换所本身仍可能回应客户风险、融资或治理变化。</p>
+<p>以下英文表是结果展示；每节先说明能够从表和图读出的结论，再呈现完整估计。二元结果的系数乘以 100 后按百分点理解。</p>
+<section class="level3" id="重述何时被发现">
+<h3 class="anchored" data-anchor-id="重述何时被发现">重述何时被发现</h3>
+<p>重述并不一定在被重述的会计年度公告。下图所示的实质性盈余调整记录，多数在对应会计年度之后一至三年才公告。因此，表中的重述率是按<strong>被重述年度</strong>归属的事后结果，不能解释为审计报告当时已经公开的信息。该图使用有公告日期且存在盈余调整的原始重述记录，按公司和被重述年度保留最早公告；它不是下表全部 Restated 公司年度的分母，也不分事务所类型。图中的‘0 年’按公告所在日历年的月份分组。</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img alt="实质性财务重述按公告年与被重述会计年度之差统计的数量分布" class="img-fluid figure-img" src="figures/big4_effect_notebook/restatement_lag_new.png" style="width:100.0%"/></p>
+<figcaption>实质性财务重述的公告时滞分布</figcaption>
+</figure>
+</div>
+</section>
+<section class="level3" id="审计失败事务所类型与审计意见样本">
+<h3 class="anchored" data-anchor-id="审计失败事务所类型与审计意见样本">审计失败：事务所类型与审计意见样本</h3>
+<p>四大客户的事后失败发生率最低。全意见样本中，综合失败率为四大 2.33%、本土八大 6.60%、其他事务所 8.71%；未出具非标意见且发生失败的比例依次为 2.04%、5.49% 和 6.60%。重述、违规及其严重事件指标大体维持相同排序。即使只看标准意见客户，综合失败率仍为 2.08%、5.73% 和 7.18%。这些是客户群的描述差异，包含客户选择。</p>
+<figure class="latex-table figure" id="latex-table-1">
+<img alt="Table 1: Audit Outcomes by Audit-Firm Group" class="figure-img" loading="lazy" src="tables/big4_effect_latex/01_audit_outcomes_descriptive_full.png"/>
+<figcaption>
+Table 1: Audit Outcomes by Audit-Firm Group · TeX · PDF
+</figcaption>
+</figure>
+</section>
+<section class="level3" id="重述与违规跨年份总体比较">
+<h3 class="anchored" data-anchor-id="重述与违规跨年份总体比较">重述与违规：跨年份总体比较</h3>
+<p>两张图均显示四大、本土八大、其他事务所的发生率依次上升。重述图中，三组总体重述率分别为 1.04%、2.90% 和 3.30%；会计差错与违规类重述也呈现相同排序。违规图中，三组发生率分别为 1.37%、3.76% 和 4.68%。这些是客户群的描述性差异。</p>
+<p><strong>样本口径：</strong> 下图汇总各年份，没有按 2013 年前后拆分，但两图均仅纳入标准无保留意见样本，衡量的是该意见样本中的事件发生率，不是全部审计意见样本的发生率，也不是全样本中的“失败且未预警”联合概率。重述图覆盖 2001—2024 年。图与前表的样本构建口径不同，数值不作直接替代。</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img class="img-fluid figure-img" src="figures/audit_quality_baseline/restatement_static_3panels.png" style="width:100.0%"/></p>
+<figcaption>总体重述及分类重述概率：标准无保留意见样本</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img class="img-fluid figure-img" src="figures/audit_quality_baseline/violation_overall_static.png" style="width:100.0%"/></p>
+<figcaption>总体违规概率：标准无保留意见样本</figcaption>
+</figure>
+</div>
+<p><strong>本节的结论是客户群排序。</strong> 重述和违规衡量已记录的事后报告失败；较低发生率不自动意味着把同一客户交给四大就会改善同样幅度。后文的换所检验专门讨论这一问题。</p>
+<p>AKM 分解进一步考察客户与事务所的质量排序，帮助区分不同来源的差异；排序本身不识别事务所的因果贡献。</p>
+</section>
+<section class="level3" id="客户与事务所的-akm-排序">
+<h3 class="anchored" data-anchor-id="客户与事务所的-akm-排序">客户与事务所的 AKM 排序</h3>
+<p>本节改用更新后的事务所排序 AKM 结果，替代旧版审计师边界图。这里的目标不是估计签字审计师个人效应，而是在公司、事务所和年份三类固定效应共同进入模型后，描述事务所质量差异与客户选择之间的排序关系。</p>
+<p>对结果 <span class="math inline">\(Y_{ift}\)</span>，估计：</p>
+<p><span class="math display">\[
+Y_{ift}=X_{it}'&amp;#92;gamma+&amp;#92;alpha_i+&amp;#92;psi_f+&amp;#92;lambda_t+&amp;#92;varepsilon_{ift},
+\]</span></p>
+<p>其中，<span class="math inline">\(&amp;#92;alpha_i\)</span> 是客户固定效应，<span class="math inline">\(&amp;#92;psi_f\)</span> 是事务所固定效应，<span class="math inline">\(&amp;#92;lambda_t\)</span> 是年份固定效应。图中的横轴为事务所固定效应，纵轴为该事务所客户的等权平均客户固定效应；二者的对应关系用于展示客户排序与事务所质量的联合分布，而非因果处理效应。</p>
+<p><strong>可识别样本与事务所固定效应</strong></p>
+<p>只有在同一事务所内观察到足够的客户—年份信息、且固定效应连通时，事务所固定效应才有可比性。下图显示满足识别要求的事务所客户数分布；四大和本土八大通常拥有更多满足条件的客户，其他事务所的有效客户数高度偏斜。因此，任何跨事务所比较都需要报告样本限制，不能把小样本事务所固定效应与大型事务所同等解释。</p>
+<p><img alt="按四大、本土八大和其他事务所分组的有效客户数分布。" class="img-fluid" data-fig-cap="AKM 事务所固定效应的可识别样本：每家事务所的有效客户数分布。有效客户要求在事务所内外均有足够观测期。" src="figures/audit_firm_akm/audit_firm_valid_client_distribution.png" style="width:100.0%"/></p>
+<p><strong>综合失败、重述与违规</strong></p>
+<p>以“未被非标意见预警的综合失败”为核心结果，事务所层面的组间对比显示：四大相对其他事务所的估计差异为 <span class="math inline">\(-0.0345\)</span>（p=0.001），本土八大相对其他事务所为 <span class="math inline">\(-0.0153\)</span>（p=0.020），四大相对本土八大为 <span class="math inline">\(-0.0192\)</span>（p=0.048）。因此，综合失败是 AKM 排序结果中最完整且最精确的质量差异。</p>
+<p>对违规，四大相对其他事务所的差异为 <span class="math inline">\(-0.0270\)</span>（p=0.002）；本土八大相对其他事务所为 <span class="math inline">\(-0.0111\)</span>（p=0.057），四大相对本土八大为 <span class="math inline">\(-0.0159\)</span>（p=0.053）。违规结果支持相同排序，但后两项只在 10% 水平边缘显著。</p>
+<p>对重述，四大相对其他事务所的差异为 <span class="math inline">\(-0.0129\)</span>（p=0.058），而本土八大及四大—本土八大差异均不精确。因此，重述不应单独承担本节的主结论；它可以作为与综合失败和违规方向一致、但精度较弱的补充证据。</p>
+<p><img alt="四大、本土八大和其他事务所的综合审计失败事务所固定效应分布。" class="img-fluid" data-fig-cap="综合审计失败的事务所固定效应分布。黑色虚线为其他事务所均值，彩色实线为各组均值。" src="figures/audit_firm_akm/audit_firm_fe_distribution_any_failure_clean.png" style="width:100.0%"/></p>
+<p><img alt="综合审计失败的事务所固定效应与客户固定效应散点图。" class="img-fluid" data-fig-cap="综合审计失败：事务所固定效应与客户固定效应的联合分布。每个点代表一家事务所；这张图描述排序，不识别事务所的因果处理效应。" src="figures/audit_firm_akm/tier_audit_firm_scatter_any_failure_clean_all.png" style="width:100.0%"/></p>
+<p><strong>异常应计的补充证据</strong></p>
+<p>对 <span class="math inline">\(|DA^{Jones}|\)</span>，四大相对其他事务所的事务所固定效应差异为 <span class="math inline">\(-0.0083\)</span>（p=0.022）；本土八大相对其他事务所不显著，四大相对本土八大的差异为 <span class="math inline">\(-0.0092\)</span>（p=0.009）。这与综合失败和违规的排序一致，但该指标基于模型化的应计估计，证据权重应低于事后失败结果。</p>
+<p><img alt="Jones异常应计绝对值的事务所固定效应与客户固定效应散点图。" class="img-fluid" data-fig-cap="Jones 异常应计绝对值：事务所固定效应与客户固定效应的联合分布。" src="figures/audit_firm_akm/tier_audit_firm_scatter_abs_da_jones_all.png" style="width:100.0%"/></p>
+<p>这些 AKM 结果是事务所质量差异和客户排序的强描述性证据。它们不能单独区分“优质客户选择四大”与“四大提高审计质量”；该区分仍应由本页的转换事件研究、匹配设计或外生冲击承担。</p>
+<p>关于四大采用、客户—事务所—审计师匹配及三层 AKM 的完整梳理，分别见<a href="./21_adoption.html">四大采用</a>、<a href="./25_matching.html">匹配关系</a>和<a href="./26_akm.html">三维 AKM</a>。</p>
+<p><span id="full-12_big4_effect-3"></span></p>
+</section>
+</section>
+<section class="level2" id="市场是否区别对待财报信息">
+<h2 class="anchored" data-anchor-id="市场是否区别对待财报信息">3. 市场是否区别对待财报信息</h2>
+<p>事后失败之外，市场反应提供另一种观察角度：当业绩高于预测时，投资者对不同事务所客户的财报是否作出不同反应？图中使用正向盈余惊喜大于 10% 的公司年度为处理组，惊喜在 −10% 至 10% 之间为对照组，较大的负向惊喜不进入这项比较。惊喜的定义为：</p>
+<p><strong>回归／统计设定。</strong> 对数股价、正向惊喜 &gt;10% 与 ±10% 对照，事件窗 −5 至 +5，基期 −1；按预测信息时效分组。公司×年份、事件时间及交易日 FE，公司×年份聚类；历史图与当前脚本命名差异、实际 N 和控制情况见下文待核验说明。 <a href="#settings-12_big4_effect">变量与回归设定</a>。</p>
+<p><span class="math display">\[Surprise_{it}=\frac{EPS_{it}-MedianForecast_{it}}{|MedianForecast_{it}|}.\]</span></p>
+<p>结果变量为对数股价，横轴为财报公告前后五个交易日，以公告前一交易日（k=−1）为基期；模型吸收公司×年份、事件时间和交易日固定效应，标准误按公司×年份聚类。图中的“180 天”区分分析师预测的信息窗口，不是公告后持有期。</p>
+<p><strong>回归设定核验补充。</strong> 当前 63 号脚本 FE1 命令为 <span class="math inline">\(\log P_{i,t,d}=\sum_{k\ne-1}\beta_k(S_{it}\times 1\{\tau=k\})+\alpha_{it}+\lambda_\tau+\delta_d+u_{itd}\)</span>；<span class="math inline">\(S\)</span> 为正向惊喜处理组，交互模型另与事务所类别交互。当前执行命令没有加入已声明但未引用的 <code>controls_main</code>，不能据变量声明写成已控制规模、波动率等。当前图名后缀为 FE1_NoTrend，网页保存的旧图为 FE1，因此旧图实际控制和窗口完整性、估计 N 及年份须结合历史执行日志核验；在核验前以上方程只作为当前代码设定，不能冒充已确认的旧图规格。</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img class="img-fluid figure-img" src="figures/erc/2grps_ln_p_pos_thresh_0p1_FE1.png" style="width:100.0%"/></p>
+<figcaption>正向盈余惊喜与公告期股价反应</figcaption>
+</figure>
+</div>
+<p><strong>在有 180 天内预测信息的样本中，公告后四大和本土八大的正向价格路径高于其他事务所。</strong> 图下注明的组间检验显示，四大在 D0—D4、本土八大在 D0—D2 的部分时期高于其他组。更早预测信息组没有相同模式，不能把上半图结论推广到所有预测窗口。</p>
+<p>这一结果与市场对财报可信度进行差异化评价相一致，也可能反映客户的信息环境、增长机会和预测覆盖差异。它不是随机聘任四大的价格效应，也不是传统连续盈余惊喜斜率的单一 ERC 估计。</p>
+<p>样本为 2002 年起、公告窗口完整的公司年度；正向惊喜样本与较早预测信息样本分别解释。</p>
+<p><span id="certification-story"></span></p>
+<section class="level3" id="从财报生产质量到信息认证价值">
+<h3 class="anchored" data-anchor-id="从财报生产质量到信息认证价值">1. 从财报生产质量到信息认证价值</h3>
+<p><strong>四大可能通过客户筛选和持续监督提供“认证服务”，使市场更愿意相信其客户披露的信息。</strong> 即使换入四大后没有观察到一致的重述或违规下降，这种信息认证仍然可能具有经济价值。它将审计服务的作用从改善企业的财报生产质量，拓展至提高财报在市场中的可信度。</p>
+<p>这一机制可以表述为：</p>
+<p><strong>四大有选择地承接和维持客户关系 → 四大身份传递关于客户及财报的信息 → 投资者对其披露的盈利消息赋予更高权重 → 正向 earnings surprise 引起更强的价格反应。</strong></p>
+<p>这条链条不要求四大必须把一个原本很差的企业“改造好”。<strong>筛选本身也可能生产信息：能够进入并维持四大审计关系，可能让外部投资者更新对企业的判断。</strong> 前提是这种选择传递了市场原本不知道的信息，而不只是重复企业规模、盈利能力等公开特征。持续监督及整条认证链条目前仍是待检验的机制，不能由几项相容的关联直接确证。</p>
+<p><span id="certification-market"></span></p>
+</section>
+<section class="level3" id="财报更可信与市场奖励的具体含义">
+<h3 class="anchored" data-anchor-id="财报更可信与市场奖励的具体含义">3. 财报更可信与市场奖励的具体含义</h3>
+<p>目前市场结果的准确范围是：<strong>在使用公告前 180 天内分析师预测的样本中，四大和本土八大客户的正向 earnings surprise 对应更强的公告期股价反应。</strong> 较早预测信息样本没有相同模式。完整结果见<a href="./23_big4_effect.html">四大事务所效应</a>第 3 节。</p>
+<p>这与市场对财报可信度进行差异化评价相符，但尚不能解释为“四大身份本身带来估值溢价”，也不能推出企业已获得长期净收益。更强的反应针对的是盈利消息，而不是四大身份的无条件价格溢价；它也不意味着四大使企业产生更多盈余惊喜。本土八大同样有类似反应，因此认证解释可能涉及大型审计机构，未必完全属于四大。</p>
+<p><span id="full-12_big4_effect-4"></span></p>
+</section>
+</section>
+<section class="level2" id="客户选择与审计意见四大如何形成较低风险的客户组合">
+<h2 class="anchored" data-anchor-id="客户选择与审计意见四大如何形成较低风险的客户组合">4. 客户选择与审计意见：四大如何形成较低风险的客户组合</h2>
+<p><strong>客户进出、预警后的风险和客户特征给出了一条连贯的证据链：四大的低失败率伴随着有选择的客户流动，而且即使收到相同类别的预警，四大客户的风险仍然较低。</strong> 在当前四大客户中，收到 MAO 与下一年退出四大的概率提高 35.16 个百分点相关（p&lt;0.001），GC 对应提高 20.39 个百分点（p=0.073）；在当前非四大客户中，MAO 与下一年进入四大的概率降低 0.293 个百分点相关（p=0.017），GC 则没有显著关系。风险预警因此不仅体现为一份意见，也与客户在事务所梯队之间的后续流动紧密相连。退出和进入的方向共同支持客户筛选是理解四大客户组合的重要机制；这里的流动衡量是否聘用任一家四大，没有区分客户主动换所与事务所终止合作。</p>
+<p><strong>回归／统计设定。</strong> 机制 A 的控制为 C_F，B、C 为 C_M；公司及行业×年份 FE、公司聚类。特征比较 E 为行业加年份 FE、无额外控制；分类概率 D 是描述统计。不同分母和相邻年要求不能省略。 <a href="#settings-12_big4_effect">变量与回归设定</a>。</p>
+<p><strong>四大的客户风险优势在已预警组中仍然存在，最明确地体现为更低的次年公告违规概率。</strong> 在公司及行业×年份固定效应、控制变量相同的回归中，已收到 MAO 的四大客户当期综合失败概率比非四大低 6.25 个百分点（p=0.064，属于 10% 水平的证据），次年公告违规概率低 5.30 个百分点（p=0.020）；已收到 GC 的相应差异为低 11.88 和 8.87 个百分点（p 分别为 0.008 和小于 0.001）。在未收到相应意见的客户中，四大的当期失败概率也低约 2 个百分点，次年公告违规概率低约 0.8—0.9 个百分点。也就是说，四大客户较低的失败风险并不是仅由“有没有收到非标意见”的构成差异造成，同一意见状态下仍可观察到明显差距。次年重述的组间差异均不显著，这条证据主要集中于综合失败和公告违规，而非所有未来负面结果。</p>
+<p><strong>客户财务状况的比较进一步支持这种风险构成差异。</strong> 在已收到 MAO 的客户中，四大的亏损概率低 8.70 个百分点（p=0.042），当期公告违规概率低 4.09 个百分点（p=0.020）；在已收到 GC 的客户中，四大的亏损概率低 20.16 个百分点（p=0.011），当期重述概率低 9.76 个百分点（p=0.002）。Z-score、ROA 和杠杆没有显著差异，因此这里体现的是特定风险指标上的优势。在意见反应上，亏损对应的 MAO 概率增量在非四大为 8.44 个百分点、四大为 4.97 个百分点，二者差异为 −3.47 个百分点（p=0.031）；亏损对应的 GC 概率增量分别为 4.05 和 0.21 个百分点，四大的增量本身不显著。公告违规与 GC 的关联在四大中也更弱，斜率差异为 −3.23 个百分点（p=0.003）。这说明相同的表面风险指标在两类客户中对应不同的意见反应，与客户风险构成和审计判断共同发挥作用的解释一致。</p>
+<p><strong>把这些结果合在一起，最有依据的推论是：客户筛选与组合调整是四大低失败率的重要解释，预警客户较低的事后风险也与更早发出预警的解释相容；但目前没有证据把这种优势统一归结为更严格的预警阈值。</strong> 以当期综合失败为标签，四大 MAO 的标准 Type I 错误率为 2.01%，低于非四大的 5.74%；Type II 为 88.29%，高于非四大的 79.28%。GC 及次年公告违规的比较方向相同。因而，数据支持“四大客户更少失败、风险意见与客户进出相关”，不支持“通过更多假阳性换取更少假阴性”。这一结论将客户匹配放在核心位置，也解释了为什么客户群之间显著的质量差距，不一定转化为换入四大后同样明确的改善。</p>
+<p><span id="certification-selection"></span></p>
+<section class="level3" id="客户筛选的证据与-mao-的解释边界">
+<h3 class="anchored" data-anchor-id="客户筛选的证据与-mao-的解释边界">2. 客户筛选的证据与 MAO 的解释边界</h3>
+<p>当前结果支持客户筛选与组合调整的重要性，但<strong>尚未统一支持“四大给出更严格的 MAO”或采用更严格的预警阈值</strong>。四大客户收到 MAO 后退出四大的概率较高，但现有流动数据尚未区分客户主动换所与四大拒绝续约。因此，更稳妥的表述是：</p>
+<blockquote class="blockquote">
+<p>四大客户的风险较低，风险意见与客户关系的进入、退出密切相关。这些事实与四大通过客户筛选和关系管理维护其认证价值的解释相容。</p>
+</blockquote>
+<p>客户群风险较低、风险意见与客户流动相关，以及对同一客户的审计服务改善，是不同层次的结果。前两者可以支持认证机制的研究动机，但不能替代第三者的因果识别。完整证据见<a href="./23_big4_effect.html">四大事务所效应</a>第 4 节。</p>
+</section>
+<section class="level3" id="mao-后换所变更公告中的具体线索">
+<h3 class="anchored" data-anchor-id="mao-后换所变更公告中的具体线索">MAO 后换所：变更公告中的具体线索</h3>
+<p><strong>变更公告让客户组合调整的过程更加具体：在收到四大 MAO 后转向非四大的事件中，可以看到服务评价、费用协商、任期安排、集团决策和资产重组等不同渠道。</strong> 主面板中共有 107 个四大 MAO 公司年度，其中 103 个能够观察到严格相邻的下一年；44 个下一年被分类为非四大，涉及 40 家公司，原始转换比例为 42.72%。其中 1 个后任事务所名称和 ID 缺失，43 个有明确后任。30 个事件匹配到财报审计变更记录，20 个披露了原因、10 个未披露。以下选取六个有具体解释内容的案例；年份表示 MAO 财年到下一审计财年，公告可能在次年披露，公司名称沿用当前面板简称。</p>
+<ul>
+<li><strong>深圳华强，2001→2002：服务评价与公司改聘决定。</strong> 数据库原因码标为“事务所辞职”，但公告文字称沪江德勤的服务“不能达到工作要求”，由公司董事会决定改聘深圳鹏城。编码与文字存在差异，但两者都把注意力引向原有服务关系的结束；这是关系调整的具体线索，尚不能据此确定由哪一方首先提出终止。</li>
+<li><strong>退市拉夏，2019→2020：费用与成本协商。</strong> 公司公告称变更基于“合理控制审计成本、减少费用开支”，另一来源写“收费分歧”。两种表述共同指向审计服务的经济条件，是 MAO 后客户与事务所未继续合作的一个具体渠道。</li>
+<li><strong>卓郎智能，2019→2020：任期与集团安排。</strong> 公司公告强调前任服务期限较长，另一来源称集团或控股股东要求更换。该案例表明，客户流动可能同时涉及任期安排与控制股东对审计机构的选择。</li>
+<li><strong>上海临港，2014→2015：重大资产重组与审计关系延续。</strong> 公告描述重组后聘用重组项目的审计机构，另一来源写合同期满。这里客户业务和资产构成的变化，为重新选择审计机构提供了具体背景。</li>
+<li><strong>新城控股，2023→2024：业务及整体审计需要。</strong> 公告以业务状况、发展需求和整体审计需要解释更换，并明确称与前任在工作安排、收费、意见等方面不存在分歧。该记录支持业务安排发生调整，但没有披露意见冲突。</li>
+<li><strong>鼎信通讯，2023→2024：长期服务、独立性与招标。</strong> 公告称安永已连续服务超过十年，并同时提及独立性、实际审计需求和招标程序，显示这次转换通过正式选聘程序完成。</li>
+</ul>
+<p><strong>这些案例说明，MAO 后的客户流动有具体的服务关系和商业安排作为背景。</strong> “合同到期”“业务需要”等公开措辞不能完整揭示双方协商过程，不能因措辞常规就排除风险评估或合作意愿发生变化；同样，不能把这些措辞一律解释成未明说的辞任。结合回归中的退出上升和进入下降，这些材料支持将客户选择理解为双方围绕服务、费用、任期及业务安排进行的匹配与重新匹配，而不局限于单方“踢走客户”。六个案例是机制线索，未匹配和未披露部分仍保留在完整事件清单中。</p>
+<p>查看全部事件与披露原文</p>
+</section>
+<section class="level3" id="综合机制表客户流动预警与风险构成">
+<h3 class="anchored" data-anchor-id="综合机制表客户流动预警与风险构成">综合机制表：客户流动、预警与风险构成</h3>
+<p>Table M1 将全部机制结果放在一张表中，按 Panel A—E 分页展示。A 为进入与退出，B 为同一意见状态下的结果差异，C 为风险对应的意见反应，D 为描述性分类概率，E 为已预警客户特征。A—C 使用公司与行业×年份固定效应及各模型原有控制变量；E 使用行业和年份固定效应，不另加控制变量。回归系数下为公司聚类标准误，二元结果系数乘 100 后按百分点解释；D 已用百分比表示，N 为各项概率的分母。</p>
+<p>令 M 表示 MAO 或 GC，Y 表示所检验的负面事件。Panel B 的未预警组差异为 <span class="math inline">\(\beta\)</span>，已预警组差异为 <span class="math inline">\(\beta+\delta\)</span>，已预警组未失败差异为 <span class="math inline">\(-(\beta+\delta)\)</span>；三项均使用同一回归协方差矩阵计算标准误，后两项互为相反数。Panel D 分别报告 <span class="math inline">\(P(Y=0\mid M=1)\)</span>、<span class="math inline">\(P(Y=1\mid M=0)\)</span>、<span class="math inline">\(P(M=1\mid Y=0)\)</span> 和 <span class="math inline">\(P(M=0\mid Y=1)\)</span>。没有记录到指定事件不等同于财务报表完全无误。</p>
+<p>完整综合表 PDF · 英文 LaTeX · 完整估计与置信区间</p>
+<figure class="latex-table figure">
+<img alt="Table M1, Panel A" class="figure-img" loading="lazy" src="tables/big4_mechanism/client_selection_opinion_mechanism_full_p01.png"/>
+<figcaption>
+Table M1, Panel A · TeX · PDF
+</figcaption>
+</figure>
+<figure class="latex-table figure">
+<img alt="Table M1, Panel B" class="figure-img" loading="lazy" src="tables/big4_mechanism/client_selection_opinion_mechanism_full_p02.png"/>
+<figcaption>
+Table M1, Panel B · TeX · PDF
+</figcaption>
+</figure>
+<figure class="latex-table figure">
+<img alt="Table M1, Panel C" class="figure-img" loading="lazy" src="tables/big4_mechanism/client_selection_opinion_mechanism_full_p03.png"/>
+<figcaption>
+Table M1, Panel C · TeX · PDF
+</figcaption>
+</figure>
+<figure class="latex-table figure">
+<img alt="Table M1, Panel D" class="figure-img" loading="lazy" src="tables/big4_mechanism/client_selection_opinion_mechanism_full_p04.png"/>
+<figcaption>
+Table M1, Panel D · TeX · PDF
+</figcaption>
+</figure>
+<figure class="latex-table figure">
+<img alt="Table M1, Panel E" class="figure-img" loading="lazy" src="tables/big4_mechanism/client_selection_opinion_mechanism_full_p05.png"/>
+<figcaption>
+Table M1, Panel E · TeX · PDF
+</figcaption>
+</figure>
+<p><span id="full-12_big4_effect-5"></span></p>
+</section>
+</section>
+<section class="level2" id="识别检验换入和换出四大后是否改善">
+<h2 class="anchored" data-anchor-id="识别检验换入和换出四大后是否改善">5. 识别检验：换入和换出四大后是否改善</h2>
+<p>横截面和意见结果揭示了选择问题；转换设计进一步比较同一公司更换事务所类型前后的变化。然而换所本身可能由风险、融资或治理变化触发，固定效应并不能自动排除这种选择。</p>
+<p><strong>回归／统计设定。</strong> 换入与换出分开构造，前 3 年和当年及后 2 年保持规定类型。TWFE、SA、CS-DID、多期变化和堆叠保留各自目标与对照，不能以统一公式替代；费用使用 C_A，市值使用 C_V。各方法实际窗口、权重和执行状态以原完整表／日志为准，缺失信息待核验。 <a href="#settings-12_big4_effect">变量与回归设定</a>。</p>
+<section class="level3" id="未预警失败四大客户差异与换所-did">
+<h3 class="anchored" data-anchor-id="未预警失败四大客户差异与换所-did">未预警失败：四大客户差异与换所 DID</h3>
+<p>加入公司及行业×年份固定效应后，四大客户的未预警综合失败概率低 1.97 个百分点，违规低 1.88 个百分点；重述差异仅为 −0.43 个百分点且不显著。换入四大的 DID 平均系数分别为综合失败 −2.66、违规 −2.01 个百分点，重述为 −0.92 个百分点且不显著。前两个平均系数有统计显著性，但能否解释为质量改善取决于换所前趋势；下文动态结果没有给出一致支持。</p>
+<figure class="latex-table figure" id="latex-table-3">
+<img alt="Table 3: Big 4 Auditors and Unwarned Audit Failures" class="figure-img" loading="lazy" src="tables/big4_effect_latex/03_audit_failure_main_full.png"/>
+<figcaption>
+Table 3: Big 4 Auditors and Unwarned Audit Failures · TeX · PDF
+</figcaption>
+</figure>
+<p><strong>静态平均系数与动态证据需要一起阅读。</strong> 主分析的换入综合失败和违规平均系数为负，但逐期区间、换所前走势和替代估计器未给出一致确认。换出四大后也没有稳定、对称的失败上升。完整事件图和逐期表保留在后文，不能只保留显著的平均系数。</p>
+</section>
+<section class="level3" id="动态路径与稳健性">
+<h3 class="anchored" data-anchor-id="动态路径与稳健性">动态路径与稳健性</h3>
+<p>静态 DID 汇总换所前后的平均差异；动态路径检验变化是否真的从换所时开始。下图以换所前一年为基期，竖线表示换所年，误差棒是估计区间。各方法的样本、权重和可用对照不同，重点看处理前差异、处理后方向及估计精度是否一致。</p>
+<p><strong>TWFE</strong></p>
+<p>换入后的综合失败点估计多为负，但各事件期的 95% 区间均跨零；换入前两年的重述系数已经为 −2.3 个百分点且区间不跨零。换出后也没有稳定的反向上升。静态 DID 的显著均值因此不能替代动态路径检验。</p>
+<p><strong>TWFE：未预警的重述或违规，换入四大</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img alt="TWFE：未预警的重述或违规，换入四大的动态路径和置信区间" class="img-fluid figure-img" src="figures/big4_effect/failure_eventstudy_twfe_any_failure_clean_up.png" style="width:100.0%"/></p>
+<figcaption>TWFE：未预警的重述或违规，换入四大；横轴为相对换所年份，纵轴为估计系数</figcaption>
+</figure>
+</div>
+<p><strong>TWFE：未预警的重述，换入四大</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img alt="TWFE：未预警的重述，换入四大的动态路径和置信区间" class="img-fluid figure-img" src="figures/big4_effect/failure_eventstudy_twfe_restated_clean_up.png" style="width:100.0%"/></p>
+<figcaption>TWFE：未预警的重述，换入四大；横轴为相对换所年份，纵轴为估计系数</figcaption>
+</figure>
+</div>
+<p><strong>TWFE：未预警的违规，换入四大</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img alt="TWFE：未预警的违规，换入四大的动态路径和置信区间" class="img-fluid figure-img" src="figures/big4_effect/failure_eventstudy_twfe_violated_clean_up.png" style="width:100.0%"/></p>
+<figcaption>TWFE：未预警的违规，换入四大；横轴为相对换所年份，纵轴为估计系数</figcaption>
+</figure>
+</div>
+<p><strong>TWFE：未预警的重述或违规，换出四大</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img alt="TWFE：未预警的重述或违规，换出四大的动态路径和置信区间" class="img-fluid figure-img" src="figures/big4_effect/failure_eventstudy_twfe_any_failure_clean_down.png" style="width:100.0%"/></p>
+<figcaption>TWFE：未预警的重述或违规，换出四大；横轴为相对换所年份，纵轴为估计系数</figcaption>
+</figure>
+</div>
+<p><strong>TWFE：未预警的重述，换出四大</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img alt="TWFE：未预警的重述，换出四大的动态路径和置信区间" class="img-fluid figure-img" src="figures/big4_effect/failure_eventstudy_twfe_restated_clean_down.png" style="width:100.0%"/></p>
+<figcaption>TWFE：未预警的重述，换出四大；横轴为相对换所年份，纵轴为估计系数</figcaption>
+</figure>
+</div>
+<p><strong>TWFE：未预警的违规，换出四大</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img alt="TWFE：未预警的违规，换出四大的动态路径和置信区间" class="img-fluid figure-img" src="figures/big4_effect/failure_eventstudy_twfe_violated_clean_down.png" style="width:100.0%"/></p>
+<figcaption>TWFE：未预警的违规，换出四大；横轴为相对换所年份，纵轴为估计系数</figcaption>
+</figure>
+</div>
+<p><strong>TWFE：逐期估计</strong></p>
+<figure class="latex-table figure" id="latex-table-19">
+<img alt="Table 19: TWFE Event Study of Big 4 Switching" class="figure-img" loading="lazy" src="tables/big4_effect_latex/18_eventstudy_twfe_full.png"/>
+<figcaption>
+Table 19: TWFE Event Study of Big 4 Switching · TeX · PDF
+</figcaption>
+</figure>
+<p><strong>Sun–Abraham</strong></p>
+<p>换入后的综合失败、重述和违规系数均接近零，没有形成 TWFE 所暗示的持续下降。换出后若干远期点估计较大，但标准误也大，不能当作反向验证。</p>
+<p><strong>Sun–Abraham：未预警的重述或违规，换入四大</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img alt="Sun–Abraham：未预警的重述或违规，换入四大的动态路径和置信区间" class="img-fluid figure-img" src="figures/big4_effect/failure_eventstudy_sa_any_failure_clean_up.png" style="width:100.0%"/></p>
+<figcaption>Sun–Abraham：未预警的重述或违规，换入四大；横轴为相对换所年份，纵轴为估计系数</figcaption>
+</figure>
+</div>
+<p><strong>Sun–Abraham：未预警的重述，换入四大</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img alt="Sun–Abraham：未预警的重述，换入四大的动态路径和置信区间" class="img-fluid figure-img" src="figures/big4_effect/failure_eventstudy_sa_restated_clean_up.png" style="width:100.0%"/></p>
+<figcaption>Sun–Abraham：未预警的重述，换入四大；横轴为相对换所年份，纵轴为估计系数</figcaption>
+</figure>
+</div>
+<p><strong>Sun–Abraham：未预警的违规，换入四大</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img alt="Sun–Abraham：未预警的违规，换入四大的动态路径和置信区间" class="img-fluid figure-img" src="figures/big4_effect/failure_eventstudy_sa_violated_clean_up.png" style="width:100.0%"/></p>
+<figcaption>Sun–Abraham：未预警的违规，换入四大；横轴为相对换所年份，纵轴为估计系数</figcaption>
+</figure>
+</div>
+<p><strong>Sun–Abraham：未预警的重述或违规，换出四大</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img alt="Sun–Abraham：未预警的重述或违规，换出四大的动态路径和置信区间" class="img-fluid figure-img" src="figures/big4_effect/failure_eventstudy_sa_any_failure_clean_down.png" style="width:100.0%"/></p>
+<figcaption>Sun–Abraham：未预警的重述或违规，换出四大；横轴为相对换所年份，纵轴为估计系数</figcaption>
+</figure>
+</div>
+<p><strong>Sun–Abraham：未预警的重述，换出四大</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img alt="Sun–Abraham：未预警的重述，换出四大的动态路径和置信区间" class="img-fluid figure-img" src="figures/big4_effect/failure_eventstudy_sa_restated_clean_down.png" style="width:100.0%"/></p>
+<figcaption>Sun–Abraham：未预警的重述，换出四大；横轴为相对换所年份，纵轴为估计系数</figcaption>
+</figure>
+</div>
+<p><strong>Sun–Abraham：未预警的违规，换出四大</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img alt="Sun–Abraham：未预警的违规，换出四大的动态路径和置信区间" class="img-fluid figure-img" src="figures/big4_effect/failure_eventstudy_sa_violated_clean_down.png" style="width:100.0%"/></p>
+<figcaption>Sun–Abraham：未预警的违规，换出四大；横轴为相对换所年份，纵轴为估计系数</figcaption>
+</figure>
+</div>
+<p><strong>Sun–Abraham：逐期估计</strong></p>
+<figure class="latex-table figure" id="latex-table-20">
+<img alt="Table 20: Sun–Abraham Event Study of Big 4 Switching" class="figure-img" loading="lazy" src="tables/big4_effect_latex/19_eventstudy_sun_abraham_full.png"/>
+<figcaption>
+Table 20: Sun–Abraham Event Study of Big 4 Switching · TeX · PDF
+</figcaption>
+</figure>
+<p><strong>Callaway–Sant’Anna</strong></p>
+<p>换入后的平均综合失败效应为 −1.46 个百分点，95% 区间为 [−4.82, 1.90] 个百分点；平均违规效应为 +0.23 个百分点。该估计与“明确降低失败”的结论不一致。</p>
+<p><strong>Callaway–Sant’Anna：未预警的重述或违规，换入四大</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img alt="Callaway–Sant’Anna：未预警的重述或违规，换入四大的动态路径和置信区间" class="img-fluid figure-img" src="figures/big4_effect/failure_eventstudy_csdid_any_failure_clean_up.png" style="width:100.0%"/></p>
+<figcaption>Callaway–Sant’Anna：未预警的重述或违规，换入四大；横轴为相对换所年份，纵轴为估计系数</figcaption>
+</figure>
+</div>
+<p><strong>Callaway–Sant’Anna：未预警的重述，换入四大</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img alt="Callaway–Sant’Anna：未预警的重述，换入四大的动态路径和置信区间" class="img-fluid figure-img" src="figures/big4_effect/failure_eventstudy_csdid_restated_clean_up.png" style="width:100.0%"/></p>
+<figcaption>Callaway–Sant’Anna：未预警的重述，换入四大；横轴为相对换所年份，纵轴为估计系数</figcaption>
+</figure>
+</div>
+<p><strong>Callaway–Sant’Anna：未预警的违规，换入四大</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img alt="Callaway–Sant’Anna：未预警的违规，换入四大的动态路径和置信区间" class="img-fluid figure-img" src="figures/big4_effect/failure_eventstudy_csdid_violated_clean_up.png" style="width:100.0%"/></p>
+<figcaption>Callaway–Sant’Anna：未预警的违规，换入四大；横轴为相对换所年份，纵轴为估计系数</figcaption>
+</figure>
+</div>
+<p><strong>Callaway–Sant’Anna：未预警的重述或违规，换出四大</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img alt="Callaway–Sant’Anna：未预警的重述或违规，换出四大的动态路径和置信区间" class="img-fluid figure-img" src="figures/big4_effect/failure_eventstudy_csdid_any_failure_clean_down.png" style="width:100.0%"/></p>
+<figcaption>Callaway–Sant’Anna：未预警的重述或违规，换出四大；横轴为相对换所年份，纵轴为估计系数</figcaption>
+</figure>
+</div>
+<p><strong>Callaway–Sant’Anna：未预警的重述，换出四大</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img alt="Callaway–Sant’Anna：未预警的重述，换出四大的动态路径和置信区间" class="img-fluid figure-img" src="figures/big4_effect/failure_eventstudy_csdid_restated_clean_down.png" style="width:100.0%"/></p>
+<figcaption>Callaway–Sant’Anna：未预警的重述，换出四大；横轴为相对换所年份，纵轴为估计系数</figcaption>
+</figure>
+</div>
+<p><strong>Callaway–Sant’Anna：未预警的违规，换出四大</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img alt="Callaway–Sant’Anna：未预警的违规，换出四大的动态路径和置信区间" class="img-fluid figure-img" src="figures/big4_effect/failure_eventstudy_csdid_violated_clean_down.png" style="width:100.0%"/></p>
+<figcaption>Callaway–Sant’Anna：未预警的违规，换出四大；横轴为相对换所年份，纵轴为估计系数</figcaption>
+</figure>
+</div>
+<p><strong>CSDID：平均事前与事后效应</strong></p>
+<figure class="latex-table figure" id="latex-table-24">
+<img alt="Table 24: Callaway–Sant’Anna Event-Study Summary" class="figure-img" loading="lazy" src="tables/big4_effect_latex/23_eventstudy_csdid_summary_full.png"/>
+<figcaption>
+Table 24: Callaway–Sant’Anna Event-Study Summary · TeX · PDF
+</figcaption>
+</figure>
+<p><strong>de Chaisemartin–D’Haultfœuille</strong></p>
+<p>换入后综合失败在第 1 至 3 年的点估计约为 −2 至 −3 个百分点，但逐期区间跨零；违规在换入前第三年已有显著差异。换出路径同样缺乏精确的反向变化。</p>
+<p><strong>de Chaisemartin–D’Haultfœuille：未预警的重述或违规，换入四大</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img alt="de Chaisemartin–D’Haultfœuille：未预警的重述或违规，换入四大的动态路径和置信区间" class="img-fluid figure-img" src="figures/big4_effect/failure_eventstudy_dcdh_any_failure_clean_up.png" style="width:100.0%"/></p>
+<figcaption>de Chaisemartin–D’Haultfœuille：未预警的重述或违规，换入四大；横轴为相对换所年份，纵轴为估计系数</figcaption>
+</figure>
+</div>
+<p><strong>de Chaisemartin–D’Haultfœuille：未预警的重述，换入四大</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img alt="de Chaisemartin–D’Haultfœuille：未预警的重述，换入四大的动态路径和置信区间" class="img-fluid figure-img" src="figures/big4_effect/failure_eventstudy_dcdh_restated_clean_up.png" style="width:100.0%"/></p>
+<figcaption>de Chaisemartin–D’Haultfœuille：未预警的重述，换入四大；横轴为相对换所年份，纵轴为估计系数</figcaption>
+</figure>
+</div>
+<p><strong>de Chaisemartin–D’Haultfœuille：未预警的违规，换入四大</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img alt="de Chaisemartin–D’Haultfœuille：未预警的违规，换入四大的动态路径和置信区间" class="img-fluid figure-img" src="figures/big4_effect/failure_eventstudy_dcdh_violated_clean_up.png" style="width:100.0%"/></p>
+<figcaption>de Chaisemartin–D’Haultfœuille：未预警的违规，换入四大；横轴为相对换所年份，纵轴为估计系数</figcaption>
+</figure>
+</div>
+<p><strong>de Chaisemartin–D’Haultfœuille：未预警的重述或违规，换出四大</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img alt="de Chaisemartin–D’Haultfœuille：未预警的重述或违规，换出四大的动态路径和置信区间" class="img-fluid figure-img" src="figures/big4_effect/failure_eventstudy_dcdh_any_failure_clean_down.png" style="width:100.0%"/></p>
+<figcaption>de Chaisemartin–D’Haultfœuille：未预警的重述或违规，换出四大；横轴为相对换所年份，纵轴为估计系数</figcaption>
+</figure>
+</div>
+<p><strong>de Chaisemartin–D’Haultfœuille：未预警的重述，换出四大</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img alt="de Chaisemartin–D’Haultfœuille：未预警的重述，换出四大的动态路径和置信区间" class="img-fluid figure-img" src="figures/big4_effect/failure_eventstudy_dcdh_restated_clean_down.png" style="width:100.0%"/></p>
+<figcaption>de Chaisemartin–D’Haultfœuille：未预警的重述，换出四大；横轴为相对换所年份，纵轴为估计系数</figcaption>
+</figure>
+</div>
+<p><strong>de Chaisemartin–D’Haultfœuille：未预警的违规，换出四大</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img alt="de Chaisemartin–D’Haultfœuille：未预警的违规，换出四大的动态路径和置信区间" class="img-fluid figure-img" src="figures/big4_effect/failure_eventstudy_dcdh_violated_clean_down.png" style="width:100.0%"/></p>
+<figcaption>de Chaisemartin–D’Haultfœuille：未预警的违规，换出四大；横轴为相对换所年份，纵轴为估计系数</figcaption>
+</figure>
+</div>
+<p><strong>de Chaisemartin–D’Haultfœuille：逐期估计</strong></p>
+<figure class="latex-table figure" id="latex-table-21">
+<img alt="Table 21: de Chaisemartin–D’Haultfoeuille Event Study of Big 4 Switching" class="figure-img" loading="lazy" src="tables/big4_effect_latex/20_eventstudy_dcdh_full.png"/>
+<figcaption>
+Table 21: de Chaisemartin–D’Haultfoeuille Event Study of Big 4 Switching · TeX · PDF
+</figcaption>
+</figure>
+<p><strong>堆叠事件研究</strong></p>
+<p>综合失败换入后的点估计仍偏负，但各期区间跨零；重述在换入前第二年已偏低。这与 TWFE 的事前排序问题一致，不能视为独立的因果确认。</p>
+<p><strong>堆叠事件研究：未预警的重述或违规，换入四大</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img alt="堆叠事件研究：未预警的重述或违规，换入四大的动态路径和置信区间" class="img-fluid figure-img" src="figures/big4_effect/failure_eventstudy_stacked_any_failure_clean_up.png" style="width:100.0%"/></p>
+<figcaption>堆叠事件研究：未预警的重述或违规，换入四大；横轴为相对换所年份，纵轴为估计系数</figcaption>
+</figure>
+</div>
+<p><strong>堆叠事件研究：未预警的重述，换入四大</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img alt="堆叠事件研究：未预警的重述，换入四大的动态路径和置信区间" class="img-fluid figure-img" src="figures/big4_effect/failure_eventstudy_stacked_restated_clean_up.png" style="width:100.0%"/></p>
+<figcaption>堆叠事件研究：未预警的重述，换入四大；横轴为相对换所年份，纵轴为估计系数</figcaption>
+</figure>
+</div>
+<p><strong>堆叠事件研究：未预警的违规，换入四大</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img alt="堆叠事件研究：未预警的违规，换入四大的动态路径和置信区间" class="img-fluid figure-img" src="figures/big4_effect/failure_eventstudy_stacked_violated_clean_up.png" style="width:100.0%"/></p>
+<figcaption>堆叠事件研究：未预警的违规，换入四大；横轴为相对换所年份，纵轴为估计系数</figcaption>
+</figure>
+</div>
+<p><strong>堆叠事件研究：逐期估计</strong></p>
+<figure class="latex-table figure" id="latex-table-22">
+<img alt="Table 22: Stacked Event Study of Switching into Big 4" class="figure-img" loading="lazy" src="tables/big4_effect_latex/21_eventstudy_stacked_full.png"/>
+<figcaption>
+Table 22: Stacked Event Study of Switching into Big 4 · TeX · PDF
+</figcaption>
+</figure>
+<p><strong>换入四大稳健性</strong></p>
+<p>按市值加权或排除较小的对照公司后，综合失败的处理后点估计仍多为负，却没有精确的逐期下降；排除小公司后的重述在处理前两年仍显著偏低。稳健性处理没有消除核心识别疑问。</p>
+<p><strong>换入四大稳健性：未预警的重述或违规，排除低市值对照公司</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img alt="换入四大稳健性：未预警的重述或违规，排除低市值对照公司的动态路径和置信区间" class="img-fluid figure-img" src="figures/big4_effect/failure_robustness_any_failure_clean_drop_small_controls.png" style="width:100.0%"/></p>
+<figcaption>换入四大稳健性：未预警的重述或违规，排除低市值对照公司；横轴为相对换所年份，纵轴为估计系数</figcaption>
+</figure>
+</div>
+<p><strong>换入四大稳健性：未预警的重述或违规，市值加权</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img alt="换入四大稳健性：未预警的重述或违规，市值加权的动态路径和置信区间" class="img-fluid figure-img" src="figures/big4_effect/failure_robustness_any_failure_clean_value_weighted.png" style="width:100.0%"/></p>
+<figcaption>换入四大稳健性：未预警的重述或违规，市值加权；横轴为相对换所年份，纵轴为估计系数</figcaption>
+</figure>
+</div>
+<p><strong>换入四大稳健性：未预警的重述，排除低市值对照公司</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img alt="换入四大稳健性：未预警的重述，排除低市值对照公司的动态路径和置信区间" class="img-fluid figure-img" src="figures/big4_effect/failure_robustness_restated_clean_drop_small_controls.png" style="width:100.0%"/></p>
+<figcaption>换入四大稳健性：未预警的重述，排除低市值对照公司；横轴为相对换所年份，纵轴为估计系数</figcaption>
+</figure>
+</div>
+<p><strong>换入四大稳健性：未预警的重述，市值加权</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img alt="换入四大稳健性：未预警的重述，市值加权的动态路径和置信区间" class="img-fluid figure-img" src="figures/big4_effect/failure_robustness_restated_clean_value_weighted.png" style="width:100.0%"/></p>
+<figcaption>换入四大稳健性：未预警的重述，市值加权；横轴为相对换所年份，纵轴为估计系数</figcaption>
+</figure>
+</div>
+<p><strong>换入四大稳健性：未预警的违规，排除低市值对照公司</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img alt="换入四大稳健性：未预警的违规，排除低市值对照公司的动态路径和置信区间" class="img-fluid figure-img" src="figures/big4_effect/failure_robustness_violated_clean_drop_small_controls.png" style="width:100.0%"/></p>
+<figcaption>换入四大稳健性：未预警的违规，排除低市值对照公司；横轴为相对换所年份，纵轴为估计系数</figcaption>
+</figure>
+</div>
+<p><strong>换入四大稳健性：未预警的违规，市值加权</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img alt="换入四大稳健性：未预警的违规，市值加权的动态路径和置信区间" class="img-fluid figure-img" src="figures/big4_effect/failure_robustness_violated_clean_value_weighted.png" style="width:100.0%"/></p>
+<figcaption>换入四大稳健性：未预警的违规，市值加权；横轴为相对换所年份，纵轴为估计系数</figcaption>
+</figure>
+</div>
+<p><strong>换入四大稳健性：逐期估计</strong></p>
+<figure class="latex-table figure" id="latex-table-23">
+<img alt="Table 23: Event-Study Robustness for Switching into Big 4" class="figure-img" loading="lazy" src="tables/big4_effect_latex/22_eventstudy_robustness_full.png"/>
+<figcaption>
+Table 23: Event-Study Robustness for Switching into Big 4 · TeX · PDF
+</figcaption>
+</figure>
+</section>
+<section class="level3" id="审计费用与费用增加">
+<h3 class="anchored" data-anchor-id="审计费用与费用增加">审计费用与费用增加</h3>
+<p>收费是最一致的换所结果：换入四大后的审计费系数为 +0.370 对数点，约对应 45% 的较高收费；换出系数为 −0.242 对数点。费用增加额的转换系数同向，但其对数定义和样本不同，不宜直接写成普通百分比。价格反应清楚，仍不能单凭价格证明审计质量提高。</p>
+<figure class="latex-table figure" id="latex-table-14">
+<img alt="Table 14: Big 4 Auditors, Audit Fees, and Market Value" class="figure-img" loading="lazy" src="tables/big4_effect_latex/14_audit_fees_and_valuation_full.png"/>
+<figcaption>
+Table 14: Big 4 Auditors, Audit Fees, and Market Value · TeX · PDF
+</figcaption>
+</figure>
+</section>
+<section class="level3" id="公司市值">
+<h3 class="anchored" data-anchor-id="公司市值">公司市值</h3>
+<p>换入四大后市值对数高 0.104，约为 11% 的差异；换出估计为负但不显著。市值会同时反映融资、经营和选择换所的消息，因而这项关联不是审计质量的直接检验。</p>
+<p><a href="#latex-table-14">Table 14：见上方排版表</a></p>
+<p><span id="full-12_big4_effect-6"></span></p>
+</section>
+</section>
+<section class="level2" id="其他审计质量指标与局部证据">
+<h2 class="anchored" data-anchor-id="其他审计质量指标与局部证据">6. 其他审计质量指标与局部证据</h2>
+<p><strong>回归／统计设定。</strong> 盈余管理使用 C_E，严重程度及子样本使用其原失败设定；ROE 门槛与 REM 交互按表内变量定义。分组均值、隐含资本成本与回归结果分开解释，不能统一成同一服务效应。 <a href="#settings-12_big4_effect">变量与回归设定</a>。</p>
+<section class="level3" id="应计和真实盈余管理">
+<h3 class="anchored" data-anchor-id="应计和真实盈余管理">应计和真实盈余管理</h3>
+<p>换入四大后，Jones 异常应计绝对值和真实盈余管理绝对值几乎没有变化；DD 异常应计绝对值反而上升 0.034（p=0.006）。横截面上某些指标较低，但公司内及换所规格不支持盈余管理普遍下降。</p>
+<figure class="latex-table figure" id="latex-table-13">
+<img alt="Table 13: Big 4 Auditors and Earnings Quality" class="figure-img" loading="lazy" src="tables/big4_effect_latex/13_earnings_quality_full.png"/>
+<figcaption>
+Table 13: Big 4 Auditors and Earnings Quality · TeX · PDF
+</figcaption>
+</figure>
+</section>
+<section class="level3" id="roe-门槛附近的四大客户差异">
+<h3 class="anchored" data-anchor-id="roe-门槛附近的四大客户差异">ROE 门槛附近的四大客户差异</h3>
+<p>门槛结果随阈值改变方向：0% 附近无显著差异，6% 附近四大客户的达标指标高 9.56 个百分点，10% 附近则低 16.50 个百分点且仅边缘显著；10% 窗口中的四大观测只有 24 条。这组结果无法支持四大普遍抑制门槛操纵。</p>
+<figure class="latex-table figure" id="latex-table-15">
+<img alt="Table 15: Big 4 Auditors and ROE Threshold Indicators" class="figure-img" loading="lazy" src="tables/big4_effect_latex/15_roe_threshold_bunching_full.png"/>
+<figcaption>
+Table 15: Big 4 Auditors and ROE Threshold Indicators · TeX · PDF
+</figcaption>
+</figure>
+</section>
+<section class="level3" id="roe-门槛与盈余管理交互">
+<h3 class="anchored" data-anchor-id="roe-门槛与盈余管理交互">ROE 门槛与盈余管理交互</h3>
+<p>在 0% 窗口，四大×达标与有符号真实盈余管理的系数为 −0.129；10% 窗口则为 +0.097，合并门槛的对应交互项接近零。多个门槛和多种盈余指标的方向不一致，单独挑选显著交互项会夸大证据。</p>
+<figure class="latex-table figure" id="latex-table-16">
+<img alt="Table 16: ROE Thresholds, Big 4 Auditors, and Earnings Management" class="figure-img" loading="lazy" src="tables/big4_effect_latex/16_roe_threshold_earnings_full.png"/>
+<figcaption>
+Table 16: ROE Thresholds, Big 4 Auditors, and Earnings Management · TeX · PDF
+</figcaption>
+</figure>
+</section>
+<section class="level3" id="真实盈余管理分项及存货减值">
+<h3 class="anchored" data-anchor-id="真实盈余管理分项及存货减值">真实盈余管理分项及存货减值</h3>
+<p>配股门槛窗口中，异常经营现金流、异常费用和异常生产成本的四大交互项均不显著。四大客户的存货跌价准备比率在全样本中较高 0.0165，但它也可能反映资产结构和会计政策差异；目前不能把这一单项结果归为审计质量改善。</p>
+<figure class="latex-table figure" id="latex-table-17">
+<img alt="Table 17: Big 4 Auditors and Components of Real Earnings Management" class="figure-img" loading="lazy" src="tables/big4_effect_latex/17_roe_threshold_rem_components_full_p01.png"/>
+<figcaption>
+Table 17: Big 4 Auditors and Components of Real Earnings Management · TeX · PDF
+</figcaption>
+</figure>
+<figure class="latex-table figure" id="latex-table-18">
+<img alt="Table 18: Big 4 Auditors and Inventory Impairment" class="figure-img" loading="lazy" src="tables/big4_effect_latex/17_roe_threshold_rem_components_full_p02.png"/>
+<figcaption>
+Table 18: Big 4 Auditors and Inventory Impairment · TeX · PDF
+</figcaption>
+</figure>
+<p><strong>门槛结果的解释范围。</strong> 0% 窗口的 −0.129 是有符号 REM 的交互项；同一窗口绝对值 REM 的交互项约为 +0.009（p=0.834）。不能把前者直接写成操纵幅度下降。配股门槛窗口的异常酌量性费用四大主效应为 +0.0188（p=0.001），它是门槛下侧基准组的条件差异；与较少异常削减费用相一致，但没有直接识别阻止削减研发或广告的行为。存货减值差异在全样本为 +0.0165，配股窗口为 +0.0096（p=0.097），也可能反映资产结构和会计政策。</p>
+<p>ROE 检验考察 0%、6%、10% 附近左右各一百分点的窗口：0% 窗口使用 2020 年及以前的观测，6% 窗口使用 2002 年起的观测，10% 窗口使用 2001 年及以前的观测。这些是门槛附近的局部比较，不等同于完整复现监管资格规则。</p>
+</section>
+<section class="level3" id="未预警失败的严重程度">
+<h3 class="anchored" data-anchor-id="未预警失败的严重程度">未预警失败的严重程度</h3>
+<p>严重违规的公司固定效应差异仍为负：公司及行业×年份规格为 −1.78 个百分点；换入估计为 −1.66 个百分点，仅在 10% 水平边缘显著。严重重述及被动监管、欺诈文本指标在换入后没有稳定下降。对数严重程度中，换入后的未预警违规涉及年度数系数为 −0.031（p=0.035），其余三项金额或年度数的换入系数不显著。这些结果变量包含大量零值，系数是 ln(1+x) 的变化，不能直接解释为只在违规事件中严重程度下降 3.1%。因此严重程度证据主要来自违规，尚不能推广为所有类型的严重失败都改善。</p>
+<figure class="latex-table figure" id="latex-table-4">
+<img alt="Table 4: Big 4 Auditors and Indicators of Unwarned Failure Severity" class="figure-img" loading="lazy" src="tables/big4_effect_latex/04_failure_severity_indicators_full.png"/>
+<figcaption>
+Table 4: Big 4 Auditors and Indicators of Unwarned Failure Severity · TeX · PDF
+</figcaption>
+</figure>
+<figure class="latex-table figure" id="latex-table-5">
+<img alt="Table 5: Big 4 Auditors and Log Magnitudes of Unwarned Failures" class="figure-img" loading="lazy" src="tables/big4_effect_latex/05_failure_severity_magnitudes_full.png"/>
+<figcaption>
+Table 5: Big 4 Auditors and Log Magnitudes of Unwarned Failures · TeX · PDF
+</figcaption>
+</figure>
+<p><strong>严重程度分布与公告文本信息</strong></p>
+<p>数值分布图展示事件涉及年数、金额及已发生事件中的严重事件占比。右侧比例以已发生违规或重述为条件，不能与全样本失败率混用；金额分布按图示剔除最高 5% 极值。</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img class="img-fluid figure-img" src="figures/big4_effect_notebook/severity_distribution_1A.png" style="width:100.0%"/></p>
+<figcaption>违规与重述事件严重程度数值分布</figcaption>
+</figure>
+</div>
+<p>文本特征图显示，违规公告中虚增或虚构、虚减或隐瞒，以及涉及利润、收入、资产的表述都较常见；重述说明里，准则变化或合并、被动监管、主动造假或差错的关键词命中次数差异较大。这些类别可在同一事件中同时出现，柱高是文本命中事件数，不是公司年度失败率，也不能解释为四大的处理效应。文本判断为严重程度指标提供补充信息。</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img alt="违规和重述公告文本特征的命中次数，类别可以重叠" class="img-fluid figure-img" src="figures/big4_effect_notebook/text_mining_features_1B.png" style="width:100.0%"/></p>
+<figcaption>违规与重述公告的文本特征命中次数</figcaption>
+</figure>
+</div>
+</section>
+<section class="level3" id="未预警失败子样本-did">
+<h3 class="anchored" data-anchor-id="未预警失败子样本-did">未预警失败：子样本 DID</h3>
+<p>三个子样本都沿用主分析的换所定义：换所前三年属于原事务所类型、换所当年及后两年保持新类型。换入系数比较符合该子样本条件的换入四大客户与始终非四大客户在换所前后的变化；换出则与始终四大客户比较。结果是全体有效公司年度中‘发生失败且 MAO=0’的概率差，系数乘以 100 为百分点；回归控制公司固定效应、行业×年份固定效应及主分析控制变量，标准误按公司聚类。表中的子样本系数并不是与其互补组系数之差。</p>
+<p><strong>财务困境（Financial Distress）</strong>按每个公司年度定义：当年亏损，或当年 Z-score 不高于该年度第 25 百分位。同一公司可能只在部分年份进入这个样本。换入四大的未预警重述系数为 −2.34 个百分点（p=0.024；152 家换入、2,382 家始终非四大对照），表示这些财务困境公司年度中的相对变化；综合失败和违规没有相应显著下降。由于困境状态按当年筛选，这不是一个完全由换所前特征固定的企业组。</p>
+<p><strong>曾发生未预警失败（Ever Unwarned Failure）</strong>指公司在整个可观察期至少有一年发生重述或违规且 MAO=0。换入组的未预警违规系数为 −6.24 个百分点（p=0.089；49 家换入、1,202 家对照），但分组可能由换所后的失败结果决定，不能据此判断既有失败客户在换入后改善；换出估计仅有 3 家对照公司。</p>
+<p><strong>换所前长期任期（Long Pre-Switch Tenure）</strong>要求换所前同一事务所连续服务至少五年，首次换所发生在 2023 年前；估计仅保留 2023 年以前的公司年度。对照组仍为所有始终属于相应事务所类型的公司，没有另加五年任期门槛。换入组的未预警综合失败系数为 −4.11 个百分点（p=0.044；92 家换入、4,340 家对照），违规系数为 −2.91 个百分点（p=0.079）。这是长期任期换所组相对既定对照组的结果，并未检验它是否显著不同于短任期换所组。三个子样本、三个结果和两个换所方向都被检验；这些局部显著性及主分析中尚不稳的换所前趋势，限制了质量改善的解释。</p>
+<figure class="latex-table figure" id="latex-table-6">
+<img alt="Table 6: Switching Big 4 Auditors and Unwarned Failures: Subsamples" class="figure-img" loading="lazy" src="tables/big4_effect_latex/06_failure_subsamples_full.png"/>
+<figcaption>
+Table 6: Switching Big 4 Auditors and Unwarned Failures: Subsamples · TeX · PDF
+</figcaption>
+</figure>
+</section>
+<section class="level3" id="其他质量指标的分组比较">
+<h3 class="anchored" data-anchor-id="其他质量指标的分组比较">其他质量指标的分组比较</h3>
+<p>以下比较按事务所类别展示均值及约 95% 均值区间，刻画不同客户群在盈余管理、保守性及其他质量指标上的差异；不控制客户选择，证据权重低于直接的失败结果。</p>
+<p><strong>真实盈余管理</strong></p>
+<p>该比较将异常经营现金流、异常生产成本、异常酌量费用及综合真实盈余管理指标取绝对值，按公司—年份合并审计事务所。综合指标的分组均值为四大 0.157、本土八大 0.161、其他 0.157，几乎没有清晰梯度；分项也没有一致的四大优势。原始数据还按北交所、特殊处理及新上市／退市等标识筛选，因此不能直接与其他指标比较样本构成。</p>
+<p><img alt="四大、本土八大和其他事务所真实盈余管理四项指标分组均值，整体差异较小。" class="img-fluid" data-fig-cap="真实盈余管理：描述性均值，没有稳定的四大—本土八大—其他排序。" src="figures/audit_quality_secondary/rem_overall_comparison.png" style="width:100.0%"/></p>
+<p><strong>盈余披露质量与会计稳健性</strong></p>
+<p>盈余激进度的绝对值均值为四大 0.236、本土八大 0.265、其他 0.424，但其他组区间很宽；盈余平滑度均值分别为 4.729、3.790、3.678。两个指标方向并不提供同一种简单的质量排序，且平滑度的经济含义不能仅凭数值大小判断。此图使用双纵轴，跨指标高度不可直接比较。</p>
+<p><img alt="盈余激进度和平滑度的分组均值；不同指标方向不一致。" class="img-fluid" data-fig-cap="盈余披露质量：不同指标没有形成一致的四大优势。" src="figures/audit_quality_secondary/ear_dis_overall_comparison.png" style="width:100.0%"/></p>
+<p>稳健性图并列展示 ACF、Basu 和 CScore 来源指标：不同指标的组间方向并不一致，CScore 的四大组区间尤其宽。笔记本只是读取已有年度指标并分组求均值；它<strong>没有复现</strong> <a href="https://www.sciencedirect.com/science/article/pii/S0165410197000141">Basu（1997）原文的非对称及时性回归</a>。因此这里只能称为“借用相关稳健性指标的描述比较”，不能写成严格的文献复现或审计质量验证。</p>
+<p><img alt="三种会计稳健性年度指标的事务所分组均值，组间方向不一致，部分区间很宽。" class="img-fluid" data-fig-cap="会计稳健性：指标依赖明显，暂不纳入主结论。" src="figures/audit_quality_secondary/conservatism_overall_comparison.png" style="width:100.0%"/></p>
+<p><strong>隐含权益资本成本</strong></p>
+<p>笔记本以分析师下一年、下两年每股收益预测和行业市盈率构造价格代理，按 PEG 公式计算隐含权益资本成本，并限制正的预测盈利增量及正价格、剔除两端 1% 的估计值。四大、本土八大和其他事务所均值分别为 0.1092、0.1107、0.1125，差异较小。该指标同时受预测覆盖、估值代理和样本筛选影响，不能把它直接解释为审计质量或资本市场对事务所的因果定价。</p>
+<p><img alt="按事务所类别分组的 PEG 隐含权益资本成本均值，差异较小。" class="img-fluid" data-fig-cap="隐含权益资本成本：四大组略低，但不是稳健的审计质量识别结果。" src="figures/audit_quality_secondary/icc_overall_comparison.png" style="width:100.0%"/></p>
+<p><span id="full-12_big4_effect-7"></span></p>
+</section>
+</section>
+<section class="level2" id="综合判断">
+<h2 class="anchored" data-anchor-id="综合判断">7. 综合判断</h2>
+<p><strong>最清楚的事实是：四大客户失败更少；在较近期预测信息样本中，市场对四大和本土八大客户的正向盈余信息反应更强。</strong> 意见客户的风险特征与意见后的客户去留进一步显示匹配的重要性。</p>
+<p>选择机制、换所效应与市场定价之间的联系仍待进一步识别。</p>
+<p><strong>尚未解决的是：同一客户换由四大审计，质量会改善多少。</strong> 换所后的失败结果不够一致，其他盈余质量指标也没有形成普遍改善的证据。收费变化较稳定，但价格不能替代质量的识别。</p>
+<p>综合机制表表明，风险意见与客户进出方向一致，且同一意见状态下四大客户仍具有较低的失败和违规风险。客户选择与组合调整因此是解释四大质量差距的重要机制；四大的审计服务对同一客户的增量贡献，则需要结合换所结果另行判断。</p>
+<p><span id="certification-tests"></span></p>
+<section class="level3" id="连接认证可信度与市场反应的关键检验">
+<h3 class="anchored" data-anchor-id="连接认证可信度与市场反应的关键检验">4. 连接认证、可信度与市场反应的关键检验</h3>
+<figure class="latex-table figure">
+<img alt="信息认证机制的进一步检验" class="figure-img" loading="lazy" src="tables/big4_mechanism/04_audit_firm_quality_summary_01_full.png"/>
+<figcaption>
+信息认证机制的进一步检验 · TeX · PDF
+</figcaption>
+</figure>
+<p><strong>“服务提升企业的财报生产质量”和“服务提升财报在市场中的可信度”都属于审计服务的潜在价值，目前后一种解释更贴近已有市场结果。</strong> 下一步应验证“认证—可信度—市场反应”的连接，而不要求所有 audit failure 指标都显著下降，或把更强市场反应提前解释为已经识别的服务收益。</p>
+</section>
+<section class="level3" id="历史意见与客户选择的全部回归尝试">
+<h3 class="anchored" data-anchor-id="历史意见与客户选择的全部回归尝试">历史意见与客户选择的全部回归尝试</h3>
+<p>补充回归分别考察审计意见、预警标准、客户组合、意见信息含量、分类错误率及已预警客户的特征。以下沿用各表的历史设定，与综合机制表分别解释。</p>
+<figure class="latex-table figure">
+<img alt="审计意见" class="figure-img" loading="lazy" src="tables/big4_effect_latex/07_audit_opinions_full.png"/>
+<figcaption>
+审计意见 · TeX · PDF
+</figcaption>
+</figure>
+<figure class="latex-table figure">
+<img alt="审计意见与客户风险" class="figure-img" loading="lazy" src="tables/big4_effect_latex/08_auditor_toughness_full.png"/>
+<figcaption>
+审计意见与客户风险 · TeX · PDF
+</figcaption>
+</figure>
+<figure class="latex-table figure">
+<img alt="客户组合" class="figure-img" loading="lazy" src="tables/big4_effect_latex/09_client_portfolio_full.png"/>
+<figcaption>
+客户组合 · TeX · PDF
+</figcaption>
+</figure>
+<figure class="latex-table figure">
+<img alt="审计意见的信息含量" class="figure-img" loading="lazy" src="tables/big4_effect_latex/10_opinion_information_full.png"/>
+<figcaption>
+审计意见的信息含量 · TeX · PDF
+</figcaption>
+</figure>
+<figure class="latex-table figure">
+<img alt="审计意见的分类错误率" class="figure-img" loading="lazy" src="tables/big4_effect_latex/11_opinion_error_rates_full.png"/>
+<figcaption>
+审计意见的分类错误率 · TeX · PDF
+</figcaption>
+</figure>
+<figure class="latex-table figure">
+<img alt="收到风险意见的客户特征" class="figure-img" loading="lazy" src="tables/big4_effect_latex/12_opinion_client_characteristics_full.png"/>
+<figcaption>
+收到风险意见的客户特征 · TeX · PDF
+</figcaption>
+</figure>
+</section>
+</section>
+<section class="level2" id="待解决问题与补充材料">
+<h2 class="anchored" data-anchor-id="待解决问题与补充材料">待解决问题与补充材料</h2>
+<p><strong>仍需核验。</strong> 换所各方法的实际可识别样本和中止日志；市场图 FE1 历史文件与当前 FE1_NoTrend 命名的对应、实际 N；筛选与审计处理的区分；退出发起方、盈利消息幅度和长期净收益。</p>
+</section>
+<section class="level2" id="数据程序与输出记录">
+<h2 class="anchored" data-anchor-id="数据程序与输出记录">数据、程序与输出记录</h2>
+<p><strong>估计程序（存档）。</strong> 00_big4_effect_inputs.do · 00_big4_effect_did_models.do · 26_client_selection_opinion_mechanism.do · 63_earnings_response_horizons.do</p>
+</section>
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "已复制");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "已复制");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+</body></html>

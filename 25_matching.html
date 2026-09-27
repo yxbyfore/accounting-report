@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+
+<html lang="zh-Hans" xml:lang="zh-Hans" xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta charset="utf-8"/>
+<meta content="quarto-1.10.18" name="generator"/>
+<meta content="width=device-width, initial-scale=1.0, user-scalable=yes" name="viewport"/>
+<title>客户、事务所和审计师的匹配 – 会计研究项目报告</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta content="./" name="quarto:offset"/>
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet"/>
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" id="quarto-text-highlighting-styles" rel="stylesheet"/>
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet"/>
+<link append-hash="true" data-mode="light" href="site_libs/bootstrap/bootstrap-261e60fdf64a0e003ec2340fd2db30d7.min.css" id="quarto-bootstrap" rel="stylesheet"/>
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "没有结果",
+    "search-matching-documents-text": "匹配的文档",
+    "search-copy-link-title": "复制搜索链接",
+    "search-hide-matches-text": "隐藏其它匹配结果",
+    "search-more-match-text": "更多匹配结果",
+    "search-more-matches-text": "更多匹配结果",
+    "search-clear-button-title": "清除",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "取消",
+    "search-submit-button-title": "提交",
+    "search-label": "搜索"
+  }
+}</script>
+<script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+<script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+<link href="styles.css" rel="stylesheet"/>
+<link href="empirical.css" rel="stylesheet"/>
+</head>
+<body class="nav-sidebar docked empirical-report quarto-light">
+<div id="quarto-search-results"></div>
+<header class="headroom fixed-top" id="quarto-header">
+<nav class="quarto-secondary-nav">
+<div class="container-fluid d-flex">
+<button aria-controls="quarto-sidebar" aria-expanded="false" aria-label="展开或折叠侧边栏导航" class="quarto-btn-toggle btn" data-bs-target=".quarto-sidebar-collapse-item" data-bs-toggle="collapse" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }" role="button" type="button">
+<i class="bi bi-layout-text-sidebar-reverse"></i>
+</button>
+<nav aria-label="breadcrumb" class="quarto-page-breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./25_matching.html">客户、事务所和审计师的匹配</a></li></ol></nav>
+<a aria-controls="quarto-sidebar" aria-expanded="false" aria-label="展开或折叠侧边栏导航" class="flex-grow-1" data-bs-target=".quarto-sidebar-collapse-item" data-bs-toggle="collapse" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }" role="navigation">
+</a>
+<button aria-label="搜索" class="btn quarto-search-button" onclick="window.quartoOpenSearch();" type="button">
+<i class="bi bi-search"></i>
+</button>
+</div>
+</nav>
+</header>
+<!-- content -->
+<div class="quarto-container page-columns page-rows-contents page-layout-article" id="quarto-content">
+<!-- sidebar -->
+<nav class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto" id="quarto-sidebar">
+<div class="pt-lg-2 mt-2 text-left sidebar-header">
+<div class="sidebar-title mb-0 py-0">
+会计研究项目报告
+</div>
+</div>
+<div class="mt-2 flex-shrink-0 align-items-center">
+<div class="sidebar-search">
+<div class="" id="quarto-search" title="搜索"></div>
+</div>
+</div>
+<div class="sidebar-menu-container">
+<ul class="list-unstyled mt-1">
+<li class="sidebar-item">
+<div class="sidebar-item-container">
+<a class="sidebar-item-text sidebar-link" href="./01_core_summary.html">
+<span class="menu-text">核心摘要</span></a>
+</div>
+</li>
+<li class="sidebar-item">
+<div class="sidebar-item-container">
+<a class="sidebar-item-text sidebar-link" href="./02_core_results.html">
+<span class="menu-text">核心结果</span></a>
+</div>
+</li>
+<li class="sidebar-item">
+<div class="sidebar-item-container">
+<a class="sidebar-item-text sidebar-link" href="./03_background.html">
+<span class="menu-text">背景</span></a>
+</div>
+</li>
+<li class="sidebar-item">
+<div class="sidebar-item-container">
+<a class="sidebar-item-text sidebar-link" href="./21_adoption.html">
+<span class="menu-text">四大审计师的采用</span></a>
+</div>
+</li>
+<li class="sidebar-item">
+<div class="sidebar-item-container">
+<a class="sidebar-item-text sidebar-link" href="./22_diffusion.html">
+<span class="menu-text">企业网络传导</span></a>
+</div>
+</li>
+<li class="sidebar-item">
+<div class="sidebar-item-container">
+<a class="sidebar-item-text sidebar-link" href="./23_big4_effect.html">
+<span class="menu-text">四大事务所效应</span></a>
+</div>
+</li>
+<li class="sidebar-item">
+<div class="sidebar-item-container">
+<a class="sidebar-item-text sidebar-link" href="./24_auditor_quality.html">
+<span class="menu-text">审计师效应</span></a>
+</div>
+</li>
+<li class="sidebar-item">
+<div class="sidebar-item-container">
+<a class="sidebar-item-text sidebar-link active" href="./25_matching.html">
+<span class="menu-text">客户、事务所和审计师的匹配</span></a>
+</div>
+</li>
+<li class="sidebar-item">
+<div class="sidebar-item-container">
+<a class="sidebar-item-text sidebar-link" href="./26_akm.html">
+<span class="menu-text">AKM</span></a>
+</div>
+</li>
+<li class="sidebar-item">
+<div class="sidebar-item-container">
+<a class="sidebar-item-text sidebar-link" href="./31_biweekly_memo.html">
+<span class="menu-text">双周备忘录</span></a>
+</div>
+</li>
+<li class="sidebar-item">
+<div class="sidebar-item-container">
+<a class="sidebar-item-text sidebar-link" href="./32_active_tasks.html">
+<span class="menu-text">当前任务</span></a>
+</div>
+</li>
+<li class="sidebar-item">
+<div class="sidebar-item-container">
+<a class="sidebar-item-text sidebar-link" href="./33_data_pipeline.html">
+<span class="menu-text">数据流程</span></a>
+</div>
+</li>
+</ul>
+</div>
+</nav>
+<div class="quarto-sidebar-collapse-item" data-bs-target=".quarto-sidebar-collapse-item" data-bs-toggle="collapse" id="quarto-sidebar-glass"></div>
+<!-- margin-sidebar -->
+<div class="sidebar margin-sidebar" id="quarto-margin-sidebar">
+<nav class="toc-active" id="TOC" role="doc-toc">
+<h2 id="toc-title">该页面内容</h2>
+<ul>
+<li><a class="nav-link active" data-scroll-target="#概述" href="#概述" id="toc-概述">概述</a></li>
+<li><a class="nav-link" data-scroll-target="#核心结果" href="#核心结果" id="toc-核心结果">核心结果</a></li>
+<li><a class="nav-link" data-scroll-target="#本页结论与证据边界" href="#本页结论与证据边界" id="toc-本页结论与证据边界">1. 本页结论与证据边界</a>
+<ul class="collapse">
+<li><a class="nav-link" data-scroll-target="#全样本累计匹配数量分布" href="#全样本累计匹配数量分布" id="toc-全样本累计匹配数量分布">1.1 全样本累计匹配数量分布</a></li>
+</ul></li>
+<li><a class="nav-link" data-scroll-target="#为什么需要超越简单的-akm-排序" href="#为什么需要超越简单的-akm-排序" id="toc-为什么需要超越简单的-akm-排序">2. 为什么需要超越简单的 AKM 排序</a></li>
+<li><a class="nav-link" data-scroll-target="#三种排序口径" href="#三种排序口径" id="toc-三种排序口径">3. 三种排序口径</a>
+<ul class="collapse">
+<li><a class="nav-link" data-scroll-target="#启发式事前排序" href="#启发式事前排序" id="toc-启发式事前排序">3.1 启发式事前排序</a></li>
+<li><a class="nav-link" data-scroll-target="#pca-综合分组" href="#pca-综合分组" id="toc-pca-综合分组">3.2 PCA 综合分组</a></li>
+<li><a class="nav-link" data-scroll-target="#审计收费-cdf-的-k-means-分组" href="#审计收费-cdf-的-k-means-分组" id="toc-审计收费-cdf-的-k-means-分组">3.3 审计收费 CDF 的 K-means 分组</a></li>
+</ul></li>
+<li><a class="nav-link" data-scroll-target="#配对单元格是否存在非加性模式" href="#配对单元格是否存在非加性模式" id="toc-配对单元格是否存在非加性模式">4. 配对单元格：是否存在非加性模式</a></li>
+<li><a class="nav-link" data-scroll-target="#匹配强度的时间变化" href="#匹配强度的时间变化" id="toc-匹配强度的时间变化">5. 匹配强度的时间变化</a>
+<ul class="collapse">
+<li><a class="nav-link" data-scroll-target="#五年窗口的秩关联" href="#五年窗口的秩关联" id="toc-五年窗口的秩关联">5.1 五年窗口的秩关联</a></li>
+<li><a class="nav-link" data-scroll-target="#非线性依赖与高风险客户的事务所构成" href="#非线性依赖与高风险客户的事务所构成" id="toc-非线性依赖与高风险客户的事务所构成">5.2 非线性依赖与高风险客户的事务所构成</a></li>
+</ul></li>
+<li><a class="nav-link" data-scroll-target="#配对稳定性来自清洗后的机构谱系和签字团队" href="#配对稳定性来自清洗后的机构谱系和签字团队" id="toc-配对稳定性来自清洗后的机构谱系和签字团队">6. 配对稳定性：来自清洗后的机构谱系和签字团队</a></li>
+<li><a class="nav-link" data-scroll-target="#事务所客户-akm-的有限流动诊断" href="#事务所客户-akm-的有限流动诊断" id="toc-事务所客户-akm-的有限流动诊断">7. 事务所—客户 AKM 的有限流动诊断</a></li>
+<li><a class="nav-link" data-scroll-target="#正式主结果前需要锁定的设定" href="#正式主结果前需要锁定的设定" id="toc-正式主结果前需要锁定的设定">8. 正式主结果前需要锁定的设定</a></li>
+<li><a class="nav-link" data-scroll-target="#参考文献" href="#参考文献" id="toc-参考文献">参考文献</a></li>
+<li><a class="nav-link" data-scroll-target="#待解决问题与补充材料" href="#待解决问题与补充材料" id="toc-待解决问题与补充材料">待解决问题与补充材料</a></li>
+<li><a class="nav-link" data-scroll-target="#数据程序与输出记录" href="#数据程序与输出记录" id="toc-数据程序与输出记录">数据、程序与输出记录</a></li>
+</ul>
+</nav>
+</div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+<header class="quarto-title-block default" id="title-block-header">
+<div class="quarto-title">
+<h1 class="title">客户、事务所和审计师的匹配</h1>
+</div>
+<div class="quarto-title-meta">
+</div>
+</header>
+<section class="level2" id="概述">
+<h2 class="anchored" data-anchor-id="概述">概述</h2>
+<p>本章描述客户、事务所和 A1 审计师如何配对，以及这种配对的稳定性与时间变化。匹配结构为理解客户筛选和固定效应识别提供背景；现有分组、热图和保留率均不能解释为服务的因果影响。</p>
+</section>
+<section class="level2" id="核心结果">
+<h2 class="anchored" data-anchor-id="核心结果">核心结果</h2>
+<p><strong>客户—事务所关系比客户—签字审计师关系更稳定，配对数量呈明显右偏。</strong> 累计 A1 图使用 71,584 条主面板记录中匹配到 A1 的 70,476 条，涉及 6,159 个 A1 ID；每个 A1 等权，不是年度工作量。年度保留率另来自 1990—2023 年的清洗谱系和签字团队口径，不能混用分母。</p>
+<p><strong>统计口径。</strong> 累计客户数为每位 A1 对应的不同客户 ID 数，累计报告数为其客户—年度记录数；年度配对保留率为</p>
+<p><span class="math display">\[
+R_t^{\,s}=\frac{\#\{\text{eligible type-}s\text{ links retained in }t+1\}}
+{\#\{\text{eligible type-}s\text{ links in }t\}}.
+\]</span></p>
+<p><span class="math inline">\(s\)</span> 分别表示客户—事务所、客户—签字审计师、事务所—签字审计师，以及按当期 A1/A2 分角色定义的配对；A1/A2 保留表示该人次年仍在签字团队中，不要求继续担任相同位次。公司关系使用相邻年度有效转换样本；事务所—审计师关系使用当期审计师主事务所记录，次年未观察到者计为未保留。分母分别遵循这些可比口径，不是全市场所有记录。后文另说明机构谱系清洗和年度覆盖。</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img class="img-fluid figure-img" src="figures/matching_degree_distribution/auditor_matching_distribution.png" style="width:100.0%"/></p>
+<figcaption>精选描述：A1 累计客户与报告数量</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img class="img-fluid figure-img" src="figures/matching_stability/matching_stability_retention_annual.png" style="width:100.0%"/></p>
+<figcaption>精选描述：年度配对保留率</figcaption>
+</figure>
+</div>
+<p><a href="#full-10_matching-1">累计匹配全部六项统计</a> · <a href="#full-10_matching-6">配对稳定性完整分析</a> · <a href="#full-10_matching-4">匹配模型与识别诊断</a></p>
+<p><span id="full-10_matching-1"></span></p>
+<p><span id="settings-10_matching"></span></p>
+<p><strong>统计与回归设定。</strong> 第 1 节累计配对和第 6 节保留率为描述统计，不适用回归控制、FE 或标准误；其主体、分母和缺失处理分别列示。当前 <code>44_triadic_sorting_blm.do</code> 的热图实际吸收“配对类型”和“年份”两个 FE，而不是二者的交互；方程中的 <span class="math inline">\(\eta_{kl}+\lambda_t\)</span> 与命令一致。代码控制 <code>size</code>、<code>roa</code>、<code>lev</code>，按客户聚类。历史图与当前脚本的版本一致性、估计年份和 N 尚待核验，因此仍按旧版描述诊断展示。五年滚动秩回归没有额外控制或 FE，使用 OLS 常规标准误；它不是严格的 Spearman 统计量。AKM 有限流动诊断的样本门槛、归一化和各图有效 N 须与对应输出继续核对，不能从主 AKM 章直接移植。</p>
+</section>
+<section class="level2" id="本页结论与证据边界">
+<h2 class="anchored" data-anchor-id="本页结论与证据边界">1. 本页结论与证据边界</h2>
+<p>本页把客户、事务所和签字审计师之间的 <strong>sorting（排序匹配）</strong> 集中在同一处。现有证据表明：客户风险、事务所梯队和签字审计师并不是随机配对；高风险客户所聘事务所的构成在样本期内发生了明显变化，本土八大的份额扩张尤其显著。但这些结果描述的是匹配的联合分布与其时间变化，<strong>不是</strong>“某一类事务所导致客户风险上升或下降”的因果估计。</p>
+<p><strong>回归／统计设定。</strong> 累计配对以主体等权，A1 使用稳定 ID；6,159 个 A1、5,729 家客户、299 家事务所的分母不同。不是回归，不适用控制、FE 或标准误。 <a href="#settings-10_matching">变量与回归设定</a>。</p>
+<p>本页分开呈现三类工作：</p>
+<ul>
+<li>已运行的匹配稳定性与事务所—客户 AKM 诊断（2026 年 9 月输出）；</li>
+<li>已运行的启发式、PCA 与收费分布聚类图（2026 年 8 月输出）；</li>
+<li>尚待统一样本、重新运行并形成正式主结果的三方 BLM / matching 规格。</li>
+</ul>
+<p>后两类图在这一阶段应作为描述性证据和模型诊断，而不是审计质量的处理效应。特别是，现有 <code>44_triadic_sorting_blm.do</code> 中的“BLM 排名”先按审计费用分布聚类、再按同一结果变量的样本内失败率定向；因此它不是独立于审计失败的质量检验。</p>
+<section class="level3" id="全样本累计匹配数量分布">
+<h3 class="anchored" data-anchor-id="全样本累计匹配数量分布">1.1 全样本累计匹配数量分布</h3>
+<p>本节补充六项累计匹配数量分布：每位 A1 审计师服务的不同客户数和签署的报告数、每家客户聘用的不同事务所数和 A1 审计师数，以及每家事务所服务的不同客户数和在其报告中出现的不同 A1 审计师数。统计覆盖主面板中可识别的配对，不限定于后续回归或 AKM 的估计样本；每张图按其主体等权计算百分比。</p>
+<p><strong>统计口径。</strong> 客户按 <code>stock_code</code> 识别，事务所按 <code>dom_firm_id</code> 识别，未合并事务所谱系。本节涉及审计师的四项分布均只考虑 A1，按证券代码—年度合并 <code>auditor_team_features.dta</code> 中的 <code>a1_auditor_id</code>，不纳入 A2。该字段为项目统一稳定 ID，包含 <code>pid_</code>、<code>cert_</code> 和 <code>name_</code> 后备标识，并非全部为注册证书号；本脚本不额外按姓名合并。缺失 A1 ID 的记录只从涉及审计师的统计中排除，客户—事务所统计保留原样本。报告定义为唯一的“客户—年度”记录，不区分同一年度的报告版本。全样本累计客户数对客户去重，报告数则累计不同客户—年度，因此连续多年服务同一客户会增加报告数。</p>
+<p>每项统计只使用两端标识均有效的配对，缺失标识不作为一个主体，也不视作零匹配。不同图的有效样本可能不同。累计数量受主体在样本中被观测的年限影响，不能直接解释为年度业务负荷、匹配偏好或因果效应。CSV 保留未分箱的原始数量与精确频数。</p>
+<p>六项分布均采用百分比直方图，展示完整取值范围，不截断或合并尾部。审计师匹配客户数、报告数的组距分别为 1、2，横轴刻度间隔分别为 5、20；客户匹配事务所数、审计师数的组距分别为 1、2，刻度间隔分别为 1、5；事务所匹配客户数、审计师数的组距均为 10，刻度间隔均为 100。空区间保留数值轴位置；均值、中位数和最大值按原始数量计算。</p>
+<p><strong>样本覆盖与结果。</strong> 主面板有 71,584 条客户—年度记录，其中 70,476 条匹配到 A1 ID；其余 1,108 条不进入涉及审计师的统计。有效配对覆盖 6,159 个 A1 ID、5,729 家客户和 299 家事务所。六项精确计数的汇总如下：</p>
+<figure class="latex-table figure">
+<img alt="客户、事务所与 A1 的累计匹配数量" class="figure-img" loading="lazy" src="tables/matching/10_matching_summary_01_full.png"/>
+<figcaption>
+客户、事务所与 A1 的累计匹配数量 · TeX · PDF
+</figcaption>
+</figure>
+<p>六项分布均呈右偏，均值高于中位数。A1 的累计客户数中位数为 2，报告数中位数为 4，说明应区分客户覆盖与跨年重复签字。客户累计匹配的 A1 数中位数为 4，高于事务所数的中位数 2；这是累计配对数量的描述，不能单凭这两个分布推断年度更换率。</p>
+<p>事务所层面的右尾尤其长：累计客户数均值为 50.05、中位数仅为 9；累计 A1 数均值为 28.48、中位数为 7。客户数最大值 1,333 对应 <code>dom_firm_id = 106958</code>（立信），表示其在样本覆盖的 1992—2024 年间累计服务的不同客户，而非单年客户数。主面板中该 ID 对应 7,999 条客户—年度记录，单年客户数最高为 2024 年的 767 家。同一 ID 已在源数据中对应立信不同历史名称，本节沿用该映射。事务所的累计 A1 数也只反映样本报告中出现的 A1 ID，不代表某年的员工规模或完整注册会计师名册。</p>
+<p><img alt="6,159 个 A1 审计师 ID 的全样本累计客户数与报告数百分比分布。" class="img-fluid" data-fig-cap="A1 审计师匹配数量：累计不同客户数与客户—年度报告数，按统一审计师 ID 识别。" src="figures/matching_degree_distribution/auditor_matching_distribution.png" style="width:100.0%"/></p>
+<p><img alt="5,729 家客户全样本累计匹配事务所数与 A1 审计师数的百分比分布。" class="img-fluid" data-fig-cap="客户匹配数量：累计不同事务所数与不同 A1 审计师 ID 数。" src="figures/matching_degree_distribution/client_matching_distribution.png" style="width:100.0%"/></p>
+<p><img alt="299 家事务所全样本累计匹配客户数与 A1 审计师数的百分比分布。" class="img-fluid" data-fig-cap="事务所匹配数量：累计不同客户数与不同 A1 审计师 ID 数；完整展示右尾。" src="figures/matching_degree_distribution/audit_firm_matching_distribution.png" style="width:100.0%"/></p>
+<p><span id="full-10_matching-2"></span></p>
+</section>
+</section>
+<section class="level2" id="为什么需要超越简单的-akm-排序">
+<h2 class="anchored" data-anchor-id="为什么需要超越简单的-akm-排序">2. 为什么需要超越简单的 AKM 排序</h2>
+<p>传统 AKM 式两向固定效应把结果写作可加形式：</p>
+<p><strong>回归／统计设定。</strong> 解释排序与识别的差异，不把样本内 AKM 排序当成外生质量处理。 <a href="#settings-10_matching">变量与回归设定</a>。</p>
+<p><span class="math display">\[
+Y_{ift}=X_{it}'\gamma+\alpha_i+\psi_f+\lambda_t+\varepsilon_{ift},
+\]</span></p>
+<p>其中 <span class="math inline">\(i\)</span> 是客户、<span class="math inline">\(f\)</span> 是事务所、<span class="math inline">\(t\)</span> 是年度，<span class="math inline">\(X_{it}\)</span> 为客户控制变量。若将事务所替换为签字审计师 <span class="math inline">\(a\)</span>，可估计客户—审计师或事务所—审计师的双边版本。这类模型要求异质性以固定效应的线性可加方式进入；它无法直接刻画“某类客户与某类事务所”的额外配对项。</p>
+<p>审计师、事务所之间的流动又相对稀少。有限流动会削弱固定效应和其相关系数的精确度，所以负的或正的 AKM 相关系数本身不能直接被解释为负向或正向排序。当前页面把这种问题作为诊断，而不据此下结论。</p>
+<p>Bonhomme、Lamadon 与 Manresa（2019）的分组固定效应框架允许双方不可观测异质性和非线性互补性，并在短面板中使用两步分类估计。<a href="https://onlinelibrary.wiley.com/doi/10.3982/ecta15722">原文</a> 并不意味着该框架会自动消除所有有限流动或选择问题；它提供的是一种可检验非加性匹配模式的替代建模路径。AKM 的原始双向固定效应基准见 <a href="https://onlinelibrary.wiley.com/doi/10.1111/1468-0262.00020">Abowd、Kramarz 与 Margolis（1999）</a>。</p>
+<p><span id="full-10_matching-3"></span></p>
+</section>
+<section class="level2" id="三种排序口径">
+<h2 class="anchored" data-anchor-id="三种排序口径">3. 三种排序口径</h2>
+<p><strong>回归／统计设定。</strong> 启发式、PCA、收费 CDF 聚类分别定义主体类型；聚类编号事后用失败率定向，不能独立验证该失败结果。训练时点、完整样本与版本一致性待核验。 <a href="#settings-10_matching">变量与回归设定</a>。</p>
+<section class="level3" id="启发式事前排序">
+<h3 class="anchored" data-anchor-id="启发式事前排序">3.1 启发式事前排序</h3>
+<p>当前 <code>44_triadic_sorting_blm.do</code> 的实际实现先把客户的规模、杠杆和 Z-score（若缺失则损失变量）各分为三组；事务所由四大／本土大所／其他所及其<strong>滞后</strong>失败率分组；CPA 由四大背景、学历（或学位）和其<strong>滞后</strong>失败率分组。随后对这些分组的标准化值加总，得到客户、事务所和 CPA 的启发式分数。</p>
+<p>这与“杠杆、<span class="math inline">\(-Z\)</span> 分数、过往违规率”构造客户风险分数的思路一致，但当前脚本并没有直接使用 <code>violated_clean</code> 来形成客户分数，也没有把该客户分数简单 <code>xtile</code> 为三组。正式版本若采用后一种定义，应在代码和网页中同步替换，避免文字与实际运行口径不一致。</p>
+</section>
+<section class="level3" id="pca-综合分组">
+<h3 class="anchored" data-anchor-id="pca-综合分组">3.2 PCA 综合分组</h3>
+<p><code>12_audit_blm_model.ipynb</code> 另行以客户规模／财务状况／事前风险、事务所梯队与历史风险、CPA 历史风险和可得人力资本变量构建 PCA 分组。它的价值是把多个可观测维度压缩为便于展示的分类；PCA 第一主成分的方向已在 notebook 中按选定风险变量校正。</p>
+<p>这仍是描述性降维，不是潜在质量的因果测度。图中的单元格是市场配对份额，不是配对“盈余”或事务所处理效应。</p>
+<p><img alt="由客户规模、财务状况和风险与事务所及 CPA 特征组成的 PCA 描述性匹配矩阵。" class="img-fluid" data-fig-cap="PCA 分组的描述性匹配矩阵：每个单元格显示样本配对占比，而非因果效应。" src="figures/sorting/heatmap_sorting_matrix_full.png" style="width:100.0%"/></p>
+</section>
+<section class="level3" id="审计收费-cdf-的-k-means-分组">
+<h3 class="anchored" data-anchor-id="审计收费-cdf-的-k-means-分组">3.3 审计收费 CDF 的 K-means 分组</h3>
+<p>本项目对 BLM 思路的实施分四步：</p>
+<ol type="1">
+<li>在正的对数审计费用 <span class="math inline">\(\ln(AuditFee)\)</span> 上取全市场 20 等分位点，得到 19 个阈值 <span class="math inline">\(p_q\)</span>；</li>
+<li>对每个审计业务构造 <span class="math inline">\(I\{\ln(AuditFee)\le p_q\}\)</span>，并分别按客户、事务所和 A1 CPA 求均值，得到 19 维经验 CDF 向量；</li>
+<li>对每类主体的向量做 <span class="math inline">\(K=10\)</span> 的 K-means 聚类；</li>
+<li>为了方便画图，当前脚本再按各簇的样本内 <code>any_failure_clean</code> 均值由低到高给簇编号。这个最后步骤是<strong>事后定向</strong>，不是无监督聚类的输出。</li>
+</ol>
+<p>费用 CDF 保留了平均收费之外的定价分布信息，但它反映的也可能是客户组合、业务复杂度和风险，而不单是审计质量。下图先展示事务所十类的费用 CDF，再展示两类客户配对热图。</p>
+<p><img alt="按审计费用经验累积分布聚类的十类事务所 CDF 曲线。" class="img-fluid" data-fig-cap="事务所层面的收费经验 CDF。横轴是全市场收费分位点；簇的质量编号使用样本内失败率事后定向。" src="figures/sorting/blm_firm_cdf_curves.png" style="width:100.0%"/></p>
+<p><span id="full-10_matching-4"></span></p>
+</section>
+</section>
+<section class="level2" id="配对单元格是否存在非加性模式">
+<h2 class="anchored" data-anchor-id="配对单元格是否存在非加性模式">4. 配对单元格：是否存在非加性模式</h2>
+<p>对客户类型 <span class="math inline">\(k\)</span>、事务所类型 <span class="math inline">\(l\)</span> 与 CPA 类型 <span class="math inline">\(m\)</span>，正式的分组匹配模型希望识别配对项：</p>
+<p><strong>回归／统计设定。</strong> 热图方程采用配对类型 FE 加年份 FE；当前代码控制 size、roa、lev，公司聚类。旧图有效 N、年份与代码版本待核验，原有“配对×年份”表述已注明核对差异。 <a href="#settings-10_matching">变量与回归设定</a>。</p>
+<p><span class="math display">\[
+Y_{ifat}=X_{it}'\gamma+\lambda_t+\eta_{kl}+u_{ifat},\qquad
+Y_{ifat}=X_{it}'\gamma+\lambda_t+\eta_{km}+u_{ifat}.
+\]</span></p>
+<p><span class="math inline">\(\eta_{kl}\)</span> 与 <span class="math inline">\(\eta_{km}\)</span> 是类型配对后的条件均值差异；它们应被读作关联而非结构性匹配剩余。回归分别吸收配对类型和年度固定效应，控制变量为规模、ROA 和杠杆，标准误按客户聚类。下一轮正式运行需要把三方共同模型、分组形成窗口和交叉验证规则固定下来。</p>
+<p><strong>启发式口径</strong></p>
+<p><img alt="启发式客户与事务所类型配对的条件固定效应热图。" class="img-fluid" data-fig-cap="启发式客户 × 事务所配对图：颜色是控制客户财务变量和年度后的配对固定效应，不是质量处理效应。" src="figures/sorting/blm_heatmap_client_firm_heuristic.png" style="width:100.0%"/></p>
+<p><img alt="启发式客户与 CPA 类型配对的条件固定效应热图。" class="img-fluid" data-fig-cap="启发式客户 × CPA 配对图：同样只作条件关联展示。" src="figures/sorting/blm_heatmap_client_cpa_heuristic.png" style="width:100.0%"/></p>
+<p><strong>收费 CDF 聚类口径</strong></p>
+<p><img alt="收费 CDF K-means 客户与事务所类型配对的条件固定效应热图。" class="img-fluid" data-fig-cap="收费 CDF K-means 客户 × 事务所配对图；簇的显示顺序由样本内失败率事后定向。" src="figures/sorting/blm_heatmap_client_firm_blm_kmeans.png" style="width:100.0%"/></p>
+<p><img alt="收费 CDF K-means 客户与 CPA 类型配对的条件固定效应热图。" class="img-fluid" data-fig-cap="收费 CDF K-means 客户 × CPA 配对图；不宜用来独立验证审计失败。" src="figures/sorting/blm_heatmap_client_cpa_blm_kmeans.png" style="width:100.0%"/></p>
+<p><span id="full-10_matching-5"></span></p>
+</section>
+<section class="level2" id="匹配强度的时间变化">
+<h2 class="anchored" data-anchor-id="匹配强度的时间变化">5. 匹配强度的时间变化</h2>
+<p><strong>回归／统计设定。</strong> 五年窗口回归标准化秩分数，无额外控制或 FE，OLS 常规标准误；另列互信息与高风险构成的描述统计，不混称 Spearman 推断。 <a href="#settings-10_matching">变量与回归设定</a>。</p>
+<section class="level3" id="五年窗口的秩关联">
+<h3 class="anchored" data-anchor-id="五年窗口的秩关联">5.1 五年窗口的秩关联</h3>
+<p>现有代码在每年先把三种排序转为秩并标准化，再在 <span class="math inline">\([t-2,t+2]\)</span> 的五年窗口内回归客户秩标准分数对事务所／CPA 秩标准分数。图题将这一系数称为 “Spearman <span class="math inline">\(\rho\)</span>”，但程序实际保存的是 OLS 斜率及其常规标准误；因此以下图更准确地应读作<strong>五年窗口的秩标准分数关联</strong>，不是严格按 Spearman 公式计算的相关系数或其置信区间。</p>
+<p><img alt="启发式排序下客户与事务所、客户与 CPA 的五年窗口秩关联。" class="img-fluid" data-fig-cap="启发式排序的五年窗口秩标准分数关联。阴影来自现有 OLS 斜率标准误。" src="figures/sorting/annual_sorting_heuristic.png" style="width:100.0%"/></p>
+<p><img alt="收费 CDF K-means 排序下客户与事务所、客户与 CPA 的五年窗口秩关联。" class="img-fluid" data-fig-cap="收费 CDF K-means 排序的五年窗口秩标准分数关联；该序列在 2012 年后转为正值，但不构成政策冲击的因果证据。" src="figures/sorting/annual_sorting_blm.png" style="width:100.0%"/></p>
+<p><img alt="基于事后失败率分组的客户与事务所、客户与 CPA 的五年窗口秩关联。" class="img-fluid" data-fig-cap="事后失败率分组的五年窗口秩标准分数关联。此处所谓 FE 排名实际由主体样本内平均失败率形成，并非纯固定效应。" src="figures/sorting/annual_sorting_fe.png" style="width:100.0%"/></p>
+</section>
+<section class="level3" id="非线性依赖与高风险客户的事务所构成">
+<h3 class="anchored" data-anchor-id="非线性依赖与高风险客户的事务所构成">5.2 非线性依赖与高风险客户的事务所构成</h3>
+<p>互信息指数使用当前启发式客户类型与事务所类型的年度联合分布：</p>
+<p><span class="math display">\[
+I_t(K;L)=\sum_{k,l}P_t(k,l)\ln\frac{P_t(k,l)}{P_t(k)P_t(l)}.
+\]</span></p>
+<p><span class="math inline">\(I_t=0\)</span> 对应于该两类离散类型在当年独立；数值更高只表示分组的依赖更强，并不区分正向与负向排序，也不比较年份间分组边界变化的影响。</p>
+<p><img alt="客户类型与事务所类型年度互信息指数。" class="img-fluid" data-fig-cap="客户 × 事务所类型的年度互信息指数：非线性匹配依赖的描述指标。" src="figures/sorting/blm_mutual_information_index.png" style="width:100.0%"/></p>
+<p>当前“高风险”定义为组合客户类型处于其样本分布上三分之一的观测，而不是仅凭一个连续风险分数。图显示该组所聘本土八大的份额在后期明显上升；四大份额也有波动。这个结构变化与“高风险客户的扩张主要在本土八大”的描述相符，但不能排除客户组成、覆盖范围或事务所分类变化。</p>
+<p><img alt="高风险客户按四大、本土八大和其他事务所划分的年度审计业务构成。" class="img-fluid" data-fig-cap="高风险客户的事务所构成 $P_t(l\mid k=High Risk)$：本土八大份额在后期扩张的描述性证据。" src="figures/sorting/blm_pt_highrisk_client_stack.png" style="width:100.0%"/></p>
+<p><span id="full-10_matching-6"></span></p>
+</section>
+</section>
+<section class="level2" id="配对稳定性来自清洗后的机构谱系和签字团队">
+<h2 class="anchored" data-anchor-id="配对稳定性来自清洗后的机构谱系和签字团队">6. 配对稳定性：来自清洗后的机构谱系和签字团队</h2>
+<p><code>14_auditor_audit_firm_clean.ipynb</code> 使用清洗后的事务所谱系和签字人身份，比较相邻年保留率。1990—2023 年的 pooled 保留率为：客户—事务所 85.4%，按谱系调整后 88.2%，客户—签字审计师 58.9%，事务所—签字审计师（在下一年仍被观测到时）92.9%。这解释了为什么审计师层面的换所识别尤其依赖少量流动边。</p>
+<p><strong>回归／统计设定。</strong> 1990—2023 年相邻年配对保留率按主体有效 ID、谱系和签字团队分别计算；不适用回归控制或标准误，不将保留率解释为流动原因。 <a href="#settings-10_matching">变量与回归设定</a>。</p>
+<p>在完整签字团队的相邻年转换中，39.7% 保持同一团队，38.4% 至少保留一名签字人，11.6% 是同一事务所内两名签字人都更换，10.3% 是全体更换且事务所也更换。这些是描述性流动事实，不代表团队重组的原因。</p>
+<p><img alt="客户、事务所与签字审计师配对的年度保留率。" class="img-fluid" data-fig-cap="年度配对保留率：机构谱系调整后，客户—事务所关系比客户—审计师关系稳定得多。" src="figures/matching_stability/matching_stability_retention_annual.png" style="width:100.0%"/></p>
+<p><img alt="签字团队转换类型的年度构成。" class="img-fluid" data-fig-cap="签字团队相邻年转换的构成：区分同一团队、部分保留、同所全换与换所全换。" src="figures/matching_stability/matching_stability_team_transitions.png" style="width:100.0%"/></p>
+<p><span id="full-10_matching-7"></span></p>
+</section>
+<section class="level2" id="事务所客户-akm-的有限流动诊断">
+<h2 class="anchored" data-anchor-id="事务所客户-akm-的有限流动诊断">7. 事务所—客户 AKM 的有限流动诊断</h2>
+<p><code>42_audit_firm_sorting_akm.do</code> 对客户—事务所网络估计双边固定效应，并按事务所梯队画出可用于估计的客户分布与抽样诊断。下图不是排序的主结果，而是提醒我们：某些梯队的事务所换入／换出边较少，固定效应相关及其符号可能对样本覆盖敏感。</p>
+<p><strong>回归／统计设定。</strong> 客户—事务所 AKM 的有限流动诊断；与主 AKM 章样本不完全相同。各图有效 N、FE 归一化和抽样次数待源输出核验。 <a href="#settings-10_matching">变量与回归设定</a>。</p>
+<p><img alt="不同审计事务所梯队中可用于客户—事务所 AKM 的客户分布。" class="img-fluid" data-fig-cap="客户—事务所 AKM 的有效客户覆盖分布：用于理解各梯队的网络识别基础。" src="figures/audit_firm_akm/audit_firm_valid_client_distribution.png" style="width:100.0%"/></p>
+<p><img alt="客户与事务所固定效应相关的抽样敏感度图。" class="img-fluid" data-fig-cap="未预警综合失败的抽样诊断：横轴为每家事务所平均流动者数量；这是有限流动敏感度检查，不是排序因果估计。" src="figures/audit_firm_akm/subsampling_plot_any_failure_clean.png" style="width:100.0%"/></p>
+<p><span id="full-10_matching-8"></span></p>
+</section>
+<section class="level2" id="正式主结果前需要锁定的设定">
+<h2 class="anchored" data-anchor-id="正式主结果前需要锁定的设定">8. 正式主结果前需要锁定的设定</h2>
+<ol type="1">
+<li>将客户风险的变量、方向、形成窗口和三组阈值写入同一份可复现代码；</li>
+<li>对历史违规率、费用 CDF 与结果变量使用严格的滞后或交叉拟合，避免当前期结果机械进入排序；</li>
+<li>明确 BLM 的主体、连通样本、最小观察次数和 <span class="math inline">\(K\)</span> 的选择，并报告替代 <span class="math inline">\(K\)</span>；</li>
+<li>以真正的 Spearman 检验或置换／bootstrap 置信区间替换当前滚动 OLS 近似；</li>
+<li>将三方分组匹配模型与 <code>26_akm.qmd</code> 的标准化 ID 和样本门槛对齐，再将其升级为主结果。</li>
+</ol>
+<p><strong>回归／统计设定。</strong> 待锁定设计清单；未完成的设定不写成已经执行的回归。 <a href="#settings-10_matching">变量与回归设定</a>。</p>
+</section>
+<section class="level2" id="参考文献">
+<h2 class="anchored" data-anchor-id="参考文献">参考文献</h2>
+<ul>
+<li>Abowd, John M., Francis Kramarz, and David N. Margolis. 1999. “High Wage Workers and High Wage Firms.” <em>Econometrica</em> 67(2): 251–333. <a href="https://doi.org/10.1111/1468-0262.00020">DOI</a>.</li>
+<li>Bonhomme, Stéphane, Thibaut Lamadon, and Elena Manresa. 2019. “A Distributional Framework for Matched Employer Employee Data.” <em>Econometrica</em> 87(3): 699–739. <a href="https://doi.org/10.3982/ECTA15722">DOI</a>.</li>
+</ul>
+</section>
+<section class="level2" id="待解决问题与补充材料">
+<h2 class="anchored" data-anchor-id="待解决问题与补充材料">待解决问题与补充材料</h2>
+<p><strong>仍需核验。</strong> 历史图的代码版本、年份与实际 N；分组形成时点与交叉拟合；配对和年份 FE 与交互 FE 的区分；滚动 OLS 与 Spearman 的差异；三方模型与个人 ID 对齐。</p>
+</section>
+<section class="level2" id="数据程序与输出记录">
+<h2 class="anchored" data-anchor-id="数据程序与输出记录">数据、程序与输出记录</h2>
+<p><strong>估计程序（存档）。</strong> 44_triadic_sorting_blm.do · 45_matching_degree_distribution.do · 42_audit_firm_sorting_akm.do</p>
+<p>结果来源为 <code>results/tables/selection_matching/matching_degree_distribution/</code> 下六个 <code>*_counts.csv</code> 文件；三张组合图已按 A1 ID 口径生成并同步到本报告目录。生成脚本为 <code>code/stata/40_selection_matching/45_matching_degree_distribution.do</code>。</p>
+</section>
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "已复制");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "已复制");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+</body></html>

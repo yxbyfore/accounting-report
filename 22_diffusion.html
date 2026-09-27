@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+
+<html lang="zh-Hans" xml:lang="zh-Hans" xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta charset="utf-8"/>
+<meta content="quarto-1.10.18" name="generator"/>
+<meta content="width=device-width, initial-scale=1.0, user-scalable=yes" name="viewport"/>
+<title>企业网络传导 – 会计研究项目报告</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta content="./" name="quarto:offset"/>
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet"/>
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" id="quarto-text-highlighting-styles" rel="stylesheet"/>
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet"/>
+<link append-hash="true" data-mode="light" href="site_libs/bootstrap/bootstrap-261e60fdf64a0e003ec2340fd2db30d7.min.css" id="quarto-bootstrap" rel="stylesheet"/>
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "没有结果",
+    "search-matching-documents-text": "匹配的文档",
+    "search-copy-link-title": "复制搜索链接",
+    "search-hide-matches-text": "隐藏其它匹配结果",
+    "search-more-match-text": "更多匹配结果",
+    "search-more-matches-text": "更多匹配结果",
+    "search-clear-button-title": "清除",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "取消",
+    "search-submit-button-title": "提交",
+    "search-label": "搜索"
+  }
+}</script>
+<script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+<script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+<link href="styles.css" rel="stylesheet"/>
+<link href="empirical.css" rel="stylesheet"/>
+</head>
+<body class="nav-sidebar docked empirical-report quarto-light">
+<div id="quarto-search-results"></div>
+<header class="headroom fixed-top" id="quarto-header">
+<nav class="quarto-secondary-nav">
+<div class="container-fluid d-flex">
+<button aria-controls="quarto-sidebar" aria-expanded="false" aria-label="展开或折叠侧边栏导航" class="quarto-btn-toggle btn" data-bs-target=".quarto-sidebar-collapse-item" data-bs-toggle="collapse" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }" role="button" type="button">
+<i class="bi bi-layout-text-sidebar-reverse"></i>
+</button>
+<nav aria-label="breadcrumb" class="quarto-page-breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./22_diffusion.html">企业网络传导</a></li></ol></nav>
+<a aria-controls="quarto-sidebar" aria-expanded="false" aria-label="展开或折叠侧边栏导航" class="flex-grow-1" data-bs-target=".quarto-sidebar-collapse-item" data-bs-toggle="collapse" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }" role="navigation">
+</a>
+<button aria-label="搜索" class="btn quarto-search-button" onclick="window.quartoOpenSearch();" type="button">
+<i class="bi bi-search"></i>
+</button>
+</div>
+</nav>
+</header>
+<!-- content -->
+<div class="quarto-container page-columns page-rows-contents page-layout-article" id="quarto-content">
+<!-- sidebar -->
+<nav class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto" id="quarto-sidebar">
+<div class="pt-lg-2 mt-2 text-left sidebar-header">
+<div class="sidebar-title mb-0 py-0">
+会计研究项目报告
+</div>
+</div>
+<div class="mt-2 flex-shrink-0 align-items-center">
+<div class="sidebar-search">
+<div class="" id="quarto-search" title="搜索"></div>
+</div>
+</div>
+<div class="sidebar-menu-container">
+<ul class="list-unstyled mt-1">
+<li class="sidebar-item">
+<div class="sidebar-item-container">
+<a class="sidebar-item-text sidebar-link" href="./01_core_summary.html">
+<span class="menu-text">核心摘要</span></a>
+</div>
+</li>
+<li class="sidebar-item">
+<div class="sidebar-item-container">
+<a class="sidebar-item-text sidebar-link" href="./02_core_results.html">
+<span class="menu-text">核心结果</span></a>
+</div>
+</li>
+<li class="sidebar-item">
+<div class="sidebar-item-container">
+<a class="sidebar-item-text sidebar-link" href="./03_background.html">
+<span class="menu-text">背景</span></a>
+</div>
+</li>
+<li class="sidebar-item">
+<div class="sidebar-item-container">
+<a class="sidebar-item-text sidebar-link" href="./21_adoption.html">
+<span class="menu-text">四大审计师的采用</span></a>
+</div>
+</li>
+<li class="sidebar-item">
+<div class="sidebar-item-container">
+<a class="sidebar-item-text sidebar-link active" href="./22_diffusion.html">
+<span class="menu-text">企业网络传导</span></a>
+</div>
+</li>
+<li class="sidebar-item">
+<div class="sidebar-item-container">
+<a class="sidebar-item-text sidebar-link" href="./23_big4_effect.html">
+<span class="menu-text">四大事务所效应</span></a>
+</div>
+</li>
+<li class="sidebar-item">
+<div class="sidebar-item-container">
+<a class="sidebar-item-text sidebar-link" href="./24_auditor_quality.html">
+<span class="menu-text">审计师效应</span></a>
+</div>
+</li>
+<li class="sidebar-item">
+<div class="sidebar-item-container">
+<a class="sidebar-item-text sidebar-link" href="./25_matching.html">
+<span class="menu-text">客户、事务所和审计师的匹配</span></a>
+</div>
+</li>
+<li class="sidebar-item">
+<div class="sidebar-item-container">
+<a class="sidebar-item-text sidebar-link" href="./26_akm.html">
+<span class="menu-text">AKM</span></a>
+</div>
+</li>
+<li class="sidebar-item">
+<div class="sidebar-item-container">
+<a class="sidebar-item-text sidebar-link" href="./31_biweekly_memo.html">
+<span class="menu-text">双周备忘录</span></a>
+</div>
+</li>
+<li class="sidebar-item">
+<div class="sidebar-item-container">
+<a class="sidebar-item-text sidebar-link" href="./32_active_tasks.html">
+<span class="menu-text">当前任务</span></a>
+</div>
+</li>
+<li class="sidebar-item">
+<div class="sidebar-item-container">
+<a class="sidebar-item-text sidebar-link" href="./33_data_pipeline.html">
+<span class="menu-text">数据流程</span></a>
+</div>
+</li>
+</ul>
+</div>
+</nav>
+<div class="quarto-sidebar-collapse-item" data-bs-target=".quarto-sidebar-collapse-item" data-bs-toggle="collapse" id="quarto-sidebar-glass"></div>
+<!-- margin-sidebar -->
+<div class="sidebar margin-sidebar" id="quarto-margin-sidebar">
+<nav class="toc-active" id="TOC" role="doc-toc">
+<h2 id="toc-title">该页面内容</h2>
+<ul>
+<li><a class="nav-link active" data-scroll-target="#概述" href="#概述" id="toc-概述">概述</a></li>
+<li><a class="nav-link" data-scroll-target="#核心结果" href="#核心结果" id="toc-核心结果">核心结果</a></li>
+<li><a class="nav-link" data-scroll-target="#供应链网络与基本事实" href="#供应链网络与基本事实" id="toc-供应链网络与基本事实">1. 供应链网络与基本事实</a></li>
+<li><a class="nav-link" data-scroll-target="#供应商转向四大的传导效应" href="#供应商转向四大的传导效应" id="toc-供应商转向四大的传导效应">2. 供应商转向四大的传导效应</a></li>
+<li><a class="nav-link" data-scroll-target="#客户转向四大的传导效应" href="#客户转向四大的传导效应" id="toc-客户转向四大的传导效应">3. 客户转向四大的传导效应</a></li>
+<li><a class="nav-link" data-scroll-target="#供应链地位异质性" href="#供应链地位异质性" id="toc-供应链地位异质性">4. 供应链地位异质性</a>
+<ul class="collapse">
+<li><a class="nav-link" data-scroll-target="#客户议价地位" href="#客户议价地位" id="toc-客户议价地位">4.1 客户议价地位</a></li>
+<li><a class="nav-link" data-scroll-target="#供应商议价地位" href="#供应商议价地位" id="toc-供应商议价地位">4.2 供应商议价地位</a></li>
+</ul></li>
+<li><a class="nav-link" data-scroll-target="#替代供应链定义" href="#替代供应链定义" id="toc-替代供应链定义">5. 替代供应链定义</a></li>
+<li><a class="nav-link" data-scroll-target="#placebo-与因果推断检验" href="#placebo-与因果推断检验" id="toc-placebo-与因果推断检验">6. Placebo 与因果推断检验</a></li>
+<li><a class="nav-link" data-scroll-target="#数据程序与输出记录" href="#数据程序与输出记录" id="toc-数据程序与输出记录">数据、程序与输出记录</a></li>
+</ul>
+</nav>
+</div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+<header class="quarto-title-block default" id="title-block-header">
+<div class="quarto-title">
+<h1 class="title">企业网络传导</h1>
+</div>
+<div class="quarto-title-meta">
+</div>
+</header>
+<section class="level2" id="概述">
+<h2 class="anchored" data-anchor-id="概述">概述</h2>
+<p>本章考察四大采用是否沿客户—供应商网络传播，连接企业自身的审计需求与网络中的服务采用扩散。网络选择和共同冲击尚未排除，不将采用扩散写成服务质量外溢。</p>
+</section>
+<section class="level2" id="核心结果">
+<h2 class="anchored" data-anchor-id="核心结果">核心结果</h2>
+<p>我们采用 staggered event study 检验四大采用在供应链中的网络传导。基本结论是：贸易伙伴转向四大后，焦点公司随后采用四大的概率显著上升，且供应商侧（supplier shock）的拉动效应明显强于客户侧（client shock）。</p>
+<p><strong>回归方程与设定</strong></p>
+<p>对供应商和客户冲击分别估计两向固定效应模型：</p>
+<p><span class="math display">\[
+\operatorname{Big4}_{it} = \sum_{k \in \{-5,\ldots,5\} \setminus \{-1\}} \beta_k^s \cdot \mathbf{1}\{t - T_i^s = k\} + \alpha_i + \lambda_t + \varepsilon_{it}, \qquad s \in \{\mathrm{supplier}, \mathrm{client}\}.
+\]</span></p>
+<p>因变量 <span class="math inline">\(\operatorname{Big4}_{it}\)</span> 为焦点公司 <span class="math inline">\(i\)</span> 在 <span class="math inline">\(t\)</span> 年是否聘请四大；<span class="math inline">\(T_i^s\)</span> 为其供应链伙伴首次转向四大的年份。事件窗口取 <span class="math inline">\([-5, +5]\)</span> 并对两端做 endpoint binning（合并 <span class="math inline">\(k \le -5\)</span> 与 <span class="math inline">\(k \ge 5\)</span>），基期为 <span class="math inline">\(k = -1\)</span>。模型吸收 firm FE 和 year FE，标准误在 firm level 进行 cluster。基准回归未加入额外财务控制变量。</p>
+<p><strong>样本</strong></p>
+<p>基于 A 股上市公司披露的供应链关系构建 firm-year 面板。以贸易伙伴首次跃迁至四大的时点识别处理：供应商冲击的处理组包含 1,942 家焦点公司，客户冲击包含 1,532 家；对照组由从未处理（not treated）与尚未处理（not yet treated）的公司构成。</p>
+<p><strong>结果与动态特征</strong></p>
+<ol type="1">
+<li><strong>Pre-trends</strong>：在 <span class="math inline">\(k \le -2\)</span> 期间，估计系数紧密围绕 0 波动且均不显著，满足 parallel trends 假定；</li>
+<li><strong>Post-treatment 动态效应</strong>：供应商换所当期（<span class="math inline">\(k=0\)</span>），焦点公司采用四大的概率立即跳升，并在后续 1~5 年内稳定在 2.5~3.0 个百分点的高位（<span class="math inline">\(p &lt; 0.01\)</span>）；</li>
+<li><strong>上下游非对称性</strong>：客户侧在 <span class="math inline">\(k \ge 1\)</span> 同样显著转正，但幅度相对温和（约 1.5~2.0 个百分点），呈现出明显的 upstream-to-downstream 传导特征。</li>
+</ol>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img class="img-fluid figure-img" src="figures/stage2_sc/supplier_trans_big4/annual_supplier_trans_big4_base_big4.png" style="width:100.0%"/></p>
+<figcaption>精选结果：供应商转向四大</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img class="img-fluid figure-img" src="figures/stage2_sc/client_trans_big4/annual_client_trans_big4_base_big4.png" style="width:100.0%"/></p>
+<figcaption>精选结果：客户转向四大</figcaption>
+</figure>
+</div>
+<p><a href="#full-03_diffusion-2">供应商完整分析</a> · <a href="#full-03_diffusion-3">客户完整分析</a> · <a href="#full-03_diffusion-6">替代口径与安慰剂</a></p>
+<p><span id="full-03_diffusion-1"></span></p>
+<p><span id="settings-03_diffusion"></span></p>
+<p><strong>回归设定。</strong> 当前年度网络回归仅含事件虚拟变量，下文方程中的 <span class="math inline">\(X\)</span> 在该规格为空；年度 FE 为公司和年份，两年一期为公司和两年期，均按公司聚类。程序将两端事件时间合并，基期为 −1。两年一期的事件窗口是 −4 至 +4 个两年期。年度基准代码未增加额外财务控制；随机网络和 Monte Carlo 抽样程序见第 6 节。</p>
+<p><strong>设定来源（只读快照）。</strong> 22_supplychain_adoption_variants.do · 23_supplychain_adoption_placebo.do</p>
+</section>
+<section class="level2" id="供应链网络与基本事实">
+<h2 class="anchored" data-anchor-id="供应链网络与基本事实">1. 供应链网络与基本事实</h2>
+<p><strong>研究问题与当前发现。</strong> 供应链网络以公司披露的客户—供应商关系为基础。对每一家焦点公司，分别定义其客户或供应商首次转向四大的年份；该年份构成网络伙伴的审计质量冲击。研究对象不是伙伴自身的审计师选择，而是与该伙伴相连公司的审计师采用是否在随后发生变化。</p>
+<p><strong>回归／统计设定。</strong> 单位为焦点公司—年，因变量为事务所类别采用。伙伴事件虚拟变量进入 TWFE，公司和年份 FE、公司聚类；当前年度命令无额外控制。 <a href="#settings-03_diffusion">变量与回归设定</a>。</p>
+<p>设 <span class="math inline">\(PartnerBig4_{it}^k\)</span> 表示公司 <span class="math inline">\(i\)</span> 的客户或供应商在相对事件时间 <span class="math inline">\(k\)</span> 首次转向四大的暴露指标，<span class="math inline">\(Y_{it}\)</span> 为公司 <span class="math inline">\(i\)</span> 在年份 <span class="math inline">\(t\)</span> 的审计师质量结果。主回归为：</p>
+<p><span class="math display">\[
+Y_{it}=\sum_{k\neq -1}\beta_k PartnerBig4_{it}^k+X_{it}'\gamma+\mu_i+\lambda_t+\varepsilon_{it}.
+\]</span></p>
+<p>其中，<span class="math inline">\(k=-1\)</span> 为事件前一年，<span class="math inline">\(X_{it}\)</span> 为当前规格的时变控制变量，<span class="math inline">\(\mu_i\)</span> 和 <span class="math inline">\(\lambda_t\)</span> 分别为公司与年份固定效应。基准结果令 <span class="math inline">\(Y_{it}=Big4_{it}\)</span>。</p>
+<p>网络传导的解释要求伙伴审计师转换不是由焦点公司与伙伴共同面对的未观测冲击机械驱动。因此，Monte Carlo 随机事件与异质性检验是识别设计的重要部分。</p>
+<p><span id="full-03_diffusion-2"></span></p>
+</section>
+<section class="level2" id="供应商转向四大的传导效应">
+<h2 class="anchored" data-anchor-id="供应商转向四大的传导效应">2. 供应商转向四大的传导效应</h2>
+<p><strong>研究问题与当前发现。</strong> 供应商侧事件定义为：与公司相连的供应商首次由非四大转向四大。年度事件研究中，事件前系数没有持续的正向偏离；事件当年及之后，焦点公司采用四大的概率上升，并在多个后续时期保持为正。</p>
+<p><strong>回归／统计设定。</strong> 供应商首次转向四大的网络暴露；处理公司数为 1,942 家。年度公司、年份 FE，公司聚类；合并 ±5 两端，无额外控制。 <a href="#settings-03_diffusion">变量与回归设定</a>。</p>
+<p><img alt="供应商首次转向四大前后，焦点公司采用四大的年度事件研究图。" class="img-fluid" data-fig-cap="供应商转向四大的传导效应：焦点公司采用四大的年度事件研究。" src="figures/stage2_sc/supplier_trans_big4/annual_supplier_trans_big4_base_big4.png" style="width:100.0%"/></p>
+<p><strong>结果解释与识别局限。</strong> 事件前估计系数紧密在零线附近波动，平行趋势假定得到支持；事件当期（<span class="math inline">\(k=0\)</span>）系数即跳升约 1.2 个百分点，并在随后 1 至 5 年内维持在 2.5~3.0 个百分点的显著正向水平。这一结果与供应商审计质量升级后，交易对手协同提升审计质量的传导解释一致；但也可能反映共同融资、共同国际化或行业共同冲击，需进一步通过异质性与安慰剂检验辨别。</p>
+<p><span id="full-03_diffusion-3"></span></p>
+</section>
+<section class="level2" id="客户转向四大的传导效应">
+<h2 class="anchored" data-anchor-id="客户转向四大的传导效应">3. 客户转向四大的传导效应</h2>
+<p><strong>研究问题与当前发现。</strong> 客户侧事件定义为：与公司相连的客户首次由非四大转向四大。年度图显示，焦点公司采用四大的概率在事件后由接近零转为正，并在后续年份保持正向。</p>
+<p><strong>回归／统计设定。</strong> 客户首次转向四大的网络暴露；处理公司数为 1,532 家。其余年度设定同第 2 节。 <a href="#settings-03_diffusion">变量与回归设定</a>。</p>
+<p><img alt="客户首次转向四大前后，焦点公司采用四大的年度事件研究图。" class="img-fluid" data-fig-cap="客户转向四大的传导效应：焦点公司采用四大的年度事件研究。" src="figures/stage2_sc/client_trans_big4/annual_client_trans_big4_base_big4.png" style="width:100.0%"/></p>
+<p><strong>结果解释与识别局限。</strong> 客户侧同样表现出平稳的事前趋势（<span class="math inline">\(k \le -2\)</span> 阶段无显著偏离）。在客户换所后次年（<span class="math inline">\(k \ge 1\)</span>），焦点公司采用四大的概率显著转正，后续维持在 1.5~2.0 个百分点。相较供应商侧，客户侧点估计相对较小，呈现出上游向下游传导更显著的非对称特征。</p>
+<p><span id="full-03_diffusion-5"></span></p>
+</section>
+<section class="level2" id="供应链地位异质性">
+<h2 class="anchored" data-anchor-id="供应链地位异质性">4. 供应链地位异质性</h2>
+<p><strong>研究问题与当前发现。</strong> 考察网络传导是否依赖于交易对手的相对议价能力与市场依赖度。</p>
+<p><strong>回归／统计设定。</strong> 按伙伴与焦点公司的相对营业收入比值（以 2 倍为界）分组，在原年度 FE 与公司聚类下分别估计。 <a href="#settings-03_diffusion">变量与回归设定</a>。</p>
+<section class="level3" id="客户议价地位">
+<h3 class="anchored" data-anchor-id="客户议价地位">4.1 客户议价地位</h3>
+<p>大客户定义为客户营业收入超过焦点公司营业收入两倍的关系。大客户转向四大时，买方的监督或合规要求更有可能沿供应链向上游扩散。</p>
+<p><img alt="按客户相对规模划分的客户转向四大事件研究图。" class="img-fluid" data-fig-cap="客户主导与其他客户关系：焦点公司采用四大的事件路径。" src="figures/stage2_sc/client_trans_big4/annual_power_client_trans_big4_big4.png" style="width:100.0%"/></p>
+</section>
+<section class="level3" id="供应商议价地位">
+<h3 class="anchored" data-anchor-id="供应商议价地位">4.2 供应商议价地位</h3>
+<p>大供应商定义为供应商营业收入超过焦点公司营业收入两倍的关系。该分组检验重要投入品交易对手是否具有更强的审计质量影响。</p>
+<p><img alt="按供应商相对规模划分的供应商转向四大事件研究图。" class="img-fluid" data-fig-cap="供应商主导与其他供应商关系：焦点公司采用四大的事件路径。" src="figures/stage2_sc/supplier_trans_big4/annual_power_supplier_trans_big4_big4.png" style="width:100.0%"/></p>
+<p><strong>结果解释。</strong> 客户侧大客户组的采用概率跃升更为集中，与强势买方的合规监督假说一致；供应商侧两组均呈现出稳健的正向变化，表明投入品供应方的规范化对下游具有普遍的认证与示范效应。</p>
+<p><span id="full-03_diffusion-6"></span></p>
+</section>
+</section>
+<section class="level2" id="替代供应链定义">
+<h2 class="anchored" data-anchor-id="替代供应链定义">5. 替代供应链定义</h2>
+<p><strong>研究问题与当前发现。</strong> 检验基准结论对供应链关系筛选规则与时间聚合窗口的敏感性。</p>
+<p><strong>回归／统计设定。</strong> 分别采用去除招投标、仅保留报告披露后关系以及两年一期面板聚合规格。两年期吸收公司和两年期 FE、公司聚类，事件窗口为 −4 至 +4 个两年期。 <a href="#settings-03_diffusion">变量与回归设定</a>。</p>
+<ul>
+<li><strong>去除招投标公告</strong>：去除招投标公告来源的供应链关系，以降低单次项目合作或公告文本匹配造成的关系误识别；</li>
+<li><strong>仅使用报告披露后的关系</strong>：仅保留在公司报告披露后可确认的关系，避免使用事后信息定义事件时点，直接针对前视偏误；</li>
+<li><strong>两年一期</strong>：将关系与审计师选择按两年窗口聚合，降低年度关系披露噪声和短期跳变的影响。</li>
+</ul>
+<p><img alt="两年窗口内客户转向四大前后，焦点公司采用四大的事件研究图。" class="img-fluid" data-fig-cap="两年一期：客户转向四大的传导效应。" src="figures/stage2_sc/client_trans_big4/2y_client_trans_big4_base_big4.png" style="width:100.0%"/></p>
+<p><img alt="两年窗口内供应商转向四大前后，焦点公司采用四大的事件研究图。" class="img-fluid" data-fig-cap="两年一期：供应商转向四大的传导效应。" src="figures/stage2_sc/supplier_trans_big4/2y_supplier_trans_big4_base_big4.png" style="width:100.0%"/></p>
+<p><strong>结果解释。</strong> 在两年期聚合规格下，事件前系数维持平稳，事件后各周期呈现平滑的单调递增走势，证实基准发现对时间粒度的选取稳健。</p>
+<p><span id="full-03_diffusion-7"></span></p>
+</section>
+<section class="level2" id="placebo-与因果推断检验">
+<h2 class="anchored" data-anchor-id="placebo-与因果推断检验">6. Placebo 与因果推断检验</h2>
+<p><strong>研究问题与当前发现。</strong> 检验基准结果是否由纯粹的时间序列巧合或随机波动机械驱动。</p>
+<p><strong>回归／统计设定。</strong> 保持公司与网络拓扑结构不变，对各公司经历冲击的事件年份进行 3,000 次随机打散重抽样（Monte Carlo 置换），构建经验虚无分布，并将真实静态系数置于该分布中进行推断比较。 <a href="#settings-03_diffusion">变量与回归设定</a>。</p>
+<p><img alt="3000次随机事件时点下客户侧转向四大的安慰剂系数分布。" class="img-fluid" data-fig-cap="客户侧随机事件时点安慰剂：红色虚线为真实系数，直方图和核密度为 3,000 次随机化得到的系数分布。" src="figures/placebo/placebo_dist_simu3000_shock_client_trans_big4.png" style="width:100.0%"/></p>
+<p><img alt="3000次随机事件时点下供应商侧转向四大的安慰剂系数分布。" class="img-fluid" data-fig-cap="供应商侧随机事件时点安慰剂：红色虚线为真实系数，直方图和核密度为 3,000 次随机化得到的系数分布。" src="figures/placebo/placebo_dist_simu3000_shock_supplier_trans_big4.png" style="width:100.0%"/></p>
+<p><strong>结果解释与识别局限。</strong> 客户侧的真实系数为 0.0169，经验 p 值为 0.073；供应商侧的真实系数为 0.0260，经验 p 值为 0.001。置换检验表明真实系数几乎不可能由随机事件时点产生，强力排除了时序巧合驱动的假设。但该检验主要针对时序维度的外生性，未能完全排除行业层面的共同冲击（common industry shocks），区分行业共同冲击仍是网络传导因果识别的关键边界。</p>
+</section>
+<section class="level2" id="数据程序与输出记录">
+<h2 class="anchored" data-anchor-id="数据程序与输出记录">数据、程序与输出记录</h2>
+<p><strong>估计程序（存档）。</strong> 22_supplychain_adoption_variants.do · 23_supplychain_adoption_placebo.do</p>
+</section>
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "已复制");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "已复制");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+</body></html>
