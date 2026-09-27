@@ -455,6 +455,9 @@ window.Quarto = {
 <p>所有回归均吸收客户公司固定效应与年份固定效应，控制财务控制变量 <span class="math inline">\(C\)</span> 及缺失指标，标准误按客户公司聚类，<strong>不吸收事务所固定效应</strong>。</p>
 <section class="level3" id="质量状态逆转与固定窗口设定">
 <h3 class="anchored" data-anchor-id="质量状态逆转与固定窗口设定">2.1 质量状态逆转与固定窗口设定</h3>
+<p>本部分采用两种处理质量状态逆转的样本规则。<strong>Strict（整企剔除）</strong>在公司层面筛选：升级回归仅保留质量状态始终不变或仅发生 <span class="math inline">\(0\rightarrow1\)</span> 转变、没有 <span class="math inline">\(1\rightarrow0\)</span> 转变的公司；降级回归则反之。因此，发生逆转的公司，其全部公司—年份观测均被剔除，而不只是逆转后的年份。</p>
+<p><strong>Trim（观测截断）</strong>保留公司在反向转变之前的观测：升级回归剔除首次 <span class="math inline">\(1\rightarrow0\)</span> 转变当年及之后的公司—年份；降级回归剔除首次 <span class="math inline">\(0\rightarrow1\)</span> 转变当年及之后的公司—年份。即使之后再次转回原方向，也不重新纳入。相比 Strict，Trim 保留了发生逆转公司的早期记录。</p>
+<p>上述转变均依据相邻两个日历年且质量指标非缺失的观测识别；Trim 的截断点是样本中首次反向转变，不要求此前已观察到目标方向的转变。两种规则分别对应“剔除逆转公司”与“剔除逆转当年及以后的公司—年份”。</p>
 <p>衡量审计师human capital的dummy转变后，部分公司再次发生逆转。四大背景升级的 1,068 家转变公司中有 748 家观察到逆转（70.0%，逆转者中位持续两年），降级的 1,050 家中有 327 家逆转（31.1%，中位三年）。低失败 AKM 状态升级和降级的观察到的逆转比例分别为 60.7% 与 51.0%。这些是带右删失的描述统计，不是统一随访期的逆转风险；它们为考察两年、三年的短期效应提供动机。</p>
 <details class="rotation-measure">
 <summary>
