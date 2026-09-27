@@ -308,6 +308,27 @@ window.Quarto = {
 <p>其中 <span class="math inline">\(Q_{a(i,t)}\)</span> 为审计师特征 dummy，<span class="math inline">\(C_{it}\)</span> 为财务控制变量，<span class="math inline">\(E_{it}\)</span> 为历史执业暴露控制（报告数、客户数及服务年限）。通过依次引入年份 FE、客户公司 FE、以及客户公司加审计事务所双重 FE，检验个人特征是否能独立于执业平台发挥质量改善作用。</p>
 <section class="level3" id="可观察人力资本-dummy-回归">
 <h3 class="anchored" data-anchor-id="可观察人力资本-dummy-回归">1.1 可观察人力资本 Dummy 回归</h3>
+<p>令 <span class="math inline">\(i\)</span> 为客户公司，<span class="math inline">\(t\)</span> 为财年，<span class="math inline">\(a(i,t)\)</span> 和 <span class="math inline">\(j(i,t)\)</span> 分别为当期 A1 审计师与审计事务所；<span class="math inline">\(Y_{it}^{m,3}\)</span> 表示按三年披露窗口构造的结果，<span class="math inline">\(m\)</span> 分别为综合失败、重述和违规。表中的 <strong>Separate regression</strong> 每次仅加入一项审计师特征 <span class="math inline">\(q^k\)</span>：</p>
+<p><span class="math display">\[
+Y_{it}^{m,3}=\beta_k^{S}q^k_{a(i,t)}+C_{it}'\gamma+E_{it}'\rho+F_{it}^{(f)}+\varepsilon_{it}.
+\]</span></p>
+<p><strong>Joint regression</strong> 则将六项特征同时纳入同一回归，每张特征表摘取其中对应的系数：</p>
+<p><span class="math display">\[
+Y_{it}^{m,3}=\sum_{k\in\mathcal K}\beta_k^{J}q^k_{a(i,t)}+C_{it}'\gamma+E_{it}'\rho+F_{it}^{(f)}+\varepsilon_{it},
+\]</span></p>
+<p>其中 <span class="math inline">\(\mathcal K\)</span> 为本科及以上、硕士及以上、博士、985/211、985 和事前四大背景六项指标。Separate 的系数没有控制其余五项特征；Joint 的系数是在同时控制其余特征后的条件差异。学历和院校指标是累计门槛，Joint 中硕士及以上相对本科以下的差异为本科与硕士两项系数之和，博士对应三项学历系数之和；985 相对非 985/211 院校的差异为两项院校系数之和。</p>
+<p>三列固定效应依次为：</p>
+<p><span class="math display">\[
+F_{it}^{(1)}=\lambda_t,\qquad
+F_{it}^{(2)}=\alpha_i+\lambda_t,\qquad
+F_{it}^{(3)}=\alpha_i+\mu_{j(i,t)}+\lambda_t.
+\]</span></p>
+<p><span class="math inline">\(C_{it}\)</span> 包含本章定义的九项财务控制及其缺失指示。<span class="math inline">\(E_{it}\)</span> 包含接任前历史报告数和客户数的 <span class="math inline">\(\ln(1+x)\)</span> 及其平方，以及历史服务年限的 <span class="math inline">\(\ln(1+x)\)</span>；因此历史暴露并非只按线性项控制。Separate 与 Joint 使用统一的完整样本及固定效应单例剔除规则，标准误按客户公司聚类。</p>
+<p>表中的 <strong>Categories</strong> 另将学历或院校改为互斥类别，分别估计：</p>
+<p><span class="math display">\[
+Y_{it}^{m,3}=\sum_{g\ne g_0}\xi_g\mathbf 1\{G_{a(i,t)}=g\}+C_{it}'\gamma+E_{it}'\rho+F_{it}^{(f)}+\varepsilon_{it}.
+\]</span></p>
+<p>学历以本科以下为基准，比较本科、硕士、博士；院校以非 985/211 为基准，比较非 985 的 211 院校及 985 院校。这两组类别回归分别估计，不等同于六项特征的 Joint 回归。</p>
 <p>每项背景单独展示，按年份 FE、加入客户公司 FE、再加入审计事务所 FE 逐步比较；各列使用同一完整样本（N=41,252）。标准误按客户公司聚类。</p>
 <p><strong>主要发现：</strong> - <strong>学历与院校</strong>：本科单项回归对综合失败的系数随 FE 加入由 −0.0083 变为 −0.0076、−0.0069，最后一列仅在 10% 水平边缘显著；硕士与博士系数大多不显著。985/211 与 985 院校背景在加入公司 FE 与事务所 FE 后均不具有显著性。 - <strong>四大背景</strong>：四大背景单项回归对综合失败的系数在仅控制公司 FE 时为 −0.0147（显著），但在进一步吸收审计事务所 FE 后迅速衰减为 −0.0077 且不再显著（完整回归表见开篇<a href="#full-05_auditor_quality-big4-dummy">核心结果展板</a>）。这表明四大背景的负向关联主要来自事务所平台间的系统性差异，而非个人效应。</p>
 <p><strong>本科及以上</strong></p>
@@ -348,6 +369,25 @@ window.Quarto = {
 </section>
 <section class="level3" id="接任前执业历史记录预测回归">
 <h3 class="anchored" data-anchor-id="接任前执业历史记录预测回归">1.2 接任前执业历史记录预测回归</h3>
+<p>令 <span class="math inline">\(H^R_{it}\)</span>、<span class="math inline">\(H^V_{it}\)</span> 分别表示当期 A1 在其他客户上的事前记录中没有重述、没有违规。年度表的 Panel A（<strong>Separate history</strong>）分别估计 <span class="math inline">\(k\in\{R,V\}\)</span>：</p>
+<p><span class="math display">\[
+Y_{it}^{m,3}=\beta_k H^k_{it}+E_{it}'\rho+C_{it}'\gamma+\alpha_i+\mu_{j(i,t)}+\lambda_t+\varepsilon_{it}.
+\]</span></p>
+<p>Panel B（<strong>Joint history</strong>）同时加入两项历史指标：</p>
+<p><span class="math display">\[
+Y_{it}^{m,3}=\beta_R H^R_{it}+\beta_V H^V_{it}+E_{it}'\rho+C_{it}'\gamma+\alpha_i+\mu_{j(i,t)}+\lambda_t+\varepsilon_{it}.
+\]</span></p>
+<p>这里的 Joint 仅指“无重述”和“无违规”两项历史联合进入，不是上一节六项人力资本联合回归。两式均控制历史暴露 <span class="math inline">\(E_{it}\)</span> 和财务特征 <span class="math inline">\(C_{it}\)</span>，标准误按客户公司聚类；历史指标缺失可能使 Separate 与 Joint 的有效样本不同。</p>
+<p>Panel C–E 以真实 A1 更换事件 <span class="math inline">\(e\)</span> 为单位，分别采用 <span class="math inline">\(L=1,2,3\)</span> 年完整随访。令 <span class="math inline">\(t_e\)</span> 为接任年份，<span class="math inline">\(\widetilde Y_{e,L}^{m}=\max_{0\le h&lt;L}Y_{i,t_e+h}^{m,3}\)</span>，对每一种历史指标分别估计：</p>
+<p><span class="math display">\[
+\widetilde Y_{e,L}^{m}
+=\beta_{k,L}^{S}H_{e}^{k,\mathrm{succ}}
++\beta_{k,L}^{P}H_{e}^{k,\mathrm{pred}}
++E_{e}^{\mathrm{succ}\prime}\rho_L
++L_{e}^{\mathrm{pred}\prime}\zeta_L
++C_{e}'\gamma_L+\mu_{j(e)}+\lambda_{t_e}+\varepsilon_{e,L}.
+\]</span></p>
+<p>继任者和前任者的历史指标均以接任年年初为信息截止点，并排除目标客户。继任者暴露控制沿用 <span class="math inline">\(E\)</span> 的对数及平方项；前任者的 <span class="math inline">\(L^{\mathrm{pred}}\)</span> 仅包含报告数、客户数和服务年限的 <span class="math inline">\(\ln(1+x)\)</span>，不含平方项。每个窗口要求全部财年及其披露随访完整；模型控制接任时财务特征、事务所和事件年份固定效应，标准误按事务所聚类。</p>
 <p>历史指标排除目标客户，只计入观察年 1 月 1 日之前已披露的信息；至少需要三份历史报告和两个历史年份，没有足够记录的审计师不被归为“清白”。结果使用固定披露窗口；新匹配样本分别要求接任当年起完整的一年、两年或三年随访。</p>
 <p>每项历史指标一张表：A、B 面板分别为年度单项和联合历史回归，吸收客户、事务所和年份 FE，按客户聚类；C–E 面板为真实更换事件的一至三年随访，同时列出继任者和前任者系数，吸收事务所和事件年份 FE，按事务所聚类。不同历史指标、结果及随访长度的有效样本不同，不能把列间变化全部归于随访长度。</p>
 <p><strong>结果：</strong>无重述历史的继任者对综合失败的一年、两年、三年系数分别为 −0.0043、−0.0135、−0.0185，均不显著；无违规历史的对应系数也不显著。三年综合失败列中，显著的 −0.0297 属于<strong>前任者</strong>无重述历史，不能作为“换入更好审计师改善结果”的证据。当前结果尚未支持历史记录对继任者后续表现有稳定预测力，也不能据此认定真实效应为零。</p>
@@ -366,6 +406,28 @@ window.Quarto = {
 </section>
 <section class="level3" id="事务所类别交互">
 <h3 class="anchored" data-anchor-id="事务所类别交互">1.3 事务所类别交互</h3>
+<p>表 26 的六项人力资本联合回归为：</p>
+<p><span class="math display">\[
+Y_{it}^{m}=\sum_{k\in\mathcal K}\beta_k q^k_{a(i,t)}+C_{it}^{m\prime}\gamma+\alpha_i+\mu_{j(i,t)}+\lambda_t+\varepsilon_{it}.
+\]</span></p>
+<p>该表不加入事务所类别及其交互项，也不加入第 1.1 节的历史暴露控制 <span class="math inline">\(E\)</span>；结果变量和样本沿用本节原表，不能与三年披露窗口验证表混为同一设定。<span class="math inline">\(C^m\)</span> 随结果变量调整：失败结果使用九项财务控制；异常应计使用规模、杠杆、亏损、增长率、现金流、市净比及应计；审计意见使用失败控制组但不含报告时滞；费用使用规模、杠杆、亏损和 ROA，各组均含相应缺失指示。</p>
+<p>令 <span class="math inline">\(B_{it}\)</span>、<span class="math inline">\(L_{it}\)</span>、<span class="math inline">\(O_{it}\)</span> 分别指四大、本土八大和其他事务所，<span class="math inline">\(A_{it}\)</span> 表示 A1 具有四大背景。表 27 估计：</p>
+<p><span class="math display">\[
+Y_{it}^{m}=b_B B_{it}+b_L L_{it}
++d_L L_{it}A_{it}+d_O O_{it}A_{it}
++C_{it}^{m\prime}\gamma+F_{it}^{m}+\varepsilon_{it}.
+\]</span></p>
+<p>因此 <span class="math inline">\(d_L\)</span> 和 <span class="math inline">\(d_O\)</span> 分别比较本土八大、其他事务所内有无四大背景的 A1；模型未另行估计四大所内部的背景差异。表 28 对学历和院校两组累计门槛分别估计：</p>
+<p><span class="math display">\[
+\begin{aligned}
+Y_{it}^{m}={}&amp;b_B B_{it}+b_L L_{it}
++\sum_{k\in\mathcal G}\bigl(\beta_k q^k_{a(i,t)}
++\delta_{Bk}B_{it}q^k_{a(i,t)}
++\delta_{Lk}L_{it}q^k_{a(i,t)}\bigr)\\
+&amp;+C_{it}^{m\prime}\gamma+F_{it}^{m}+\varepsilon_{it}.
+\end{aligned}
+\]</span></p>
+<p><span class="math inline">\(\mathcal G\)</span> 分别为三项学历门槛或两项院校门槛，<span class="math inline">\(\beta_k\)</span> 对应 Other 类别。表 27–28 通常取 <span class="math inline">\(F_{it}^{m}=\alpha_i+\lambda_t\)</span>；仅以 Client FE 为因变量的列改为 <span class="math inline">\(F_{it}^{m}=\mu_{j(i,t)}+\lambda_t\)</span>。本节各式均按客户公司聚类。</p>
 <details>
 <summary>
 展开联合回归及事务所类别交互结果（样本与上文不同）
@@ -533,6 +595,11 @@ Y_{it}=\beta_M\bigl(Q_{it}\times D_i^M\bigr)
 </section>
 <section class="level3" id="rotation-did-完整四版本对照表trim-strict-2年-3年窗口">
 <h3 class="anchored" data-anchor-id="rotation-did-完整四版本对照表trim-strict-2年-3年窗口">2.3 Rotation DID 完整四版本对照表（Trim / Strict / 2年 / 3年窗口）</h3>
+<p>四种样本规则下均报告 pooled 与轮换类型交互两种规格。对每项质量指标及升级／降级方向，pooled 规格为：</p>
+<p><span class="math display">\[
+Y_{it}=\beta Q_{it}+C_{it}'\gamma+\alpha_i+\lambda_t+\varepsilon_{it},\qquad (i,t)\in\mathcal S_{r,d},
+\]</span></p>
+<p>其中 <span class="math inline">\(r\in\{\mathrm{Trim},\mathrm{Strict},\mathrm{2yr},\mathrm{3yr}\}\)</span> 表示样本规则，<span class="math inline">\(d\)</span> 表示升级或降级。轮换类型比较沿用第 2.2 节方程，将 <span class="math inline">\(Q_{it}\)</span> 替换为 <span class="math inline">\(Q_{it}D_i^M\)</span> 与 <span class="math inline">\(Q_{it}D_i^V\)</span>，并从 2004 年开始估计。两类规格均含财务控制及其缺失指示、客户公司和年份固定效应，按客户公司聚类；窗口回归仍使用当期 <span class="math inline">\(Q_{it}\)</span>，不是始终等于一的事后指示变量。</p>
 <p>质量转变回归<strong>不含事务所固定效应</strong>。每个质量指标分别估计升级与降级；综合失败、重述和违规各自包括 pooled 与五年／较短任期比较。<strong>Panel A–D 依次对应 Trim、Strict、固定两年和固定三年窗口。</strong></p>
 <p>“恰好五年”仍是前任 A1 任期代理；不同质量指标和转变方向的有效样本不尽相同。上方严格样本摘要只摘取了部分指标的 Panel B，完整结果及窗口敏感性以这里的原表为准。</p>
 <p><strong>可观察人力资本</strong></p>
@@ -1096,6 +1163,23 @@ Y_{e,h}=\theta_{k,d,h}\widehat H_e^k+W_{e}^{k\prime}\rho+\mu_j+\lambda_t+\vareps
 </section>
 <section class="level3" id="事务所平台效应与个人四大经历的分离检验">
 <h3 class="anchored" data-anchor-id="事务所平台效应与个人四大经历的分离检验">3.4 事务所平台效应与个人四大经历的分离检验</h3>
+<p>令 <span class="math inline">\(B_{it}\)</span> 表示 A1 在四大所执业，<span class="math inline">\(A_{it}\)</span> 表示 A1 在非四大所执业且具有四大背景；省略组为无四大背景的非四大所 A1。水平回归为：</p>
+<p><span class="math display">\[
+Y_{it}=\beta_B B_{it}+\beta_A A_{it}+C_{it}'\gamma+\alpha_i+\lambda_t+\varepsilon_{it}.
+\]</span></p>
+<p>在非四大所子样本中，另估计加入事务所固定效应的规格：</p>
+<p><span class="math display">\[
+Y_{it}=\beta_A A_{it}+C_{it}'\gamma+\alpha_i+\mu_{j(i,t)}+\lambda_t+\varepsilon_{it},\qquad B_{it}=0.
+\]</span></p>
+<p>交互模型区分初始任期、前任恰好五年后的继任任期与较短任期后的继任任期，分别记为 <span class="math inline">\(S_{it}^{0}\)</span>、<span class="math inline">\(S_{it}^{M}\)</span>、<span class="math inline">\(S_{it}^{V}\)</span>：</p>
+<p><span class="math display">\[
+\begin{aligned}
+Y_{it}={}&amp;\sum_{r\in\{0,M,V\}}\left(\beta_{Br}B_{it}S_{it}^{r}+\beta_{Ar}A_{it}S_{it}^{r}\right)
++\delta_M S_{it}^{M}+\delta_V S_{it}^{V}\\
+&amp;+C_{it}'\gamma+\alpha_i+\lambda_t+\varepsilon_{it}.
+\end{aligned}
+\]</span></p>
+<p>该交互式使用 2004 年及以后的观测，进入类型赋予继任者整个任期；<span class="math inline">\(\beta_{Br}\)</span> 与 <span class="math inline">\(\beta_{Ar}\)</span> 比较同一任期类型内相对纯本土组的差异。各式控制九项财务特征及其缺失指示，标准误按客户公司聚类。模型未单独加入 auditor FE。</p>
 <p><code>39_rotation_big4_spillover_did.do</code> 进一步将 A1 审计师划分为“四大所执业”、“非四大所执业但具有个人四大从业背景”以及“纯本土所执业”三组，在同一模型中将事务所平台效应与个人经历分离开来。水平回归的基准省略组为纯本土组；交互式回归进一步将各组与两类更换类型（恰好五年轮换与较短任期更换）相乘。标准误按客户公司聚类。</p>
 <p>全部样本中，四大所相对纯本土的综合失败系数为 −0.015（标准误 0.007，显著），而非四大所执业的四大背景 A1 系数仅为 0.006（0.006，不显著）；在限定非四大所样本并吸收事务所固定效应的严格控制下，个人四大背景系数依然为 0.006（0.006，不显著）。在交互式回归中，“恰好五年 × 四大所”系数为 −0.033（显著），而“恰好五年 × 非四大所四大背景”为 −0.024 且不显著。这表明，所谓四大经历带来的审计质量溢出，本质上是四大事务所平台的组织与制度优势，脱离了四大平台后，个人四大背景并未带来显著更低的失败率。</p>
 <details class="rotation-measure">
