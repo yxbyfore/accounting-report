@@ -93,7 +93,7 @@ ul.task-list li input[type="checkbox"] {
 <nav class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto" id="quarto-sidebar">
 <div class="pt-lg-2 mt-2 text-left sidebar-header">
 <div class="sidebar-title mb-0 py-0">
-会计研究项目报告
+<a href="./">会计研究项目报告</a>
 </div>
 </div>
 <div class="mt-2 flex-shrink-0 align-items-center">
@@ -184,7 +184,15 @@ ul.task-list li input[type="checkbox"] {
 <nav class="toc-active" id="TOC" role="doc-toc">
 <h2 id="toc-title">该页面内容</h2>
 <ul>
-<li><a class="nav-link active" data-scroll-target="#当前更新" href="#当前更新" id="toc-当前更新">当前更新</a></li>
+<li><a class="nav-link active" data-scroll-target="#讨论提纲" href="#讨论提纲" id="toc-讨论提纲">2026-09-28 讨论提纲</a>
+<ul class="collapse">
+<li><a class="nav-link" data-scroll-target="#四大与本土八大相对-other-的差异" href="#四大与本土八大相对-other-的差异" id="toc-四大与本土八大相对-other-的差异">1. 四大与本土八大相对 Other 的差异</a></li>
+<li><a class="nav-link" data-scroll-target="#rare-event-是否导致-akm-估计有偏" href="#rare-event-是否导致-akm-估计有偏" id="toc-rare-event-是否导致-akm-估计有偏">2. Rare event 是否导致 AKM 估计有偏？</a></li>
+<li><a class="nav-link" data-scroll-target="#更多-cutoff-与两两组合的-akm" href="#更多-cutoff-与两两组合的-akm" id="toc-更多-cutoff-与两两组合的-akm">3. 更多 cutoff 与两两组合的 AKM</a></li>
+<li><a class="nav-link" data-scroll-target="#caseload0-与第三个工具改为-caseload-1" href="#caseload0-与第三个工具改为-caseload-1" id="toc-caseload0-与第三个工具改为-caseload-1">4. Caseload=0 与第三个工具改为 caseload ≤1</a></li>
+<li><a class="nav-link" data-scroll-target="#caseload-iv加入与不加入财务控制" href="#caseload-iv加入与不加入财务控制" id="toc-caseload-iv加入与不加入财务控制">5. Caseload IV：加入与不加入财务控制</a></li>
+</ul></li>
+<li><a class="nav-link" data-scroll-target="#数据程序与输出记录" href="#数据程序与输出记录" id="toc-数据程序与输出记录">数据、程序与输出记录</a></li>
 <li><a class="nav-link" data-scroll-target="#归档" href="#归档" id="toc-归档">归档</a></li>
 </ul>
 </nav>
@@ -198,9 +206,50 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-title-meta">
 </div>
 </header>
-<section class="level2" id="当前更新">
-<h2 class="anchored" data-anchor-id="当前更新">当前更新</h2>
-<p><em>尚未添加备忘录。</em></p>
+<section class="level2" id="讨论提纲">
+<h2 class="anchored" data-anchor-id="讨论提纲">2026-09-28 讨论提纲</h2>
+<p>本次汇报围绕五项更新：事务所类别差异的直观展示、稀有失败对 AKM 的含义、不同 cutoff 与双边分解、caseload 工具的口径更新，以及财务控制变量的敏感性。重点区分已有结果、测量诊断与尚待完成的识别。</p>
+<section class="level3" id="四大与本土八大相对-other-的差异">
+<h3 class="anchored" data-anchor-id="四大与本土八大相对-other-的差异">1. 四大与本土八大相对 Other 的差异</h3>
+<p>以 <strong>Other=0</strong> 展示 Big 4、Local 8 的回归系数与区间。综合未预警失败中，两组分别比 Other 低 <strong>3.45 和 1.53 个百分点</strong>；违规方向一致，重述证据较弱。Jones 异常应计绝对值作为补充结果。</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img class="img-fluid figure-img" src="figures/audit_firm_akm/tier_contrasts_other_reference.png" style="width:100.0%"/></p>
+<figcaption>Audit-firm tier contrasts relative to Other</figcaption>
+</figure>
+</div>
+<p>这里画的是控制客户与年份 FE 的事务所类别系数，标准误按客户聚类；不是逐家事务所 FE 的均值差。图中横线为近似 95% 区间。该结果刻画条件风险差异，尚不能分离客户选择与服务改善。</p>
+<p><a href="./23_big4_effect.html#sec-tier-other-reference">对应分析、图注与完整 FE 分布</a></p>
+</section>
+<section class="level3" id="rare-event-是否导致-akm-估计有偏">
+<h3 class="anchored" data-anchor-id="rare-event-是否导致-akm-估计有偏">2. Rare event 是否导致 AKM 估计有偏？</h3>
+<p><strong>稀有失败本身不机械导致线性 AKM 系数有偏；主要需要区分个人效应的精度、排名可靠性和插件方差的有限样本偏误。</strong> 无偏性仍依赖正确的条件均值、外生性及网络识别。低人力资本解释力也可能受 FE 测量噪声影响，不能直接归结为不可观察能力。</p>
+<p>现有检查中，获得分数的当期 A1 观测有 <strong>74.84% 对应零失败训练历史，训练报告数中位数仅 12 份</strong>；这不是独立审计师比例。新接任项目的前瞻 AKM 分数系数为 −0.00121（SE=0.00466，p=0.795），没有稳定预测改善。它支持信息稀疏的解释，但尚不能量化少数失败对排名的影响。</p>
+<p>讨论重点是保留严重失败指标，同时推进事件计数、单次事件影响度、网络精度和 leave-out 诊断，而不是直接将线性 AKM 全部改成 logit。Jochmans–Weidner 讨论网络固定效应精度，Kline–Saggio–Sølvsten 讨论方差分量修正；相关文献、公式和解释已集中放在 AKM 的 rare-event 小节。</p>
+<p><a href="./26_akm.html#sec-rare-event-akm">详细讨论（原 7.3，现 4.3）</a> · <a href="./26_akm.html#sec-rare-event-references">核验后的参考文献与检索词</a></p>
+</section>
+<section class="level3" id="更多-cutoff-与两两组合的-akm">
+<h3 class="anchored" data-anchor-id="更多-cutoff-与两两组合的-akm">3. 更多 cutoff 与两两组合的 AKM</h3>
+<p>分别比较不设门槛、3 份／3 年和 5 份／5 年，并将客户、事务所、审计师两两组合估计。<strong>总体排序仍为 client FE 份额最大、auditor FE 其次、audit-firm FE 最小。</strong> 综合未预警失败的客户×审计师模型中，客户份额依次为 <strong>30.9%、31.4%、32.3%</strong>，审计师为 <strong>15.8%、14.3%、12.6%</strong>；事务所×审计师模型中，事务所份额为 <strong>4.4%、4.1%、3.9%</strong>，审计师为 <strong>16.4%、14.2%、12.5%</strong>。</p>
+<p>两两组合与三维基准的总体模式一致，但这是不同样本和模型下的插件方差比较，不是三个互相独立的因果贡献；cutoff 稳定也不能替代个人 FE 的精度及偏误诊断。</p>
+<p><a href="./26_akm.html#full-11_akm-4">全部 cutoff 与结果变量</a> · <a href="./26_akm.html#full-11_akm-5">双边模型与三维 AKM 对照</a></p>
+</section>
+<section class="level3" id="caseload0-与第三个工具改为-caseload-1">
+<h3 class="anchored" data-anchor-id="caseload0-与第三个工具改为-caseload-1">4. Caseload=0 与第三个工具改为 caseload ≤1</h3>
+<p>业务量描述已经考虑同一审计师—事务所服务区间内没有上市客户的年份，第三个 IV 的 share 定义已改为 <strong>同类候选 A1 中 caseload≤1 的人数占比</strong>。当前结果的总体判断与此前接近，仍未形成跨特征、跨工具一致的失败率改善。</p>
+<p>需要明确：<strong>描述图补入的零值尚未进入 IV 候选 roster。</strong> 名单仍由上一年观察到上市签字的 A1 构成；在这一名单中，=1 与 ≤1 实际选择同一批人。因而本次更新不能宣称“已纳入零客户候选人后结果仍稳健”。零客户年份是否仍在该所任职并可承接项目，是下一步补池需要核实的内容。</p>
+<p><a href="./24_auditor_quality.html#sec-caseload-zero">零值口径与三类候选池工具</a></p>
+</section>
+<section class="level3" id="caseload-iv加入与不加入财务控制">
+<h3 class="anchored" data-anchor-id="caseload-iv加入与不加入财务控制">5. Caseload IV：加入与不加入财务控制</h3>
+<p>在保留目的事务所和年份 FE、其他设计控制的基础上，比较是否加入公司财务控制。<strong>324 个二阶段结果中，311 个方向相同，319 个显著性档位相同，总体判断不变。</strong> 两个主要负向结果很接近：本科及以上的占比工具对应任期综合失败由 −0.259 变为 −0.256；历史无违规的平均业务量工具对应首年重述由 −0.117 变为 −0.119。</p>
+<p>不能据此说所有系数都稳定：96 个规格的估计样本量也发生变化，极弱第一阶段下仍有大幅系数跳动。下一步应将同样本控制比较与弱工具推断分开核验。</p>
+<p><a href="./24_auditor_quality.html#sec-caseload-controls">控制变量比较、第一阶段与解释边界</a></p>
+</section>
+</section>
+<section class="level2" id="数据程序与输出记录">
+<h2 class="anchored" data-anchor-id="数据程序与输出记录">数据、程序与输出记录</h2>
+<p>本次使用已有输出更新展示并核对数值，没有重新运行回归或 Stata。事务所类别图来自 <code>audit_firm_tier_contrast_tests.csv</code>；cutoff 来自 <code>pairwise_akm_report_year_sensitivity.csv</code>；财务控制比较配对 <code>caseload_matching_iv_pool_estimates_auditfirm_fe_with_financial_controls.txt</code> 与 <code>caseload_matching_iv_pool_estimates_auditfirm_fe_no_financial_controls.txt</code>。图件及比较记录由 <code>maintenance/prepare_meeting_memo.py</code> 生成；rare-event 诊断使用已完成的 <code>audit_outcome_identification.md</code>。</p>
 </section>
 <section class="level2" id="归档">
 <h2 class="anchored" data-anchor-id="归档">归档</h2>
