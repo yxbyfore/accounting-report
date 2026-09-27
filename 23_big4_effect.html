@@ -403,29 +403,69 @@ Y_{ift} = \mathbf{X}_{it}'\gamma + \alpha_i + \psi_f + \lambda_t + \varepsilon_{
 <p>其中 <span class="math inline">\(\psi_f\)</span> 为事务所固定效应，<span class="math inline">\(\alpha_i\)</span> 为公司固定效应。</p>
 <p><img alt="按四大、本土八大和其他事务所分组的有效客户数分布。" class="img-fluid" data-fig-cap="AKM 事务所固定效应的可识别样本分布。" src="figures/audit_firm_akm/audit_firm_valid_client_distribution.png" style="width:100.0%"/></p>
 <p><span id="sec-tier-other-reference"></span></p>
-<p>以 Other 为基准，控制客户和年份固定效应后，四大与本土八大的未预警综合失败系数分别为 −0.0345（p=0.001）和 −0.0153（p=0.020）；四大相对本土八大的差异为 −0.0192（p=0.048）。违规方向一致，四大相对 Other 为 −0.0270（p=0.002）；重述为 −0.0129（p=0.058），证据较弱。Jones 异常应计绝对值中，四大相对 Other 为 −0.0083（p=0.022）。</p>
-<div class="quarto-float quarto-figure quarto-figure-center anchored" id="fig-tier-other-reference">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-tier-other-reference-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img class="img-fluid figure-img" src="figures/audit_firm_akm/tier_contrasts_other_reference.png" style="width:100.0%"/>
+<section class="level4" id="sec-audit-firm-fe-distributions">
+<h4 class="anchored" data-anchor-id="sec-audit-firm-fe-distributions">事务所 FE 的分布</h4>
+<p>以下四张原图分别展示综合未预警失败、重述、违规和 Jones 异常应计绝对值的 audit-firm FE 分布。黑色虚线为 Other 组均值，彩色实线为各组均值；保留原图的固定效应尺度。</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img class="img-fluid figure-img" src="figures/audit_firm_akm/audit_firm_fe_distribution_any_failure_clean.png" style="width:100.0%"/></p>
+<figcaption>Audit-firm FE distribution: Any unwarned failure</figcaption>
+</figure>
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-tier-other-reference-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-图 1: Audit-firm tier contrasts relative to Other
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img class="img-fluid figure-img" src="figures/audit_firm_akm/audit_firm_fe_distribution_restated_clean.png" style="width:100.0%"/></p>
+<figcaption>Audit-firm FE distribution: Unwarned restatement</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img class="img-fluid figure-img" src="figures/audit_firm_akm/audit_firm_fe_distribution_violated_clean.png" style="width:100.0%"/></p>
+<figcaption>Audit-firm FE distribution: Unwarned violation</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img class="img-fluid figure-img" src="figures/audit_firm_akm/audit_firm_fe_distribution_abs_da_jones.png" style="width:100.0%"/></p>
+<figcaption>Audit-firm FE distribution: Absolute Jones DA</figcaption>
+</figure>
+</div>
+</section>
+<section class="level4" id="sec-audit-firm-scatter">
+<h4 class="anchored" data-anchor-id="sec-audit-firm-scatter">客户 FE 与事务所 FE 的联合散点图</h4>
+<p>每个点代表一家事务所：横轴是 audit-firm FE，纵轴是该事务所客户的平均 client FE，每名客户等权。虚线标示 Other 组在两个维度上的均值，点的大小反映有效客户数。这组图展示客户与事务所的匹配分布，不能直接解释为换所的因果效应。</p>
+<div class="quarto-float quarto-figure quarto-figure-center anchored" id="fig-audit-firm-scatter-all">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-audit-firm-scatter-all-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img class="img-fluid figure-img" src="figures/audit_firm_akm/tier_audit_firm_scatter_any_failure_clean_all.png" style="width:100.0%"/>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-audit-firm-scatter-all-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+图 1: Audit-firm FE and mean client FE: Any unwarned failure, all FEs
 </figcaption>
 </figure>
 </div>
-<p>注：点为 Big 4、Local 8 相对 Other 的估计系数，Other 归一化为零；横线为系数 ±1.96 倍聚类标准误的近似 95% 区间。失败指标以百分点表示，应计指标保留原单位。原输出对应 <span class="math inline">\(Y_{it}=\beta_B\mathbf{1}(Big4)+\beta_L\mathbf{1}(Local8)+\alpha_i+\lambda_t+\varepsilon_{it}\)</span>，控制客户与年份 FE、按客户聚类，未额外加入财务控制。<strong>这是事务所类别的条件差异，不是对逐家事务所估计的 FE 取均值后作差</strong>；不能直接解释为四大的因果服务效应。</p>
-<details>
-<summary>
-事务所 FE 的完整分布与客户—事务所联合散点图
-</summary>
-<p><img alt="四大、本土八大和其他事务所的综合审计失败事务所固定效应分布。" class="img-fluid" data-fig-cap="综合审计失败的事务所固定效应分布。" src="figures/audit_firm_akm/audit_firm_fe_distribution_any_failure_clean.png" style="width:100.0%"/></p>
-<p><img alt="综合审计失败的事务所固定效应与客户固定效应散点图。" class="img-fluid" data-fig-cap="综合审计失败：事务所固定效应与客户固定效应的联合分布。" src="figures/audit_firm_akm/tier_audit_firm_scatter_any_failure_clean_all.png" style="width:100.0%"/></p>
-<p><img alt="Jones异常应计绝对值的事务所固定效应与客户固定效应散点图。" class="img-fluid" data-fig-cap="Jones 异常应计绝对值：事务所固定效应与客户固定效应的联合分布。" src="figures/audit_firm_akm/tier_audit_firm_scatter_abs_da_jones_all.png" style="width:100.0%"/></p>
-</details>
+<div class="quarto-float quarto-figure quarto-figure-center anchored" id="fig-audit-firm-scatter-significant">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-audit-firm-scatter-significant-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img class="img-fluid figure-img" src="figures/audit_firm_akm/tier_audit_firm_scatter_any_failure_clean_significant.png" style="width:100.0%"/>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-audit-firm-scatter-significant-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+图 2: Audit-firm FE and mean client FE: Any unwarned failure, significant FEs
+</figcaption>
+</figure>
+</div>
+<p>注：第二张按原程序保留事务所 FE 与客户 FE 均满足 p&lt;0.10 的记录，再聚合到事务所层面；该图是显著性筛选后的展示，与全样本图的覆盖不同。</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img class="img-fluid figure-img" src="figures/audit_firm_akm/tier_audit_firm_scatter_abs_da_jones_all.png" style="width:100.0%"/></p>
+<figcaption>Audit-firm FE and mean client FE: Absolute Jones DA, all FEs</figcaption>
+</figure>
+</div>
+<p><strong>补充的类别回归。</strong> 以 Other 为基准、控制客户和年份 FE 后，四大与本土八大的未预警综合失败系数分别为 −0.0345（p=0.001）和 −0.0153（p=0.020）；四大相对本土八大的差异为 −0.0192（p=0.048）。四大相对 Other 的违规系数为 −0.0270（p=0.002），重述为 −0.0129（p=0.058），Jones 异常应计绝对值为 −0.0083（p=0.022）。这是事务所类别回归的条件差异，不是对上述逐家事务所 FE 取均值后作差。</p>
 <p><strong>截面事实的推论与疑问：</strong> 上述截面比较与 AKM 排序确立了四大客户更少发生审计失败的经验事实。但这究竟源于四大对企业财报生产的“直接治理改善（Treatment Effect）”，还是源于“优质客户与顶级事务所的主动匹配（Selection / Sorting）”？回答这一问题的关键在于检验企业在更换事务所前后的动态变化。</p>
 <p><span id="full-12_big4_effect-5"></span></p>
 <p><span id="识别检验换入和换出四大后是否改善"></span></p>
+</section>
 </section>
 </section>
 <section class="level2" id="治理效应检验企业换入与换出四大后的动态变化">

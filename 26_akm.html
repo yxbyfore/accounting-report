@@ -230,7 +230,7 @@ window.Quarto = {
 <ul class="collapse">
 <li><a class="nav-link" data-scroll-target="#增量解释力与网络连通性支持" href="#增量解释力与网络连通性支持" id="toc-增量解释力与网络连通性支持">4.1 增量解释力与网络连通性支持</a></li>
 <li><a class="nav-link" data-scroll-target="#跨样本可靠性与人力资本投影" href="#跨样本可靠性与人力资本投影" id="toc-跨样本可靠性与人力资本投影">4.2 跨样本可靠性与人力资本投影</a></li>
-<li><a class="nav-link" data-scroll-target="#sec-rare-event-akm" href="#sec-rare-event-akm" id="toc-sec-rare-event-akm">4.3 Rare-event Outcome、Auditor FE 噪音与平均服务效应</a></li>
+<li><a class="nav-link" data-scroll-target="#sec-rare-event-akm" href="#sec-rare-event-akm" id="toc-sec-rare-event-akm">4.3 Rare-event Outcome、Auditor FE 噪声与平均服务效应</a></li>
 </ul></li>
 <li><a class="nav-link" data-scroll-target="#数据与估计程序记录" href="#数据与估计程序记录" id="toc-数据与估计程序记录">数据与估计程序记录</a></li>
 </ul>
@@ -260,7 +260,7 @@ Y_{it}&amp;=\alpha_i+\theta_{a(i,t)}+\lambda_t+X_{it}'\gamma+\varepsilon_{it},\\
 Y_{it}&amp;=\psi_{f(i,t)}+\theta_{a(i,t)}+\lambda_t+X_{it}'\gamma+\varepsilon_{it}.
 \end{aligned}
 \]</span></p>
-<p><span class="math inline">\(Y_{it}\)</span> 为标准无保留意见的审计失败，<span class="math inline">\(\alpha_i\)</span>、<span class="math inline">\(\psi_f\)</span>、<span class="math inline">\(\theta_a\)</span>、<span class="math inline">\(\lambda_t\)</span> 分别为客户、事务所、A1 和年份效应；<span class="math inline">\(X_{it}\)</span> 为上段列明的控制变量与缺失dummy。各模型、门槛使用各自有效样本并按客户聚类。图中呈现这些拟合成分的插件方差分解，协方差单列；不是三个模型共用一个因果参数，也不是个人能力的无误差排序。</p>
+<p><span class="math inline">\(Y_{it}\)</span> 为标准无保留意见的审计失败，<span class="math inline">\(\alpha_i\)</span>、<span class="math inline">\(\psi_f\)</span>、<span class="math inline">\(\theta_a\)</span>、<span class="math inline">\(\lambda_t\)</span> 分别为客户、事务所、A1 和年份效应；<span class="math inline">\(X_{it}\)</span> 为上段列明的控制变量与缺失dummy。各模型、门槛使用各自有效样本并按客户聚类。图中呈现这些拟合成分的插件方差分解，协方差单列；不是三个模型共用一个因果参数，也不意味着 auditor FE 已无误差地测量个人能力。</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img class="img-fluid figure-img" src="figures/akm_overview/akm_pairwise_threshold_any_failure_clean.png" style="width:100.0%"/></p>
@@ -326,7 +326,7 @@ Y_{it}&amp;=\psi_{f(i,t)}+\theta_{a(i,t)}+\lambda_t+X_{it}'\gamma+\varepsilon_{i
 </section>
 <section class="level2" id="auditor-fe-的增量解释力与测量可靠性诊断">
 <h2 class="anchored" data-anchor-id="auditor-fe-的增量解释力与测量可靠性诊断">4. Auditor FE 的增量解释力与测量可靠性诊断</h2>
-<p>虽然聚合方差分解显示审计师层面的异质性份额客观存在，但该方差贡献能否支撑个体层面的 auditor FE 测准与排序，需通过连通度、样本拆分及外生预测进行识别诊断。</p>
+<p>虽然聚合方差分解显示审计师层面的异质性份额客观存在，但该方差贡献能否支撑auditor FE 的估计精度与跨样本稳定性，需通过连通度、样本拆分及外生预测进行识别诊断。</p>
 <section class="level3" id="增量解释力与网络连通性支持">
 <h3 class="anchored" data-anchor-id="增量解释力与网络连通性支持">4.1 增量解释力与网络连通性支持</h3>
 <p>在嵌套模型中检验审计师固定效应 <span class="math inline">\(\alpha_a\)</span> 的增量解释力：</p>
@@ -490,46 +490,25 @@ AKM 两端组与中间组的七项描述性差异。LaTeX 源文件。 · TeX ·
 <p><span id="稀有失败个人排名与平均服务效应"></span></p>
 </section>
 <section class="level3" id="sec-rare-event-akm">
-<h3 class="anchored" data-anchor-id="sec-rare-event-akm">4.3 Rare-event Outcome、Auditor FE 噪音与平均服务效应</h3>
-<p><strong>严重失败稀少，不等于线性 AKM 的固定效应必然有偏；需要分别讨论系数、个人排名和方差分解。</strong> 审计师可能存在真实能力差异，但有限记录中的“零失败”不足以区分高质量、低风险客户和暂时没有暴露的问题。<a href="#ref-defond-zhang">DeFond 与 Zhang（2014）</a>指出，重述及监管执法是较直接的严重审计质量指标，但其稀有性降低检验效力，未观察到这类事件也不能反推高质量。我们因此保留综合失败、重述与违规作为 substantive audit outcomes，不为获得显著结果而替换指标。</p>
-<p><strong>线性系数：无偏性来自条件均值假设，而非结果是否连续。</strong> 将客户、审计师、年份与控制变量组成设计矩阵 <span class="math inline">\(D\)</span>，并在可识别的连通分量内施加归一化：</p>
+<h3 class="anchored" data-anchor-id="sec-rare-event-akm">4.3 Rare-event Outcome、Auditor FE 噪声与平均服务效应</h3>
+<p><strong>严重审计失败的稀有性，本身不意味着线性 AKM 估计存在系统性偏误，但会限制数据对 auditor FE 差异的识别能力。</strong> 这里需要区分三个问题：线性系数是否有偏、auditor FE 是否估计精确，以及使用估计出的固定效应进行方差分解时是否引入偏误。三者并不等价，不能由其中一个问题直接推断另外两个问题。</p>
+<p><strong>在线性 AKM 中，无偏性取决于条件均值假设，而不要求结果变量连续或服从正态分布。</strong> 将控制变量和各组固定效应的设计矩阵统一记为 <span class="math inline">\(Z\)</span>，模型可以写为：</p>
 <p><span class="math display">\[
-Y=D\beta+\varepsilon,\qquad
-\widehat\beta=\beta+(D'D)^{-1}D'\varepsilon.
+Y=Z\theta+\varepsilon.
 \]</span></p>
-<p>若线性条件均值设定正确、<span class="math inline">\(E(\varepsilon\mid D)=0\)</span>，且归一化后的 <span class="math inline">\(D\)</span> 满列秩，则 <span class="math inline">\(E(\widehat\beta\mid D)=\beta\)</span>。二元且稀有的 <span class="math inline">\(Y\)</span> 本身不破坏这一代数结果，但也不能保证外生性成立：客户风险影响匹配、遗漏的时变因素或失败被发现的机制，仍可能使系数难以解释为能力或服务效应。固定效应的精度还取决于网络连接及流动支持；<a href="#ref-jochmans-weidner">Jochmans 与 Weidner（2019）</a>提供了相应的网络固定效应推断框架。这里对 rare outcome 的判断是将线性估计性质应用于本项目，并非该文直接检验了中国审计失败。</p>
-<p><strong>个人排名：关键是有限记录能否分辨有经济意义的概率差异。</strong> 在独立、同概率的示意模型中，<span class="math inline">\(n_a\)</span> 份报告、失败概率 <span class="math inline">\(p_a\)</span> 对应</p>
+<p>在施加必要的固定效应归一化、保留可识别的参数后，若 <span class="math inline">\(Z\)</span> 满列秩，且满足 <span class="math inline">\(E[\varepsilon\mid Z]=0\)</span>，则：</p>
 <p><span class="math display">\[
-E(K_a)=n_ap_a,\qquad P(K_a=0)=(1-p_a)^{n_a},\qquad
-\operatorname{SE}(\bar Y_a)=\sqrt{\frac{p_a(1-p_a)}{n_a}}.
+\widehat{\theta}-\theta
+=(Z'Z)^{-1}Z'\varepsilon,
+\qquad
+E[\widehat{\theta}\mid Z]=\theta.
 \]</span></p>
-<p>例如，若 <span class="math inline">\(p_a=1\%\)</span>、<span class="math inline">\(n_a=50\)</span>，预期失败数只有 0.5，零失败概率约为 60.5%。这只是说明信息稀疏的计算，不是本项目估计的失败率，也不是 AKM 固定效应标准误公式。<span class="math inline">\(p_a\)</span> 变小时，样本均值的绝对标准误可以变小，但相对于 <span class="math inline">\(p_a\)</span> 的误差为 <span class="math inline">\(\sqrt{(1-p_a)/(n_ap_a)}\)</span>，可能很大。因此不能简单写成“失败越少，所有系数的方差必然越大”；匹配网络、报告间相关性与需要区分的真实差异都重要。</p>
-<p>已有前瞻检查中，获得分数的当期 A1 观测共 <strong>22,464 条，74.84% 对应的训练历史没有综合失败，训练报告数中位数为 12 份</strong>。这是按获得分数的当期观测加权的统计，<strong>不是独立审计师人数比例</strong>。新接任项目中，前瞻 AKM 分数的结果系数为 −0.00121（标准误 0.00466，p=0.795，N=2,641）；限制训练历史至少 20 份报告后，也未形成稳定的预测改善。这些事实与个人效应测量噪声较大的解释相容，但尚未确证“少数失败具体驱动了多少排名变化”，后者仍需逐事件删除或影响度检查。</p>
-<p><strong>方差分解：点估计无偏，不意味着其平方、方差及协方差无偏。</strong> 若 <span class="math inline">\(\widehat\beta=\beta+v\)</span> 且 <span class="math inline">\(E(v\mid D)=0\)</span>，则对给定矩阵 <span class="math inline">\(A\)</span>，</p>
-<p><span class="math display">\[
-E(\widehat\beta'A\widehat\beta\mid D)
-=\beta'A\beta+\operatorname{tr}\!\left[A\operatorname{Var}(\widehat\beta\mid D)\right].
-\]</span></p>
-<p>插件方差因此可能包含估计噪声；协方差偏误的方向取决于相应矩阵，不能统一断言向上。<a href="#ref-kss">Kline、Saggio 与 Sølvsten（2020）</a>针对允许异方差的多参数线性模型提出 leave-out 二次型估计。当前本章的方差份额仍是插件分解；更严格 cutoff 下排序稳定，是总体模式的敏感性证据，不能替代该类偏误修正，也不能证明每位审计师已被准确排序。实施 leave-out 前还需确认删去观测后的可识别性及与客户聚类相容的误差设定。</p>
-<p><strong>人力资本解释力：审计师 FE 作为因变量时，噪声不自动造成衰减偏误。</strong> 设真实效应满足 <span class="math inline">\(\alpha_a=H_a'\gamma+u_a\)</span>，估计分数为 <span class="math inline">\(\widehat\alpha_a=\alpha_a+\nu_a\)</span>。若 <span class="math inline">\(E(\nu_a\mid H_a)=0\)</span>，因变量中的测量误差不使 <span class="math inline">\(\gamma\)</span> 自动向零衰减，但会降低精度；在噪声还与真实效应不相关的理想条件下，观测分数的总体 <span class="math inline">\(R^2\)</span> 为</p>
-<p><span class="math display">\[
-R^2_{\widehat\alpha}
-=\frac{\operatorname{Var}(H'\gamma)}{\operatorname{Var}(\alpha)+\operatorname{Var}(\nu)},
-\]</span></p>
-<p>可能低于真实能力的可解释比例。因此，低人力资本 <span class="math inline">\(R^2\)</span> 不能直接证明能力主要来自不可观察因素。反过来，如果将带噪声的 FE 用作解释变量或分组门槛，则会出现另一类测量误差问题；与后续结果相关的非经典误差更不能用简单衰减公式概括。</p>
-<p><strong>非线性模型与后续工作。</strong> 改用含多组固定效应的 logit/probit 并不自动解决个人效应测量问题。非线性面板的附带参数偏误及其修正，见 <a href="#ref-hahn-newey">Hahn 与 Newey（2004）</a>、<a href="#ref-fernandez-weidner">Fernández-Val 与 Weidner（2016）</a>。对全部为零的组，无惩罚 logit 的对应截距还可能趋向负无穷；这些方法的适用条件不能直接从个体—时间面板移植到本项目的审计师—客户网络。</p>
-<p>下一步先检查独立审计师的报告数、0／1／至少 2 次失败分布、网络连接与单次失败影响度，再评估 leave-out 修正及固定真实匹配网络的模拟：设定已知的能力差异和人力资本解释力，检验当前流程能恢复多少。上述完整诊断尚未完成。与此同时，<a href="./24_auditor_quality.html#full-05_auditor_quality-4">五年轮换和候选池 IV</a>可继续寻找可信的分配变化；识别某类服务的平均影响不要求把每个人排准，但仍必须满足各自的识别条件，现有轮换和 IV 不能因此自动获得因果解释。</p>
-<section class="level4" id="sec-rare-event-references">
-<h4 class="anchored" data-anchor-id="sec-rare-event-references">参考文献与检索词</h4>
-<p>以下文献已核对作者、题目、年份及期刊。题目与作者组合可直接用于 Google Scholar 或 SSRN 检索。</p>
-<ul>
-<li><span id="ref-jochmans-weidner"></span>Koen Jochmans and Martin Weidner (2019). <strong>Fixed-Effect Regressions on Network Data.</strong> <em>Econometrica</em>, 87(5), 1543–1560. <a href="https://www.tse-fr.eu/articles/fixed-effect-regressions-network-data?lang=en">期刊信息</a> · <a href="https://arxiv.org/abs/1608.01532">作者稿</a>。检索词：<code>Jochmans Weidner 2019 Fixed-Effect Regressions on Network Data</code>。</li>
-<li><span id="ref-kss"></span>Patrick Kline, Raffaele Saggio, and Mikkel Sølvsten (2020). <strong>Leave-Out Estimation of Variance Components.</strong> <em>Econometrica</em>, 88(5), 1859–1898. <a href="https://eml.berkeley.edu/~pkline/papers/KSS2020.pdf">论文</a>。检索词：<code>Kline Saggio Solvsten 2020 Leave-Out Estimation of Variance Components</code>。</li>
-<li><span id="ref-defond-zhang"></span>Mark DeFond and Jieying Zhang (2014). <strong>A Review of Archival Auditing Research.</strong> <em>Journal of Accounting and Economics</em>, 58(2–3), 275–326. <a href="https://doi.org/10.1016/j.jacceco.2014.09.002">DOI</a> · <a href="https://www.dejongeaccountants.nl/wp-content/uploads/2014/09/1-s2.0-S0165410114000536-main.pdf">论文，第 2.3.1.1 节</a>。检索词：<code>DeFond Zhang 2014 A Review of Archival Auditing Research</code>。</li>
-<li><span id="ref-hahn-newey"></span>Jinyong Hahn and Whitney Newey (2004). <strong>Jackknife and Analytical Bias Reduction for Nonlinear Panel Models.</strong> <em>Econometrica</em>, 72(4), 1295–1319. <a href="https://doi.org/10.1111/j.1468-0262.2004.00533.x">期刊论文</a>。检索词：<code>Hahn Newey 2004 Jackknife Analytical Bias Reduction Nonlinear Panel Models</code>。</li>
-<li><span id="ref-fernandez-weidner"></span>Iván Fernández-Val and Martin Weidner (2016). <strong>Individual and Time Effects in Nonlinear Panel Models with Large N, T.</strong> <em>Journal of Econometrics</em>, 192(1), 291–312. <a href="https://discovery.ucl.ac.uk/id/eprint/1473260/">期刊信息与全文</a>。检索词：<code>Fernandez-Val Weidner 2016 Individual Time Effects Nonlinear Panel Models Large N T</code>。</li>
-</ul>
-</section>
+<p>这一推导不依赖 <span class="math inline">\(Y\)</span> 是连续变量还是二元变量，也不要求失败事件达到某一发生比例。因此，失败率低并不会自动使线性系数或 auditor FE 向某个方向系统性偏离真实参数。不过，这一结论以正确的条件均值设定为前提：如果审计师更替与未控制的客户风险变化相关，或者不同客户和审计师的失败被发现概率存在系统性差异，条件均值假设仍可能不成立。稀有性本身不构成偏误来源，也不能替代对匹配机制、遗漏变量和失败发现机制的检验。</p>
+<p><strong>无偏性并不意味着有限样本中的 auditor FE 足够精确。</strong> 审计师可能存在真实能力差异，但有限职业记录中的“零失败”，不足以区分较低的失败概率、较低的客户风险和暂时没有实现的失败事件。例如，在各次审计相互独立且失败概率固定的简化情形下，<span class="math inline">\(n\)</span> 份报告均未发生失败的概率为 <span class="math inline">\((1-p)^n\)</span>；当 <span class="math inline">\(p\)</span> 较低且 <span class="math inline">\(n\)</span> 有限时，不同失败概率的审计师都可能留下零失败记录。少量事件一旦出现，又可能明显改变估计出的 auditor FE。这里的困难是相对于待识别差异而言信息不足，而不是失败率越低，线性估计的绝对方差就必然越大。此外，客户—审计师—事务所网络中的连接和流动决定了不同固定效应能否被区分；单纯增加同一匹配关系下的观测，并不一定提供足够的识别信息。<a href="https://www.tse-fr.eu/articles/fixed-effect-regressions-network-data?lang=en">Jochmans 与 Weidner（2019）</a>讨论了网络结构对固定效应估计精度与推断的影响。</p>
+<p>在我们的数据中，获得前瞻 auditor FE 的当期 A1 观测共 <strong>22,464 条，其中 74.84% 对应的训练历史没有观察到综合失败，训练报告数中位数为 12 份</strong>。该比例按获得 FE 的当期观测计算，并非独立审计师人数比例。新接任项目中，前瞻 auditor FE 对结果变量的回归系数为 −0.00121（标准误 0.00466，p=0.795，N=2,641）；限制历史至少审计 20 份报告后，也未形成稳定的预测改善。这些结果与 auditor FE 测量噪声较大的解释相容，但尚不能单独证明预测不稳定完全由稀有事件造成。客户组合变化、服务效应随时间变化及失败发现时滞，也可能影响跨项目预测。</p>
+<p><strong>系数无偏也不意味着未经修正的方差分解无偏。</strong> 若估计出的 auditor FE 可以写为 <span class="math inline">\(\widehat{\psi}_a=\psi_a+u_a\)</span>，即使 <span class="math inline">\(u_a\)</span> 的条件期望为零，直接计算 <span class="math inline">\(\widehat{\psi}_a\)</span> 的离散程度，仍会混入估计误差的离散程度。因此，未经修正的 FE 方差不能全部解释为真实能力差异；不同组固定效应的估计误差还可能相关，影响协方差项及方差贡献比例。<a href="https://onlinelibrary.wiley.com/doi/full/10.3982/ECTA16410">Kline、Saggio 与 Sølvsten（2020）</a>提出的 leave-out 方法正是针对这类二次型估计问题。不同 cutoff 下方差分解的模式一致，可以支持结果对样本限制的稳定性，但不能据此认定估计噪声已被消除。</p>
+<p><strong>改用 logit/probit 可以改变概率模型的设定，却不能自动解决 auditor FE 的信息不足。</strong> 非线性模型将预测概率限制在 <span class="math inline">\([0,1]\)</span> 内，但不会增加实际观察到的失败事件。对于记录较短、结果全部为零的审计师，包含其固定效应的二元响应模型还可能出现分离，使相应 FE 趋向负无穷而没有有限的极大似然估计。与此同时，当每个固定效应所对应的观测有限时，大量固定效应的估计误差可能通过非线性似然传递到其他参数，产生附带参数偏误。<a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1468-0262.2004.00533.x">Hahn 与 Newey（2004）</a>及 <a href="https://discovery.ucl.ac.uk/id/eprint/1473260/">Fernández-Val 与 Weidner（2016）</a>讨论了非线性面板中的这一问题及其修正。因此，不能仅因为 <span class="math inline">\(Y\)</span> 是二元变量，就认为 logit/probit 必然比线性 AKM 更适合估计 auditor FE；相应偏误修正能否用于本研究的多组固定效应和稀疏匹配网络，也需要另行验证。</p>
+<p><strong>Auditor FE 的估计困难，不等于平均审计服务效应无法识别。</strong> 估计某类服务提供者的平均影响，不要求先准确估计每位审计师的固定效应。如果审计师轮换或分配变化能够提供可信的识别条件，仍可以直接检验不同服务提供者对审计结果的平均影响。稀有事件会限制这类检验的统计功效，但是否能够作出因果解释，主要取决于分配机制及相应识别假设，而不是能否将每个 auditor FE 估准。</p>
 </section>
 </section>
 <section class="level2" id="数据与估计程序记录">
