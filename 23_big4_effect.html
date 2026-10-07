@@ -279,17 +279,83 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="literature-feasible-baseline">1. 文献中现有数据可行的基础做法</h2>
 <p>本章用两套结果回答同一个问题：<strong>四大身份是否对应更可靠的财务报告，以及市场是否对其盈利消息赋予更高权重？</strong> 失败率衡量事后结果，ERC 衡量价格对消息的敏感度，两者并非必须同时显著才能构成有意义的证据；但任一结果也不能独自分开审计服务、客户选择与消息经济内容。特别是“调整后仍有差异”不等于已经识别不可观察选择，更不等于市场获得了审计师的私人筛选信息。</p>
 <p>文献中的基础路线是：先明确客户总体、结果变量与时点，比较客户特征和结果；再用控制或匹配调整可观察差异；随后以同一客户的变化及可解释的组织事件考察处理作用。市场部分直接估计连续盈利消息与审计师身份的交互，并区分消息斜率与固定消息下的水平差。分析师预测的准确度、分歧及信息更新是另外一类结果，不与公告 CAR 混用。</p>
-<p>下面每组相邻英文表分别列出 <strong>A：文献的数据与具体方法；B：我们已经实施的对应比较、定义差别及尚未完成的部分</strong>，使用相同论文编号和顺序。中文逐篇说明就在本节展开，包含完整作者、发表/工作稿版本、原文页码、正式来源及可复制检索词。文献并不提供一套可直接套用的“解决 selection”程序：匹配依赖共同支持与条件可交换性，DID 依赖适当趋势，IMR/IV 还需要额外的结构及排除限制。</p>
+<p>下面每组中文表分别列出 <strong>A：文献的数据与具体方法；B：我们已经实施的对应比较、定义差别及尚未完成的部分</strong>，使用相同论文编号和顺序。中文逐篇说明就在本节展开，包含完整作者、发表/工作稿版本、原文页码、正式来源及可复制检索词。文献并不提供一套可直接套用的“解决 selection”程序：匹配依赖共同支持与条件可交换性，DID 依赖适当趋势，IMR/IV 还需要额外的结构及排除限制。</p>
 <section class="level3" id="客户特征匹配与失败指标">
 <h3 class="anchored" data-anchor-id="客户特征匹配与失败指标">1.1 客户特征、匹配与失败指标</h3>
-<figure class="latex-table figure">
-<img alt="Literature Data and Methods: Selection 1 (A)" class="figure-img" loading="lazy" src="tables/literature_methods/selection_1_a.png" style="width:734px"/>
-<figcaption>Literature Data and Methods: Selection 1 (A)</figcaption>
-</figure>
-<figure class="latex-table figure">
-<img alt="Project Comparison: Selection 1 (B)" class="figure-img" loading="lazy" src="tables/literature_methods/selection_1_b.png" style="width:734px"/>
-<figcaption>Project Comparison: Selection 1 (B)</figcaption>
-</figure>
+<p><strong>A．文献的数据与方法</strong></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%"/>
+<col style="width: 25%"/>
+<col style="width: 25%"/>
+<col style="width: 25%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th>文献</th>
+<th>国家、资料与样本</th>
+<th>结果及测量时点</th>
+<th>选择处理、模型与推断</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>R04：Lawrence、Minutti-Meza、Zhang (2011)</td>
+<td>美国上市公司，1988—2006；Compustat、CRSP、I/B/E/S。异常应计分析：匹配前72,600公司年度，匹配后21,130条（10,565对）；其他结果各用自己的样本。</td>
+<td>业绩调整后的 modified Jones 异常应计绝对值、隐含权益资本成本、分析师预测准确度。应计调整减去同业同年中 ROA 最近客户的残差。</td>
+<td>四大选择 Logit：资产、周转率、流动性、杠杆、ROA、结果特定控制、行业/年份。非四大向四大1:1匹配，无放回，原始得分卡尺0.03。应计结果使用行业/年份固定效应，公司聚类。</td>
+</tr>
+<tr class="even">
+<td>R05：DeFond、Erkens、Zhang (2017)</td>
+<td>美国上市公司；复制1988—2006，并扩展2004—2013；Compustat、Audit Analytics。样本量随结果和设计变化，无统一N。</td>
+<td>绝对/正向异常应计、重大向下重述、困境客户的持续经营意见；同时比较平衡、保留样本与统计功效。</td>
+<td>比较1:1、1:2、1:3、有/无放回、非线性选择模型及0—30%得分标准差卡尺；各放回条件形成1,500个平衡设计。结果特定控制，公司聚类。原始距离0.03不同于0.2倍标准差。</td>
+</tr>
+<tr class="odd">
+<td>R06：Eshleman、Guo (2014)</td>
+<td>美国公众公司，2000—2009；Compustat、Audit Analytics。主保留样本37,488，匹配5,950；四大与 BDO/Grant Thornton 比较31,346，匹配3,248。</td>
+<td>审计财年后来重述、向下重述和 SEC 会计执法公告（AAER）；与异常应计代理不同。</td>
+<td>逐年审计师选择 Logit；非四大向四大在同年、两位 SIC 内有放回匹配，卡尺0.01。结果 Probit 加融资、治理、费用等控制及行业/年份固定效应；公司/年份双向聚类。</td>
+</tr>
+</tbody>
+</table>
+<p><strong>B．项目对应与差别</strong></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%"/>
+<col style="width: 25%"/>
+<col style="width: 25%"/>
+<col style="width: 25%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th>文献</th>
+<th>我们已实施的比较</th>
+<th>定义与设计差别</th>
+<th>当前状态及识别缺口</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>R04：Lawrence、Minutti-Meza、Zhang (2011)</td>
+<td>已估计五项/九项年度 PSM 及共同样本结果回归，比较当年四大与匹配非四大客户。</td>
+<td>本项目估计四大 ATET，有放回、无卡尺；行业/年份进入得分模型而非精确匹配。失败指标不同于原文三类代理。</td>
+<td>完成的是相关比较，未完全复现。匹配改变共同支持和比较总体；剩余差异不能量化不可观察选择。</td>
+</tr>
+<tr class="even">
+<td>R05：DeFond、Erkens、Zhang (2017)</td>
+<td>已估计获授权的五项/九项年度选择模型，记录平衡、对照复用和有效样本量。</td>
+<td>未搜索1,500种设计，也不按结果符号选规格。九项进入事件匹配是独立基线，不能用年度 PSM 替代。</td>
+<td>仅完成明确列出的设计比较。尾部不平衡和对照权重集中仍需解释；匹配成功不证明条件可交换性。</td>
+</tr>
+<tr class="odd">
+<td>R06：Eshleman、Guo (2014)</td>
+<td>已构造重述/违规结果并估计年度四大 PSM；三种重述定义与未预警联合事件分别报告。</td>
+<td>目前无精确同年同业限制或卡尺；AI 稳健标准误并非公司/年份聚类。违规不等于 SEC AAER，严格重述也更窄。</td>
+<td>有对应的失败结果证据；未完全复制原文样本、控制、事件定义和推断。</td>
+</tr>
+</tbody>
+</table>
 <details>
 <summary>
 R04：Lawrence, Minutti-Meza and Zhang (2011)｜中文逐篇说明、原文定位与检索词
@@ -345,14 +411,68 @@ R06：Eshleman and Guo (2014)｜中文逐篇说明、原文定位与检索词
 </section>
 <section class="level3" id="长期风险与事务所客户选择">
 <h3 class="anchored" data-anchor-id="长期风险与事务所客户选择">1.2 长期风险与事务所客户选择</h3>
-<figure class="latex-table figure">
-<img alt="Literature Data and Methods: Selection 2 (A)" class="figure-img" loading="lazy" src="tables/literature_methods/selection_2_a.png" style="width:734px"/>
-<figcaption>Literature Data and Methods: Selection 2 (A)</figcaption>
-</figure>
-<figure class="latex-table figure">
-<img alt="Project Comparison: Selection 2 (B)" class="figure-img" loading="lazy" src="tables/literature_methods/selection_2_b.png" style="width:734px"/>
-<figcaption>Project Comparison: Selection 2 (B)</figcaption>
-</figure>
+<p><strong>A．文献的数据与方法</strong></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%"/>
+<col style="width: 25%"/>
+<col style="width: 25%"/>
+<col style="width: 25%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th>文献</th>
+<th>国家、资料与样本</th>
+<th>结果及测量时点</th>
+<th>选择处理、模型与推断</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>R11：Lennox、Pittman (2010)</td>
+<td>美国上市公司，1981—2001；SEC AAER、LexisNexis，发现记录到2006年10月。508家舞弊公司、1,109个舞弊公司年度、162,804个非舞弊年度；各回归N不同。</td>
+<td>舞弊归属于发生年，而非发现年；另比较长期任期与事务所更换。</td>
+<td>舞弊 Probit，年份/公司效应，公司聚类。聘用 Big 5 的匹配与舞弊风险匹配不同；后者用最后一个非舞弊年度。卡尺/放回细节未核实。跨层换所仅46/11次。</td>
+</tr>
+<tr class="even">
+<td>R10：Johnstone、Bedard (2004)</td>
+<td>美国一家大型事务所的内部客户组合，含上市与私人客户，2000—2001；超过7,000家，精确总数保密。事务所终止43家、新接424家，排除375条缺失。</td>
+<td>事务所主动终止与留任、新客户接受与留任、终止与新接客户之间的比较。</td>
+<td>Logit 使用私有战略风险、财报风险、管理层诚信评分，以及公共财务、费用和行业变量。完整固定效应/标准误规则未核实，不能写成“没有”。</td>
+</tr>
+</tbody>
+</table>
+<p><strong>B．项目对应与差别</strong></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%"/>
+<col style="width: 25%"/>
+<col style="width: 25%"/>
+<col style="width: 25%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th>文献</th>
+<th>我们已实施的比较</th>
+<th>定义与设计差别</th>
+<th>当前状态及识别缺口</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>R11：Lennox、Pittman (2010)</td>
+<td>已有按涉及财年归属的失败、进入前轨迹、意见与客户流动证据。</td>
+<td>重述/违规比 SEC 舞弊更宽；稳定合格进入不同于原文舞弊风险匹配或全部换所。</td>
+<td>可对照事件时点与风险集；没有精确舞弊风险匹配或随机审计师分配。</td>
+</tr>
+<tr class="even">
+<td>R10：Johnstone、Bedard (2004)</td>
+<td>已有公共数据的相邻年度进入/退出、MAO/GC 回归及变更公告案例。</td>
+<td>退出四大不能辨明谁发起更换；公开公告不能恢复内部评分及完整接受/终止风险集。</td>
+<td>已估计选择相关关联；当前退出指标尚未识别事务所主动拒收或终止。</td>
+</tr>
+</tbody>
+</table>
 <details>
 <summary>
 R11：Lennox and Pittman (2010)｜中文逐篇说明、原文定位与检索词
@@ -389,14 +509,80 @@ R10：Johnstone and Bedard (2004)｜中文逐篇说明、原文定位与检索�
 </section>
 <section class="level3" id="中国审计前质量审计调整与制度环境">
 <h3 class="anchored" data-anchor-id="中国审计前质量审计调整与制度环境">1.3 中国：审计前质量、审计调整与制度环境</h3>
-<figure class="latex-table figure">
-<img alt="Literature Data and Methods: China 1 (A)" class="figure-img" loading="lazy" src="tables/literature_methods/china_1_a.png" style="width:734px"/>
-<figcaption>Literature Data and Methods: China 1 (A)</figcaption>
-</figure>
-<figure class="latex-table figure">
-<img alt="Project Comparison: China 1 (B)" class="figure-img" loading="lazy" src="tables/literature_methods/china_1_b.png" style="width:734px"/>
-<figcaption>Project Comparison: China 1 (B)</figcaption>
-</figure>
+<p><strong>A．文献的数据与方法</strong></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%"/>
+<col style="width: 25%"/>
+<col style="width: 25%"/>
+<col style="width: 25%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th>文献</th>
+<th>国家、资料与样本</th>
+<th>结果及测量时点</th>
+<th>选择处理、模型与推断</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>R09：Chen、Krishnan、Li、Zhang (2022)</td>
+<td>中国上市公司，2006—2011；CICPA 私有审计前后报表、CSMAR/Wind、审计师资料。初始10,466公司年度，保留6,323。</td>
+<td>审计前异常应计/ROE、审后有符号异常应计、后续财年重述、MAO、向下利润调整；调整额按 CFO/审前资产缩放。</td>
+<td>选择 Logit 加审前质量、财务、所有权、制度变量；结果模型加审前质量。熵平衡选择协变量均值；行业/年份固定效应、公司聚类、1%/99%缩尾。不是 PSM/IV。</td>
+</tr>
+<tr class="even">
+<td>C16：Lennox、Wu、Zhang (2016)</td>
+<td>中国上市公司，2006—2012；财政部私有审计前后利润/资产及 CSMAR CFO。主样本11,486，含205个金融公司年度；持续性样本8,569。</td>
+<td>配对审前/审后 ROA、平滑、持续性、应计质量；同一审后 CFO 分子分别按审前/审后资产缩放。</td>
+<td>在同一套报表内比较审前后性质；平滑要求至少四个连续年份。持续性斜率按公司聚类，非本项目九项控制的固定效应 DID。处理对象是审计调整，而非四大聘用。</td>
+</tr>
+<tr class="odd">
+<td>R12：Ke、Lennox、Xin (2015)</td>
+<td>中国四大上市客户，1995—2012；A/B/H 报告、CSMAR、CICPA。1,280公司年度：较弱环境910，独立 H 股审计师的 AH 较强环境370；各结果N不同。</td>
+<td>相对审计师经验、意见、对数费用、有符号异常营运资本/Jones 应计；在四大内部比较制度环境。</td>
+<td>AH 选择 Probit 含18项财务、所有权、复杂度协变量；最近得分距离小于0.01，331对，排除39个处理观测。公司聚类、1%/99%缩尾。工作稿的放回/精确匹配及全部结果固定效应未核实。</td>
+</tr>
+</tbody>
+</table>
+<p><strong>B．项目对应与差别</strong></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%"/>
+<col style="width: 25%"/>
+<col style="width: 25%"/>
+<col style="width: 25%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th>文献</th>
+<th>我们已实施的比较</th>
+<th>定义与设计差别</th>
+<th>当前状态及识别缺口</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>R09：Chen、Krishnan、Li、Zhang (2022)</td>
+<td>已有审后应计、意见、三种重述及共同样本嵌套回归。</td>
+<td>项目没有原文私有审前报表/调整；公共协变量不直接测量审前盈余质量。有符号应计也不同于绝对值。</td>
+<td>未声称完成私有审前后复现或熵平衡估计；剩余结果差异不证明没有不可观察选择。</td>
+</tr>
+<tr class="even">
+<td>C16：Lennox、Wu、Zhang (2016)</td>
+<td>已有审后 DA/CFO 及多种盈余质量指标，普通和匹配换所比较已经估计。</td>
+<td>缺少私有审前报表配对；更换事务所不同于测量本次审计已入账的调整。</td>
+<td>公共数据不能恢复这项直接审计前后比较；原文是测量参照，不是已完成的四大因果复现。</td>
+</tr>
+<tr class="odd">
+<td>R12：Ke、Lennox、Xin (2015)</td>
+<td>已有事务所类别、费用、意见、DA；官方审计师 ID 支持覆盖诊断。</td>
+<td>四大/非四大不同于四大内部 AH 与纯A/AB比较；独立 H 股审计师分类及相对经验排名未复现。</td>
+<td>没有精确制度环境匹配样本；正式2015书目已核实，方法细节按已指明工作稿登记。</td>
+</tr>
+</tbody>
+</table>
 <details>
 <summary>
 R09：Chen, Krishnan, Li and Zhang (2022)｜中文逐篇说明、原文定位与检索词
@@ -443,14 +629,80 @@ R12：Ke, Lennox and Xin (2015)｜中文逐篇说明、原文定位与检索词
 </section>
 <section class="level3" id="中国竞争所有权与监管背景">
 <h3 class="anchored" data-anchor-id="中国竞争所有权与监管背景">1.4 中国：竞争、所有权与监管背景</h3>
-<figure class="latex-table figure">
-<img alt="Literature Data and Methods: China 2 (A)" class="figure-img" loading="lazy" src="tables/literature_methods/china_2_a.png" style="width:734px"/>
-<figcaption>Literature Data and Methods: China 2 (A)</figcaption>
-</figure>
-<figure class="latex-table figure">
-<img alt="Project Comparison: China 2 (B)" class="figure-img" loading="lazy" src="tables/literature_methods/china_2_b.png" style="width:734px"/>
-<figcaption>Project Comparison: China 2 (B)</figcaption>
-</figure>
+<p><strong>A．文献的数据与方法</strong></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%"/>
+<col style="width: 25%"/>
+<col style="width: 25%"/>
+<col style="width: 25%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th>文献</th>
+<th>国家、资料与样本</th>
+<th>结果及测量时点</th>
+<th>选择处理、模型与推断</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>R19：Xin、Liu、Tang (2023)</td>
+<td>中国四大与本土 Big 6 上市客户，2003—2019；CSMAR/Wind/CICPA、手工费用。16,261公司年度、2,886公司；重述排除2019，N=14,401。</td>
+<td>境内审计费对数、客户 Z-score、后续重述、绝对业绩调整异常应计。竞争使用各事务所平均份额差，而非集团总份额。</td>
+<td>行业/年份/省份固定效应，公司聚类。本土 Big 6 合并 DID：前后各三年、排除事件年，N=8,970。仅t+1的合并 IV 用于费用/Z-score的竞争及四大交互，不是质量 IV。</td>
+</tr>
+<tr class="even">
+<td>R13：Wang、Wong、Xia (2008)</td>
+<td>中国纯A股，1993—2003；年报、证券报、CSMAR、手工所有权及 NERI 2000制度基准。5,759公司年度。</td>
+<td>选择“小型本地事务所”：按当年客户资产不在前十，且与客户同省；比较中央/地方国企及制度。</td>
+<td>Logit 含所有权/制度交互、财务、发行变量及行业/年份指示。主规格报告 Newey–West 一阶滞后；稳健性含年份聚类/Fama–MacBeth。转所表标准误尚未完整核实。</td>
+</tr>
+<tr class="odd">
+<td>R18：Lisic、Silveri、Song、Wang (2015)</td>
+<td>中国非金融上市公司，1999—2005；CSMAR监管舞弊、财务、审计资料。方法核读2013年10月工作稿，正式版逐表N未完整核验。</td>
+<td>按发生年归属的舞弊、严重性、收入舞弊；事务所按年度资产排名前十，并非四大或 Local 8。</td>
+<td>监管处罚背景下的舞弊模型，以及审计师选择/IMR扩展。完整第一阶段、各列固定效应/标准误和最终版本对应未核实，保留空缺。</td>
+</tr>
+</tbody>
+</table>
+<p><strong>B．项目对应与差别</strong></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%"/>
+<col style="width: 25%"/>
+<col style="width: 25%"/>
+<col style="width: 25%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th>文献</th>
+<th>我们已实施的比较</th>
+<th>定义与设计差别</th>
+<th>当前状态及识别缺口</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>R19：Xin、Liu、Tang (2023)</td>
+<td>已有费用、Z-score、DA、重述，以及普通四大换所和盈余质量比较。</td>
+<td>Local 8 不等于原文随时间变化的本土 Big 6；尚未实施省级竞争构造、合并设计或竞争 IV。</td>
+<td>原文识别的竞争处理不同。第一阶段F较强不验证排除限制，不能推为可用的四大聘用 IV。</td>
+</tr>
+<tr class="even">
+<td>R13：Wang、Wong、Xia (2008)</td>
+<td>已有较宽事务所类别、所有权字段；年度选择模型使用已授权财务控制。</td>
+<td>Other 不等于小型本地事务所，二元 SOE 不等于中央/地方所有权；需独立构造历史排名、省份和制度。</td>
+<td>提供审计师选择背景，不是四大处理结果；未复制精确历史选择模型。</td>
+</tr>
+<tr class="odd">
+<td>R18：Lisic、Silveri、Song、Wang (2015)</td>
+<td>已有发生年违规、严重/未预警失败代理及事务所组比较。</td>
+<td>事件标记和固定类别不同于原文舞弊分类及逐年前十；尚未实施 IMR。</td>
+<td>作为中国监管背景；工作稿不改称正式表证据，也不提供外生审计师选择工具。</td>
+</tr>
+</tbody>
+</table>
 <details>
 <summary>
 R19：Xin, Liu and Tang (2023)｜中文逐篇说明、原文定位与检索词
@@ -494,14 +746,68 @@ R18：Lisic, Silveri, Song and Wang (2015)｜中文逐篇说明、原文定位�
 </section>
 <section class="level3" id="组织变化与同一客户的处理比较">
 <h3 class="anchored" data-anchor-id="组织变化与同一客户的处理比较">1.5 组织变化与同一客户的处理比较</h3>
-<figure class="latex-table figure">
-<img alt="Literature Data and Methods: Quasi (A)" class="figure-img" loading="lazy" src="tables/literature_methods/quasi_a.png" style="width:734px"/>
-<figcaption>Literature Data and Methods: Quasi (A)</figcaption>
-</figure>
-<figure class="latex-table figure">
-<img alt="Project Comparison: Quasi (B)" class="figure-img" loading="lazy" src="tables/literature_methods/quasi_b.png" style="width:734px"/>
-<figcaption>Project Comparison: Quasi (B)</figcaption>
-</figure>
+<p><strong>A．文献的数据与方法</strong></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%"/>
+<col style="width: 25%"/>
+<col style="width: 25%"/>
+<col style="width: 25%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th>文献</th>
+<th>国家、资料与样本</th>
+<th>结果及测量时点</th>
+<th>选择处理、模型与推断</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>R07：Jiang、Wang、Wang (2019)</td>
+<td>美国公众客户，20次 Big N 收购非 Big N（1976—1995），331家处理客户；会计窗口1974—2000。收购名录与公开财务，不是主动换所。</td>
+<td>收购前后 DA 与报表偏差；年度盈余 ERC、收购公告 CAR 是另两套设计。ERC样本8,749公司年度。</td>
+<td>质量 DID：前后各五年、排除事件年，公司/年份固定效应、公司聚类；前五年得分1:5无放回匹配。收购 IV 只用于质量，不用于 ERC。ERC附录列年份及消息×年份效应，未列公司效应，标准误未说明。</td>
+</tr>
+<tr class="even">
+<td>R08：Che、Hope、Langli (2020)</td>
+<td>挪威私人有限责任公司，2004—2012；合伙人迁移2005—2012。税务/监管ID、Experian/Eniro/BI财务和付款违约。68名可用迁移合伙人、31,418客户年度。</td>
+<td>持续经营准确性、年报后12个月违约、意见、负的业绩调整应计绝对值、费用；各结果N不同。</td>
+<td>同客户—合伙人跨入四大。年份/行业/合伙人固定效应，非客户效应；OLS/Logit公司聚类、15项风险/复杂度控制。匹配 DID 最近邻、无放回，卡尺0.2量纲未充分核实；另有非四大迁移/安慰剂。</td>
+</tr>
+</tbody>
+</table>
+<p><strong>B．项目对应与差别</strong></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%"/>
+<col style="width: 25%"/>
+<col style="width: 25%"/>
+<col style="width: 25%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th>文献</th>
+<th>我们已实施的比较</th>
+<th>定义与设计差别</th>
+<th>当前状态及识别缺口</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>R07：Jiang、Wang、Wang (2019)</td>
+<td>已有普通换入/换出 DID、九项进入前匹配 DID；组织事件覆盖目前为描述诊断。</td>
+<td>普通采用不等于继承收购处理；没有实施收购工具或 Hou 模型预测。不能把质量模型的固定效应/标准误套给 ERC 附录。</td>
+<td>作为准实验比较基准，非项目已完成识别策略；接受稿中的样本计数不一致保留说明。</td>
+</tr>
+<tr class="even">
+<td>R08：Che、Hope、Langli (2020)</td>
+<td>已检查客户—审计师ID连续覆盖：37次四大进入至少保留一名已验证签字人；未新估计平台效应。</td>
+<td>中国上市客户及两名签字人与挪威私人客户—合伙人不同；同ID保留未解决覆盖、存续及同期客户变化。</td>
+<td>仅完成可行性诊断；不能提升为已估计的 Che 式处理效应，也不由此新增人员机制方案。</td>
+</tr>
+</tbody>
+</table>
 <details>
 <summary>
 R07：Jiang, Wang and Wang (2019)｜中文逐篇说明、原文定位与检索词
@@ -556,14 +862,68 @@ R08：Che, Hope and Langli (2020)｜中文逐篇说明、原文定位与检索�
 </section>
 <section class="level3" id="选择模型与工具变量的适用条件">
 <h3 class="anchored" data-anchor-id="选择模型与工具变量的适用条件">1.6 选择模型与工具变量的适用条件</h3>
-<figure class="latex-table figure">
-<img alt="Literature Data and Methods: Identification (A)" class="figure-img" loading="lazy" src="tables/literature_methods/identification_a.png" style="width:734px"/>
-<figcaption>Literature Data and Methods: Identification (A)</figcaption>
-</figure>
-<figure class="latex-table figure">
-<img alt="Project Comparison: Identification (B)" class="figure-img" loading="lazy" src="tables/literature_methods/identification_b.png" style="width:734px"/>
-<figcaption>Project Comparison: Identification (B)</figcaption>
-</figure>
+<p><strong>A．文献的数据与方法</strong></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%"/>
+<col style="width: 25%"/>
+<col style="width: 25%"/>
+<col style="width: 25%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th>文献</th>
+<th>国家、资料与样本</th>
+<th>结果及测量时点</th>
+<th>选择处理、模型与推断</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>R14：Larcker、Rusticus (2010)</td>
+<td>工具变量方法分析；细节核读2004年11月工作稿，正式2010书目已核实。没有独立四大客户国家样本或项目N。</td>
+<td>在工具强度、内生性、排除限制不完全成立时，比较 IV 与 OLS 的偏差、方差和可靠性。</td>
+<td>第一阶段强度/偏R²与排除有效性不同；弱工具或轻微内生工具可使估计更不可靠。不是通用中国审计师工具来源。</td>
+</tr>
+<tr class="even">
+<td>R15：Lennox、Francis、Wang (2012)</td>
+<td>选择模型的方法综述，含75项会计研究；不是独立四大客户总体。</td>
+<td>区分样本选择（只在入选者中观测结果）与内生处理（两类审计师客户均观测结果）。</td>
+<td>需要排除限制、分布/函数形式假设及敏感性分析。单侧 IMR 不自动适用于全样本四大/非四大处理比较；IMR显著不证明因果。</td>
+</tr>
+</tbody>
+</table>
+<p><strong>B．项目对应与差别</strong></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%"/>
+<col style="width: 25%"/>
+<col style="width: 25%"/>
+<col style="width: 25%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th>文献</th>
+<th>我们已实施的比较</th>
+<th>定义与设计差别</th>
+<th>当前状态及识别缺口</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>R14：Larcker、Rusticus (2010)</td>
+<td>本章没有已验证的四大选择 IV；供给/收购覆盖属于独立描述工作。</td>
+<td>分所、合并或市场份额可能直接影响结果；第一阶段非零不证明排除限制。</td>
+<td>仅用于适用条件约束；不新增 IV 模型或工具。</td>
+</tr>
+<tr class="even">
+<td>R15：Lennox、Francis、Wang (2012)</td>
+<td>两类客户均观测失败结果；控制、PSM、DID是明确比较，不是 Heckman 修正。</td>
+<td>两组结果均可见的审计师选择，不只是结果缺失的样本选择；目前没有已辩护的排除条件或核实的 IMR 实施。</td>
+<td>用于解释边界；未新估计选择模型，也不称其已经解决识别缺口。</td>
+</tr>
+</tbody>
+</table>
 <details>
 <summary>
 R14：Larcker and Rusticus (2010)｜中文逐篇说明、原文定位与检索词
@@ -599,14 +959,80 @@ R15：Lennox, Francis and Wang (2012)｜中文逐篇说明、原文定位与检�
 </section>
 <section class="level3" id="连续盈利消息与市场反应">
 <h3 class="anchored" data-anchor-id="连续盈利消息与市场反应">1.7 连续盈利消息与市场反应</h3>
-<figure class="latex-table figure">
-<img alt="Literature Data and Methods: Erc (A)" class="figure-img" loading="lazy" src="tables/literature_methods/erc_a.png" style="width:734px"/>
-<figcaption>Literature Data and Methods: Erc (A)</figcaption>
-</figure>
-<figure class="latex-table figure">
-<img alt="Project Comparison: Erc (B)" class="figure-img" loading="lazy" src="tables/literature_methods/erc_b.png" style="width:734px"/>
-<figcaption>Project Comparison: Erc (B)</figcaption>
-</figure>
+<p><strong>A．文献的数据与方法</strong></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%"/>
+<col style="width: 25%"/>
+<col style="width: 25%"/>
+<col style="width: 25%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th>文献</th>
+<th>国家、资料与样本</th>
+<th>结果及测量时点</th>
+<th>选择处理、模型与推断</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>R01：Teoh、Wong (1993)</td>
+<td>美国 NYSE/AMEX/NASDAQ，1980—1989；Compustat/CRSP/I/B/E/S。行业—资产匹配1,282公司年度对，控制缺失前潜在2,564条；换所134事件。</td>
+<td>意外 EPS 按预测日股价缩放；从预测日到公告日累积对数市场调整收益，窗口长度可变；CAR2用预测日前市场模型。</td>
+<td>非 Big 8 向 Big 8 同财年/SIC、最近资产匹配。合并 ERC 含消息与中位数二分 MB、beta、对数规模、分析师人数倒数的交互。无公司/年份固定效应；匹配 CAR1 用 White，其余 OLS t，未报告公司聚类。</td>
+</tr>
+<tr class="even">
+<td>R03：Du、Zhou (2014)</td>
+<td>中国 CSMAR：正文1995—2012、表从1996起；20,662公司年度，其中 Big 5 1,285。美国1983—2012，38,206；不能混用中美N。</td>
+<td>中国意外盈余用盈余变动；正文以股价、变量表以账面权益为分母，存在不一致。三日 CAR；市场模型印刷符号也不一致。</td>
+<td>年份/行业固定效应，非公司效应；稳健t未确认公司聚类。完整/简化 ERC 交互；选择 Logit+IMR中国N=10,139，不是2SLS或共同样本修正比较；IMR公式未完整说明。</td>
+</tr>
+<tr class="odd">
+<td>R25：Francis、Ke (2006)</td>
+<td>美国2001年首次非审计服务费披露；1999—2002季度公告，各披露日前后一年。EDGAR/费用、I/B/E/S、Compustat/CRSP。3,133公司、16,910公司季度；Cook筛后主N=16,243。</td>
+<td>[-1,+1] CAR 相对规模十分位基准，乘100；实际季度EPS减一致预测、按股价缩放。高 NAS 同时要求金额高及费用份额高。</td>
+<td>披露后×消息×高NAS的ERC比较；盈余/风险/规模/行业斜率控制，公司聚类。无公司固定效应、普通PSM或IV。首次费用披露与季度盈余日期不同。</td>
+</tr>
+</tbody>
+</table>
+<p><strong>B．项目对应与差别</strong></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%"/>
+<col style="width: 25%"/>
+<col style="width: 25%"/>
+<col style="width: 25%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th>文献</th>
+<th>我们已实施的比较</th>
+<th>定义与设计差别</th>
+<th>当前状态及识别缺口</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>R01：Teoh、Wong (1993)</td>
+<td>已估计年度 CAR 和日度路径的连续消息×事务所交互，报告非线性斜率与固定消息差。</td>
+<td>消息按预测值缩放、固定公告窗及A股市场基准均不同；未精确复制行业—资产匹配、二分控制或换所 ERC。</td>
+<td>已实施相关 ERC 比较；斜率差不能独自分开现金流消息、可信度与时变客户选择。</td>
+</tr>
+<tr class="even">
+<td>R03：Du、Zhou (2014)</td>
+<td>已有四大/本土八大/Other的预测消息交互、多种 CAR 窗口及公开信息检查。</td>
+<td>消息分母、审计师历史、市场权重、窗口、协变量不同；固定三分类并非历史 Big 5。</td>
+<td>作为中国 ERC 对照，保留原文定义疑点；不能由该文证明本项目的因果品牌效应。</td>
+</tr>
+<tr class="odd">
+<td>R25：Francis、Ke (2006)</td>
+<td>已有公告 CAR 与连续消息—类别交互，图区分斜率与水平差。</td>
+<td>没有首次 NAS 披露季度面板或费用份额处理；年度事务所类别差异不是 NAS 披露效应。</td>
+<td>仅比较消息交互结构；未复制披露冲击和原文配对稳健性。</td>
+</tr>
+</tbody>
+</table>
 <details>
 <summary>
 R01：Teoh and Wong (1993)｜中文逐篇说明、原文定位与检索词
@@ -721,14 +1147,80 @@ R25：Francis and Ke (2006)｜中文逐篇说明、原文定位与检索词
 <section class="level3" id="分析师预测与公告前后信息环境">
 <h3 class="anchored" data-anchor-id="分析师预测与公告前后信息环境">1.8 分析师预测与公告前后信息环境</h3>
 <p>预测误差、预测分歧与 BKLS 信息性质回答不同问题。现有公告前后更新结果已经估计，但我们的 broker 配对、原始单位与控制规格不同于 He 等的行业—年排名模型；不能称为其完整复现。</p>
-<figure class="latex-table figure">
-<img alt="Forecast Information Environment: Literature Data and Methods (A)" class="figure-img" loading="lazy" src="tables/literature_methods/forecast_information_methods_a.png" style="width:734px"/>
-<figcaption>Forecast Information Environment: Literature Data and Methods (A)</figcaption>
-</figure>
-<figure class="latex-table figure">
-<img alt="Forecast Information Environment: Project Implementation and Gaps (B)" class="figure-img" loading="lazy" src="tables/literature_methods/forecast_information_methods_b.png" style="width:734px"/>
-<figcaption>Forecast Information Environment: Project Implementation and Gaps (B)</figcaption>
-</figure>
+<p><strong>A．文献的数据与方法</strong></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%"/>
+<col style="width: 25%"/>
+<col style="width: 25%"/>
+<col style="width: 25%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th>文献</th>
+<th>国家、资料与样本</th>
+<th>结果及测量时点</th>
+<th>选择处理、模型与推断</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>F1：Behn、Choi、Kang（2008；R02）</td>
+<td>美国有分析师覆盖的上市公司；I/B/E/S、Compustat，1996—2001。准确度9,261公司年度；分歧3,749。未来EPS扩展用到2003，非主审计样本延长。</td>
+<td>准确度为实际EPS减平均预测的绝对误差取负，再除上一财年末股价；分歧为预测标准差除同一股价。公告前约两个月至前三日，各分析师最新预测；分歧至少4人。</td>
+<td>Big 5及按客户资产平方根计算的所内行业集中度。结果回归+Big 5选择Probit/IMR；选择含规模、资产构成、杠杆、亏损、ROA、债务发行。年份指示、公司聚类稳健标准误；不同结果控制不同。无已核实PSM/CEM；IMR依赖假设，未表列换所比较不是现代DID。</td>
+</tr>
+<tr class="even">
+<td>F2：Barron、Kim、Lim、Stevens（1998）</td>
+<td>分析师预测的测量模型；没有独立国家/年份/实证N，也没有审计师处理或客户总体。</td>
+<td>用预测方差D、一致预测平方误差SE和人数N：<span class="math inline">\(V=SE+(1-1/N)D\)</span>，<span class="math inline">\(C=SE-D/N\)</span>，<span class="math inline">\(\rho=C/V\)</span>；等私人精度下<span class="math inline">\(h=C/V^2\)</span>、<span class="math inline">\(s=D/V^2\)</span>。</td>
+<td>用共同/私人信号假设连接预测矩和信息性质，“私人”不等于内幕信息。没有结果回归固定效应、标准误、匹配或DID/IV。偏差、从众及逐公司年度代入误差影响解释，负h不符合精度含义。</td>
+</tr>
+<tr class="odd">
+<td>F3：He、Sidhu、Taylor（2019）</td>
+<td>美国上市公司，1985—2015；I/B/E/S未调整明细、Compustat。主样本25,111公司年度、5,353公司；SOX扩展为1998—2007美国/非美国上市公司，N=13,546。</td>
+<td>年t公告前60/后30日，对同一t+1目标的BKLS性质变化，至少2位更新分析师。D/SE按下一年实际EPS绝对值缩放；排除绝对EPS&lt;0.10美元和负h。</td>
+<td>Big N与4种行业份额/领先代理；Probit/IMR、最近得分PSM、autocuts CEM、公司效应检查。主变量在行业—年内排名，非吸收该效应；消息、规模、MB、覆盖控制，公司/年份双向聚类。PSM卡尺/放回/匹配N未披露于已核读稿；SOX处理是监管暴露，非四大聘用。</td>
+</tr>
+</tbody>
+</table>
+<p><strong>B．项目对应与差别</strong></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%"/>
+<col style="width: 25%"/>
+<col style="width: 25%"/>
+<col style="width: 25%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th>文献</th>
+<th>我们已实施的比较</th>
+<th>定义与设计差别</th>
+<th>当前状态及识别缺口</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>F1：Behn、Choi、Kang（2008；R02）</td>
+<td>已有 CSMAR 预测、实际EPS、披露日期、价格和事务所类别；公告前后配对更新已估计，设计不同。</td>
+<td>项目配对同broker，前60/后30日，固定下一年盈余；原文是公告前准确度/分歧、个体分析师、上年末股价分母及4人限制。</td>
+<td>精确原文窗口/结果、行业集中度与完整Probit/IMR尚未核实为已完成；字段可得不等于已经实施，不能自动复现美国定义。</td>
+</tr>
+<tr class="even">
+<td>F2：Barron、Kim、Lim、Stevens（1998）</td>
+<td>已用相同broker构造<span class="math inline">\(\rho,h,s\)</span>及公告后减公告前变化；早期样本4,183公司年度、1,733公司、2007—2023，至少2个共同broker；有数值一致性检查。</td>
+<td>broker不等于独立个体分析师；实现矩替代期望矩，EPS缩放改变h/s单位但不改变<span class="math inline">\(\rho\)</span>。排除负实际EPS，未用0.10美元阈值或缩尾。</td>
+<td>测量已实施，但潜在精度未直接观测；broker依赖、EPS修订/拆股及未来实际盈余缺失约束解释。不是四大处理识别。</td>
+</tr>
+<tr class="odd">
+<td>F3：He、Sidhu、Taylor（2019）</td>
+<td>已配对同broker，前60/后30日、固定t+1，前最后/后最早、排除公告日。控制回归N=4,170，无额外固定效应；绝对surprise、对数市值、MB、预测数控制，公司/年份双向聚类，自由度16。</td>
+<td>保留原始单位而非行业—年排名；broker代替分析师，原文后期选序未核实。四大/Local 8/Other代替5种代理；当前绝对消息与收益研究有符号消息不同。</td>
+<td>已估计四大−Other：<span class="math inline">\(\Delta\rho=0.014621\)</span>（SE=0.007698，p=0.0757）；<span class="math inline">\(\Delta h=21.576\)</span>（p=0.6477）；<span class="math inline">\(\Delta s=94.638\)</span>（p=0.1400）。并非三项显著改善。精确排名、PSM/CEM/IMR及SOX设计未完成复现。</td>
+</tr>
+</tbody>
+</table>
 <details>
 <summary>
 F1：Behn, Choi and Kang (2008；与 R02 为同一论文)｜中文逐篇说明、原文定位与检索词
