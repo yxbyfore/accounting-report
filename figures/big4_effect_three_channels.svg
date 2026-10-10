@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="690" viewBox="0 0 1500 690" role="img" aria-labelledby="title desc">
+<title id="title">Big4 effect：Treatment effect 与客户筛选信号</title>
+<desc id="desc">大括号把审计服务与声誉认证归为 Treatment effect。客户选择单独分为可观察和不可观察，后者通过向市场传递未知质量形成筛选信号。</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 Z" fill="#54718a"/></marker></defs>
+<style>text{font-family:'Microsoft YaHei','Noto Sans CJK SC',sans-serif;font-size:24px;fill:#17324d} .box{fill:#e8f0f8;stroke:#547a9b;stroke-width:2} .selection{fill:#fff3dc;stroke:#b58b3a;stroke-width:2} .outcome{fill:#eaf3eb;stroke:#62836a;stroke-width:2} .edge{fill:none;stroke:#54718a;stroke-width:2.5;marker-end:url(#arrow)} .small{font-size:21px}</style>
+<rect width="1500" height="690" fill="white"/>
+<path class="edge" d="M230 335 H255 V165 H390"/>
+<path class="edge" d="M230 335 H255 V470 H450"/>
+<path class="edge" d="M770 105 H1130"/><path class="edge" d="M770 245 H1130"/>
+<path class="edge" d="M730 470 H750 V420 H800"/><path class="edge" d="M730 470 H750 V570 H800"/>
+<path class="edge" d="M1080 420 H1130"/><path class="edge" d="M1080 570 H1130"/>
+<path class="edge" d="M1440 570 H1470 V245 H1440"/>
+<rect x="20" y="290" width="210" height="90" rx="12" fill="#17324d"/><text x="125" y="329" text-anchor="middle" style="fill:white">Big4 effect</text><text x="125" y="360" text-anchor="middle" style="fill:white;font-size:22px">四大的积极作用</text>
+<text x="325" y="135" text-anchor="middle" style="font-size:23px;font-weight:bold">Treatment</text><text x="325" y="164" text-anchor="middle" style="font-size:23px;font-weight:bold">effect</text>
+<!-- A spanning curly brace groups channels 1 and 2. -->
+<path d="M440 55 C420 55 420 65 420 100 L420 135 C420 155 410 165 397 165 C410 165 420 175 420 195 L420 230 C420 265 420 280 440 280" fill="none" stroke="#17324d" stroke-width="3.5"/>
+<rect class="box" x="450" y="60" width="320" height="90" rx="10"/><text x="610" y="114" text-anchor="middle">① 审计服务</text>
+<rect class="box" x="450" y="200" width="320" height="90" rx="10"/><text x="610" y="254" text-anchor="middle">② 声誉认证</text>
+<rect class="outcome" x="1130" y="60" width="310" height="90" rx="10"/><text x="1285" y="100" text-anchor="middle">提高财报质量</text><text class="small" x="1285" y="131" text-anchor="middle">Audit outcome</text>
+<rect class="outcome" x="1130" y="200" width="310" height="90" rx="10"/><text x="1285" y="240" text-anchor="middle">增强信任与市场反应</text><text class="small" x="1285" y="271" text-anchor="middle">Market reaction</text>
+<rect class="selection" x="450" y="425" width="280" height="90" rx="10"/><text x="590" y="465" text-anchor="middle">客户选择</text><text class="small" x="590" y="496" text-anchor="middle">Selection</text>
+<rect class="selection" x="800" y="375" width="280" height="90" rx="10"/><text x="940" y="415" text-anchor="middle">可观察客户差异</text><text class="small" x="940" y="446" text-anchor="middle">Select on observables</text>
+<rect class="selection" x="800" y="525" width="280" height="90" rx="10"/><text x="940" y="565" text-anchor="middle">不可观察客户质量</text><text class="small" x="940" y="596" text-anchor="middle">Select on unobservables</text>
+<rect class="outcome" x="1130" y="375" width="310" height="90" rx="10"/><text x="1285" y="429" text-anchor="middle">调整可观察客户差异</text>
+<rect class="selection" x="1130" y="515" width="310" height="110" rx="10"/><text x="1285" y="550" text-anchor="middle">③ 筛选信号 Signaling</text><text class="small" x="1285" y="580" text-anchor="middle">四大身份传递市场未知的</text><text class="small" x="1285" y="610" text-anchor="middle">良好客户质量信息</text>
+</svg>
