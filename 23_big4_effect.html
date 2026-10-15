@@ -3565,7 +3565,7 @@ Y_{it}=\text{firm FE}+\text{industry}\times\text{year FE}+\tau DID_{it}+\gamma'X
 </section>
 <section class="level3" id="supplychain-big4-iv">
 <h3 class="anchored" data-anchor-id="supplychain-big4-iv">2.5 补充识别：供应链网络冲击 IV</h3>
-<p>本节分别使用供应商转入四大和客户或供应商转入四大的网络冲击，预测本企业四大采用。第一阶段系数为0.0129与0.0048，Kleibergen–Paap弱工具统计量（KP F）分别为4.52和0.97，工具相关性偏弱；约化式重述下降较明确，2SLS则很不精确。</p>
+<p>本节分别使用供应商转入四大和客户或供应商转入四大的网络冲击，预测本企业四大采用。第一阶段系数为0.0129与0.0048，Kleibergen–Paap弱工具统计量（KP F）分别为4.52和0.97，工具相关性偏弱；reduce form重述下降较明确，2SLS则很不精确。</p>
 <section class="level4" id="网络事件x与y">
 <h4 class="anchored" data-anchor-id="网络事件x与y">网络事件、X与Y</h4>
 <p>网络关系剔除招投标来源。冲击事件为已匹配的供应商或客户从Other、本土八大实际转入四大；事件年由对手方换所确定，与本企业当年四大身份分别构造。</p>
@@ -3576,7 +3576,7 @@ Y_{it}=\text{firm FE}+\text{industry}\times\text{year FE}+\tau DID_{it}+\gamma'X
 <section class="level4" id="估计与样本">
 <h4 class="anchored" data-anchor-id="估计与样本">估计与样本</h4>
 <p>有网络事件的企业保留冲击前五年（−5至−1）与当年起六个年份（0至5）；无网络事件的企业保留原共同资格样本年份。不要求每家企业都有完整前后十一年的平衡观测。</p>
-<p>第一阶段、约化式与二阶段分别估计网络冲击对采用、对审计结果，以及网络冲击所预测的四大采用与审计结果的关系：</p>
+<p>第一阶段、reduce form与二阶段分别估计网络冲击对采用、对审计结果，以及网络冲击所预测的四大采用与审计结果的关系：</p>
 <p><span class="math display">\[
 \begin{aligned}
 Big4_{it} &amp;= \pi_k Z_{it}^{k}+C_{it}'\gamma_k+\text{firm FE}+\text{industry × year FE}+u_{it},\\
@@ -3585,8 +3585,8 @@ Y_{it} &amp;= \beta_k Big4_{it}+C_{it}'\theta_k+\text{firm FE}+\text{industry ×
 \qquad Big4_{it}\text{以 } Z_{it}^{k}\text{为工具}.
 \end{aligned}
 \]</span></p>
-<p><span class="math inline">\(\pi_k\)</span> 是第一阶段，<span class="math inline">\(\rho_k\)</span> 是约化式，<span class="math inline">\(\beta_k\)</span> 是2SLS。<span class="math inline">\(C_{it}\)</span> 包含规模、杠杆、亏损、ROA、Z-score、杠杆变化、报告滞后、经营现金流及企业年龄和各自<code>mis_dummy</code>；<span class="math inline">\(\text{firm FE}\)</span> 为企业固定效应，<span class="math inline">\(\text{industry × year FE}\)</span> 为行业×年份固定效应。标准误按企业聚类。完全共线的控制项按第一阶段保留的列空间省略，其他研究口径不变。</p>
-<p>每组内部第一阶段、约化式、OLS和2SLS共用完全相同的样本。在单工具、同样本和同控制列空间下，<span class="math inline">\(\hat\beta_k=\hat\rho_k/\hat\pi_k\)</span>。组间的事件年份、处理组及窗口筛选不同，采用各自的事件时点及有效样本。</p>
+<p><span class="math inline">\(\pi_k\)</span> 是第一阶段，<span class="math inline">\(\rho_k\)</span> 是reduce form，<span class="math inline">\(\beta_k\)</span> 是2SLS。<span class="math inline">\(C_{it}\)</span> 包含规模、杠杆、亏损、ROA、Z-score、杠杆变化、报告滞后、经营现金流及企业年龄和各自<code>mis_dummy</code>；<span class="math inline">\(\text{firm FE}\)</span> 为企业固定效应，<span class="math inline">\(\text{industry × year FE}\)</span> 为行业×年份固定效应。标准误按企业聚类。完全共线的控制项按第一阶段保留的列空间省略，其他研究口径不变。</p>
+<p>每组内部第一阶段、reduce form、OLS和2SLS共用完全相同的样本。在单工具、同样本和同控制列空间下，<span class="math inline">\(\hat\beta_k=\hat\rho_k/\hat\pi_k\)</span>。组间的事件年份、处理组及窗口筛选不同，采用各自的事件时点及有效样本。</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 13%"/>
@@ -3638,8 +3638,8 @@ Y_{it} &amp;= \beta_k Big4_{it}+C_{it}'\theta_k+\text{firm FE}+\text{industry ×
 </div>
 <p>仅供应商组第一阶段在5%水平显著，但KP F为4.515；并集组KP F为0.970。两组均存在弱工具问题，尤其并集组。</p>
 </section>
-<section class="level4" id="约化式与2sls三个年度审计结果">
-<h4 class="anchored" data-anchor-id="约化式与2sls三个年度审计结果">约化式与2SLS：三个年度审计结果</h4>
+<section class="level4" id="reduce-form与2sls三个年度审计结果">
+<h4 class="anchored" data-anchor-id="reduce-form与2sls三个年度审计结果">reduce form与2SLS：三个年度审计结果</h4>
 <p>下表系数及SE均为原始0/1单位；仅供应商组共63,857个公司年度、5,625家企业，并集组共57,996个企业年、5,622家企业。三个Y在各组内共用相同样本。控制项、固定效应及聚类与第一阶段一致。区间及p值是常规聚类推断，<strong>未作弱工具稳健调整</strong>。</p>
 <div style="overflow-x:auto;width:100%;">
 <figure class="latex-table figure" style="overflow-x:auto;">
@@ -3651,8 +3651,8 @@ Y_{it} &amp;= \beta_k Big4_{it}+C_{it}'\theta_k+\text{firm FE}+\text{industry ×
 <figcaption>Supply-chain Exposure: Reduced Form Iv</figcaption>
 </figure>
 </div>
-<p>约化式中，仅供应商组的未预警综合失败和财务重述分别低约2.10及2.19个百分点；并集组分别低约1.33及1.65个百分点。两组重述约化式的常规p值均约0.01，违规则没有精确的变化估计。这些是网络冲击与结果之间的约化式关系；只有网络冲击满足外生性及反事实趋势要求，才能进一步作ITT式因果解释。它们不是已经换入四大的企业在整个任期内的处理效应。</p>
-<p>综合失败的2SLS在仅供应商组为−1.6196（SE=1.0429），并集组为−2.7652（SE=3.1634），常规区间均很宽。仅供应商组约化式−0.0210除以第一阶段0.0129，得到约−1.62；并集的第一阶段更接近0，放大了比值及不确定性。第一阶段接近零使比值极不稳定，二阶段不能作可靠的概率变化解释。</p>
+<p>reduce form中，仅供应商组的未预警综合失败和财务重述分别低约2.10及2.19个百分点；并集组分别低约1.33及1.65个百分点。两组重述reduce form的常规p值均约0.01，违规则没有精确的变化估计。这些是网络冲击与结果之间的reduce form关系。</p>
+<p>综合失败的2SLS在仅供应商组为−1.6196（SE=1.0429），并集组为−2.7652（SE=3.1634），常规区间均很宽。仅供应商组reduce form−0.0210除以第一阶段0.0129，得到约−1.62；并集的第一阶段更接近0，放大了比值及不确定性。第一阶段接近零使比值极不稳定，二阶段不能作可靠的概率变化解释。</p>
 <details>
 <summary>
 同样本OLS对照
@@ -3666,8 +3666,7 @@ Y_{it} &amp;= \beta_k Big4_{it}+C_{it}'\theta_k+\text{firm FE}+\text{industry ×
 </section>
 <section class="level4" id="识别边界">
 <h4 class="anchored" data-anchor-id="识别边界">识别边界</h4>
-<p>第一阶段相关性之外，上下游冲击仍可能通过业务、共同经营环境或其他网络传导直接影响本企业结果，排除限制并未得到验证。历史并集关系也不必等同于冲击当年已存在的真实连接。错位发生的冲击、年度采用状态与动态异质性，使当前TWFE-IV系数不能自动获得简单的complier LATE解释。</p>
-<p>由于工具相关性偏弱、上下游冲击还可能直接影响本企业经营，现有2SLS不足以形成稳健的四大审计因果结论。约化式和第一阶段分别保留，展示网络冲击与结果、采用之间的关系。</p>
+<p>第一阶段相关性之外，上下游冲击仍可能通过业务、共同经营环境或其他网络传导直接影响本企业结果，我们的IV很可能不满足exclusion restriction，这也可能是系数很大的原因。由于工具变量偏弱、上下游冲击还可能直接影响本企业经营，现有2SLS不足以形成稳健的四大审计因果结论。</p>
 </section>
 </section>
 <section class="level3" id="ey-dahua-causal">
@@ -3681,7 +3680,7 @@ Y_{it} &amp;= \beta_k Big4_{it}+C_{it}'\theta_k+\text{firm FE}+\text{industry ×
 <p><span class="math display">\[
 Big4_{it}=\pi Z_{it}+C_{it}'\gamma+\text{firm FE}+\text{industry × year FE}+v_{it}.
 \]</span></p>
-<p><strong>DID／约化式：收购暴露对审计结果的影响。</strong></p>
+<p><strong>DID／reduce form：收购暴露对审计结果的影响。</strong></p>
 <p><span class="math display">\[
 Y_{it}=\delta Z_{it}+C_{it}'\theta+\text{firm FE}+\text{industry × year FE}+u_{it}.
 \]</span></p>
