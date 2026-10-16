@@ -20,7 +20,7 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */
   vertical-align: middle;
 }
 </style>
@@ -263,11 +263,11 @@ window.Quarto = {
 </header>
 <section class="level2" id="概述">
 <h2 class="anchored" data-anchor-id="概述">概述</h2>
-<p>本章考察国际化需求与区域服务供给如何驱动中国上市公司对“四大”会计师事务所的采用。实证设计从两个维度切入：在需求端，考察跨境上市（B/H 股）、海外母公司与外资股东控制，以及 WTO 入世带来的外部开放冲击；在供给端，考察四大在各省设立分所带来的本地审计服务供给扩张。我们基于公司—年（firm-year）非平衡面板，结合双向固定效应（TWFE）事件研究与异质性稳健的 CS-DID 模型，刻画企业采用四大的动态选择路径及其识别边界。</p>
+<p>本章考察国际化需求与区域服务供给如何驱动中国上市公司对“四大”会计师事务所的采用。实证设计从两个维度切入：在需求端，考察跨境上市（B/H 股）、海外母公司与外资股东控制，以及 WTO 入世带来的外部开放冲击；在供给端，考察四大在各省设立分所带来的本地审计服务供给扩张。我们基于公司—年（firm-year）非平衡面板，结合双向固定效应（TWFE）事件研究与异质性稳健的 CS-DID 模型，刻画企业采用四大的动态选择路径。</p>
 </section>
 <section class="level2" id="核心结果">
 <h2 class="anchored" data-anchor-id="核心结果">核心结果</h2>
-<p><strong>需求侧国际化与供给侧分所扩张均显著提升境内四大采用概率。</strong> 企业发生跨境上市或引入外资控制后，因跨市场监管要求与国际声誉需求，对四大的聘用显著跃升；四大在本地及邻近省份设立分所后，地理距离与搜寻成本下降，进一步推升了周边企业的四大渗透率。</p>
+<p><strong>企业国际化与四大分所扩张后，境内四大采用率均显著上升。</strong> 跨境上市、引入外资控制与分所进入分别对应需求端和供给端的变化。跨市场监管、国际声誉需求及地理距离与搜寻成本是这些变化的可能机制，现有估计刻画事件前后的采用路径。</p>
 <p><strong>样本与设定。</strong> 观测为公司—年，TWFE 吸收公司和年份固定效应、按公司聚类，未加额外财务控制；基期为事件前一年，区间为 95%。B/H 输入处理公司分别为 91、161；外资图实际控制人与控股股东分别为 303、340；分所本省及邻省口径为 818。以上均为输入计数，逐回归实际年份和有效处理数待核验。外资关系合并两端尾部，跨境上市与分所 TWFE 剔除处理公司窗口外观测；H 股与控股股东的部分处理前系数偏离零。</p>
 <p><strong>基准事件研究设定（Event Study Specification）：</strong></p>
 <p><span class="math display">\[
@@ -338,7 +338,7 @@ Y_{it} = \sum_{k \ne -1} \beta_k \mathbf{1}\{t - T_i = k\} + \alpha_i + \lambda_
 <figure class="latex-table figure">
 <img alt="H 股上市队列的处理公司数与处理前联合检验" class="figure-img" loading="lazy" src="tables/adoption/02_adoption_summary_02_full.png"/>
 <figcaption>
-H 股上市队列的处理公司数与处理前联合检验 · TeX · PDF
+H 股上市队列的处理公司数与处理前联合检验
 </figcaption>
 </figure>
 <p>检验结果显示，全样本中 2010 年前上市队列的 pre-trends 联合检验 <span class="math inline">\(p\)</span> 值为 0.1824，2010 年及以后队列为 0.4849；在剔除金融与房地产样本后，<span class="math inline">\(p\)</span> 值分别为 0.1774 与 0.1636。各组检验均未在 5% 水平拒绝平行趋势原假设，表明在不同制度分期下，处理组在上市前均不存在系统性的先行趋势。</p>
@@ -389,14 +389,14 @@ Big4_{it} = \alpha_i + \lambda_t + \sum_{s=1998, \, s \ne 2001}^{2010} \beta_s T
 <figure class="latex-table figure">
 <img alt="WTO 暴露指标的定义与对照组" class="figure-img" loading="lazy" src="tables/adoption/02_adoption_summary_03_full.png"/>
 <figcaption>
-WTO 暴露指标的定义与对照组 · TeX · PDF
+WTO 暴露指标的定义与对照组
 </figcaption>
 </figure>
 <p>下表列出不同暴露定义在 2002 年（入世首年）的相对位移估计：</p>
 <figure class="latex-table figure">
 <img alt="不同 WTO 暴露口径的 2002 年估计系数" class="figure-img" loading="lazy" src="tables/adoption/02_adoption_summary_04_full.png"/>
 <figcaption>
-不同 WTO 暴露口径的 2002 年估计系数 · TeX · PDF
+不同 WTO 暴露口径的 2002 年估计系数
 </figcaption>
 </figure>
 <p>如下图所示，沿海企业的四大采用率在 2002 年相对于 2001 年出现显著跳升，并在 2002—2007 年间维持相对较高的溢价水平；处理前年份（1998—2000）未见显著的发散走势。</p>
@@ -493,7 +493,7 @@ WTO 暴露指标的定义与对照组 · TeX · PDF
 <figure class="latex-table figure">
 <img alt="估计结果与输出状态" class="figure-img" loading="lazy" src="tables/adoption/02_adoption_summary_01_full.png"/>
 <figcaption>
-估计结果与输出状态 · TeX · PDF
+估计结果与输出状态
 </figcaption>
 </figure>
 <p>股东关联数据来自上市公司前十大股东明细（CSMAR 股东关系表），区分控股股东、实际控制人、直接股东与间接控制人；对外开放度数据来自地方统计年鉴中的进出口总额与地区 GDP 汇总指标。</p>
@@ -513,7 +513,7 @@ WTO 暴露指标的定义与对照组 · TeX · PDF
     anchorJS.add('.anchored');
     const isCodeAnnotation = (el) => {
       for (const clz of el.classList) {
-        if (clz.startsWith('code-annotation-')) {                     
+        if (clz.startsWith('code-annotation-')) {
           return true;
         }
       }
@@ -533,11 +533,11 @@ WTO 暴露指标的定义与对照组 · TeX · PDF
         button.setAttribute("data-bs-toggle", "tooltip");
         button.setAttribute("data-bs-placement", "left");
         button.setAttribute("data-bs-title", "已复制");
-        tooltip = new bootstrap.Tooltip(button, 
-          { trigger: "manual", 
+        tooltip = new bootstrap.Tooltip(button,
+          { trigger: "manual",
             customClass: "code-copy-button-tooltip",
             offset: [0, -8]});
-        tooltip.show();    
+        tooltip.show();
       }
       setTimeout(function() {
         if (tooltip) {
@@ -614,7 +614,7 @@ WTO 暴露指标的定义与对照组 · TeX · PDF
       if (onUntriggerFn) {
         config.onUntrigger = onUntriggerFn;
       }
-      window.tippy(el, config); 
+      window.tippy(el, config);
     }
     const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
     for (var i=0; i<noterefs.length; i++) {
@@ -689,7 +689,7 @@ WTO 暴露指标的定义与对照组 · TeX · PDF
       tippyHover(xref, undefined, function(instance) {
         instance.disable();
         let url = xref.getAttribute('href');
-        let hash = undefined; 
+        let hash = undefined;
         if (url.startsWith('#')) {
           hash = url;
         } else {
@@ -717,7 +717,7 @@ WTO 暴露指标的定义与对照组 · TeX · PDF
               if (note !== null) {
                 const html = processXRef(id, note);
                 instance.setContent(html);
-              } 
+              }
             }).finally(() => {
               instance.enable();
               instance.show();
@@ -741,7 +741,7 @@ WTO 暴露指标的定义与对照组 · TeX · PDF
               }
               const html = processXRef(null, note);
               instance.setContent(html);
-            } 
+            }
           }).finally(() => {
             instance.enable();
             instance.show();
@@ -781,7 +781,7 @@ WTO 暴露指标的定义与对照组 · TeX · PDF
               height = bottom - top;
             }
             if (top !== null && height !== null && parent !== null) {
-              // cook up a div (if necessary) and position it 
+              // cook up a div (if necessary) and position it
               let div = window.document.getElementById("code-annotation-line-highlight");
               if (div === null) {
                 div = window.document.createElement("div");

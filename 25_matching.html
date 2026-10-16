@@ -20,7 +20,7 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */
   vertical-align: middle;
 }
 </style>
@@ -252,7 +252,7 @@ window.Quarto = {
 </header>
 <section class="level2" id="概述">
 <h2 class="anchored" data-anchor-id="概述">概述</h2>
-<p>本章描述客户、事务所和 A1 审计师如何配对，以及这种配对的稳定性与时间变化。匹配结构为理解客户筛选和固定效应识别提供背景；现有分组、热图和保留率均不能解释为服务的因果影响。</p>
+<p>本章描述客户、事务所和 A1 审计师如何配对，以及这种配对的稳定性与时间变化。分组、热图和保留率描述匹配结构，为理解客户筛选和固定效应识别提供背景。</p>
 </section>
 <section class="level2" id="核心结果">
 <h2 class="anchored" data-anchor-id="核心结果">核心结果</h2>
@@ -282,7 +282,7 @@ R_t^{\,s}=\frac{\#\{\text{eligible type-}s\text{ links retained in }t+1\}}
 </section>
 <section class="level2" id="本页结论与证据边界">
 <h2 class="anchored" data-anchor-id="本页结论与证据边界">1. 本页结论与证据边界</h2>
-<p>本页把客户、事务所和签字审计师之间的 <strong>sorting（排序匹配）</strong> 集中在同一处。现有证据表明：客户风险、事务所梯队和签字审计师并不是随机配对；高风险客户所聘事务所的构成在样本期内发生了明显变化，本土八大的份额扩张尤其显著。但这些结果描述的是匹配的联合分布与其时间变化，<strong>不是</strong>“某一类事务所导致客户风险上升或下降”的因果估计。</p>
+<p>本页把客户、事务所和签字审计师之间的 <strong>sorting（排序匹配）</strong> 集中在同一处。现有证据表明：客户风险、事务所梯队和签字审计师并不是随机配对；高风险客户所聘事务所的构成在样本期内发生了明显变化，本土八大的份额扩张尤其显著。这些结果刻画匹配的联合分布及其时间变化。</p>
 <p><strong>回归／统计设定。</strong> 累计配对以主体等权，A1 使用稳定 ID；6,159 个 A1、5,729 家客户、299 家事务所的分母不同。不是回归，不适用控制、FE 或标准误。 <a href="#settings-10_matching">变量与回归设定</a>。</p>
 <p>本页分开呈现三类工作：</p>
 <ul>
@@ -290,7 +290,7 @@ R_t^{\,s}=\frac{\#\{\text{eligible type-}s\text{ links retained in }t+1\}}
 <li>已运行的启发式、PCA 与收费分布聚类图（2026 年 8 月输出）；</li>
 <li>尚待统一样本、重新运行并形成正式主结果的三方 BLM / matching 规格。</li>
 </ul>
-<p>后两类图在这一阶段应作为描述性证据和模型诊断，而不是审计质量的处理效应。特别是，现有 <code>44_triadic_sorting_blm.do</code> 中的“BLM 排名”先按审计费用分布聚类、再按同一结果变量的样本内失败率定向；因此它不是独立于审计失败的质量检验。</p>
+<p>后两类图用于描述匹配结构和诊断模型。特别是，现有 <code>44_triadic_sorting_blm.do</code> 中的“BLM 排名”先按审计费用分布聚类、再按同一结果变量的样本内失败率定向；因此它不是独立于审计失败的质量检验。</p>
 <section class="level3" id="全样本累计匹配数量分布">
 <h3 class="anchored" data-anchor-id="全样本累计匹配数量分布">1.1 全样本累计匹配数量分布</h3>
 <p>本节补充六项累计匹配数量分布：每位 A1 审计师服务的不同客户数和签署的报告数、每家客户聘用的不同事务所数和 A1 审计师数，以及每家事务所服务的不同客户数和在其报告中出现的不同 A1 审计师数。统计覆盖主面板中可识别的配对，不限定于后续回归或 AKM 的估计样本；每张图按其主体等权计算百分比。</p>
@@ -301,7 +301,7 @@ R_t^{\,s}=\frac{\#\{\text{eligible type-}s\text{ links retained in }t+1\}}
 <figure class="latex-table figure">
 <img alt="客户、事务所与 A1 的累计匹配数量" class="figure-img" loading="lazy" src="tables/matching/10_matching_summary_01_full.png"/>
 <figcaption>
-客户、事务所与 A1 的累计匹配数量 · TeX · PDF
+客户、事务所与 A1 的累计匹配数量
 </figcaption>
 </figure>
 <p>六项分布均呈右偏，均值高于中位数。A1 的累计客户数中位数为 2，报告数中位数为 4，说明应区分客户覆盖与跨年重复签字。客户累计匹配的 A1 数中位数为 4，高于事务所数的中位数 2；这是累计配对数量的描述，不能单凭这两个分布推断年度更换率。</p>
@@ -320,7 +320,7 @@ R_t^{\,s}=\frac{\#\{\text{eligible type-}s\text{ links retained in }t+1\}}
 Y_{ift}=X_{it}'\gamma+\alpha_i+\psi_f+\lambda_t+\varepsilon_{ift},
 \]</span></p>
 <p>其中 <span class="math inline">\(i\)</span> 是客户、<span class="math inline">\(f\)</span> 是事务所、<span class="math inline">\(t\)</span> 是年度，<span class="math inline">\(X_{it}\)</span> 为客户控制变量。若将事务所替换为签字审计师 <span class="math inline">\(a\)</span>，可估计客户—审计师或事务所—审计师的双边版本。这类模型要求异质性以固定效应的线性可加方式进入；它无法直接刻画“某类客户与某类事务所”的额外配对项。</p>
-<p>审计师、事务所之间的流动又相对稀少。有限流动会削弱固定效应和其相关系数的精确度，所以负的或正的 AKM 相关系数本身不能直接被解释为负向或正向排序。当前页面把这种问题作为诊断，而不据此下结论。</p>
+<p>审计师、事务所之间的流动又相对稀少。有限流动会削弱固定效应和其相关系数的精确度，所以负的或正的 AKM 相关系数本身不能直接被解释为负向或正向排序。下文据此检查估计对网络连接和样本覆盖的敏感性。</p>
 <p>Bonhomme、Lamadon 与 Manresa（2019）的分组固定效应框架允许双方不可观测异质性和非线性互补性，并在短面板中使用两步分类估计。<a href="https://onlinelibrary.wiley.com/doi/10.3982/ecta15722">原文</a> 并不意味着该框架会自动消除所有有限流动或选择问题；它提供的是一种可检验非加性匹配模式的替代建模路径。AKM 的原始双向固定效应基准见 <a href="https://onlinelibrary.wiley.com/doi/10.1111/1468-0262.00020">Abowd、Kramarz 与 Margolis（1999）</a>。</p>
 <p><span id="full-10_matching-3"></span></p>
 </section>
@@ -360,7 +360,7 @@ Y_{ift}=X_{it}'\gamma+\alpha_i+\psi_f+\lambda_t+\varepsilon_{ift},
 Y_{ifat}=X_{it}'\gamma+\lambda_t+\eta_{kl}+u_{ifat},\qquad
 Y_{ifat}=X_{it}'\gamma+\lambda_t+\eta_{km}+u_{ifat}.
 \]</span></p>
-<p><span class="math inline">\(\eta_{kl}\)</span> 与 <span class="math inline">\(\eta_{km}\)</span> 是类型配对后的条件均值差异；它们应被读作关联而非结构性匹配剩余。回归分别吸收配对类型和年度固定效应，控制变量为规模、ROA 和杠杆，标准误按客户聚类。下一轮正式运行需要把三方共同模型、分组形成窗口和交叉验证规则固定下来。</p>
+<p><span class="math inline">\(\eta_{kl}\)</span> 与 <span class="math inline">\(\eta_{km}\)</span> 是类型配对后的条件均值差异；用于描述配对类型与结果之间的关联。回归分别吸收配对类型和年度固定效应，控制变量为规模、ROA 和杠杆，标准误按客户聚类。下一轮正式运行需要把三方共同模型、分组形成窗口和交叉验证规则固定下来。</p>
 <p><strong>启发式口径</strong></p>
 <p><img alt="启发式客户与事务所类型配对的条件固定效应热图。" class="img-fluid" data-fig-cap="启发式客户 × 事务所配对图：颜色是控制客户财务变量和年度后的配对固定效应，不是质量处理效应。" src="figures/sorting/blm_heatmap_client_firm_heuristic.png" style="width:100.0%"/></p>
 <p><img alt="启发式客户与 CPA 类型配对的条件固定效应热图。" class="img-fluid" data-fig-cap="启发式客户 × CPA 配对图：同样只作条件关联展示。" src="figures/sorting/blm_heatmap_client_cpa_heuristic.png" style="width:100.0%"/></p>
@@ -403,7 +403,7 @@ I_t(K;L)=\sum_{k,l}P_t(k,l)\ln\frac{P_t(k,l)}{P_t(k)P_t(l)}.
 </section>
 <section class="level2" id="事务所客户-akm-的有限流动诊断">
 <h2 class="anchored" data-anchor-id="事务所客户-akm-的有限流动诊断">7. 事务所—客户 AKM 的有限流动诊断</h2>
-<p><code>42_audit_firm_sorting_akm.do</code> 对客户—事务所网络估计双边固定效应，并按事务所梯队画出可用于估计的客户分布与抽样诊断。下图不是排序的主结果，而是提醒我们：某些梯队的事务所换入／换出边较少，固定效应相关及其符号可能对样本覆盖敏感。</p>
+<p><code>42_audit_firm_sorting_akm.do</code> 对客户—事务所网络估计双边固定效应，并按事务所梯队画出可用于估计的客户分布与抽样诊断。下图用于检查固定效应的识别支持：某些梯队的事务所换入／换出边较少，固定效应相关及其符号可能对样本覆盖敏感。</p>
 <p><strong>回归／统计设定。</strong> 客户—事务所 AKM 的有限流动诊断；与主 AKM 章样本不完全相同。各图有效 N、FE 归一化和抽样次数待源输出核验。 <a href="#settings-10_matching">变量与回归设定</a>。</p>
 <p><img alt="不同审计事务所梯队中可用于客户—事务所 AKM 的客户分布。" class="img-fluid" data-fig-cap="客户—事务所 AKM 的有效客户覆盖分布：用于理解各梯队的网络识别基础。" src="figures/audit_firm_akm/audit_firm_valid_client_distribution.png" style="width:100.0%"/></p>
 <p><img alt="客户与事务所固定效应相关的抽样敏感度图。" class="img-fluid" data-fig-cap="未预警综合失败的抽样诊断：横轴为每家事务所平均流动者数量；这是有限流动敏感度检查，不是排序因果估计。" src="figures/audit_firm_akm/subsampling_plot_any_failure_clean.png" style="width:100.0%"/></p>
@@ -448,7 +448,7 @@ I_t(K;L)=\sum_{k,l}P_t(k,l)\ln\frac{P_t(k,l)}{P_t(k)P_t(l)}.
     anchorJS.add('.anchored');
     const isCodeAnnotation = (el) => {
       for (const clz of el.classList) {
-        if (clz.startsWith('code-annotation-')) {                     
+        if (clz.startsWith('code-annotation-')) {
           return true;
         }
       }
@@ -468,11 +468,11 @@ I_t(K;L)=\sum_{k,l}P_t(k,l)\ln\frac{P_t(k,l)}{P_t(k)P_t(l)}.
         button.setAttribute("data-bs-toggle", "tooltip");
         button.setAttribute("data-bs-placement", "left");
         button.setAttribute("data-bs-title", "已复制");
-        tooltip = new bootstrap.Tooltip(button, 
-          { trigger: "manual", 
+        tooltip = new bootstrap.Tooltip(button,
+          { trigger: "manual",
             customClass: "code-copy-button-tooltip",
             offset: [0, -8]});
-        tooltip.show();    
+        tooltip.show();
       }
       setTimeout(function() {
         if (tooltip) {
@@ -549,7 +549,7 @@ I_t(K;L)=\sum_{k,l}P_t(k,l)\ln\frac{P_t(k,l)}{P_t(k)P_t(l)}.
       if (onUntriggerFn) {
         config.onUntrigger = onUntriggerFn;
       }
-      window.tippy(el, config); 
+      window.tippy(el, config);
     }
     const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
     for (var i=0; i<noterefs.length; i++) {
@@ -624,7 +624,7 @@ I_t(K;L)=\sum_{k,l}P_t(k,l)\ln\frac{P_t(k,l)}{P_t(k)P_t(l)}.
       tippyHover(xref, undefined, function(instance) {
         instance.disable();
         let url = xref.getAttribute('href');
-        let hash = undefined; 
+        let hash = undefined;
         if (url.startsWith('#')) {
           hash = url;
         } else {
@@ -652,7 +652,7 @@ I_t(K;L)=\sum_{k,l}P_t(k,l)\ln\frac{P_t(k,l)}{P_t(k)P_t(l)}.
               if (note !== null) {
                 const html = processXRef(id, note);
                 instance.setContent(html);
-              } 
+              }
             }).finally(() => {
               instance.enable();
               instance.show();
@@ -676,7 +676,7 @@ I_t(K;L)=\sum_{k,l}P_t(k,l)\ln\frac{P_t(k,l)}{P_t(k)P_t(l)}.
               }
               const html = processXRef(null, note);
               instance.setContent(html);
-            } 
+            }
           }).finally(() => {
             instance.enable();
             instance.show();
@@ -716,7 +716,7 @@ I_t(K;L)=\sum_{k,l}P_t(k,l)\ln\frac{P_t(k,l)}{P_t(k)P_t(l)}.
               height = bottom - top;
             }
             if (top !== null && height !== null && parent !== null) {
-              // cook up a div (if necessary) and position it 
+              // cook up a div (if necessary) and position it
               let div = window.document.getElementById("code-annotation-line-highlight");
               if (div === null) {
                 div = window.document.createElement("div");

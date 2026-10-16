@@ -20,7 +20,7 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */
   vertical-align: middle;
 }
 </style>
@@ -199,11 +199,11 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-title-meta">
 </div>
 </header>
-<p>本报告用于持续整理既有研究材料，不修改其原始数据、代码、表格或图形。</p>
+<p>本报告汇集中国审计市场的研究结果，围绕四大采用、审计质量、客户匹配与市场反应展开。</p>
 <p>从<a href="./01_core_summary.html">核心摘要</a>了解研究主线，从<a href="./02_core_results.html">核心结果</a>查看目前集中展示的六项证据。</p>
 <section class="level2" id="当前状态">
 <h2 class="anchored" data-anchor-id="当前状态">当前状态</h2>
-<p>网站骨架创建于 2026 年 9 月 20 日。现已整理<a href="./21_adoption.html">四大采用</a>、<a href="./23_big4_effect.html">审计市场与事务所质量</a>、<a href="./25_matching.html">客户—事务所—审计师匹配</a>与<a href="./26_akm.html">三维 AKM</a>等页面。各页区分已生成结果、历史探索输出和待运行设计；网站中的图表仅为原始图的副本，不改变原始数据与代码。</p>
+<p>网站骨架创建于 2026 年 9 月 20 日。现已整理<a href="./21_adoption.html">四大采用</a>、<a href="./23_big4_effect.html">审计市场与事务所质量</a>、<a href="./25_matching.html">客户—事务所—审计师匹配</a>与<a href="./26_akm.html">三维 AKM</a>等页面。各页区分已生成结果、历史探索输出和待运行设计，并提供对应图表与来源。</p>
 <p><a href="./23_big4_effect.html">中国审计市场：事务所质量、客户匹配与市场反应</a>已合并原事务所质量与四大效应两节，串联市场背景、失败率、市场反应、选择机制和转换检验，并保留历史补充结果。也可直接打开<a href="23_big4_effect.html">HTML 预览</a>。</p>
 </section>
 </main> <!-- /main -->
@@ -218,7 +218,7 @@ ul.task-list li input[type="checkbox"] {
     anchorJS.add('.anchored');
     const isCodeAnnotation = (el) => {
       for (const clz of el.classList) {
-        if (clz.startsWith('code-annotation-')) {                     
+        if (clz.startsWith('code-annotation-')) {
           return true;
         }
       }
@@ -238,11 +238,11 @@ ul.task-list li input[type="checkbox"] {
         button.setAttribute("data-bs-toggle", "tooltip");
         button.setAttribute("data-bs-placement", "left");
         button.setAttribute("data-bs-title", "已复制");
-        tooltip = new bootstrap.Tooltip(button, 
-          { trigger: "manual", 
+        tooltip = new bootstrap.Tooltip(button,
+          { trigger: "manual",
             customClass: "code-copy-button-tooltip",
             offset: [0, -8]});
-        tooltip.show();    
+        tooltip.show();
       }
       setTimeout(function() {
         if (tooltip) {
@@ -319,7 +319,7 @@ ul.task-list li input[type="checkbox"] {
       if (onUntriggerFn) {
         config.onUntrigger = onUntriggerFn;
       }
-      window.tippy(el, config); 
+      window.tippy(el, config);
     }
     const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
     for (var i=0; i<noterefs.length; i++) {
@@ -394,7 +394,7 @@ ul.task-list li input[type="checkbox"] {
       tippyHover(xref, undefined, function(instance) {
         instance.disable();
         let url = xref.getAttribute('href');
-        let hash = undefined; 
+        let hash = undefined;
         if (url.startsWith('#')) {
           hash = url;
         } else {
@@ -422,7 +422,7 @@ ul.task-list li input[type="checkbox"] {
               if (note !== null) {
                 const html = processXRef(id, note);
                 instance.setContent(html);
-              } 
+              }
             }).finally(() => {
               instance.enable();
               instance.show();
@@ -446,7 +446,7 @@ ul.task-list li input[type="checkbox"] {
               }
               const html = processXRef(null, note);
               instance.setContent(html);
-            } 
+            }
           }).finally(() => {
             instance.enable();
             instance.show();
@@ -486,7 +486,7 @@ ul.task-list li input[type="checkbox"] {
               height = bottom - top;
             }
             if (top !== null && height !== null && parent !== null) {
-              // cook up a div (if necessary) and position it 
+              // cook up a div (if necessary) and position it
               let div = window.document.getElementById("code-annotation-line-highlight");
               if (div === null) {
                 div = window.document.createElement("div");

@@ -20,7 +20,7 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */
   vertical-align: middle;
 }
 </style>
@@ -240,7 +240,7 @@ window.Quarto = {
 </header>
 <section class="level2" id="概述">
 <h2 class="anchored" data-anchor-id="概述">概述</h2>
-<p>本章考察四大采用是否沿客户—供应商网络传播，连接企业自身的审计需求与网络中的服务采用扩散。网络选择和共同冲击尚未排除，不将采用扩散写成服务质量外溢。</p>
+<p>本章考察四大采用是否沿客户—供应商网络传播，连接企业自身的审计需求与网络中的服务采用扩散。本章的结果变量是四大采用率；因果解释依赖对网络选择和共同冲击的处理。</p>
 </section>
 <section class="level2" id="核心结果">
 <h2 class="anchored" data-anchor-id="核心结果">核心结果</h2>
@@ -255,7 +255,7 @@ window.Quarto = {
 <p>基于 A 股上市公司披露的供应链关系构建 firm-year 面板。以贸易伙伴首次跃迁至四大的时点识别处理：供应商冲击的处理组包含 1,942 家焦点公司，客户冲击包含 1,532 家；对照组由从未处理（not treated）与尚未处理（not yet treated）的公司构成。</p>
 <p><strong>结果与动态特征</strong></p>
 <ol type="1">
-<li><strong>Pre-trends</strong>：在 <span class="math inline">\(k \le -2\)</span> 期间，估计系数紧密围绕 0 波动且均不显著，满足 parallel trends 假定；</li>
+<li><strong>Pre-trends</strong>：在 <span class="math inline">\(k \le -2\)</span> 期间，估计系数紧密围绕 0 波动且均不显著，未发现显著的处理前趋势差异；</li>
 <li><strong>Post-treatment 动态效应</strong>：供应商换所当期（<span class="math inline">\(k=0\)</span>），焦点公司采用四大的概率立即跳升，并在后续 1~5 年内稳定在 2.5~3.0 个百分点的高位（<span class="math inline">\(p &lt; 0.01\)</span>）；</li>
 <li><strong>上下游非对称性</strong>：客户侧在 <span class="math inline">\(k \ge 1\)</span> 同样显著转正，但幅度相对温和（约 1.5~2.0 个百分点），呈现出明显的 upstream-to-downstream 传导特征。</li>
 </ol>
@@ -279,7 +279,7 @@ window.Quarto = {
 </section>
 <section class="level2" id="供应链网络与基本事实">
 <h2 class="anchored" data-anchor-id="供应链网络与基本事实">1. 供应链网络与基本事实</h2>
-<p><strong>研究问题与当前发现。</strong> 供应链网络以公司披露的客户—供应商关系为基础。对每一家焦点公司，分别定义其客户或供应商首次转向四大的年份；该年份构成网络伙伴的审计质量冲击。研究对象不是伙伴自身的审计师选择，而是与该伙伴相连公司的审计师采用是否在随后发生变化。</p>
+<p><strong>研究问题与当前发现。</strong> 供应链网络以公司披露的客户—供应商关系为基础。对每一家焦点公司，分别定义其客户或供应商首次转向四大的年份；该年份构成网络伙伴的审计质量冲击。研究考察与该伙伴相连公司的审计师采用是否在随后发生变化。</p>
 <p><strong>回归／统计设定。</strong> 单位为焦点公司—年，因变量为事务所类别采用。伙伴事件虚拟变量进入 TWFE，公司和年份 FE、公司聚类；当前年度命令无额外控制。 <a href="#settings-03_diffusion">变量与回归设定</a>。</p>
 <p>设 <span class="math inline">\(PartnerBig4_{it}^k\)</span> 表示公司 <span class="math inline">\(i\)</span> 的客户或供应商在相对事件时间 <span class="math inline">\(k\)</span> 首次转向四大的暴露指标，<span class="math inline">\(Y_{it}\)</span> 为公司 <span class="math inline">\(i\)</span> 在年份 <span class="math inline">\(t\)</span> 的审计师质量结果。主回归为：</p>
 <p><span class="math display">\[
@@ -360,7 +360,7 @@ Y_{it}=\sum_{k\neq -1}\beta_k PartnerBig4_{it}^k+X_{it}'\gamma+\mu_i+\lambda_t+\
     anchorJS.add('.anchored');
     const isCodeAnnotation = (el) => {
       for (const clz of el.classList) {
-        if (clz.startsWith('code-annotation-')) {                     
+        if (clz.startsWith('code-annotation-')) {
           return true;
         }
       }
@@ -380,11 +380,11 @@ Y_{it}=\sum_{k\neq -1}\beta_k PartnerBig4_{it}^k+X_{it}'\gamma+\mu_i+\lambda_t+\
         button.setAttribute("data-bs-toggle", "tooltip");
         button.setAttribute("data-bs-placement", "left");
         button.setAttribute("data-bs-title", "已复制");
-        tooltip = new bootstrap.Tooltip(button, 
-          { trigger: "manual", 
+        tooltip = new bootstrap.Tooltip(button,
+          { trigger: "manual",
             customClass: "code-copy-button-tooltip",
             offset: [0, -8]});
-        tooltip.show();    
+        tooltip.show();
       }
       setTimeout(function() {
         if (tooltip) {
@@ -461,7 +461,7 @@ Y_{it}=\sum_{k\neq -1}\beta_k PartnerBig4_{it}^k+X_{it}'\gamma+\mu_i+\lambda_t+\
       if (onUntriggerFn) {
         config.onUntrigger = onUntriggerFn;
       }
-      window.tippy(el, config); 
+      window.tippy(el, config);
     }
     const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
     for (var i=0; i<noterefs.length; i++) {
@@ -536,7 +536,7 @@ Y_{it}=\sum_{k\neq -1}\beta_k PartnerBig4_{it}^k+X_{it}'\gamma+\mu_i+\lambda_t+\
       tippyHover(xref, undefined, function(instance) {
         instance.disable();
         let url = xref.getAttribute('href');
-        let hash = undefined; 
+        let hash = undefined;
         if (url.startsWith('#')) {
           hash = url;
         } else {
@@ -564,7 +564,7 @@ Y_{it}=\sum_{k\neq -1}\beta_k PartnerBig4_{it}^k+X_{it}'\gamma+\mu_i+\lambda_t+\
               if (note !== null) {
                 const html = processXRef(id, note);
                 instance.setContent(html);
-              } 
+              }
             }).finally(() => {
               instance.enable();
               instance.show();
@@ -588,7 +588,7 @@ Y_{it}=\sum_{k\neq -1}\beta_k PartnerBig4_{it}^k+X_{it}'\gamma+\mu_i+\lambda_t+\
               }
               const html = processXRef(null, note);
               instance.setContent(html);
-            } 
+            }
           }).finally(() => {
             instance.enable();
             instance.show();
@@ -628,7 +628,7 @@ Y_{it}=\sum_{k\neq -1}\beta_k PartnerBig4_{it}^k+X_{it}'\gamma+\mu_i+\lambda_t+\
               height = bottom - top;
             }
             if (top !== null && height !== null && parent !== null) {
-              // cook up a div (if necessary) and position it 
+              // cook up a div (if necessary) and position it
               let div = window.document.getElementById("code-annotation-line-highlight");
               if (div === null) {
                 div = window.document.createElement("div");
