@@ -252,15 +252,15 @@ window.Quarto = {
 </header>
 <section class="level2" id="概述">
 <h2 class="anchored" data-anchor-id="概述">概述</h2>
-<p>本章在个人审计师层面研究服务提供者的可观察背景、历史记录和分配变化与审计结果的关系。基础回归、Rotation did 和 Caseload IV 分别对应不同识别层级；核心结果筛选了 稳健的 Caseload IV 结果。</p>
+<p>本章在个人审计师层面研究服务提供者的可观察背景、历史记录和分配变化与审计结果的关系。基础回归描述个人背景的条件关联，Rotation DID 考察质量状态转变，Caseload IV 利用候选供给预测继任者特征。各设计的结果在下文分别报告。</p>
 </section>
 <section class="level2" id="核心结果">
 <h2 class="anchored" data-anchor-id="核心结果">核心结果</h2>
-<p><strong>个人四大从业背景（Big4 Background）在条件相关性、轮换转变与供给工具变量下呈现多维度的实证事实：</strong></p>
+<p><strong>个人四大从业背景（Big4 Background）的负向关联对事务所固定效应敏感，轮换与 IV 结果也随设计变化：</strong></p>
 <ol type="1">
-<li><strong>基础 Dummy 回归（条件关联）</strong>：在控制年份固定效应与客户公司固定效应时，A1 审计师具有历史四大从业背景与未预警综合失败显著负相关（降幅约 1.47 个百分点）；但<strong>进一步吸收审计事务所固定效应（Firm FE）后，该负向系数迅速衰减至 −0.0077 且不再显著</strong>。这表明，个人四大背景的溢出效应很大程度上与优质事务所平台的固有差异高度重合。</li>
-<li><strong>Rotation DID</strong>：在上市公司发生 A1 轮换时，换入具有四大背景的审计师（严格升级，Strict Upgrade）对应综合失败率显著下降约 4.6 个百分点；但<strong>强制五年轮换与自愿轮换的系数无统计显著差异（p=0.297）</strong>，说明该改善并非完全由外生轮换规则驱动。</li>
-<li><strong>Caseload IV</strong>：利用上一年度目标事务所候选池中四大背景审计师占比构建工具变量，第一阶段具有较强预测力（F=9.60）；但在第二阶段 2SLS 估计中，四大背景对综合失败的因果估计值为正（+0.248，p&lt;0.10），未能确立统一的因果改善效应。</li>
+<li><strong>基础 Dummy 回归（条件关联）</strong>：在控制年份固定效应与客户公司固定效应时，A1 审计师具有历史四大从业背景与未预警综合失败显著负相关（降幅约 1.47 个百分点）；但<strong>进一步吸收审计事务所固定效应（Firm FE）后，该负向系数迅速衰减至 −0.0077 且不再显著</strong>。个人背景与平台差异在这一关联中存在重叠。</li>
+<li><strong>Rotation DID</strong>：在上市公司发生 A1 轮换时，换入具有四大背景的审计师（严格升级，Strict Upgrade）对应综合失败率显著下降约 4.6 个百分点；但<strong>强制五年轮换与自愿轮换的系数无统计显著差异（p=0.297）</strong>，两类轮换的组间差异未获统计支持。</li>
+<li><strong>Caseload IV</strong>：利用上一年度目标事务所候选池中四大背景审计师占比构建工具变量，第一阶段 F=9.60；第二阶段 2SLS 系数为正（+0.248，p&lt;0.10）。工具强度与排除限制仍是解释该估计的关键条件。</li>
 <li><strong>平台效应 vs 个人经历</strong>：在同一模型中将事务所平台（四大所）与个人经历（非四大所的四大背景 A1）分离估计显示，四大所主效应显著为负（−1.5 个百分点），而在本土所执业的四大背景个人系数为 0.006（不显著），显示负向关联集中于事务所平台，个人四大经历的独立关联不显著。</li>
 </ol>
 <p><span id="full-05_auditor_quality-big4-dummy"></span></p>
@@ -305,7 +305,7 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="个人特征与执业历史-dummy-回归针对三个失败变量">1. 个人特征与执业历史 Dummy 回归（针对三个失败变量）</h2>
 <p>本部分考察审计师个人可观察特征（学历、名校、四大背景）及接任前执业历史 dummy 对未预警综合失败、财务重述和财务违规三项审计失败变量的直接回归。模型采用三年披露窗口构造的结果变量：</p>
 <p><span class="math display">\[Y_{it}^{(3年披露窗口)}=Q_{a(i,t)}'\beta+C_{it}'\gamma+E_{it}'\rho+\mathrm{FE}+\varepsilon_{it}.\]</span></p>
-<p>其中 <span class="math inline">\(Q_{a(i,t)}\)</span> 为审计师特征 dummy，<span class="math inline">\(C_{it}\)</span> 为财务控制变量，<span class="math inline">\(E_{it}\)</span> 为历史执业暴露控制（报告数、客户数及服务年限）。通过依次引入年份 FE、客户公司 FE、以及客户公司加审计事务所双重 FE，检验个人特征是否能独立于执业平台发挥质量改善作用。</p>
+<p>其中 <span class="math inline">\(Q_{a(i,t)}\)</span> 为审计师特征 dummy，<span class="math inline">\(C_{it}\)</span> 为财务控制变量，<span class="math inline">\(E_{it}\)</span> 为历史执业暴露控制（报告数、客户数及服务年限）。通过依次引入年份 FE、客户公司 FE、以及客户公司加审计事务所双重 FE，比较个人特征与结果的关联对平台控制的敏感性。</p>
 <section class="level3" id="可观察人力资本-dummy-回归">
 <h3 class="anchored" data-anchor-id="可观察人力资本-dummy-回归">1.1 可观察人力资本 Dummy 回归</h3>
 <p>令 <span class="math inline">\(i\)</span> 为客户公司，<span class="math inline">\(t\)</span> 为财年，<span class="math inline">\(a(i,t)\)</span> 和 <span class="math inline">\(j(i,t)\)</span> 分别为当期 A1 审计师与审计事务所；<span class="math inline">\(Y_{it}^{m,3}\)</span> 表示按三年披露窗口构造的结果，<span class="math inline">\(m\)</span> 分别为综合失败、重述和违规。表中的 <strong>Separate regression</strong> 每次仅加入一项审计师特征 <span class="math inline">\(q^k\)</span>：</p>
@@ -388,9 +388,9 @@ Y_{it}^{m,3}=\beta_R H^R_{it}+\beta_V H^V_{it}+E_{it}'\rho+C_{it}'\gamma+\alpha_
 +C_{e}'\gamma_L+\mu_{j(e)}+\lambda_{t_e}+\varepsilon_{e,L}.
 \]</span></p>
 <p>继任者和前任者的历史指标均以接任年年初为信息截止点，并排除目标客户。继任者暴露控制沿用 <span class="math inline">\(E\)</span> 的对数及平方项；前任者的 <span class="math inline">\(L^{\mathrm{pred}}\)</span> 仅包含报告数、客户数和服务年限的 <span class="math inline">\(\ln(1+x)\)</span>，不含平方项。每个窗口要求全部财年及其披露随访完整；模型控制接任时财务特征、事务所和事件年份固定效应，标准误按事务所聚类。</p>
-<p>历史指标排除目标客户，只计入观察年 1 月 1 日之前已披露的信息；至少需要三份历史报告和两个历史年份，没有足够记录的审计师不被归为“清白”。结果使用固定披露窗口；新匹配样本分别要求接任当年起完整的一年、两年或三年随访。</p>
-<p>每项历史指标一张表：A、B 面板分别为年度单项和联合历史回归，吸收客户、事务所和年份 FE，按客户聚类；C–E 面板为真实更换事件的一至三年随访，同时列出继任者和前任者系数，吸收事务所和事件年份 FE，按事务所聚类。不同历史指标、结果及随访长度的有效样本不同，不能把列间变化全部归于随访长度。</p>
-<p><strong>结果：</strong>无重述历史的继任者对综合失败的一年、两年、三年系数分别为 −0.0043、−0.0135、−0.0185，均不显著；无违规历史的对应系数也不显著。三年综合失败列中，显著的 −0.0297 属于<strong>前任者</strong>无重述历史，不能作为“换入更好审计师改善结果”的证据。当前结果未显示历史记录对继任者后续表现有稳定预测力，估计仍存在统计不确定性。</p>
+<p>历史指标排除目标客户，只计入观察年 1 月 1 日之前已披露的信息；至少需要三份历史报告和两个历史年份，历史覆盖不足者的指标设为缺失。结果使用固定披露窗口；新匹配样本分别要求接任当年起完整的一年、两年或三年随访。</p>
+<p>每项历史指标一张表：A、B 面板分别为年度单项和联合历史回归，吸收客户、事务所和年份 FE，按客户聚类；C–E 面板为真实更换事件的一至三年随访，同时列出继任者和前任者系数，吸收事务所和事件年份 FE，按事务所聚类。不同历史指标、结果及随访长度的有效样本不同，列间变化同时反映覆盖与随访长度。</p>
+<p><strong>结果：</strong>无重述历史的继任者对综合失败的一年、两年、三年系数分别为 −0.0043、−0.0135、−0.0185，均不显著；无违规历史的对应系数也不显著。三年综合失败列中，显著的 −0.0297 对应<strong>前任者</strong>无重述历史。当前结果未显示历史记录对继任者后续表现有稳定预测力，估计仍存在统计不确定性。</p>
 <figure class="latex-table figure">
 <img alt='历史无重述：年度预测与固定随访。点击图片可放大；&lt;a href="tables/auditor_quality_validation/clean_rest0.tex"&gt;LaTeX 源表&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_validation/clean_rest0_full.png"/>
 <figcaption>
@@ -432,10 +432,10 @@ Y_{it}^{m}={}&amp;b_B B_{it}+b_L L_{it}
 <summary>
 展开联合回归及事务所类别交互结果（样本与上文不同）
 </summary>
-<p><strong>当前结果的准确范围：</strong>表 27 的四大事务所项在综合失败和违规列为负且显著，重述列不显著；这是事务所类别关联。表 28 学历面板的本科门槛，在参照事务所类别中对综合失败为 −0.010（0.005，5%）、对重述为 −0.006（0.003，10%），对违规为 −0.004（0.004，不显著）。所以当前结果不能概括成“本科主要改善违规”；六项特征联合、三组固定效应的主表仍未发现前三项失败结果的显著关联。</p>
+<p><strong>当前结果的准确范围：</strong>表 27 的四大事务所项在综合失败和违规列为负且显著，重述列不显著；这是事务所类别关联。表 28 学历面板的本科门槛，在参照事务所类别中对综合失败为 −0.010（0.005，5%）、对重述为 −0.006（0.003，10%），对违规为 −0.004（0.004，不显著）。本科门槛的负向关联集中于综合失败与重述；六项特征联合、三组固定效应的主表仍未发现前三项失败结果的显著关联。</p>
 <p>这一节使用已重新运行的 <code>code/stata/30_partner_humancapital/31_auditor_mobility.do</code> Task 7。主表将六个 A1 人力资本 dummy 同时纳入回归：本科及以上、硕士及以上、博士及以上、985/211、985 和四大从业背景；不加入 <code>Big 4</code>／<code>Local 8</code> 事务所类别或其交互项，并吸收客户公司、审计事务所和年份固定效应。下方两张补充表保留事务所类别及交互项设定，吸收客户公司和年份固定效应。所有回归的标准误按客户公司聚类，表底逐项列出固定效应和控制变量。</p>
-<p>三张图片将模型列分成纵向面板，数值和规格未改变；对应的窄版 LaTeX 位于 tables/auditor_quality_human_capital_narrow/。</p>
-<p>主表的前三列为清洗后的综合失败、重述和违规，后六列为异常应计、审计意见及费用。六个指标在前三项失败结果列均不显著。例如，四大从业背景在综合失败列为 0.006（标准误 0.006），本科门槛为 −0.005（0.003），该列有 66,118 个公司年度观测值。费用列的四大从业背景系数为 0.043（0.011），但不能将这一条件关联解释为个人背景的因果回报。学历三个门槛在组内逐级嵌套，院校两个门槛也逐级嵌套；某一层级相对最低组的完整差异须累加对应门槛系数，并对线性组合单独检验。</p>
+<p>三张图片按模型列分为纵向面板；对应的窄版 LaTeX 位于 tables/auditor_quality_human_capital_narrow/。</p>
+<p>主表的前三列为清洗后的综合失败、重述和违规，后六列为异常应计、审计意见及费用。六个指标在前三项失败结果列均不显著。例如，四大从业背景在综合失败列为 0.006（标准误 0.006），本科门槛为 −0.005（0.003），该列有 66,118 个公司年度观测值。费用列的四大从业背景系数为 0.043（0.011），度量控制所列特征后的费用差异。学历三个门槛在组内逐级嵌套，院校两个门槛也逐级嵌套；某一层级相对最低组的完整差异须累加对应门槛系数，并对线性组合单独检验。</p>
 <figure class="latex-table figure">
 <img alt="表 26：不分事务所类别的 A1 人力资本联合回归。点击表格可放大。" class="figure-img" loading="lazy" src="tables/auditor_quality_human_capital_narrow/human_capital_joint_three_fe_full_p01.png"/>
 <figcaption>
@@ -455,7 +455,7 @@ Y_{it}^{m}={}&amp;b_B B_{it}+b_L L_{it}
 </figcaption>
 </figure>
 <p><strong>事务所类别交互的补充结果</strong></p>
-<p>补充表中的 <code>Big 4</code>、<code>Local 8</code> 指事务所类别。表 27 的个人四大背景通过非四大类别与该背景的交互项呈现：本土八大 × A1 四大背景对综合失败的系数为 0.007（标准误 0.007），其他事务所 × A1 四大背景为 0.009（0.009），均不显著。<code>Big 4</code> 主效应为 −0.020（0.007），比较的是事务所类别，不是审计师个人四大经历。</p>
+<p>补充表中的 <code>Big 4</code>、<code>Local 8</code> 指事务所类别。表 27 的个人四大背景通过非四大类别与该背景的交互项呈现：本土八大 × A1 四大背景对综合失败的系数为 0.007（标准误 0.007），其他事务所 × A1 四大背景为 0.009（0.009），均不显著。<code>Big 4</code> 主效应为 −0.020（0.007），比较四大与参照事务所类别的条件差异。</p>
 <figure class="latex-table figure">
 <img alt="表 27：四大背景与事务所类别的交互回归。点击表格可放大。" class="figure-img" loading="lazy" src="tables/auditor_quality_human_capital_narrow/human_capital_big4_background_tier_full_p01.png"/>
 <figcaption>
@@ -505,7 +505,7 @@ Y_{it}^{m}={}&amp;b_B B_{it}+b_L L_{it}
 表 28：累计学历与院校门槛的事务所类别交互回归。点击表格可放大。
 </figcaption>
 </figure>
-<p>这三张表均为公司年度基础回归，描述条件相关性；它们不与后文的轮换转变样本或 IV 估计共享同一个识别对象。</p>
+<p>这三张表均为公司年度基础回归，描述条件相关性；轮换转变与 IV 结果分别基于其对应样本和识别对象解释。</p>
 </details>
 <p><span id="full-05_auditor_quality-3"></span></p>
 <p><span id="质量转变与审计失败rotation-四版本比较"></span></p>
@@ -520,7 +520,7 @@ Y_{it}^{m}={}&amp;b_B B_{it}+b_L L_{it}
 <p>本部分采用两种处理质量状态逆转的样本规则。<strong>Strict（整企剔除）</strong>在公司层面筛选：升级回归仅保留质量状态始终不变或仅发生 <span class="math inline">\(0\rightarrow1\)</span> 转变、没有 <span class="math inline">\(1\rightarrow0\)</span> 转变的公司；降级回归则反之。因此，发生逆转的公司，其全部公司—年份观测均被剔除，而不只是逆转后的年份。</p>
 <p><strong>Trim（观测截断）</strong>保留公司在反向转变之前的观测：升级回归剔除首次 <span class="math inline">\(1\rightarrow0\)</span> 转变当年及之后的公司—年份；降级回归剔除首次 <span class="math inline">\(0\rightarrow1\)</span> 转变当年及之后的公司—年份。即使之后再次转回原方向，也不重新纳入。相比 Strict，Trim 保留了发生逆转公司的早期记录。</p>
 <p>上述转变均依据相邻两个日历年且质量指标非缺失的观测识别；Trim 的截断点是样本中首次反向转变，不要求此前已观察到目标方向的转变。两种规则分别对应“剔除逆转公司”与“剔除逆转当年及以后的公司—年份”。</p>
-<p>衡量审计师human capital的dummy转变后，部分公司再次发生逆转。四大背景升级的 1,068 家转变公司中有 748 家观察到逆转（70.0%，逆转者中位持续两年），降级的 1,050 家中有 327 家逆转（31.1%，中位三年）。低失败 AKM 状态升级和降级的观察到的逆转比例分别为 60.7% 与 51.0%。这些是带右删失的描述统计，不是统一随访期的逆转风险；它们为考察两年、三年的短期效应提供动机。</p>
+<p>衡量审计师human capital的dummy转变后，部分公司再次发生逆转。四大背景升级的 1,068 家转变公司中有 748 家观察到逆转（70.0%，逆转者中位持续两年），降级的 1,050 家中有 327 家逆转（31.1%，中位三年）。低失败 AKM 状态升级和降级的观察到的逆转比例分别为 60.7% 与 51.0%。这些比例按样本内可观察历史计算，随访长度不同且存在右删失；它们为考察两年、三年的短期效应提供动机。</p>
 <details class="rotation-measure">
 <summary>
 查看全部人力资本、历史表现和 AKM 转变的逆转统计
@@ -573,7 +573,7 @@ Y_{it}=\beta_M\bigl(Q_{it}\times D_i^M\bigr)
        +X_{it}'\gamma+\alpha_i+\lambda_t+\varepsilon_{it}.
 \]</span></p>
 <p><span class="math inline">\(D_i^M\)</span> 表示首次质量转变发生在“前任 A1 连续任期恰好五年”的更换，<span class="math inline">\(D_i^V\)</span> 表示在较短任期更换；<span class="math inline">\(\alpha_i\)</span> 和 <span class="math inline">\(\lambda_t\)</span> 分别为客户公司与年度固定效应，标准误按客户公司聚类。<span class="math inline">\(X_{it}\)</span> 包含规模、杠杆、亏损、ROA、Z-score、杠杆变化、报告滞后、经营现金流和年龄，以及缺失值指示变量。下表是<strong>无事务所固定效应</strong>的严格样本结果。</p>
-<p>表中的系数是质量状态变化与结果的条件关联。星号检验该系数是否等于零，最后一列的差异 p 值检验两种更换类型的系数是否相等，两者不是同一个检验。尤其重要的是，<span class="math inline">\(\beta_M-\beta_V\)</span> 才检验“恰好五年轮换”下的关联是否与较短任期更换不同。</p>
+<p>表中的系数是质量状态变化与结果的条件关联。星号检验系数是否等于零，最后一列的差异 p 值检验两类更换系数是否相等。<span class="math inline">\(\beta_M-\beta_V\)</span> 才检验“恰好五年轮换”下的关联是否与较短任期更换不同。</p>
 <figure class="latex-table figure">
 <img alt='严格样本：低失败 AKM A1 的升级与降级。&lt;a href="tables/auditor_quality_summary_latex/strict_akm.tex"&gt;LaTeX&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_summary_latex/strict_akm_full.png"/>
 <figcaption>
@@ -583,7 +583,7 @@ Y_{it}=\beta_M\bigl(Q_{it}\times D_i^M\bigr)
 <p><strong>如何读这张表：</strong>这里 Q=1 表示低失败 AKM 审计师。升级是 Q 从 0 变为 1，五年组综合失败系数约为 −0.061（标准误 0.017，1% 水平显著），对应模型中的下降约 6.1 个百分点。降级是 Q 从 1 变为 0；回归仍报告 Q 的系数，因此降级行 −0.062 对应的事后减事前变化为 +0.062，不能读成降级也降低失败。两种方向使用不同样本，仍需分别审查事件图和处理公司数。右侧 p=0.990 检验的是升级样本中五年组与短任期组的系数差；它不显著，不否定两组系数各自显著。系数以概率单位报告，乘以 100 为百分点。</p>
 <p>这组结果显示低失败 AKM 状态与三个失败结果呈系统负相关；恰好五年与较短任期两组的系数差异均不显著。识别强制轮换的净效应还需要处理事务所更换和审计师质量分组构造的影响。</p>
 <p><strong>三类质量指标的严格升级样本</strong></p>
-<p>这三类指标来自同一组 Strict TWFE 转变回归，不能视为独立检验。当前原始表中，这三类指标的升级系数均带星号；不显著的是这里展示的五年与短任期系数差。因果解释还要求质量度量不使用结果期信息、处理前趋势可比，以及更换与质量分配的选择能够得到解释。</p>
+<p>三类指标使用同一组 Strict TWFE 转变设计，样本和结果之间存在重叠。当前原始表中，这三类指标的升级系数均带星号；不显著的是这里展示的五年与短任期系数差。因果解释还要求质量度量不使用结果期信息、处理前趋势可比，以及更换与质量分配的选择能够得到解释。</p>
 <p>下表比较三个预先区分的质量升级指标。每行分别报告恰好五年更换、较短任期更换的系数及其标准误；最后一列的 <span class="math inline">\(p\)</span> 值直接检验两类更换的系数差异。所有行均吸收客户公司和年份固定效应，<strong>不吸收事务所固定效应</strong>，标准误按客户公司聚类。不同指标的非缺失样本和严格路径筛选不同，行与行之间不作系数大小的直接比较。</p>
 <figure class="latex-table figure">
 <img alt='严格升级：四大背景、历史表现与 AKM 质量指标。&lt;a href="tables/auditor_quality_summary_latex/quality_measures.tex"&gt;LaTeX&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_summary_latex/quality_measures_full.png"/>
@@ -899,13 +899,13 @@ Y_{it}=\beta Q_{it}+C_{it}'\gamma+\alpha_i+\lambda_t+\varepsilon_{it},\qquad (i,
 </section>
 <section class="level2" id="候选供给与容量工具变量估计caseload-iv">
 <h2 class="anchored" data-anchor-id="候选供给与容量工具变量估计caseload-iv">3. 候选供给与容量工具变量估计（Caseload IV）</h2>
-<p>为缓解审计师选聘与匹配中的内生性偏误，本部分基于供给端外生冲击构建两类工具变量：一是利用上一年度目标事务所候选池中的审计师特征构成与业务量负荷作为候选供给工具变量（Pool rate IV）；二是利用同所其他客户因法定五年轮换所释放的名额冲击作为容量工具变量（Caeload IV）。此外，本部分进一步将事务所平台效应与审计师个人四大从业背景进行分离检验。</p>
+<p>为缓解审计师选聘与匹配中的内生性偏误，本部分基于候选供给和轮换释放容量构建两类候选工具变量：一是利用上一年度目标事务所候选池中的审计师特征构成与业务量负荷作为候选供给工具变量（Pool rate IV）；二是利用同所其他客户因法定五年轮换所释放的名额冲击作为容量工具变量（Caseload IV）。此外，本部分进一步将事务所平台效应与审计师个人四大从业背景进行分离检验。</p>
 <p>观察单位为 A1 matching event（新 A1 匹配事件）。模型吸收目的事务所固定效应与接任年份固定效应，控制公司财务特征、前任特征、候选池人数与首次入样指示，标准误按目的事务所聚类。</p>
-<p>下图先展示工作量的分布：在可观察的审计师—事务所服务区间内，负责一家上市公司的年度最常见，也能观察到没有上市客户的中间年份。这里的零值是描述性扩展；当前 IV 的 <span class="math inline">\(t-1\)</span> 年候选池仍由当年可观察到的在职 A1 构成，不能把图中的零值直接当作 IV 中可供分配的候选人。</p>
+<p>下图先展示工作量的分布：在可观察的审计师—事务所服务区间内，负责一家上市公司的年度最常见，也能观察到没有上市客户的中间年份。图中零值来自服务区间内的描述性补全；IV 的 <span class="math inline">\(t-1\)</span> 年候选池仍由当年有上市签字记录的 A1 构成。</p>
 <p><img alt="审计师在事务所服务区间内的上市客户工作量分布，分别展示全部审计师、四大背景、本科及以上和985或211院校背景。" class="img-fluid" data-fig-cap="审计师年度上市客户工作量分布。零值表示同一审计师在同一事务所首次与末次被观察年份之间、当年没有样本内上市客户；工作量不包括非上市客户。" src="figures/partner_humancapital/caseload_distribution/caseload_mean_distribution_4panel.png" style="width:100.0%"/></p>
-<p>匹配前的候选池构成也并不相同。下图中，四大背景 A1 的池内占比多数接近零；本科及以上占比的中位数为 75.0%，硕士及以上为 13.8%。后两者分别统计同一候选池中的不同学历门槛，硕士及以上包含于本科及以上。这些分布说明候选供给存在差异，但本身不能证明候选池构成或工作量冲击满足工具变量的排除限制。</p>
+<p>匹配前的候选池构成也并不相同。下图中，四大背景 A1 的池内占比多数接近零；本科及以上占比的中位数为 75.0%，硕士及以上为 13.8%。后两者分别统计同一候选池中的不同学历门槛，硕士及以上包含于本科及以上。这些分布刻画候选供给差异，工具的排除限制在后文结合资源配置和客户风险讨论。</p>
 <p><img alt="匹配前一年目标事务所候选池内，四大背景、985或211院校、本科及以上、硕士及以上审计师占比的四面板分布图。" class="img-fluid" data-fig-cap="匹配前候选池的人力资本占比分布。每条观测是一次 matching event；占比使用目标事务所上一年的候选 A1 名单计算。" src="figures/partner_humancapital/caseload_distribution/pool_share_distribution_4panel.png" style="width:100.0%"/></p>
-<p><code>35_matching_pool_caseload_distribution.do</code> 只描述业务量。全部审计师年度的平均业务量为 1.93，匹配事件中接任 A1 的平均业务量为 3.39；两类样本定义不同，不能把均值差解释为匹配事件导致业务量增加。业务量为零、一和至少八份的比例及各人力资本组分布都在下表。</p>
+<p><code>35_matching_pool_caseload_distribution.do</code> 只描述业务量。全部审计师年度的平均业务量为 1.93，匹配事件中接任 A1 的平均业务量为 3.39；两类样本分别按审计师年度与新匹配事件计权。业务量为零、一和至少八份的比例及各人力资本组分布都在下表。</p>
 <figure class="latex-table figure">
 <img alt='表 54：审计师年度与匹配事件接任 A1 的业务量分布。&lt;a href="tables/auditor_quality_run_20260925/narrow/descriptive/matching_caseload.tex"&gt;LaTeX&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_run_20260925/narrow/descriptive/matching_caseload_full_p01.png"/>
 <figcaption>
@@ -960,12 +960,12 @@ Y_{it}=\beta Q_{it}+C_{it}'\gamma+\alpha_i+\lambda_t+\varepsilon_{it},\qquad (i,
 <section class="level3" id="候选池-iv上一年事务所候选供给">
 <h3 class="anchored" data-anchor-id="候选池-iv上一年事务所候选供给">3.2 候选池 IV：上一年事务所候选供给</h3>
 <p><span id="sec-caseload-zero"></span></p>
-<p><code>37_caseload_matching_iv_pool.do</code> 使用目标事务所在 <span class="math inline">\(t-1\)</span> 年可观察 A1 候选池的质量占比、平均业务量，或业务量不超过一的优质 A1 占比，分别预测新继任者的质量。第三种工具现为 <strong>Caseload <span class="math inline">\(\leq 1\)</span> share</strong>：分子为具有特征 <span class="math inline">\(k\)</span> 且上市客户数不超过一的候选 A1 人数，分母为全部具有特征 <span class="math inline">\(k\)</span> 的候选 A1 人数；不存在该类候选人时取缺失。当前 roster 尚未补入零客户年份，因此阈值放宽不等于已经纳入零客户候选人。每个审计师特征、每种工具和每个匹配样本单独估计；六个结果变量分别为接任首年及继任任期内的综合失败、重述和违规：</p>
+<p><code>37_caseload_matching_iv_pool.do</code> 使用目标事务所在 <span class="math inline">\(t-1\)</span> 年可观察 A1 候选池的质量占比、平均业务量，或业务量不超过一的优质 A1 占比，分别预测新继任者的质量。第三种工具现为 <strong>Caseload <span class="math inline">\(\leq 1\)</span> share</strong>：分子为具有特征 <span class="math inline">\(k\)</span> 且上市客户数不超过一的候选 A1 人数，分母为全部具有特征 <span class="math inline">\(k\)</span> 的候选 A1 人数；不存在该类候选人时取缺失。当前 roster 仅覆盖有上市签字记录的年份，零客户年份的处理见下文。每个审计师特征、每种工具和每个匹配样本单独估计；六个结果变量分别为接任首年及继任任期内的综合失败、重述和违规：</p>
 <p><span class="math display">\[H_{e}^{k}=\pi_{k,d}Z_{j,t-1}^{k,d}+W_{e}^{k\prime}\delta+\mu_j+\lambda_t+u_e,\qquad
 Y_{e,h}=\theta_{k,d,h}\widehat H_e^k+W_{e}^{k\prime}\rho+\mu_j+\lambda_t+\varepsilon_{e,h}. \]</span></p>
 <p><span class="math inline">\(W_e^k\)</span> 包含前任 A1 的同项特征、候选池人数、已在面板中对应上一财年的公司控制变量及缺失指示；全部匹配样本另含首次进入指示。所有当前表格均吸收目的事务所与匹配年份固定效应，按目的事务所聚类，且含财务控制。All Matches 保留完整可观察年份；前任恰好五年的子样本从 2004 年开始。不同特征的可用样本不同。</p>
 <p><strong>第一阶段：九项继任者特征</strong></p>
-<p>54 个“特征 × 工具 × 样本”第一阶段中，22 个工具系数在 10% 水平显著，11 个排除工具 F 值至少为 10。全部匹配中，四大背景候选池比例的一阶段系数为 0.246（标准误 0.0793，F=9.60），本科及以上为 0.223（0.0602，F=13.71）。四大背景的平均业务量工具显著为负（−0.00590，p=0.0366），但 <span class="math inline">\(\leq 1\)</span> share 不显著（0.00832，p=0.234）。历史无违规的平均业务量工具也显著为负（−0.0363，F=12.87）；历史无重述的 <span class="math inline">\(\leq 1\)</span> share 则为 −0.0669（p=0.0225，F=5.38），方向并不支持简单的“低工作量候选人占比越高，越容易匹配到该类审计师”的预测。每张表逐项报告系数、聚类标准误、F 与 partial <span class="math inline">\(R^2\)</span>，不按显著性筛行。F 衡量预测力，不能验证排除限制。</p>
+<p>54 个“特征 × 工具 × 样本”第一阶段中，22 个工具系数在 10% 水平显著，11 个排除工具 F 值至少为 10。全部匹配中，四大背景候选池比例的一阶段系数为 0.246（标准误 0.0793，F=9.60），本科及以上为 0.223（0.0602，F=13.71）。四大背景的平均业务量工具显著为负（−0.00590，p=0.0366），但 <span class="math inline">\(\leq 1\)</span> share 不显著（0.00832，p=0.234）。历史无违规的平均业务量工具也显著为负（−0.0363，F=12.87）；历史无重述的 <span class="math inline">\(\leq 1\)</span> share 则为 −0.0669（p=0.0225，F=5.38），方向并不支持简单的“低工作量候选人占比越高，越容易匹配到该类审计师”的预测。每张表逐项报告系数、聚类标准误、F 与 partial <span class="math inline">\(R^2\)</span>，不按显著性筛行。F 衡量第一阶段预测力，排除限制需结合工具的经济来源论证。</p>
 <figure class="latex-table figure">
 <img alt='全部匹配：九项特征的第一阶段。&lt;a href="tables/auditor_quality_pool_iv_current/pool_iv_first_stage_all.tex"&gt;LaTeX&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_pool_iv_current/pool_iv_first_stage_all_full.png"/>
 <figcaption>
@@ -1038,18 +1038,18 @@ Y_{e,h}=\theta_{k,d,h}\widehat H_e^k+W_{e}^{k\prime}\rho+\mu_j+\lambda_t+\vareps
 <p>候选池 IV 的 2 张第一阶段表与 9 张第二阶段表覆盖 324 个二阶段模型。“Caseload at most 1 share” 对应候选池中业务量 <span class="math inline">\(\leq 1\)</span> 的占比。</p>
 <section class="level4" id="零客户年份与低业务量占比">
 <h4 class="anchored" data-anchor-id="零客户年份与低业务量占比">零客户年份与低业务量占比</h4>
-<p>业务量描述已在同一审计师—事务所的首末观察年之间补出零上市客户年份；第三个候选池工具也已从 caseload = 1 改为 caseload <span class="math inline">\(\leq 1\)</span>。但二者目前尚未在候选名册中合并：<code>37_caseload_matching_iv_pool.do</code> 仍从有当年上市签字记录的 A1 汇总候选人，未将上述零客户中间年份加入 roster。因此，<strong>阈值修改不等于已经完成“纳入零客户候选人”的 IV 检验</strong>；在业务量至少为一的原名单内，<span class="math inline">\(=1\)</span> 与 <span class="math inline">\(\leq1\)</span> 选中相同人员，结果变化不大不能作为纳入零客户后的稳健性证据。真正扩充候选池仍需核验零客户年份的在所状态、任职区间及可供分配性。</p>
+<p>业务量描述已在同一审计师—事务所的首末观察年之间补出零上市客户年份；第三个候选池工具也已从 caseload = 1 改为 caseload <span class="math inline">\(\leq 1\)</span>。但二者目前尚未在候选名册中合并：<code>37_caseload_matching_iv_pool.do</code> 仍从有当年上市签字记录的 A1 汇总候选人，未将上述零客户中间年份加入 roster。在业务量至少为一的原名单内，<span class="math inline">\(=1\)</span> 与 <span class="math inline">\(\leq1\)</span> 选中相同人员，当前结果对应有上市签字记录的候选池。真正扩充候选池仍需核验零客户年份的在所状态、任职区间及可供分配性。</p>
 </section>
 <section class="level4" id="sec-caseload-controls">
 <h4 class="anchored" data-anchor-id="sec-caseload-controls">财务控制变量的敏感性比较</h4>
 <p>比较吸收目的事务所与接任年份 FE 的两个已完成输出版本，仅将公司年度财务控制及其缺失指示分为加入与不加入；前任同项特征、候选池人数和适用的首次进入指示仍保留，标准误均按目的事务所聚类。按工具变量名、继任特征、匹配样本与结果变量配对，共比较 324 个二阶段结果：<strong>311 个系数方向相同，319 个保留相同显著性星级；总体识别判断没有改变</strong>。</p>
-<p>两组较明确的负向结果变化较小：本科及以上的候选池占比工具对应任期综合失败，无财务控制时为 −0.259（SE=0.104，F=13.68），加入后为 −0.256（SE=0.105，F=13.71）；历史无违规的平均业务量工具对应首年重述，分别为 −0.117（SE=0.053，F=12.58）和 −0.119（SE=0.053，F=12.87）。四大背景占比工具对应首年综合失败仍为正，分别为 +0.231 和 +0.248，后者在 10% 水平显著；不能把“控制变量不改变结论”理解为已发现四大背景的因果改善。</p>
-<p>该比较也有边界：仅 228 个规格的样本量完全相同，其余同时包含估计样本变化；弱工具规格可能出现很大的系数跳动，例如前任恰好五年样本的四大背景占比工具第一阶段 F 接近零，其二阶段不能作经济量级解读。无控制版本仍将第三个工具标为 <code>Caseload-One</code>，当前有控制版本标为 <code>Caseload &lt;= 1</code>；在尚无零客户候选人的名单内两者等价，但不能把这一比较写成扩充零客户候选池后的检验。</p>
+<p>两组较明确的负向结果变化较小：本科及以上的候选池占比工具对应任期综合失败，无财务控制时为 −0.259（SE=0.104，F=13.68），加入后为 −0.256（SE=0.105，F=13.71）；历史无违规的平均业务量工具对应首年重述，分别为 −0.117（SE=0.053，F=12.58）和 −0.119（SE=0.053，F=12.87）。四大背景占比工具对应首年综合失败仍为正，分别为 +0.231 和 +0.248，后者在 10% 水平显著，加入控制后仍未出现失败率下降。</p>
+<p>该比较也有边界：仅 228 个规格的样本量完全相同，其余同时包含估计样本变化；弱工具规格可能出现很大的系数跳动，例如前任恰好五年样本的四大背景占比工具第一阶段 F 接近零，其二阶段不能作经济量级解读。无控制版本仍将第三个工具标为 <code>Caseload-One</code>，当前有控制版本标为 <code>Caseload &lt;= 1</code>；在尚无零客户候选人的名单内两者等价，本比较对应原候选名单。</p>
 </section>
 </section>
 <section class="level3" id="同所五年轮换的释放容量与业务量-iv">
 <h3 class="anchored" data-anchor-id="同所五年轮换的释放容量与业务量-iv">3.3 同所五年轮换的释放容量与业务量 IV</h3>
-<p>观察单位是前任 A1 恰好连续任职五年、下一年由同一事务所的新 A1 接任的事件；这与涵盖所有新匹配事件的候选池 IV 是两套样本和工具。样本包含 <strong>2004–2024 年的 1,438 个事件</strong>，其中 1,241 个有其他客户释放名额，但只有 147 个观察到继任者属于释放池；因此不能把“有释放名额”读成“目标公司获得释放池成员”。历史 CPA 质量在 975 个事件中可用。</p>
+<p>观察单位是前任 A1 恰好连续任职五年、下一年由同一事务所的新 A1 接任的事件；这与涵盖所有新匹配事件的候选池 IV 是两套样本和工具。样本包含 <strong>2004–2024 年的 1,438 个事件</strong>，其中 1,241 个有其他客户释放名额，但只有 147 个观察到继任者属于释放池；说明释放名额可用与实际接任来自释放池是两个不同环节。历史 CPA 质量在 975 个事件中可用。</p>
 <figure class="latex-table figure">
 <img alt='表 55：所有事件和各类处理变量、工具变量的覆盖度。&lt;a href="tables/auditor_quality_run_20260925/capacity_iv/capacity_iv_event_coverage.tex"&gt;LaTeX&lt;/a&gt;；&lt;a href="../tables/partner_humancapital/caseload_matching_iv_akm/caseload_matching_iv_akm_coverage.csv"&gt;逐年原始数据&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_run_20260925/capacity_iv/capacity_iv_event_coverage_full.png"/>
 <figcaption>
@@ -1124,7 +1124,7 @@ Y_{e,h}=\theta_{k,d,h}\widehat H_e^k+W_{e}^{k\prime}\rho+\mu_j+\lambda_t+\vareps
 </figcaption>
 </figure>
 </details>
-<p>“来自释放池”的当年一阶段 F=10.47，<span class="math inline">\(N=1,424\)</span>；下一年和第二年的 F 分别降为 7.230 和 4.469。其余四类处理变量三个时点的 F 均低于 10；四大背景只有 0.473、0.680、2.962，零历史重述的 F 更接近零。对应的 45 个二阶段系数都不显著。“来自释放池”对当年综合失败为 −0.017（0.146），下一年为 0.142（0.192），第二年为 −0.319（0.330），不存在稳定方向。零历史重述的一阶段 F 当年为 0.000250；此类极弱一阶段的二阶段点估计不宜解释为有经济意义的效应。即使当年释放池规格的 F 略高于 10，单一阈值也不证明排除限制或弱工具稳健推断成立。</p>
+<p>“来自释放池”的当年一阶段 F=10.47，<span class="math inline">\(N=1,424\)</span>；下一年和第二年的 F 分别降为 7.230 和 4.469。其余四类处理变量三个时点的 F 均低于 10；四大背景只有 0.473、0.680、2.962，零历史重述的 F 更接近零。对应的 45 个二阶段系数都不显著。“来自释放池”对当年综合失败为 −0.017（0.146），下一年为 0.142（0.192），第二年为 −0.319（0.330），不存在稳定方向。零历史重述的一阶段 F 当年为 0.000250；此类极弱一阶段的二阶段点估计不宜解释为有经济意义的效应。当年释放池规格的 F 略高于 10，其排除限制和弱工具稳健推断仍需另行评估。</p>
 <details class="rotation-measure">
 <summary>
 表 64–66：五类处理变量、三个时点与三个审计结果的全部 2SLS
@@ -1151,7 +1151,7 @@ Y_{e,h}=\theta_{k,d,h}\widehat H_e^k+W_{e}^{k\prime}\rho+\mu_j+\lambda_t+\vareps
 <p><strong>4.3.3 轮换前安慰剂与证据边界</strong></p>
 <p>针对七类释放容量质量工具，安慰剂式以<strong>前任最后一年</strong>的目标客户综合失败为因变量：</p>
 <p><span class="math display">\[Y_{i,t-1}=\delta_k Z_{j,t}^{k,-i}+C_{e,t-1}^{k\prime}\psi+\mu_j+\lambda_t+\nu_e.\]</span></p>
-<p>七个工具的安慰剂系数都不显著（表 67）。这只说明在当前样本和检验精度下没有检测到与该项轮换前结果的相关性；它不检验业务量工具，也不能排除事务所年度需求或共同客户风险直接影响轮换后审计结果。尤其在多数一阶段较弱、释放池接任者具有明显年限差异的情况下，容量 IV 仍应放在识别诊断与探索性结果的位置。</p>
+<p>七个工具的安慰剂系数都不显著（表 67）。该检验未检测到释放容量质量工具与前任最后一年失败的显著关联。业务量工具的事前关系、事务所年度需求及共同客户风险需要分别检查。结合较弱的第一阶段和释放池成员的年限差异，容量 IV 当前提供探索性结果与识别诊断。</p>
 <figure class="latex-table figure">
 <img alt='表 67：七类释放容量质量工具的轮换前安慰剂。&lt;a href="tables/auditor_quality_run_20260925/capacity_iv/capacity_iv_pre_rotation_placebo.tex"&gt;LaTeX&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_run_20260925/capacity_iv/capacity_iv_pre_rotation_placebo_full.png"/>
 <figcaption>

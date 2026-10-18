@@ -207,7 +207,7 @@ ul.task-list li input[type="checkbox"] {
 <section class="level2" id="需求侧hb-股上市与四大采用">
 <h2 class="anchored" data-anchor-id="需求侧hb-股上市与四大采用">1. 需求侧：H/B 股上市与四大采用</h2>
 <p><a href="./21_adoption.html#海外上市与四大采用">完整分析：海外上市与四大采用</a></p>
-<p><strong>B 股、H 股上市后，企业采用境内四大的概率上升。</strong> B 股的上升主要出现在上市后，H 股在上市当年即出现正向变化。下图保留原合并图上排的四大采用结果，去掉下排本土八大面板。</p>
+<p><strong>B 股、H 股上市后，企业采用境内四大的概率上升。</strong> B 股的上升主要出现在上市后，H 股在上市当年即出现正向变化。下图展示境内四大的采用路径。</p>
 <div class="quarto-float quarto-figure quarto-figure-center anchored" id="fig-core-listing">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-core-listing-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -223,7 +223,7 @@ ul.task-list li input[type="checkbox"] {
 <section class="level2" id="需求侧外资控制与四大采用">
 <h2 class="anchored" data-anchor-id="需求侧外资控制与四大采用">2. 需求侧：外资控制与四大采用</h2>
 <p><a href="./21_adoption.html#股权结构与外资控制权">完整分析：股权结构与外资控制权</a></p>
-<p><strong>首次出现外资实际控制人或控股股东后，境内四大采用呈现正向变化。</strong> 下图保留最新股东关系分类图的上排两个面板，均排除港澳台，分别对应最终控制方与控股股东的外资进入。控股股东组在事件前已呈上升趋势，因此不能把两组的正向路径直接解释为相同的因果效应。</p>
+<p><strong>首次出现外资实际控制人或控股股东后，境内四大采用呈现正向变化。</strong> 下图分别考察外资实际控制人与控股股东，均排除港澳台。控股股东组在事件前已呈上升趋势，因果解释需要处理这一先行变化。</p>
 <div class="quarto-float quarto-figure quarto-figure-center anchored" id="fig-core-controller">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-core-controller-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -234,7 +234,7 @@ ul.task-list li input[type="checkbox"] {
 </figcaption>
 </figure>
 </div>
-<p>注：从原合并图中保留上排，左为实际控制人，右为控股股东；坐标轴、区间及面板注释均保留。输入总公司数 5,697，两组处理公司数分别为 303 和 340。模型吸收公司与年份固定效应，标准误按公司聚类。此处为股东关系分类口径，不与独立控制人面板混用。<a href="./21_adoption.html#股权结构与外资控制权">完整结果及 CS-DID 稳健性比较</a>。</p>
+<p>注：左为实际控制人，右为控股股东。输入总公司数 5,697，两组处理公司数分别为 303 和 340。模型吸收公司与年份固定效应，标准误按公司聚类。本图采用股东关系分类口径。<a href="./21_adoption.html#股权结构与外资控制权">完整结果及 CS-DID 稳健性比较</a>。</p>
 </section>
 <section class="level2" id="供给侧四大本省及邻省分所扩张">
 <h2 class="anchored" data-anchor-id="供给侧四大本省及邻省分所扩张">3. 供给侧：四大本省及邻省分所扩张</h2>
@@ -260,7 +260,7 @@ ul.task-list li input[type="checkbox"] {
 </figcaption>
 </figure>
 </div>
-<p>注：两图左侧为主展示 TWFE，右侧为 CS-DID 稳健性比较；输入处理公司数均为 818。文件名 <code>pre2012</code> 的实际样本为 year ≤ 2012，包含 2012 年。TWFE 吸收公司与年份固定效应、以事件前一年为基期，排除处理公司真实 [−5,+5] 窗口外年份；标准误按公司聚类，区间为 95% 置信区间。两种样本下，CS-DID 的事件当年至第 5 年点估计均为正、区间高于零；部分处理前估计仍有偏离。该结果体现本省及邻省的区域暴露，不能全部归为本省直接供给增加，也仍需区分分所选址与当地需求变化。<a href="./21_adoption.html#分所进入的事件研究">本省口径及其他比较</a>。</p>
+<p>注：两图左侧为主展示 TWFE，右侧为 CS-DID 稳健性比较；输入处理公司数均为 818。较早样本取 year ≤ 2012。TWFE 吸收公司与年份固定效应、以事件前一年为基期，排除处理公司真实 [−5,+5] 窗口外年份；标准误按公司聚类，区间为 95% 置信区间。两种样本下，CS-DID 的事件当年至第 5 年点估计均为正、区间高于零；部分处理前估计仍有偏离。该口径衡量本省及邻省的共同服务覆盖；因果解释需要区分分所选址与当地需求变化。<a href="./21_adoption.html#分所进入的事件研究">本省口径及其他比较</a>。</p>
 </section>
 <section class="level2" id="supplier-client-big4-shock-与采用扩散">
 <h2 class="anchored" data-anchor-id="supplier-client-big4-shock-与采用扩散">4. Supplier / client Big4 shock 与采用扩散</h2>
@@ -293,14 +293,14 @@ ul.task-list li input[type="checkbox"] {
 </figcaption>
 </figure>
 </div>
-<p>注：左为供应商冲击，右为客户冲击；图示处理公司数分别为 1,942 和 1,532。沿用网络章节现有年度结果，该批输出仍在复核；共同经营冲击与网络选择尚需区分，当前图展示的是采用扩散模式。<a href="./22_diffusion.html#供应链网络与基本事实">完整网络结果与检验</a>。</p>
+<p>注：左为供应商冲击，右为客户冲击；图示处理公司数分别为 1,942 和 1,532。年度结果展示采用扩散模式；共同经营冲击与网络选择是后续识别需要处理的因素。<a href="./22_diffusion.html#供应链网络与基本事实">完整网络结果与检验</a>。</p>
 </section>
 <section class="level2" id="客户选择与预警后的风险">
 <h2 class="anchored" data-anchor-id="客户选择与预警后的风险">5. 客户选择与预警后的风险</h2>
 <p><a href="./23_big4_effect.html#客户选择与审计意见四大如何形成较低风险的客户组合">完整分析：客户选择与审计意见</a></p>
 <p><strong>风险意见与四大客户的进入、退出密切相关；即使收到同类预警，四大客户的失败风险仍较低。</strong> 这组结果支持将客户选择和组合调整作为解释客户风险差异的线索，并与下一节财报信息的市场反应相衔接。</p>
 <ul>
-<li><strong>客户关系调整：</strong> 当前四大客户收到 MAO 后，次年退出四大的概率高 <strong>30.40 个百分点</strong>（p&lt;0.001）；当前非四大客户收到 MAO 后，次年进入四大的概率低 <strong>0.249 个百分点</strong>（p=0.039）。GC 后退出的结果在 5% 水平显著，GC 后进入不显著。这里识别的是风险意见与后续流动的条件相关，不能推断由四大主动终止合作。</li>
+<li><strong>客户关系调整：</strong> 当前四大客户收到 MAO 后，次年退出四大的概率高 <strong>30.40 个百分点</strong>（p&lt;0.001）；当前非四大客户收到 MAO 后，次年进入四大的概率低 <strong>0.249 个百分点</strong>（p=0.039）。GC 后退出的结果在 5% 水平显著，GC 后进入不显著。该条件相关描述风险意见后的关系流动，退出发起方尚待核查。</li>
 <li><strong>预警后的风险差距：</strong> 在已收到 MAO 或 GC 的客户中，四大相对于非四大的次年公告违规概率分别低 <strong>5.30 和 8.87 个百分点</strong>，均在 5% 水平显著。当期综合失败差异也为负，但 MAO 组仅在 10% 水平显著；次年重述差异均不显著，表中一并保留。</li>
 <li><strong>区分两种“假阳性”口径：</strong> MAO 客户中未观察到当期综合失败的比例，四大为 <strong>87.85%</strong>、非四大为 <strong>78.33%</strong>；但以未失败客户为分母的标准 Type I 错误率，四大为 <strong>2.01%</strong>、非四大为 <strong>5.74%</strong>。两项比例使用不同分母，分别回答预警后的失败覆盖与未失败客户中的误报问题。</li>
 </ul>
@@ -316,7 +316,7 @@ Audit Opinions and Next-Year Big 4 Client Transitions
 <section class="level2" id="earnings-surprise-与市场反应">
 <h2 class="anchored" data-anchor-id="earnings-surprise-与市场反应">6. Earnings surprise 与市场反应</h2>
 <p><a href="./23_big4_effect.html#超预期财报正向消息的股价反应">完整分析：正向消息、组间交互与2012年前的路径</a></p>
-<p><strong>好消息的差异主要关注公告最初几天，并与后续PEAD联系起来。</strong> 下图左侧展示总体好消息相对中性消息的价格反应，右侧分别展示四大、本土八大和Other客户的路径；分组曲线用于呈现反应模式，组间差异及其标准误由完整报告中的共同interaction模型直接检验，不能只凭某条线较高或单组显著得出组间显著差异。</p>
+<p><strong>四大客户的好消息在公告初期获得较强反应，后续PEAD较低。</strong> 下图左侧展示总体好消息相对中性消息的价格反应，右侧分别展示四大、本土八大和Other客户的路径；分组曲线用于呈现反应模式，组间差异及其标准误由完整报告中的共同 interaction 模型直接检验。</p>
 <div class="quarto-float quarto-figure quarto-figure-center anchored" id="fig-core-surprise">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-core-surprise-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -327,8 +327,8 @@ Audit Opinions and Next-Year Big 4 Client Transitions
 </figcaption>
 </figure>
 </div>
-<p>注：使用当前指定的图像；好消息为surprise&gt;10%，中性消息为−10%至10%，其余大负消息排除；Y为对数股价，公告前一交易日为基期，吸收firm × year FE、event time FE与trading date FE，按公司×财年聚类，180天是预测信息窗口；右图的三条线来自各组分别估计，原共同三组比较为“四大−Other”“八大−Other”，当前二组比较将八大和Other合并为非四大，不能将两种参照组混为同一结果；方程及样本说明见<a href="./23_big4_effect.html#eq-market-separate-paths">完整报告</a>。</p>
-<p><strong>时间与消化速度的故事。</strong> 2012年前较强的公告初期反应可能同时来自四大声誉认证较强，以及非四大优质审计较稀缺、四大筛选信号更有价值；四大较早反应与后续较低PEAD相一致，非四大较弱的即时反应可能体现需要更多时间消化好消息，对应消息消化速度的差异；分期、滚动和长期路径尚未分别识别两种机制，PEAD累计路径也包含初期收益，最终价格是否追平及2012前后差异是否显著仍需直接检验，详见<a href="./23_big4_effect.html#market-2012-story">2012机制</a>与<a href="./23_big4_effect.html#长窗口-pead盈利消息的后续价格反应">PEAD</a>。</p>
+<p>注：好消息为surprise&gt;10%，中性消息为−10%至10%，其余大负消息排除；Y为对数股价，公告前一交易日为基期，吸收firm × year FE、event time FE与trading date FE，按公司×财年聚类，180天是预测信息窗口；右图的三条线来自各组分别估计，原共同三组比较为“四大−Other”“八大−Other”，二组比较则将八大和Other合并为非四大，两者使用不同参照组；方程及样本说明见<a href="./23_big4_effect.html#eq-market-separate-paths">完整报告</a>。</p>
+<p><strong>价格反应的时间分布。</strong> 公告初期较强的四大反应与后续较低PEAD共同支持消息较早进入价格的解释。2012年前的差异可能与声誉认证及优质非四大审计的相对稀缺有关。分期与滚动结果用于考察这一解释；两种机制的独立作用、最终价格是否追平及2012前后差异是否显著仍需直接检验。PEAD累计路径包含初期收益，详见<a href="./23_big4_effect.html#market-2012-story">2012机制</a>与<a href="./23_big4_effect.html#长窗口-pead盈利消息的后续价格反应">PEAD</a>。</p>
 </section>
 <section class="level2" id="候选池与-caseload-iv一二阶段均有支持的规格">
 <h2 class="anchored" data-anchor-id="候选池与-caseload-iv一二阶段均有支持的规格">7. 候选池与 caseload IV：一、二阶段均有支持的规格</h2>
@@ -337,7 +337,7 @@ Audit Opinions and Next-Year Big 4 Client Transitions
 <ul>
 <li><strong>本科及以上 × 候选池占比工具：</strong> 第一阶段 F=13.71；继任任期内综合失败系数为 −0.256（标准误 0.105，p&lt;0.05）。这是候选池占比 IV。</li>
 <li><strong>985/211 背景 × 候选池占比工具：</strong> 第一阶段 F=24.95；首年重述为 −0.086（0.045），任期重述为 −0.116（0.068），两项均仅在 10% 水平显著。</li>
-<li><strong>历史无任何失败 × 平均业务量工具：</strong> 第一阶段 F=5.76；首年综合失败为 −0.283（0.153），首年重述为 −0.213（0.121），两项均仅在 10% 水平显著。这组第一阶段虽显著，但 F 较低，二阶段解释需保留弱工具问题。</li>
+<li><strong>历史无任何失败 × 平均业务量工具：</strong> 第一阶段 F=5.76；首年综合失败为 −0.283（0.153），首年重述为 −0.213（0.121），两项均仅在 10% 水平显著。该组 F 较低，二阶段推断受弱工具问题约束。</li>
 <li><strong>历史无违规 × 平均业务量工具：</strong> 第一阶段 F=12.87；接任首年重述系数为 −0.119（标准误 0.053，p&lt;0.05）。这是 caseload IV。</li>
 </ul>
 <div class="quarto-float quarto-figure quarto-figure-center anchored" id="fig-core-caseload-table">
@@ -350,8 +350,8 @@ Audit Opinions and Next-Year Big 4 Client Transitions
 </figcaption>
 </figure>
 </div>
-<p>注：四组均为 All Matches；表内保留第一阶段系数、标准误、F、p 值、partial R²、二阶段系数及标准误、样本量和聚类数。这是按显著性及预期方向筛选后的探索性展示，显著性未作筛选调整，第一阶段显著也不能验证排除限制。“历史无失败／无违规”是可观察历史记录，不等于已经准确测量个人能力。<a href="./24_auditor_quality.html#候选池-iv上一年事务所候选供给">完整规格与识别讨论</a> · 表格 TeX · 。</p>
-<p>H/B 图仅保留四大面板，外资图仅保留上排实际控制人和控股股东面板，surprise 图使用 core 脚本新输出的 180 天内预测样本左右合并图；供给侧两图和供应链图使用 <code>tables/core_result/assets</code> 中的完整原图，供应商与客户图仅在网页中并列排版。客户选择机制表和 IV 表采用 LaTeX → PDF → PNG 的展示格式。现有估计未重新运行。</p>
+<p>注：四组均为 All Matches；表内保留第一阶段系数、标准误、F、p 值、partial R²、二阶段系数及标准误、样本量和聚类数。这是按显著性及预期方向筛选后的探索性展示，显著性未作筛选调整，排除限制需另行论证。“历史无失败／无违规”度量可观察的执业历史，个人能力的测量可靠性见审计师章节。<a href="./24_auditor_quality.html#候选池-iv上一年事务所候选供给">完整规格与识别讨论</a> · 表格 TeX · 。</p>
+<p>完整设定、替代规格与输出来源见各节所链接的专题章节。</p>
 </section>
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

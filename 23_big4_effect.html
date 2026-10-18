@@ -270,7 +270,7 @@ window.Quarto = {
 </header>
 <section class="level2" id="概述">
 <h2 class="anchored" data-anchor-id="概述">概述</h2>
-<p><strong>本报告围绕“四大审计事务所有什么作用？”这个问题。</strong> 本报告先展示四大与非四大客户的财报质量 audit outcome 和市场反应 market reaction 的差异，再依次讨论三种可能的经济作用：1. 四大审计服务提高财报质量，这是四大审计事务所对 audit outcome 的直接 treatment effect ；2. 四大声誉本身增强市场信任，这是四大审计事务所对 market reaction 的直接 treatment effect ；3. 四大严格筛选客户，通过select on unobservables 提供市场未知的信息，从而向投资者传递原本未知的良好客户质量。</p>
+<p><strong>本章研究四大审计事务所如何影响财报质量与市场信任。</strong> 四大客户的实际失败较少，盈利消息的市场反应较强，收费也较高。下文围绕三条路径解释这些差异：审计服务改善财报、声誉增强信息可信度，以及客户筛选向市场传递质量信号。</p>
 <p>报告顺序是：<strong>四大客户是否有更高的审计质量和更好的市场反应 → 四大审计服务的质量作用 → 四大客户选择与风险判断 → 调整客户差异后的市场反应及声誉证据</strong>。在第一节详细描述了现有文献对这一系列问题的讨论，后续各节说明所用方法、回归方程、样本限制和结果变量。</p>
 </section>
 <section class="level2" id="big4-effect-roadmap">
@@ -299,7 +299,7 @@ window.Quarto = {
 <td>事实</td>
 <td>四大客户财报质量更好、市场更认可、收费更高吗？</td>
 <td><a href="#audit-outcome-levels">审计失败与其他质量代理</a>、费用、<a href="#超预期财报正向消息的股价反应">好消息路径</a>、ERC、PEAD、<a href="#market-analyst">分析师信息及修正</a></td>
-<td><strong><a href="#audit-outcome-levels">财报质量：</a></strong> 严格综合失败的原始发生率为四大2.26%、本土八大6.47%、Other 7.84%；传统应计及真实盈余管理等财报质量的衡量没有一致证据。<strong>市场：</strong> 四大客户<a href="#market-erc">整体ERC较高</a>，好消息（超预期10%以上组相对于中立组）<a href="#超预期财报正向消息的股价反应">市场反应更强</a>，好消息后的<a href="#market-pead">长期PEAD较低</a>（这体现了市场对超预期的财报更早反应，在金融里是对财报的信任）；分期与分析师指标并非一致。<strong><a href="#big4-fee-facts">费用：</a></strong> 四大收费均值约为本土八大的3.7倍，<a href="#audit-other-outcomes">同一客户换入后对数费用上升、换出后下降</a>。</td>
+<td><strong><a href="#audit-outcome-levels">财报质量：</a></strong> 严格综合失败的原始发生率为四大2.26%、本土八大6.47%、Other 7.84%；传统应计及真实盈余管理等财报质量的衡量没有一致证据。<strong>市场：</strong> 四大客户<a href="#market-erc">整体ERC较高</a>，好消息（超预期10%以上组相对于中立组）<a href="#超预期财报正向消息的股价反应">市场反应更强</a>，好消息后的<a href="#market-pead">长期PEAD较低</a>（与盈利消息较早进入价格的解释一致）；分期与分析师指标并非一致。<strong><a href="#big4-fee-facts">费用：</a></strong> 四大收费均值约为本土八大的3.7倍，<a href="#audit-other-outcomes">同一客户换入后对数费用上升、换出后下降</a>。</td>
 </tr>
 <tr class="even">
 <td>审计服务</td>
@@ -325,9 +325,9 @@ window.Quarto = {
 <section class="level2" id="核心结果">
 <h2 class="anchored" data-anchor-id="核心结果">核心结果</h2>
 <ul>
-<li><strong><a href="#audit-outcome-levels">事实</a>：</strong> 四大客户的严格综合失败率较低，市场在部分好消息规格中反应更强，整体ERC较高、好消息会带来更好的市场反应，好消息后的PEAD较低；传统盈余质量的财务报表的衡量和分析师指标并非一致占优。四大收费存在明显溢价。</li>
+<li><strong><a href="#audit-outcome-levels">事实</a>：</strong> 四大客户的严格综合失败率较低，市场在部分好消息规格中反应更强，整体ERC较高、好消息后的PEAD较低；应计、真实盈余管理及分析师指标的差异则随规格变化。四大收费存在明显溢价。</li>
 <li><strong><a href="#audit-treatment">审计服务</a>：</strong> 换入及匹配DID的Fin重述结果较明确。实际重述也下降，取消未来留任要求后仍下降，按换所前已能观察到的财务状况和风险历史进一步匹配后，完整样本中的Fin重述降幅较小，仍达到10%显著水平。其他盈余和财报指标未呈现改善。</li>
-<li><strong><a href="#client-selection-main">客户选择</a>：</strong> 未来四大客户在规模、亏损和违规等方面已有事前差异，未来四大客户规模更大、更加向海外开放、更少亏损、财务状况更好以及事前违规和重述更少。新三年检验中，未来进入者的历史违规较少，仅10%显著；意见对Raw重述的组间预测差异显著，但并非所有重述或违规；退出者风险结果尚不足以确认四大主动剔除坏客户。</li>
+<li><strong><a href="#client-selection-main">客户选择</a>：</strong> 未来四大客户在进入前规模较大、国际化程度较高，亏损和违规较少；重述差异随口径与时期变化。新三年检验中，未来进入者的历史违规较少，仅10%显著；意见对Raw重述的组间预测差异显著，其他重述和违规预测结果较不一致；客户退出的发起方仍待核查。</li>
 <li><strong><a href="#market-psm-erc">市场认证</a>：</strong> 可观察客户特征PSM后，三个CAR窗口的整体ERC交互仍为正且p&lt;0.001。服务、声誉和不可观察选择是这一条件关联的可能来源，各自作用仍待分离。安达信审计丑闻及安永大华合并的外生冲击的审计质量和市场检验尚未提供稳健的因果证据。</li>
 <li><strong><a href="#market-positive-main">时间机制</a>：</strong> 2012年前可能同时存在较强四大声誉和较稀缺的非四大优质审计，由此产生较强声誉作用与较高筛选信号价值。已有分期、滚动和三组比较用于考察这一解释。</li>
 </ul>
@@ -336,7 +336,7 @@ window.Quarto = {
 <p>主要证据形成三条相互联系的线索：四大客户的实际失败较少，换入四大后的重述下降支持审计服务的改善作用；客户在进入前已有差异，说明客户选择也参与形成质量优势；市场对四大客户的盈利消息反应更强、好消息后的漂移较低，且客户特征匹配后ERC优势仍保留。收费溢价与这些质量及信息优势同时存在。以下依次展示证据，各项标题链接至后文的完整分析。</p>
 <section class="level4" id="财报质量收费与市值">
 <h4 class="anchored" data-anchor-id="财报质量收费与市值"><a href="#audit-outcome-levels">财报质量、收费与市值</a></h4>
-<p>四大客户的严格综合失败率为2.26%，低于本土八大的6.47%及Other的7.84%。但应计及真实盈余管理指标没有一致优势，质量差异主要体现在实际失败指标。四大收费存在明显溢价，客户市值也更高，因此需要进一步区分服务改善与客户构成。</p>
+<p>四大客户的严格综合失败率为2.26%，低于本土八大的6.47%及Other的7.84%。但应计及真实盈余管理指标没有一致优势，质量差异主要体现在实际失败指标。四大收费存在明显溢价，客户市值也更高，服务改善与客户构成在后续设计中分别考察。</p>
 <p>首先比较四大、本土八大和其他事务所的失败率及财报质量；收费与市值结果见<a href="#big4-fee-facts">1.2节</a>。财报质量差异采用四大dummy回归；表中分别使用行业×年份FE及firm FE＋year FE，费用取<span class="math inline">\(\log(1+AuditFee)\)</span>，市值取log。</p>
 <p><span class="math display">\[
 Y_{it}=\text{firm FE}+\text{year FE}+\beta Big4_{it}+\gamma^{\prime}X_{it}+\varepsilon_{it}.
@@ -470,8 +470,8 @@ B：正向−中性的四大−非四大反应差
 </section>
 <section class="level4" id="客户选择事前差异与客户进出">
 <h4 class="anchored" data-anchor-id="客户选择事前差异与客户进出"><a href="#client-selection-main">客户选择：事前差异与客户进出</a></h4>
-<p>未来四大客户在进入前已有规模、亏损及风险差异。当前四大客户获得MAO后次年退出概率显著较高，非四大客户获得MAO后次年进入概率较低。这些结果支持客户构成与风险调整参与形成四大客户组合，尚不能区分事务所辞任与客户改聘。</p>
-<p>第一张表比较未来进入者与始终非四大客户的事前特征；第二张表考察当前客户收到意见或风险公告后的次年退出／进入。它们分别提供事前构成和组合调整证据。</p>
+<p>未来四大客户在进入前已有规模、亏损及风险差异。当前四大客户获得MAO后次年退出概率显著较高，非四大客户获得MAO后次年进入概率较低。这些结果支持客户构成与风险调整参与形成四大客户组合，退出发起方需要结合变更公告核查。</p>
+<p>第一张表比较未来进入者与始终非四大客户的事前特征；第二张表考察当前客户收到意见或风险公告后的次年退出／进入。两项比较分别刻画事前构成与后续组合调整。</p>
 <p><span class="math display">\[
 NextBig4_{it}=\text{firm FE}+\text{industry}\times\text{year FE}+\beta Signal_{it}+\gamma^{\prime}X_{it}+\varepsilon_{it}.
 \]</span></p>
@@ -599,11 +599,11 @@ Y_{ict}=\text{firm}\times\text{cohort FE}+\text{cohort}\times\text{industry}\tim
 
 </figcaption>
 </figure>
-<p>这张表使用756条共同样本观测，两种匹配中的Fin、Strict、Raw重述结果均不显著。后文另展示新增匹配的完整样本：Fin未预警重述概率下降5.30个百分点（p=0.056）。5.30个百分点来自完整样本，不是这张共同样本表。</p>
+<p>这张表使用756条共同样本观测，两种匹配中的Fin、Strict、Raw重述结果均不显著。后文另展示新增匹配的完整样本：Fin未预警重述概率下降5.30个百分点（p=0.056）。共同样本与完整样本的比较显示，结论对匹配覆盖敏感。</p>
 </section>
 <section class="level4" id="供应链iv">
 <h4 class="anchored" data-anchor-id="供应链iv"><a href="#supplychain-big4-iv">供应链IV</a></h4>
-<p>供应商冲击对四大采用的第一阶段有统计支持，但KP F为4.515；并集组KP F为0.970。弱工具限制使这组结果尚不能提供稳健的四大服务因果证据。</p>
+<p>供应商冲击对四大采用的第一阶段有统计支持，但KP F为4.515；并集组KP F为0.970。这些第一阶段强度限制了2SLS的精度和因果解释。</p>
 <p>供应链冲击用于预测四大采用，再估计四大对审计失败dummy的作用。</p>
 <p><span class="math display">\[
 Big4_{it}=\text{firm FE}+\text{industry}\times\text{year FE}+\pi Z_{it}+\eta^{\prime}X_{it}+u_{it},\qquad Y_{it}=\text{firm FE}+\text{industry}\times\text{year FE}+\beta\widehat{Big4}_{it}+\gamma^{\prime}X_{it}+\varepsilon_{it}.
@@ -648,7 +648,7 @@ Y_{rct}=\text{relationship}\times\text{cohort FE}+\text{cohort}\times\text{indus
 </section>
 <section class="level4" id="匹配后的市场认证">
 <h4 class="anchored" data-anchor-id="匹配后的市场认证"><a href="#market-psm-erc">匹配后的市场认证</a></h4>
-<p>匹配后，三个CAR窗口的Big4×UE分别为0.144033、0.198599和0.189861，均p&lt;0.001。可观察客户特征调整后，市场对四大客户盈利消息的较高反应仍保留；这支持四大身份的信息价值，但尚未分离服务、声誉与不可观察选择。</p>
+<p>匹配后，三个CAR窗口的Big4×UE分别为0.144033、0.198599和0.189861，均p&lt;0.001。可观察客户特征调整后，市场对四大客户盈利消息的较高反应仍保留；这一差异与四大身份的信息价值一致，服务、声誉和不可观察选择的作用需要进一步分离。</p>
 <p>在可估计ERC的共同候选样本匹配四大与非四大客户，保留匹配权重后估计Big4×UE。</p>
 <p><span class="math display">\[
 CAR_{it}=\text{firm FE}+\text{year FE}+\delta Big4_{it}+\beta UE_{it}+\theta(Big4_{it}\times UE_{it})+\gamma'X_{it}+\varepsilon_{it}.
@@ -697,36 +697,36 @@ CAR_{it}=\text{firm FE}+\text{year FE}+\tau(Treated_i\times Post_t\times News_{i
 <section class="level2" id="literature-feasible-baseline">
 <h2 class="anchored" data-anchor-id="literature-feasible-baseline">文献与研究问题</h2>
 <p>文献中的 Big4 effect 包含三个不同问题：大所客户是否有更好的财报质量，差异有多少来自客户选择，以及大所身份是否改变市场对财报信息的使用；历史文献使用 Big 8、Big 6、Big 5 或 Big N，这与我们有所不同。</p>
-<p><strong>理论基础：审计服务、声誉与选择信号。</strong> <a href="https://doi.org/10.1016/0165-4101(81)90002-1">DeAngelo（1981）</a>（JAE）不使用实证客户样本，而是在审计师发现并报告违约的理论模型中说明，拥有更多客户及未来准租金的大所更有维护独立性的动机，为大所质量优势提供理论解释，因而不属于实证因果识别。</p>
-<p><a href="https://www.anderson.ucla.edu/documents/areas/fac/accounting/trueman_16.pdf">Titman、Trueman（1986）</a>（JAE）不使用实证数据，而是在新股发行的非对称信息模型中同时考虑审计信息精度和企业选择审计师的信号作用，说明高质量企业的选择可以向投资者传递私人信息，为选择的经济价值提供理论依据，但不直接证明四大主动筛选客户或年度盈利公告中的因果认证作用。</p>
-<p><strong>财报质量：早期大所优势及其制度条件。</strong> <a href="https://onlinelibrary.wiley.com/doi/10.1111/j.1911-3846.1998.tb00547.x">Becker、DeFond、Jiambalvo、Subramanyam（1998）</a>（CAR）使用美国10,379个 Big 6 客户年度和2,179个非 Big 6 客户年度，通过可操纵应计的客户特征调整比较发现非 Big 6 客户具有更高的增利应计和绝对应计偏离，支持大所与较少盈余管理相关，但这一比较没有利用外生的大所聘用冲击。</p>
-<p><a href="https://doi.org/10.1111/j.1911-3846.2010.01007.x">Lennox、Pittman（2010）</a>（CAR）将美国1981—2001年上市公司财务资料与 SEC 会计执法所确认的舞弊发生年度连接，通过舞弊 Probit、审计师选择匹配、舞弊风险匹配及任期和换所时序检验发现 Big 5 客户的舞弊概率较低，增强了实际失败指标上的证据，但持续的客户选择仍未由外生审计师分配排除。</p>
-<p><a href="https://www.uts.edu.au/globalassets/sites/default/files/accdg_francis_wang_car-2008.pdf">Francis、Wang（2008）</a>（CAR）使用1994—2004年42个国家的公司财报及投资者保护制度资料，比较应计、亏损确认和稳健性与审计师类型及制度的交互关系，发现 Big 4 的盈余质量优势随投资者保护增强而扩大，说明品牌效果依赖制度激励，但跨国交互比较不等于外生聘用四大的处理效应。</p>
-<p><a href="https://researchportal.bath.ac.uk/en/publications/the-effect-of-chinas-weak-institutional-environment-on-the-qualit/">Ke、Lennox、Xin（2015）</a>（TAR）使用1995—2012年中国四大上市客户的年报、CSMAR 和审计师履历，在大陆单一监管与存在独立香港审计的 AH 客户之间进行控制及匹配比较，发现弱制度环境下四大配置的审计师经验较少、意见较宽松、费用较低且有符号异常应计较高，揭示同一品牌内部的质量差异，而非外生四大聘用实验。</p>
-<p><strong>客户选择：可观察调整是否消除 Big4 effect。</strong> <a href="https://doi.org/10.2308/accr.00000009">Lawrence、Minutti-Meza、Zhang（2011）</a>（TAR）使用美国1988—2006年 Compustat、CRSP 和 I/B/E/S 数据，以规模、周转率、流动性、杠杆和 ROA 等客户特征进行 PSM，发现匹配后的异常应计、隐含资本成本和分析师预测准确度差异不显著、客户规模尤其重要，但匹配只调整纳入模型的可观察特征，不能证明审计服务无效或不可观察选择已消失。</p>
-<p><a href="https://pubsonline.informs.org/doi/10.1287/mnsc.2016.2528">DeFond、Erkens、Zhang（2017）</a>（Management Science）使用美国1988—2006年及2004—2013年上市客户的财务和 Audit Analytics 数据，比较匹配比例、卡尺、放回规则及非线性选择模型等大量平衡设计，发现多数设计仍保留 Big N 在应计、重大向下重述及困境客户持续经营意见上的质量优势，说明一次匹配的不显著结果不足以断言差异完全来自客户特征，但同样没有外生聘用冲击。</p>
-<p><a href="https://onlinelibrary.wiley.com/doi/10.1111/j.1475-679X.2004.00153.x">Johnstone、Bedard（2004）</a>（JAR）使用美国一家大型事务所2000—2001年超过7,000家上市及私人客户的内部风险评分与客户关系记录，通过接受、留任及主动终止的 Logit 比较发现事务所淘汰较高风险客户、接受相对较低风险客户，为事务所供给侧筛选提供直接资料，但不识别这些客户接受大所审计后的财报改善。</p>
-<p><a href="https://research.cuhk.edu.hk/en/publications/state-ownership-the-institutional-environment-and-auditor-choice--2/">Wang、Wong、Xia（2008）</a>（JAE）使用中国1993—2003年5,759个纯 A 股公司年度的所有权、审计师及地区制度资料，通过审计师选择 Logit 及所有权与制度交互发现国企尤其地方国企更倾向选择小型本地事务所、弱制度地区更明显，说明审计师选择有制度及产权基础，但不构成四大质量作用的因果检验。</p>
+<p><strong>理论基础：审计服务、声誉与选择信号。</strong> <a href="https://doi.org/10.1016/0165-4101(81)90002-1">DeAngelo（1981）</a>（JAE）不使用实证客户样本，而是在审计师发现并报告违约的理论模型中说明，拥有更多客户及未来准租金的大所更有维护独立性的动机，为大所质量优势提供理论解释，为后续实证提供理论基准。</p>
+<p><a href="https://www.anderson.ucla.edu/documents/areas/fac/accounting/trueman_16.pdf">Titman、Trueman（1986）</a>（JAE）不使用实证数据，而是在新股发行的非对称信息模型中同时考虑审计信息精度和企业选择审计师的信号作用，说明高质量企业的选择可以向投资者传递私人信息，为选择的经济价值提供理论依据，其预测为研究客户筛选与信息认证提供理论出发点。</p>
+<p><strong>财报质量：早期大所优势及其制度条件。</strong> <a href="https://onlinelibrary.wiley.com/doi/10.1111/j.1911-3846.1998.tb00547.x">Becker、DeFond、Jiambalvo、Subramanyam（1998）</a>（CAR）使用美国10,379个 Big 6 客户年度和2,179个非 Big 6 客户年度，通过可操纵应计的客户特征调整比较发现非 Big 6 客户具有更高的增利应计和绝对应计偏离，支持大所与较少盈余管理相关，其识别基于所列客户特征调整后的比较。</p>
+<p><a href="https://doi.org/10.1111/j.1911-3846.2010.01007.x">Lennox、Pittman（2010）</a>（CAR）将美国1981—2001年上市公司财务资料与 SEC 会计执法所确认的舞弊发生年度连接，通过舞弊 Probit、审计师选择匹配、舞弊风险匹配及任期和换所时序检验发现 Big 5 客户的舞弊概率较低，增强了实际失败指标上的证据，对因果效应的解释仍依赖持续客户选择的处理。</p>
+<p><a href="https://www.uts.edu.au/globalassets/sites/default/files/accdg_francis_wang_car-2008.pdf">Francis、Wang（2008）</a>（CAR）使用1994—2004年42个国家的公司财报及投资者保护制度资料，比较应计、亏损确认和稳健性与审计师类型及制度的交互关系，发现 Big 4 的盈余质量优势随投资者保护增强而扩大，说明品牌效果依赖制度激励，其比较对象是不同制度下的大所质量差异。</p>
+<p><a href="https://researchportal.bath.ac.uk/en/publications/the-effect-of-chinas-weak-institutional-environment-on-the-qualit/">Ke、Lennox、Xin（2015）</a>（TAR）使用1995—2012年中国四大上市客户的年报、CSMAR 和审计师履历，在大陆单一监管与存在独立香港审计的 AH 客户之间进行控制及匹配比较，发现弱制度环境下四大配置的审计师经验较少、意见较宽松、费用较低且有符号异常应计较高，揭示同一品牌内部随制度环境变化的质量差异。</p>
+<p><strong>客户选择：可观察调整是否消除 Big4 effect。</strong> <a href="https://doi.org/10.2308/accr.00000009">Lawrence、Minutti-Meza、Zhang（2011）</a>（TAR）使用美国1988—2006年 Compustat、CRSP 和 I/B/E/S 数据，以规模、周转率、流动性、杠杆和 ROA 等客户特征进行 PSM，发现匹配后的异常应计、隐含资本成本和分析师预测准确度差异不显著、客户规模尤其重要，结论适用于所选特征和共同支持内的匹配比较，仍受不可观察选择与统计精度约束。</p>
+<p><a href="https://pubsonline.informs.org/doi/10.1287/mnsc.2016.2528">DeFond、Erkens、Zhang（2017）</a>（Management Science）使用美国1988—2006年及2004—2013年上市客户的财务和 Audit Analytics 数据，比较匹配比例、卡尺、放回规则及非线性选择模型等大量平衡设计，发现多数设计仍保留 Big N 在应计、重大向下重述及困境客户持续经营意见上的质量优势，显示匹配规则和统计功效会影响对质量差异的判断。</p>
+<p><a href="https://onlinelibrary.wiley.com/doi/10.1111/j.1475-679X.2004.00153.x">Johnstone、Bedard（2004）</a>（JAR）使用美国一家大型事务所2000—2001年超过7,000家上市及私人客户的内部风险评分与客户关系记录，通过接受、留任及主动终止的 Logit 比较发现事务所淘汰较高风险客户、接受相对较低风险客户，为事务所供给侧筛选提供直接资料，研究对象是接受、留任和终止客户的选择过程。</p>
+<p><a href="https://research.cuhk.edu.hk/en/publications/state-ownership-the-institutional-environment-and-auditor-choice--2/">Wang、Wong、Xia（2008）</a>（JAE）使用中国1993—2003年5,759个纯 A 股公司年度的所有权、审计师及地区制度资料，通过审计师选择 Logit 及所有权与制度交互发现国企尤其地方国企更倾向选择小型本地事务所、弱制度地区更明显，说明审计师选择有制度及产权基础，为解释审计师选择提供制度背景。</p>
 <p><strong>较强识别：改变组织归属或审计环境。</strong> <a href="https://doi.org/10.2308/accr-52106">Jiang、Wang、Wang（2019）</a>（TAR）使用美国1976—1995年20次 Big N 收购非 Big N 所涉及的331家公众客户及其前后财报，通过收购 DID、匹配、安慰剂及以收购为工具的质量 IV 发现应计等质量指标改善，却未发现 ERC、隐含资本成本或收购公告 CAR 显著改善，提供减少客户主动换所选择的准实验，但仍需客户留任及收购冲击的识别假设。</p>
 <p><a href="https://pubsonline.informs.org/doi/10.1287/mnsc.2019.3370">Che、Hope、Langli（2020）</a>（Management Science）使用挪威2004—2012年私人有限责任公司的财务、付款违约和实名合伙人资料，跟踪68名可用的非四大转入四大合伙人及随行客户，通过同一客户—合伙人组合、匹配 DID 与安慰剂发现持续经营判断、应计质量及费用提高，为四大组织环境的增量作用提供准实验线索，但合伙人招聘和客户随行仍有选择。</p>
-<p><a href="https://doi.org/10.1016/j.jacceco.2015.08.003">Lennox、Wu、Zhang（2016）</a>（JAE）使用中国2006—2012年财政部私有审计前后报表及 CSMAR 资料，在同一套报表内比较审计调整前后的盈余性质，发现调整后持续性、平滑性及应计质量提高而盈余零点不连续未减少，直接展示审计调整的作用，但处理对象是审计调整，不能当作四大相对非四大的聘用因果效应。</p>
-<p><a href="https://onlinelibrary.wiley.com/doi/10.1111/1911-3846.12636">Khurana、Lundstrom、Raman（2021）</a>（CAR）使用美国2001—2010年 Compustat、Audit Analytics 及 PCAOB 首次检查时点构成的35,246个客户年度，以错开的首次检查进行 DID 并补充固定审计师匹配和熵平衡，发现四大在重述等质量指标上的检查后改善大于非四大，识别的是监管冲击对不同审计师的差异作用，而非随机聘用四大。</p>
+<p><a href="https://doi.org/10.1016/j.jacceco.2015.08.003">Lennox、Wu、Zhang（2016）</a>（JAE）使用中国2006—2012年财政部私有审计前后报表及 CSMAR 资料，在同一套报表内比较审计调整前后的盈余性质，发现调整后持续性、平滑性及应计质量提高而盈余零点不连续未减少，直接展示审计调整的作用，处理对象是同一报表中的审计调整。</p>
+<p><a href="https://onlinelibrary.wiley.com/doi/10.1111/1911-3846.12636">Khurana、Lundstrom、Raman（2021）</a>（CAR）使用美国2001—2010年 Compustat、Audit Analytics 及 PCAOB 首次检查时点构成的35,246个客户年度，以错开的首次检查进行 DID 并补充固定审计师匹配和熵平衡，发现四大在重述等质量指标上的检查后改善大于非四大，识别的是监管检查对不同审计师的差异作用。</p>
 <p><strong>市场使用财报：消息反应与信息环境。</strong> <a href="https://bpb-us-e2.wpmucdn.com/sites.uci.edu/dist/e/360/files/2012/08/Perceived-Auditor-Quality-and-the-Earnings-Response-Coefficient.pdf">Teoh、Wong（1993）</a>（TAR）使用美国1980—1989年 Compustat、CRSP 和 I/B/E/S 的行业—资产匹配客户及134次换所事件，以盈利意外与 Big 8 身份交互的 ERC 回归和换所前后比较发现大所客户的盈利反应斜率更高，支持市场感知的可信度差异，但匹配和主动换所没有完全排除选择。</p>
 <p><a href="https://scholars.cityu.edu.hk/en/publications/audit-quality-and-properties-of-analyst-earnings-forecasts/">Behn、Choi、Kang（2008）</a>（TAR）使用美国1996—2001年 I/B/E/S 与 Compustat 的分析师覆盖客户，通过预测误差、分歧回归及审计师选择 Probit／IMR 发现 Big 5 客户预测更准确、分歧较低且非 Big 5 行业专家也有信息优势，但选择修正依赖排除变量和分布假设，原文没有将其视为已经识别的因果关系。</p>
 <p><a href="https://link.springer.com/article/10.1007/s11142-006-9014-z">Francis、Ke（2006）</a>（RAST）使用美国2001年首次非审计服务费披露前后3,133家公司、16,910个公司季度的费用、盈利预测及收益资料，以披露后、高非审计费与盈利消息的交互比较发现高非审计费客户的 ERC 在披露后降低，提供投资者利用审计独立性信息的制度事件证据，但处理对象是费用信息披露而非四大聘用。</p>
-<p><a href="https://www.gsb.stanford.edu/faculty-research/publications/public-oversight-reporting-credibility-evidence-pcaob-audit">Gipper、Leuz、Maffett（2020）</a>（RFS）使用美国上市公司的盈利消息、市场反应及 PCAOB 监管资料，利用监管实施与审计师、财年及检查展开时点的差异发现盈利消息反应和年报交易反应增强，为监管提高报告可信度提供准实验依据，但不能直接将监管效应解释为四大品牌的处理效应。</p>
+<p><a href="https://www.gsb.stanford.edu/faculty-research/publications/public-oversight-reporting-credibility-evidence-pcaob-audit">Gipper、Leuz、Maffett（2020）</a>（RFS）使用美国上市公司的盈利消息、市场反应及 PCAOB 监管资料，利用监管实施与审计师、财年及检查展开时点的差异发现盈利消息反应和年报交易反应增强，为监管提高报告可信度提供准实验依据，识别对象是监管对报告可信度的作用。</p>
 <p><strong>声誉冲击：在既有客户中研究市场价值。</strong> <a href="https://onlinelibrary.wiley.com/doi/10.1111/1475-679X.00087">Chaney、Philipich（2002）</a>（JAR）使用安达信公开承认销毁安然文件时美国其他既有客户的收益及审计关系资料，以短窗口异常收益事件研究发现客户负向反应、休斯敦办公室客户损失更大，为声誉具有市场价值提供冲击证据，但共同新闻及安达信客户事前构成仍需考虑，且不是 ERC 或四大聘用实验。</p>
 <p><a href="https://onlinelibrary.wiley.com/doi/10.1111/j.1475-679X.2008.00298.x">Weber、Willenborg、Zhang（2008）</a>（JAR）使用德国2002年 ComROAD 丑闻期间 KPMG 其他上市客户的收益与后续审计师关系，以事件收益和客户流失分析发现负向价格反应及流失增加，在相对较弱诉讼环境中支持声誉渠道的重要性，但不直接识别四大服务对财报质量或盈利消息斜率的作用。</p>
-<p><a href="https://dash.harvard.edu/entities/publication/73120378-c96c-6bd4-e053-0100007fdf3b">Skinner、Srinivasan（2012）</a>（TAR）使用日本佳丽宝舞弊及2006年中央青山被暂停执业前后的既有客户审计关系，在低诉讼环境下分析客户更换发现声誉受损后大量客户离开，提供客户重视审计师声誉的事件证据，但其结果是客户流动而非公告 CAR、ERC 或随机四大聘用。</p>
-<p><strong>费用：市场溢价的事实与解释。</strong> <a href="https://opus.lib.uts.edu.au/handle/10453/14013">Craswell、Francis、Taylor（1995）</a>（JAE）使用1,484家澳大利亚上市公司的审计费用及客户、事务所行业资料，通过品牌和行业专长的费用比较发现 Big 8 品牌及行业专长均有费用溢价，为本项目“更贵”的事实提供参照，但费用回归本身不能证明质量提升、声誉价值或客户支付意愿的因果来源。</p>
+<p><a href="https://dash.harvard.edu/entities/publication/73120378-c96c-6bd4-e053-0100007fdf3b">Skinner、Srinivasan（2012）</a>（TAR）使用日本佳丽宝舞弊及2006年中央青山被暂停执业前后的既有客户审计关系，在低诉讼环境下分析客户更换发现声誉受损后大量客户离开，提供客户重视审计师声誉的事件证据，其结果变量是声誉受损后的客户流动。</p>
+<p><strong>费用：市场溢价的事实与解释。</strong> <a href="https://opus.lib.uts.edu.au/handle/10453/14013">Craswell、Francis、Taylor（1995）</a>（JAE）使用1,484家澳大利亚上市公司的审计费用及客户、事务所行业资料，通过品牌和行业专长的费用比较发现 Big 8 品牌及行业专长均有费用溢价，为本项目“更贵”的事实提供参照，费用溢价的来源需要结合质量、声誉与客户构成进一步辨别。</p>
 <p><strong>与中国数据及分析师指标直接相关的补充研究。</strong> <a href="https://doi.org/10.2308/ajpt-50792">Eshleman、Guo（2014）</a>（AJPT）使用美国2000—2009年 Compustat 与 Audit Analytics 客户，在同年同业进行有放回 PSM 后比较重述及执法失败，发现四大客户失败较少，为实际失败指标上的匹配路线提供依据，但没有外生四大分配。</p>
-<p><a href="https://doi.org/10.2308/JIAR-2020-056">Chen、Krishnan、Li、Zhang（2022）</a>（JIAR）使用中国2006—2011年 CICPA 私有审计前后报表及 CSMAR／Wind 的6,323个公司年度，通过审计前质量的选择回归、结果控制及熵平衡发现四大客户审前质量已经更好，控制审前质量后审后异常应计优势消失而重述优势仍保留，直接揭示进入审计前的选择，但仍不是外生聘用设计。</p>
-<p><a href="https://doi.org/10.1111/jbfa.12358">He、Sidhu、Taylor（2019）</a>（JBFA）使用美国1985—2015年 I/B/E/S 和 Compustat 的25,111个公司年度，比较同一预测目标在盈利公告前后的共同及私人信息指标并使用 IMR、PSM、CEM 和 SOX 监管扩展，发现大所客户的信息环境改善更多、部分匹配结论对设定敏感，因而不能把其全部结果归为无条件的四大聘用因果效应。</p>
-<p><strong>识别方法的边界。</strong> <a href="https://doi.org/10.2308/accr-10195">Lennox、Francis、Wang（2012）</a>（TAR）通过会计研究中的选择模型方法评估说明样本选择与内生处理不同、排除变量和函数形式会影响结果，因此加入 IMR 不自动解决 Big4 effect 的选择问题。</p>
-<p><a href="https://doi.org/10.1016/j.jacceco.2009.11.004">Larcker、Rusticus（2010）</a>（JAE）通过工具变量方法分析说明弱相关性或不成立的排除限制可能使 IV 比 OLS 更不可靠，因此收购、供给或网络变量需要分别证明第一阶段与外生性，不能因工具显著便认定其识别四大的处理效应。</p>
+<p><a href="https://doi.org/10.2308/JIAR-2020-056">Chen、Krishnan、Li、Zhang（2022）</a>（JIAR）使用中国2006—2011年 CICPA 私有审计前后报表及 CSMAR／Wind 的6,323个公司年度，通过审计前质量的选择回归、结果控制及熵平衡发现四大客户审前质量已经更好，控制审前质量后审后异常应计优势消失而重述优势仍保留，直接揭示进入审计前的选择，其识别仍依赖对剩余客户选择的处理。</p>
+<p><a href="https://doi.org/10.1111/jbfa.12358">He、Sidhu、Taylor（2019）</a>（JBFA）使用美国1985—2015年 I/B/E/S 和 Compustat 的25,111个公司年度，比较同一预测目标在盈利公告前后的共同及私人信息指标并使用 IMR、PSM、CEM 和 SOX 监管扩展，发现大所客户的信息环境改善更多、部分匹配结论对设定敏感，不同结果分别对应信息环境、客户匹配和监管变化。</p>
+<p><strong>识别方法的边界。</strong> <a href="https://doi.org/10.2308/accr-10195">Lennox、Francis、Wang（2012）</a>（TAR）通过会计研究中的选择模型方法评估说明样本选择与内生处理不同、排除变量和函数形式会影响结果，强调 IMR 的解释取决于排除限制和模型设定。</p>
+<p><a href="https://doi.org/10.1016/j.jacceco.2009.11.004">Larcker、Rusticus（2010）</a>（JAE）通过工具变量方法分析说明弱相关性或不成立的排除限制可能使 IV 比 OLS 更不可靠，因此收购、供给或网络变量需要分别证明第一阶段与外生性，第一阶段与排除限制需要分别论证。</p>
 <section class="level3" id="big4-causal-method-map">
 <h3 class="anchored" data-anchor-id="big4-causal-method-map">四大效应的识别方法：文献、项目做法与证据</h3>
-<p>下表按识别方法逐项对应财报质量和市场作用：匹配与选择修正是依赖条件可交换性或模型假设的识别尝试，收购、人员迁移和声誉冲击是准实验路线，不能将它们一律称为已排除selection的因果证据；这里只列直接研究大所身份、组织平台或声誉作用（也就是大所的effect）的设计，PCAOB监管、一般审计调整、审计任期和分所扩张不作为四大聘用效应列入。</p>
+<p>下表比较直接研究大所身份、组织平台与声誉作用的设计。匹配依赖条件可交换性和共同支持，选择修正依赖模型与排除限制；收购、人员迁移和声誉冲击则利用特定事件形成比较。每项设计同时列出本项目的实施状态、结果和识别条件。</p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -743,8 +743,8 @@ CAR_{it}=\text{firm FE}+\text{year FE}+\tau(Treated_i\times Post_t\times News_{i
 </tr>
 <tr class="even">
 <td><strong>找舞弊风险相近的客户，再比较舞弊。</strong> Lennox、Pittman（2010）除客户特征匹配外，另按舞弊风险寻找对照。</td>
-<td><strong>没有完整做这一项。</strong> 我们匹配过财务特征和过去已公告的重述、违规记录，但没有按原文构造舞弊风险指标和对应的匹配样本。</td>
-<td>已完成的<a href="#pre-entry-risk-path-matching">公开风险历史匹配</a>使用换入四大前已知的信息；它不是原文那套舞弊风险匹配，也不是按未来实际违规结果匹配。</td>
+<td><strong>已做公开风险历史匹配。</strong> 使用财务特征及过去已公告的重述、违规记录；原文的舞弊风险指标与匹配样本尚待构造。</td>
+<td>已完成的<a href="#pre-entry-risk-path-matching">公开风险历史匹配</a>使用换入四大前已知的信息；信息集限定为换所前公开可得的记录。</td>
 </tr>
 <tr class="odd">
 <td><strong>找特征相近的客户，比较市场对盈利消息的反应。</strong> Teoh、Wong（1993）使用行业和资产匹配研究ERC；Behn、Choi、Kang（2008）、He、Sidhu、Taylor（2019）研究分析师信息，并调整客户选择差异。</td>
@@ -753,13 +753,13 @@ CAR_{it}=\text{firm FE}+\text{year FE}+\tau(Treated_i\times Post_t\times News_{i
 </tr>
 <tr class="even">
 <td><strong>先估计哪些公司会选择大所，再调整结果回归（IMR）。</strong> <a href="https://doi.org/10.2308/accr.2008.83.2.327">Behn、Choi、Kang（2008）</a>先用规模、长期资产占比、存货与应收占比、杠杆、亏损、ROA，以及过去两年长期债发行是否超过原长期债20%，估计聘用Big 5的概率，再计算IMR加入预测准确度和分歧回归（p.332，脚注10）。<a href="https://opus.lib.uts.edu.au/bitstream/10453/134915/4/HST%20JBFA%202018%20August.pdf">He、Sidhu、Taylor（2019）</a>使用规模、固定资产占比、应收与存货占比、杠杆、亏损、ROA和当期债务发行估计选择概率；其中只有规模也进入信息结果方程，其余六项作为主要排除变量（接受稿第18页，§4.4）。</td>
-<td><strong>没有形成IMR结果。</strong> 我们已用财务特征估计四大聘用概率并做PSM，但没有按这两篇的方法计算IMR并加入结果回归。原文这些变量中，不少已在本项目客户特征中使用；债务发行等具体定义还需逐项核对。</td>
-<td>原文的做法依赖一个具体假设：上述只放在选择方程中的变量影响审计师选择，但不直接解释第二步的分析师预测结果。它们是普通财务变量，不是额外的政策或收购冲击。本项目尚未检验这套排除假设；融资、杠杆和资产构成也可能直接影响预测或财报质量，因此不能直接把原文变量移来就视为完成识别。</td>
+<td><strong>已完成PSM，IMR待实施。</strong> 当前用财务特征估计四大聘用概率并匹配客户。原文这些变量中，不少已在本项目客户特征中使用；债务发行等具体定义还需逐项核对。</td>
+<td>原文的做法依赖一个具体假设：上述只放在选择方程中的变量影响审计师选择，但不直接解释第二步的分析师预测结果。融资、杠杆和资产构成也可能直接影响预测或财报质量，本项目使用这些排除变量前需要逐项论证其作用渠道。</td>
 </tr>
 <tr class="odd">
 <td><strong>直接观察交给审计师之前的报表，再看审计后的质量。</strong> Chen、Krishnan、Li、Zhang（2022）使用同一财年审计前的报表，调整客户原本的报表质量。</td>
-<td><strong>没有做，缺少对应数据。</strong> 我们有公开的审后财报，没有这套私有审计前报表。</td>
-<td>不能直接比较“四大接到的本期原始报表”和“审计完成后的报表”。过去三年的财务状况和公开风险记录不能替代同一财年的审计前报表。</td>
+<td><strong>当前可用的是公开审后财报。</strong> 同财年的私有审计前报表尚不可得。</td>
+<td>现有财务状况和公开风险历史用于调整客户事前差异；同财年审前—审后比较需要原始审前报表。</td>
 </tr>
 <tr class="even">
 <td><strong>比较客户换入大所前后的变化。</strong> Teoh、Wong（1993）比较换所前后ERC；Jiang、Wang、Wang（2019）、Che、Hope、Langli（2020）在各自事件设计中使用匹配前后比较。</td>
@@ -783,7 +783,7 @@ CAR_{it}=\text{firm FE}+\text{year FE}+\tau(Treated_i\times Post_t\times News_{i
 </tr>
 <tr class="even">
 <td><strong>看收购消息公布当天，原客户的股价是否上涨。</strong> Jiang、Wang、Wang（2019）另做收购公告CAR检验。</td>
-<td><strong>这项尚未做成。</strong> 已做的合并后ERC，是客户后来公布财报时的消息反应；合并公告CAR则看投资者首次得知收购消息时的反应。</td>
+<td><strong>合并公告CAR待实施。</strong> 已做的合并后ERC，是客户后来公布财报时的消息反应；合并公告CAR则看投资者首次得知收购消息时的反应。</td>
 <td>目前没有可展示的合并公告CAR结果。要完成它，需要先确定合并消息首次公开日期、当时的客户名单和对应交易日收益。</td>
 </tr>
 <tr class="odd">
@@ -798,7 +798,7 @@ CAR_{it}=\text{firm FE}+\text{year FE}+\tau(Treated_i\times Post_t\times News_{i
 </tr>
 <tr class="odd">
 <td><strong>审计师声誉受损后，看其他客户是否离开。</strong> Weber、Willenborg、Zhang（2008）、Skinner、Srinivasan（2012）研究事务所丑闻及声誉受损后的客户反应。</td>
-<td><strong>没有做成中国对应的客户流失事件检验。</strong> 已做的是安达信事件的股价反应，以及单个客户收到MAO后是否离开四大。</td>
+<td><strong>中国对应的客户流失事件检验待实施。</strong> 已做的是安达信事件的股价反应，以及单个客户收到MAO后是否离开四大。</td>
 <td><a href="#客户选择与审计意见四大如何形成较低风险的客户组合">MAO与客户进出</a>有显著关系，但它回答的是“客户自身收到风险意见后是否离开”，不是“事务所因别的客户出事而声誉受损后，其余客户是否离开”。</td>
 </tr>
 <tr class="even">
@@ -1052,7 +1052,7 @@ Lawrence, Minutti-Meza and Zhang (2011)｜中文逐篇说明、原文定位
 <li>额外尝试；RESET非线性项、单项客户特征匹配、核/加权、选择模型及bootstrap等。客户规模的作用是核心比较之一</li>
 <li>原文定位；正式pp.262–265（附件PDF pp.4–7），§III、DA变量/回归式、匹配表及敏感性分析</li>
 </ul>
-<p>原文主要用于说明客户特征尤其规模能解释部分审计质量代理差异；不能把“匹配后不显著”直接解释为真实处理效应为零。匹配改变了支持区间与估计总体，且未观察选择仍在；当年X也可能受审计/披露影响。</p>
+<p>原文显示客户特征尤其规模能解释部分审计质量代理差异。匹配后不显著需要结合估计精度和比较总体解释。匹配改变了支持区间与估计总体，且未观察选择仍在；当年X也可能受审计/披露影响。</p>
 </details>
 <details>
 <summary>
@@ -1066,10 +1066,10 @@ DeFond, Erkens and Zhang (2017)｜中文逐篇说明、原文定位
 <li>设计变动；1:1/1:2/1:3；卡尺0–30%倾向得分标准差；随机二次/三次/交互项；有/无放回。0.03原始距离与0.2倍SD是不同量纲</li>
 <li>平衡和功效；各有/无放回条件下形成1,500个平衡迭代；变量均值t检验p&gt;0.10，并检查标准化偏差、L1、保留N和控制重复使用；另讨论中等效应的统计功效</li>
 <li>结果模型；按匹配设计的概率权重估计，公司聚类；各Y回归控制见附录A/B。本轮未重新穷尽每个Y的全部控制名，不应从五项选择变量推定结果模型只有五项</li>
-<li>数据处理；比较先对基础项目缩尾再构造比率与先构造比率再缩尾；讨论行业—年最小观测数、异常应计筛选及代理有效性。这些是复现差异，不是授权项目改口径</li>
+<li>数据处理；比较先对基础项目缩尾再构造比率与先构造比率再缩尾；讨论行业—年最小观测数、异常应计筛选及代理有效性。这些处理差异影响复现可比性</li>
 <li>原文定位；正式pp.3631–3637，Table 2及设计敏感性表、附录A/B；附件PDF p.5对应p.3632</li>
 </ul>
-<p>多数合格设计仍支持Big N质量优势的关联。本文反驳的是“某一次PSM消除差异足以证明完全选择解释”，并未通过随机冲击消除未观察选择。不同合格设计结果都应呈现；不能挑出最显著设计作主结果。</p>
+<p>多数合格设计仍保留Big N质量优势的关联，表明匹配结果对设计和统计功效敏感。解释时应呈现合格设计的结果分布，并保留对未观察选择的讨论。</p>
 </details>
 <details>
 <summary>
@@ -1086,7 +1086,7 @@ Eshleman and Guo (2014)｜中文逐篇说明、原文定位
 <li>分类；Andersen退出前属Big4/历史大所分类处理；不能直接按项目现行四大品牌定义代入历史样本</li>
 <li>原文定位；正式pp.202–205（PDF pp.6–9），样本流程、Eq.(2)、主匹配表/表注</li>
 </ul>
-<p>这篇结果说明更严重失败代理和匹配设定会改变结论；“controlling endogenous choice”是其研究目标，不等于随机化。排除换所年意味着主要不是聘用四大前后的进入设计。</p>
+<p>该研究显示，更严重的失败代理和匹配设定会影响结论。其样本排除换所年，主要比较匹配后大所与非大所客户的失败差异。</p>
 </details>
 </section>
 <section class="level4" id="文献专题-2长期风险与事务所客户选择">
@@ -1184,7 +1184,7 @@ Johnstone and Bedard (2004)｜中文逐篇说明、原文定位
 <li>模型/FE-SE；二元logit；本轮未确认FE/聚类完整细节，不能写作“公司聚类”或“无FE”</li>
 <li>原文定位；客户分类、内部风险量表、研究设计与接纳/继续/终止结果表；细分私有量表不能用公开ROA替代并称同一指标</li>
 </ul>
-<p>所方主动终止高风险客户说明供给端筛选真实存在。它不证明所有四大质量差异都由筛选引起，也没有估计接受四大的平均处理效应。</p>
+<p>所方主动终止高风险客户为供给端筛选提供直接证据，研究解释的是客户组合调整这一环节。</p>
 </details>
 </section>
 <section class="level4" id="文献专题-3中国审计前质量审计调整与制度环境">
@@ -1247,13 +1247,13 @@ Johnstone and Bedard (2004)｜中文逐篇说明、原文定位
 <td>Chen、Krishnan、Li、Zhang (2022)</td>
 <td>已有审后应计、意见、三种重述及共同样本嵌套回归。</td>
 <td>项目没有原文私有审前报表/调整；公共协变量不直接测量审前盈余质量。有符号应计也不同于绝对值。</td>
-<td>未声称完成私有审前后复现或熵平衡估计；剩余结果差异不证明没有不可观察选择。</td>
+<td>私有审前后比较及熵平衡待实施；现有结果仍需区分服务与未观察选择。</td>
 </tr>
 <tr class="even">
 <td>C16：Lennox、Wu、Zhang (2016)</td>
 <td>已有审后 DA/CFO 及多种盈余质量指标，普通和匹配换所比较已经估计。</td>
 <td>缺少私有审前报表配对；更换事务所不同于测量本次审计已入账的调整。</td>
-<td>公共数据不能恢复这项直接审计前后比较；原文是测量参照，不是已完成的四大因果复现。</td>
+<td>原文为审前后质量测量提供参照，本项目的对应检验需取得审前报表。</td>
 </tr>
 <tr class="odd">
 <td>Ke、Lennox、Xin (2015)</td>
@@ -1269,13 +1269,13 @@ Chen, Krishnan, Li and Zhang (2022)｜中文逐篇说明、原文定位
 </summary>
 <p><strong>Songsheng Chen, Gopal V. Krishnan, Wenying Li, Yinqi Zhang.</strong> <em>Do Big 4 Auditors Enhance Audit Quality in China? A “Behind the Scenes Look”</em>. Journal of International Accounting Research 21(2), 31–56，正式发表2022；本地附件为正式排版。在线核验：<a href="https://doi.org/10.2308/JIAR-2020-056">Chen、Krishnan、Li、Zhang（2022）</a>、<a href="https://www.american.edu/uploads/resume/cv_yinqizhang_dec24.pdf">作者机构CV</a>。本轮出版商/完整CV访问有限，但实时搜索可检索作者CV记录；正式全文首页提供作者、年份、卷期页码。SSRN 3577732的旧工作论文题目不同，不能混同其结论与正式版。</p>
 <p>全文依据：本地原文核对件；PDF6—8（刊页36—38）样本及模型，PDF12/表3—4结果，PDF21—22/表7审前后质量，PDF26—27变量附录。</p>
-<p><strong>数据与样本。</strong> CICPA私有数据记录审计前后资产、权益、税前利润、应付税款及签字人属性；CSMAR用于财务与审计所信息，重述亦用Wind，事务所合并手工查CSRC/CICPA。2006—2011初始10,466公司年，删H股371、金融197、审计师属性缺失1,145、其他变量缺失2,430，留下6,323。作者没有提供可由本文逐行恢复的完整公司名单；不能将其视为CSMAR全客户宇宙。</p>
+<p><strong>数据与样本。</strong> CICPA私有数据记录审计前后资产、权益、税前利润、应付税款及签字人属性；CSMAR用于财务与审计所信息，重述亦用Wind，事务所合并手工查CSRC/CICPA。2006—2011初始10,466公司年，删H股371、金融197、审计师属性缺失1,145、其他变量缺失2,430，留下6,323。这一筛选样本对应私有数据与CSMAR的可用交集；完整公司名单未提供。</p>
 <p><strong>Y构造。</strong> 审前NI=审前税前利润×(1−法定税率)。审前总应计用审前NI−CFO，并以审前资产标准化，通过modified Jones得到PREDAC；其分母与本项目上一年资产不同，完整第一阶段分组和实现细节未充分披露。PREROE=1表示审前NI/审前权益在[0,.02]或[.06,.08]。POSTDAC为审后有符号DA，不能直接以绝对DA替代。RESTA=当前财年的报表随后被重述，不要求本项目严格口径中的“盈余调整方向明确非零”。MAO包含带解释段的无保留、保留、无法表示、否定意见。</p>
 <p>直接调整Y为DWNAJ_DUM、DWNAJ_CF、DWNAJ_TA：是否向下调整NI、(审前NI−审后NI)/|CFO|、(审前NI−审后NI)/审前资产。直接调整与事后重述含义不同：前者是在本次审计中发现并入账，后者是后续披露的报表问题。</p>
 <p><strong>选择模型（原文式1）。</strong> Logit的因变量BIG4，独立变量为PREDAC、PREROE、SIZE、LEVERAGE、ROA、ATURN、LLOSS、LMAO、CURR、GROWTH、ISSUE、SOE、FOREIGN、CONTROL、GEO，另加年和行业。SIZE为log当年资产；ROA/ATURN分别以当年资产标准化；LLOSS/LMAO是上一年；CURR为流动资产/流动负债；ISSUE为当年发行；FOREIGN为B/H股；CONTROL为主导股东份额；GEO为省级市场发展指数的log。负PREDAC或PREROE系数指向较高审前质量客户与Big4匹配，不区分供需两侧筛选。</p>
 <p><strong>结果模型（式2—3）。</strong> POSTDAC/RESTA先用BIG4与财务控制，再加入PREDAC/PREROE；MAO/调整模型直接控制审前质量。控制包括SIZE、LNAGE、LEVERAGE、ROA、LOSS、ATURN、ISSUE、SUBSID、SOE、FOREIGN、CONTROL、GEO、TENURE、AUDITMA、MROTFIRST、MROTFINAL、SPECIALIST、INFLUENCE；重述模型加LRESTA，意见模型加LMAO。年与行业FE、公司聚类；连续变量1%/99%缩尾。SUBSID为log(1+子公司数)，TENURE为所任期log；SPECIALIST考虑任一签字人在行业内按客户资产的份额领先，INFLUENCE指客户为任一签字人的最大收费客户。不能把签字人专长误当审计所专长。</p>
-<p><strong>熵平衡（PDF8）。</strong> 平衡式1全部独立变量的均值，估计式2—3，并比较全样本和四大/本土Top4组成的Top8样本。原文并未在此说明高阶矩平衡，不能自行补成方差、偏度约束；这也不是PSM、Heckman或IV。处理前质量测量有噪声，且年度审计之前四大可能已参与中期工作；“审前”并非必然完全未经当期审计影响。</p>
-<p><strong>document与边界。</strong> 在主要全样本及Top8比较中，加审前质量后，Big4与较低POSTDAC的关系消失，较低RESTA关系保留；四大向下调整更少。PDF8脚注11说明，与非Top4本土所比较时，控制PREDAC后POSTDAC关系仍可保留，不能声称所有对照选择下均消失。表7又比较审前后持续性、应计质量。结果说明衡量不同Y会得到不同判断，不能选其中一个Y写成普遍因果效果，也不能用“加入审前质量后仍显著”排除所有反向因果。</p>
+<p><strong>熵平衡（PDF8）。</strong> 平衡式1全部独立变量的均值，估计式2—3，并比较全样本和四大/本土Top4组成的Top8样本。原文此处说明的是均值平衡，高阶矩约束未披露。处理前质量测量有噪声，且年度审计之前四大可能已参与中期工作；“审前”并非必然完全未经当期审计影响。</p>
+<p><strong>document与边界。</strong> 在主要全样本及Top8比较中，加审前质量后，Big4与较低POSTDAC的关系消失，较低RESTA关系保留；四大向下调整更少。PDF8脚注11说明，与非Top4本土所比较时，控制PREDAC后POSTDAC关系仍可保留，不能声称所有对照选择下均消失。表7又比较审前后持续性、应计质量。结论随结果变量和对照选择而变化，加入审前质量后的差异仍受测量噪声与剩余选择约束。</p>
 </details>
 <details>
 <summary>
@@ -1292,18 +1292,18 @@ C16：Lennox, Wu and Zhang (2016)｜中文逐篇说明、原文定位
 <li>另比较有符号及绝对应计和零盈余分布。审计调整对signed与absolute accruals的影响不同，使用|DA|可能漏掉方向变化。</li>
 </ol>
 <p>表3变化指标标准误公司聚类；公司标准差比较为公司层面。其他检验的SE不应一概套同一说明。该文没有用PSM或IV工具化Big4分配；没有证据时不补写输入缩尾规则。</p>
-<p><strong>识别与项目对应。</strong> 配对消除了把不同公司基准混为调整的问题，直接观察已入账调整，但没有随机分配客户到Big4。项目只能计算审后持续性/平滑等可比描述，无法实施原文私有审前后配对。与陈文相同，私有数据只解释识别边界，不列为当前必须补购的公共变量。</p>
+<p><strong>识别与项目对应。</strong> 配对消除了把不同公司基准混为调整的问题，直接观察已入账调整，但没有随机分配客户到Big4。项目只能计算审后持续性/平滑等可比描述，无法实施原文私有审前后配对。直接审前后配对需要相应私有数据。</p>
 </details>
 <details>
 <summary>
 Ke, Lennox and Xin (2015)｜中文逐篇说明、原文定位
 </summary>
-<p><strong>Bin Ke, Clive S. Lennox, Qingquan Xin.</strong> <em>The Effect of China’s Weak Institutional Environment on the Quality of Big 4 Audits</em>. The Accounting Review 90(4), 1591–1619；2014 online、正式2015。<a href="https://researchportal.bath.ac.uk/en/publications/the-effect-of-chinas-weak-institutional-environment-on-the-qualit/">Ke、Lennox、Xin（2015）</a>。<strong>本地51页附件为SSRN工作论文2510211</strong>，不能把下面实现细节都声称已在最终版核对。</p>
+<p><strong>Bin Ke, Clive S. Lennox, Qingquan Xin.</strong> <em>The Effect of China’s Weak Institutional Environment on the Quality of Big 4 Audits</em>. The Accounting Review 90(4), 1591–1619；2014 online、正式2015。<a href="https://researchportal.bath.ac.uk/en/publications/the-effect-of-chinas-weak-institutional-environment-on-the-qualit/">Ke、Lennox、Xin（2015）</a>。<strong>本地51页附件为SSRN工作论文2510211</strong>，下述实现细节按该工作论文记录。</p>
 <p>本地原文核对件；PDF19—23原始模型/样本，PDF29—30式7匹配，PDF39—42变量/样本表，PDF49—51表8匹配；印刷页码通常比PDF小2。</p>
 <p><strong>数据、报告与筛选。</strong> 中国上市公司Big4年度A股审计，1995—2012；CSMAR、年报及A/B/H报表、CICPA个人资料。1,414删金融125、新加坡7、香港非四大2，剩1,280。弱环境910=纯A553+AB331+没有独立H审计的AH26；强环境370为有独立H审计的AH。经验Y可用1,185；意见1,280；费817（2001前未披露166、未披露23、A/H/B费未单列274）；应计1,214。不是每个回归N均为1,280，更不是全部审计客户。</p>
 <p><strong>Y构造。</strong> EXPERIENCE为两名签字人相对经验均值；经验按签过至少一个上市审计的年份积累，在所×年内排名，REL_YEARS=100−(rank−1)/(Njt−1)×100。OPINION为非干净意见；费用取log；AWCA及DA_Jones为有符号应计。正文Jones与附录modified Jones表述并不提供可逐行复算的完整第一阶段，不能编写其AWCA/DA精确公式。</p>
 <p><strong>匹配模型与操作（式7/表8）。</strong> 表8明确probit，AH为1；变量SIZE、LEV、ROE、LOSS、MB、SALESGROWTH、SOE、CAPE、LSHARE、NSUB、FOROPS、log segments、CURRENT、ARINV、RETURN、CASH、VOL、PC。CAPE=资本支出/资产，LSHARE最大股东份额；PC为董事长或CEO当前/曾经的政府或军队任职。VOL是市场模型残差方差，不应换成标准差；NSUB为子公司数平方根，不是log。找到每个AH观测的最近概率，绝对差严格&lt;0.01，删39对，留下331强+331弱。原文未明确有放回与否、额外年/行业精确匹配，不能自行补写。平衡表报告均值/中位数差异检验，不是本项目SMD≤10%的硬门槛。</p>
-<p><strong>结果回归。</strong> 匹配后仍估计意见、经验、费用、应计模型，各Y控制集合不同；包含SIZE、LEV、ROE/LOSS、SOE及视模型而定的CURRENT、ARINV、RETURN、CASH、VOL、CFO、MB、NSUB、FOROPS、segments、DOUBLE等，不能把18项AH模型变量机械当成所有结果方程控制。公司聚类；连续变量1%/99%缩尾；年/行业处理应依各表，未逐表确认的规格不统一宣称。SHORT按上市/交叉上市初期分组的检验也不是外生随机处理。</p>
+<p><strong>结果回归。</strong> 匹配后仍估计意见、经验、费用、应计模型，各Y控制集合不同；包含SIZE、LEV、ROE/LOSS、SOE及视模型而定的CURRENT、ARINV、RETURN、CASH、VOL、CFO、MB、NSUB、FOROPS、segments、DOUBLE等，不能把18项AH模型变量机械当成所有结果方程控制。公司聚类；连续变量1%/99%缩尾；年/行业处理按各表分别确认。SHORT按上市/交叉上市初期分组的检验也不是外生随机处理。</p>
 <p><strong>识别与项目对应。</strong> 已有签字人、费、意见、signed DA并不表示已有本文相对经验、AWCA和DOUBLE。还须核验A/B/H和独立H报告、两地办公室、境外上市日期、segments、政治关联。当前29是四大/非四大选择Logit，34是换入四大DID；都不是本文AH/制度环境匹配。本文PSM不能排除未观察跨境融资需求与治理质量的选择。</p>
 </details>
 </section>
@@ -1411,7 +1411,7 @@ Wang, Wong and Xia (2008)｜中文逐篇说明、原文定位
 <summary>
 Lisic, Silveri, Song and Wang (2015)｜中文逐篇说明、原文定位
 </summary>
-<p>Ling Lei Lisic、Sabatino (Dino) Silveri、Yanheng Song、Kun Wang，<em>Accounting fraud, auditing, and the role of government sanctions in China</em>，<strong>Journal of Business Research 68(6):1186–1195</strong>。本地为2013年10月工作稿，以下方法细节来自该稿，不把草稿样本/系数标为正式版数值。<a href="https://digitalcommons.memphis.edu/facpubs/11504/">Lisic、Silveri、Song、Wang（2015）</a>，<a href="https://doi.org/10.1016/j.jbusres.2014.11.013">Lisic、Silveri、Song、Wang（2015）</a>，<a href="https://ssrn.com/abstract=2402330">Lisic、Silveri、Song、Wang（2015）</a>。</p>
+<p>Ling Lei Lisic、Sabatino (Dino) Silveri、Yanheng Song、Kun Wang，<em>Accounting fraud, auditing, and the role of government sanctions in China</em>，<strong>Journal of Business Research 68(6):1186–1195</strong>。本地为2013年10月工作稿，以下方法细节来自该稿，下文样本与系数均按该工作稿标注。<a href="https://digitalcommons.memphis.edu/facpubs/11504/">Lisic、Silveri、Song、Wang（2015）</a>，<a href="https://doi.org/10.1016/j.jbusres.2014.11.013">Lisic、Silveri、Song、Wang（2015）</a>，<a href="https://ssrn.com/abstract=2402330">Lisic、Silveri、Song、Wang（2015）</a>。</p>
 <ul>
 <li>总体/数据；中国非金融上市公司，1999–2005舞弊发生年度；CSMAR监管舞弊、财务/审计资料；精确回归N本轮未重核</li>
 <li>大所定义；每年上市客户总资产规模排名Top10及所规模连续指标；不是四大，也不是本项目本土八大固定分类</li>
@@ -1421,7 +1421,7 @@ Lisic, Silveri, Song and Wang (2015)｜中文逐篇说明、原文定位
 <li>FE-SE/控制；完整第一阶段、逐列结果控制、FE/聚类本轮未确认；不能从相似美国文献借用清单</li>
 <li>定位；本地2013稿的研究设计、自我选择稳健性、舞弊分类和治理控制段；正式版需另作逐表版本对照</li>
 </ul>
-<p>政府惩罚有助于解释大型所激励，但不是本文已建立的随机惩罚工具变量。项目可借用严重失败代理与供给激励讨论，不把Top10结果直接称Big4效应，也不把IMR当识别已经完成。</p>
+<p>该研究为讨论政府惩罚下的大所激励和严重失败代理提供参照。其Top10分类与IMR模型分别按原文口径解释，项目中的四大效应仍需对应设计识别。</p>
 </details>
 </section>
 <section class="level4" id="文献专题-5组织变化与同一客户的处理比较">
@@ -1503,7 +1503,7 @@ Jiang, Wang and Wang (2019)｜中文逐篇说明、原文定位
 <li>IV；附录Table A3：Acquisition指被收购客户的收购后状态；正文2SLS定义为处理客户收购后五年取1，其他取0。第一阶段BigN~Acquisition＋控制，第二阶段以预测BigN解释质量；样本为1974–2000曾用非Big N的Compustat公司</li>
 <li>定位；接受稿研究设计、主结果/稳健性；PDF p.25的2SLS说明、PDF p.49 Table A3。正文五年范围比表注“收购后时期”更明确，不能忽略</li>
 </ul>
-<p>收购使客户进入大所不完全出于主动择所，因此比常规换所更强；但被收购所本身、人员保留、客户是否继续委托仍可能选择。原文约96%受影响客户转入大所，也不意味着剩余选择为零。IV还需无并购直接效应与无其他同步变化，强第一阶段不证明排除限制。</p>
+<p>收购使客户进入大所不完全出于主动择所，因此比常规换所更强；但被收购所本身、人员保留、客户是否继续委托仍可能选择。原文约96%受影响客户转入大所。收购IV的解释还依赖并购仅经审计师身份影响结果，以及同期其他变化得到控制。</p>
 <p><strong>同一论文的市场设计：质量 DID、盈余 ERC、收购公告 CAR 分开。</strong></p>
 <p>Online Appendix A6 PanelC，<strong>Online p.9 / PDF页55</strong>：</p>
 <p>[ CAR_{it}=a+b_1S_{it}+b_2Treat_i+b_3S_{it}Treat_i+ b_4BigN_{it}+b_5S_{it}BigN_{it}+YearFE_t+S_{it},YearFE_t+e_{it}. ]</p>
@@ -1537,7 +1537,7 @@ Che, Hope and Langli (2020)｜中文逐篇说明、原文定位
 <li>选择/反向因果检验；非Big4→非Big4迁移安慰剂，合并子样本，跟随/未跟随客户；客户ROA/杠杆/增长/亏损、国外业务与上市需求等变化检验</li>
 <li>定位；正式研究设计§3，PDF p.8控制；§5.1/Table 10、§5.4–5.7/Table 12，正式pp.4566–4568</li>
 </ul>
-<p>保持客户和人员身份能削弱“客户不同”“四大招到更好人”这两种解释。仍须考虑谁被招入、哪些客户跟随、同步需求变化；财务健康未显著改善也不能证明任何潜在混杂都不存在。该文的时序和安慰剂是机制辨别证据，不是完全随机指派。</p>
+<p>保持客户和人员身份能削弱“客户不同”“四大招到更好人”这两种解释。仍须考虑谁被招入、哪些客户跟随、同步需求变化；时序和安慰剂检验为机制辨别提供支持，剩余混杂取决于招聘、客户随行和同期需求变化。</p>
 </details>
 </section>
 <section class="level4" id="文献专题-6选择模型与工具变量的适用条件">
@@ -1634,7 +1634,7 @@ Lennox, Francis and Wang (2012)｜中文逐篇说明、原文定位
 <p>[ D_i=1{W_i+v_i&gt;0}, Y_i=X_i+D_i+u_i. ]</p>
 <p>在相应正态设定下，全样本的选择修正项形式为</p>
 <p>[ _i=D_i -(1-D_i). ]</p>
-<p>该表达只说明为何两边选择不同，不表示任何logit预测概率均可直接塞入正态IMR。R03原文logistic＋IMR的复现问题应明确保留。项目未找到并批准可信排除限制前，不新增“以函数形式解决选择”的主因果模型。</p>
+<p>该表达对应正态选择模型，需要与第一阶段的链接函数和分布假设一致。Du、Zhou文中logistic＋IMR的具体构造仍待确认；本项目实施选择修正前需先论证排除限制。</p>
 </details>
 </section>
 <section class="level4" id="文献专题-7连续盈利消息与市场反应">
@@ -1732,7 +1732,7 @@ Teoh and Wong (1993)｜中文逐篇说明、原文定位
 <li>换所筛选；前后各两年财务/CRSP可用；非子公司；前两年和后两年分别保留同一审计师；预测I/B/E/S可用，1976以前15事件补Value Line；p.353</li>
 <li>最终换所；134事件：非Big8→Big8 114、反向20；1973–1988。前后各两年估计，控制缺失另去约3%；134不是回归公司年数；Table1，p.353；Table4注，p.362；fn.21</li>
 </ul>
-<p>原文没有可复用的完整证券代码清单、匹配权重/是否重复用同一Big8匹配者的程序或逐条连接代码。本稿不补造。匹配依客户资产，回归规模控制则用年初市值，二者要区分。</p>
+<p>原文没有可复用的完整证券代码清单、匹配权重/是否重复用同一Big8匹配者的程序或逐条连接代码。这些信息尚待原始资料补充。匹配依客户资产，回归规模控制则用年初市值，二者要区分。</p>
 <p><strong>2.2 消息与Y的构造</strong></p>
 <p>[ UE_{it}=, CAR1_{it}=<em>{d=IB}^{ED}(1+R</em>{id}-R_{md}). ]</p>
 <p>IB是一致预测日、ED是年度盈余公告日；股价缺失改用财年末股价。I/B/E/S每月第三个周四更新中位数一致预测：公告在该日之后则取本月，否则取上月，最大预测提前200交易日；100日上限为敏感性分析。实际EPS及公告日期来自Wall Street Journal Index。CAR从<strong>预测日到公告日</strong>累计，不能改写为统一三日CAR。匹配样本累计窗平均Big8 28.80日、非Big8 29.21日；中位数18与16日；换所样本均值27.65与30.98日（Table2，p.354）。</p>
@@ -1787,10 +1787,10 @@ Du and Zhou (2014)｜中文逐篇说明、原文定位
 <li>Table7B post-2001；.056(t=1.38)、.073(t=1.75)；不能说两种收益口径均5%显著</li>
 <li>Table9 IMR，N=10,139；完整 .251(t=.30)、−.244(t=−.29)；简化 .062(t=1.30)、.074(t=1.53)；不显著；应另在同样10,139样本估计未校正式，才可区分失样与校正影响；原文未完成此分解</li>
 </ul>
-<p>另有样本冲突：Table7A post-2001 N=16,082，7B为17,126，而总样本和pre-2001未变；未解释。BIG5的若干表注又写成“top5 auditors in China”，而p.187明确列国际Big5；本稿以方法正文定义为准并提示表注不一致。上述原文疑点决定它不是可一键准确复刻的中国四大因果证据。</p>
+<p>另有样本冲突：Table7A post-2001 N=16,082，7B为17,126，而总样本和pre-2001未变；未解释。BIG5的若干表注又写成“top5 auditors in China”，而p.187明确列国际Big5；本稿以方法正文定义为准并提示表注不一致。复现时需要先确认上述公式、样本与分类疑点。</p>
 <p><strong>3.4 美国部分及项目差别</strong></p>
 <p>美国正文1983–2012、I/B/E/S预测＋Compustat财务＋CRSP收益，删除少于100日收益、四位SIC行业BigN占100%、模型缺失，上下1%缩尾后38,206公司年（p.187）；摘要却写1984起。美国UE1用实际−一致预测/股价，收益为公告日起300日累计（p.186原文from，未完整列方向及端点），不是中国三日与年度差分消息。对照只能解释不同制度和不同定义下的关联，不能直接作同尺度因果强弱排名。</p>
-<p>项目市场基准是滞后一交易日流通市值加权A股收益，非原文等权；项目连续S用券商中位数/绝对预测EPS，非中国UE2；61为三组、共同UE×控制斜率而无审计师三重控制交互；74为日度FE，80为公司/财年FE的年报CAR曲线。项目没有按本篇构造九项logit-IMR并验证其排除限制。R03应在表中标为“已核验原文、方法可参考、公式/样本有待作者确认”，不能用它保证我们的选择已经被排除。</p>
+<p>项目市场基准是滞后一交易日流通市值加权A股收益，非原文等权；项目连续S用券商中位数/绝对预测EPS，非中国UE2；61为三组、共同UE×控制斜率而无审计师三重控制交互；74为日度FE，80为公司/财年FE的年报CAR曲线。项目没有按本篇构造九项logit-IMR并验证其排除限制。该文的方法可供比较，公式与样本疑点仍待作者资料确认。</p>
 </details>
 <details>
 <summary>
@@ -1920,22 +1920,22 @@ Behn, Choi and Kang (2008)｜中文逐篇说明、原文定位
 <li>FE/SE；年dummies，公司聚类、White异方差稳健；没有报告公司FE或行业FE（p.332）</li>
 <li>换所敏感性；Big5→非Big5准确度变差；非Big5→Big5准确度改善不显著、分歧下降仅边际t=1.71；这些为untabulated，不是外生换所DID（p.346及fn.25）</li>
 </ul>
-<p>论文p.347明确说没有显示因果关系，未知遗漏因素不能排除。probit-IMR也不是已经验证的外生IV；没有充分经济论证的第一阶段变量不能直接当我们的排除工具。</p>
-<p><strong>项目差别</strong>：当前<code>abs_surprise_60</code>用绝对实际EPS作分母，不是原文股价；主S用180日中位数，原文ACCY两月均值；项目当前行情预测去重按券商，而原文按分析师；项目BKLS数据比较同券商对同一下一财年、公告前60天/后30天的预测（部分信息样本要求正实际EPS），不是原文当年公告前ACCY/DISP。<code>63_information_quality.do</code>输出delta_rho、delta_h、delta_s、修正及误差变化，是其他信息指标。可以说数据支持做邻近的预测性质检验，但不能称已复现R02，不能把分歧较小等同于审计师造成报告更准。</p>
+<p>论文p.347将遗漏因素列为因果解释的限制。其probit-IMR依赖选择模型假设；本项目采用相应排除变量前仍需经济论证。</p>
+<p><strong>项目差别</strong>：当前<code>abs_surprise_60</code>用绝对实际EPS作分母，不是原文股价；主S用180日中位数，原文ACCY两月均值；项目当前行情预测去重按券商，而原文按分析师；项目BKLS数据比较同券商对同一下一财年、公告前60天/后30天的预测（部分信息样本要求正实际EPS），不是原文当年公告前ACCY/DISP。<code>63_information_quality.do</code>输出delta_rho、delta_h、delta_s、修正及误差变化，是其他信息指标。项目已形成邻近的信息性质检验，精确复现需统一预测主体、时间窗口与缩放口径。</p>
 </details>
 <details>
 <summary>
 Barron, Kim, Lim and Stevens (1998；BKLS)｜中文逐篇说明、原文定位
 </summary>
 <p><strong>完整书目：</strong> Orie E. Barron; Oliver Kim; Steve C. Lim; Douglas E. Stevens (1998). <em>Using Analysts’ Forecasts to Measure Properties of Analysts’ Information Environment</em>. The Accounting Review 73(4), 421–433。 <a href="https://pure.psu.edu/en/publications/using-analysts-forecasts-to-measure-properties-of-analysts-inform/">Barron、Kim、Lim、Stevens（1998）</a>。核读模型、应用局限与结论（pp.423–429）；未逐式核验附录扫描证明。</p>
-<p>这是一篇模型和测量方法文章，不是一个Big4 treatment设计。没有属于其自身的国家样本、公司年N、选择方程、匹配、结果回归controls/FE/SE、DID处理组或IV。</p>
+<p>该文建立分析师信息环境的模型与测量方法；其贡献在于将预测矩与潜在信息性质连接。</p>
 <p>原文 pp.423–424 eq.(1)–(8)：共同先验/信号精度为h，个体私有信号误差正态、独立，私有精度可以在一般模型中不同；预测是条件期望。模型的重要条件是任意两位分析师共同的信息对全部分析师共同。所谓“私人”不等于内幕，也可来自对公开材料的不同加工。</p>
 <p>原文 pp.425–428，Proposition 1/2/3与Corollary 1：</p>
 <p>[ D=E[],SE=E[(实际盈利-平均预测)^2],N=. ]</p>
 <p>[ V=SE+(1-1/N)D,C=SE-D/N,=C/V. ]</p>
 <p>V为总体不确定性，C为共同误差的协方差部分。若进一步假定各分析师私人信息精度相同，得到：</p>
 <p>[ h=C/V^2,s=D/V^2,=h/(h+s). ]</p>
-<p>不能因预测分歧变小就认定信息质量改善，也不能因rho增加就认定h增加。<code>C&lt;0</code>会产生负h，不符合模型精度条件；有限样本实现误差本身不一定符合理论期望。</p>
+<p>预测分歧、rho与h分别度量不同性质，需要结合模型关系共同解释。<code>C&lt;0</code>会产生负h，不符合模型精度条件；有限样本实现误差本身不一定符合理论期望。</p>
 <p>应用局限在p.429，第III节：预测偏差会污染误差和共同程度；从其他分析师行为学习的herding模糊共同/私人信息区分；理论D和SE是无条件期望，实际研究需要多个观测的聚合来减少测量误差。He的公司年plug-in值和本项目的公司年指标是实证实现，不是直接观察到真实h/s。</p>
 <p><strong>项目实现差别</strong></p>
 <p>本项目基于同券商而非独立个人分析师，用公司年两侧实现分歧/平方误差代入，且按He将二者除以目标年实际EPS绝对值。归一化不改变rho，但会改变h/s单位；不同研究缩放口径下的精度系数不可直接比较。原EPS的拆送股口径和修订值仍未统一，不能把条件一致性检查等同于潜在信息精度被无误差测量。</p>
@@ -1957,7 +1957,7 @@ He, Sidhu and Taylor (2019)｜中文逐篇说明、原文定位
 <p><code>Δ信息指标 = Audit + Surp + Size + MB + Analysts</code>。Surp为t年度实现EPS与前侧均值预测差的绝对值／|t实际EPS|；Size为市值对数（附录定义），MB为市场账面比，Analysts为计算信息指标的预测人数。正文对Size有一般“市场规模”描述，编码应以附录对数定义核对。它不是项目价格图的有符号surprise，也不以预测中位数作分母。</p>
 <p>由于h/s偏态，主回归使用<strong>每年每个两位SIC行业内部的变量排序</strong>，不直接拿原始h/s作OLS。作者在内部p.13脚注13将排序解释为控制行业/年度差异，主式不另列这些FE；不要改写成常规行业×年度吸收FE。SE按公司和年度双向聚类（内部p.13、表4）。</p>
 <p>表4的BigN项（排序变量尺度）：Δrho=0.537，t=16.35；Δh=0.523，t=16.40；Δs=0.447，t=15.69；均标为1%显著、N=25,111。它们不是原始rho变化0.537或精度增加0.523，不能和中国原尺度系数直接比大小。其余行业代理方向一致。</p>
-<p><strong>原文自述与表格的一处不一致：</strong> 正文描述三个变化均值为正，但接受稿表2中Δs均值为−14.712，中位数0.002。因此不可声称该稿的三个原始变化均值全为正。回归条件关系与原始均值是不同对象。</p>
+<p><strong>原文自述与表格的一处不一致：</strong> 正文描述三个变化均值为正，但接受稿表2中Δs均值为−14.712，中位数0.002。三个原始变化的均值据此按表2分别报告。回归条件关系与原始均值是不同对象。</p>
 <p><strong>5.3 selection处理与可复制细节</strong></p>
 <ul>
 <li>公告前后变化；审计师身份在短窗口内固定，以变化而非水平为Y；能减轻部分稳定水平混杂；不能控制企业披露能力对公告增量信息的影响</li>
@@ -1972,11 +1972,11 @@ He, Sidhu and Taylor (2019)｜中文逐篇说明、原文定位
 <p>§4.5，内部pp.19–21；表5：1998–2007美国与非美国上市公司，公司年N=13,546；非美资料Compustat Global和I/B/E/S，沿用前后预测筛选。USA为受SOX约束美国公司，PostSOX为2002之后，估计USA、Post、USA×Post并控制Surp、Size、MB、Analysts；变量按行业年度排序，USA/Post除外；SE按公司/年度双向聚类。文中另报告3年/10年窗口方向类似。</p>
 <p>表5交互项：Δrho=4.875，t=2.14；Δh=4.440，t=2.21；Δs=3.652，t=2.07，均5%显著。都是该表排序尺度。eq.7正文还列Audit控制，但表5模型标题和表内没有Audit，报告应保留“正文与表格列式不同”，不能断言表5确实估计了Audit项。</p>
 <p>本轮未核实动态leads/lags、事前趋势检验、错位处理、国家特定趋势或对照市场名单。因此这是美国/非美的政策前后DID，不是现代交错处理事件研究。要解释成SOX作用，需要可比趋势、无其他美国差异冲击、对照不受SOX直接或间接影响等条件；SOX同时改变披露、监管等，政策效应不能直接转换为聘用四大效果。本项目没有同一美国/非美监管处理对照体系，不能直接复制此识别。</p>
-<p>其他敏感性：§4.3的放宽前侧预测、异质私人精度方法、行业划分、audit×surprise，以及费用/任期/报告滞后，大多未制表；未核实精确N、SE和所有模型设置。没有在本记录另引入新机制文章。</p>
+<p>其他敏感性：§4.3的放宽前侧预测、异质私人精度方法、行业划分、audit×surprise，以及费用/任期/报告滞后，大多未制表；未核实精确N、SE和所有模型设置。</p>
 </details>
 <details>
 <summary>
-补充：两篇早期中国 ERC 文献（仅核实摘要，未补造方法细节）
+补充：两篇早期中国 ERC 文献（摘要证据与待核实方法）
 </summary>
 <p><strong>Ferdinand A. Gul; Sunny Y. J. Sun; Judy S. L. Tsui (2003).</strong> <em>TRACKS: Audit Quality, Earnings, and the Shanghai Stock Market Reaction</em>. Journal of Accounting, Auditing &amp; Finance 18(3), 411–427。<a href="https://doi.org/10.1177/0148558X0301800306">Gul、Sun、Tsui（2003）</a>。摘要报告上海1996—1997年659观测及审计质量、盈余与市场反应的联系。完整样本单位、控制、FE、SE与窗口未核实，故不进入上面的已核读方法对照。</p>
 <p><strong>Z. Jun Lin; Ming Liu; Zhemin Wang (2009).</strong> <em>Market Implications of Audit Quality and Auditor Switches: Evidence from China</em>. Journal of International Financial Management &amp; Accounting 20(1), 35–78。<a href="https://doi.org/10.1111/j.1467-646X.2009.01026.x">Lin、Liu、Wang（2009）</a>。摘要涉及 Top 10 换所及正负异常盈余下的 ERC；未核实原文完整N、控制、FE、SE，不把二手报道的2002—2004年区间作为已核验主样本。</p>
@@ -2210,7 +2210,7 @@ AKM 事务所固定效应的可识别样本分布。
 </div>
 </figure>
 <p><strong>补充的类别回归。</strong> 以Other为基准、控制客户和年份FE后，四大与本土八大的未预警综合失败概率分别低3.41个百分点（p=0.001）和1.52个百分点（p=0.020）；四大相对本土八大低1.89个百分点（p=0.052）。四大相对Other的违规概率低2.70个百分点（p=0.002），重述概率低1.26个百分点（p=0.064）；Jones异常应计绝对值系数为−0.0040（p=0.187）。综合失败和违规差异在5%水平显著，重述差异在10%水平显著。</p>
-<p><strong>结果与研究问题。</strong> 上述截面比较与 AKM 排序确立了四大客户更少发生审计失败的经验事实。但这究竟源于四大对企业财报生产的“直接治理改善（Treatment Effect）”，还是源于“优质客户与顶级事务所的主动匹配（Selection / Sorting）”？回答这一问题的关键在于检验企业在更换事务所前后的动态变化。</p>
+<p><strong>结果与研究问题。</strong> 截面比较与 AKM 排序显示四大客户的审计失败较少。下文利用同一客户换所前后的变化，进一步考察审计服务（Treatment Effect）与客户匹配（Selection / Sorting）在这一差异中的作用。</p>
 <p><span id="full-12_big4_effect-5"></span></p>
 </section></section></section></details>
 <p><strong>类别回归方程。</strong> 客户、年份与事务所类型的比较为</p>
@@ -2256,7 +2256,7 @@ Y_{it}=FE+\beta Big4_{it}+\gamma'X^{EQ}_{it}+\varepsilon_{it}.
 <section class="level4" id="market-positive-main">
 <h4 class="anchored" data-anchor-id="market-positive-main">1.3.1 最基准结果：10%门槛的完整事件路径</h4>
 <p><strong>消息与事件样本。</strong> <span class="math inline">\(S_{if}=(EPS_{actual}-EPS_{forecast,180})/|EPS_{forecast,180}|\)</span>，预测取年报公告前180天券商预测中位数，实际EPS以年报记录为主、缺失时补算。仅保留实际EPS、有效非零预测分母、公告交易日映射及[−5,+5]价格路径有效的年报事件。<span class="math inline">\(S&gt;0.10\)</span>为好消息，<span class="math inline">\(-0.10\leq S\leq0.10\)</span>为中性消息；大负消息不进入这套比较。Y为日度收盘价对数，以公告前第−1个交易日为基准。</p>
-<p><strong>先看总体与分组反应，再直接检验组间差值。</strong> 下图采用180天预测窗口、10%惊喜门槛和完整公告前后路径：左侧是总体好消息相对中性消息的反应，右侧分别展示四大、本土八大与Other客户的反应；纵轴为对数股价系数，基准为公告前第−1个交易日，不能读成四大身份本身带来的估值溢价。</p>
+<p><strong>先看总体与分组反应，再直接检验组间差值。</strong> 下图采用180天预测窗口、10%惊喜门槛和完整公告前后路径：左侧是总体好消息相对中性消息的反应，右侧分别展示四大、本土八大与Other客户的反应；纵轴为好消息相对中性消息的对数股价反应系数，基准为公告前第−1个交易日。</p>
 <div class="quarto-float quarto-figure quarto-figure-center anchored" id="fig-market-positive-overview">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-market-positive-overview-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -2267,13 +2267,13 @@ Y_{it}=FE+\beta Big4_{it}+\gamma'X^{EQ}_{it}+\varepsilon_{it}.
 </figcaption>
 </figure>
 </div>
-<p><strong>这张分组图估计了什么？</strong> 令<span class="math inline">\(T_{if}=1\{S_{if}&gt;0.10\}\)</span>，保留<span class="math inline">\(S_{if}\geq-0.10\)</span>，在全样本或每个事务所子样本<span class="math inline">\(\mathcal S_g\)</span>内分别估计：</p>
+<p><strong>分组路径方程。</strong> 令<span class="math inline">\(T_{if}=1\{S_{if}&gt;0.10\}\)</span>，保留<span class="math inline">\(S_{if}\geq-0.10\)</span>，在全样本或每个事务所子样本<span class="math inline">\(\mathcal S_g\)</span>内分别估计：</p>
 <p><span id="eq-market-separate-paths"><span class="math display">\[
 \log P_{ift}=\text{firm × year FE}+\text{event time FE}+\text{trading date FE}
 +\sum_{k\in\mathcal K}b_{gk}T_{if}D^k_{ift}+e_{ift},\qquad(i,f,t)\in\mathcal S_g.
 \tag{3}\]</span></span></p>
 <p>右图每条线表示该事务所组内好消息相对中性消息的反应。各组分别估计，事件日和交易日期效应也各自确定，因此下文使用共同回归直接检验组间差值。</p>
-<p><strong>为什么增加共同回归的interaction？</strong> 接下来把事务所组别、好消息指示和事件日放进同一个模型，直接估计并检验组间反应差，保持共同样本内的事件日与交易日期效应；原来的三组比较是“四大−Other”和“八大−Other”，这里的二组比较则是“四大−非四大”，其中非四大包含八大与Other。</p>
+<p><strong>组间差异检验。</strong> 共同回归纳入事务所组别、好消息指示与事件日的交互，统一事件日和交易日期效应，直接检验组间反应差；原来的三组比较是“四大−Other”和“八大−Other”，这里的二组比较则是“四大−非四大”，其中非四大包含八大与Other。</p>
 <p>共同模型直接检验组间反应差。基准式约束中性消息组的组间路径差为零；允许不同中性路径的模型在补充结果中另列。</p>
 <p><strong>共同回归方程。</strong> 令<span class="math inline">\(i\)</span>为公司、<span class="math inline">\(f\)</span>为财年、<span class="math inline">\(t\)</span>为实际交易日期，<span class="math inline">\(k(i,f,t)\)</span>为相对公告交易日，<span class="math inline">\(D^k_{ift}=\mathbf{1}\{k(i,f,t)=k\}\)</span>，<span class="math inline">\(\mathcal K=\{-5,-4,-3,-2,0,1,2,3,4,5\}\)</span>。<span class="math inline">\(A^g_{if}\)</span>表示该公司财年属于事务所组<span class="math inline">\(g\)</span>。正向组指示变量记为<span class="math inline">\(T_{if}\)</span>，每个估计样本<span class="math inline">\(\mathcal S\)</span>中拟合：</p>
 <p><span id="eq-market-threshold"><span class="math display">\[
@@ -2290,7 +2290,7 @@ Y_{it}=FE+\beta Big4_{it}+\gamma'X^{EQ}_{it}+\varepsilon_{it}.
 \Delta_k^{8-O}=\widehat\beta_{Local8,k}-\widehat\beta_{Other,k}.
 \]</span></p>
 <p>第−1日不进入交互项，其差值规范为零。这里显式写出所有组的正向消息系数，即事务所组别、正向消息指示与事件日指示的交互项；没有<span class="math inline">\(A^g_{if}D^k_{ift}\)</span>单独项。全样本与2012年前仅改变<span class="math inline">\(\mathcal S\)</span>，共用 <a class="quarto-xref" href="#eq-market-threshold">式 4</a>，不重复列方程。</p>
-<p>正向组为 <span class="math inline">\(S&gt;0.10\)</span>，中性组为 <span class="math inline">\(-0.10\leq S\leq0.10\)</span>；<span class="math inline">\(S&lt;-0.10\)</span> 的大负消息不进入这套比较。两类事务所均以同一10%比率门槛划分正向与中性组。10%不是组内分位点，也不是EPS差额0.10元。</p>
+<p>正向组为 <span class="math inline">\(S&gt;0.10\)</span>，中性组为 <span class="math inline">\(-0.10\leq S\leq0.10\)</span>；<span class="math inline">\(S&lt;-0.10\)</span> 的大负消息不进入这套比较。两类事务所均以同一10%比率门槛划分正向与中性组。10%按相对预测EPS的比率定义。</p>
 <section class="level5" id="全样本">
 <h5 class="anchored" data-anchor-id="全样本">全样本</h5>
 <figure class="chapter-graph figure" id="fig-baseline-threshold-all-binary">
@@ -2328,7 +2328,7 @@ Y_{it}=FE+\beta Big4_{it}+\gamma'X^{EQ}_{it}+\varepsilon_{it}.
 <section class="level4" id="共同分位数组完整事件路径">
 <h4 class="anchored" data-anchor-id="共同分位数组完整事件路径">1.3.2 共同分位数组：完整事件路径</h4>
 <p>沿用 <a class="quarto-xref" href="#eq-market-threshold">式 4</a>，只将<span class="math inline">\(T_{if}\)</span>改为<span class="math inline">\(\mathbf{1}\{S_{if}&gt;P75\}\)</span>，并在<span class="math inline">\(\mathcal S\)</span>中保留<span class="math inline">\(S_{if}\geq P25\)</span>；固定效应、聚类与系数差定义保持一致。</p>
-<p>共同分位点从全时期30,064个完整候选年报事件一次计算：P25为−15.3014%，P75为5.9474%。正向组为全样本top25%（<span class="math inline">\(S&gt;P75\)</span>），中性组为中间50%（<span class="math inline">\(P25\leq S\leq P75\)</span>），最低25%排除。全样本与2012年前、二组与三组均沿用这两个固定门槛；不按组别、时期或滚动窗口重新计算分位点。因此，这一设计统一分组界限，但不强制每组正向事件占比相同，也不消除正向组内部惊喜大小的差异。</p>
+<p>共同分位点从全时期30,064个完整候选年报事件一次计算：P25为−15.3014%，P75为5.9474%。正向组为全样本top25%（<span class="math inline">\(S&gt;P75\)</span>），中性组为中间50%（<span class="math inline">\(P25\leq S\leq P75\)</span>），最低25%排除。全样本与2012年前、二组与三组均沿用这两个固定门槛；不按组别、时期或滚动窗口重新计算分位点。统一门槛后，各组正向事件占比和组内惊喜幅度仍可不同。</p>
 <section class="level5" id="全样本-1">
 <h5 class="anchored" data-anchor-id="全样本-1">全样本</h5>
 <figure class="chapter-graph figure" id="fig-baseline-quartile-all-binary">
@@ -2362,8 +2362,8 @@ Y_{it}=FE+\beta Big4_{it}+\gamma'X^{EQ}_{it}+\varepsilon_{it}.
 </section>
 <section class="level4" id="消息门槛扫描全样本与2012年前">
 <h4 class="anchored" data-anchor-id="消息门槛扫描全样本与2012年前">1.3.3 消息门槛扫描：全样本与2012年前</h4>
-<p>对每个<span class="math inline">\(c\)</span>分别估计 <a class="quarto-xref" href="#eq-market-threshold">式 4</a>，令<span class="math inline">\(T_{if}(c)=\mathbf{1}\{S_{if}&gt;c\}\)</span>，样本限定为<span class="math inline">\(S_{if}\geq-c\)</span>。因此扫描图画的是<span class="math inline">\(\Delta_k(c)\)</span>；每个<span class="math inline">\(c\)</span>都重新拟合，不是从一条连续回归曲线上取点。全样本与2012年前不另写方程。</p>
-<p>横轴为固定surprise比率门槛 <strong>5%—25%</strong>。每个门槛<span class="math inline">\(c\)</span>重新定义正向组<span class="math inline">\(S&gt;c\)</span>和中性组<span class="math inline">\(-c\leq S\leq c\)</span>，分别展示第0、+1、+2和+5日相对−1日的组间反应差值。右轴为各组实际回归样本中“正向／（正向＋中性）”的比例，不是惊喜密度。每个点的样本随门槛改变；它不等于连续surprise模型在该数值处的边际效应。</p>
+<p>对每个<span class="math inline">\(c\)</span>分别估计 <a class="quarto-xref" href="#eq-market-threshold">式 4</a>，令<span class="math inline">\(T_{if}(c)=\mathbf{1}\{S_{if}&gt;c\}\)</span>，样本限定为<span class="math inline">\(S_{if}\geq-c\)</span>。因此扫描图画的是<span class="math inline">\(\Delta_k(c)\)</span>；每个<span class="math inline">\(c\)</span>都重新拟合，各门槛对应独立的分组回归。全样本与2012年前不另写方程。</p>
+<p>横轴为固定surprise比率门槛 <strong>5%—25%</strong>。每个门槛<span class="math inline">\(c\)</span>重新定义正向组<span class="math inline">\(S&gt;c\)</span>和中性组<span class="math inline">\(-c\leq S\leq c\)</span>，分别展示第0、+1、+2和+5日相对−1日的组间反应差值。右轴为各组实际回归样本中“正向／（正向＋中性）”的比例。每个点对应该门槛下的有效样本及组间反应差。</p>
 <section class="level5" id="全样本-2">
 <h5 class="anchored" data-anchor-id="全样本-2">全样本</h5>
 <figure class="chapter-graph figure" id="fig-scan-all-binary">
@@ -2420,7 +2420,7 @@ Y_{it}=FE+\beta Big4_{it}+\gamma'X^{EQ}_{it}+\varepsilon_{it}.
 <tr class="header">
 <th>机制假说</th>
 <th>可对应的已有结果</th>
-<th>尚不能由这些结果直接推出什么</th>
+<th>进一步区分机制所需的证据</th>
 </tr>
 </thead>
 <tbody>
@@ -2432,16 +2432,16 @@ Y_{it}=FE+\beta Big4_{it}+\gamma'X^{EQ}_{it}+\varepsilon_{it}.
 <tr class="even">
 <td>改制前非四大优质审计较稀缺，四大筛选信号更强</td>
 <td>四大／八大／Other比较、费用与市场结构、质量差异</td>
-<td>四大差值缩小不等于八大质量已追上；尚未直接量化优质审计供给或市场未知信息</td>
+<td>直接衡量各类事务所的服务质量、优质审计供给和市场未知信息</td>
 </tr>
 </tbody>
 </table>
-<p>2012作为既定分期边界有制度背景：<a href="https://kjs.mof.gov.cn/zhengcefabu/201205/t20120509_649853.htm">财政部本土化转制方案</a>自2012年5月10日起施行；<a href="https://m.mof.gov.cn/czxw/201305/t20130521_880540.htm">财政部进程说明</a>记载四家在2012年7月至2013年3月相继转制。因此既有“2001—2011／2012—2024”是财年分组，<strong>不是四家同日在2012年被随机处理</strong>。本土大型所也有此前转制与发展过程，现有时间证据不将所有变化归因于单一制度日。</p>
+<p>2012作为既定分期边界有制度背景：<a href="https://kjs.mof.gov.cn/zhengcefabu/201205/t20120509_649853.htm">财政部本土化转制方案</a>自2012年5月10日起施行；<a href="https://m.mof.gov.cn/czxw/201305/t20130521_880540.htm">财政部进程说明</a>记载四家在2012年7月至2013年3月相继转制。因此“2001—2011／2012—2024”按财年分组，四家的实际转制时点各异。本土大型所此前也经历转制与扩张，时期差异可能反映多项同期变化。</p>
 <p>门槛路径与滚动结果支持早期差异较强的时间模式；连续ERC分期没有呈现同样统一的结果。2012分期描述前后市场反应差异，用于讨论机制；转制政策效应需要单独识别。</p>
 </section>
 <section class="level4" id="时间变化10门槛的7年滚动结果">
 <h4 class="anchored" data-anchor-id="时间变化10门槛的7年滚动结果">1.3.4 时间变化：10%门槛的7年滚动结果</h4>
-<p>仍使用 <a class="quarto-xref" href="#eq-market-threshold">式 4</a>，在中心财年<span class="math inline">\(m\)</span>对应的<span class="math inline">\(\mathcal S_m=\{(i,f,t):m-3\leq f\leq m+3\}\)</span>内单独估计，令<span class="math inline">\(T_{if}=\mathbf{1}\{S_{if}&gt;0.10\}\)</span>并保留<span class="math inline">\(S_{if}\geq-0.10\)</span>。横轴各点为不同<span class="math inline">\(\mathcal S_m\)</span>的<span class="math inline">\(\Delta_k(m)\)</span>；它们不是一条含“窗口年份交互项”的合并回归。</p>
+<p>仍使用 <a class="quarto-xref" href="#eq-market-threshold">式 4</a>，在中心财年<span class="math inline">\(m\)</span>对应的<span class="math inline">\(\mathcal S_m=\{(i,f,t):m-3\leq f\leq m+3\}\)</span>内单独估计，令<span class="math inline">\(T_{if}=\mathbf{1}\{S_{if}&gt;0.10\}\)</span>并保留<span class="math inline">\(S_{if}\geq-0.10\)</span>。横轴各点为不同<span class="math inline">\(\mathcal S_m\)</span>的<span class="math inline">\(\Delta_k(m)\)</span>；各窗口分别估计。</p>
 <p>沿用正向惊喜超过10%、中性惊喜在±10%内的分组。横轴为7年窗口的中心财年，每次向前移动一年，例如中心2008对应2005—2011财年。仅展示完整窗口：中心2004—2020；中心2003需要2000年数据，未纳入。各图分别显示第0、+1、+2、+3日相对−1日的差值；纵轴为对数股价的系数差。</p>
 <section class="level5" id="四大非四大">
 <h5 class="anchored" data-anchor-id="四大非四大">四大−非四大</h5>
@@ -2512,7 +2512,7 @@ Y_{it}=FE+\beta Big4_{it}+\gamma'X^{EQ}_{it}+\varepsilon_{it}.
 </section>
 <section class="level4" id="时间变化共同分位数组的7年滚动结果">
 <h4 class="anchored" data-anchor-id="时间变化共同分位数组的7年滚动结果">1.3.5 时间变化：共同分位数组的7年滚动结果</h4>
-<p>同样在<span class="math inline">\(\mathcal S_m\)</span>内估计 <a class="quarto-xref" href="#eq-market-threshold">式 4</a>，但使用固定全时期分位点<span class="math inline">\(T_{if}=\mathbf{1}\{S_{if}&gt;P75\}\)</span>、<span class="math inline">\(S_{if}\geq P25\)</span>。只改变分组和样本，不增加另一套回归方程。</p>
+<p>同样在<span class="math inline">\(\mathcal S_m\)</span>内估计 <a class="quarto-xref" href="#eq-market-threshold">式 4</a>，但使用固定全时期分位点<span class="math inline">\(T_{if}=\mathbf{1}\{S_{if}&gt;P75\}\)</span>、<span class="math inline">\(S_{if}\geq P25\)</span>。固定效应与聚类沿用前式。</p>
 <p>改用上述全时期共同top25%对中间50%分组，固定P25与P75。横轴为7年窗口的中心财年，每次向前移动一年，例如中心2008对应2005—2011财年。仅展示完整窗口：中心2004—2020；中心2003需要2000年数据，未纳入。各图分别显示第0、+1、+2、+3日相对−1日的差值；纵轴为对数股价的系数差。</p>
 <section class="level5" id="四大非四大-1">
 <h5 class="anchored" data-anchor-id="四大非四大-1">四大−非四大</h5>
@@ -2597,7 +2597,7 @@ Y_{ift}=F_{ift}+\sum_{k\in\mathcal K}D^k_{ift}
 <p><span class="math inline">\(c_{g1k}\)</span>是消息增加10个百分点的斜率差；固定消息<span class="math inline">\(s\)</span>的水平差为<span class="math inline">\(a_{gk}+\sum_j c_{gjk}B_j(s/0.10)\)</span>，包含截距和斜率，不等于ERC。</p>
 <p>连续消息与审计师身份的交互对应 Teoh 与 Wong（1993）的 ERC 比较形式；消息分母、窗口和控制不同，斜率与水平差分别解释。</p>
 <p><strong>样本与单位。</strong> 线性与样条共用30,064份年报事件、330,646条日度观测，吸收公司×财年、事件日及实际交易日期FE，按公司×财年聚类，无额外控制。Y为从−5日起累计的市场调整收益，以百分点计、相对−1日解释；消息变量为比率惊喜S除以0.10。</p>
-<p>四大−Other的线性斜率在公告日为0.0084075个百分点（SE=0.003718，CI=[0.001120,0.015695]，p=0.02375），+1为0.0112325（SE=0.005484，p=0.04056），+5为0.000157（p=0.987）。在固定S=0.10处，线性总水平差公告日为0.186834（SE=0.069182，p=0.006925），+1为0.212563（p=0.01945），+5为0.242856（p=0.07762）。截距与斜率共同组成固定水平差，不能称其为ERC斜率。</p>
+<p>四大−Other的线性斜率在公告日为0.0084075个百分点（SE=0.003718，CI=[0.001120,0.015695]，p=0.02375），+1为0.0112325（SE=0.005484，p=0.04056），+5为0.000157（p=0.987）。在固定S=0.10处，线性总水平差公告日为0.186834（SE=0.069182，p=0.006925），+1为0.212563（p=0.01945），+5为0.242856（p=0.07762）。固定水平差由截距和斜率共同组成，ERC则衡量消息敏感度。</p>
 <p>样条固定S=0.10的四大水平差公告日0.343981（SE=0.109843，p=0.001740），+1为0.378394（p=0.01133），+5仍为0.559373（SE=0.221490，CI=[0.125242,0.993503]，p=0.01156）。较远期结果随规格变化。本土八大的线性斜率证据较弱，样条固定S公告日和+1水平差为正且显著；全表同时保留这些差异。</p>
 <p>线性CAR四大前期斜率联合检验p=0.156、全时期斜率联合p=0.024；样条前期联合p=0.087、全时期p&lt;0.001。样条存在10%水平的事前差异；这些结果仍为条件相关。</p>
 <figure class="latex-table figure" style="overflow-x:auto;">
@@ -2628,7 +2628,7 @@ Continuous Earnings Surprise: Slopes and Fixed-Surprise Gaps
 Y_{ift}=F_{ift}+\sum_{k\in\mathcal K}D^k_{ift}
 \left[\theta_kT_{if}+\eta_kBig4_{if}+\delta_kT_{if}Big4_{if}\right]+u_{ift}.
 \tag{6}\]</span></span></p>
-<p>按公司×财年聚类，<span class="math inline">\(Y\)</span>分别为log price或累计市场调整CAR的百分点值。<span class="math inline">\(\eta_k\)</span>允许四大与非四大中性组有不同事件路径；<span class="math inline">\(\delta_k\)</span>才是两组各自正向对中性反应差的差值。它不能直接替代 <a class="quarto-xref" href="#eq-market-threshold">式 4</a> 的受限系数差。</p>
+<p>按公司×财年聚类，<span class="math inline">\(Y\)</span>分别为log price或累计市场调整CAR的百分点值。<span class="math inline">\(\eta_k\)</span>允许四大与非四大中性组有不同事件路径；<span class="math inline">\(\delta_k\)</span>才是两组各自正向对中性反应差的差值。该差值基于放开中性路径后的模型，与 <a class="quarto-xref" href="#eq-market-threshold">式 4</a> 的受限系数差分别解释。</p>
 <p><strong>控制变量比较。</strong> 在 <a class="quarto-xref" href="#eq-market-threshold">式 4</a> 中加入控制变量与事件日的交互：</p>
 <p><span id="eq-market-controlled"><span class="math display">\[
 \log P_{ift}=F_{ift}
@@ -2638,7 +2638,7 @@ Y_{ift}=F_{ift}+\sum_{k\in\mathcal K}D^k_{ift}
 \tag{7}\]</span></span></p>
 <p><span class="math inline">\(\mathbf X_{if}\)</span>为对数市值、市净率及对数预测数量；有／无控制使用同一有效样本，按公司×财年聚类，无控制列令<span class="math inline">\(\boldsymbol\gamma_k=0\)</span>。</p>
 <p>原三组门槛模型的四大−Other公告日差为0.003837（SE=0.001331，p=0.004，对数价格单位）。完整二组模型合并八大与Other，并允许中性消息组的路径不同；公告日差为0.000903（SE=0.001458，p=0.536），CAR差为0.093442个百分点（SE=0.146302，p=0.523）。两者的参照组和规格不同。</p>
-<p>要求预测DeclareDate严格在年报公告前，随后重新选择每机构最新合格预测，四大−Other公告日差仍为0.003606（SE=0.001338，p=0.007）。再按已确认四变量1%—99%共同区间筛选，公告日差0.002905（SE=0.001653，p=0.079），+1和+5不显著；共同样本加入控制后公告日0.001510（SE=0.001671，p=0.366）。相应事件数20,336→20,221→16,115。变化同时包含比较对象和精度变化，不能作为selection份额。</p>
+<p>要求预测DeclareDate严格在年报公告前，随后重新选择每机构最新合格预测，四大−Other公告日差仍为0.003606（SE=0.001338，p=0.007）。再按已确认四变量1%—99%共同区间筛选，公告日差0.002905（SE=0.001653，p=0.079），+1和+5不显著；共同样本加入控制后公告日0.001510（SE=0.001671，p=0.366）。相应事件数20,336→20,221→16,115。变化同时反映比较对象、控制项与估计精度。</p>
 <p>共同支持样本无控制的本土八大−Other公告日0.002295（p=0.049），加controls后0.001990（p=0.088）；四大−本土八大仍不显著。筛后市值和覆盖并未完全平衡。连续消息与门槛比较回答不同问题，结果分别保留。</p>
 <figure class="latex-table figure" style="overflow-x:auto;">
 <img alt="Big 4 Minus Other: Forecast Timing and Comparable Samples" class="figure-img" loading="lazy" src="tables/big4_regression_columns/comparable_market_response_p01.png" style="width:703px;max-width:none;height:auto;display:block;"/>
@@ -2741,7 +2741,7 @@ ERC：2012年起
 <p><span class="math display">\[
 C_{ik}=\sum_{j=-5}^{k}AR_{ij}-\sum_{j=-5}^{-1}AR_{ij},\qquad C_{i,-1}=0.
 \]</span></p>
-<p>因此，<span class="math inline">\(k\geq0\)</span>时，<span class="math inline">\(C_{ik}=\sum_{j=0}^{k}AR_{ij}\)</span>。它是简单日收益相加，不是复利累计；−1日归零只是确定基准，并没有排除公告初期的收益。0.01表示1个百分点。</p>
+<p>因此，<span class="math inline">\(k\geq0\)</span>时，<span class="math inline">\(C_{ik}=\sum_{j=0}^{k}AR_{ij}\)</span>。它按简单日收益相加，−1日归零后仍包含公告初期收益。0.01表示1个百分点。</p>
 <p>令<span class="math inline">\(Big4_i=1\)</span>表示四大，<span class="math inline">\(T_i=1\{S_i&gt;0.10\}\)</span>，<span class="math inline">\(D_{jk}=1\{j=k\}\)</span>。两套模型均吸收公司×财年、事件日、实际交易日期固定效应，按公司聚类，无额外控制变量。图中的阴影为95%逐点置信区间，没有调整整个路径的多重检验。</p>
 </section>
 <section class="level4" id="a好消息内部的四大非四大路径差">
@@ -2767,7 +2767,7 @@ C_{ij}=\text{firm × year FE}+\text{event time FE}+\text{trading date FE}
 +\sum_{k\ne-1}\left[\beta_{B,k}Big4_iT_iD_{jk}
 +\beta_{N,k}(1-Big4_i)T_iD_{jk}\right]+\varepsilon_{ij}.
 \]</span></p>
-<p>图画<span class="math inline">\(\beta_{B,k}-\beta_{N,k}\)</span>，对应“[四大：正向−中性]−[非四大：正向−中性]”的模型内反应差。实际样本为14,918份年报、4,019家公司、984,432条日度观测。这一规格没有另加<span class="math inline">\(Big4_iD_{jk}\)</span>项，因而没有单独估计两类事务所中性组的事件日路径；上述解释依赖该pooled结构，不应视为完全放开所有组别路径的饱和比较。</p>
+<p>图画<span class="math inline">\(\beta_{B,k}-\beta_{N,k}\)</span>，对应“[四大：正向−中性]−[非四大：正向−中性]”的模型内反应差。实际样本为14,918份年报、4,019家公司、984,432条日度观测。这一规格没有另加<span class="math inline">\(Big4_iD_{jk}\)</span>项，因而没有单独估计两类事务所中性组的事件日路径；解释依赖两类中性组共享事件路径的限制。</p>
 <figure class="figure">
 <img alt="正向相对中性的反应差：四大减非四大，累计市场调整收益路径" class="figure-img" loading="lazy" src="tables/pead_market_adjusted_paths/positive_vs_neutral_path.png" style="width:100%;height:auto"/>
 <figcaption>
@@ -2785,8 +2785,8 @@ B：正向−中性的四大−非四大反应差，−1日为基准
 PEAD：选定事件日的四大−非四大累计收益差
 </figcaption>
 </figure>
-<p>*** p&lt;0.01，** p&lt;0.05，* p&lt;0.10。第+60日，A差值为−0.020188，B为−0.020489，分别约为−2.02和−2.05个百分点。两套差值在公告初期没有显著差异，较明显的负差值集中在后段；首次5%逐点显著分别出现在+33及+36日，不能将其当作估计得到的结构断点。公告前−5至−2日联合检验p值分别为0.4591和0.4885，事前系数联合检验未发现显著差异。</p>
-<p>在超过10%的正向盈利惊喜样本中，四大客户相对非四大的长期累计市场调整收益较低；以中性惊喜为对照的组间反应差也得到相近的负差值。这<strong>提供了与四大客户PEAD较低相一致的证据</strong>。负差值表示相对非四大较低，不表示四大客户自身累计收益为负。</p>
+<p>*** p&lt;0.01，** p&lt;0.05，* p&lt;0.10。第+60日，A差值为−0.020188，B为−0.020489，分别约为−2.02和−2.05个百分点。两套差值在公告初期没有显著差异，较明显的负差值集中在后段；首次5%逐点显著分别出现在+33及+36日，这些日期表示逐点检验首次达到显著性的时点。公告前−5至−2日联合检验p值分别为0.4591和0.4885，事前系数联合检验未发现显著差异。</p>
+<p>在超过10%的正向盈利惊喜样本中，四大客户相对非四大的长期累计市场调整收益较低；以中性惊喜为对照的组间反应差也得到相近的负差值。两项结果均与四大客户PEAD较低的解释一致；负值衡量四大相对非四大的收益差。</p>
 <p><strong>文献依据</strong></p>
 <p>Andrew Ferguson与Zoltan Matolcsy（2004）的《Audit quality and post earnings announcement drift》正式发表于 <em>Asia-Pacific Journal of Accounting &amp; Economics</em> 11(2):121–137。作者的理论链条是：<strong>好消息增加信息不确定性，部分抵消利好，导致初始反应不足；随着不确定性消退，价格继续反映消息，形成漂移。高质量审计提高盈利可信度、降低初始不确定性，因此大型事务所客户的PEAD较低。</strong> 这是原文明确提出的H1。<a href="https://opus.lib.uts.edu.au/bitstream/10453/6448/1/2004000864.pdf">Ferguson、Matolcsy（2004）</a>、<a href="https://www.tandfonline.com/doi/abs/10.1080/16081625.2004.10510639">Ferguson、Matolcsy（2004）</a>。</p>
 <p>结果表明：<strong>四大客户在较大正向盈利惊喜后的长期累计市场调整收益较低。这与Ferguson、Matolcsy（2004）提出的高质量审计降低信息不确定性、减轻初始反应不足的解释一致。</strong></p>
@@ -2803,7 +2803,7 @@ c_q=SE_q-D_q/n,
 \]</span> <span id="eq-big4-information-y"><span class="math display">\[
 \rho_q=\frac{c_q}{c_q+D_q},\quad h_q=\frac{c_q}{(c_q+D_q)^2},\quad s_q=\frac{D_q}{(c_q+D_q)^2}.
 \tag{10}\]</span></span></p>
-<p>Y分别为<span class="math inline">\(\Delta\rho\)</span>、<span class="math inline">\(\Delta h\)</span>、<span class="math inline">\(\Delta s\)</span>，均为post−pre；<span class="math inline">\(\rho\)</span>为共同信息相对权重，<span class="math inline">\(h\)</span>和<span class="math inline">\(s\)</span>分别为共同／私人信息精度。这里的缩放是D和SE各除以<span class="math inline">\(|A|\)</span>，不是先缩放EPS再平方。BKLS有效样本要求<span class="math inline">\(n\ge2\)</span>、<span class="math inline">\(A&gt;0\)</span>、前后精度有限且共同精度非负；这也是准确度指标保留的原有效样本。</p>
+<p>Y分别为<span class="math inline">\(\Delta\rho\)</span>、<span class="math inline">\(\Delta h\)</span>、<span class="math inline">\(\Delta s\)</span>，均为post−pre；<span class="math inline">\(\rho\)</span>为共同信息相对权重，<span class="math inline">\(h\)</span>和<span class="math inline">\(s\)</span>分别为共同／私人信息精度。D与SE分别除以<span class="math inline">\(|A|\)</span>后代入信息性质公式。BKLS有效样本要求<span class="math inline">\(n\ge2\)</span>、<span class="math inline">\(A&gt;0\)</span>、前后精度有限且共同精度非负；这也是准确度指标保留的原有效样本。</p>
 <p><span id="eq-big4-analyst-reg"><span class="math display">\[
 \Delta Info^m_{it}=a_m+b_m Big4_{it}+X'_{it}\gamma_m+e^m_{it}.
 \tag{11}\]</span></span></p>
@@ -2854,7 +2854,7 @@ c_q=SE_q-D_q/n,
 完整结果、既有分期与FE补充
 </summary>
 <p>下载三列表精确结果、样本口径、旁支模型核验记录、Δρ原值固定样本逐项控制结果。</p>
-<p>既有两套无FE分期结果、coverage分析及FE补充结果保留，均只包含四大−非四大。它们不是本轮新增的市值前25%分期或coverage回归，不能混用规格。</p>
+<p>既有两套无FE分期结果、coverage分析及FE补充结果保留，均只包含四大−非四大。各套结果按其原有样本与控制规格解释。</p>
 </details>
 </details>
 <details id="forecast-revision-latest">
@@ -2871,9 +2871,9 @@ FractionRevised&amp;=n^{-1}\sum_j\mathbf1\{|r_j|&gt;10^{-10}\},\\
 \Delta AbsError&amp;=|\bar f_{post}-A|-|\bar f_{pre}-A|.
 \end{aligned}
 \tag{12}\]</span></span></p>
-<p>前三项分别是有符号修正、绝对修正幅度和修正比例；修正原值以EPS元／股计，比例为0—1。准确度是<strong>平均预测的绝对误差变化</strong>，不是平均每家券商绝对误差的变化；负值才表示误差改善。这些Y不按股价或实际EPS再缩放。</p>
+<p>前三项分别是有符号修正、绝对修正幅度和修正比例；修正原值以EPS元／股计，比例为0—1。准确度度量<strong>平均预测的绝对误差变化</strong>，负值表示误差改善。这些Y不按股价或实际EPS再缩放。</p>
 <p>回归仍为 <a class="quarto-xref" href="#eq-big4-analyst-reg">式 11</a>，替换四个Y：无FE、公司聚类、不缩尾。每张表四列依次为各指标可用样本无控制、四项控制共同样本无控制、共同样本三项控制、共同样本四项控制。前两列分开，避免把样本变化算作控制效果。</p>
-<p><strong>样本限制。</strong> 三个修正Y沿用<span class="math inline">\(n\ge2\)</span>且目标实际EPS非负或尚未观察到的原样本；准确度沿用BKLS有效样本，不能将两者样本视为相同。完整样本修正Y无控制N=22,427、控制共同N=13,719；准确度N=7,990／7,862。全市场市值前25%中，两组分别为10,101／6,787和4,439／4,367。修正样本1,935条缺市场排名，保留在全样本，不能进入前25%子样本。排序按每个指标完整有效样本在行业×财年计算，子样本不重排。</p>
+<p><strong>样本限制。</strong> 三个修正Y沿用<span class="math inline">\(n\ge2\)</span>且目标实际EPS非负或尚未观察到的原样本；准确度沿用BKLS有效样本，两者的有效样本分别报告。完整样本修正Y无控制N=22,427、控制共同N=13,719；准确度N=7,990／7,862。全市场市值前25%中，两组分别为10,101／6,787和4,439／4,367。修正样本1,935条缺市场排名，保留在全样本，不能进入前25%子样本。排序按每个指标完整有效样本在行业×财年计算，子样本不重排。</p>
 <p>四项控制的原值有符号修正在全样本为0.041274（p=0.0092）、前25%为0.040738（p=0.0282）；绝对修正幅度分别−0.064203（p=0.0107）、−0.061738（p=0.0351）。但绝对修正幅度排序版不显著；准确度变化所有规格均未达到5%显著性。</p>
 <figure class="latex-table figure" style="overflow-x:auto;">
 <img alt="全样本：预测修正与准确度，原值" class="figure-img" loading="lazy" src="tables/monday_existing_results/forecast_full_raw.png" style="width:703px;max-width:none;height:auto;display:block;"/>
@@ -2911,13 +2911,13 @@ FractionRevised&amp;=n^{-1}\sum_j\mathbf1\{|r_j|&gt;10^{-10}\},\\
 Y_{ict}=\text{firm × cohort FE}+\text{cohort × industry × year FE}
 +\beta G_{ic}Post_{ct}+X'_{it}\gamma+\varepsilon_{ict}.
 \tag{13}\]</span></span></p>
-<p>批次堆叠的PSM-DID吸收批次×公司、批次×行业×年份FE，按原公司聚类；未堆叠的自然样本DID用公司和行业×年份FE，不能把二者N或系数当作同一规格。<span class="math inline">\(X\)</span>保留九项及<code>mis_dummy</code>。动态版将平均处理项替换为</p>
+<p>批次堆叠的PSM-DID吸收批次×公司、批次×行业×年份FE，按原公司聚类；未堆叠的自然样本DID用公司和行业×年份FE，两类回归分别报告实际样本与系数。<span class="math inline">\(X\)</span>保留九项及<code>mis_dummy</code>。动态版将平均处理项替换为</p>
 <p><span class="math display">\[
 \sum_{k\ne-1}\beta_k G_{ic}\mathbf1\{t-c=k\},
 \]</span></p>
 <p>以−1财年为基期，报告事前联合检验。原合格进入要求此前连续三年非四大、进入起连续三年四大；扩展窗口为−4至+4、短窗口−3至+2，窗口和未来留任要求不是相同概念。取消未来留任的版本单列，不混入基准资格。</p>
 <p><strong>匹配步骤。</strong> 在换入前一年，以九项客户特征、mis_dummy、行业和年份预测进入四大的概率。为每个进入者选择同年概率最接近的一个非四大对照；对照可重复使用，不另限制最大匹配距离。随后固定名单及权重，在前后窗口估计DID。加权与不加权列使用同一名单，未匹配列使用完整候选对照。</p>
-<p><strong>其他Y的同一设计。</strong> 应计／REM沿用结果特定七项控制；审计费Y为<span class="math inline">\(\log(1+AuditFee)\)</span>，控制规模、杠杆、亏损、ROA及<code>mis_dummy</code>；市值Y为log市值，控制九项加收入增长及标记。各结果沿用相应的控制变量。费用换入+0.370、换出−0.242显示价格随身份变化，不能单凭价格识别质量机制。</p>
+<p><strong>其他Y的同一设计。</strong> 应计／REM沿用结果特定七项控制；审计费Y为<span class="math inline">\(\log(1+AuditFee)\)</span>，控制规模、杠杆、亏损、ROA及<code>mis_dummy</code>；市值Y为log市值，控制九项加收入增长及标记。各结果沿用相应的控制变量。费用换入+0.370、换出−0.242显示价格随身份变化；质量机制由失败与盈余指标检验。</p>
 <section class="level3" id="识别检验换入和换出四大后是否改善">
 <h3 class="anchored" data-anchor-id="识别检验换入和换出四大后是否改善">2.1 同一客户变化：换入与换出四大</h3>
 <p><strong>未堆叠DID方程。</strong> <span class="math inline">\(G_i=1\)</span>表示相应换入或换出处理公司，<span class="math inline">\(Post_{it}\)</span>从其换所财年起取1；Y为重述、违规或未预警综合失败指示变量：</p>
@@ -2949,7 +2949,7 @@ Y_{ict}=\text{firm}\times\text{cohort FE}+\text{cohort}\times\text{industry}\tim
 <section class="level4" id="扩展窗口4-至-4-的匹配-did">
 <h4 class="anchored" data-anchor-id="扩展窗口4-至-4-的匹配-did">扩展窗口：−4 至 +4 的匹配 DID</h4>
 <p>Fin口径下，换入四大后综合失败概率下降12.59个百分点（SE=3.48个百分点，95%CI=[−19.45,−5.73]个百分点，p&lt;0.001），重述概率下降10.04个百分点（SE=2.87个百分点，95%CI=[−15.70,−4.38]个百分点，p&lt;0.001）。Fin重述从换入当年起下降，第0、+1、+4年在5%水平显著，第+2、+3年在10%水平显著；综合失败在第0、+1、+2、+4年达到5%显著性，第+3年达到10%。Fin综合失败与重述的联合事前检验p值分别为0.943和0.938，未发现显著事前趋势。</p>
-<p>这些回归沿用换入前一年的九项变量、<code>mis_dummy</code>、行业和年份进行匹配，使用既定匹配名单与权重；结果方程保留九项 controls、批次×公司及批次×行业×年份固定效应，标准误按原公司聚类。加权回归有 1,763 条堆叠观测、125 家处理公司及 107 家对照公司。<strong>Strict、Fin 和 Raw 使用同一匹配样本，主要差别是结果变量定义。</strong> Strict 要求明确的财务数据更正并影响盈余；Fin 不要求盈余调整，并保留部分多选或分类不明确的记录。因此，Fin 的更强结果表明下降更多发生在严格口径以外的更正事件，不能把所有这类公告都等同于已确认的盈余差错。未预警指标均为事件发生且 MAO=0 的联合事件，在全部有效公司年度中估计。</p>
+<p>这些回归沿用换入前一年的九项变量、<code>mis_dummy</code>、行业和年份进行匹配，使用既定匹配名单与权重；结果方程保留九项 controls、批次×公司及批次×行业×年份固定效应，标准误按原公司聚类。加权回归有 1,763 条堆叠观测、125 家处理公司及 107 家对照公司。<strong>Strict、Fin 和 Raw 使用同一匹配样本，主要差别是结果变量定义。</strong> Strict 要求明确的财务数据更正并影响盈余；Fin 不要求盈余调整，并保留部分多选或分类不明确的记录。Fin 的较强结果主要对应严格口径以外的更正事件，其中包含盈余影响未明确的记录。未预警指标均为事件发生且 MAO=0 的联合事件，在全部有效公司年度中估计。</p>
 <p>以下第一张图上排是 Fin 综合失败和重述，下排是更宽的 Raw 口径；点估计与 95% 置信区间均以换所前一年为基准，纵轴为原始概率系数及置信区间。</p>
 <figure class="chapter-graph figure">
 <div style="overflow-x:auto;width:100%;">
@@ -3048,7 +3048,7 @@ Switch-in DID Before and After Baseline Matching
 <!-- BEGIN BIG4 SELECTION SUPPLEMENT -->
 <section class="level4" id="failure-opinion-decomposition">
 <h4 class="anchored" data-anchor-id="failure-opinion-decomposition">排除意见指标构造的解释：实际失败与未预警失败的分解</h4>
-<p><strong>实际财务重述本身也显著下降，为排除“未预警重述减少只是审计意见变化造成的”解释提供了证据。</strong> 我们将每个失败指标分为实际失败 <span class="math inline">\(F\)</span>、未预警失败 <span class="math inline">\(F(1-M)\)</span> 和已预警失败 <span class="math inline">\(FM\)</span>，其中 <span class="math inline">\(M=1\)</span> 表示 MAO，并单独估计 MAO 的变化。四项回归使用同一最终样本，满足 <span class="math inline">\(F=F(1-M)+FM\)</span>，因此能够直接区分失败事件减少与意见覆盖变化。</p>
+<p><strong>Fin实际财务重述也显著下降，表明未预警重述的变化包含实际问题减少。</strong> 我们将每个失败指标分为实际失败 <span class="math inline">\(F\)</span>、未预警失败 <span class="math inline">\(F(1-M)\)</span> 和已预警失败 <span class="math inline">\(FM\)</span>，其中 <span class="math inline">\(M=1\)</span> 表示 MAO，并单独估计 MAO 的变化。四项回归使用同一最终样本，满足 <span class="math inline">\(F=F(1-M)+FM\)</span>，因此能够直接区分失败事件减少与意见覆盖变化。</p>
 <p><strong>结果方程。</strong></p>
 <p><span class="math display">\[
 Y_{ict}=\text{firm}\times\text{cohort FE}+\text{cohort}\times\text{industry}\times\text{year FE}+\tau(G_{ic}\times Post_{ct})+\gamma'X^{(-Y)}_{it}+\varepsilon_{ict}.
@@ -3107,7 +3107,7 @@ Fin Restatement and Opinion Cells
 </section>
 <section class="level4" id="entry-without-future-retention">
 <h4 class="anchored" data-anchor-id="entry-without-future-retention">排除未来留任筛选的解释：保留后来退出四大的进入者</h4>
-<p><strong>取消未来留任要求后，Fin 与 Raw 重述仍显著下降，为排除“结果仅来自选择未来继续留在四大的客户”提供了证据。</strong> 原事件资格要求换入后连续留在四大；这里仅要求进入当年使用四大、此前连续三年使用非四大，取首次符合条件的进入。后来退出四大的公司仍保留，未来年份缺失不视为退出。对照组仍为始终非四大公司，并要求换所前一年可观察。窗口保持 −4 至 +4，九项 controls、<code>mis_dummy</code>、批次×公司和批次×行业×年份固定效应及公司聚类均不变。</p>
+<p><strong>取消未来留任要求后，Fin 与 Raw 重述仍显著下降。</strong> 原事件资格要求换入后连续留在四大；这里仅要求进入当年使用四大、此前连续三年使用非四大，取首次符合条件的进入。后来退出四大的公司仍保留，未来年份缺失不视为退出。对照组仍为始终非四大公司，并要求换所前一年可观察。窗口保持 −4 至 +4，九项 controls、<code>mis_dummy</code>、批次×公司和批次×行业×年份固定效应及公司聚类均不变。</p>
 <p><strong>结果方程。</strong></p>
 <p><span class="math display">\[
 Y_{ict}=\text{firm}\times\text{cohort FE}+\text{cohort}\times\text{industry}\times\text{year FE}+\tau(G_{ic}\times Post_{ct})+\gamma'X^{(-Y)}_{it}+\varepsilon_{ict}.
@@ -3387,7 +3387,7 @@ Y_{ict}=\text{firm}\times\text{cohort FE}+\text{cohort}\times\text{industry}\tim
 \]</span></p>
 <p><span class="math inline">\(Y\in\{ROA,Leverage,RevenueGrowth,Loss\}\)</span>；<span class="math inline">\(X^{(-Y)}\)</span>从九项控制中移除Y自身及对应缺失标记。 窗口为[−4,+4]财年，<span class="math inline">\(Post\)</span>从进入年取1，标准误按公司聚类；失败分解、留任及风险匹配回归保留完整九项控制。</p>
 <p>共同样本的加权 PSM-DID 包含 1,678 条观测。ROA 为 <strong>−0.0061</strong>（SE=0.0116，p=0.597），杠杆率为 <strong>−0.0116</strong>（SE=0.0216，p=0.594），收入增长率为 <strong>−0.8357</strong>（SE=0.6100，p=0.172），亏损概率下降6.20个百分点（SE=4.32个百分点，p=0.152）。对应事前联合检验 p 值为 0.818、0.959、0.872 和 0.578。共同样本的未匹配及匹配不加权平均结果同样未达到 5% 显著水平；各指标有效样本中，未匹配杠杆率显著上升（+0.2509，p=0.026），其余结果未达到 5%。因此，这组结果没有呈现出足以直接解释重述下降的普遍经营改善模式。</p>
-财务指标使用原始比例单位，其中 ROA 和收入增长率存在小分母导致的极值。供应商原表中，000892 在 2008 年总资产约 5.11 万元，对应 ROA=23509.77；600706 的收入从 2011 年约 8469 元增至 2012 年约 11.40 亿元，对应增长率=134607.06。回归使用原值，不缩尾。财务回归区间覆盖一定幅度的变化，且控制了其他财务特征；这里据此描述“未观察到一致改善”，不把非显著系数当作经营状况完全不变。
+财务指标使用原始比例单位，其中 ROA 和收入增长率存在小分母导致的极值。供应商原表中，000892 在 2008 年总资产约 5.11 万元，对应 ROA=23509.77；600706 的收入从 2011 年约 8469 元增至 2012 年约 11.40 亿元，对应增长率=134607.06。回归使用原值，不缩尾。财务回归区间覆盖一定幅度的变化，且控制了其他财务特征；结论是未观察到一致改善，仍允许区间内的经营变化。
 <figure class="latex-table figure" style="overflow-x:auto;">
 <img alt="Financial Conditions Around Entry: Common Sample" class="figure-img" loading="lazy" src="tables/big4_selection_supplement/financial_common.png" style="width:703px;max-width:none;height:auto;display:block;"/>
 <figcaption>
@@ -3477,7 +3477,7 @@ Loss: Unweighted PSM-DID
 </figcaption>
 </figure>
 </details>
-<p><strong>补充检验的共同含义。</strong> 实际 Fin 重述也下降，取消未来留任要求后 Fin/Raw 下降仍然存在，加入已测量事前风险路径后 Fin 重述仍呈负向平均变化。这些结果分别为排除意见指标构造、未来留任筛选和已测量风险差异的解释提供了证据，进一步支持四大审计改善财报质量的主线。财务路径提供同步经营变化的对照。四个检验分别保持各自的比较对象；目前尚未将风险路径匹配与取消未来留任要求合并。</p>
+<p><strong>补充检验的共同含义。</strong> 实际 Fin 重述也下降，取消未来留任要求后 Fin/Raw 下降仍然存在，加入已测量事前风险路径后 Fin 重述仍呈负向平均变化。这些检验从意见构造、留任资格和事前风险三个方面支持重述下降的结果。财务路径提供同步经营变化的对照。四个检验分别保持各自的比较对象；目前尚未将风险路径匹配与取消未来留任要求合并。</p>
 <details>
 <summary>
 完整数值与诊断材料
@@ -4044,7 +4044,7 @@ Supply-chain Exposure: Ols
 </section>
 <section class="level4" id="识别边界">
 <h4 class="anchored" data-anchor-id="识别边界">识别边界</h4>
-<p>第一阶段相关性之外，上下游冲击仍可能通过业务、共同经营环境或其他网络传导直接影响本企业结果，我们的IV很可能不满足exclusion restriction，这也可能是系数很大的原因。由于工具变量偏弱、上下游冲击还可能直接影响本企业经营，现有2SLS不足以形成稳健的四大审计因果结论。</p>
+<p>第一阶段相关性之外，上下游冲击仍可能通过业务、共同经营环境或其他网络传导直接影响本企业结果，这些直接路径会威胁exclusion restriction。第一阶段较弱已使2SLS比值不稳定；排除限制的有效性还需要单独检验。</p>
 </section>
 </section>
 <section class="level3" id="ey-dahua-causal">
@@ -4079,13 +4079,13 @@ Y_{it}=\beta\widehat{Big4}_{it}+C_{it}'\eta+\text{firm FE}+\text{industry × yea
 <section class="level3" id="same-person-big4">
 <h3 class="anchored" data-anchor-id="same-person-big4">2.7 同一签字人员—客户转入四大：平台变化的补充检验</h3>
 <p><strong>样本与对照。</strong> 每个转入批次固定前一年非四大签字人员—客户关系，处理组为人员及其客户共同转入四大的关系；对照来自该批次没有转入四大的签字人员所服务的既有客户关系。对照关系实际转入四大后不再作为未处理对照。Y为Fin未预警失败、实际重述或违规、Jones与DD绝对应计，实际观测数分别列于表中。</p>
-<p>保持同一签字人员—客户关系，考察其从非四大转四大的变化，尝试减少人员和客户同时变化造成的解释。<strong>人员ID是签字人员，不等于已核实合伙人职位</strong>；关系留存仍可能内生。固定前一年关系，在±2／±5财年窗口内分别估计全部批次和排除2002批次。</p>
+<p>保持同一签字人员—客户关系，考察其从非四大转四大的变化，尝试减少人员和客户同时变化造成的解释。<strong>人员ID识别签字人员，合伙人职位尚待核实</strong>；关系留存仍可能内生。固定前一年关系，在±2／±5财年窗口内分别估计全部批次和排除2002批次。</p>
 <p><span id="eq-big4-person-did"><span class="math display">\[
 Y_{pct}=\text{relationship × cohort FE}+\text{cohort × industry × year FE}
 +\beta G_{pc}Post_{ct}+X'_{it}\gamma+e_{pct}.
 \tag{14}\]</span></span></p>
 <p><span class="math inline">\(p\)</span>为人员—客户关系；吸收关系×批次、批次×行业×年份FE，九项控制，公司聚类、不缩尾。匹配版在转入前一年用九项、行业和批次预测项，按同批次最近邻固定权重，随后使用同一方程。</p>
-<p>全部批次的失败结果最终支持约21家处理客户，匹配约13家；排除2002后支持进一步减少。全部批次主要结果不显著；排除2002的DD异常应计有负向支持，但样本小，不能概括为全面质量改善。匹配版部分Y被FE完全吸收，必须标为不可估计而非零效应。完整七项Y和四种窗口／批次规格如下。</p>
+<p>全部批次的失败结果最终支持约21家处理客户，匹配约13家；排除2002后支持进一步减少。全部批次主要结果不显著；排除2002的DD异常应计有负向支持，该结果对应较小样本。匹配版部分Y被FE完全吸收，相应规格为不可估计。完整七项Y和四种窗口／批次规格如下。</p>
 <figure class="latex-table figure" style="overflow-x:auto;">
 <img alt="同一人员—客户：四大平台转入DID" class="figure-img" loading="lazy" src="tables/monday_existing_results/same_partner_did.png" style="width:703px;max-width:none;height:auto;display:block;"/>
 <figcaption>
@@ -4105,7 +4105,7 @@ Y_{pct}=\text{relationship × cohort FE}+\text{cohort × industry × year FE}
 <p><span id="eq-big4-client-selection"><span class="math display">\[
 P(Big4_{it}=1\mid W_{it})=\Lambda(a+W'_{it}\pi+\text{industry FE}+\text{year FE}),
 \tag{15}\]</span></span></p>
-<p><span class="math inline">\(W\)</span>为五项／九项特征及<code>mis_dummy</code>，行业和年份进入Logit，不是精确匹配约束。年度PSM比较当年身份，换所PSM-DID比较进入批次，回答不同问题。匹配后质量差异仍可能包含服务和未测量选择，不能仅由剩余差异确认unobservable。</p>
+<p><span class="math inline">\(W\)</span>为五项／九项特征及<code>mis_dummy</code>，行业和年份进入Logit，不是精确匹配约束。年度PSM比较当年身份，换所PSM-DID比较进入批次，回答不同问题。匹配后质量差异仍可能包含服务和未测量选择，服务与未测量选择的份额仍待分解。</p>
 <p>意见—风险回归方程为</p>
 <p><span id="eq-big4-warning-risk"><span class="math display">\[
 Risk_{it\text{或}t+1}=\text{firm FE}+\text{industry × year FE}
@@ -4134,12 +4134,12 @@ Risk_{it\text{或}t+1}=\text{firm FE}+\text{industry × year FE}
 <tr class="even">
 <td>年度PSM</td>
 <td>70,677候选公司年、4,782四大观测；单边支持及两条极值排除仅适用于该隔离诊断</td>
-<td>公共特征调整后仍有差异，不等于选择被完全消除</td>
+<td>公共特征调整后仍有差异，剩余选择依赖匹配假设</td>
 </tr>
 <tr class="odd">
 <td>MAO／GC风险与分类</td>
 <td>当前问题按所属财年、次年违规按公告年，预警分母不同</td>
-<td>检查风险判断，不能简单由“预警后没出问题”推断更严格</td>
+<td>结合风险与预警的不同分母评价警示准确性</td>
 </tr>
 <tr class="even">
 <td>原意见后客户流动</td>
@@ -4331,9 +4331,9 @@ Y_{it}&amp;=\text{firm FE}+\text{industry × year FE}+b_3Big4_{it}+X'_{it}\gamma
 \end{aligned}
 \tag{17}\]</span></span></p>
 <p>三列的<span class="math inline">\(b\)</span>均衡量同样本中的四大差异：第一列为原始差异，第二列调整公司和行业年度共同因素，第三列再调整当期客户特征。列间变化用于观察结果对调整的敏感性。</p>
-<p>这一比较与 Chen 等（2022）区分客户输入质量和审计输出的思路相关；我们只能调整公共财务特征，未观察其私有审计前报表。</p>
+<p>这一比较与 Chen 等（2022）区分客户输入质量和审计输出的思路相关；本项目以公共财务特征调整客户差异，同财年私有审前报表尚不可得。</p>
 <p>共同样本为71,241个公司年度、5,626家公司。严格未预警综合失败概率的组间差异由无调整时四大低3.66个百分点，变为加入公司及行业×年份FE后低1.18个百分点（p=0.082），再加入九项控制后低1.64个百分点（p=0.017）。完整规格中，四大重述概率低0.42个百分点（p=0.367），违规概率低1.51个百分点（p=0.008）。调整后的质量差异主要来自违规及综合失败。</p>
-<p>九项控制为规模、杠杆、亏损、ROA、Z-score、杠杆变动、年报披露时滞、CFO、上市年限及各自<code>mis_dummy</code>；沿用年份中位数插补、全样本中位数回退。固定效应和controls调整的是本模型可观测差异，不自动解决时间变化的客户选择。</p>
+<p>九项控制为规模、杠杆、亏损、ROA、Z-score、杠杆变动、年报披露时滞、CFO、上市年限及各自<code>mis_dummy</code>；沿用年份中位数插补、全样本中位数回退。固定效应吸收稳定客户差异，controls调整所列时变特征；剩余时变选择仍需相应设计处理。</p>
 <figure class="latex-table figure" style="overflow-x:auto;">
 <img alt="Big 4 Client Differences on a Common Sample" class="figure-img" loading="lazy" src="tables/big4_regression_columns/failure_level_nested_p01.png" style="width:703px;max-width:none;height:auto;display:block;"/>
 <figcaption>
@@ -4356,7 +4356,7 @@ Big 4 Client Differences on a Common Sample
 Y_{i,c-1}-Y_{i,c-3}=\mu+u_i.
 \]</span></p>
 <p><span class="math inline">\(\mu\)</span>为同一进入者从进入前三年至前一年的平均变化，只使用两年均有效的配对。Y包括失败指示、亏损及公司规模，结果样本数按指标列于表中。</p>
-<p>严格口径违规率在进入前第三年为1.96%，对照4.79%；进入前一年仍为1.96%，对照5.45%。亏损率和规模也显示事前差异。相反，进入者严格重述率由1.47%升至3.43%；公司内配对变化为+1.96个百分点，SE=1.20，95%CI=[−0.40,4.32]，p=0.103。中间口径变化+4.90（SE=2.67，CI=[−0.36,10.17]，p=0.068），宽口径+10.78（SE=3.39，CI=[4.10,17.47]，p=0.002）。这些是未经日历冲击调整的描述变化，不支持统一的“质量改善后进入”过程。</p>
+<p>严格口径违规率在进入前第三年为1.96%，对照4.79%；进入前一年仍为1.96%，对照5.45%。亏损率和规模也显示事前差异。相反，进入者严格重述率由1.47%升至3.43%；公司内配对变化为+1.96个百分点，SE=1.20，95%CI=[−0.40,4.32]，p=0.103。中间口径变化+4.90（SE=2.67，CI=[−0.36,10.17]，p=0.068），宽口径+10.78（SE=3.39，CI=[4.10,17.47]，p=0.002）。这些未经日历冲击调整的变化显示，违规、重述与经营特征在进入前具有不同路径。</p>
 <figure class="latex-table figure" style="overflow-x:auto;">
 <img alt="Characteristics Before First Qualifying Big 4 Entry" class="figure-img" loading="lazy" src="tables/big4_evidence/pre_entry_characteristics.png" style="width:540px;max-width:none;height:auto;display:block;"/>
 <figcaption>
@@ -4390,7 +4390,7 @@ Annual Client Matching: Five and Nine Selection Controls
 </section>
 <section class="level3" id="客户选择与审计意见四大如何形成较低风险的客户组合">
 <h3 class="anchored" data-anchor-id="客户选择与审计意见四大如何形成较低风险的客户组合">3.2 客户组合调整：进入、意见与退出</h3>
-<p>Johnstone 与 Bedard（2004）直接观察事务所的客户接受和终止决定；本节仅观察公共数据中的进入与退出，二者不能互相替代。</p>
+<p>Johnstone 与 Bedard（2004）直接观察事务所的客户接受和终止决定；本节使用公共数据刻画进入与退出，接受或终止的发起方需结合公告识别。</p>
 <p><strong>流动回归。</strong> 分别在当前四大与当前非四大客户中估计：</p>
 <p><span class="math display">\[
 Transition_{i,t+1}=\text{firm FE}+\text{industry}\times\text{year FE}+\beta Signal_{it}+\gamma'X_{it}+\varepsilon_{it}.
@@ -4418,7 +4418,7 @@ Audit Opinions and Next-Year Big 4 Client Transitions
 <li><strong>新城控股（2023→2024）：</strong> 业务发展与整体审计需求调整；</li>
 <li><strong>鼎信通讯（2023→2024）：</strong> 连续服务超过十年，基于独立性与招投标程序轮换。</li>
 </ul>
-<p>这些案例提供任期、费用、集团安排及重组等具体线索。深圳华强的“辞任”原因码与董事会改聘文字不一致；新城控股公告还明确不存在工作、费用或意见分歧，不能将这些记录统一归为四大主动辞任。</p>
+<p>这些案例提供任期、费用、集团安排及重组等具体线索。深圳华强的“辞任”原因码与董事会改聘文字不一致；新城控股公告还明确不存在工作、费用或意见分歧，案例对应不同更换动因，需分别识别发起方。</p>
 <p>以下综合机制表沿用其独立回归样本；Panel A为原流动规格，严格相邻年度的流动结果以正文表为准，两者不混作同一估计。Panels B—E保留意见预测、分类概率和客户特征证据。</p>
 <p>综合机制表：流动、预警与风险构成</p>
 <p>Table M1 将客户进入、退出、预警后风险差异及财务特征整合汇报：</p>
@@ -4472,7 +4472,7 @@ L^m_{it}=\mathbf1\{\exists e:m_e=m,\ d_{it}&lt;a_{ie}\le d_{it}+3\text{年}\}.
 H^m_{it}=\text{firm FE}+\text{industry × year FE}+\beta_m Enter_{i,t+1}
 +X'_{it}\gamma_m+e^m_{it}.
 \tag{19}\]</span></span></p>
-<p>最终45,494公司年、4,179公司簇，247转入／45,247未转入。历史违规概率低1.72个百分点（p=0.0917），Strict／Fin／Raw历史重述均不显著。存在部分事前风险选择证据，不是全部历史财报质量更好；后任审计师还可能影响历史问题发现。</p>
+<p>最终45,494公司年、4,179公司簇，247转入／45,247未转入。历史违规概率低1.72个百分点（p=0.0917），Strict／Fin／Raw历史重述均不显著。事前风险选择的支持集中于违规，后任审计师也可能影响历史问题的发现。</p>
 <figure class="latex-table figure" style="overflow-x:auto;">
 <img alt="未来进入四大与后来暴露的历史财报问题" class="figure-img" loading="lazy" src="tables/monday_existing_results/selection_historical.png" style="width:703px;max-width:none;height:auto;display:block;"/>
 <figcaption>
@@ -4518,15 +4518,15 @@ Y^m_{it}=\text{firm FE}+\text{industry × year FE}+b_m Exit_{i,t+1}+d_mM_{it}
 <section class="level3" id="不可观察选择与市场信号">
 <h3 class="anchored" data-anchor-id="不可观察选择与市场信号">3.4 不可观察选择与市场信号</h3>
 <p>控制和匹配后仍然存在质量差异，说明已纳入的可观察特征不能解释全部差异；剩余部分可能包括审计服务的作用，也可能包括未测量的客户特征。换所 DID 与风险路径匹配进一步调整固定客户差异和已测量的事前风险，为四大的质量作用提供了证据，但没有将这两部分完全分解。</p>
-<p>若事务所能够识别市场尚未掌握的客户质量，成为四大客户就可能携带额外信息。这个机制需要同时满足“筛选利用额外信息”和“市场尚未掌握该信息”两个条件。<strong>这种 selection 可以通过 signaling 产生四大的经济作用，即使审计服务对某项财报结果的增量改善尚未被确认。</strong> 第四部分考察调整客户差异后市场是否仍更重视四大客户的盈利消息；这些市场结果可以支持信息可信度的解释，但本身不能区分这种信任来自更好的审计服务、审计师声誉还是客户筛选所传递的信息。Titman、Trueman（1986）的非对称信息模型说明企业的审计师选择可向投资者传递私人信息；本节的客户流动结果尚未识别投资者如何使用该信号。</p>
+<p>若事务所能够识别市场尚未掌握的客户质量，成为四大客户就可能携带额外信息。这个机制需要同时满足“筛选利用额外信息”和“市场尚未掌握该信息”两个条件。<strong>selection可以通过signaling传递额外质量信息，形成独立于报表生产改善的信息价值。</strong> 第四部分考察调整客户差异后市场是否仍更重视四大客户的盈利消息；这些市场结果可以支持信息可信度的解释，但本身不能区分这种信任来自更好的审计服务、审计师声誉还是客户筛选所传递的信息。Titman、Trueman（1986）的非对称信息模型说明企业的审计师选择可向投资者传递私人信息；本节的客户流动结果尚未识别投资者如何使用该信号。</p>
 </section>
 </section>
 <section class="level2" id="市场是否区别对待财报信息">
 <h2 class="anchored" data-anchor-id="市场是否区别对待财报信息">4. 市场认证：客户调整后是否仍有四大作用？</h2>
-<p>第一部分已经展示市场事实；这里集中问客户调整后差异是否保留，以及是否存在独立声誉或身份变化的证据。市场更认可四大客户，可能来自服务、声誉或筛选，不能由一个市场交互系数完成三者分解。</p>
+<p>第一部分已经展示市场事实；这里集中问客户调整后差异是否保留，以及是否存在独立声誉或身份变化的证据。市场反应差异可能来自服务、声誉和筛选，本节通过匹配与事件检验分别考察这些来源。</p>
 <section class="level3" id="market-psm-erc">
 <h3 class="anchored" data-anchor-id="market-psm-erc">4.1 客户匹配后的 ERC：PSM＋匹配加权回归</h3>
-<p><strong>四大的 ERC 优势在这套可观察客户特征匹配后仍然存在。</strong> 三个 CAR 窗口的四大−非四大斜率差分别为 <strong>0.144033、0.198599、0.189861</strong>，公司聚类标准误分别为0.040925、0.052374、0.050325，p值分别为0.000458、0.000161、0.000174。它们衡量同样盈利消息对应的反应斜率差，样本同时包含好消息与坏消息；不是匹配后平均CAR差异，也不是正向消息单独估计的结果。</p>
+<p><strong>四大的 ERC 优势在这套可观察客户特征匹配后仍然存在。</strong> 三个 CAR 窗口的四大−非四大斜率差分别为 <strong>0.144033、0.198599、0.189861</strong>，公司聚类标准误分别为0.040925、0.052374、0.050325，p值分别为0.000458、0.000161、0.000174。它们衡量同样盈利消息对应的反应斜率差，样本同时包含好消息与坏消息，系数衡量完整消息样本的ERC差异。</p>
 <p><strong>加权ERC方程。</strong></p>
 <p><span class="math display">\[
 CAR_{it}^{(w)}=\text{firm FE}+\text{year FE}+\delta Big4_{it}+\beta UE_{it}+\theta_w(Big4_{it}\times UE_{it})+\gamma'X_{it}+\varepsilon_{it}.
@@ -4577,7 +4577,7 @@ CAR_{it}^{(w)}=\text{firm FE}+\text{year FE}+\delta Big4_{it}+\beta UE_{it}+\the
 </tbody>
 </table>
 <p>三个窗口在每套规格内使用完全相同的事件。匹配加权回归包含774家公司；对照事件权重ESS为95.43，反映重复使用导致的权重集中，按权重折算的对照有效观测数。最终回归样本的多项特征差异明显缩小：杠杆SMD由0.424降至0.044、ROA由−0.152变为0.026、对数预测数量由0.556变为−0.012；但年龄0.196、报告时滞−0.170、Z-score<code>mis_dummy</code>0.187、对数市值−0.183仍有差异，匹配后仍有残留差异。</p>
-<p><strong>结果含义。</strong> 客户特征匹配后，四大的ERC优势在三个公告窗口均保留，支持市场赋予四大客户盈利消息更高权重的事实。匹配样本及权重与未匹配列不同，系数变化同时反映比较对象变化；目前仍有部分特征不平衡，标准误未计入第一步匹配的不确定性。因此市场优势不能单独分配给服务、声誉或筛选信号。</p>
+<p><strong>结果含义。</strong> 客户特征匹配后，四大的ERC优势在三个公告窗口均保留，支持市场赋予四大客户盈利消息更高权重的事实。匹配样本及权重与未匹配列不同，系数变化同时反映比较对象变化；目前仍有部分特征不平衡，标准误未计入第一步匹配的不确定性。服务、声誉与筛选信号的分解仍依赖进一步识别。</p>
 <p>完整材料：结果CSV · 样本覆盖 · 最终样本平衡 · do-file · 完成日志。</p>
 <p><strong>匹配后回归方程。</strong> 使用 <a class="quarto-xref" href="#eq-big4-erc">式 9</a> 的完整主项和交互，保留公司／财年FE、三项控制与公司聚类，回归按固定匹配权重<span class="math inline">\(w_{it}\)</span>最小化</p>
 <p><span id="eq-big4-weighted-erc"><span class="math display">\[
@@ -4585,18 +4585,18 @@ CAR_{it}^{(w)}=\text{firm FE}+\text{year FE}+\delta Big4_{it}+\beta UE_{it}+\the
 \left[CAR_{it}-\text{firm FE}-\text{year FE}-\delta Big4_{it}-\beta UE_{it}
 -\theta Big4_{it}UE_{it}-X'_{it}\gamma\right]^2.
 \tag{22}\]</span></span></p>
-<p>匹配先在全部正负消息共同可估计样本上进行，<strong>本节不按10%好消息筛选</strong>。各年是否超预期会改变好消息资格；整体ERC不需要先整体匹配再筛好消息，因此不借用筛后样本的原配对平衡。这里保留已接受的整体PSM＋ERC结果。</p>
+<p>匹配在全部正负消息共同可估计样本上进行，整体ERC沿用这一匹配样本。正向消息子样本的组间可比性需要在该子样本中另行检查。</p>
 </section>
 <section class="level3" id="andersen-reputation">
 <h3 class="anchored" data-anchor-id="andersen-reputation">4.2 声誉渠道：安达信中国客户的事件检验</h3>
-<p><strong>识别思路。</strong> 声誉消息改变既有客户的审计师信誉，而非要求客户当天主动聘用四大；但中国消息到达时点、事件日客户身份和共同冲击仍需核查。主消息为安达信2002年1月10日公开承认销毁安然审计文件，中国暂对齐1月11日，[0,+2]为1月11、14、15日。</p>
+<p><strong>识别思路。</strong> 在既有客户中考察审计师声誉消息公布后的价格反应。中国消息到达时点、事件日客户身份和共同冲击仍需核查。主消息为安达信2002年1月10日公开承认销毁安然审计文件，中国暂对齐1月11日，[0,+2]为1月11、14、15日。</p>
 <p><span id="eq-big4-andersen-car"><span class="math display">\[
 CAR_i^{[0,2]}=a+\delta_A Andersen_i+\delta_B Big4_i
 +\text{industry FE}+e_i,\qquad
 CAR_i^{[0,2]}=\sum_{d\in\{1/11,1/14,1/15\}}(r_{id}-r_{md}).
 \tag{23}\]</span></span></p>
 <p>其他非四大（含本土八大）为基准，安达信相对四大为<span class="math inline">\(\delta_A-\delta_B\)</span>。行业FE、HC1标准误、不缩尾，系数保留小数收益单位。名单为2001财年末批客户，不按事件日前独立名册构造，存在事后留任选择。剔除江西铜业600362，因为其1月11日A股上市首日约+103%收益混淆比较。</p>
-<p>并集安达信27家；境内、境外各20家，重叠13、各独有7。三种定义对照均为四大40、其他非四大1,022。境外检验只改安达信身份字段，四大／其他仍为境内AuditorType；<strong>所有收益都是A股，不是境外股价，也不限定在有境外报告的客户中比较。</strong></p>
+<p>并集安达信27家；境内、境外各20家，重叠13、各独有7。三种定义对照均为四大40、其他非四大1,022。境外检验只改安达信身份字段，四大／其他仍为境内AuditorType；<strong>所有收益均为A股收益，对照覆盖相应境内事务所类别的客户。</strong></p>
 <p>并集相对其他非四大CAR为−0.007987（p=0.3617），境内为0.000420（p=0.9638），境外为−0.012479（p=0.1756）；相对四大的差异也不显著。三种客户定义均未得到显著负向反应，未提供明确的声誉事件支持。</p>
 <figure class="latex-table figure" style="overflow-x:auto;">
 <img alt="安达信声誉消息：中国[0,+2]三组CAR比较" class="figure-img" loading="lazy" src="tables/monday_existing_results/andersen_jan2002.png" style="width:703px;max-width:none;height:auto;display:block;"/>
@@ -4629,7 +4629,7 @@ CAR_i=a+\delta_A A_i+\delta_B Big4_i+\beta UE_i
 \log P_{ik}=\text{firm FE}+\text{event time FE}+\text{trading date FE}
 +\sum_{k\ne-1}\sum_g\beta_{gk}A_i^gT_iD^k+e_{ik}.
 \tag{25}\]</span></span></p>
-<p>窗口−5至+5、−1基期，原方程没有额外组别×事件日低阶项；公司、事件日和实际交易日FE，公司聚类。并集候选925家、实际10,172日记录；境内920家、10,117日记录。四项公告前组间联合检验均显著，不能将公告后路径解释为声誉冲击的因果效应。</p>
+<p>窗口−5至+5、−1基期，原方程没有额外组别×事件日低阶项；公司、事件日和实际交易日FE，公司聚类。并集候选925家、实际10,172日记录；境内920家、10,117日记录。四项公告前组间联合检验均显著，事前路径差异限制了因果解释。</p>
 <p><strong>共同限制。</strong> 中国首次报道时点和同期公司消息未充分核准；事件后年报名单尚未逐家核准事件日聘任状态；单一共同事件的横截面标准误不能排除共同冲击；消息日CAR与年报ERC回答不同问题。</p>
 <p>来源：主窗口说明 · 境内／境外说明 · 年报ERC CSV · 年报路径CSV。</p>
 <p>处理名单和2002财年服务转入见<a href="#ey-dahua-causal">审计收购设计</a>。市场有效样本中分析师消息处理组事前仅2条事件，交互工具KP F约1.37—1.49；这不是审计质量第一阶段强度。ΔEPS替代消息版本和三个CAR窗口分别保留，未形成稳健的认证因果证据。</p>
@@ -4655,7 +4655,7 @@ X_{k,it}=\pi_{k1}Z_{it}+\pi_{k2}Z_{it}U_{it}+W_{it}'\gamma_k+\text{firm FE}+\tex
 CAR_{it}^{(w)}=\beta_0\widehat X_{1,it}+\beta_1\widehat X_{2,it}+W_{it}'\eta+\text{firm FE}+\text{year FE}+\varepsilon_{it}.
 \]</span></p>
 <p><strong>主要结果。</strong> 分析师消息版DID交互在两个较宽窗口显著为正，但处理组事前仅2条事件；IV交互不显著，KP F为1.37—1.49。EPS变化代理版的DID与IV交互均不显著，KP F约0.91。这组结果的主要限制是事前市场事件支持及弱工具，未提供稳定的转入后市场认证证据。</p>
-<p>表中“IV: Big4 × earnings news”报告 <span class="math inline">\(\beta_1\)</span>。交互项由它自己的第一阶段预测，不能用 <span class="math inline">\(\widehat{Big4}_{it}\times U_{it}\)</span> 替代。市场表保留原始斜率单位；其双内生变量的KP诊断也不能用审计结果表的42.56替代。</p>
+<p>表中“IV: Big4 × earnings news”报告 <span class="math inline">\(\beta_1\)</span>。交互项由它自己的第一阶段预测，不能用 <span class="math inline">\(\widehat{Big4}_{it}\times U_{it}\)</span> 替代。市场表保留原始斜率单位；市场模型按双内生变量计算KP诊断，审计结果模型的42.56则对应另一第一阶段。</p>
 <figure class="latex-table figure" style="overflow-x:auto;">
 <img alt="EY–Dahua: earnings response DID and IV across three CAR windows" class="figure-img" loading="lazy" src="tables/ey_dahua_causal/ey_dahua_market_response.png" style="width:668px;max-width:none;height:auto;display:block;"/>
 <figcaption>

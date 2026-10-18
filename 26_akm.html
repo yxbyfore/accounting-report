@@ -247,7 +247,7 @@ window.Quarto = {
 </header>
 <section class="level2" id="概述">
 <h2 class="anchored" data-anchor-id="概述">概述</h2>
-<p>本章以双边固定效应分解描述客户、事务所和审计师之间的异质性，并检查 AKM 的 auditor FE 的识别支持与可迁移性。总体方差份额与 auditor FE 的估计精度是不同问题；rare-event outcome、有限流动和短职业记录是当前的重要限制。</p>
+<p>本章以双边固定效应分解描述客户、事务所和审计师之间的异质性，并检查 AKM 的 auditor FE 的识别支持与可迁移性。方差分解显示客户份额较大，审计师份额通常高于事务所；样本拆分与前瞻诊断进一步评估个人固定效应的可靠性。</p>
 </section>
 <section class="level2" id="核心结果">
 <h2 class="anchored" data-anchor-id="核心结果">核心结果</h2>
@@ -282,7 +282,7 @@ Y_{it}&amp;=\psi_{f(i,t)}+\theta_{a(i,t)}+\lambda_t+X_{it}'\gamma+\varepsilon_{i
 </section>
 <section class="level3" id="二部网络结构mover-与-stayer">
 <h3 class="anchored" data-anchor-id="二部网络结构mover-与-stayer">1.2 二部网络结构：Mover 与 Stayer</h3>
-<p>AKM 模型的实体识别依赖于匹配网络中重复连接的流动性（mobility）。以“事务所×审计师”网络为例： - <strong>跨所流动者（Mover）</strong>：在不同年份服务于多家事务所的审计师构成网络骨干。Mover 的执业跨越将不同事务所节点连接在同一连通分量内，使事务所固定效应具备跨所相对可比性。 - <strong>留任者（Stayer）</strong>：始终在单一事务所执业的审计师。Stayer 虽不直接桥接事务所，但只要其所在事务所已被 Mover 接入连通网络，其个人固定效应仍可被一致估计。</p>
+<p>AKM 模型的实体识别依赖于匹配网络中重复连接的流动性（mobility）。以“事务所×审计师”网络为例： - <strong>跨所流动者（Mover）</strong>：在不同年份服务于多家事务所的审计师构成网络骨干。Mover 的执业跨越将不同事务所节点连接在同一连通分量内，使事务所固定效应具备跨所相对可比性。 - <strong>留任者（Stayer）</strong>：始终在单一事务所执业的审计师。Stayer 虽不直接桥接事务所，但只要其所在事务所已被 Mover 接入连通网络，其个人固定效应可在相应归一化下识别；估计精度还取决于个人记录长度。</p>
 <p>在 A1 审计师网络中，存在 1,307 名事务所 Mover 与 2,064 名 Stayer。下图汇报了潜在连通样本、不同执业门槛及流动结构的覆盖分布。</p>
 <p><span id="full-11_akm-3"></span></p>
 <p><img alt="A1 审计师的潜在连通样本、不同观察门槛样本及流动结构。" class="img-fluid" data-fig-cap="A1 审计师 AKM 样本覆盖与流动结构。" src="figures/akm_overview/akm_pairwise_sample_coverage.png" style="width:100.0%"/></p>
@@ -302,12 +302,12 @@ Y_{it}&amp;=\psi_{f(i,t)}+\theta_{a(i,t)}+\lambda_t+X_{it}'\gamma+\varepsilon_{i
 未预警综合失败的固定效应方差分解
 </figcaption>
 </figure>
-<p>分解呈现出高度一致的层级特征： 1. <strong>客户公司异质性居首</strong>：在控制客户固定效应的模型中，客户效应解释了 27.6%–31.4% 的综合失败方差，说明横截面审计质量差异首先取决于被审计单位的固有特征。 2. <strong>审计师效应高于事务所效应</strong>：审计师固定效应解释了约 14.2%–14.3% 的总方差，而事务所固定效应仅解释 1.9%–4.1%。 3. <strong>残差项占主导</strong>：残差占比在 62.0% 至 83.4% 之间，表明加性固定效应刻画的是跨实体的稳定异质性，而非对偶发事件的完全解释。</p>
+<p>分解呈现出高度一致的层级特征： 1. <strong>客户公司异质性居首</strong>：在控制客户固定效应的模型中，客户效应解释了 27.6%–31.4% 的综合失败方差，显示模型中的稳定客户差异占较大份额。 2. <strong>审计师效应高于事务所效应</strong>：审计师固定效应解释了约 14.2%–14.3% 的总方差，而事务所固定效应仅解释 1.9%–4.1%。 3. <strong>残差项占主导</strong>：残差占比在 62.0% 至 83.4% 之间，表明加性固定效应刻画的是跨实体的稳定异质性，而非对偶发事件的完全解释。</p>
 </section>
 <section class="level3" id="跨门槛稳定性与替代结果变量">
 <h3 class="anchored" data-anchor-id="跨门槛稳定性与替代结果变量">2.2 跨门槛稳定性与替代结果变量</h3>
 <p>更严格的 5 份／5 年门槛（剔除低执业频次审计师后）并未改变上述排序：客户×审计师模型中客户份额为 32.3%、审计师份额为 12.6%；事务所×审计师模型中事务所份额为 3.9%、审计师份额为 12.5%。</p>
-<p>对于财务重述、财务违规及 Jones 异常应计绝对值，上述模式同样稳健： - <strong>财务重述与违规</strong>：与综合失败类似，客户固定效应解释约 26.5%–30.6% 的方差，审计师效应（13.6%–14.7%）均显著高于事务所效应（1.4%–4.2%）。 - <strong>Jones 异常应计绝对值</strong>：连续型应计质量指标的残差比例更高（77.9%–88.2%），客户份额降至 13.0%–20.7%，但审计师份额（7.4%–13.2%）仍明显大于事务所份额（0.4%–1.1%）。</p>
+<p>对于财务重述、财务违规及 Jones 异常应计绝对值，上述模式同样稳健： - <strong>财务重述与违规</strong>：与综合失败类似，客户固定效应解释约 26.5%–30.6% 的方差，审计师效应（13.6%–14.7%）的点估计均高于事务所效应（1.4%–4.2%）。 - <strong>Jones 异常应计绝对值</strong>：连续型应计质量指标的残差比例更高（77.9%–88.2%），客户份额降至 13.0%–20.7%，但审计师份额（7.4%–13.2%）仍明显大于事务所份额（0.4%–1.1%）。</p>
 <p><img alt="财务重述的三种双边 AKM 模型，在不筛选、3份3年和5份5年门槛下的竖向堆叠方差分解。" class="img-fluid" data-fig-cap="财务重述：三种双边模型与三种审计师门槛。" src="figures/akm_overview/akm_pairwise_threshold_restated_clean.png" style="width:100.0%"/></p>
 <p><img alt="财务违规的三种双边 AKM 模型，在不筛选、3份3年和5份5年门槛下的竖向堆叠方差分解。" class="img-fluid" data-fig-cap="财务违规：三种双边模型与三种审计师门槛。" src="figures/akm_overview/akm_pairwise_threshold_violated_clean.png" style="width:100.0%"/></p>
 <p><img alt="Jones异常应计绝对值的三种双边 AKM 模型，在不筛选、3份3年和5份5年门槛下的竖向堆叠方差分解。" class="img-fluid" data-fig-cap="Jones 异常应计绝对值：三种双边模型与三种审计师门槛。" src="figures/akm_overview/akm_pairwise_threshold_abs_da_jones.png" style="width:100.0%"/></p>
@@ -320,13 +320,13 @@ Y_{it}&amp;=\psi_{f(i,t)}+\theta_{a(i,t)}+\lambda_t+X_{it}'\gamma+\varepsilon_{i
 <p><img alt="客户与事务所双边 AKM 的3份3年分解，与客户事务所审计师三维AKM的3份3年分解对照。" class="img-fluid" data-fig-cap="客户×事务所双边模型与三维参照。" src="figures/akm_overview/akm_pairwise_vs_triadic_client_audit_firm.png" style="width:100.0%"/></p>
 <p><img alt="客户与审计师双边 AKM 的3份3年分解，与客户事务所审计师三维AKM的3份3年分解对照。" class="img-fluid" data-fig-cap="客户×审计师双边模型与三维参照。" src="figures/akm_overview/akm_pairwise_vs_triadic_client_auditor.png" style="width:100.0%"/></p>
 <p><img alt="事务所与审计师双边 AKM 的3份3年分解，与客户事务所审计师三维AKM的3份3年分解对照。" class="img-fluid" data-fig-cap="事务所×审计师双边模型与三维参照。" src="figures/akm_overview/akm_pairwise_vs_triadic_audit_firm_auditor.png" style="width:100.0%"/></p>
-<p>在三维全固定效应基准中，综合失败的客户、事务所和审计师方差份额分别为 31.4%、2.9% 和 15.0%（重述为 30.6%、2.0%、14.1%；违规为 30.5%、3.4%、16.3%）。其量级与客户×审计师双边模型高度吻合，进一步验证了双边配对估计所揭示的异质性分布是稳固的。这一描述性分解刻画各层级异质性在总方差中的相对份额。</p>
+<p>在三维全固定效应基准中，综合失败的客户、事务所和审计师方差份额分别为 31.4%、2.9% 和 15.0%（重述为 30.6%、2.0%、14.1%；违规为 30.5%、3.4%、16.3%）。其量级与客户×审计师双边模型高度吻合，显示双边与三维模型的份额排序接近。这一描述性分解刻画各层级异质性在总方差中的相对份额。</p>
 <p><span id="full-11_akm-7"></span></p>
 <p><span id="a1-审计师质量指标的补充诊断"></span></p>
 </section>
 <section class="level2" id="auditor-fe-的增量解释力与测量可靠性诊断">
 <h2 class="anchored" data-anchor-id="auditor-fe-的增量解释力与测量可靠性诊断">4. Auditor FE 的增量解释力与测量可靠性诊断</h2>
-<p>虽然聚合方差分解显示审计师层面的异质性份额客观存在，但该方差贡献能否支撑auditor FE 的估计精度与跨样本稳定性，需通过连通度、样本拆分及外生预测进行识别诊断。</p>
+<p>本节通过连通度、样本拆分和前瞻预测，检验auditor FE 的估计精度与跨样本稳定性。</p>
 <section class="level3" id="增量解释力与网络连通性支持">
 <h3 class="anchored" data-anchor-id="增量解释力与网络连通性支持">4.1 增量解释力与网络连通性支持</h3>
 <p>在嵌套模型中检验审计师固定效应 <span class="math inline">\(\alpha_a\)</span> 的增量解释力：</p>
@@ -428,7 +428,7 @@ AKM 网络连通和个人观察支持。LaTeX 源文件。
 质量分位组跨样本保留率。LaTeX 源文件。
 </figcaption>
 </figure>
-<p>拆分检验显示： - 综合失败 FE 在奇偶年份拆分中的相关系数为 0.452，在随机客户项目拆分中降至 0.220，而在早晚时期拆分（0.030）与留出客户拆分（−0.048）中近乎归零。 - 这表明，个体固定效应包含较多特定客户关系或当期宏观环境的抽样噪音，难以稳定迁移到新客户或样本外时期。</p>
+<p>拆分检验显示： - 综合失败 FE 在奇偶年份拆分中的相关系数为 0.452，在随机客户项目拆分中降至 0.220，而在早晚时期拆分（0.030）与留出客户拆分（−0.048）中近乎归零。 - 这表明固定效应在早晚时期和不同客户间的迁移性较弱；测量噪声、客户关系和时变服务差异都是可能来源。</p>
 <p>将估计出的 auditor FE 对审计师可观察人力资本（四大从业经历、985/211 院校背景、学历）进行投影：</p>
 <p><span class="math display">\[\widehat\alpha_a=\theta_0+\theta_1\mathrm{Big4Bg}_a+\theta_2\mathrm{School985/211}_a+\theta_3\mathrm{MasterPlus}_a+\theta_4\mathrm{BachelorPlus}_a+u_a.\]</span></p>
 <figure class="latex-table figure">
@@ -449,7 +449,7 @@ AKM 网络连通和个人观察支持。LaTeX 源文件。
 四类 AKM FE 的加权与不加权人力资本投影。LaTeX 源文件。
 </figcaption>
 </figure>
-<p>可观察的人力资本特征仅解释了失败类 auditor FE 极小的方差（等权 0.16%，加权 0.26%），表明固定效应捕捉的更多是无法被传统履历变量直接代理的潜在差异。</p>
+<p>可观察的人力资本特征仅解释了失败类 auditor FE 极小的方差（等权 0.16%，加权 0.26%），显示这些履历变量对估计分数的解释力较低；分数中的测量误差也可能削弱投影关系。</p>
 <p>最后，下述表格刻画了 auditor FE 分布两端与中间组的特征对比及跨梯队事务所流动：</p>
 <figure class="latex-table figure">
 <img alt='AKM 质量组的覆盖和事务所类别。&lt;a href="tables/auditor_quality_run_20260925/narrow/akm_quality_group_profile.tex"&gt;LaTeX 源文件&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_run_20260925/narrow/akm_quality_group_profile_full_p01.png"/>
@@ -491,7 +491,7 @@ AKM 两端组与中间组的七项描述性差异。LaTeX 源文件。
 </section>
 <section class="level3" id="sec-rare-event-akm">
 <h3 class="anchored" data-anchor-id="sec-rare-event-akm">4.3 Rare-event Outcome、Auditor FE 噪声与平均服务效应</h3>
-<p><strong>严重审计失败的稀有性，本身不意味着线性 AKM 估计存在系统性偏误，但会限制数据对 auditor FE 差异的识别能力。</strong> 这里需要区分三个问题：线性系数是否有偏、auditor FE 是否估计精确，以及使用估计出的固定效应进行方差分解时是否引入偏误。三者并不等价，不能由其中一个问题直接推断另外两个问题。</p>
+<p><strong>稀有失败主要限制个人固定效应的信息量，系数无偏性、估计精度和方差分解偏误需要分别判断。</strong> 下文依次说明三者的条件及其在本项目中的诊断。</p>
 <p><strong>在线性 AKM 中，无偏性取决于条件均值假设，而不要求结果变量连续或服从正态分布。</strong> 将控制变量和各组固定效应的设计矩阵统一记为 <span class="math inline">\(Z\)</span>，模型可以写为：</p>
 <p><span class="math display">\[
 Y=Z\theta+\varepsilon.
@@ -503,12 +503,12 @@ Y=Z\theta+\varepsilon.
 \qquad
 E[\widehat{\theta}\mid Z]=\theta.
 \]</span></p>
-<p>这一推导不依赖 <span class="math inline">\(Y\)</span> 是连续变量还是二元变量，也不要求失败事件达到某一发生比例。因此，失败率低并不会自动使线性系数或 auditor FE 向某个方向系统性偏离真实参数。不过，这一结论以正确的条件均值设定为前提：如果审计师更替与未控制的客户风险变化相关，或者不同客户和审计师的失败被发现概率存在系统性差异，条件均值假设仍可能不成立。稀有性本身不构成偏误来源，也不能替代对匹配机制、遗漏变量和失败发现机制的检验。</p>
+<p>这一推导不依赖 <span class="math inline">\(Y\)</span> 是连续变量还是二元变量，也不要求失败事件达到某一发生比例。因此，失败率低并不会自动使线性系数或 auditor FE 向某个方向系统性偏离真实参数。不过，这一结论以正确的条件均值设定为前提：如果审计师更替与未控制的客户风险变化相关，或者不同客户和审计师的失败被发现概率存在系统性差异，条件均值假设仍可能不成立。因此，无偏性检验应关注匹配机制、遗漏变量和失败发现过程。</p>
 <p><strong>有限样本中的 auditor FE 精度取决于事件信息和网络连接。</strong> 审计师可能存在真实能力差异，但有限职业记录中的“零失败”，不足以区分较低的失败概率、较低的客户风险和暂时没有实现的失败事件。例如，在各次审计相互独立且失败概率固定的简化情形下，<span class="math inline">\(n\)</span> 份报告均未发生失败的概率为 <span class="math inline">\((1-p)^n\)</span>；当 <span class="math inline">\(p\)</span> 较低且 <span class="math inline">\(n\)</span> 有限时，不同失败概率的审计师都可能留下零失败记录。少量事件一旦出现，又可能明显改变估计出的 auditor FE。这里的困难是相对于待识别差异而言信息不足，而不是失败率越低，线性估计的绝对方差就必然越大。此外，客户—审计师—事务所网络中的连接和流动决定了不同固定效应能否被区分；单纯增加同一匹配关系下的观测，并不一定提供足够的识别信息。<a href="https://www.tse-fr.eu/articles/fixed-effect-regressions-network-data?lang=en">Jochmans 与 Weidner（2019）</a>讨论了网络结构对固定效应估计精度与推断的影响。</p>
-<p>在我们的数据中，获得前瞻 auditor FE 的当期 A1 观测共 <strong>22,464 条，其中 74.84% 对应的训练历史没有观察到综合失败，训练报告数中位数为 12 份</strong>。该比例按获得 FE 的当期观测计算，并非独立审计师人数比例。新接任项目中，前瞻 auditor FE 对结果变量的回归系数为 −0.00121（标准误 0.00466，p=0.795，N=2,641）；限制历史至少审计 20 份报告后，也未形成稳定的预测改善。这些结果与 auditor FE 测量噪声较大的解释相容，但尚不能单独证明预测不稳定完全由稀有事件造成。客户组合变化、服务效应随时间变化及失败发现时滞，也可能影响跨项目预测。</p>
+<p>在我们的数据中，获得前瞻 auditor FE 的当期 A1 观测共 <strong>22,464 条，其中 74.84% 对应的训练历史没有观察到综合失败，训练报告数中位数为 12 份</strong>。该比例按获得 FE 的当期观测计算，并非独立审计师人数比例。新接任项目中，前瞻 auditor FE 对结果变量的回归系数为 −0.00121（标准误 0.00466，p=0.795，N=2,641）；限制历史至少审计 20 份报告后，也未形成稳定的预测改善。这些结果与较大的测量噪声相容。客户组合变化、时变服务效应和失败发现时滞也可能影响跨项目预测，需要分别诊断。</p>
 <p><strong>插件方差分解会混入固定效应的估计误差。</strong> 若估计出的 auditor FE 可以写为 <span class="math inline">\(\widehat{\psi}_a=\psi_a+u_a\)</span>，即使 <span class="math inline">\(u_a\)</span> 的条件期望为零，直接计算 <span class="math inline">\(\widehat{\psi}_a\)</span> 的离散程度，仍会混入估计误差的离散程度。因此，未经修正的 FE 方差不能全部解释为真实能力差异；不同组固定效应的估计误差还可能相关，影响协方差项及方差贡献比例。<a href="https://onlinelibrary.wiley.com/doi/full/10.3982/ECTA16410">Kline、Saggio 与 Sølvsten（2020）</a>提出的 leave-out 方法正是针对这类二次型估计问题。不同 cutoff 下方差分解的模式一致，可以支持结果对样本限制的稳定性，但不能据此认定估计噪声已被消除。</p>
-<p><strong>改用 logit/probit 可以改变概率模型的设定，却不能自动解决 auditor FE 的信息不足。</strong> 非线性模型将预测概率限制在 <span class="math inline">\([0,1]\)</span> 内，但不会增加实际观察到的失败事件。对于记录较短、结果全部为零的审计师，包含其固定效应的二元响应模型还可能出现分离，使相应 FE 趋向负无穷而没有有限的极大似然估计。与此同时，当每个固定效应所对应的观测有限时，大量固定效应的估计误差可能通过非线性似然传递到其他参数，产生附带参数偏误。<a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1468-0262.2004.00533.x">Hahn 与 Newey（2004）</a>及 <a href="https://discovery.ucl.ac.uk/id/eprint/1473260/">Fernández-Val 与 Weidner（2016）</a>讨论了非线性面板中的这一问题及其修正。因此，不能仅因为 <span class="math inline">\(Y\)</span> 是二元变量，就认为 logit/probit 必然比线性 AKM 更适合估计 auditor FE；相应偏误修正能否用于本研究的多组固定效应和稀疏匹配网络，也需要另行验证。</p>
-<p><strong>平均审计服务效应可以利用可信的轮换或分配变化直接识别。</strong> 估计某类服务提供者的平均影响，不要求先准确估计每位审计师的固定效应。如果审计师轮换或分配变化能够提供可信的识别条件，仍可以直接检验不同服务提供者对审计结果的平均影响。稀有事件会限制这类检验的统计功效，但是否能够作出因果解释，主要取决于分配机制及相应识别假设，而不是能否将每个 auditor FE 估准。</p>
+<p><strong>logit/probit 的适用性取决于记录长度、分离和附带参数问题。</strong> 非线性模型将预测概率限制在 <span class="math inline">\([0,1]\)</span> 内，但不会增加实际观察到的失败事件。对于记录较短、结果全部为零的审计师，包含其固定效应的二元响应模型还可能出现分离，使相应 FE 趋向负无穷而没有有限的极大似然估计。与此同时，当每个固定效应所对应的观测有限时，大量固定效应的估计误差可能通过非线性似然传递到其他参数，产生附带参数偏误。<a href="https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1468-0262.2004.00533.x">Hahn 与 Newey（2004）</a>及 <a href="https://discovery.ucl.ac.uk/id/eprint/1473260/">Fernández-Val 与 Weidner（2016）</a>讨论了非线性面板中的这一问题及其修正。模型选择据此需要同时考虑概率设定与有限记录下的估计性质；相应偏误修正对本研究多组固定效应和稀疏匹配网络的适用性仍需验证。</p>
+<p><strong>平均审计服务效应可以利用可信的轮换或分配变化直接识别。</strong> 可信的审计师轮换或分配变化，可以直接用于估计某类服务提供者对审计结果的平均影响。稀有事件会限制这类检验的统计功效，但是否能够作出因果解释，主要取决于分配机制及相应识别假设，而不是能否将每个 auditor FE 估准。</p>
 </section>
 </section>
 <section class="level2" id="数据与估计程序记录">

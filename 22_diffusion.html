@@ -240,11 +240,11 @@ window.Quarto = {
 </header>
 <section class="level2" id="概述">
 <h2 class="anchored" data-anchor-id="概述">概述</h2>
-<p>本章考察四大采用是否沿客户—供应商网络传播，连接企业自身的审计需求与网络中的服务采用扩散。本章的结果变量是四大采用率；因果解释依赖对网络选择和共同冲击的处理。</p>
+<p>本章考察四大采用在客户—供应商网络中的扩散。贸易伙伴转向四大后，焦点公司的四大采用率上升，供应商侧的变化更大。</p>
 </section>
 <section class="level2" id="核心结果">
 <h2 class="anchored" data-anchor-id="核心结果">核心结果</h2>
-<p>我们采用 staggered event study 检验四大采用在供应链中的网络传导。基本结论是：贸易伙伴转向四大后，焦点公司随后采用四大的概率显著上升，且供应商侧（supplier shock）的拉动效应明显强于客户侧（client shock）。</p>
+<p>我们采用 staggered event study 检验四大采用在供应链中的网络传导。基本结论是：贸易伙伴转向四大后，焦点公司随后采用四大的概率显著上升，供应商侧（supplier shock）的点估计高于客户侧（client shock）。</p>
 <p><strong>回归方程与设定</strong></p>
 <p>对供应商和客户冲击分别估计两向固定效应模型：</p>
 <p><span class="math display">\[
@@ -279,14 +279,14 @@ window.Quarto = {
 </section>
 <section class="level2" id="供应链网络与基本事实">
 <h2 class="anchored" data-anchor-id="供应链网络与基本事实">1. 供应链网络与基本事实</h2>
-<p><strong>研究问题与当前发现。</strong> 供应链网络以公司披露的客户—供应商关系为基础。对每一家焦点公司，分别定义其客户或供应商首次转向四大的年份；该年份构成网络伙伴的审计质量冲击。研究考察与该伙伴相连公司的审计师采用是否在随后发生变化。</p>
+<p><strong>研究问题与当前发现。</strong> 供应链网络以公司披露的客户—供应商关系为基础。对每一家焦点公司，分别定义其客户或供应商首次转向四大的年份；该年份标记网络伙伴的四大采用事件。研究考察与该伙伴相连公司的审计师采用是否在随后发生变化。</p>
 <p><strong>回归／统计设定。</strong> 单位为焦点公司—年，因变量为事务所类别采用。伙伴事件虚拟变量进入 TWFE，公司和年份 FE、公司聚类；当前年度命令无额外控制。 <a href="#settings-03_diffusion">变量与回归设定</a>。</p>
-<p>设 <span class="math inline">\(PartnerBig4_{it}^k\)</span> 表示公司 <span class="math inline">\(i\)</span> 的客户或供应商在相对事件时间 <span class="math inline">\(k\)</span> 首次转向四大的暴露指标，<span class="math inline">\(Y_{it}\)</span> 为公司 <span class="math inline">\(i\)</span> 在年份 <span class="math inline">\(t\)</span> 的审计师质量结果。主回归为：</p>
+<p>设 <span class="math inline">\(PartnerBig4_{it}^k\)</span> 表示公司 <span class="math inline">\(i\)</span> 的客户或供应商在相对事件时间 <span class="math inline">\(k\)</span> 首次转向四大的暴露指标，<span class="math inline">\(Y_{it}\)</span> 为公司 <span class="math inline">\(i\)</span> 在年份 <span class="math inline">\(t\)</span> 的审计师采用指标。主回归为：</p>
 <p><span class="math display">\[
 Y_{it}=\sum_{k\neq -1}\beta_k PartnerBig4_{it}^k+X_{it}'\gamma+\mu_i+\lambda_t+\varepsilon_{it}.
 \]</span></p>
 <p>其中，<span class="math inline">\(k=-1\)</span> 为事件前一年，<span class="math inline">\(X_{it}\)</span> 为当前规格的时变控制变量，<span class="math inline">\(\mu_i\)</span> 和 <span class="math inline">\(\lambda_t\)</span> 分别为公司与年份固定效应。基准结果令 <span class="math inline">\(Y_{it}=Big4_{it}\)</span>。</p>
-<p>网络传导的解释要求伙伴审计师转换不是由焦点公司与伙伴共同面对的未观测冲击机械驱动。因此，Monte Carlo 随机事件与异质性检验是识别设计的重要部分。</p>
+<p>识别网络传导需要区分伙伴换所的影响与双方共同面对的融资、国际化或行业冲击。后文结合关系定义、相对规模与随机事件时点进行诊断。</p>
 <p><span id="full-03_diffusion-2"></span></p>
 </section>
 <section class="level2" id="供应商转向四大的传导效应">
@@ -294,7 +294,7 @@ Y_{it}=\sum_{k\neq -1}\beta_k PartnerBig4_{it}^k+X_{it}'\gamma+\mu_i+\lambda_t+\
 <p><strong>研究问题与当前发现。</strong> 供应商侧事件定义为：与公司相连的供应商首次由非四大转向四大。年度事件研究中，事件前系数没有持续的正向偏离；事件当年及之后，焦点公司采用四大的概率上升，并在多个后续时期保持为正。</p>
 <p><strong>回归／统计设定。</strong> 供应商首次转向四大的网络暴露；处理公司数为 1,942 家。年度公司、年份 FE，公司聚类；合并 ±5 两端，无额外控制。 <a href="#settings-03_diffusion">变量与回归设定</a>。</p>
 <p><img alt="供应商首次转向四大前后，焦点公司采用四大的年度事件研究图。" class="img-fluid" data-fig-cap="供应商转向四大的传导效应：焦点公司采用四大的年度事件研究。" src="figures/stage2_sc/supplier_trans_big4/annual_supplier_trans_big4_base_big4.png" style="width:100.0%"/></p>
-<p><strong>结果解释与识别局限。</strong> 事件前估计系数紧密在零线附近波动，平行趋势假定得到支持；事件当期（<span class="math inline">\(k=0\)</span>）系数即跳升约 1.2 个百分点，并在随后 1 至 5 年内维持在 2.5~3.0 个百分点的显著正向水平。这一结果与供应商审计质量升级后，交易对手协同提升审计质量的传导解释一致；但也可能反映共同融资、共同国际化或行业共同冲击，需进一步通过异质性与安慰剂检验辨别。</p>
+<p><strong>结果解释与识别局限。</strong> 事件前估计系数在零线附近波动；事件当期（<span class="math inline">\(k=0\)</span>）系数即跳升约 1.2 个百分点，并在随后 1 至 5 年内维持在 2.5~3.0 个百分点的显著正向水平。这一变化与供应商换所后交易对手协同采用四大的解释一致。共同融资、共同国际化和行业冲击也是可能来源，后文检验结果对分组和事件时点的敏感性。</p>
 <p><span id="full-03_diffusion-3"></span></p>
 </section>
 <section class="level2" id="客户转向四大的传导效应">
@@ -302,7 +302,7 @@ Y_{it}=\sum_{k\neq -1}\beta_k PartnerBig4_{it}^k+X_{it}'\gamma+\mu_i+\lambda_t+\
 <p><strong>研究问题与当前发现。</strong> 客户侧事件定义为：与公司相连的客户首次由非四大转向四大。年度图显示，焦点公司采用四大的概率在事件后由接近零转为正，并在后续年份保持正向。</p>
 <p><strong>回归／统计设定。</strong> 客户首次转向四大的网络暴露；处理公司数为 1,532 家。其余年度设定同第 2 节。 <a href="#settings-03_diffusion">变量与回归设定</a>。</p>
 <p><img alt="客户首次转向四大前后，焦点公司采用四大的年度事件研究图。" class="img-fluid" data-fig-cap="客户转向四大的传导效应：焦点公司采用四大的年度事件研究。" src="figures/stage2_sc/client_trans_big4/annual_client_trans_big4_base_big4.png" style="width:100.0%"/></p>
-<p><strong>结果解释与识别局限。</strong> 客户侧同样表现出平稳的事前趋势（<span class="math inline">\(k \le -2\)</span> 阶段无显著偏离）。在客户换所后次年（<span class="math inline">\(k \ge 1\)</span>），焦点公司采用四大的概率显著转正，后续维持在 1.5~2.0 个百分点。相较供应商侧，客户侧点估计相对较小，呈现出上游向下游传导更显著的非对称特征。</p>
+<p><strong>结果解释与识别局限。</strong> 客户侧同样表现出平稳的事前趋势（<span class="math inline">\(k \le -2\)</span> 阶段无显著偏离）。在客户换所后次年（<span class="math inline">\(k \ge 1\)</span>），焦点公司采用四大的概率显著转正，后续维持在 1.5~2.0 个百分点。相较供应商侧，客户侧点估计相对较小，显示上游向下游的采用变化幅度更大。</p>
 <p><span id="full-03_diffusion-5"></span></p>
 </section>
 <section class="level2" id="供应链地位异质性">
@@ -316,9 +316,9 @@ Y_{it}=\sum_{k\neq -1}\beta_k PartnerBig4_{it}^k+X_{it}'\gamma+\mu_i+\lambda_t+\
 </section>
 <section class="level3" id="供应商议价地位">
 <h3 class="anchored" data-anchor-id="供应商议价地位">4.2 供应商议价地位</h3>
-<p>大供应商定义为供应商营业收入超过焦点公司营业收入两倍的关系。该分组检验重要投入品交易对手是否具有更强的审计质量影响。</p>
+<p>大供应商定义为供应商营业收入超过焦点公司营业收入两倍的关系。该分组检验重要投入品交易对手的换所是否对应更大的采用变化。</p>
 <p><img alt="按供应商相对规模划分的供应商转向四大事件研究图。" class="img-fluid" data-fig-cap="供应商主导与其他供应商关系：焦点公司采用四大的事件路径。" src="figures/stage2_sc/supplier_trans_big4/annual_power_supplier_trans_big4_big4.png" style="width:100.0%"/></p>
-<p><strong>结果解释。</strong> 客户侧大客户组的采用概率跃升更为集中，与强势买方的合规监督假说一致；供应商侧两组均呈现出稳健的正向变化，表明投入品供应方的规范化对下游具有普遍的认证与示范效应。</p>
+<p><strong>结果解释。</strong> 客户侧大客户组的采用概率跃升更为集中，与强势买方的合规监督假说一致；供应商侧两组均呈正向变化。相对规模分组描述了采用路径的异质性，认证、示范与合规监督是需要进一步区分的渠道。</p>
 <p><span id="full-03_diffusion-6"></span></p>
 </section>
 </section>
@@ -333,7 +333,7 @@ Y_{it}=\sum_{k\neq -1}\beta_k PartnerBig4_{it}^k+X_{it}'\gamma+\mu_i+\lambda_t+\
 </ul>
 <p><img alt="两年窗口内客户转向四大前后，焦点公司采用四大的事件研究图。" class="img-fluid" data-fig-cap="两年一期：客户转向四大的传导效应。" src="figures/stage2_sc/client_trans_big4/2y_client_trans_big4_base_big4.png" style="width:100.0%"/></p>
 <p><img alt="两年窗口内供应商转向四大前后，焦点公司采用四大的事件研究图。" class="img-fluid" data-fig-cap="两年一期：供应商转向四大的传导效应。" src="figures/stage2_sc/supplier_trans_big4/2y_supplier_trans_big4_base_big4.png" style="width:100.0%"/></p>
-<p><strong>结果解释。</strong> 在两年期聚合规格下，事件前系数维持平稳，事件后各周期呈现平滑的单调递增走势，证实基准发现对时间粒度的选取稳健。</p>
+<p><strong>结果解释。</strong> 在两年期聚合规格下，事件前系数维持平稳，事件后各周期呈现平滑的单调递增走势，与年度结果中的正向采用变化一致。</p>
 <p><span id="full-03_diffusion-7"></span></p>
 </section>
 <section class="level2" id="placebo-与因果推断检验">
@@ -342,7 +342,7 @@ Y_{it}=\sum_{k\neq -1}\beta_k PartnerBig4_{it}^k+X_{it}'\gamma+\mu_i+\lambda_t+\
 <p><strong>回归／统计设定。</strong> 保持公司与网络拓扑结构不变，对各公司经历冲击的事件年份进行 3,000 次随机打散重抽样（Monte Carlo 置换），构建经验虚无分布，并将真实静态系数置于该分布中进行推断比较。 <a href="#settings-03_diffusion">变量与回归设定</a>。</p>
 <p><img alt="3000次随机事件时点下客户侧转向四大的安慰剂系数分布。" class="img-fluid" data-fig-cap="客户侧随机事件时点安慰剂：红色虚线为真实系数，直方图和核密度为 3,000 次随机化得到的系数分布。" src="figures/placebo/placebo_dist_simu3000_shock_client_trans_big4.png" style="width:100.0%"/></p>
 <p><img alt="3000次随机事件时点下供应商侧转向四大的安慰剂系数分布。" class="img-fluid" data-fig-cap="供应商侧随机事件时点安慰剂：红色虚线为真实系数，直方图和核密度为 3,000 次随机化得到的系数分布。" src="figures/placebo/placebo_dist_simu3000_shock_supplier_trans_big4.png" style="width:100.0%"/></p>
-<p><strong>结果解释与识别局限。</strong> 客户侧的真实系数为 0.0169，经验 p 值为 0.073；供应商侧的真实系数为 0.0260，经验 p 值为 0.001。置换检验表明真实系数几乎不可能由随机事件时点产生，强力排除了时序巧合驱动的假设。但该检验主要针对时序维度的外生性，未能完全排除行业层面的共同冲击（common industry shocks），区分行业共同冲击仍是网络传导因果识别的关键边界。</p>
+<p><strong>结果解释与识别局限。</strong> 客户侧的真实系数为 0.0169，经验 p 值为 0.073；供应商侧的真实系数为 0.0260，经验 p 值为 0.001。供应商侧系数在随机时点分布中更为极端，客户侧的置换证据较弱。该检验比较真实与随机事件时点的系数；行业共同冲击（common industry shocks）和网络选择仍需通过相应设计处理。</p>
 </section>
 <section class="level2" id="数据程序与输出记录">
 <h2 class="anchored" data-anchor-id="数据程序与输出记录">数据、程序与输出记录</h2>
