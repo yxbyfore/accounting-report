@@ -115,3 +115,34 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--report-blue);
   font-weight: 600;
 }
+
+@media (min-width: 992px) {
+  #quarto-sidebar .sidebar-item-text .menu-text,
+  #quarto-margin-sidebar nav#TOC .nav-link {
+    white-space: nowrap;
+    text-overflow: clip;
+  }
+}
+
+#quarto-margin-sidebar nav#TOC .report-toc-parent {
+  color: #24577b;
+  font-weight: 600;
+}
+
+#quarto-margin-sidebar nav#TOC .report-toc-parent::before {
+  content: "▸";
+  display: inline-block;
+  width: 14px;
+}
+
+#quarto-margin-sidebar nav#TOC .report-toc-parent[aria-expanded="true"]::before {
+  content: "▾";
+}
+
+#quarto-margin-sidebar nav#TOC ul[data-report-branch][hidden] {
+  display: none !important;
+}
+
+#quarto-margin-sidebar nav#TOC ul[data-report-branch]:not([hidden]) {
+  display: block !important;
+}

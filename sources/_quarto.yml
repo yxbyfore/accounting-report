@@ -40,11 +40,14 @@ format:
     lang: zh
     theme: cosmo
     grid:
-      sidebar-width: 180px
+      sidebar-width: 260px
       body-width: 800px
-      margin-width: 170px
+      margin-width: 500px
       gutter-width: 20px
     toc: true
     toc-location: right
     anchor-sections: true
     css: styles.css
+    include-after-body:
+      text: |
+        <script src="report-toc.js" defer></script>
