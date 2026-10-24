@@ -42,7 +42,7 @@ format:
     grid:
       sidebar-width: 260px
       body-width: 800px
-      margin-width: 500px
+      margin-width: 600px
       gutter-width: 20px
     toc: true
     toc-location: right
