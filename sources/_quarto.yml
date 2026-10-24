@@ -19,7 +19,7 @@ project:
 website:
   title: "会计研究项目报告"
   sidebar:
-    style: docked
+    style: floating
     search: true
     contents:
       - 01_core_summary.qmd
