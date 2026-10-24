@@ -1,59 +1,113 @@
-body,
-.quarto-title-block,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-table,
-button,
-input {
-  font-family: "STFangsong", "华文仿宋", serif;
-}
-
 :root {
-  --report-blue: #1f4e79;
-  --report-muted: #607080;
-  --report-rule: #dce6ee;
+  --report-blue: #345b76;
+  --report-muted: #657386;
+  --report-rule: #e2e7ed;
+  --report-serif: "Noto Serif SC", "Source Han Serif SC", "SimSun", serif;
+  --report-sans: "Microsoft YaHei", "PingFang SC", sans-serif;
 }
 
-#quarto-document-content {
-  max-width: 56rem;
+body {
+  font-family: var(--report-serif);
+  font-size: 15px;
+  line-height: 1.7;
+  color: #252525;
+}
+
+button,
+input,
+.sidebar,
+.quarto-title-block,
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--report-sans);
 }
 
 #quarto-content main.content h1,
 #quarto-content main.content h2,
 #quarto-content main.content h3 {
-  color: var(--report-blue);
+  color: #222;
   font-weight: 600;
 }
 
 #quarto-content main.content h1 {
-  margin-top: 2.4rem;
-  padding-bottom: 0.55rem;
-  border-bottom: 1px solid var(--report-rule);
-  font-size: 1.85rem;
+  margin-top: 1.5rem;
+  margin-bottom: 18px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+  font-size: 24px;
 }
 
 #quarto-content main.content h2 {
-  margin-top: 1.7rem;
-  font-size: 1.35rem;
+  margin: 23px 0 11px;
+  padding-bottom: 0;
+  border-bottom: 0;
+  font-size: 18px;
+}
+
+#quarto-content main.content h3 {
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+#quarto-content main.content h4,
+#quarto-content main.content h5,
+#quarto-content main.content h6 {
+  font-size: 15px;
 }
 
 #quarto-content main.content p {
-  line-height: 1.9;
+  margin: 11px 0;
+  line-height: 1.7;
+}
+
+#quarto-content main.content figure {
+  margin: 17px 0 10px;
+}
+
+#quarto-content main.content figcaption {
+  font-size: 13px;
+  line-height: 1.7;
+  color: #555;
+}
+
+#quarto-content main.content a {
+  color: var(--report-blue);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+#quarto-sidebar .sidebar-title {
+  font-family: var(--report-serif);
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+#quarto-sidebar .sidebar-item-text {
+  font-size: 12px;
+  line-height: 1.65;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#quarto-sidebar .sidebar-item-text.active {
+  color: #222;
+  background: #eeeeeb;
+  border-radius: 3px;
 }
 
 #quarto-margin-sidebar nav#TOC {
-  border-left: 2px solid var(--report-rule);
-  padding-left: 0.9rem;
+  border-left: 1px solid var(--report-rule);
+  padding-left: 13px;
+  font-size: 12px;
+}
+
+#quarto-margin-sidebar #toc-title {
+  display: none;
 }
 
 #quarto-margin-sidebar nav#TOC .nav-link {
   color: var(--report-muted);
-  line-height: 1.45;
-  padding: 0.28rem 0;
+  line-height: 1.7;
+  padding: 5px 0;
 }
 
 #quarto-margin-sidebar nav#TOC .nav-link.active,

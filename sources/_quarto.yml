@@ -39,6 +39,11 @@ format:
   html:
     lang: zh
     theme: cosmo
+    grid:
+      sidebar-width: 180px
+      body-width: 800px
+      margin-width: 170px
+      gutter-width: 20px
     toc: true
     toc-location: right
     anchor-sections: true
