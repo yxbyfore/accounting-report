@@ -1,0 +1,41 @@
+/* PDF-inspired formatting scoped to the background page's content blocks. */
+.background-note {
+  background: #eef3f8;
+  padding: 1rem 1.25rem;
+  margin: 1.25rem 0;
+  break-inside: avoid;
+}
+.background-note p:last-child,
+.background-source p:last-child {
+  margin-bottom: 0;
+}
+.background-source {
+  color: #5a5a5a;
+  font-size: 0.85em;
+  margin: 0.65rem 0 1.5rem;
+}
+.background-source a {
+  color: #1f4e79;
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+  overflow-wrap: anywhere;
+}
+.background-table {
+  overflow-x: auto;
+  margin: 1.25rem 0;
+}
+.background-table table {
+  width: 100%;
+  font-size: 0.88em;
+  line-height: 1.65;
+}
+.background-table th {
+  background: #eef3f8;
+  color: #1f4e79;
+}
+.background-table th,
+.background-table td {
+  padding: 0.65rem 0.8rem;
+  vertical-align: top;
+  min-width: 5rem;
+}

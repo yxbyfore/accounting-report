@@ -20,7 +20,7 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
 </style>
@@ -301,7 +301,7 @@ R_t^{\,s}=\frac{\#\{\text{eligible type-}s\text{ links retained in }t+1\}}
 <figure class="latex-table figure">
 <img alt="客户、事务所与 A1 的累计匹配数量" class="figure-img" loading="lazy" src="tables/matching/10_matching_summary_01_full.png"/>
 <figcaption>
-客户、事务所与 A1 的累计匹配数量
+客户、事务所与 A1 的累计匹配数量 ·  · 
 </figcaption>
 </figure>
 <p>六项分布均呈右偏，均值高于中位数。A1 的累计客户数中位数为 2，报告数中位数为 4，说明应区分客户覆盖与跨年重复签字。客户累计匹配的 A1 数中位数为 4，高于事务所数的中位数 2；年度更换情况由第 6 节的保留率单独衡量。</p>
@@ -436,7 +436,7 @@ I_t(K;L)=\sum_{k,l}P_t(k,l)\ln\frac{P_t(k,l)}{P_t(k)P_t(l)}.
 <p><strong>估计程序（存档）。</strong> 44_triadic_sorting_blm.do · 45_matching_degree_distribution.do · 42_audit_firm_sorting_akm.do</p>
 <p>结果来源为 <code>results/tables/selection_matching/matching_degree_distribution/</code> 下六个 <code>*_counts.csv</code> 文件；三张组合图已按 A1 ID 口径生成并同步到本报告目录。生成脚本为 <code>code/stata/40_selection_matching/45_matching_degree_distribution.do</code>。</p>
 </section>
-</main> <!-- /main -->
+<p><a href="sources/25_matching.qmd">下载本页 QMD 源文件</a></p></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -448,7 +448,7 @@ I_t(K;L)=\sum_{k,l}P_t(k,l)\ln\frac{P_t(k,l)}{P_t(k)P_t(l)}.
     anchorJS.add('.anchored');
     const isCodeAnnotation = (el) => {
       for (const clz of el.classList) {
-        if (clz.startsWith('code-annotation-')) {
+        if (clz.startsWith('code-annotation-')) {                     
           return true;
         }
       }
@@ -468,11 +468,11 @@ I_t(K;L)=\sum_{k,l}P_t(k,l)\ln\frac{P_t(k,l)}{P_t(k)P_t(l)}.
         button.setAttribute("data-bs-toggle", "tooltip");
         button.setAttribute("data-bs-placement", "left");
         button.setAttribute("data-bs-title", "已复制");
-        tooltip = new bootstrap.Tooltip(button,
-          { trigger: "manual",
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
             customClass: "code-copy-button-tooltip",
             offset: [0, -8]});
-        tooltip.show();
+        tooltip.show();    
       }
       setTimeout(function() {
         if (tooltip) {
@@ -549,7 +549,7 @@ I_t(K;L)=\sum_{k,l}P_t(k,l)\ln\frac{P_t(k,l)}{P_t(k)P_t(l)}.
       if (onUntriggerFn) {
         config.onUntrigger = onUntriggerFn;
       }
-      window.tippy(el, config);
+      window.tippy(el, config); 
     }
     const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
     for (var i=0; i<noterefs.length; i++) {
@@ -624,7 +624,7 @@ I_t(K;L)=\sum_{k,l}P_t(k,l)\ln\frac{P_t(k,l)}{P_t(k)P_t(l)}.
       tippyHover(xref, undefined, function(instance) {
         instance.disable();
         let url = xref.getAttribute('href');
-        let hash = undefined;
+        let hash = undefined; 
         if (url.startsWith('#')) {
           hash = url;
         } else {
@@ -652,7 +652,7 @@ I_t(K;L)=\sum_{k,l}P_t(k,l)\ln\frac{P_t(k,l)}{P_t(k)P_t(l)}.
               if (note !== null) {
                 const html = processXRef(id, note);
                 instance.setContent(html);
-              }
+              } 
             }).finally(() => {
               instance.enable();
               instance.show();
@@ -676,7 +676,7 @@ I_t(K;L)=\sum_{k,l}P_t(k,l)\ln\frac{P_t(k,l)}{P_t(k)P_t(l)}.
               }
               const html = processXRef(null, note);
               instance.setContent(html);
-            }
+            } 
           }).finally(() => {
             instance.enable();
             instance.show();
@@ -716,7 +716,7 @@ I_t(K;L)=\sum_{k,l}P_t(k,l)\ln\frac{P_t(k,l)}{P_t(k)P_t(l)}.
               height = bottom - top;
             }
             if (top !== null && height !== null && parent !== null) {
-              // cook up a div (if necessary) and position it
+              // cook up a div (if necessary) and position it 
               let div = window.document.getElementById("code-annotation-line-highlight");
               if (div === null) {
                 div = window.document.createElement("div");

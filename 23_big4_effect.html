@@ -20,7 +20,7 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
 </style>
@@ -344,93 +344,121 @@ Y_{it}=\text{firm FE}+\text{year FE}+\beta Big4_{it}+\gamma^{\prime}X_{it}+\vare
 <figure class="latex-table figure" style="overflow-x:auto;">
 <img alt="audit_failure_probabilities" class="figure-img" loading="lazy" src="tables/big4_evidence/audit_failure_probabilities.png" style="width:499px;max-width:none;height:auto;display:block;"/>
 <figcaption>
-
+ · 
 </figcaption>
 </figure>
 <p>四大客户的Strict综合失败率、重述率和违规率分别为2.26%、1.09%和1.53%，均低于本土八大及Other。Fin、Broad定义以及未预警失败的比较也呈相同排序，四大客户较少出现实际财报问题。</p>
 <figure class="latex-table figure" style="overflow-x:auto;">
 <img alt="02_other_outcomes_descriptive_full" class="figure-img" loading="lazy" src="tables/big4_effect_latex/02_other_outcomes_descriptive_full.png" style="width:371px;max-width:none;height:auto;display:block;"/>
 <figcaption>
-
+ · 
 </figcaption>
 </figure>
 <p>四大客户的MAO与GC比例分别为2.24%和0.92%，异常应计的原始均值也较低，REM均值则与Other相同。与此同时，四大的平均审计费明显更高，客户平均市值也更大，质量、价格与客户构成差异同时存在。</p>
 <figure class="latex-table figure" style="overflow-x:auto;">
 <img alt="13_earnings_quality_full_p01" class="figure-img" loading="lazy" src="tables/big4_regression_columns/13_earnings_quality_full_p01.png" style="width:703px;max-width:none;height:auto;display:block;"/>
 <figcaption>
-
+ · 
 </figcaption>
 </figure>
 <p>加入客户特征后，行业×年份FE规格中的非线性异常应计与REM系数显著为正；firm FE＋year FE规格中的四项系数均不显著。因此，传统盈余管理指标没有显示一致的四大质量优势。</p>
 <figure class="latex-table figure" style="overflow-x:auto;">
 <img alt="14_audit_fees_and_valuation_full_p01" class="figure-img" loading="lazy" src="tables/big4_regression_columns/14_audit_fees_and_valuation_full_p01.png" style="width:703px;max-width:none;height:auto;display:block;"/>
 <figcaption>
-
+ · 
 </figcaption>
 </figure>
 <p>四大审计费、市值和费用增加额的系数在两套FE规格下均显著为正。firm FE＋year FE下，审计费和市值系数分别为0.311和0.106，说明价格溢价与四大身份相关，并非仅存在于原始均值比较。</p>
 </section>
 <section class="level4" id="好消息的公告反应与时间变化">
 <h4 class="anchored" data-anchor-id="好消息的公告反应与时间变化"><a href="#market-positive-main">好消息的公告反应与时间变化</a></h4>
-<p>好消息的四大相对反应优势在2012年前更明显，滚动窗口显示公告日差异总体随时间减弱。与后面的PEAD结果结合，这一模式与四大客户消息较早进入价格、非四大客户需要更长时间消化消息的解释一致。声誉与筛选信号是这一时间变化的两种可能来源。</p>
+<p>门槛短窗中，2012年前的四大−非四大公告日差仍为正；滚动图展示其时间变化。ERC衡量消息斜率，长窗口衡量后续累计收益差，分别解释，不将后段收益差直接等同于信息消化速度。</p>
 <p>以surprise&gt;10%为好消息，±10%为中性消息，比较四大−非四大的公告路径差。事件路径采用10%门槛及第−1日基准；门槛扫描比较5%—25%的设定，每个门槛重新划分好消息与中性消息并估计。滚动图在各7年窗口分别估计公告日差值。</p>
 <p><span class="math display">\[
 \log P_{ift}=\text{firm}\times\text{year FE}+\text{event time FE}+\text{trading date FE}+\sum_{k\ne-1}\sum_{g\in\{Big4,NonBig4\}}\beta_{gk}A^g_{if}T_{if}D^k_{ift}+\varepsilon_{ift},\quad\Delta_k=\beta_{Big4,k}-\beta_{NonBig4,k}.
 \]</span></p>
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<img alt="全样本：四大−非四大，10%门槛" class="figure-img" loading="lazy" src="figures/market_information/event_study/baseline_comparisons/threshold/all/event_path_binary.png" style="width:100%;height:auto"/>
-<figcaption>
-全样本：四大−非四大，10%门槛
-</figcaption>
+<p><img class="img-fluid figure-img" src="figures/market_information/event_study/baseline_comparisons/threshold/all/event_path_binary.png" style="width:100.0%"/></p>
+<figcaption>全样本：四大−非四大，10%门槛</figcaption>
 </figure>
+</div>
 <p>全样本中，公告后的四大−非四大反应差主要为正，差异集中在消息公布后的最初几天。这一短期路径体现四大客户好消息较早进入价格的模式。</p>
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<img alt="2012年前：四大−非四大，10%门槛" class="figure-img" loading="lazy" src="figures/market_information/event_study/baseline_comparisons/threshold/before2012/event_path_binary.png" style="width:100%;height:auto"/>
-<figcaption>
-2012年前：四大−非四大，10%门槛
-</figcaption>
+<p><img class="img-fluid figure-img" src="figures/market_information/event_study/baseline_comparisons/threshold/before2012/event_path_binary.png" style="width:100.0%"/></p>
+<figcaption>2012年前：四大−非四大，10%门槛</figcaption>
 </figure>
+</div>
 <p>2012年前，公告后四大−非四大的正向差值更明显，与全样本相比呈现更强的早期反应优势。这是讨论改制前声誉与筛选信号价值的重要时间事实。</p>
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<img alt="全样本：四大−非四大，5%—25%门槛扫描；左轴为反应差及95%置信区间，右轴为好消息事件占比" class="figure-img" loading="lazy" src="figures/market_information/event_study/period_comparisons/all_binary_threshold/pooled_gap_threshold_scan_with_support.png" style="width:100%;height:auto"/>
-<figcaption>
-全样本：四大−非四大，5%—25%门槛扫描；左轴为反应差及95%置信区间，右轴为好消息事件占比
-</figcaption>
+<p><img class="img-fluid figure-img" src="figures/market_information/event_study/period_comparisons/all_binary_threshold/pooled_gap_threshold_scan_with_support.png" style="width:100.0%"/></p>
+<figcaption>全样本：四大−非四大，5%—25%门槛扫描；左轴为反应差及95%置信区间，右轴为好消息事件占比</figcaption>
 </figure>
+</div>
 <p>全样本的反应差随好消息门槛变化，支持程度并非在所有门槛下相同；提高门槛时，好消息事件占比也下降。10%主结果因此放在这一组门槛比较中理解。</p>
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<img alt="2012年前：四大−非四大，5%—25%门槛扫描；左轴为反应差及95%置信区间，右轴为好消息事件占比" class="figure-img" loading="lazy" src="figures/market_information/event_study/period_comparisons/before2012_binary_threshold/pooled_gap_threshold_scan_with_support.png" style="width:100%;height:auto"/>
-<figcaption>
-2012年前：四大−非四大，5%—25%门槛扫描；左轴为反应差及95%置信区间，右轴为好消息事件占比
-</figcaption>
+<p><img class="img-fluid figure-img" src="figures/market_information/event_study/period_comparisons/before2012_binary_threshold/pooled_gap_threshold_scan_with_support.png" style="width:100.0%"/></p>
+<figcaption>2012年前：四大−非四大，5%—25%门槛扫描；左轴为反应差及95%置信区间，右轴为好消息事件占比</figcaption>
 </figure>
+</div>
 <p>2012年前的门槛扫描在一系列设定下呈现四大的正向反应优势，同时显示高门槛对应的好消息样本更少。早期市场优势具有跨门槛的支持，但幅度会随消息划分变化。</p>
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<img alt="7年滚动窗口：四大−非四大的公告日反应差" class="figure-img" loading="lazy" src="figures/market_information/event_study/rolling_threshold/window_7/rolling_gap_binary_day0.png" style="width:100%;height:auto"/>
-<figcaption>
-7年滚动窗口：四大−非四大的公告日反应差
-</figcaption>
+<p><img class="img-fluid figure-img" src="figures/market_information/event_study/rolling_threshold/window_7/rolling_gap_binary_day0.png" style="width:100.0%"/></p>
+<figcaption>7年滚动窗口：四大−非四大的公告日反应差</figcaption>
 </figure>
+</div>
 <p>7年滚动窗口的公告日差值早期较大，随后总体减弱，后期更接近零。它把2012前后的分期事实连接为随时间变化的市场反应模式。</p>
 </section>
 <section class="level4" id="erc对连续盈利消息的反应">
 <h4 class="anchored" data-anchor-id="erc对连续盈利消息的反应"><a href="#market-erc">ERC：对连续盈利消息的反应</a></h4>
-<p>三个CAR窗口的四大−非四大ERC斜率差均为正且达到5%显著水平，分别为0.113144、0.156270和0.128447。市场对四大客户的连续盈利消息更敏感，补充了好消息门槛检验的证据。</p>
+<p>原报EPS修复后，四大−非四大ERC主规格为：car_m1_p1：0.116073（SE=0.044493，p=0.0091）；car_m2_p2：0.160490（SE=0.056745，p=0.0047）；car_m3_p3：0.132594（SE=0.058719，p=0.0240）。三个窗口的差值均为正且达到5%显著水平。</p>
 <p>UE为实际EPS减公告前180天预测中位数，再除以公告前一交易日股价；Y为各公告窗口的市场调整CAR。表报告Big4×UE，即四大−非四大的斜率差。</p>
 <p><span class="math display">\[
 CAR_{it}=\text{firm FE}+\text{year FE}+\delta Big4_{it}+\beta UE_{it}+\theta(Big4_{it}\times UE_{it})+\gamma^{\prime}X_{it}+\varepsilon_{it}.
 \]</span></p>
-<figure class="latex-table figure" style="overflow-x:auto;">
-<img alt="erc_core_summary" class="figure-img" loading="lazy" src="tables/big4_regression_columns/erc_core_summary.png" style="width:703px;max-width:none;height:auto;display:block;"/>
-<figcaption>
-
-</figcaption>
-</figure>
-<p>三个CAR窗口的Big4×UE分别为0.113144、0.156270和0.128447，均达到5%显著水平。相同幅度的盈利消息对应四大客户更强的公告期收益反应，整体ERC优势跨窗口保留。</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>CAR窗口</th>
+<th>四大−非四大</th>
+<th>SE</th>
+<th>p</th>
+<th>N</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>car_m1_p1</td>
+<td>0.116073</td>
+<td>0.044493</td>
+<td>0.0091</td>
+<td>30,008</td>
+</tr>
+<tr class="even">
+<td>car_m2_p2</td>
+<td>0.160490</td>
+<td>0.056745</td>
+<td>0.0047</td>
+<td>29,805</td>
+</tr>
+<tr class="odd">
+<td>car_m3_p3</td>
+<td>0.132594</td>
+<td>0.058719</td>
+<td>0.0240</td>
+<td>29,657</td>
+</tr>
+</tbody>
+</table>
+<p>修复后结果：car_m1_p1：0.116073（SE=0.044493，p=0.0091）；car_m2_p2：0.160490（SE=0.056745，p=0.0047）；car_m3_p3：0.132594（SE=0.058719，p=0.0240）。斜率差衡量同样盈利消息对应的公告期收益差，不是整体股价增长差。</p>
 </section>
 <section class="level4" id="pead好消息的后续价格反应">
 <h4 class="anchored" data-anchor-id="pead好消息的后续价格反应"><a href="#market-pead">PEAD：好消息的后续价格反应</a></h4>
-<p>两套路径均在公告后较晚阶段出现显著负差值，第+60日分别为−0.020188和−0.020489。四大客户好消息后的后续累计收益较低，与较少延迟反应、较低PEAD的解释一致。</p>
+<p>第+60日，A（好消息内部）的四大−非四大差为-0.020135（SE=0.007340，p=0.0061），B（正向相对中性）的差为-0.020332（SE=0.007205，p=0.0048）。两者包含公告初期收益，不能仅凭终点差值解释为信息消化速度。</p>
 <p>Y为相对第−1日的累计市场调整收益，包含公告初期收益。A仅保留好消息；B同时使用好消息和中性消息，图示同一模型中的组间系数差。</p>
 <p><span class="math display">\[
 C_{ij}=\text{firm}\times\text{year FE}+\text{event time FE}+\text{trading date FE}+\sum_{k\ne-1}\theta_k Big4_iD^k_{ij}+\varepsilon_{ij}\quad(S_i&gt;0.10).
@@ -438,20 +466,20 @@ C_{ij}=\text{firm}\times\text{year FE}+\text{event time FE}+\text{trading date F
 <p><span class="math display">\[
 C_{ij}=\text{firm}\times\text{year FE}+\text{event time FE}+\text{trading date FE}+\sum_{k\ne-1}\left[\beta_{B,k}Big4_iT_iD^k_{ij}+\beta_{N,k}(1-Big4_i)T_iD^k_{ij}\right]+\varepsilon_{ij}.
 \]</span></p>
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<img alt="A：好消息内部的四大−非四大累计收益差" class="figure-img" loading="lazy" src="tables/pead_market_adjusted_paths/positive_only_path.png" style="width:100%;height:auto"/>
-<figcaption>
-A：好消息内部的四大−非四大累计收益差
-</figcaption>
+<p><img class="img-fluid figure-img" src="tables/pead_market_adjusted_paths/positive_only_path.png" style="width:100.0%"/></p>
+<figcaption>A：好消息内部的四大−非四大累计收益差</figcaption>
 </figure>
-<p>仅在好消息样本中，第+60日的四大−非四大累计收益差为−0.020188（p=0.0060），显著负差值主要出现在后段。四大客户好消息后的后续漂移较低，与较少延迟反应相一致。</p>
+</div>
+<p>仅在好消息样本中，第+60日差值为-0.020135（SE=0.007340，p=0.0061），约为-2.01个百分点。</p>
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<img alt="B：正向−中性的四大−非四大反应差" class="figure-img" loading="lazy" src="tables/pead_market_adjusted_paths/positive_vs_neutral_path.png" style="width:100%;height:auto"/>
-<figcaption>
-B：正向−中性的四大−非四大反应差
-</figcaption>
+<p><img class="img-fluid figure-img" src="tables/pead_market_adjusted_paths/positive_vs_neutral_path.png" style="width:100.0%"/></p>
+<figcaption>B：正向−中性的四大−非四大反应差</figcaption>
 </figure>
-<p>加入中性消息对照后，第+60日的组间反应差为−0.020489（p=0.0045），与好消息内部比较接近。两种比较共同支持四大客户较低的好消息后PEAD。</p>
+</div>
+<p>加入中性消息对照后，第+60日差值为-0.020332（SE=0.007205，p=0.0048），约为-2.03个百分点；这是两组各自好消息相对中性反应差的差值。</p>
 </section>
 <section class="level4" id="分析师财报信息如何进入预期">
 <h4 class="anchored" data-anchor-id="分析师财报信息如何进入预期"><a href="#market-analyst">分析师：财报信息如何进入预期</a></h4>
@@ -460,13 +488,93 @@ B：正向−中性的四大−非四大反应差
 <p><span class="math display">\[
 \Delta I_{it}=\alpha+\beta Big4_{it}+\gamma^{\prime}X_{it}+\varepsilon_{it},\qquad I\in\{\rho,h,s\}.
 \]</span></p>
-<figure class="latex-table figure" style="overflow-x:auto;">
-<img alt="information_full_raw" class="figure-img" loading="lazy" src="tables/information_market_top25/information_full_raw.png" style="width:703px;max-width:none;height:auto;display:block;"/>
-<figcaption>
-
-</figcaption>
-</figure>
-<p>共同信息权重变化Δρ的无控制差异为0.02500（p=0.0087），加入四项控制后为−0.00452（p=0.6849）。Δh与Δs在四项控制下也不显著，分析师信息指标没有形成稳定的四大优势。</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>信息指标</th>
+<th>规格</th>
+<th>四大−非四大</th>
+<th>SE</th>
+<th>p</th>
+<th>N</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>delta_rho</td>
+<td>no_controls</td>
+<td>0.025003</td>
+<td>0.009518</td>
+<td>0.0087</td>
+<td>7,990</td>
+</tr>
+<tr class="even">
+<td>delta_rho</td>
+<td>three_controls</td>
+<td>0.016776</td>
+<td>0.010137</td>
+<td>0.0980</td>
+<td>7,862</td>
+</tr>
+<tr class="odd">
+<td>delta_rho</td>
+<td>four_controls</td>
+<td>-0.004522</td>
+<td>0.011138</td>
+<td>0.6848</td>
+<td>7,862</td>
+</tr>
+<tr class="even">
+<td>delta_h</td>
+<td>no_controls</td>
+<td>80.440977</td>
+<td>69.011284</td>
+<td>0.2439</td>
+<td>7,990</td>
+</tr>
+<tr class="odd">
+<td>delta_h</td>
+<td>three_controls</td>
+<td>93.242289</td>
+<td>82.159966</td>
+<td>0.2565</td>
+<td>7,862</td>
+</tr>
+<tr class="even">
+<td>delta_h</td>
+<td>four_controls</td>
+<td>81.445679</td>
+<td>75.907776</td>
+<td>0.2834</td>
+<td>7,862</td>
+</tr>
+<tr class="odd">
+<td>delta_s</td>
+<td>no_controls</td>
+<td>27.213334</td>
+<td>13.840526</td>
+<td>0.0494</td>
+<td>7,990</td>
+</tr>
+<tr class="even">
+<td>delta_s</td>
+<td>three_controls</td>
+<td>20.692899</td>
+<td>15.478418</td>
+<td>0.1814</td>
+<td>7,862</td>
+</tr>
+<tr class="odd">
+<td>delta_s</td>
+<td>four_controls</td>
+<td>21.920731</td>
+<td>18.136663</td>
+<td>0.2269</td>
+<td>7,862</td>
+</tr>
+</tbody>
+</table>
+<p>共同信息权重变化Δρ的无控制差异为0.025003（SE=0.009518，p=0.0087），四项控制后为-0.004522（SE=0.011138，p=0.6848）。信息指标Y及t+1实际EPS口径未改变；本轮更新的是当期绝对惊喜控制。</p>
 </section>
 <section class="level4" id="客户选择事前差异与客户进出">
 <h4 class="anchored" data-anchor-id="客户选择事前差异与客户进出"><a href="#client-selection-main">客户选择：事前差异与客户进出</a></h4>
@@ -478,14 +586,14 @@ NextBig4_{it}=\text{firm FE}+\text{industry}\times\text{year FE}+\beta Signal_{i
 <figure class="latex-table figure" style="overflow-x:auto;">
 <img alt="pre_entry_characteristics" class="figure-img" loading="lazy" src="tables/big4_evidence/pre_entry_characteristics.png" style="width:540px;max-width:none;height:auto;display:block;"/>
 <figcaption>
-
+ · 
 </figcaption>
 </figure>
 <p>未来进入四大的客户在进入前三年已具有较大规模、较低亏损率与违规率、较高经营现金流。进入前一年，两组违规率为1.96%与5.45%；重述率则未始终保持同样排序，事前选择差异主要体现在规模与风险构成。</p>
 <figure class="latex-table figure" style="overflow-x:auto;">
 <img alt="client_flows" class="figure-img" loading="lazy" src="tables/big4_regression_columns/client_flows.png" style="width:703px;max-width:none;height:auto;display:block;"/>
 <figcaption>
-
+ · 
 </figcaption>
 </figure>
 <p>当前四大客户收到MAO和GC后，次年退出概率分别高30.40和20.62个百分点，均显著为正；非四大客户收到MAO后的次年进入概率低0.25个百分点（p=0.039）。意见与客户进出相关，表明客户组合会随风险信号调整。</p>
@@ -500,14 +608,14 @@ Y_{ict}=\text{cohort}\times\text{firm FE}+\text{cohort}\times\text{industry}\tim
 <figure class="latex-table figure" style="overflow-x:auto;">
 <img alt="switching_failure_definitions" class="figure-img" loading="lazy" src="tables/big4_regression_columns/switching_failure_definitions.png" style="width:703px;max-width:none;height:auto;display:block;"/>
 <figcaption>
-
+ · 
 </figcaption>
 </figure>
 <p>换入四大后的Fin和Broad未预警重述概率分别下降8.08和8.96个百分点，均p&lt;0.001；Strict重述不显著，违规仅达到10%显著水平。换出结果没有呈现对称的风险上升，主要改善证据来自换入后的Fin与Broad重述。</p>
 <figure class="latex-table figure" style="overflow-x:auto;">
 <img alt="matched_switching_did" class="figure-img" loading="lazy" src="tables/big4_regression_columns/matched_switching_did.png" style="width:703px;max-width:none;height:auto;display:block;"/>
 <figcaption>
-
+ · 
 </figcaption>
 </figure>
 <p>基准加权PSM-DID的Fin未预警重述概率下降9.11个百分点（p=0.004），Strict综合失败也显著下降；Broad重述系数为负但不显著。匹配后Fin改善仍保留，是这一窗口最清楚的质量结果。</p>
@@ -541,14 +649,14 @@ Y_{it}=\text{firm FE}+\text{industry}\times\text{year FE}+\tau DID_{it}+\gamma^{
 <figure class="latex-table figure" style="overflow-x:auto;">
 <img alt="Big 4 Auditors and Earnings Quality" class="figure-img" loading="lazy" src="tables/big4_regression_columns/13_earnings_quality_full_p02.png" style="width:703px;max-width:none;height:auto;display:block;"/>
 <figcaption>
-Big 4 Auditors and Earnings Quality
+Big 4 Auditors and Earnings Quality ·  · 
 </figcaption>
 </figure>
 <p>换入四大后，Jones异常应计、非线性异常应计和REM未显示显著改善，DD异常应计系数则显著为正。服务改善并未一致反映在这些盈余管理代理上，主要支持仍来自重述。</p>
 <figure class="latex-table figure" style="overflow-x:auto;">
 <img alt="Big 4 Auditors, Audit Fees, and Market Value" class="figure-img" loading="lazy" src="tables/big4_regression_columns/14_audit_fees_and_valuation_full_p02.png" style="width:703px;max-width:none;height:auto;display:block;"/>
 <figcaption>
-Big 4 Auditors, Audit Fees, and Market Value
+Big 4 Auditors, Audit Fees, and Market Value ·  · 
 </figcaption>
 </figure>
 <p>换入四大后，审计费系数为0.370，市值系数为0.104，均达到1%显著水平。四大身份变化伴随收费上升，价格结果与重述改善共同构成服务价值的证据。</p>
@@ -564,7 +672,7 @@ Y_{ict}=\text{firm}\times\text{cohort FE}+\text{cohort}\times\text{industry}\tim
 <figure class="latex-table figure" style="overflow-x:auto;">
 <img alt="decomposition_matched_weighted_p01" class="figure-img" loading="lazy" src="tables/big4_regression_columns/decomposition_matched_weighted_p01.png" style="width:703px;max-width:none;height:auto;display:block;"/>
 <figcaption>
-
+ · 
 </figcaption>
 </figure>
 <p>Fin实际重述概率下降8.01个百分点（p=0.0151），未预警重述概率下降10.04个百分点（p=0.0006）；Strict实际重述也显著下降。下降同时出现在实际问题与未预警问题中，结果包含实际财报失败减少。</p>
@@ -580,7 +688,7 @@ Y_{ict}=\text{firm}\times\text{cohort FE}+\text{cohort}\times\text{industry}\tim
 <figure class="latex-table figure" style="overflow-x:auto;">
 <img alt="entry_without_retention_p01" class="figure-img" loading="lazy" src="tables/big4_regression_columns/entry_without_retention_p01.png" style="width:703px;max-width:none;height:auto;display:block;"/>
 <figcaption>
-
+ · 
 </figcaption>
 </figure>
 <p>取消未来留任要求后，Fin和Raw未预警重述概率分别下降5.33和6.87个百分点，均达到1%显著水平。允许进入后再次退出，重述下降仍保留，持续留任筛选并非该结果的唯一来源。</p>
@@ -596,7 +704,7 @@ Y_{ict}=\text{firm}\times\text{cohort FE}+\text{cohort}\times\text{industry}\tim
 <figure class="latex-table figure" style="overflow-x:auto;">
 <img alt="risk_path_common" class="figure-img" loading="lazy" src="tables/big4_regression_columns/risk_path_common.png" style="width:703px;max-width:none;height:auto;display:block;"/>
 <figcaption>
-
+ · 
 </figcaption>
 </figure>
 <p>这张表使用756条共同样本观测，两种匹配中的Fin、Strict、Raw重述结果均不显著。后文另展示新增匹配的完整样本：Fin未预警重述概率下降5.30个百分点（p=0.056）。共同样本与完整样本的比较显示，结论对匹配覆盖敏感。</p>
@@ -611,7 +719,7 @@ Big4_{it}=\text{firm FE}+\text{industry}\times\text{year FE}+\pi Z_{it}+\eta^{\p
 <figure class="latex-table figure" style="overflow-x:auto;">
 <img alt="supplychain_reduced_form_iv_p01" class="figure-img" loading="lazy" src="tables/big4_regression_columns/supplychain_reduced_form_iv_p01.png" style="width:703px;max-width:none;height:auto;display:block;"/>
 <figcaption>
-
+ · 
 </figcaption>
 </figure>
 <p>供应商冲击的简约式中，综合失败与Fin重述概率分别下降2.10和2.19个百分点，均达到5%显著水平。2SLS中的Fin重述仅达到10%显著水平，且第一阶段KP F为4.515，因果估计的精度受到弱工具影响。</p>
@@ -626,7 +734,7 @@ Big4_{it}=\text{firm FE}+\text{industry}\times\text{year FE}+\pi Z_{it}+\eta^{\p
 <figure class="latex-table figure" style="overflow-x:auto;">
 <img alt="ey_dahua_audit_outcomes" class="figure-img" loading="lazy" src="tables/ey_dahua_causal/ey_dahua_audit_outcomes.png" style="width:668px;max-width:none;height:auto;display:block;"/>
 <figcaption>
-
+ · 
 </figcaption>
 </figure>
 <p>合并对应的四大采用概率上升38.13个百分点，KP F为42.56；但三个失败指标的DID和2SLS均不显著。综合失败的事前联合检验p=0.022，这一事件没有给出与换所DID同样清楚的质量改善证据。</p>
@@ -641,7 +749,7 @@ Y_{rct}=\text{relationship}\times\text{cohort FE}+\text{cohort}\times\text{indus
 <figure class="latex-table figure" style="overflow-x:auto;">
 <img alt="same_partner_did" class="figure-img" loading="lazy" src="tables/monday_existing_results/same_partner_did.png" style="width:703px;max-width:none;height:auto;display:block;"/>
 <figcaption>
-
+ · 
 </figcaption>
 </figure>
 <p>保持签字人员—客户关系的全部批次检验中，主要失败指标均不显著。排除2002年后DD异常应计显著下降，但失败结果仍不显著，四大平台作用的支持集中于个别指标。</p>
@@ -654,12 +762,76 @@ Y_{rct}=\text{relationship}\times\text{cohort FE}+\text{cohort}\times\text{indus
 CAR_{it}=\text{firm FE}+\text{year FE}+\delta Big4_{it}+\beta UE_{it}+\theta(Big4_{it}\times UE_{it})+\gamma'X_{it}+\varepsilon_{it}.
 \]</span></p>
 <p>以匹配权重估计，X为市值、MB及预测覆盖，按公司聚类。最终样本4,552条事件、774家公司；三个窗口共用样本。</p>
-<figure class="latex-table figure" style="overflow-x:auto;">
-<img alt="erc_client_matching" class="figure-img" loading="lazy" src="tables/psm_erc/erc_client_matching.png" style="width:703px;max-width:none;height:auto;display:block;"/>
-<figcaption>
-
-</figcaption>
-</figure>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 16%"/>
+<col style="width: 16%"/>
+<col style="width: 16%"/>
+<col style="width: 16%"/>
+<col style="width: 16%"/>
+<col style="width: 16%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th>CAR窗口</th>
+<th>匹配/权重规格</th>
+<th>四大−非四大</th>
+<th>SE</th>
+<th>p</th>
+<th>N</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>car_m1_p1</td>
+<td>candidate_unweighted</td>
+<td>0.112267</td>
+<td>0.045444</td>
+<td>0.0135</td>
+<td>29,085</td>
+</tr>
+<tr class="even">
+<td>car_m2_p2</td>
+<td>candidate_unweighted</td>
+<td>0.157854</td>
+<td>0.057984</td>
+<td>0.0065</td>
+<td>29,085</td>
+</tr>
+<tr class="odd">
+<td>car_m3_p3</td>
+<td>candidate_unweighted</td>
+<td>0.128512</td>
+<td>0.060367</td>
+<td>0.0333</td>
+<td>29,085</td>
+</tr>
+<tr class="even">
+<td>car_m1_p1</td>
+<td>matched_weighted</td>
+<td>0.144427</td>
+<td>0.040920</td>
+<td>0.0004</td>
+<td>4,552</td>
+</tr>
+<tr class="odd">
+<td>car_m2_p2</td>
+<td>matched_weighted</td>
+<td>0.199523</td>
+<td>0.052339</td>
+<td>0.0001</td>
+<td>4,552</td>
+</tr>
+<tr class="even">
+<td>car_m3_p3</td>
+<td>matched_weighted</td>
+<td>0.190738</td>
+<td>0.050244</td>
+<td>0.0002</td>
+<td>4,552</td>
+</tr>
+</tbody>
+</table>
 <p>匹配后的三个ERC交互系数分别为0.144033、0.198599和0.189861，均p&lt;0.001。调整可观察客户特征后，四大客户盈利消息的较高反应仍然存在，构成市场部分的主要结果。</p>
 </section>
 <section class="level4" id="安达信声誉事件">
@@ -672,7 +844,7 @@ CAR_i=\text{industry FE}+\delta_A Andersen_i+\delta_B Big4_i+\varepsilon_i.
 <figure class="latex-table figure" style="overflow-x:auto;">
 <img alt="andersen_jan2002" class="figure-img" loading="lazy" src="tables/monday_existing_results/andersen_jan2002.png" style="width:703px;max-width:none;height:auto;display:block;"/>
 <figcaption>
-
+ · 
 </figcaption>
 </figure>
 <p>并集定义下，安达信相对其他非四大和四大的CAR差分别为−0.007987与−0.001684，均不显著；境内、境外定义也没有显著负差。中国样本的这次事件未呈现明确的声誉损失价格反应。</p>
@@ -684,12 +856,166 @@ CAR_i=\text{industry FE}+\delta_A Andersen_i+\delta_B Big4_i+\varepsilon_i.
 <p><span class="math display">\[
 CAR_{it}=\text{firm FE}+\text{year FE}+\tau(Treated_i\times Post_t\times News_{it})+\text{lower-order terms}+\gamma^{\prime}X_{it}+\varepsilon_{it}.
 \]</span></p>
-<figure class="latex-table figure" style="overflow-x:auto;">
-<img alt="ey_dahua_market_response" class="figure-img" loading="lazy" src="tables/ey_dahua_causal/ey_dahua_market_response.png" style="width:668px;max-width:none;height:auto;display:block;"/>
-<figcaption>
-
-</figcaption>
-</figure>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 11%"/>
+<col style="width: 11%"/>
+<col style="width: 11%"/>
+<col style="width: 11%"/>
+<col style="width: 11%"/>
+<col style="width: 11%"/>
+<col style="width: 11%"/>
+<col style="width: 11%"/>
+<col style="width: 11%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th>消息度量</th>
+<th>CAR窗口</th>
+<th>方法</th>
+<th>项</th>
+<th>系数</th>
+<th>SE</th>
+<th>p</th>
+<th>N</th>
+<th>KP F</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>ue_price</td>
+<td>car_m1_p1</td>
+<td>did</td>
+<td>did_ue</td>
+<td>12.104888</td>
+<td>32.671097</td>
+<td>0.7112</td>
+<td>1049</td>
+<td>—</td>
+</tr>
+<tr class="even">
+<td>ue_price</td>
+<td>car_m1_p1</td>
+<td>iv</td>
+<td>big4_ue</td>
+<td>-2.271760</td>
+<td>4.272805</td>
+<td>0.5953</td>
+<td>1049</td>
+<td>1.37</td>
+</tr>
+<tr class="odd">
+<td>ue_price</td>
+<td>car_m2_p2</td>
+<td>did</td>
+<td>did_ue</td>
+<td>107.015411</td>
+<td>41.469128</td>
+<td>0.0103</td>
+<td>1007</td>
+<td>—</td>
+</tr>
+<tr class="even">
+<td>ue_price</td>
+<td>car_m2_p2</td>
+<td>iv</td>
+<td>big4_ue</td>
+<td>-9.021592</td>
+<td>8.021659</td>
+<td>0.2615</td>
+<td>1007</td>
+<td>1.45</td>
+</tr>
+<tr class="odd">
+<td>ue_price</td>
+<td>car_m3_p3</td>
+<td>did</td>
+<td>did_ue</td>
+<td>207.763352</td>
+<td>38.732212</td>
+<td>&lt;0.0001</td>
+<td>984</td>
+<td>—</td>
+</tr>
+<tr class="even">
+<td>ue_price</td>
+<td>car_m3_p3</td>
+<td>iv</td>
+<td>big4_ue</td>
+<td>-18.689074</td>
+<td>11.584028</td>
+<td>0.1076</td>
+<td>984</td>
+<td>1.49</td>
+</tr>
+<tr class="odd">
+<td>ue_eps_change</td>
+<td>car_m1_p1</td>
+<td>did</td>
+<td>did_ue</td>
+<td>0.270816</td>
+<td>0.218080</td>
+<td>0.2146</td>
+<td>8094</td>
+<td>—</td>
+</tr>
+<tr class="even">
+<td>ue_eps_change</td>
+<td>car_m1_p1</td>
+<td>iv</td>
+<td>big4_ue</td>
+<td>2.439143</td>
+<td>2.820327</td>
+<td>0.3873</td>
+<td>8094</td>
+<td>0.91</td>
+</tr>
+<tr class="odd">
+<td>ue_eps_change</td>
+<td>car_m2_p2</td>
+<td>did</td>
+<td>did_ue</td>
+<td>0.168834</td>
+<td>0.290554</td>
+<td>0.5613</td>
+<td>7977</td>
+<td>—</td>
+</tr>
+<tr class="even">
+<td>ue_eps_change</td>
+<td>car_m2_p2</td>
+<td>iv</td>
+<td>big4_ue</td>
+<td>1.355150</td>
+<td>2.703313</td>
+<td>0.6163</td>
+<td>7977</td>
+<td>0.91</td>
+</tr>
+<tr class="odd">
+<td>ue_eps_change</td>
+<td>car_m3_p3</td>
+<td>did</td>
+<td>did_ue</td>
+<td>-0.161977</td>
+<td>0.369920</td>
+<td>0.6616</td>
+<td>7867</td>
+<td>—</td>
+</tr>
+<tr class="even">
+<td>ue_eps_change</td>
+<td>car_m3_p3</td>
+<td>iv</td>
+<td>big4_ue</td>
+<td>-1.792685</td>
+<td>3.766746</td>
+<td>0.6342</td>
+<td>7867</td>
+<td>0.91</td>
+</tr>
+</tbody>
+</table>
 <p>分析师消息的宽窗口DID为正且显著，但处理组转入前只有2个事件；EPS变化代理的DID与IV均不显著，两套交互IV的KP F均较低。因此，这次合并尚未形成稳定的市场认证改善结果。</p>
 </section>
 </section>
@@ -2049,7 +2375,7 @@ P(Y=1),\qquad P(Y=1,\ MAO=0),\qquad P(Y=1\mid MAO=0).
 <figure class="latex-table figure" style="overflow-x:auto;">
 <img alt="Audit Failures by Auditor Group and Denominator" class="figure-img" loading="lazy" src="tables/big4_evidence/audit_failure_probabilities.png" style="width:499px;max-width:none;height:auto;display:block;"/>
 <figcaption>
-Audit Failures by Auditor Group and Denominator
+Audit Failures by Auditor Group and Denominator ·  · 
 </figcaption>
 </figure>
 <details>
@@ -2125,7 +2451,7 @@ Jones 异常应计绝对值的宏观趋势。
 <figure class="latex-table figure" id="latex-table-2">
 <img alt="Table 2: Other Outcomes by Audit-Firm Group" class="figure-img" loading="lazy" src="tables/big4_effect_latex/02_other_outcomes_descriptive_full.png"/>
 <figcaption>
-Table 2: Other Outcomes by Audit-Firm Group
+Table 2: Other Outcomes by Audit-Firm Group ·  · 
 </figcaption>
 </figure>
 <p><span id="full-12_big4_effect-2"></span></p>
@@ -2231,7 +2557,7 @@ Y_{it}=FE+\beta Big4_{it}+\gamma'X^{EQ}_{it}+\varepsilon_{it}.
 <figure class="latex-table figure" style="overflow-x:auto;">
 <img alt="其他盈余质量指标的四大条件差异" class="figure-img" loading="lazy" src="tables/big4_regression_columns/13_earnings_quality_full_p01.png" style="width:703px;max-width:none;height:auto;display:block;"/>
 <figcaption>
-其他盈余质量：已有类别回归
+其他盈余质量：已有类别回归 · 
 </figcaption>
 </figure>
 </section>
@@ -2246,16 +2572,17 @@ Y_{it}=FE+\beta Big4_{it}+\gamma'X^{EQ}_{it}+\varepsilon_{it}.
 <figure class="latex-table figure" style="overflow-x:auto;">
 <img alt="四大收费与估值的已有类别差异" class="figure-img" loading="lazy" src="tables/big4_regression_columns/14_audit_fees_and_valuation_full_p01.png" style="width:703px;max-width:none;height:auto;display:block;"/>
 <figcaption>
-收费与估值：已有类别差异
+收费与估值：已有类别差异 · 
 </figcaption>
 </figure>
 </section>
 <section class="level3" id="超预期财报正向消息的股价反应">
 <h3 class="anchored" data-anchor-id="超预期财报正向消息的股价反应">1.3 超预期财报：正向消息的股价反应</h3>
+<p><strong>2026-10-24原报EPS更新。</strong> 对已核实的3,353个公司年度应用首次年报公告时可见的合并净利润/既有年末股本EPS，其中1,751个EPS实际改变；其余公司年度保留原数据库值，并保留未核实状态。FAR分支保持原六位小数规则。不是将全部样本认证为原报，也未恢复股本及控制变量的历史版本。固定预测日期、目标财年、各窗口及每券商最新规则；按10%门槛的原始信号层面，180天消息跨组136个、60天92个。受EPS或惊喜控制影响的市场回归已重新运行，Y、固定效应、聚类和筛选规则沿用各自原规格；不使用EPS的声誉消息日CAR保持原结果。数据、执行与修复前后对照。</p>
 <p>正向消息检验比较财报超预期时不同事务所客户的价格路径；连续消息模型进一步比较消息敏感度和固定消息大小下的收益差异。门槛、参照组和时期分别保留。</p>
 <section class="level4" id="market-positive-main">
 <h4 class="anchored" data-anchor-id="market-positive-main">1.3.1 最基准结果：10%门槛的完整事件路径</h4>
-<p><strong>消息与事件样本。</strong> <span class="math inline">\(S_{if}=(EPS_{actual}-EPS_{forecast,180})/|EPS_{forecast,180}|\)</span>，预测取年报公告前180天券商预测中位数，实际EPS以年报记录为主、缺失时补算。仅保留实际EPS、有效非零预测分母、公告交易日映射及[−5,+5]价格路径有效的年报事件。<span class="math inline">\(S&gt;0.10\)</span>为好消息，<span class="math inline">\(-0.10\leq S\leq0.10\)</span>为中性消息；大负消息不进入这套比较。Y为日度收盘价对数，以公告前第−1个交易日为基准。</p>
+<p><strong>消息与事件样本。</strong> <span class="math inline">\(S_{if}=(EPS_{actual}-EPS_{forecast,180})/|EPS_{forecast,180}|\)</span>，预测取年报公告前180天券商预测中位数，实际EPS采用上文说明的原报修复后口径，未核实记录保留数据库值。仅保留实际EPS、有效非零预测分母、公告交易日映射及[−5,+5]价格路径有效的年报事件。<span class="math inline">\(S&gt;0.10\)</span>为好消息，<span class="math inline">\(-0.10\leq S\leq0.10\)</span>为中性消息；大负消息不进入这套比较。Y为日度收盘价对数，以公告前第−1个交易日为基准。</p>
 <p><strong>先看总体与分组反应，再直接检验组间差值。</strong> 下图采用180天预测窗口、10%惊喜门槛和完整公告前后路径：左侧是总体好消息相对中性消息的反应，右侧分别展示四大、本土八大与Other客户的反应；纵轴为好消息相对中性消息的对数股价反应系数，基准为公告前第−1个交易日。</p>
 <div class="quarto-float quarto-figure quarto-figure-center anchored" id="fig-market-positive-overview">
 <figure class="quarto-float quarto-float-fig figure">
@@ -2291,35 +2618,92 @@ Y_{it}=FE+\beta Big4_{it}+\gamma'X^{EQ}_{it}+\varepsilon_{it}.
 \]</span></p>
 <p>第−1日不进入交互项，其差值规范为零。这里显式写出所有组的正向消息系数，即事务所组别、正向消息指示与事件日指示的交互项；没有<span class="math inline">\(A^g_{if}D^k_{ift}\)</span>单独项。全样本与2012年前仅改变<span class="math inline">\(\mathcal S\)</span>，共用 <a class="quarto-xref" href="#eq-market-threshold">式 4</a>，不重复列方程。</p>
 <p>正向组为 <span class="math inline">\(S&gt;0.10\)</span>，中性组为 <span class="math inline">\(-0.10\leq S\leq0.10\)</span>；<span class="math inline">\(S&lt;-0.10\)</span> 的大负消息不进入这套比较。两类事务所均以同一10%比率门槛划分正向与中性组。10%按相对预测EPS的比率定义。</p>
+<p><strong>修复后主门槛结果（四大−非四大）。</strong></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>时期</th>
+<th>日</th>
+<th>系数</th>
+<th>SE</th>
+<th>p</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>全样本</td>
+<td>0</td>
+<td>0.002092</td>
+<td>0.001180</td>
+<td>0.0763</td>
+</tr>
+<tr class="even">
+<td>全样本</td>
+<td>1</td>
+<td>0.001809</td>
+<td>0.001593</td>
+<td>0.2560</td>
+</tr>
+<tr class="odd">
+<td>全样本</td>
+<td>5</td>
+<td>0.001776</td>
+<td>0.002374</td>
+<td>0.4544</td>
+</tr>
+<tr class="even">
+<td>2012年前</td>
+<td>0</td>
+<td>0.004839</td>
+<td>0.001916</td>
+<td>0.0116</td>
+</tr>
+<tr class="odd">
+<td>2012年前</td>
+<td>1</td>
+<td>0.005246</td>
+<td>0.002584</td>
+<td>0.0424</td>
+</tr>
+<tr class="even">
+<td>2012年前</td>
+<td>5</td>
+<td>0.008210</td>
+<td>0.004274</td>
+<td>0.0548</td>
+</tr>
+</tbody>
+</table>
+<p>公告前−5至−2日组间系数差的联合检验：全样本p=0.0432；2012年前p=0.0393。存在事前差异的模型按描述性路径解释。</p>
 <section class="level5" id="全样本">
 <h5 class="anchored" data-anchor-id="全样本">全样本</h5>
-<figure class="chapter-graph figure" id="fig-baseline-threshold-all-binary">
-<img alt="全样本：四大−非四大；10%门槛，完整事件路径。95%置信区间；−1日为基准。" class="figure-img" loading="lazy" src="figures/market_information/event_study/baseline_comparisons/threshold/all/event_path_binary.png" style="width:100%;height:auto;display:block;"/>
-<figcaption>
-全样本：四大−非四大；10%门槛，完整事件路径。95%置信区间；−1日为基准。
-</figcaption>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img class="img-fluid figure-img" src="figures/market_information/event_study/baseline_comparisons/threshold/all/event_path_binary.png" style="width:100.0%"/></p>
+<figcaption>全样本：四大−非四大；10%门槛，完整事件路径。95%置信区间；−1日为基准。</figcaption>
 </figure>
-<figure class="chapter-graph figure" id="fig-baseline-threshold-all-threegroup">
-<img alt="全样本：四大−Other、八大−Other；10%门槛，完整事件路径。95%置信区间；−1日为基准。" class="figure-img" loading="lazy" src="figures/market_information/event_study/baseline_comparisons/threshold/all/event_path_threegroup.png" style="width:100%;height:auto;display:block;"/>
-<figcaption>
-全样本：四大−Other、八大−Other；10%门槛，完整事件路径。95%置信区间；−1日为基准。
-</figcaption>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img class="img-fluid figure-img" src="figures/market_information/event_study/baseline_comparisons/threshold/all/event_path_threegroup.png" style="width:100.0%"/></p>
+<figcaption>全样本：四大−Other、八大−Other；10%门槛，完整事件路径。95%置信区间；−1日为基准。</figcaption>
 </figure>
+</div>
 </section>
 <section class="level5" id="年前">
 <h5 class="anchored" data-anchor-id="年前">2012年前</h5>
-<figure class="chapter-graph figure" id="fig-baseline-threshold-before2012-binary">
-<img alt="2012年前：四大−非四大；10%门槛，完整事件路径。95%置信区间；−1日为基准。" class="figure-img" loading="lazy" src="figures/market_information/event_study/baseline_comparisons/threshold/before2012/event_path_binary.png" style="width:100%;height:auto;display:block;"/>
-<figcaption>
-2012年前：四大−非四大；10%门槛，完整事件路径。95%置信区间；−1日为基准。
-</figcaption>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img class="img-fluid figure-img" src="figures/market_information/event_study/baseline_comparisons/threshold/before2012/event_path_binary.png" style="width:100.0%"/></p>
+<figcaption>2012年前：四大−非四大；10%门槛，完整事件路径。95%置信区间；−1日为基准。</figcaption>
 </figure>
-<figure class="chapter-graph figure" id="fig-baseline-threshold-before2012-threegroup">
-<img alt="2012年前：四大−Other、八大−Other；10%门槛，完整事件路径。95%置信区间；−1日为基准。" class="figure-img" loading="lazy" src="figures/market_information/event_study/baseline_comparisons/threshold/before2012/event_path_threegroup.png" style="width:100%;height:auto;display:block;"/>
-<figcaption>
-2012年前：四大−Other、八大−Other；10%门槛，完整事件路径。95%置信区间；−1日为基准。
-</figcaption>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img class="img-fluid figure-img" src="figures/market_information/event_study/baseline_comparisons/threshold/before2012/event_path_threegroup.png" style="width:100.0%"/></p>
+<figcaption>2012年前：四大−Other、八大−Other；10%门槛，完整事件路径。95%置信区间；−1日为基准。</figcaption>
 </figure>
+</div>
 <p>这一时间模式有两条经济解释：改制前四大的国际声誉可能带来更强的独立认证作用；同时，四大以外特别是本土八大的优质审计替代供给可能较少，使四大身份所传递的未知客户质量更稀缺、筛选信号更有价值；现有分期证据用于连接这两条假说，尚未分别识别声誉和筛选的贡献，制度背景与机制说明见<a href="#market-2012-story">2012前后机制</a>。</p>
 <p><strong>把公告初期与后续PEAD连起来。</strong> 一种解释是“反应速度不同”：四大客户的好消息在公告最初几天被更快地计入价格，而非四大客户可能需要更多时间消化；这与<a href="#market-pead">后文PEAD</a>中四大相对非四大约+40至+60日的较低累计收益相一致，也为较早反应、较少后续调整提供线索。</p>
 <p>短期与PEAD使用不同有效样本，且PEAD累计收益包含公告初期；两者共同支持反应速度的解释，尚未直接检验最终价格是否追平。</p>
@@ -2328,36 +2712,36 @@ Y_{it}=FE+\beta Big4_{it}+\gamma'X^{EQ}_{it}+\varepsilon_{it}.
 <section class="level4" id="共同分位数组完整事件路径">
 <h4 class="anchored" data-anchor-id="共同分位数组完整事件路径">1.3.2 共同分位数组：完整事件路径</h4>
 <p>沿用 <a class="quarto-xref" href="#eq-market-threshold">式 4</a>，只将<span class="math inline">\(T_{if}\)</span>改为<span class="math inline">\(\mathbf{1}\{S_{if}&gt;P75\}\)</span>，并在<span class="math inline">\(\mathcal S\)</span>中保留<span class="math inline">\(S_{if}\geq P25\)</span>；固定效应、聚类与系数差定义保持一致。</p>
-<p>共同分位点从全时期30,064个完整候选年报事件一次计算：P25为−15.3014%，P75为5.9474%。正向组为全样本top25%（<span class="math inline">\(S&gt;P75\)</span>），中性组为中间50%（<span class="math inline">\(P25\leq S\leq P75\)</span>），最低25%排除。全样本与2012年前、二组与三组均沿用这两个固定门槛；不按组别、时期或滚动窗口重新计算分位点。统一门槛后，各组正向事件占比和组内惊喜幅度仍可不同。</p>
+<p>共同分位点从修复后全时期30,064个完整候选年报事件一次计算：P25为-15.0805%，P75为5.9957%。正向组为top25%（<span class="math inline">\(S&gt;P75\)</span>），中性组为中间50%（<span class="math inline">\(P25\leq S\leq P75\)</span>），最低25%排除。全样本与2012年前、二组与三组以及7年滚动均固定使用这组全时期分位点；不按组别或窗口重算。</p>
 <section class="level5" id="全样本-1">
 <h5 class="anchored" data-anchor-id="全样本-1">全样本</h5>
-<figure class="chapter-graph figure" id="fig-baseline-quartile-all-binary">
-<img alt="全样本：四大−非四大；共同top25%对中间50%，完整事件路径。95%置信区间；−1日为基准。" class="figure-img" loading="lazy" src="figures/market_information/event_study/baseline_comparisons/quartile/all/event_path_binary.png" style="width:100%;height:auto;display:block;"/>
-<figcaption>
-全样本：四大−非四大；共同top25%对中间50%，完整事件路径。95%置信区间；−1日为基准。
-</figcaption>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img class="img-fluid figure-img" src="figures/market_information/event_study/baseline_comparisons/quartile/all/event_path_binary.png" style="width:100.0%"/></p>
+<figcaption>全样本：四大−非四大；共同top25%对中间50%，完整事件路径。95%置信区间；−1日为基准。</figcaption>
 </figure>
-<figure class="chapter-graph figure" id="fig-baseline-quartile-all-threegroup">
-<img alt="全样本：四大−Other、八大−Other；共同top25%对中间50%，完整事件路径。95%置信区间；−1日为基准。" class="figure-img" loading="lazy" src="figures/market_information/event_study/baseline_comparisons/quartile/all/event_path_threegroup.png" style="width:100%;height:auto;display:block;"/>
-<figcaption>
-全样本：四大−Other、八大−Other；共同top25%对中间50%，完整事件路径。95%置信区间；−1日为基准。
-</figcaption>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img class="img-fluid figure-img" src="figures/market_information/event_study/baseline_comparisons/quartile/all/event_path_threegroup.png" style="width:100.0%"/></p>
+<figcaption>全样本：四大−Other、八大−Other；共同top25%对中间50%，完整事件路径。95%置信区间；−1日为基准。</figcaption>
 </figure>
+</div>
 </section>
 <section class="level5" id="年前-1">
 <h5 class="anchored" data-anchor-id="年前-1">2012年前</h5>
-<figure class="chapter-graph figure" id="fig-baseline-quartile-before2012-binary">
-<img alt="2012年前：四大−非四大；共同top25%对中间50%，完整事件路径。95%置信区间；−1日为基准。" class="figure-img" loading="lazy" src="figures/market_information/event_study/baseline_comparisons/quartile/before2012/event_path_binary.png" style="width:100%;height:auto;display:block;"/>
-<figcaption>
-2012年前：四大−非四大；共同top25%对中间50%，完整事件路径。95%置信区间；−1日为基准。
-</figcaption>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img class="img-fluid figure-img" src="figures/market_information/event_study/baseline_comparisons/quartile/before2012/event_path_binary.png" style="width:100.0%"/></p>
+<figcaption>2012年前：四大−非四大；共同top25%对中间50%，完整事件路径。95%置信区间；−1日为基准。</figcaption>
 </figure>
-<figure class="chapter-graph figure" id="fig-baseline-quartile-before2012-threegroup">
-<img alt="2012年前：四大−Other、八大−Other；共同top25%对中间50%，完整事件路径。95%置信区间；−1日为基准。" class="figure-img" loading="lazy" src="figures/market_information/event_study/baseline_comparisons/quartile/before2012/event_path_threegroup.png" style="width:100%;height:auto;display:block;"/>
-<figcaption>
-2012年前：四大−Other、八大−Other；共同top25%对中间50%，完整事件路径。95%置信区间；−1日为基准。
-</figcaption>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img class="img-fluid figure-img" src="figures/market_information/event_study/baseline_comparisons/quartile/before2012/event_path_threegroup.png" style="width:100.0%"/></p>
+<figcaption>2012年前：四大−Other、八大−Other；共同top25%对中间50%，完整事件路径。95%置信区间；−1日为基准。</figcaption>
 </figure>
+</div>
 </section>
 </section>
 <section class="level4" id="消息门槛扫描全样本与2012年前">
@@ -2366,33 +2750,33 @@ Y_{it}=FE+\beta Big4_{it}+\gamma'X^{EQ}_{it}+\varepsilon_{it}.
 <p>横轴为固定surprise比率门槛 <strong>5%—25%</strong>。每个门槛<span class="math inline">\(c\)</span>重新定义正向组<span class="math inline">\(S&gt;c\)</span>和中性组<span class="math inline">\(-c\leq S\leq c\)</span>，分别展示第0、+1、+2和+5日相对−1日的组间反应差值。右轴为各组实际回归样本中“正向／（正向＋中性）”的比例。每个点对应该门槛下的有效样本及组间反应差。</p>
 <section class="level5" id="全样本-2">
 <h5 class="anchored" data-anchor-id="全样本-2">全样本</h5>
-<figure class="chapter-graph figure" id="fig-scan-all-binary">
-<img alt="全样本：四大−非四大，5%—25%门槛扫描；左轴为log price系数差与95%区间，右轴为正向事件占比。" class="figure-img" loading="lazy" src="figures/market_information/event_study/period_comparisons/all_binary_threshold/pooled_gap_threshold_scan_with_support.png" style="width:100%;height:auto;display:block;"/>
-<figcaption>
-全样本：四大−非四大，5%—25%门槛扫描；左轴为log price系数差与95%区间，右轴为正向事件占比。
-</figcaption>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img class="img-fluid figure-img" src="figures/market_information/event_study/period_comparisons/all_binary_threshold/pooled_gap_threshold_scan_with_support.png" style="width:100.0%"/></p>
+<figcaption>全样本：四大−非四大，5%—25%门槛扫描；左轴为log price系数差与95%区间，右轴为正向事件占比。</figcaption>
 </figure>
-<figure class="chapter-graph figure" id="fig-scan-all-threegroup">
-<img alt="全样本：四大−Other、八大−Other，5%—25%门槛扫描；左轴为log price系数差与95%区间，右轴为正向事件占比。" class="figure-img" loading="lazy" src="figures/market_information/event_study/period_comparisons/all_threegroup_threshold/pooled_gap_threshold_scan_with_support.png" style="width:100%;height:auto;display:block;"/>
-<figcaption>
-全样本：四大−Other、八大−Other，5%—25%门槛扫描；左轴为log price系数差与95%区间，右轴为正向事件占比。
-</figcaption>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img class="img-fluid figure-img" src="figures/market_information/event_study/period_comparisons/all_threegroup_threshold/pooled_gap_threshold_scan_with_support.png" style="width:100.0%"/></p>
+<figcaption>全样本：四大−Other、八大−Other，5%—25%门槛扫描；左轴为log price系数差与95%区间，右轴为正向事件占比。</figcaption>
 </figure>
+</div>
 </section>
 <section class="level5" id="年前-2">
 <h5 class="anchored" data-anchor-id="年前-2">2012年前</h5>
-<figure class="chapter-graph figure" id="fig-scan-before2012-binary">
-<img alt="2012年前：四大−非四大，5%—25%门槛扫描；左轴为log price系数差与95%区间，右轴为正向事件占比。" class="figure-img" loading="lazy" src="figures/market_information/event_study/period_comparisons/before2012_binary_threshold/pooled_gap_threshold_scan_with_support.png" style="width:100%;height:auto;display:block;"/>
-<figcaption>
-2012年前：四大−非四大，5%—25%门槛扫描；左轴为log price系数差与95%区间，右轴为正向事件占比。
-</figcaption>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img class="img-fluid figure-img" src="figures/market_information/event_study/period_comparisons/before2012_binary_threshold/pooled_gap_threshold_scan_with_support.png" style="width:100.0%"/></p>
+<figcaption>2012年前：四大−非四大，5%—25%门槛扫描；左轴为log price系数差与95%区间，右轴为正向事件占比。</figcaption>
 </figure>
-<figure class="chapter-graph figure" id="fig-scan-before2012-threegroup">
-<img alt="2012年前：四大−Other、八大−Other，5%—25%门槛扫描；左轴为log price系数差与95%区间，右轴为正向事件占比。" class="figure-img" loading="lazy" src="figures/market_information/event_study/period_comparisons/before2012_threegroup_threshold/pooled_gap_threshold_scan_with_support.png" style="width:100%;height:auto;display:block;"/>
-<figcaption>
-2012年前：四大−Other、八大−Other，5%—25%门槛扫描；左轴为log price系数差与95%区间，右轴为正向事件占比。
-</figcaption>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img class="img-fluid figure-img" src="figures/market_information/event_study/period_comparisons/before2012_threegroup_threshold/pooled_gap_threshold_scan_with_support.png" style="width:100.0%"/></p>
+<figcaption>2012年前：四大−Other、八大−Other，5%—25%门槛扫描；左轴为log price系数差与95%区间，右轴为正向事件占比。</figcaption>
 </figure>
+</div>
 <p>提高门槛会减少正向组，并将部分中等正向消息纳入中性组。因此扫描同时反映消息幅度、样本构成与估计精度的变化。</p>
 </section>
 </section>
@@ -2445,67 +2829,67 @@ Y_{it}=FE+\beta Big4_{it}+\gamma'X^{EQ}_{it}+\varepsilon_{it}.
 <p>沿用正向惊喜超过10%、中性惊喜在±10%内的分组。横轴为7年窗口的中心财年，每次向前移动一年，例如中心2008对应2005—2011财年。仅展示完整窗口：中心2004—2020；中心2003需要2000年数据，未纳入。各图分别显示第0、+1、+2、+3日相对−1日的差值；纵轴为对数股价的系数差。</p>
 <section class="level5" id="四大非四大">
 <h5 class="anchored" data-anchor-id="四大非四大">四大−非四大</h5>
-<figure class="chapter-graph figure" id="fig-rolling-threshold-binary-0">
-<img alt="7年滚动窗口：四大−非四大，第+0日相对−1日；10%门槛。点、连线与无横帽置信区间同步错开；各窗口单独估计。" class="figure-img" loading="lazy" src="figures/market_information/event_study/rolling_threshold/window_7/rolling_gap_binary_day0.png" style="width:100%;height:auto;display:block;"/>
-<figcaption>
-7年滚动窗口：四大−非四大，第+0日相对−1日；10%门槛。点、连线与无横帽置信区间同步错开；各窗口单独估计。
-</figcaption>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img class="img-fluid figure-img" src="figures/market_information/event_study/rolling_threshold/window_7/rolling_gap_binary_day0.png" style="width:100.0%"/></p>
+<figcaption>7年滚动窗口：四大−非四大，第+0日相对−1日；10%门槛。点、连线与无横帽置信区间同步错开；各窗口单独估计。</figcaption>
 </figure>
-<figure class="chapter-graph figure" id="fig-rolling-threshold-binary-1">
-<img alt="7年滚动窗口：四大−非四大，第+1日相对−1日；10%门槛。点、连线与无横帽置信区间同步错开；各窗口单独估计。" class="figure-img" loading="lazy" src="figures/market_information/event_study/rolling_threshold/window_7/rolling_gap_binary_day1.png" style="width:100%;height:auto;display:block;"/>
-<figcaption>
-7年滚动窗口：四大−非四大，第+1日相对−1日；10%门槛。点、连线与无横帽置信区间同步错开；各窗口单独估计。
-</figcaption>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img class="img-fluid figure-img" src="figures/market_information/event_study/rolling_threshold/window_7/rolling_gap_binary_day1.png" style="width:100.0%"/></p>
+<figcaption>7年滚动窗口：四大−非四大，第+1日相对−1日；10%门槛。点、连线与无横帽置信区间同步错开；各窗口单独估计。</figcaption>
 </figure>
-<figure class="chapter-graph figure" id="fig-rolling-threshold-binary-2">
-<img alt="7年滚动窗口：四大−非四大，第+2日相对−1日；10%门槛。点、连线与无横帽置信区间同步错开；各窗口单独估计。" class="figure-img" loading="lazy" src="figures/market_information/event_study/rolling_threshold/window_7/rolling_gap_binary_day2.png" style="width:100%;height:auto;display:block;"/>
-<figcaption>
-7年滚动窗口：四大−非四大，第+2日相对−1日；10%门槛。点、连线与无横帽置信区间同步错开；各窗口单独估计。
-</figcaption>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img class="img-fluid figure-img" src="figures/market_information/event_study/rolling_threshold/window_7/rolling_gap_binary_day2.png" style="width:100.0%"/></p>
+<figcaption>7年滚动窗口：四大−非四大，第+2日相对−1日；10%门槛。点、连线与无横帽置信区间同步错开；各窗口单独估计。</figcaption>
 </figure>
-<figure class="chapter-graph figure" id="fig-rolling-threshold-binary-3">
-<img alt="7年滚动窗口：四大−非四大，第+3日相对−1日；10%门槛。点、连线与无横帽置信区间同步错开；各窗口单独估计。" class="figure-img" loading="lazy" src="figures/market_information/event_study/rolling_threshold/window_7/rolling_gap_binary_day3.png" style="width:100%;height:auto;display:block;"/>
-<figcaption>
-7年滚动窗口：四大−非四大，第+3日相对−1日；10%门槛。点、连线与无横帽置信区间同步错开；各窗口单独估计。
-</figcaption>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img class="img-fluid figure-img" src="figures/market_information/event_study/rolling_threshold/window_7/rolling_gap_binary_day3.png" style="width:100.0%"/></p>
+<figcaption>7年滚动窗口：四大−非四大，第+3日相对−1日；10%门槛。点、连线与无横帽置信区间同步错开；各窗口单独估计。</figcaption>
 </figure>
+</div>
 </section>
 <section class="level5" id="四大other八大other">
 <h5 class="anchored" data-anchor-id="四大other八大other">四大−Other、八大−Other</h5>
-<figure class="chapter-graph figure" id="fig-rolling-threshold-threegroup-0">
-<img alt="7年滚动窗口：四大−Other、八大−Other，第+0日相对−1日；10%门槛。点、连线与无横帽置信区间同步错开；各窗口单独估计。" class="figure-img" loading="lazy" src="figures/market_information/event_study/rolling_threshold/window_7/rolling_gap_threegroup_day0.png" style="width:100%;height:auto;display:block;"/>
-<figcaption>
-7年滚动窗口：四大−Other、八大−Other，第+0日相对−1日；10%门槛。点、连线与无横帽置信区间同步错开；各窗口单独估计。
-</figcaption>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img class="img-fluid figure-img" src="figures/market_information/event_study/rolling_threshold/window_7/rolling_gap_threegroup_day0.png" style="width:100.0%"/></p>
+<figcaption>7年滚动窗口：四大−Other、八大−Other，第+0日相对−1日；10%门槛。点、连线与无横帽置信区间同步错开；各窗口单独估计。</figcaption>
 </figure>
-<figure class="chapter-graph figure" id="fig-rolling-threshold-threegroup-1">
-<img alt="7年滚动窗口：四大−Other、八大−Other，第+1日相对−1日；10%门槛。点、连线与无横帽置信区间同步错开；各窗口单独估计。" class="figure-img" loading="lazy" src="figures/market_information/event_study/rolling_threshold/window_7/rolling_gap_threegroup_day1.png" style="width:100%;height:auto;display:block;"/>
-<figcaption>
-7年滚动窗口：四大−Other、八大−Other，第+1日相对−1日；10%门槛。点、连线与无横帽置信区间同步错开；各窗口单独估计。
-</figcaption>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img class="img-fluid figure-img" src="figures/market_information/event_study/rolling_threshold/window_7/rolling_gap_threegroup_day1.png" style="width:100.0%"/></p>
+<figcaption>7年滚动窗口：四大−Other、八大−Other，第+1日相对−1日；10%门槛。点、连线与无横帽置信区间同步错开；各窗口单独估计。</figcaption>
 </figure>
-<figure class="chapter-graph figure" id="fig-rolling-threshold-threegroup-2">
-<img alt="7年滚动窗口：四大−Other、八大−Other，第+2日相对−1日；10%门槛。点、连线与无横帽置信区间同步错开；各窗口单独估计。" class="figure-img" loading="lazy" src="figures/market_information/event_study/rolling_threshold/window_7/rolling_gap_threegroup_day2.png" style="width:100%;height:auto;display:block;"/>
-<figcaption>
-7年滚动窗口：四大−Other、八大−Other，第+2日相对−1日；10%门槛。点、连线与无横帽置信区间同步错开；各窗口单独估计。
-</figcaption>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img class="img-fluid figure-img" src="figures/market_information/event_study/rolling_threshold/window_7/rolling_gap_threegroup_day2.png" style="width:100.0%"/></p>
+<figcaption>7年滚动窗口：四大−Other、八大−Other，第+2日相对−1日；10%门槛。点、连线与无横帽置信区间同步错开；各窗口单独估计。</figcaption>
 </figure>
-<figure class="chapter-graph figure" id="fig-rolling-threshold-threegroup-3">
-<img alt="7年滚动窗口：四大−Other、八大−Other，第+3日相对−1日；10%门槛。点、连线与无横帽置信区间同步错开；各窗口单独估计。" class="figure-img" loading="lazy" src="figures/market_information/event_study/rolling_threshold/window_7/rolling_gap_threegroup_day3.png" style="width:100%;height:auto;display:block;"/>
-<figcaption>
-7年滚动窗口：四大−Other、八大−Other，第+3日相对−1日；10%门槛。点、连线与无横帽置信区间同步错开；各窗口单独估计。
-</figcaption>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img class="img-fluid figure-img" src="figures/market_information/event_study/rolling_threshold/window_7/rolling_gap_threegroup_day3.png" style="width:100.0%"/></p>
+<figcaption>7年滚动窗口：四大−Other、八大−Other，第+3日相对−1日；10%门槛。点、连线与无横帽置信区间同步错开；各窗口单独估计。</figcaption>
 </figure>
+</div>
 <details>
 <summary>
 各窗口正向与中性年报数量；3年和5年结果位置
 </summary>
-<figure class="chapter-graph figure" id="fig-rolling-support-threshold">
-<img alt="各7年窗口实际进入回归的年报事件数：四大maroon、八大绿色、Other灰色；正向组深色实线，中性组浅色虚线。" class="figure-img" loading="lazy" src="figures/market_information/event_study/rolling_threshold/window_7/rolling_sample_counts_by_center_year.png" style="width:100%;height:auto;display:block;"/>
-<figcaption>
-各7年窗口实际进入回归的年报事件数：四大maroon、八大绿色、Other灰色；正向组深色实线，中性组浅色虚线。
-</figcaption>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img class="img-fluid figure-img" src="figures/market_information/event_study/rolling_threshold/window_7/rolling_sample_counts_by_center_year.png" style="width:100.0%"/></p>
+<figcaption>各7年窗口实际进入回归的年报事件数：四大maroon、八大绿色、Other灰色；正向组深色实线，中性组浅色虚线。</figcaption>
 </figure>
+</div>
 <p>3年和5年窗口见补充材料。相邻滚动窗口包含重复财年，图中时间变化反映一系列重叠样本的估计。</p>
 </details>
 </section>
@@ -2516,67 +2900,67 @@ Y_{it}=FE+\beta Big4_{it}+\gamma'X^{EQ}_{it}+\varepsilon_{it}.
 <p>改用上述全时期共同top25%对中间50%分组，固定P25与P75。横轴为7年窗口的中心财年，每次向前移动一年，例如中心2008对应2005—2011财年。仅展示完整窗口：中心2004—2020；中心2003需要2000年数据，未纳入。各图分别显示第0、+1、+2、+3日相对−1日的差值；纵轴为对数股价的系数差。</p>
 <section class="level5" id="四大非四大-1">
 <h5 class="anchored" data-anchor-id="四大非四大-1">四大−非四大</h5>
-<figure class="chapter-graph figure" id="fig-rolling-quartile-binary-0">
-<img alt="7年滚动窗口：四大−非四大，第+0日相对−1日；共同分位数组。点、连线与无横帽置信区间同步错开；各窗口单独估计。" class="figure-img" loading="lazy" src="figures/market_information/event_study/rolling_quartile/window_7/rolling_gap_binary_day0.png" style="width:100%;height:auto;display:block;"/>
-<figcaption>
-7年滚动窗口：四大−非四大，第+0日相对−1日；共同分位数组。点、连线与无横帽置信区间同步错开；各窗口单独估计。
-</figcaption>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img class="img-fluid figure-img" src="figures/market_information/event_study/rolling_quartile/window_7/rolling_gap_binary_day0.png" style="width:100.0%"/></p>
+<figcaption>7年滚动窗口：四大−非四大，第+0日相对−1日；共同分位数组。点、连线与无横帽置信区间同步错开；各窗口单独估计。</figcaption>
 </figure>
-<figure class="chapter-graph figure" id="fig-rolling-quartile-binary-1">
-<img alt="7年滚动窗口：四大−非四大，第+1日相对−1日；共同分位数组。点、连线与无横帽置信区间同步错开；各窗口单独估计。" class="figure-img" loading="lazy" src="figures/market_information/event_study/rolling_quartile/window_7/rolling_gap_binary_day1.png" style="width:100%;height:auto;display:block;"/>
-<figcaption>
-7年滚动窗口：四大−非四大，第+1日相对−1日；共同分位数组。点、连线与无横帽置信区间同步错开；各窗口单独估计。
-</figcaption>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img class="img-fluid figure-img" src="figures/market_information/event_study/rolling_quartile/window_7/rolling_gap_binary_day1.png" style="width:100.0%"/></p>
+<figcaption>7年滚动窗口：四大−非四大，第+1日相对−1日；共同分位数组。点、连线与无横帽置信区间同步错开；各窗口单独估计。</figcaption>
 </figure>
-<figure class="chapter-graph figure" id="fig-rolling-quartile-binary-2">
-<img alt="7年滚动窗口：四大−非四大，第+2日相对−1日；共同分位数组。点、连线与无横帽置信区间同步错开；各窗口单独估计。" class="figure-img" loading="lazy" src="figures/market_information/event_study/rolling_quartile/window_7/rolling_gap_binary_day2.png" style="width:100%;height:auto;display:block;"/>
-<figcaption>
-7年滚动窗口：四大−非四大，第+2日相对−1日；共同分位数组。点、连线与无横帽置信区间同步错开；各窗口单独估计。
-</figcaption>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img class="img-fluid figure-img" src="figures/market_information/event_study/rolling_quartile/window_7/rolling_gap_binary_day2.png" style="width:100.0%"/></p>
+<figcaption>7年滚动窗口：四大−非四大，第+2日相对−1日；共同分位数组。点、连线与无横帽置信区间同步错开；各窗口单独估计。</figcaption>
 </figure>
-<figure class="chapter-graph figure" id="fig-rolling-quartile-binary-3">
-<img alt="7年滚动窗口：四大−非四大，第+3日相对−1日；共同分位数组。点、连线与无横帽置信区间同步错开；各窗口单独估计。" class="figure-img" loading="lazy" src="figures/market_information/event_study/rolling_quartile/window_7/rolling_gap_binary_day3.png" style="width:100%;height:auto;display:block;"/>
-<figcaption>
-7年滚动窗口：四大−非四大，第+3日相对−1日；共同分位数组。点、连线与无横帽置信区间同步错开；各窗口单独估计。
-</figcaption>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img class="img-fluid figure-img" src="figures/market_information/event_study/rolling_quartile/window_7/rolling_gap_binary_day3.png" style="width:100.0%"/></p>
+<figcaption>7年滚动窗口：四大−非四大，第+3日相对−1日；共同分位数组。点、连线与无横帽置信区间同步错开；各窗口单独估计。</figcaption>
 </figure>
+</div>
 </section>
 <section class="level5" id="四大other八大other-1">
 <h5 class="anchored" data-anchor-id="四大other八大other-1">四大−Other、八大−Other</h5>
-<figure class="chapter-graph figure" id="fig-rolling-quartile-threegroup-0">
-<img alt="7年滚动窗口：四大−Other、八大−Other，第+0日相对−1日；共同分位数组。点、连线与无横帽置信区间同步错开；各窗口单独估计。" class="figure-img" loading="lazy" src="figures/market_information/event_study/rolling_quartile/window_7/rolling_gap_threegroup_day0.png" style="width:100%;height:auto;display:block;"/>
-<figcaption>
-7年滚动窗口：四大−Other、八大−Other，第+0日相对−1日；共同分位数组。点、连线与无横帽置信区间同步错开；各窗口单独估计。
-</figcaption>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img class="img-fluid figure-img" src="figures/market_information/event_study/rolling_quartile/window_7/rolling_gap_threegroup_day0.png" style="width:100.0%"/></p>
+<figcaption>7年滚动窗口：四大−Other、八大−Other，第+0日相对−1日；共同分位数组。点、连线与无横帽置信区间同步错开；各窗口单独估计。</figcaption>
 </figure>
-<figure class="chapter-graph figure" id="fig-rolling-quartile-threegroup-1">
-<img alt="7年滚动窗口：四大−Other、八大−Other，第+1日相对−1日；共同分位数组。点、连线与无横帽置信区间同步错开；各窗口单独估计。" class="figure-img" loading="lazy" src="figures/market_information/event_study/rolling_quartile/window_7/rolling_gap_threegroup_day1.png" style="width:100%;height:auto;display:block;"/>
-<figcaption>
-7年滚动窗口：四大−Other、八大−Other，第+1日相对−1日；共同分位数组。点、连线与无横帽置信区间同步错开；各窗口单独估计。
-</figcaption>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img class="img-fluid figure-img" src="figures/market_information/event_study/rolling_quartile/window_7/rolling_gap_threegroup_day1.png" style="width:100.0%"/></p>
+<figcaption>7年滚动窗口：四大−Other、八大−Other，第+1日相对−1日；共同分位数组。点、连线与无横帽置信区间同步错开；各窗口单独估计。</figcaption>
 </figure>
-<figure class="chapter-graph figure" id="fig-rolling-quartile-threegroup-2">
-<img alt="7年滚动窗口：四大−Other、八大−Other，第+2日相对−1日；共同分位数组。点、连线与无横帽置信区间同步错开；各窗口单独估计。" class="figure-img" loading="lazy" src="figures/market_information/event_study/rolling_quartile/window_7/rolling_gap_threegroup_day2.png" style="width:100%;height:auto;display:block;"/>
-<figcaption>
-7年滚动窗口：四大−Other、八大−Other，第+2日相对−1日；共同分位数组。点、连线与无横帽置信区间同步错开；各窗口单独估计。
-</figcaption>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img class="img-fluid figure-img" src="figures/market_information/event_study/rolling_quartile/window_7/rolling_gap_threegroup_day2.png" style="width:100.0%"/></p>
+<figcaption>7年滚动窗口：四大−Other、八大−Other，第+2日相对−1日；共同分位数组。点、连线与无横帽置信区间同步错开；各窗口单独估计。</figcaption>
 </figure>
-<figure class="chapter-graph figure" id="fig-rolling-quartile-threegroup-3">
-<img alt="7年滚动窗口：四大−Other、八大−Other，第+3日相对−1日；共同分位数组。点、连线与无横帽置信区间同步错开；各窗口单独估计。" class="figure-img" loading="lazy" src="figures/market_information/event_study/rolling_quartile/window_7/rolling_gap_threegroup_day3.png" style="width:100%;height:auto;display:block;"/>
-<figcaption>
-7年滚动窗口：四大−Other、八大−Other，第+3日相对−1日；共同分位数组。点、连线与无横帽置信区间同步错开；各窗口单独估计。
-</figcaption>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img class="img-fluid figure-img" src="figures/market_information/event_study/rolling_quartile/window_7/rolling_gap_threegroup_day3.png" style="width:100.0%"/></p>
+<figcaption>7年滚动窗口：四大−Other、八大−Other，第+3日相对−1日；共同分位数组。点、连线与无横帽置信区间同步错开；各窗口单独估计。</figcaption>
 </figure>
+</div>
 <details>
 <summary>
 各窗口正向与中性年报数量；3年和5年结果位置
 </summary>
-<figure class="chapter-graph figure" id="fig-rolling-support-quartile">
-<img alt="各7年窗口实际进入回归的年报事件数：四大maroon、八大绿色、Other灰色；正向组深色实线，中性组浅色虚线。" class="figure-img" loading="lazy" src="figures/market_information/event_study/rolling_quartile/window_7/rolling_sample_counts_by_center_year.png" style="width:100%;height:auto;display:block;"/>
-<figcaption>
-各7年窗口实际进入回归的年报事件数：四大maroon、八大绿色、Other灰色；正向组深色实线，中性组浅色虚线。
-</figcaption>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img class="img-fluid figure-img" src="figures/market_information/event_study/rolling_quartile/window_7/rolling_sample_counts_by_center_year.png" style="width:100.0%"/></p>
+<figcaption>各7年窗口实际进入回归的年报事件数：四大maroon、八大绿色、Other灰色；正向组深色实线，中性组浅色虚线。</figcaption>
 </figure>
+</div>
 <p>3年和5年窗口见补充材料。相邻滚动窗口包含重复财年，图中时间变化反映一系列重叠样本的估计。</p>
 </details>
 <p><strong>结果含义。</strong> 早期部分窗口四大−非四大的反应差较强，后期减弱；三组比较分别展示四大−Other及八大−Other，帮助观察非四大构成变化。部分窗口存在公告前差异，完整路径因此同时展示事前系数。</p>
@@ -2596,32 +2980,199 @@ Y_{ift}=F_{ift}+\sum_{k\in\mathcal K}D^k_{ift}
 <p>线性模型取<span class="math inline">\(J=1\)</span>、<span class="math inline">\(B_1(x)=x\)</span>；分段线性模型取<span class="math inline">\(J=4\)</span>，<span class="math inline">\(B_1(x)=x\)</span>，<span class="math inline">\(B_2(x)=(x-q_{25})_+\)</span>、<span class="math inline">\(B_3(x)=(x-q_{50})_+\)</span>、<span class="math inline">\(B_4(x)=(x-q_{75})_+\)</span>，其中<span class="math inline">\((z)_+=\max(z,0)\)</span>，<span class="math inline">\(q\)</span>为全样本<span class="math inline">\(x\)</span>的共同分位点。分段线性只是扩展消息基函数，沿用同一方程。<span class="math inline">\(Y\)</span>分别为log price或下述累计市场调整CAR的百分点值；本小节已有表图报告后者。均按公司×财年聚类。</p>
 <p><span class="math inline">\(c_{g1k}\)</span>是消息增加10个百分点的斜率差；固定消息<span class="math inline">\(s\)</span>的水平差为<span class="math inline">\(a_{gk}+\sum_j c_{gjk}B_j(s/0.10)\)</span>，包含截距和斜率，不等于ERC。</p>
 <p>连续消息与审计师身份的交互对应 Teoh 与 Wong（1993）的 ERC 比较形式；消息分母、窗口和控制不同，斜率与水平差分别解释。</p>
-<p><strong>样本与单位。</strong> 线性与样条共用30,064份年报事件、330,646条日度观测，吸收公司×财年、事件日及实际交易日期FE，按公司×财年聚类，无额外控制。Y为从−5日起累计的市场调整收益，以百分点计、相对−1日解释；消息变量为比率惊喜S除以0.10。</p>
-<p>四大−Other的线性斜率在公告日为0.0084075个百分点（SE=0.003718，CI=[0.001120,0.015695]，p=0.02375），+1为0.0112325（SE=0.005484，p=0.04056），+5为0.000157（p=0.987）。在固定S=0.10处，线性总水平差公告日为0.186834（SE=0.069182，p=0.006925），+1为0.212563（p=0.01945），+5为0.242856（p=0.07762）。固定水平差由截距和斜率共同组成，ERC则衡量消息敏感度。</p>
-<p>样条固定S=0.10的四大水平差公告日0.343981（SE=0.109843，p=0.001740），+1为0.378394（p=0.01133），+5仍为0.559373（SE=0.221490，CI=[0.125242,0.993503]，p=0.01156）。较远期结果随规格变化。本土八大的线性斜率证据较弱，样条固定S公告日和+1水平差为正且显著；全表同时保留这些差异。</p>
-<p>线性CAR四大前期斜率联合检验p=0.156、全时期斜率联合p=0.024；样条前期联合p=0.087、全时期p&lt;0.001。样条存在10%水平的事前差异；这些结果仍为条件相关。</p>
-<figure class="latex-table figure" style="overflow-x:auto;">
-<img alt="Continuous Earnings Surprise: Slopes and Fixed-Surprise Gaps" class="figure-img" loading="lazy" src="tables/big4_regression_columns/continuous_market_car_p01.png" style="width:703px;max-width:none;height:auto;display:block;"/>
-<figcaption>
-Continuous Earnings Surprise: Slopes and Fixed-Surprise Gaps
-</figcaption>
+<p><strong>样本与单位。</strong> 线性与样条共用30,064份年报事件、330,646条日度观测，公司×财年、事件日及实际交易日期FE，公司×财年聚类，无额外控制。Y为从−5日起累计的市场调整收益，以百分点计、相对−1日解释；消息变量为S除以0.10。</p>
+<p>修复后，四大−Other每增加0.10惊喜的线性反应差为：+0日0.008277（SE=0.003714，p=0.0259）；+1日0.011245（SE=0.005489，p=0.0405）；+5日0.000454（SE=0.009929，p=0.9635）。单位为收益百分点；固定惊喜水平差与斜率差分别报告。</p>
+<p>样条固定S=0.10时，四大−Other的水平差为：+0日0.336592（SE=0.109965，p=0.0022）；+1日0.366366（SE=0.149633，p=0.0144）；+5日0.544893（SE=0.221627，p=0.0140）。单位为收益百分点。</p>
+<p>四大CAR完整交互模型的联合检验：linear：事前路径联合p=0.1657，全期斜率联合p=0.0285；spline：事前路径联合p=0.0822，全期斜率联合p=0.0012。这些是条件相关的路径和斜率检验。</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>模型</th>
+<th>量</th>
+<th>组别（相对Other）</th>
+<th>日</th>
+<th>系数</th>
+<th>SE</th>
+<th>p</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>linear</td>
+<td>slope10</td>
+<td>3</td>
+<td>0</td>
+<td>0.008277</td>
+<td>0.003714</td>
+<td>0.0259</td>
+</tr>
+<tr class="even">
+<td>linear</td>
+<td>gap</td>
+<td>3</td>
+<td>0</td>
+<td>0.186240</td>
+<td>0.069182</td>
+<td>0.0071</td>
+</tr>
+<tr class="odd">
+<td>linear</td>
+<td>slope10</td>
+<td>3</td>
+<td>1</td>
+<td>0.011245</td>
+<td>0.005489</td>
+<td>0.0405</td>
+</tr>
+<tr class="even">
+<td>linear</td>
+<td>gap</td>
+<td>3</td>
+<td>1</td>
+<td>0.212337</td>
+<td>0.090946</td>
+<td>0.0196</td>
+</tr>
+<tr class="odd">
+<td>linear</td>
+<td>slope10</td>
+<td>3</td>
+<td>5</td>
+<td>0.000454</td>
+<td>0.009929</td>
+<td>0.9635</td>
+</tr>
+<tr class="even">
+<td>linear</td>
+<td>gap</td>
+<td>3</td>
+<td>5</td>
+<td>0.243411</td>
+<td>0.137583</td>
+<td>0.0769</td>
+</tr>
+<tr class="odd">
+<td>linear</td>
+<td>slope10</td>
+<td>2</td>
+<td>0</td>
+<td>0.003108</td>
+<td>0.001967</td>
+<td>0.1140</td>
+</tr>
+<tr class="even">
+<td>linear</td>
+<td>gap</td>
+<td>2</td>
+<td>0</td>
+<td>0.059902</td>
+<td>0.047608</td>
+<td>0.2083</td>
+</tr>
+<tr class="odd">
+<td>linear</td>
+<td>slope10</td>
+<td>2</td>
+<td>1</td>
+<td>0.003717</td>
+<td>0.002936</td>
+<td>0.2055</td>
+</tr>
+<tr class="even">
+<td>linear</td>
+<td>gap</td>
+<td>2</td>
+<td>1</td>
+<td>0.068256</td>
+<td>0.063415</td>
+<td>0.2818</td>
+</tr>
+<tr class="odd">
+<td>linear</td>
+<td>slope10</td>
+<td>2</td>
+<td>5</td>
+<td>0.004049</td>
+<td>0.005747</td>
+<td>0.4812</td>
+</tr>
+<tr class="even">
+<td>linear</td>
+<td>gap</td>
+<td>2</td>
+<td>5</td>
+<td>0.080690</td>
+<td>0.093362</td>
+<td>0.3874</td>
+</tr>
+<tr class="odd">
+<td>spline</td>
+<td>gap</td>
+<td>3</td>
+<td>0</td>
+<td>0.336592</td>
+<td>0.109965</td>
+<td>0.0022</td>
+</tr>
+<tr class="even">
+<td>spline</td>
+<td>gap</td>
+<td>3</td>
+<td>1</td>
+<td>0.366366</td>
+<td>0.149633</td>
+<td>0.0144</td>
+</tr>
+<tr class="odd">
+<td>spline</td>
+<td>gap</td>
+<td>3</td>
+<td>5</td>
+<td>0.544893</td>
+<td>0.221627</td>
+<td>0.0140</td>
+</tr>
+<tr class="even">
+<td>spline</td>
+<td>gap</td>
+<td>2</td>
+<td>0</td>
+<td>0.249677</td>
+<td>0.086543</td>
+<td>0.0039</td>
+</tr>
+<tr class="odd">
+<td>spline</td>
+<td>gap</td>
+<td>2</td>
+<td>1</td>
+<td>0.255387</td>
+<td>0.117533</td>
+<td>0.0298</td>
+</tr>
+<tr class="even">
+<td>spline</td>
+<td>gap</td>
+<td>2</td>
+<td>5</td>
+<td>0.181543</td>
+<td>0.169606</td>
+<td>0.2845</td>
+</tr>
+</tbody>
+</table>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img class="img-fluid figure-img" src="figures/big4_evidence/linear_slopes_car_pct.png" style="width:100.0%"/></p>
+<figcaption>连续盈余惊喜：三类事务所的CAR反应斜率</figcaption>
 </figure>
-<figure class="latex-table figure" style="overflow-x:auto;">
-<img alt="Continuous Earnings Surprise: Slopes and Fixed-Surprise Gaps" class="figure-img" loading="lazy" src="tables/big4_regression_columns/continuous_market_car_p02.png" style="width:703px;max-width:none;height:auto;display:block;"/>
-<figcaption>
-Continuous Earnings Surprise: Slopes and Fixed-Surprise Gaps
-</figcaption>
-</figure>
-<figure class="chapter-graph figure">
-<div style="overflow-x:auto;width:100%;">
-<p><img alt="连续盈余惊喜：三类事务所的CAR反应斜率" class="figure-img" data-cols="1" data-rows="1" height="450" src="figures/big4_evidence/linear_slopes_car_pct.png" style="width:100%;height:auto;max-width:none;display:block;" width="600"/></p>
 </div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img class="img-fluid figure-img" src="figures/big4_evidence/spline_gaps_car_pct.png" style="width:100.0%"/></p>
+<figcaption>给定盈余惊喜的CAR水平差：样条模型</figcaption>
 </figure>
-<figure class="chapter-graph figure">
-<div style="overflow-x:auto;width:100%;">
-<p><img alt="给定盈余惊喜的CAR水平差：样条模型" class="figure-img" data-cols="2" data-rows="2" height="900" src="figures/big4_evidence/spline_gaps_car_pct.png" style="width:200%;height:auto;max-width:none;display:block;" width="1200"/></p>
 </div>
-</figure>
 <p><strong>1.3.7 其他规格与消息可比性</strong></p>
 <p><strong>二组完整交互模型。</strong> 记<span class="math inline">\(Big4_{if}=\mathbf{1}\{Big4\}\)</span>、<span class="math inline">\(T_{if}=\mathbf{1}\{S_{if}&gt;0.10\}\)</span>，保留<span class="math inline">\(S_{if}\geq-0.10\)</span>：</p>
 <p><span id="eq-market-full-binary"><span class="math display">\[
@@ -2637,21 +3188,186 @@ Y_{ift}=F_{ift}+\sum_{k\in\mathcal K}D^k_{ift}
 +u_{ift}.
 \tag{7}\]</span></span></p>
 <p><span class="math inline">\(\mathbf X_{if}\)</span>为对数市值、市净率及对数预测数量；有／无控制使用同一有效样本，按公司×财年聚类，无控制列令<span class="math inline">\(\boldsymbol\gamma_k=0\)</span>。</p>
-<p>原三组门槛模型的四大−Other公告日差为0.003837（SE=0.001331，p=0.004，对数价格单位）。完整二组模型合并八大与Other，并允许中性消息组的路径不同；公告日差为0.000903（SE=0.001458，p=0.536），CAR差为0.093442个百分点（SE=0.146302，p=0.523）。两者的参照组和规格不同。</p>
-<p>要求预测DeclareDate严格在年报公告前，随后重新选择每机构最新合格预测，四大−Other公告日差仍为0.003606（SE=0.001338，p=0.007）。再按已确认四变量1%—99%共同区间筛选，公告日差0.002905（SE=0.001653，p=0.079），+1和+5不显著；共同样本加入控制后公告日0.001510（SE=0.001671，p=0.366）。相应事件数20,336→20,221→16,115。变化同时反映比较对象、控制项与估计精度。</p>
-<p>共同支持样本无控制的本土八大−Other公告日0.002295（p=0.049），加controls后0.001990（p=0.088）；四大−本土八大仍不显著。筛后市值和覆盖并未完全平衡。连续消息与门槛比较回答不同问题，结果分别保留。</p>
-<figure class="latex-table figure" style="overflow-x:auto;">
-<img alt="Big 4 Minus Other: Forecast Timing and Comparable Samples" class="figure-img" loading="lazy" src="tables/big4_regression_columns/comparable_market_response_p01.png" style="width:703px;max-width:none;height:auto;display:block;"/>
-<figcaption>
-Big 4 Minus Other: Forecast Timing and Comparable Samples
-</figcaption>
-</figure>
-<figure class="latex-table figure" style="overflow-x:auto;">
-<img alt="Big 4 Minus Other: Forecast Timing and Comparable Samples" class="figure-img" loading="lazy" src="tables/big4_regression_columns/comparable_market_response_p02.png" style="width:703px;max-width:none;height:auto;display:block;"/>
-<figcaption>
-Big 4 Minus Other: Forecast Timing and Comparable Samples
-</figcaption>
-</figure>
+<p>可比性模块中，原预测时点列修复后的四大−Other公告日差为0.003837（SE=0.001331，p=0.0040）。完整二组模型允许中性组路径不同，公告日三重差分为0.000896（SE=0.001458，p=0.5390），CAR为0.092550（SE=0.146245，p=0.5268）个百分点；参照组与受限三组规格不同，分别解释。</p>
+<p>仅在这项既有公开时点稳健性检验中要求DeclareDate严格早于公告，重新选择每机构最新合格预测，公告日差为0.003606（SE=0.001338，p=0.0071）；既定四变量共同支持筛选后为0.002905（SE=0.001653，p=0.0788），同样本加入控制后为0.001510（SE=0.001671，p=0.3663）。主信号仍按Rptdt，不因未核实DeclareDate异常自动删记录。</p>
+<p>共同支持样本的三组差值与事前检验见更新后的完整结果；支持筛选不保证客户特征完全平衡，也不将组间消息响应差直接解释为审计服务效应。</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>预测/支持样本</th>
+<th>模型</th>
+<th>日</th>
+<th>四大−Other</th>
+<th>SE</th>
+<th>p</th>
+<th>日度N</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>original</td>
+<td>pooled64</td>
+<td>0</td>
+<td>0.003837</td>
+<td>0.001331</td>
+<td>0.0040</td>
+<td>223,640</td>
+</tr>
+<tr class="even">
+<td>original</td>
+<td>pooled64</td>
+<td>1</td>
+<td>0.003671</td>
+<td>0.001790</td>
+<td>0.0403</td>
+<td>223,640</td>
+</tr>
+<tr class="odd">
+<td>original</td>
+<td>pooled64</td>
+<td>5</td>
+<td>0.003066</td>
+<td>0.002672</td>
+<td>0.2512</td>
+<td>223,640</td>
+</tr>
+<tr class="even">
+<td>original</td>
+<td>controls81</td>
+<td>0</td>
+<td>0.001349</td>
+<td>0.001382</td>
+<td>0.3289</td>
+<td>223,607</td>
+</tr>
+<tr class="odd">
+<td>original</td>
+<td>controls81</td>
+<td>1</td>
+<td>0.000933</td>
+<td>0.001853</td>
+<td>0.6144</td>
+<td>223,607</td>
+</tr>
+<tr class="even">
+<td>original</td>
+<td>controls81</td>
+<td>5</td>
+<td>0.001794</td>
+<td>0.002766</td>
+<td>0.5166</td>
+<td>223,607</td>
+</tr>
+<tr class="odd">
+<td>public</td>
+<td>pooled64</td>
+<td>0</td>
+<td>0.003606</td>
+<td>0.001338</td>
+<td>0.0071</td>
+<td>222,375</td>
+</tr>
+<tr class="even">
+<td>public</td>
+<td>pooled64</td>
+<td>1</td>
+<td>0.003475</td>
+<td>0.001800</td>
+<td>0.0536</td>
+<td>222,375</td>
+</tr>
+<tr class="odd">
+<td>public</td>
+<td>pooled64</td>
+<td>5</td>
+<td>0.002675</td>
+<td>0.002688</td>
+<td>0.3197</td>
+<td>222,375</td>
+</tr>
+<tr class="even">
+<td>public</td>
+<td>controls81</td>
+<td>0</td>
+<td>0.001079</td>
+<td>0.001388</td>
+<td>0.4371</td>
+<td>222,342</td>
+</tr>
+<tr class="odd">
+<td>public</td>
+<td>controls81</td>
+<td>1</td>
+<td>0.000683</td>
+<td>0.001863</td>
+<td>0.7137</td>
+<td>222,342</td>
+</tr>
+<tr class="even">
+<td>public</td>
+<td>controls81</td>
+<td>5</td>
+<td>0.001349</td>
+<td>0.002783</td>
+<td>0.6279</td>
+<td>222,342</td>
+</tr>
+<tr class="odd">
+<td>comparable</td>
+<td>pooled64</td>
+<td>0</td>
+<td>0.002905</td>
+<td>0.001653</td>
+<td>0.0788</td>
+<td>177,188</td>
+</tr>
+<tr class="even">
+<td>comparable</td>
+<td>pooled64</td>
+<td>1</td>
+<td>0.002431</td>
+<td>0.002241</td>
+<td>0.2781</td>
+<td>177,188</td>
+</tr>
+<tr class="odd">
+<td>comparable</td>
+<td>pooled64</td>
+<td>5</td>
+<td>0.001204</td>
+<td>0.003300</td>
+<td>0.7152</td>
+<td>177,188</td>
+</tr>
+<tr class="even">
+<td>comparable</td>
+<td>controls81</td>
+<td>0</td>
+<td>0.001510</td>
+<td>0.001671</td>
+<td>0.3663</td>
+<td>177,188</td>
+</tr>
+<tr class="odd">
+<td>comparable</td>
+<td>controls81</td>
+<td>1</td>
+<td>0.000876</td>
+<td>0.002268</td>
+<td>0.6993</td>
+<td>177,188</td>
+</tr>
+<tr class="even">
+<td>comparable</td>
+<td>controls81</td>
+<td>5</td>
+<td>0.000174</td>
+<td>0.003337</td>
+<td>0.9584</td>
+<td>177,188</td>
+</tr>
+</tbody>
+</table>
 <p><strong>1.3.8 年度CAR曲线</strong></p>
 <p><strong>一行一事件的年度CAR模型。</strong> 对窗口<span class="math inline">\([-1,d]\)</span>，<span class="math inline">\(d\in\{0,1,2,3\}\)</span>，分别拟合：</p>
 <p><span id="eq-market-annual-car"><span class="math display">\[
@@ -2662,11 +3378,12 @@ CAR_{if}^{[-1,d]}=\text{firm FE}+\text{year FE}
 \tag{8}\]</span></span></p>
 <p><span class="math inline">\(\text{firm FE}\)</span>、<span class="math inline">\(\text{year FE}\)</span>为公司与财年固定效应，Other为参照，<span class="math inline">\(\widetilde B_j\)</span>是基于原始surprise及共同P25/P50/P75节点的四个分段线性基函数。<span class="math inline">\(CAR_{if}^{[-1,d]}=\sum_{k=-1}^{d}(r_{ifk}-r_{mk})\)</span>，使用已确认的市场调整收益、小数单位。四个收益窗口共用这一方程，分别估计系数，不重复列式。图中三条条件预测曲线将吸收的固定效应设为共同估计样本均值；标准误按公司×财年聚类，一行一公司财年时这一聚类不覆盖同一公司的跨年相关性。</p>
 <p>年度四窗口CAR图使用29,397公司年度、4,181公司、24财年，吸收公司和财年FE，按公司×财年聚类，纵轴为小数收益而非百分点。它展示一行一事件的窗口收益，区别于前面的日度累计路径；图中为95%逐点置信区间。</p>
-<figure class="chapter-graph figure">
-<div style="overflow-x:auto;width:100%;">
-<p><img alt="盈余惊喜与四个公告窗口的年度CAR关系" class="figure-img" data-cols="2" data-rows="2" height="900" src="figures/big4_evidence/annual_car_curves.png" style="width:200%;height:auto;max-width:none;display:block;" width="1200"/></p>
-</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img class="img-fluid figure-img" src="figures/big4_evidence/annual_car_curves.png" style="width:100.0%"/></p>
+<figcaption>盈余惊喜与四个公告窗口的年度CAR关系</figcaption>
 </figure>
+</div>
 </details>
 </section>
 </section>
@@ -2674,66 +3391,918 @@ CAR_{if}^{[-1,d]}=\text{firm FE}+\text{year FE}
 <section class="level3" id="market-erc">
 <h3 class="anchored" data-anchor-id="market-erc">1.4 ERC：盈利意外与公告期 CAR 的斜率</h3>
 <p>ERC（盈利反应系数）衡量公告期市场调整收益对盈利意外的敏感度：同样的盈利消息对应更大的收益反应，意味着市场给予该消息更高权重。<a href="https://www.jstor.org/stable/248405">Teoh、Wong（1993）</a>使用ERC比较大型与其他事务所客户的盈利可信度。本节比较四大与非四大客户的消息反应斜率。</p>
-<p><strong>变量与样本。</strong> <span class="math inline">\(UE=(EPS_{used}-EPS_{forecast})/P_{-1}\)</span>，预测取公告前180天中位数，<span class="math inline">\(P_{-1}\)</span>为公告前一交易日收盘价；实际EPS以FAR为主，缺失时补算，价格不以年末值补缺。Y为市场调整CAR的小数收益，分别使用[−1,+1]、[−2,+2]、[−3,+3]完整交易日窗口，不缩尾。</p>
+<p><strong>变量与样本。</strong> <span class="math inline">\(UE=(EPS_{used}-EPS_{forecast})/P_{-1}\)</span>，预测取公告前180天中位数，<span class="math inline">\(P_{-1}\)</span>为公告前一交易日收盘价；实际EPS按上文已核实原报修复，未核实保留FAR优先及缺失补算；价格不以年末值补缺。Y为市场调整CAR的小数收益，分别使用[−1,+1]、[−2,+2]、[−3,+3]完整交易日窗口，不缩尾。</p>
 <p><strong>回归方程。</strong> 非四大为基准，主规格为：</p>
 <p><span id="eq-big4-erc"><span class="math display">\[
 CAR_{it}=\text{firm FE}+\text{year FE}+\delta Big4_{it}+\beta UE_{it}
 +\theta(Big4_{it}\times UE_{it})+\gamma'X_{it}+\varepsilon_{it}.
 \tag{9}\]</span></span></p>
 <p><span class="math inline">\(X\)</span>为市值、MB和预测覆盖的主项，标准误按公司聚类；另外报告无FE／无控制、仅firm FE和year FE两套规格，各用其有效样本。非四大的ERC为<span class="math inline">\(\beta\)</span>，四大为<span class="math inline">\(\beta+\theta\)</span>，表中“四大−非四大”就是斜率差<span class="math inline">\(\theta\)</span>；非四大包括本土八大和其他事务所；三组模型则分别比较四大−Other、八大−Other。</p>
-<p><strong>主要结果。</strong> 全样本CAR[−1,+1]中，非四大ERC为0.041339、四大为0.154483，差值0.113144（p=0.0116）；[−2,+2]及[−3,+3]的差值为0.156270和0.128447，均达到5%显著水平。UE增加0.01时，最短窗口交互项对应额外收益0.00113144。市场对四大客户盈利消息的反应更敏感，支持信息可信度的解释；服务、声誉与客户选择的来源由后续检验进一步考察。</p>
-<p><strong>有效样本。</strong> 主规格要求实际与预测EPS、公告前价格、完整CAR窗口和三项控制均有效，再删除固定效应单例观测。三个窗口的实际N依次为30,008、29,805、29,657个公司年度，标准误按公司聚类。</p>
+<p><strong>主要结果。</strong> 全样本CAR[−1,+1]的非四大ERC为0.038415，四大为0.154488。car_m1_p1：0.116073（SE=0.044493，p=0.0091）；car_m2_p2：0.160490（SE=0.056745，p=0.0047）；car_m3_p3：0.132594（SE=0.058719，p=0.0240）。三个窗口的差值均为正且达到5%显著水平。UE增加0.01时，最短窗口对应额外收益约0.1161个百分点。</p>
+<p><strong>有效样本。</strong> 主规格仍要求EPS、预测、公告前价格、完整CAR窗口及三项控制有效；三个窗口实际e(sample)分别为30,008、29,805、29,657。无FE及无控制规格继续使用各自有效样本。公司数、单例损失及逐事件样本见更新后的样本覆盖与模型CSV。</p>
 <section class="level4" id="全样本20012024财年">
 <h4 class="anchored" data-anchor-id="全样本20012024财年">全样本（2001—2024财年）</h4>
-<figure class="latex-table figure" style="overflow-x:auto;">
-<img alt="ERC：全样本" class="figure-img" loading="lazy" src="tables/big4_regression_columns/erc_all_p01.png" style="width:703px;max-width:none;height:auto;display:block;"/>
-<figcaption>
-ERC：全样本
-</figcaption>
-</figure>
-<figure class="latex-table figure" style="overflow-x:auto;">
-<img alt="ERC：全样本" class="figure-img" loading="lazy" src="tables/big4_regression_columns/erc_all_p02.png" style="width:703px;max-width:none;height:auto;display:block;"/>
-<figcaption>
-ERC：全样本
-</figcaption>
-</figure>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 12%"/>
+<col style="width: 12%"/>
+<col style="width: 12%"/>
+<col style="width: 12%"/>
+<col style="width: 12%"/>
+<col style="width: 12%"/>
+<col style="width: 12%"/>
+<col style="width: 12%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th>CAR窗口</th>
+<th>比较模型</th>
+<th>规格</th>
+<th>斜率差</th>
+<th>系数</th>
+<th>SE</th>
+<th>p</th>
+<th>N</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>car_m1_p1</td>
+<td>四大−非四大</td>
+<td>无FE/无控制</td>
+<td>Big4_minus_baseline</td>
+<td>0.079565</td>
+<td>0.038305</td>
+<td>0.0378</td>
+<td>30,676</td>
+</tr>
+<tr class="even">
+<td>car_m1_p1</td>
+<td>四大−非四大</td>
+<td>公司+财年FE</td>
+<td>Big4_minus_baseline</td>
+<td>0.115318</td>
+<td>0.044438</td>
+<td>0.0095</td>
+<td>30,014</td>
+</tr>
+<tr class="odd">
+<td>car_m1_p1</td>
+<td>四大−非四大</td>
+<td>FE+控制</td>
+<td>Big4_minus_baseline</td>
+<td>0.116073</td>
+<td>0.044493</td>
+<td>0.0091</td>
+<td>30,008</td>
+</tr>
+<tr class="even">
+<td>car_m2_p2</td>
+<td>四大−非四大</td>
+<td>无FE/无控制</td>
+<td>Big4_minus_baseline</td>
+<td>0.115817</td>
+<td>0.049646</td>
+<td>0.0197</td>
+<td>30,473</td>
+</tr>
+<tr class="odd">
+<td>car_m2_p2</td>
+<td>四大−非四大</td>
+<td>公司+财年FE</td>
+<td>Big4_minus_baseline</td>
+<td>0.158943</td>
+<td>0.055652</td>
+<td>0.0043</td>
+<td>29,811</td>
+</tr>
+<tr class="even">
+<td>car_m2_p2</td>
+<td>四大−非四大</td>
+<td>FE+控制</td>
+<td>Big4_minus_baseline</td>
+<td>0.160490</td>
+<td>0.056745</td>
+<td>0.0047</td>
+<td>29,805</td>
+</tr>
+<tr class="odd">
+<td>car_m3_p3</td>
+<td>四大−非四大</td>
+<td>无FE/无控制</td>
+<td>Big4_minus_baseline</td>
+<td>0.074722</td>
+<td>0.052824</td>
+<td>0.1573</td>
+<td>30,324</td>
+</tr>
+<tr class="even">
+<td>car_m3_p3</td>
+<td>四大−非四大</td>
+<td>公司+财年FE</td>
+<td>Big4_minus_baseline</td>
+<td>0.130299</td>
+<td>0.057708</td>
+<td>0.0240</td>
+<td>29,663</td>
+</tr>
+<tr class="odd">
+<td>car_m3_p3</td>
+<td>四大−非四大</td>
+<td>FE+控制</td>
+<td>Big4_minus_baseline</td>
+<td>0.132594</td>
+<td>0.058719</td>
+<td>0.0240</td>
+<td>29,657</td>
+</tr>
+<tr class="even">
+<td>car_m1_p1</td>
+<td>三组：以Other为基准</td>
+<td>无FE/无控制</td>
+<td>Big4_minus_baseline</td>
+<td>0.084947</td>
+<td>0.041026</td>
+<td>0.0385</td>
+<td>30,676</td>
+</tr>
+<tr class="odd">
+<td>car_m1_p1</td>
+<td>三组：以Other为基准</td>
+<td>无FE/无控制</td>
+<td>Local8_minus_baseline</td>
+<td>0.007578</td>
+<td>0.038792</td>
+<td>0.8451</td>
+<td>30,676</td>
+</tr>
+<tr class="even">
+<td>car_m1_p1</td>
+<td>三组：以Other为基准</td>
+<td>公司+财年FE</td>
+<td>Big4_minus_baseline</td>
+<td>0.120246</td>
+<td>0.051880</td>
+<td>0.0205</td>
+<td>30,014</td>
+</tr>
+<tr class="odd">
+<td>car_m1_p1</td>
+<td>三组：以Other为基准</td>
+<td>公司+财年FE</td>
+<td>Local8_minus_baseline</td>
+<td>0.007548</td>
+<td>0.045467</td>
+<td>0.8682</td>
+<td>30,014</td>
+</tr>
+<tr class="even">
+<td>car_m1_p1</td>
+<td>三组：以Other为基准</td>
+<td>FE+控制</td>
+<td>Big4_minus_baseline</td>
+<td>0.120583</td>
+<td>0.051707</td>
+<td>0.0197</td>
+<td>30,008</td>
+</tr>
+<tr class="odd">
+<td>car_m1_p1</td>
+<td>三组：以Other为基准</td>
+<td>FE+控制</td>
+<td>Local8_minus_baseline</td>
+<td>0.006890</td>
+<td>0.045473</td>
+<td>0.8796</td>
+<td>30,008</td>
+</tr>
+<tr class="even">
+<td>car_m2_p2</td>
+<td>三组：以Other为基准</td>
+<td>无FE/无控制</td>
+<td>Big4_minus_baseline</td>
+<td>0.101833</td>
+<td>0.053406</td>
+<td>0.0566</td>
+<td>30,473</td>
+</tr>
+<tr class="odd">
+<td>car_m2_p2</td>
+<td>三组：以Other为基准</td>
+<td>无FE/无控制</td>
+<td>Local8_minus_baseline</td>
+<td>-0.019964</td>
+<td>0.052154</td>
+<td>0.7019</td>
+<td>30,473</td>
+</tr>
+<tr class="even">
+<td>car_m2_p2</td>
+<td>三组：以Other为基准</td>
+<td>公司+财年FE</td>
+<td>Big4_minus_baseline</td>
+<td>0.129005</td>
+<td>0.068193</td>
+<td>0.0586</td>
+<td>29,811</td>
+</tr>
+<tr class="odd">
+<td>car_m2_p2</td>
+<td>三组：以Other为基准</td>
+<td>公司+财年FE</td>
+<td>Local8_minus_baseline</td>
+<td>-0.039491</td>
+<td>0.060438</td>
+<td>0.5135</td>
+<td>29,811</td>
+</tr>
+<tr class="even">
+<td>car_m2_p2</td>
+<td>三组：以Other为基准</td>
+<td>FE+控制</td>
+<td>Big4_minus_baseline</td>
+<td>0.128789</td>
+<td>0.068654</td>
+<td>0.0607</td>
+<td>29,805</td>
+</tr>
+<tr class="odd">
+<td>car_m2_p2</td>
+<td>三组：以Other为基准</td>
+<td>FE+控制</td>
+<td>Local8_minus_baseline</td>
+<td>-0.042083</td>
+<td>0.060824</td>
+<td>0.4890</td>
+<td>29,805</td>
+</tr>
+<tr class="even">
+<td>car_m3_p3</td>
+<td>三组：以Other为基准</td>
+<td>无FE/无控制</td>
+<td>Big4_minus_baseline</td>
+<td>0.051601</td>
+<td>0.061131</td>
+<td>0.3987</td>
+<td>30,324</td>
+</tr>
+<tr class="odd">
+<td>car_m3_p3</td>
+<td>三组：以Other为基准</td>
+<td>无FE/无控制</td>
+<td>Local8_minus_baseline</td>
+<td>-0.033000</td>
+<td>0.063878</td>
+<td>0.6054</td>
+<td>30,324</td>
+</tr>
+<tr class="even">
+<td>car_m3_p3</td>
+<td>三组：以Other为基准</td>
+<td>公司+财年FE</td>
+<td>Big4_minus_baseline</td>
+<td>0.070189</td>
+<td>0.073615</td>
+<td>0.3404</td>
+<td>29,663</td>
+</tr>
+<tr class="odd">
+<td>car_m3_p3</td>
+<td>三组：以Other为基准</td>
+<td>公司+财年FE</td>
+<td>Local8_minus_baseline</td>
+<td>-0.080530</td>
+<td>0.069380</td>
+<td>0.2458</td>
+<td>29,663</td>
+</tr>
+<tr class="even">
+<td>car_m3_p3</td>
+<td>三组：以Other为基准</td>
+<td>FE+控制</td>
+<td>Big4_minus_baseline</td>
+<td>0.069633</td>
+<td>0.073585</td>
+<td>0.3441</td>
+<td>29,657</td>
+</tr>
+<tr class="odd">
+<td>car_m3_p3</td>
+<td>三组：以Other为基准</td>
+<td>FE+控制</td>
+<td>Local8_minus_baseline</td>
+<td>-0.084720</td>
+<td>0.070120</td>
+<td>0.2270</td>
+<td>29,657</td>
+</tr>
+</tbody>
+</table>
 <details id="erc-period-results">
 <summary>
 补充：ERC的2012年前后结果
 </summary>
 <p><strong>2012年前（2001—2011财年）</strong></p>
-<figure class="latex-table figure" style="overflow-x:auto;">
-<img alt="ERC：2012年前" class="figure-img" loading="lazy" src="tables/big4_regression_columns/erc_before2012_p01.png" style="width:703px;max-width:none;height:auto;display:block;"/>
-<figcaption>
-ERC：2012年前
-</figcaption>
-</figure>
-<figure class="latex-table figure" style="overflow-x:auto;">
-<img alt="ERC：2012年前" class="figure-img" loading="lazy" src="tables/big4_regression_columns/erc_before2012_p02.png" style="width:703px;max-width:none;height:auto;display:block;"/>
-<figcaption>
-ERC：2012年前
-</figcaption>
-</figure>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 12%"/>
+<col style="width: 12%"/>
+<col style="width: 12%"/>
+<col style="width: 12%"/>
+<col style="width: 12%"/>
+<col style="width: 12%"/>
+<col style="width: 12%"/>
+<col style="width: 12%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th>CAR窗口</th>
+<th>比较模型</th>
+<th>规格</th>
+<th>斜率差</th>
+<th>系数</th>
+<th>SE</th>
+<th>p</th>
+<th>N</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>car_m1_p1</td>
+<td>四大−非四大</td>
+<td>无FE/无控制</td>
+<td>Big4_minus_baseline</td>
+<td>0.143341</td>
+<td>0.124014</td>
+<td>0.2479</td>
+<td>6,738</td>
+</tr>
+<tr class="even">
+<td>car_m1_p1</td>
+<td>四大−非四大</td>
+<td>公司+财年FE</td>
+<td>Big4_minus_baseline</td>
+<td>0.138440</td>
+<td>0.136706</td>
+<td>0.3114</td>
+<td>6,175</td>
+</tr>
+<tr class="odd">
+<td>car_m1_p1</td>
+<td>四大−非四大</td>
+<td>FE+控制</td>
+<td>Big4_minus_baseline</td>
+<td>0.144682</td>
+<td>0.139116</td>
+<td>0.2985</td>
+<td>6,175</td>
+</tr>
+<tr class="even">
+<td>car_m2_p2</td>
+<td>四大−非四大</td>
+<td>无FE/无控制</td>
+<td>Big4_minus_baseline</td>
+<td>0.161784</td>
+<td>0.141229</td>
+<td>0.2521</td>
+<td>6,590</td>
+</tr>
+<tr class="odd">
+<td>car_m2_p2</td>
+<td>四大−非四大</td>
+<td>公司+财年FE</td>
+<td>Big4_minus_baseline</td>
+<td>0.141085</td>
+<td>0.151716</td>
+<td>0.3526</td>
+<td>6,020</td>
+</tr>
+<tr class="even">
+<td>car_m2_p2</td>
+<td>四大−非四大</td>
+<td>FE+控制</td>
+<td>Big4_minus_baseline</td>
+<td>0.149499</td>
+<td>0.155870</td>
+<td>0.3377</td>
+<td>6,020</td>
+</tr>
+<tr class="odd">
+<td>car_m3_p3</td>
+<td>四大−非四大</td>
+<td>无FE/无控制</td>
+<td>Big4_minus_baseline</td>
+<td>0.108950</td>
+<td>0.140142</td>
+<td>0.4370</td>
+<td>6,498</td>
+</tr>
+<tr class="even">
+<td>car_m3_p3</td>
+<td>四大−非四大</td>
+<td>公司+财年FE</td>
+<td>Big4_minus_baseline</td>
+<td>0.092777</td>
+<td>0.156980</td>
+<td>0.5546</td>
+<td>5,929</td>
+</tr>
+<tr class="odd">
+<td>car_m3_p3</td>
+<td>四大−非四大</td>
+<td>FE+控制</td>
+<td>Big4_minus_baseline</td>
+<td>0.105695</td>
+<td>0.162157</td>
+<td>0.5146</td>
+<td>5,929</td>
+</tr>
+<tr class="even">
+<td>car_m1_p1</td>
+<td>三组：以Other为基准</td>
+<td>无FE/无控制</td>
+<td>Big4_minus_baseline</td>
+<td>0.144587</td>
+<td>0.123822</td>
+<td>0.2431</td>
+<td>6,738</td>
+</tr>
+<tr class="odd">
+<td>car_m1_p1</td>
+<td>三组：以Other为基准</td>
+<td>无FE/无控制</td>
+<td>Local8_minus_baseline</td>
+<td>0.002896</td>
+<td>0.079254</td>
+<td>0.9709</td>
+<td>6,738</td>
+</tr>
+<tr class="even">
+<td>car_m1_p1</td>
+<td>三组：以Other为基准</td>
+<td>公司+财年FE</td>
+<td>Big4_minus_baseline</td>
+<td>0.098205</td>
+<td>0.142152</td>
+<td>0.4898</td>
+<td>6,175</td>
+</tr>
+<tr class="odd">
+<td>car_m1_p1</td>
+<td>三组：以Other为基准</td>
+<td>公司+财年FE</td>
+<td>Local8_minus_baseline</td>
+<td>-0.090559</td>
+<td>0.110176</td>
+<td>0.4112</td>
+<td>6,175</td>
+</tr>
+<tr class="even">
+<td>car_m1_p1</td>
+<td>三组：以Other为基准</td>
+<td>FE+控制</td>
+<td>Big4_minus_baseline</td>
+<td>0.108422</td>
+<td>0.144562</td>
+<td>0.4534</td>
+<td>6,175</td>
+</tr>
+<tr class="odd">
+<td>car_m1_p1</td>
+<td>三组：以Other为基准</td>
+<td>FE+控制</td>
+<td>Local8_minus_baseline</td>
+<td>-0.082143</td>
+<td>0.112408</td>
+<td>0.4650</td>
+<td>6,175</td>
+</tr>
+<tr class="even">
+<td>car_m2_p2</td>
+<td>三组：以Other为基准</td>
+<td>无FE/无控制</td>
+<td>Big4_minus_baseline</td>
+<td>0.162601</td>
+<td>0.144268</td>
+<td>0.2598</td>
+<td>6,590</td>
+</tr>
+<tr class="odd">
+<td>car_m2_p2</td>
+<td>三组：以Other为基准</td>
+<td>无FE/无控制</td>
+<td>Local8_minus_baseline</td>
+<td>0.003030</td>
+<td>0.090944</td>
+<td>0.9734</td>
+<td>6,590</td>
+</tr>
+<tr class="even">
+<td>car_m2_p2</td>
+<td>三组：以Other为基准</td>
+<td>公司+财年FE</td>
+<td>Big4_minus_baseline</td>
+<td>0.098283</td>
+<td>0.161612</td>
+<td>0.5432</td>
+<td>6,020</td>
+</tr>
+<tr class="odd">
+<td>car_m2_p2</td>
+<td>三组：以Other为基准</td>
+<td>公司+财年FE</td>
+<td>Local8_minus_baseline</td>
+<td>-0.094884</td>
+<td>0.118015</td>
+<td>0.4215</td>
+<td>6,020</td>
+</tr>
+<tr class="even">
+<td>car_m2_p2</td>
+<td>三组：以Other为基准</td>
+<td>FE+控制</td>
+<td>Big4_minus_baseline</td>
+<td>0.113383</td>
+<td>0.165256</td>
+<td>0.4928</td>
+<td>6,020</td>
+</tr>
+<tr class="odd">
+<td>car_m2_p2</td>
+<td>三组：以Other为基准</td>
+<td>FE+控制</td>
+<td>Local8_minus_baseline</td>
+<td>-0.081361</td>
+<td>0.120621</td>
+<td>0.5001</td>
+<td>6,020</td>
+</tr>
+<tr class="even">
+<td>car_m3_p3</td>
+<td>三组：以Other为基准</td>
+<td>无FE/无控制</td>
+<td>Big4_minus_baseline</td>
+<td>0.118320</td>
+<td>0.148804</td>
+<td>0.4266</td>
+<td>6,498</td>
+</tr>
+<tr class="odd">
+<td>car_m3_p3</td>
+<td>三组：以Other为基准</td>
+<td>无FE/无控制</td>
+<td>Local8_minus_baseline</td>
+<td>0.030936</td>
+<td>0.114785</td>
+<td>0.7876</td>
+<td>6,498</td>
+</tr>
+<tr class="even">
+<td>car_m3_p3</td>
+<td>三组：以Other为基准</td>
+<td>公司+财年FE</td>
+<td>Big4_minus_baseline</td>
+<td>0.010110</td>
+<td>0.163385</td>
+<td>0.9507</td>
+<td>5,929</td>
+</tr>
+<tr class="odd">
+<td>car_m3_p3</td>
+<td>三组：以Other为基准</td>
+<td>公司+财年FE</td>
+<td>Local8_minus_baseline</td>
+<td>-0.181677</td>
+<td>0.144188</td>
+<td>0.2079</td>
+<td>5,929</td>
+</tr>
+<tr class="even">
+<td>car_m3_p3</td>
+<td>三组：以Other为基准</td>
+<td>FE+控制</td>
+<td>Big4_minus_baseline</td>
+<td>0.033404</td>
+<td>0.168840</td>
+<td>0.8432</td>
+<td>5,929</td>
+</tr>
+<tr class="odd">
+<td>car_m3_p3</td>
+<td>三组：以Other为基准</td>
+<td>FE+控制</td>
+<td>Local8_minus_baseline</td>
+<td>-0.160489</td>
+<td>0.149095</td>
+<td>0.2819</td>
+<td>5,929</td>
+</tr>
+</tbody>
+</table>
 <p><strong>2012年起（2012—2024财年）</strong></p>
-<figure class="latex-table figure" style="overflow-x:auto;">
-<img alt="ERC：2012年起" class="figure-img" loading="lazy" src="tables/big4_regression_columns/erc_from2012_p01.png" style="width:703px;max-width:none;height:auto;display:block;"/>
-<figcaption>
-ERC：2012年起
-</figcaption>
-</figure>
-<figure class="latex-table figure" style="overflow-x:auto;">
-<img alt="ERC：2012年起" class="figure-img" loading="lazy" src="tables/big4_regression_columns/erc_from2012_p02.png" style="width:703px;max-width:none;height:auto;display:block;"/>
-<figcaption>
-ERC：2012年起
-</figcaption>
-</figure>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 12%"/>
+<col style="width: 12%"/>
+<col style="width: 12%"/>
+<col style="width: 12%"/>
+<col style="width: 12%"/>
+<col style="width: 12%"/>
+<col style="width: 12%"/>
+<col style="width: 12%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th>CAR窗口</th>
+<th>比较模型</th>
+<th>规格</th>
+<th>斜率差</th>
+<th>系数</th>
+<th>SE</th>
+<th>p</th>
+<th>N</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>car_m1_p1</td>
+<td>四大−非四大</td>
+<td>无FE/无控制</td>
+<td>Big4_minus_baseline</td>
+<td>0.065899</td>
+<td>0.039026</td>
+<td>0.0914</td>
+<td>23,938</td>
+</tr>
+<tr class="even">
+<td>car_m1_p1</td>
+<td>四大−非四大</td>
+<td>公司+财年FE</td>
+<td>Big4_minus_baseline</td>
+<td>0.094973</td>
+<td>0.049038</td>
+<td>0.0529</td>
+<td>23,204</td>
+</tr>
+<tr class="odd">
+<td>car_m1_p1</td>
+<td>四大−非四大</td>
+<td>FE+控制</td>
+<td>Big4_minus_baseline</td>
+<td>0.098131</td>
+<td>0.050624</td>
+<td>0.0526</td>
+<td>23,199</td>
+</tr>
+<tr class="even">
+<td>car_m2_p2</td>
+<td>四大−非四大</td>
+<td>无FE/无控制</td>
+<td>Big4_minus_baseline</td>
+<td>0.105530</td>
+<td>0.051409</td>
+<td>0.0402</td>
+<td>23,883</td>
+</tr>
+<tr class="odd">
+<td>car_m2_p2</td>
+<td>四大−非四大</td>
+<td>公司+财年FE</td>
+<td>Big4_minus_baseline</td>
+<td>0.140763</td>
+<td>0.057956</td>
+<td>0.0152</td>
+<td>23,149</td>
+</tr>
+<tr class="even">
+<td>car_m2_p2</td>
+<td>四大−非四大</td>
+<td>FE+控制</td>
+<td>Big4_minus_baseline</td>
+<td>0.145934</td>
+<td>0.061537</td>
+<td>0.0178</td>
+<td>23,144</td>
+</tr>
+<tr class="odd">
+<td>car_m3_p3</td>
+<td>四大−非四大</td>
+<td>无FE/无控制</td>
+<td>Big4_minus_baseline</td>
+<td>0.066589</td>
+<td>0.056427</td>
+<td>0.2380</td>
+<td>23,826</td>
+</tr>
+<tr class="even">
+<td>car_m3_p3</td>
+<td>四大−非四大</td>
+<td>公司+财年FE</td>
+<td>Big4_minus_baseline</td>
+<td>0.120031</td>
+<td>0.060389</td>
+<td>0.0469</td>
+<td>23,089</td>
+</tr>
+<tr class="odd">
+<td>car_m3_p3</td>
+<td>四大−非四大</td>
+<td>FE+控制</td>
+<td>Big4_minus_baseline</td>
+<td>0.127452</td>
+<td>0.064078</td>
+<td>0.0468</td>
+<td>23,084</td>
+</tr>
+<tr class="even">
+<td>car_m1_p1</td>
+<td>三组：以Other为基准</td>
+<td>无FE/无控制</td>
+<td>Big4_minus_baseline</td>
+<td>0.077648</td>
+<td>0.046935</td>
+<td>0.0981</td>
+<td>23,938</td>
+</tr>
+<tr class="odd">
+<td>car_m1_p1</td>
+<td>三组：以Other为基准</td>
+<td>无FE/无控制</td>
+<td>Local8_minus_baseline</td>
+<td>0.015402</td>
+<td>0.047326</td>
+<td>0.7449</td>
+<td>23,938</td>
+</tr>
+<tr class="even">
+<td>car_m1_p1</td>
+<td>三组：以Other为基准</td>
+<td>公司+财年FE</td>
+<td>Big4_minus_baseline</td>
+<td>0.113487</td>
+<td>0.058469</td>
+<td>0.0523</td>
+<td>23,204</td>
+</tr>
+<tr class="odd">
+<td>car_m1_p1</td>
+<td>三组：以Other为基准</td>
+<td>公司+财年FE</td>
+<td>Local8_minus_baseline</td>
+<td>0.025157</td>
+<td>0.052108</td>
+<td>0.6293</td>
+<td>23,204</td>
+</tr>
+<tr class="even">
+<td>car_m1_p1</td>
+<td>三组：以Other为基准</td>
+<td>FE+控制</td>
+<td>Big4_minus_baseline</td>
+<td>0.110851</td>
+<td>0.058928</td>
+<td>0.0600</td>
+<td>23,199</td>
+</tr>
+<tr class="odd">
+<td>car_m1_p1</td>
+<td>三组：以Other为基准</td>
+<td>FE+控制</td>
+<td>Local8_minus_baseline</td>
+<td>0.017437</td>
+<td>0.053521</td>
+<td>0.7446</td>
+<td>23,199</td>
+</tr>
+<tr class="even">
+<td>car_m2_p2</td>
+<td>三组：以Other为基准</td>
+<td>无FE/无控制</td>
+<td>Big4_minus_baseline</td>
+<td>0.100077</td>
+<td>0.063027</td>
+<td>0.1124</td>
+<td>23,883</td>
+</tr>
+<tr class="odd">
+<td>car_m2_p2</td>
+<td>三组：以Other为基准</td>
+<td>无FE/无控制</td>
+<td>Local8_minus_baseline</td>
+<td>-0.007038</td>
+<td>0.063118</td>
+<td>0.9112</td>
+<td>23,883</td>
+</tr>
+<tr class="even">
+<td>car_m2_p2</td>
+<td>三组：以Other为基准</td>
+<td>公司+财年FE</td>
+<td>Big4_minus_baseline</td>
+<td>0.133516</td>
+<td>0.075322</td>
+<td>0.0764</td>
+<td>23,149</td>
+</tr>
+<tr class="odd">
+<td>car_m2_p2</td>
+<td>三组：以Other为基准</td>
+<td>公司+财年FE</td>
+<td>Local8_minus_baseline</td>
+<td>-0.008568</td>
+<td>0.066219</td>
+<td>0.8971</td>
+<td>23,149</td>
+</tr>
+<tr class="even">
+<td>car_m2_p2</td>
+<td>三组：以Other为基准</td>
+<td>FE+控制</td>
+<td>Big4_minus_baseline</td>
+<td>0.129535</td>
+<td>0.077006</td>
+<td>0.0926</td>
+<td>23,144</td>
+</tr>
+<tr class="odd">
+<td>car_m2_p2</td>
+<td>三组：以Other为基准</td>
+<td>FE+控制</td>
+<td>Local8_minus_baseline</td>
+<td>-0.020815</td>
+<td>0.068216</td>
+<td>0.7603</td>
+<td>23,144</td>
+</tr>
+<tr class="even">
+<td>car_m3_p3</td>
+<td>三组：以Other为基准</td>
+<td>无FE/无控制</td>
+<td>Big4_minus_baseline</td>
+<td>0.039061</td>
+<td>0.071890</td>
+<td>0.5869</td>
+<td>23,826</td>
+</tr>
+<tr class="odd">
+<td>car_m3_p3</td>
+<td>三组：以Other为基准</td>
+<td>无FE/无控制</td>
+<td>Local8_minus_baseline</td>
+<td>-0.035968</td>
+<td>0.074765</td>
+<td>0.6305</td>
+<td>23,826</td>
+</tr>
+<tr class="even">
+<td>car_m3_p3</td>
+<td>三组：以Other为基准</td>
+<td>公司+财年FE</td>
+<td>Big4_minus_baseline</td>
+<td>0.086915</td>
+<td>0.083553</td>
+<td>0.2983</td>
+<td>23,089</td>
+</tr>
+<tr class="odd">
+<td>car_m3_p3</td>
+<td>三组：以Other为基准</td>
+<td>公司+财年FE</td>
+<td>Local8_minus_baseline</td>
+<td>-0.043350</td>
+<td>0.079283</td>
+<td>0.5846</td>
+<td>23,089</td>
+</tr>
+<tr class="even">
+<td>car_m3_p3</td>
+<td>三组：以Other为基准</td>
+<td>FE+控制</td>
+<td>Big4_minus_baseline</td>
+<td>0.081133</td>
+<td>0.084403</td>
+<td>0.3365</td>
+<td>23,084</td>
+</tr>
+<tr class="odd">
+<td>car_m3_p3</td>
+<td>三组：以Other为基准</td>
+<td>FE+控制</td>
+<td>Local8_minus_baseline</td>
+<td>-0.061104</td>
+<td>0.082498</td>
+<td>0.4589</td>
+<td>23,084</td>
+</tr>
+</tbody>
+</table>
 </details>
 </section>
 </section>
 <section class="level3" id="market-pead">
 <h3 class="anchored" data-anchor-id="market-pead">1.5 长窗口 PEAD：盈利消息的后续价格反应</h3>
 <p>PEAD是盈利公告后价格继续沿消息方向调整的现象，用于观察市场消化盈利信息的速度。<a href="https://www.tandfonline.com/doi/abs/10.1080/16081625.2004.10510639">Ferguson、Matolcsy（2004）</a>使用PEAD研究审计质量与后续价格反应。本节展示四大−非四大的累计市场调整收益路径，包含公告初期收益；好消息后的长期收益差为负，与四大客户PEAD较低的解释一致。</p>
-<p><strong>与公告初期反应的联系。</strong> 短期路径与较低PEAD共同指向消息消化速度的差异：四大客户在最初几天反应较充分，非四大客户在后续交易日继续反应。这一解释连接两组价格事实；各自有效样本与累计窗口如下。</p>
+<p><strong>与公告初期反应的联系。</strong> 短期图与本节分别使用各自既定有效样本。终点CAR包含公告初期收益；后续收益更低可由多种机制产生，不能直接等同于信息更快被吸收。</p>
 <section class="level4" id="收益样本与固定效应">
 <h4 class="anchored" data-anchor-id="收益样本与固定效应">收益、样本与固定效应</h4>
 <p>当前正式数据覆盖财年2001—2024。盈利惊喜定义为<span class="math inline">\(S_i=(EPS_i-\widehat{EPS}_{i,180})/|\widehat{EPS}_{i,180}|\)</span>，预测为公告前180天券商预测中位数。正向组为<span class="math inline">\(S_i&gt;0.10\)</span>，中性组为<span class="math inline">\(-0.10\leq S_i\leq0.10\)</span>。只保留−5至+60共66个交易日的市场调整收益全部有效的年报事件，以免跨缺失收益累计。</p>
@@ -2751,13 +4320,13 @@ C_{ik}=\sum_{j=-5}^{k}AR_{ij}-\sum_{j=-5}^{-1}AR_{ij},\qquad C_{i,-1}=0.
 C_{ij}=\text{firm × year FE}+\text{event time FE}+\text{trading date FE}
 +\sum_{k\ne-1}\theta_k Big4_iD_{jk}+\varepsilon_{ij}.
 \]</span></p>
-<p>图画<span class="math inline">\(\theta_k\)</span>，即好消息样本中四大相对非四大的累计路径差。实际样本为3,811份年报，其中四大602份、非四大3,209份，涉及1,706家公司、251,280条日度观测。该比较没有中性组，也没有控制正向组内部的惊喜幅度。</p>
+<p>图画<span class="math inline">\(\theta_k\)</span>，即好消息样本中四大相对非四大的累计路径差。实际样本为3,826份年报，其中四大602份、非四大3,224份，涉及1,714家公司、252,270条日度观测。未控制正向组内部的惊喜幅度。</p>
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<img alt="好消息内部：四大减非四大的累计市场调整收益路径，负值表示四大累计收益较低" class="figure-img" loading="lazy" src="tables/pead_market_adjusted_paths/positive_only_path.png" style="width:100%;height:auto"/>
-<figcaption>
-A：仅surprise&gt;10%的好消息样本，−1日为基准
-</figcaption>
+<p><img class="img-fluid figure-img" src="tables/pead_market_adjusted_paths/positive_only_path.png" style="width:100.0%"/></p>
+<figcaption>好消息内部：四大减非四大的累计市场调整收益路径，负值表示四大累计收益较低</figcaption>
 </figure>
+</div>
 </section>
 <section class="level4" id="b正向相对中性的组间反应差">
 <h4 class="anchored" data-anchor-id="b正向相对中性的组间反应差">B：正向相对中性的组间反应差</h4>
@@ -2767,26 +4336,130 @@ C_{ij}=\text{firm × year FE}+\text{event time FE}+\text{trading date FE}
 +\sum_{k\ne-1}\left[\beta_{B,k}Big4_iT_iD_{jk}
 +\beta_{N,k}(1-Big4_i)T_iD_{jk}\right]+\varepsilon_{ij}.
 \]</span></p>
-<p>图画<span class="math inline">\(\beta_{B,k}-\beta_{N,k}\)</span>，对应“[四大：正向−中性]−[非四大：正向−中性]”的模型内反应差。实际样本为14,918份年报、4,019家公司、984,432条日度观测。这一规格没有另加<span class="math inline">\(Big4_iD_{jk}\)</span>项，因而没有单独估计两类事务所中性组的事件日路径；解释依赖两类中性组共享事件路径的限制。</p>
+<p>图画<span class="math inline">\(\beta_{B,k}-\beta_{N,k}\)</span>，对应“[四大：正向−中性]−[非四大：正向−中性]”。实际样本为14,976份年报、4,034家公司、988,260条日度观测。没有另加组别×事件日项，解释依赖中性组共享事件路径的限制。</p>
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<img alt="正向相对中性的反应差：四大减非四大，累计市场调整收益路径" class="figure-img" loading="lazy" src="tables/pead_market_adjusted_paths/positive_vs_neutral_path.png" style="width:100%;height:auto"/>
-<figcaption>
-B：正向−中性的四大−非四大反应差，−1日为基准
-</figcaption>
+<p><img class="img-fluid figure-img" src="tables/pead_market_adjusted_paths/positive_vs_neutral_path.png" style="width:100.0%"/></p>
+<figcaption>正向相对中性的反应差：四大减非四大，累计市场调整收益路径</figcaption>
 </figure>
+</div>
 <details id="pead-additional-results">
 <summary>
 补充：选定事件日结果与文献解释
 </summary>
 <p><strong>结果与解释</strong></p>
-<figure class="latex-table figure" style="overflow-x:auto;">
-<img alt="PEAD：四大与非四大的累计市场调整收益差" class="figure-img" loading="lazy" src="tables/pead_market_adjusted_paths/pead_selected_days.png" style="width:703px;max-width:none;height:auto;display:block;"/>
-<figcaption>
-PEAD：选定事件日的四大−非四大累计收益差
-</figcaption>
-</figure>
-<p>*** p&lt;0.01，** p&lt;0.05，* p&lt;0.10。第+60日，A差值为−0.020188，B为−0.020489，分别约为−2.02和−2.05个百分点。两套差值在公告初期没有显著差异，较明显的负差值集中在后段；首次5%逐点显著分别出现在+33及+36日，这些日期表示逐点检验首次达到显著性的时点。公告前−5至−2日联合检验p值分别为0.4591和0.4885，事前系数联合检验未发现显著差异。</p>
-<p>在超过10%的正向盈利惊喜样本中，四大客户相对非四大的长期累计市场调整收益较低；以中性惊喜为对照的组间反应差也得到相近的负差值。两项结果均与四大客户PEAD较低的解释一致；负值衡量四大相对非四大的收益差。</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>比较</th>
+<th>交易日</th>
+<th>累计收益差</th>
+<th>SE</th>
+<th>p</th>
+<th>日度N</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>positive_vs_neutral</td>
+<td>0</td>
+<td>0.000447</td>
+<td>0.001517</td>
+<td>0.7680</td>
+<td>988,260</td>
+</tr>
+<tr class="even">
+<td>positive_vs_neutral</td>
+<td>1</td>
+<td>-0.000368</td>
+<td>0.002079</td>
+<td>0.8596</td>
+<td>988,260</td>
+</tr>
+<tr class="odd">
+<td>positive_vs_neutral</td>
+<td>5</td>
+<td>-0.000513</td>
+<td>0.002994</td>
+<td>0.8640</td>
+<td>988,260</td>
+</tr>
+<tr class="even">
+<td>positive_vs_neutral</td>
+<td>20</td>
+<td>0.002669</td>
+<td>0.004404</td>
+<td>0.5446</td>
+<td>988,260</td>
+</tr>
+<tr class="odd">
+<td>positive_vs_neutral</td>
+<td>40</td>
+<td>-0.014602</td>
+<td>0.005483</td>
+<td>0.0078</td>
+<td>988,260</td>
+</tr>
+<tr class="even">
+<td>positive_vs_neutral</td>
+<td>60</td>
+<td>-0.020332</td>
+<td>0.007205</td>
+<td>0.0048</td>
+<td>988,260</td>
+</tr>
+<tr class="odd">
+<td>positive_only</td>
+<td>0</td>
+<td>-0.000473</td>
+<td>0.001505</td>
+<td>0.7535</td>
+<td>252,270</td>
+</tr>
+<tr class="even">
+<td>positive_only</td>
+<td>1</td>
+<td>-0.001725</td>
+<td>0.002073</td>
+<td>0.4053</td>
+<td>252,270</td>
+</tr>
+<tr class="odd">
+<td>positive_only</td>
+<td>5</td>
+<td>-0.002904</td>
+<td>0.003004</td>
+<td>0.3339</td>
+<td>252,270</td>
+</tr>
+<tr class="even">
+<td>positive_only</td>
+<td>20</td>
+<td>-0.000590</td>
+<td>0.004474</td>
+<td>0.8951</td>
+<td>252,270</td>
+</tr>
+<tr class="odd">
+<td>positive_only</td>
+<td>40</td>
+<td>-0.018105</td>
+<td>0.005528</td>
+<td>0.0011</td>
+<td>252,270</td>
+</tr>
+<tr class="even">
+<td>positive_only</td>
+<td>60</td>
+<td>-0.020135</td>
+<td>0.007340</td>
+<td>0.0061</td>
+<td>252,270</td>
+</tr>
+</tbody>
+</table>
+<p>*** p&lt;0.01，** p&lt;0.05，* p&lt;0.10。第+60日，A（好消息内部）的四大−非四大差为-0.020135（SE=0.007340，p=0.0061），B（正向相对中性）的差为-0.020332（SE=0.007205，p=0.0048）。公告前−5至−2日联合检验p值分别为0.4625和0.4771。公告后首次5%逐点显著日分别为32和36；未作多重检验调整。</p>
+<p>在超过10%的好消息样本中，A衡量四大客户相对非四大的累计收益差；B衡量好消息相对中性消息的反应差之差。两种比较分别解释，均不等于四大客户整体市值增长或审计质量的因果效应。</p>
 <p><strong>文献依据</strong></p>
 <p>Andrew Ferguson与Zoltan Matolcsy（2004）的《Audit quality and post earnings announcement drift》正式发表于 <em>Asia-Pacific Journal of Accounting &amp; Economics</em> 11(2):121–137。作者的理论链条是：<strong>好消息增加信息不确定性，部分抵消利好，导致初始反应不足；随着不确定性消退，价格继续反映消息，形成漂移。高质量审计提高盈利可信度、降低初始不确定性，因此大型事务所客户的PEAD较低。</strong> 这是原文明确提出的H1。<a href="https://opus.lib.uts.edu.au/bitstream/10453/6448/1/2004000864.pdf">Ferguson、Matolcsy（2004）</a>、<a href="https://www.tandfonline.com/doi/abs/10.1080/16081625.2004.10510639">Ferguson、Matolcsy（2004）</a>。</p>
 <p>结果表明：<strong>四大客户在较大正向盈利惊喜后的长期累计市场调整收益较低。这与Ferguson、Matolcsy（2004）提出的高质量审计降低信息不确定性、减轻初始反应不足的解释一致。</strong></p>
@@ -2814,40 +4487,360 @@ c_q=SE_q-D_q/n,
 <p>排序版将三个Y与四项控制都转换为行业×财年内分位秩，定义为<span class="math inline">\((\text{平均并列名次}-0.5)/\text{该变量组内非缺失数}\)</span>。排序基准是完整7,990条有效信息指标样本，大市值子样本不重新排序。排序系数表示相对秩位置差异，不能与原值系数直接比较量级。</p>
 <section class="level4" id="完整信息指标样本">
 <h4 class="anchored" data-anchor-id="完整信息指标样本">完整信息指标样本</h4>
-<figure class="latex-table figure" style="overflow-x:auto;">
-<img alt="完整信息指标样本：原值，四大−非四大，无控制、三项控制和四项控制" class="figure-img" loading="lazy" src="tables/information_market_top25/information_full_raw.png" style="width:703px;max-width:none;height:auto;display:block;"/>
-<figcaption>
-完整信息指标样本 · 原值
-</figcaption>
-</figure>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>信息指标</th>
+<th>规格</th>
+<th>四大−非四大</th>
+<th>SE</th>
+<th>p</th>
+<th>N</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>delta_rho</td>
+<td>no_controls</td>
+<td>0.025003</td>
+<td>0.009518</td>
+<td>0.0087</td>
+<td>7,990</td>
+</tr>
+<tr class="even">
+<td>delta_rho</td>
+<td>three_controls</td>
+<td>0.016776</td>
+<td>0.010137</td>
+<td>0.0980</td>
+<td>7,862</td>
+</tr>
+<tr class="odd">
+<td>delta_rho</td>
+<td>four_controls</td>
+<td>-0.004522</td>
+<td>0.011138</td>
+<td>0.6848</td>
+<td>7,862</td>
+</tr>
+<tr class="even">
+<td>delta_h</td>
+<td>no_controls</td>
+<td>80.440977</td>
+<td>69.011284</td>
+<td>0.2439</td>
+<td>7,990</td>
+</tr>
+<tr class="odd">
+<td>delta_h</td>
+<td>three_controls</td>
+<td>93.242289</td>
+<td>82.159966</td>
+<td>0.2565</td>
+<td>7,862</td>
+</tr>
+<tr class="even">
+<td>delta_h</td>
+<td>four_controls</td>
+<td>81.445679</td>
+<td>75.907776</td>
+<td>0.2834</td>
+<td>7,862</td>
+</tr>
+<tr class="odd">
+<td>delta_s</td>
+<td>no_controls</td>
+<td>27.213334</td>
+<td>13.840526</td>
+<td>0.0494</td>
+<td>7,990</td>
+</tr>
+<tr class="even">
+<td>delta_s</td>
+<td>three_controls</td>
+<td>20.692899</td>
+<td>15.478418</td>
+<td>0.1814</td>
+<td>7,862</td>
+</tr>
+<tr class="odd">
+<td>delta_s</td>
+<td>four_controls</td>
+<td>21.920731</td>
+<td>18.136663</td>
+<td>0.2269</td>
+<td>7,862</td>
+</tr>
+</tbody>
+</table>
 <p>加入市值等客户特征控制后，共同信息权重及信息精度没有稳定的四大优势。</p>
 <details id="analyst-additional-results">
 <summary>
 补充：排序结果、大市值子样本及控制变量比较
 </summary>
-<figure class="latex-table figure" style="overflow-x:auto;">
-<img alt="完整信息指标样本：行业×财年排序，四大−非四大，无控制、三项控制和四项控制" class="figure-img" loading="lazy" src="tables/information_market_top25/information_full_rank.png" style="width:703px;max-width:none;height:auto;display:block;"/>
-<figcaption>
-完整信息指标样本 · 行业×财年排序
-</figcaption>
-</figure>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>信息指标</th>
+<th>规格</th>
+<th>四大−非四大</th>
+<th>SE</th>
+<th>p</th>
+<th>N</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>delta_rho</td>
+<td>no_controls</td>
+<td>0.018527</td>
+<td>0.009343</td>
+<td>0.0475</td>
+<td>7,990</td>
+</tr>
+<tr class="even">
+<td>delta_rho</td>
+<td>three_controls</td>
+<td>0.012609</td>
+<td>0.009865</td>
+<td>0.2013</td>
+<td>7,862</td>
+</tr>
+<tr class="odd">
+<td>delta_rho</td>
+<td>four_controls</td>
+<td>0.009147</td>
+<td>0.010072</td>
+<td>0.3639</td>
+<td>7,862</td>
+</tr>
+<tr class="even">
+<td>delta_h</td>
+<td>no_controls</td>
+<td>0.034944</td>
+<td>0.009477</td>
+<td>0.0002</td>
+<td>7,990</td>
+</tr>
+<tr class="odd">
+<td>delta_h</td>
+<td>three_controls</td>
+<td>0.007762</td>
+<td>0.009721</td>
+<td>0.4247</td>
+<td>7,862</td>
+</tr>
+<tr class="even">
+<td>delta_h</td>
+<td>four_controls</td>
+<td>0.006673</td>
+<td>0.009982</td>
+<td>0.5039</td>
+<td>7,862</td>
+</tr>
+<tr class="odd">
+<td>delta_s</td>
+<td>no_controls</td>
+<td>0.013584</td>
+<td>0.009654</td>
+<td>0.1595</td>
+<td>7,990</td>
+</tr>
+<tr class="even">
+<td>delta_s</td>
+<td>three_controls</td>
+<td>-0.006909</td>
+<td>0.009873</td>
+<td>0.4841</td>
+<td>7,862</td>
+</tr>
+<tr class="odd">
+<td>delta_s</td>
+<td>four_controls</td>
+<td>-0.004670</td>
+<td>0.010028</td>
+<td>0.6415</td>
+<td>7,862</td>
+</tr>
+</tbody>
+</table>
 <p><strong>全市场当年市值前25%子样本</strong></p>
-<figure class="latex-table figure" style="overflow-x:auto;">
-<img alt="全市场当年市值前25%子样本：原值，四大−非四大，无控制、三项控制和四项控制" class="figure-img" loading="lazy" src="tables/information_market_top25/information_top25_raw.png" style="width:703px;max-width:none;height:auto;display:block;"/>
-<figcaption>
-全市场当年市值前25%子样本 · 原值
-</figcaption>
-</figure>
-<figure class="latex-table figure" style="overflow-x:auto;">
-<img alt="全市场当年市值前25%子样本：行业×财年排序，四大−非四大，无控制、三项控制和四项控制" class="figure-img" loading="lazy" src="tables/information_market_top25/information_top25_rank.png" style="width:703px;max-width:none;height:auto;display:block;"/>
-<figcaption>
-全市场当年市值前25%子样本 · 行业×财年排序
-</figcaption>
-</figure>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>信息指标</th>
+<th>规格</th>
+<th>四大−非四大</th>
+<th>SE</th>
+<th>p</th>
+<th>N</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>delta_rho</td>
+<td>no_controls</td>
+<td>0.010256</td>
+<td>0.010335</td>
+<td>0.3212</td>
+<td>4,439</td>
+</tr>
+<tr class="even">
+<td>delta_rho</td>
+<td>three_controls</td>
+<td>0.004496</td>
+<td>0.011089</td>
+<td>0.6852</td>
+<td>4,367</td>
+</tr>
+<tr class="odd">
+<td>delta_rho</td>
+<td>four_controls</td>
+<td>-0.005716</td>
+<td>0.012308</td>
+<td>0.6424</td>
+<td>4,367</td>
+</tr>
+<tr class="even">
+<td>delta_h</td>
+<td>no_controls</td>
+<td>88.916086</td>
+<td>75.402290</td>
+<td>0.2385</td>
+<td>4,439</td>
+</tr>
+<tr class="odd">
+<td>delta_h</td>
+<td>three_controls</td>
+<td>104.004633</td>
+<td>91.908936</td>
+<td>0.2580</td>
+<td>4,367</td>
+</tr>
+<tr class="even">
+<td>delta_h</td>
+<td>four_controls</td>
+<td>100.708441</td>
+<td>93.665253</td>
+<td>0.2825</td>
+<td>4,367</td>
+</tr>
+<tr class="odd">
+<td>delta_s</td>
+<td>no_controls</td>
+<td>8.261976</td>
+<td>8.631778</td>
+<td>0.3387</td>
+<td>4,439</td>
+</tr>
+<tr class="even">
+<td>delta_s</td>
+<td>three_controls</td>
+<td>4.172005</td>
+<td>9.256979</td>
+<td>0.6523</td>
+<td>4,367</td>
+</tr>
+<tr class="odd">
+<td>delta_s</td>
+<td>four_controls</td>
+<td>3.390211</td>
+<td>8.276418</td>
+<td>0.6821</td>
+<td>4,367</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>信息指标</th>
+<th>规格</th>
+<th>四大−非四大</th>
+<th>SE</th>
+<th>p</th>
+<th>N</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>delta_rho</td>
+<td>no_controls</td>
+<td>0.011939</td>
+<td>0.010050</td>
+<td>0.2350</td>
+<td>4,439</td>
+</tr>
+<tr class="even">
+<td>delta_rho</td>
+<td>three_controls</td>
+<td>0.005785</td>
+<td>0.010520</td>
+<td>0.5825</td>
+<td>4,367</td>
+</tr>
+<tr class="odd">
+<td>delta_rho</td>
+<td>four_controls</td>
+<td>0.005706</td>
+<td>0.010539</td>
+<td>0.5883</td>
+<td>4,367</td>
+</tr>
+<tr class="even">
+<td>delta_h</td>
+<td>no_controls</td>
+<td>0.018974</td>
+<td>0.010362</td>
+<td>0.0673</td>
+<td>4,439</td>
+</tr>
+<tr class="odd">
+<td>delta_h</td>
+<td>three_controls</td>
+<td>0.002420</td>
+<td>0.010537</td>
+<td>0.8183</td>
+<td>4,367</td>
+</tr>
+<tr class="even">
+<td>delta_h</td>
+<td>four_controls</td>
+<td>0.003453</td>
+<td>0.010557</td>
+<td>0.7437</td>
+<td>4,367</td>
+</tr>
+<tr class="odd">
+<td>delta_s</td>
+<td>no_controls</td>
+<td>0.004073</td>
+<td>0.010572</td>
+<td>0.7001</td>
+<td>4,439</td>
+</tr>
+<tr class="even">
+<td>delta_s</td>
+<td>three_controls</td>
+<td>-0.004293</td>
+<td>0.010794</td>
+<td>0.6909</td>
+<td>4,367</td>
+</tr>
+<tr class="odd">
+<td>delta_s</td>
+<td>four_controls</td>
+<td>-0.003042</td>
+<td>0.010870</td>
+<td>0.7796</td>
+<td>4,367</td>
+</tr>
+</tbody>
+</table>
 <p>表列双侧p值，N为实际回归公司年数。*** p&lt;0.01，** p&lt;0.05，* p&lt;0.10；按未舍入p值打星，未调整多重检验。</p>
-<p>完整样本中，Δρ原值从无控制的0.02500（p=0.0087）降至三项控制的0.01676（p=0.0984），加入市值后为−0.00452（p=0.6849）。Δρ排序结果依次为0.01853（p=0.0475）、0.01265（p=0.2000）和0.00920（p=0.3610）。Δh排序在无控制时显著为正，三项控制下已不显著；Δs原值无控制时显著为正，加控制后不显著。全市场市值前25%子样本中，三个Y各规格均未达到5%显著性，仅Δh排序无控制在10%水平显著。</p>
+<p>完整样本Δρ原值：无控制0.025003（SE=0.009518，p=0.0087）；四项控制-0.004522（SE=0.011138，p=0.6848）。排序和市值前25%结果按上表分别解释。</p>
 <p><strong>补充：市值与其他控制的分解</strong></p>
-<p>固定同一7,862条完整控制样本，Δρ原值无控制为0.02277（p=0.0190），仅加入市值后为−0.00156（p=0.8870）；仅加入绝对盈利惊喜后为0.02279（p=0.0189），几乎没有变化。市值使原值Δρ系数下降最明显，且这一比较没有混入样本数量变化；</p>
+<p>固定完整控制样本的逐项控制比较已重跑，详见更新后的Δρ原值逐项控制结果；该比较将样本变化与控制变量变化分开。</p>
 <p>加入客户特征控制后，共同信息优势没有稳定保留。</p>
 <details>
 <summary>
@@ -2874,31 +4867,607 @@ FractionRevised&amp;=n^{-1}\sum_j\mathbf1\{|r_j|&gt;10^{-10}\},\\
 <p>前三项分别是有符号修正、绝对修正幅度和修正比例；修正原值以EPS元／股计，比例为0—1。准确度度量<strong>平均预测的绝对误差变化</strong>，负值表示误差改善。这些Y不按股价或实际EPS再缩放。</p>
 <p>回归仍为 <a class="quarto-xref" href="#eq-big4-analyst-reg">式 11</a>，替换四个Y：无FE、公司聚类、不缩尾。每张表四列依次为各指标可用样本无控制、四项控制共同样本无控制、共同样本三项控制、共同样本四项控制。前两列分开，避免把样本变化算作控制效果。</p>
 <p><strong>样本限制。</strong> 三个修正Y沿用<span class="math inline">\(n\ge2\)</span>且目标实际EPS非负或尚未观察到的原样本；准确度沿用BKLS有效样本，两者的有效样本分别报告。完整样本修正Y无控制N=22,427、控制共同N=13,719；准确度N=7,990／7,862。全市场市值前25%中，两组分别为10,101／6,787和4,439／4,367。修正样本1,935条缺市场排名，保留在全样本，不能进入前25%子样本。排序按每个指标完整有效样本在行业×财年计算，子样本不重排。</p>
-<p>四项控制的原值有符号修正在全样本为0.041274（p=0.0092）、前25%为0.040738（p=0.0282）；绝对修正幅度分别−0.064203（p=0.0107）、−0.061738（p=0.0351）。但绝对修正幅度排序版不显著；准确度变化所有规格均未达到5%显著性。</p>
-<figure class="latex-table figure" style="overflow-x:auto;">
-<img alt="全样本：预测修正与准确度，原值" class="figure-img" loading="lazy" src="tables/monday_existing_results/forecast_full_raw.png" style="width:703px;max-width:none;height:auto;display:block;"/>
-<figcaption>
-全样本：预测修正与准确度，原值
-</figcaption>
-</figure>
-<figure class="latex-table figure" style="overflow-x:auto;">
-<img alt="全样本：预测修正与准确度，行业×财年排序" class="figure-img" loading="lazy" src="tables/monday_existing_results/forecast_full_rank.png" style="width:703px;max-width:none;height:auto;display:block;"/>
-<figcaption>
-全样本：预测修正与准确度，行业×财年排序
-</figcaption>
-</figure>
-<figure class="latex-table figure" style="overflow-x:auto;">
-<img alt="全市场市值前25%：预测修正与准确度，原值" class="figure-img" loading="lazy" src="tables/monday_existing_results/forecast_top25_raw.png" style="width:703px;max-width:none;height:auto;display:block;"/>
-<figcaption>
-全市场市值前25%：预测修正与准确度，原值
-</figcaption>
-</figure>
-<figure class="latex-table figure" style="overflow-x:auto;">
-<img alt="全市场市值前25%：预测修正与准确度，行业×财年排序" class="figure-img" loading="lazy" src="tables/monday_existing_results/forecast_top25_rank.png" style="width:703px;max-width:none;height:auto;display:block;"/>
-<figcaption>
-全市场市值前25%：预测修正与准确度，行业×财年排序
-</figcaption>
-</figure>
+<p>全样本四项控制下，有符号预测修正差为0.041259（SE=0.015841，p=0.0092），绝对修正幅度差为-0.064189（SE=0.025147，p=0.0107）。其余样本与排序规格见更新后的完整表；预测精度的t+1实际EPS与Y未改。</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 16%"/>
+<col style="width: 16%"/>
+<col style="width: 16%"/>
+<col style="width: 16%"/>
+<col style="width: 16%"/>
+<col style="width: 16%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th>预测指标</th>
+<th>规格</th>
+<th>四大−非四大</th>
+<th>SE</th>
+<th>p</th>
+<th>N</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>mean_revision</td>
+<td>no_controls</td>
+<td>0.063055</td>
+<td>0.011560</td>
+<td>&lt;0.0001</td>
+<td>22,427</td>
+</tr>
+<tr class="even">
+<td>mean_revision</td>
+<td>common_baseline</td>
+<td>0.040753</td>
+<td>0.013568</td>
+<td>0.0027</td>
+<td>13,719</td>
+</tr>
+<tr class="odd">
+<td>mean_revision</td>
+<td>three_controls</td>
+<td>0.048505</td>
+<td>0.013153</td>
+<td>0.0002</td>
+<td>13,719</td>
+</tr>
+<tr class="even">
+<td>mean_revision</td>
+<td>four_controls</td>
+<td>0.041259</td>
+<td>0.015841</td>
+<td>0.0092</td>
+<td>13,719</td>
+</tr>
+<tr class="odd">
+<td>mean_abs_revision</td>
+<td>no_controls</td>
+<td>-0.035594</td>
+<td>0.017588</td>
+<td>0.0431</td>
+<td>22,427</td>
+</tr>
+<tr class="even">
+<td>mean_abs_revision</td>
+<td>common_baseline</td>
+<td>-0.002364</td>
+<td>0.021442</td>
+<td>0.9122</td>
+<td>13,719</td>
+</tr>
+<tr class="odd">
+<td>mean_abs_revision</td>
+<td>three_controls</td>
+<td>-0.015168</td>
+<td>0.021560</td>
+<td>0.4818</td>
+<td>13,719</td>
+</tr>
+<tr class="even">
+<td>mean_abs_revision</td>
+<td>four_controls</td>
+<td>-0.064189</td>
+<td>0.025147</td>
+<td>0.0107</td>
+<td>13,719</td>
+</tr>
+<tr class="odd">
+<td>fraction_revised</td>
+<td>no_controls</td>
+<td>0.013086</td>
+<td>0.002938</td>
+<td>&lt;0.0001</td>
+<td>22,427</td>
+</tr>
+<tr class="even">
+<td>fraction_revised</td>
+<td>common_baseline</td>
+<td>0.025444</td>
+<td>0.003714</td>
+<td>&lt;0.0001</td>
+<td>13,719</td>
+</tr>
+<tr class="odd">
+<td>fraction_revised</td>
+<td>three_controls</td>
+<td>0.013397</td>
+<td>0.003714</td>
+<td>0.0003</td>
+<td>13,719</td>
+</tr>
+<tr class="even">
+<td>fraction_revised</td>
+<td>four_controls</td>
+<td>0.005370</td>
+<td>0.004178</td>
+<td>0.1988</td>
+<td>13,719</td>
+</tr>
+<tr class="odd">
+<td>delta_abs_error</td>
+<td>no_controls</td>
+<td>-0.001023</td>
+<td>0.017536</td>
+<td>0.9535</td>
+<td>7,990</td>
+</tr>
+<tr class="even">
+<td>delta_abs_error</td>
+<td>common_baseline</td>
+<td>-0.002166</td>
+<td>0.017620</td>
+<td>0.9022</td>
+<td>7,862</td>
+</tr>
+<tr class="odd">
+<td>delta_abs_error</td>
+<td>three_controls</td>
+<td>0.012195</td>
+<td>0.017732</td>
+<td>0.4917</td>
+<td>7,862</td>
+</tr>
+<tr class="even">
+<td>delta_abs_error</td>
+<td>four_controls</td>
+<td>0.030584</td>
+<td>0.019532</td>
+<td>0.1175</td>
+<td>7,862</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 16%"/>
+<col style="width: 16%"/>
+<col style="width: 16%"/>
+<col style="width: 16%"/>
+<col style="width: 16%"/>
+<col style="width: 16%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th>预测指标</th>
+<th>规格</th>
+<th>四大−非四大</th>
+<th>SE</th>
+<th>p</th>
+<th>N</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>mean_revision</td>
+<td>no_controls</td>
+<td>0.022705</td>
+<td>0.006451</td>
+<td>0.0004</td>
+<td>22,427</td>
+</tr>
+<tr class="even">
+<td>mean_revision</td>
+<td>common_baseline</td>
+<td>0.015243</td>
+<td>0.007328</td>
+<td>0.0376</td>
+<td>13,719</td>
+</tr>
+<tr class="odd">
+<td>mean_revision</td>
+<td>three_controls</td>
+<td>0.017334</td>
+<td>0.007410</td>
+<td>0.0194</td>
+<td>13,719</td>
+</tr>
+<tr class="even">
+<td>mean_revision</td>
+<td>four_controls</td>
+<td>0.014196</td>
+<td>0.007624</td>
+<td>0.0627</td>
+<td>13,719</td>
+</tr>
+<tr class="odd">
+<td>mean_abs_revision</td>
+<td>no_controls</td>
+<td>-0.005414</td>
+<td>0.011156</td>
+<td>0.6275</td>
+<td>22,427</td>
+</tr>
+<tr class="even">
+<td>mean_abs_revision</td>
+<td>common_baseline</td>
+<td>0.014529</td>
+<td>0.012450</td>
+<td>0.2433</td>
+<td>13,719</td>
+</tr>
+<tr class="odd">
+<td>mean_abs_revision</td>
+<td>three_controls</td>
+<td>0.002134</td>
+<td>0.011916</td>
+<td>0.8579</td>
+<td>13,719</td>
+</tr>
+<tr class="even">
+<td>mean_abs_revision</td>
+<td>four_controls</td>
+<td>0.001709</td>
+<td>0.012148</td>
+<td>0.8881</td>
+<td>13,719</td>
+</tr>
+<tr class="odd">
+<td>fraction_revised</td>
+<td>no_controls</td>
+<td>-0.024168</td>
+<td>0.005667</td>
+<td>&lt;0.0001</td>
+<td>22,427</td>
+</tr>
+<tr class="even">
+<td>fraction_revised</td>
+<td>common_baseline</td>
+<td>-0.010329</td>
+<td>0.007013</td>
+<td>0.1409</td>
+<td>13,719</td>
+</tr>
+<tr class="odd">
+<td>fraction_revised</td>
+<td>three_controls</td>
+<td>0.003847</td>
+<td>0.006724</td>
+<td>0.5672</td>
+<td>13,719</td>
+</tr>
+<tr class="even">
+<td>fraction_revised</td>
+<td>four_controls</td>
+<td>0.003562</td>
+<td>0.006891</td>
+<td>0.6053</td>
+<td>13,719</td>
+</tr>
+<tr class="odd">
+<td>delta_abs_error</td>
+<td>no_controls</td>
+<td>0.007789</td>
+<td>0.009769</td>
+<td>0.4253</td>
+<td>7,990</td>
+</tr>
+<tr class="even">
+<td>delta_abs_error</td>
+<td>common_baseline</td>
+<td>0.007140</td>
+<td>0.009807</td>
+<td>0.4667</td>
+<td>7,862</td>
+</tr>
+<tr class="odd">
+<td>delta_abs_error</td>
+<td>three_controls</td>
+<td>0.015673</td>
+<td>0.009865</td>
+<td>0.1122</td>
+<td>7,862</td>
+</tr>
+<tr class="even">
+<td>delta_abs_error</td>
+<td>four_controls</td>
+<td>0.013962</td>
+<td>0.010088</td>
+<td>0.1665</td>
+<td>7,862</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 16%"/>
+<col style="width: 16%"/>
+<col style="width: 16%"/>
+<col style="width: 16%"/>
+<col style="width: 16%"/>
+<col style="width: 16%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th>预测指标</th>
+<th>规格</th>
+<th>四大−非四大</th>
+<th>SE</th>
+<th>p</th>
+<th>N</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>mean_revision</td>
+<td>no_controls</td>
+<td>0.068035</td>
+<td>0.014260</td>
+<td>&lt;0.0001</td>
+<td>10,101</td>
+</tr>
+<tr class="even">
+<td>mean_revision</td>
+<td>common_baseline</td>
+<td>0.047230</td>
+<td>0.015273</td>
+<td>0.0020</td>
+<td>6,787</td>
+</tr>
+<tr class="odd">
+<td>mean_revision</td>
+<td>three_controls</td>
+<td>0.055095</td>
+<td>0.015189</td>
+<td>0.0003</td>
+<td>6,787</td>
+</tr>
+<tr class="even">
+<td>mean_revision</td>
+<td>four_controls</td>
+<td>0.040740</td>
+<td>0.018542</td>
+<td>0.0282</td>
+<td>6,787</td>
+</tr>
+<tr class="odd">
+<td>mean_abs_revision</td>
+<td>no_controls</td>
+<td>-0.078533</td>
+<td>0.021276</td>
+<td>0.0002</td>
+<td>10,101</td>
+</tr>
+<tr class="even">
+<td>mean_abs_revision</td>
+<td>common_baseline</td>
+<td>-0.046922</td>
+<td>0.024129</td>
+<td>0.0520</td>
+<td>6,787</td>
+</tr>
+<tr class="odd">
+<td>mean_abs_revision</td>
+<td>three_controls</td>
+<td>-0.020685</td>
+<td>0.024156</td>
+<td>0.3920</td>
+<td>6,787</td>
+</tr>
+<tr class="even">
+<td>mean_abs_revision</td>
+<td>four_controls</td>
+<td>-0.061733</td>
+<td>0.029268</td>
+<td>0.0351</td>
+<td>6,787</td>
+</tr>
+<tr class="odd">
+<td>fraction_revised</td>
+<td>no_controls</td>
+<td>0.010348</td>
+<td>0.003357</td>
+<td>0.0021</td>
+<td>10,101</td>
+</tr>
+<tr class="even">
+<td>fraction_revised</td>
+<td>common_baseline</td>
+<td>0.015638</td>
+<td>0.004030</td>
+<td>0.0001</td>
+<td>6,787</td>
+</tr>
+<tr class="odd">
+<td>fraction_revised</td>
+<td>three_controls</td>
+<td>0.012816</td>
+<td>0.003977</td>
+<td>0.0013</td>
+<td>6,787</td>
+</tr>
+<tr class="even">
+<td>fraction_revised</td>
+<td>four_controls</td>
+<td>0.009819</td>
+<td>0.004321</td>
+<td>0.0232</td>
+<td>6,787</td>
+</tr>
+<tr class="odd">
+<td>delta_abs_error</td>
+<td>no_controls</td>
+<td>0.018609</td>
+<td>0.020567</td>
+<td>0.3657</td>
+<td>4,439</td>
+</tr>
+<tr class="even">
+<td>delta_abs_error</td>
+<td>common_baseline</td>
+<td>0.015805</td>
+<td>0.020433</td>
+<td>0.4394</td>
+<td>4,367</td>
+</tr>
+<tr class="odd">
+<td>delta_abs_error</td>
+<td>three_controls</td>
+<td>0.010025</td>
+<td>0.020782</td>
+<td>0.6296</td>
+<td>4,367</td>
+</tr>
+<tr class="even">
+<td>delta_abs_error</td>
+<td>four_controls</td>
+<td>0.030813</td>
+<td>0.023081</td>
+<td>0.1821</td>
+<td>4,367</td>
+</tr>
+</tbody>
+</table>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 16%"/>
+<col style="width: 16%"/>
+<col style="width: 16%"/>
+<col style="width: 16%"/>
+<col style="width: 16%"/>
+<col style="width: 16%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th>预测指标</th>
+<th>规格</th>
+<th>四大−非四大</th>
+<th>SE</th>
+<th>p</th>
+<th>N</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>mean_revision</td>
+<td>no_controls</td>
+<td>0.018884</td>
+<td>0.007755</td>
+<td>0.0150</td>
+<td>10,101</td>
+</tr>
+<tr class="even">
+<td>mean_revision</td>
+<td>common_baseline</td>
+<td>0.014487</td>
+<td>0.008683</td>
+<td>0.0954</td>
+<td>6,787</td>
+</tr>
+<tr class="odd">
+<td>mean_revision</td>
+<td>three_controls</td>
+<td>0.011233</td>
+<td>0.008646</td>
+<td>0.1941</td>
+<td>6,787</td>
+</tr>
+<tr class="even">
+<td>mean_revision</td>
+<td>four_controls</td>
+<td>0.010283</td>
+<td>0.008664</td>
+<td>0.2355</td>
+<td>6,787</td>
+</tr>
+<tr class="odd">
+<td>mean_abs_revision</td>
+<td>no_controls</td>
+<td>-0.018819</td>
+<td>0.013284</td>
+<td>0.1568</td>
+<td>10,101</td>
+</tr>
+<tr class="even">
+<td>mean_abs_revision</td>
+<td>common_baseline</td>
+<td>-0.004967</td>
+<td>0.014299</td>
+<td>0.7284</td>
+<td>6,787</td>
+</tr>
+<tr class="odd">
+<td>mean_abs_revision</td>
+<td>three_controls</td>
+<td>0.003688</td>
+<td>0.013568</td>
+<td>0.7858</td>
+<td>6,787</td>
+</tr>
+<tr class="even">
+<td>mean_abs_revision</td>
+<td>four_controls</td>
+<td>0.003335</td>
+<td>0.013645</td>
+<td>0.8069</td>
+<td>6,787</td>
+</tr>
+<tr class="odd">
+<td>fraction_revised</td>
+<td>no_controls</td>
+<td>-0.009081</td>
+<td>0.006792</td>
+<td>0.1814</td>
+<td>10,101</td>
+</tr>
+<tr class="even">
+<td>fraction_revised</td>
+<td>common_baseline</td>
+<td>-0.003126</td>
+<td>0.008022</td>
+<td>0.6969</td>
+<td>6,787</td>
+</tr>
+<tr class="odd">
+<td>fraction_revised</td>
+<td>three_controls</td>
+<td>0.002916</td>
+<td>0.007606</td>
+<td>0.7015</td>
+<td>6,787</td>
+</tr>
+<tr class="even">
+<td>fraction_revised</td>
+<td>four_controls</td>
+<td>0.003802</td>
+<td>0.007584</td>
+<td>0.6162</td>
+<td>6,787</td>
+</tr>
+<tr class="odd">
+<td>delta_abs_error</td>
+<td>no_controls</td>
+<td>0.017499</td>
+<td>0.010885</td>
+<td>0.1082</td>
+<td>4,439</td>
+</tr>
+<tr class="even">
+<td>delta_abs_error</td>
+<td>common_baseline</td>
+<td>0.016260</td>
+<td>0.010943</td>
+<td>0.1375</td>
+<td>4,367</td>
+</tr>
+<tr class="odd">
+<td>delta_abs_error</td>
+<td>three_controls</td>
+<td>0.012224</td>
+<td>0.010897</td>
+<td>0.2621</td>
+<td>4,367</td>
+</tr>
+<tr class="even">
+<td>delta_abs_error</td>
+<td>four_controls</td>
+<td>0.012563</td>
+<td>0.010949</td>
+<td>0.2514</td>
+<td>4,367</td>
+</tr>
+</tbody>
+</table>
 <p>完整来源：结果与说明 · 结果CSV · 独立核验。</p>
 </details>
 </section>
@@ -2930,7 +5499,7 @@ Y_{it}=\text{firm FE}+\text{industry}\times\text{year FE}+\tau(G_i\times Post_{i
 <figure class="latex-table figure" style="overflow-x:auto;">
 <img alt="Switching DID Across Restatement Definitions" class="figure-img" loading="lazy" src="tables/big4_regression_columns/switching_failure_definitions.png" style="width:703px;max-width:none;height:auto;display:block;"/>
 <figcaption>
-Switching DID Across Restatement Definitions
+Switching DID Across Restatement Definitions ·  · 
 </figcaption>
 </figure>
 </section>
@@ -3036,7 +5605,7 @@ Y_{ict}=\text{firm}\times\text{cohort FE}+\text{cohort}\times\text{industry}\tim
 <figure class="latex-table figure" style="overflow-x:auto;">
 <img alt="Switch-in DID Before and After Baseline Matching" class="figure-img" loading="lazy" src="tables/big4_regression_columns/matched_switching_did.png" style="width:703px;max-width:none;height:auto;display:block;"/>
 <figcaption>
-Switch-in DID Before and After Baseline Matching
+Switch-in DID Before and After Baseline Matching ·  · 
 </figcaption>
 </figure>
 </details>
@@ -3059,13 +5628,13 @@ Y_{ict}=\text{firm}\times\text{cohort FE}+\text{cohort}\times\text{industry}\tim
 <figure class="latex-table figure" style="overflow-x:auto;">
 <img alt="Failure and Opinion Decomposition: Matched Weighted" class="figure-img" loading="lazy" src="tables/big4_regression_columns/decomposition_matched_weighted_p01.png" style="width:703px;max-width:none;height:auto;display:block;"/>
 <figcaption>
-Failure and Opinion Decomposition: Matched Weighted
+Failure and Opinion Decomposition: Matched Weighted ·  · 
 </figcaption>
 </figure>
 <figure class="latex-table figure" style="overflow-x:auto;">
 <img alt="Failure and Opinion Decomposition: Matched Weighted" class="figure-img" loading="lazy" src="tables/big4_regression_columns/decomposition_matched_weighted_p02.png" style="width:703px;max-width:none;height:auto;display:block;"/>
 <figcaption>
-Failure and Opinion Decomposition: Matched Weighted
+Failure and Opinion Decomposition: Matched Weighted ·  · 
 </figcaption>
 </figure>
 <details>
@@ -3075,32 +5644,32 @@ Failure and Opinion Decomposition: Matched Weighted
 <figure class="latex-table figure" style="overflow-x:auto;">
 <img alt="Failure and Opinion Decomposition: Unmatched" class="figure-img" loading="lazy" src="tables/big4_regression_columns/decomposition_unmatched_p01.png" style="width:703px;max-width:none;height:auto;display:block;"/>
 <figcaption>
-Failure and Opinion Decomposition: Unmatched
+Failure and Opinion Decomposition: Unmatched ·  · 
 </figcaption>
 </figure>
 <figure class="latex-table figure" style="overflow-x:auto;">
 <img alt="Failure and Opinion Decomposition: Unmatched" class="figure-img" loading="lazy" src="tables/big4_regression_columns/decomposition_unmatched_p02.png" style="width:703px;max-width:none;height:auto;display:block;"/>
 <figcaption>
-Failure and Opinion Decomposition: Unmatched
+Failure and Opinion Decomposition: Unmatched ·  · 
 </figcaption>
 </figure>
 <figure class="latex-table figure" style="overflow-x:auto;">
 <img alt="Failure and Opinion Decomposition: Matched Unweighted" class="figure-img" loading="lazy" src="tables/big4_regression_columns/decomposition_matched_unweighted_p01.png" style="width:703px;max-width:none;height:auto;display:block;"/>
 <figcaption>
-Failure and Opinion Decomposition: Matched Unweighted
+Failure and Opinion Decomposition: Matched Unweighted ·  · 
 </figcaption>
 </figure>
 <figure class="latex-table figure" style="overflow-x:auto;">
 <img alt="Failure and Opinion Decomposition: Matched Unweighted" class="figure-img" loading="lazy" src="tables/big4_regression_columns/decomposition_matched_unweighted_p02.png" style="width:703px;max-width:none;height:auto;display:block;"/>
 <figcaption>
-Failure and Opinion Decomposition: Matched Unweighted
+Failure and Opinion Decomposition: Matched Unweighted ·  · 
 </figcaption>
 </figure>
 <p>四格表为最终回归样本中的描述率，前期为 −4 至 −1，后期为 0 至 +4；加权规格使用匹配权重。描述率没有净化固定效应，因此与调整后的 DID 系数分别解读。</p>
 <figure class="latex-table figure" style="overflow-x:auto;">
 <img alt="Fin Restatement and Opinion Cells" class="figure-img" loading="lazy" src="tables/big4_selection_supplement/four_cell_rates.png" style="width:703px;max-width:none;height:auto;display:block;"/>
 <figcaption>
-Fin Restatement and Opinion Cells
+Fin Restatement and Opinion Cells ·  · 
 </figcaption>
 </figure>
 </details>
@@ -3118,13 +5687,13 @@ Fin 重述的事前联合检验在全批次和共有批次中的 p 值分别为 
 <figure class="latex-table figure" style="overflow-x:auto;">
 <img alt="Entry Without Future Retention Restrictions" class="figure-img" loading="lazy" src="tables/big4_regression_columns/entry_without_retention_p01.png" style="width:703px;max-width:none;height:auto;display:block;"/>
 <figcaption>
-Entry Without Future Retention Restrictions
+Entry Without Future Retention Restrictions ·  · 
 </figcaption>
 </figure>
 <figure class="latex-table figure" style="overflow-x:auto;">
 <img alt="Entry Without Future Retention Restrictions" class="figure-img" loading="lazy" src="tables/big4_regression_columns/entry_without_retention_p02.png" style="width:703px;max-width:none;height:auto;display:block;"/>
 <figcaption>
-Entry Without Future Retention Restrictions
+Entry Without Future Retention Restrictions ·  · 
 </figcaption>
 </figure>
 <figure class="chapter-graph figure">
@@ -3279,7 +5848,7 @@ Y_{ict}=\text{firm}\times\text{cohort FE}+\text{cohort}\times\text{industry}\tim
 <figure class="latex-table figure" style="overflow-x:auto;">
 <img alt="Pre-entry Risk-path Matching: Full Samples" class="figure-img" loading="lazy" src="tables/big4_regression_columns/risk_path_own.png" style="width:703px;max-width:none;height:auto;display:block;"/>
 <figcaption>
-Pre-entry Risk-path Matching: Full Samples
+Pre-entry Risk-path Matching: Full Samples ·  · 
 </figcaption>
 </figure>
 <figure class="chapter-graph figure">
@@ -3301,7 +5870,7 @@ Fin unwarned any failure: PSM-DID with pre-entry risk paths
 <figure class="latex-table figure" style="overflow-x:auto;">
 <img alt="Pre-entry Risk-path Matching: Sample Intersection" class="figure-img" loading="lazy" src="tables/big4_regression_columns/risk_path_common.png" style="width:703px;max-width:none;height:auto;display:block;"/>
 <figcaption>
-Pre-entry Risk-path Matching: Sample Intersection
+Pre-entry Risk-path Matching: Sample Intersection ·  · 
 </figcaption>
 </figure>
 <figure class="chapter-graph figure">
@@ -3391,7 +5960,7 @@ Y_{ict}=\text{firm}\times\text{cohort FE}+\text{cohort}\times\text{industry}\tim
 <figure class="latex-table figure" style="overflow-x:auto;">
 <img alt="Financial Conditions Around Entry: Common Sample" class="figure-img" loading="lazy" src="tables/big4_selection_supplement/financial_common.png" style="width:703px;max-width:none;height:auto;display:block;"/>
 <figcaption>
-Financial Conditions Around Entry: Common Sample
+Financial Conditions Around Entry: Common Sample ·  · 
 </figcaption>
 </figure>
 <figure class="chapter-graph figure">
@@ -3425,7 +5994,7 @@ Loss: weighted PSM-DID
 <figure class="latex-table figure" style="overflow-x:auto;">
 <img alt="Financial Conditions Around Entry: Outcome-specific Samples" class="figure-img" loading="lazy" src="tables/big4_selection_supplement/financial_own.png" style="width:703px;max-width:none;height:auto;display:block;"/>
 <figcaption>
-Financial Conditions Around Entry: Outcome-specific Samples
+Financial Conditions Around Entry: Outcome-specific Samples ·  · 
 </figcaption>
 </figure>
 <figure class="chapter-graph figure">
@@ -3543,7 +6112,7 @@ Loss: Unweighted PSM-DID
 <figure class="latex-table figure" id="latex-table-19">
 <img alt="Table 19: TWFE Event Study of Big 4 Switching" class="figure-img" loading="lazy" src="tables/big4_effect_latex/18_eventstudy_twfe_full.png"/>
 <figcaption>
-Table 19: TWFE Event Study of Big 4 Switching
+Table 19: TWFE Event Study of Big 4 Switching ·  · 
 </figcaption>
 </figure>
 <p><strong>Sun &amp; Abraham (2021) 异质性稳健估计</strong></p>
@@ -3581,7 +6150,7 @@ Table 19: TWFE Event Study of Big 4 Switching
 <figure class="latex-table figure" id="latex-table-20">
 <img alt="Table 20: Sun–Abraham Event Study of Big 4 Switching" class="figure-img" loading="lazy" src="tables/big4_effect_latex/19_eventstudy_sun_abraham_full.png"/>
 <figcaption>
-Table 20: Sun–Abraham Event Study of Big 4 Switching
+Table 20: Sun–Abraham Event Study of Big 4 Switching ·  · 
 </figcaption>
 </figure>
 <p><strong>Callaway &amp; Sant’Anna (2021) CS-DID 估计</strong></p>
@@ -3619,7 +6188,7 @@ Table 20: Sun–Abraham Event Study of Big 4 Switching
 <figure class="latex-table figure" id="latex-table-24">
 <img alt="Table 24: Callaway–Sant’Anna Event-Study Summary" class="figure-img" loading="lazy" src="tables/big4_effect_latex/23_eventstudy_csdid_summary_full.png"/>
 <figcaption>
-Table 24: Callaway–Sant’Anna Event-Study Summary
+Table 24: Callaway–Sant’Anna Event-Study Summary ·  · 
 </figcaption>
 </figure>
 <p><strong>de Chaisemartin &amp; D’Haultfœuille (2020) 估计</strong></p>
@@ -3656,7 +6225,7 @@ Table 24: Callaway–Sant’Anna Event-Study Summary
 <figure class="latex-table figure" id="latex-table-21">
 <img alt="Table 21: de Chaisemartin–D’Haultfoeuille Event Study of Big 4 Switching" class="figure-img" loading="lazy" src="tables/big4_effect_latex/20_eventstudy_dcdh_full.png"/>
 <figcaption>
-Table 21: de Chaisemartin–D’Haultfoeuille Event Study of Big 4 Switching
+Table 21: de Chaisemartin–D’Haultfoeuille Event Study of Big 4 Switching ·  · 
 </figcaption>
 </figure>
 <p><strong>堆叠事件研究（Stacked DID）与稳健性检验</strong></p>
@@ -3678,7 +6247,7 @@ Table 21: de Chaisemartin–D’Haultfoeuille Event Study of Big 4 Switching
 <figure class="latex-table figure" id="latex-table-22">
 <img alt="Table 22: Stacked Event Study of Switching into Big 4" class="figure-img" loading="lazy" src="tables/big4_effect_latex/21_eventstudy_stacked_full.png"/>
 <figcaption>
-Table 22: Stacked Event Study of Switching into Big 4
+Table 22: Stacked Event Study of Switching into Big 4 ·  · 
 </figcaption>
 </figure>
 <p>在按市值加权或排除低市值对照公司后，估计结果依然未见显著下降：</p>
@@ -3715,7 +6284,7 @@ Table 22: Stacked Event Study of Switching into Big 4
 <figure class="latex-table figure" id="latex-table-23">
 <img alt="Table 23: Event-Study Robustness for Switching into Big 4" class="figure-img" loading="lazy" src="tables/big4_effect_latex/22_eventstudy_robustness_full.png"/>
 <figcaption>
-Table 23: Event-Study Robustness for Switching into Big 4
+Table 23: Event-Study Robustness for Switching into Big 4 ·  · 
 </figcaption>
 </figure>
 </details>
@@ -3734,19 +6303,19 @@ Y_{it}=\text{firm FE}+\text{industry}\times\text{year FE}+\tau DID_{it}+\gamma'X
 <figure class="latex-table figure" style="overflow-x:auto;">
 <img alt="Big 4 Auditors, Audit Fees, and Market Value" class="figure-img" loading="lazy" src="tables/big4_regression_columns/14_audit_fees_and_valuation_full_p01.png" style="width:703px;max-width:none;height:auto;display:block;"/>
 <figcaption>
-Big 4 Auditors, Audit Fees, and Market Value
+Big 4 Auditors, Audit Fees, and Market Value ·  · 
 </figcaption>
 </figure>
 <figure class="latex-table figure" style="overflow-x:auto;">
 <img alt="Big 4 Auditors, Audit Fees, and Market Value" class="figure-img" loading="lazy" src="tables/big4_regression_columns/14_audit_fees_and_valuation_full_p02.png" style="width:703px;max-width:none;height:auto;display:block;"/>
 <figcaption>
-Big 4 Auditors, Audit Fees, and Market Value
+Big 4 Auditors, Audit Fees, and Market Value ·  · 
 </figcaption>
 </figure>
 <figure class="latex-table figure" style="overflow-x:auto;">
 <img alt="Big 4 Auditors, Audit Fees, and Market Value" class="figure-img" loading="lazy" src="tables/big4_regression_columns/14_audit_fees_and_valuation_full_p03.png" style="width:703px;max-width:none;height:auto;display:block;"/>
 <figcaption>
-Big 4 Auditors, Audit Fees, and Market Value
+Big 4 Auditors, Audit Fees, and Market Value ·  · 
 </figcaption>
 </figure>
 <p>本节进一步考察盈余质量、监管门槛操纵与失败严重程度等替代口径。</p>
@@ -3761,19 +6330,19 @@ EQ_{it}=\text{firm FE}+\text{industry}\times\text{year FE}+\tau DID_{it}+\gamma'
 <figure class="latex-table figure" style="overflow-x:auto;">
 <img alt="Big 4 Auditors and Earnings Quality" class="figure-img" loading="lazy" src="tables/big4_regression_columns/13_earnings_quality_full_p01.png" style="width:703px;max-width:none;height:auto;display:block;"/>
 <figcaption>
-Big 4 Auditors and Earnings Quality
+Big 4 Auditors and Earnings Quality ·  · 
 </figcaption>
 </figure>
 <figure class="latex-table figure" style="overflow-x:auto;">
 <img alt="Big 4 Auditors and Earnings Quality" class="figure-img" loading="lazy" src="tables/big4_regression_columns/13_earnings_quality_full_p02.png" style="width:703px;max-width:none;height:auto;display:block;"/>
 <figcaption>
-Big 4 Auditors and Earnings Quality
+Big 4 Auditors and Earnings Quality ·  · 
 </figcaption>
 </figure>
 <figure class="latex-table figure" style="overflow-x:auto;">
 <img alt="Big 4 Auditors and Earnings Quality" class="figure-img" loading="lazy" src="tables/big4_regression_columns/13_earnings_quality_full_p03.png" style="width:703px;max-width:none;height:auto;display:block;"/>
 <figcaption>
-Big 4 Auditors and Earnings Quality
+Big 4 Auditors and Earnings Quality ·  · 
 </figcaption>
 </figure>
 </section>
@@ -3791,25 +6360,25 @@ EQ_{it}&amp;=FE+\beta Big4_{it}+\delta R_{it}+\theta(Big4_{it}\times R_{it})+\ga
 <figure class="latex-table figure" id="latex-table-15">
 <img alt="Table 15: Big 4 Auditors and ROE Threshold Indicators" class="figure-img" loading="lazy" src="tables/big4_effect_latex/15_roe_threshold_bunching_full.png"/>
 <figcaption>
-Table 15: Big 4 Auditors and ROE Threshold Indicators
+Table 15: Big 4 Auditors and ROE Threshold Indicators ·  · 
 </figcaption>
 </figure>
 <figure class="latex-table figure" id="latex-table-16">
 <img alt="Table 16: ROE Thresholds, Big 4 Auditors, and Earnings Management" class="figure-img" loading="lazy" src="tables/big4_effect_latex/16_roe_threshold_earnings_full.png"/>
 <figcaption>
-Table 16: ROE Thresholds, Big 4 Auditors, and Earnings Management
+Table 16: ROE Thresholds, Big 4 Auditors, and Earnings Management ·  · 
 </figcaption>
 </figure>
 <figure class="latex-table figure" id="latex-table-17">
 <img alt="Table 17: Big 4 Auditors and Components of Real Earnings Management" class="figure-img" loading="lazy" src="tables/big4_effect_latex/17_roe_threshold_rem_components_full_p01.png"/>
 <figcaption>
-Table 17: Big 4 Auditors and Components of Real Earnings Management
+Table 17: Big 4 Auditors and Components of Real Earnings Management ·  · 
 </figcaption>
 </figure>
 <figure class="latex-table figure" id="latex-table-18">
 <img alt="Table 18: Big 4 Auditors and Inventory Impairment" class="figure-img" loading="lazy" src="tables/big4_effect_latex/17_roe_threshold_rem_components_full_p02.png"/>
 <figcaption>
-Table 18: Big 4 Auditors and Inventory Impairment
+Table 18: Big 4 Auditors and Inventory Impairment ·  · 
 </figcaption>
 </figure>
 </section>
@@ -3824,37 +6393,37 @@ Severity_{it}=\text{firm FE}+\text{industry}\times\text{year FE}+\beta Big4_{it}
 <figure class="latex-table figure" style="overflow-x:auto;">
 <img alt="Big 4 Auditors and Indicators of Unwarned Failure Severity" class="figure-img" loading="lazy" src="tables/big4_regression_columns/04_failure_severity_indicators_full_p01.png" style="width:703px;max-width:none;height:auto;display:block;"/>
 <figcaption>
-Big 4 Auditors and Indicators of Unwarned Failure Severity
+Big 4 Auditors and Indicators of Unwarned Failure Severity ·  · 
 </figcaption>
 </figure>
 <figure class="latex-table figure" style="overflow-x:auto;">
 <img alt="Big 4 Auditors and Indicators of Unwarned Failure Severity" class="figure-img" loading="lazy" src="tables/big4_regression_columns/04_failure_severity_indicators_full_p02.png" style="width:703px;max-width:none;height:auto;display:block;"/>
 <figcaption>
-Big 4 Auditors and Indicators of Unwarned Failure Severity
+Big 4 Auditors and Indicators of Unwarned Failure Severity ·  · 
 </figcaption>
 </figure>
 <figure class="latex-table figure" style="overflow-x:auto;">
 <img alt="Big 4 Auditors and Indicators of Unwarned Failure Severity" class="figure-img" loading="lazy" src="tables/big4_regression_columns/04_failure_severity_indicators_full_p03.png" style="width:703px;max-width:none;height:auto;display:block;"/>
 <figcaption>
-Big 4 Auditors and Indicators of Unwarned Failure Severity
+Big 4 Auditors and Indicators of Unwarned Failure Severity ·  · 
 </figcaption>
 </figure>
 <figure class="latex-table figure" style="overflow-x:auto;">
 <img alt="Big 4 Auditors and Log Magnitudes of Unwarned Failures" class="figure-img" loading="lazy" src="tables/big4_regression_columns/05_failure_severity_magnitudes_full_p01.png" style="width:703px;max-width:none;height:auto;display:block;"/>
 <figcaption>
-Big 4 Auditors and Log Magnitudes of Unwarned Failures
+Big 4 Auditors and Log Magnitudes of Unwarned Failures ·  · 
 </figcaption>
 </figure>
 <figure class="latex-table figure" style="overflow-x:auto;">
 <img alt="Big 4 Auditors and Log Magnitudes of Unwarned Failures" class="figure-img" loading="lazy" src="tables/big4_regression_columns/05_failure_severity_magnitudes_full_p02.png" style="width:703px;max-width:none;height:auto;display:block;"/>
 <figcaption>
-Big 4 Auditors and Log Magnitudes of Unwarned Failures
+Big 4 Auditors and Log Magnitudes of Unwarned Failures ·  · 
 </figcaption>
 </figure>
 <figure class="latex-table figure" style="overflow-x:auto;">
 <img alt="Big 4 Auditors and Log Magnitudes of Unwarned Failures" class="figure-img" loading="lazy" src="tables/big4_regression_columns/05_failure_severity_magnitudes_full_p03.png" style="width:703px;max-width:none;height:auto;display:block;"/>
 <figcaption>
-Big 4 Auditors and Log Magnitudes of Unwarned Failures
+Big 4 Auditors and Log Magnitudes of Unwarned Failures ·  · 
 </figcaption>
 </figure>
 <figure class="chapter-graph figure">
@@ -3879,19 +6448,19 @@ Y_{it}=\text{firm FE}+\text{industry}\times\text{year FE}+\tau DID_{it}+\gamma'X
 <figure class="latex-table figure" style="overflow-x:auto;">
 <img alt="Switching Big 4 Auditors and Unwarned Failures: Subsamples" class="figure-img" loading="lazy" src="tables/big4_regression_columns/06_failure_subsamples_full_p01.png" style="width:703px;max-width:none;height:auto;display:block;"/>
 <figcaption>
-Switching Big 4 Auditors and Unwarned Failures: Subsamples
+Switching Big 4 Auditors and Unwarned Failures: Subsamples ·  · 
 </figcaption>
 </figure>
 <figure class="latex-table figure" style="overflow-x:auto;">
 <img alt="Switching Big 4 Auditors and Unwarned Failures: Subsamples" class="figure-img" loading="lazy" src="tables/big4_regression_columns/06_failure_subsamples_full_p02.png" style="width:703px;max-width:none;height:auto;display:block;"/>
 <figcaption>
-Switching Big 4 Auditors and Unwarned Failures: Subsamples
+Switching Big 4 Auditors and Unwarned Failures: Subsamples ·  · 
 </figcaption>
 </figure>
 <figure class="latex-table figure" style="overflow-x:auto;">
 <img alt="Switching Big 4 Auditors and Unwarned Failures: Subsamples" class="figure-img" loading="lazy" src="tables/big4_regression_columns/06_failure_subsamples_full_p03.png" style="width:703px;max-width:none;height:auto;display:block;"/>
 <figcaption>
-Switching Big 4 Auditors and Unwarned Failures: Subsamples
+Switching Big 4 Auditors and Unwarned Failures: Subsamples ·  · 
 </figcaption>
 </figure>
 </section>
@@ -4004,7 +6573,7 @@ Y_{it} &amp;= \beta_k Big4_{it}+C_{it}'\theta_k+\text{firm FE}+\text{industry ×
 <figure class="latex-table figure" style="overflow-x:auto;">
 <img alt="Supply-chain Exposure: First Stage" class="figure-img" loading="lazy" src="tables/big4_regression_columns/supplychain_first_stage.png" style="width:703px;max-width:none;height:auto;display:block;"/>
 <figcaption>
-Supply-chain Exposure: First Stage
+Supply-chain Exposure: First Stage ·  · 
 </figcaption>
 </figure>
 </div>
@@ -4017,13 +6586,13 @@ Supply-chain Exposure: First Stage
 <figure class="latex-table figure" style="overflow-x:auto;">
 <img alt="Supply-chain Exposure: Reduced Form Iv" class="figure-img" loading="lazy" src="tables/big4_regression_columns/supplychain_reduced_form_iv_p01.png" style="width:703px;max-width:none;height:auto;display:block;"/>
 <figcaption>
-Supply-chain Exposure: Reduced Form Iv
+Supply-chain Exposure: Reduced Form Iv ·  · 
 </figcaption>
 </figure>
 <figure class="latex-table figure" style="overflow-x:auto;">
 <img alt="Supply-chain Exposure: Reduced Form Iv" class="figure-img" loading="lazy" src="tables/big4_regression_columns/supplychain_reduced_form_iv_p02.png" style="width:703px;max-width:none;height:auto;display:block;"/>
 <figcaption>
-Supply-chain Exposure: Reduced Form Iv
+Supply-chain Exposure: Reduced Form Iv ·  · 
 </figcaption>
 </figure>
 </div>
@@ -4037,7 +6606,7 @@ Supply-chain Exposure: Reduced Form Iv
 <figure class="latex-table figure" style="overflow-x:auto;">
 <img alt="Supply-chain Exposure: Ols" class="figure-img" loading="lazy" src="tables/big4_regression_columns/supplychain_ols.png" style="width:703px;max-width:none;height:auto;display:block;"/>
 <figcaption>
-Supply-chain Exposure: Ols
+Supply-chain Exposure: Ols ·  · 
 </figcaption>
 </figure>
 </details>
@@ -4070,7 +6639,7 @@ Y_{it}=\beta\widehat{Big4}_{it}+C_{it}'\eta+\text{firm FE}+\text{industry × yea
 <figure class="latex-table figure" style="overflow-x:auto;">
 <img alt="EY–Dahua: first stage, DID and IV audit outcomes" class="figure-img" loading="lazy" src="tables/ey_dahua_causal/ey_dahua_audit_outcomes.png" style="width:668px;max-width:none;height:auto;display:block;"/>
 <figcaption>
-安永—大华：审计结果、第一阶段与识别诊断
+安永—大华：审计结果、第一阶段与识别诊断 ·  · 
 </figcaption>
 </figure>
 <p><strong>结果含义。</strong> 事前46家大华客户中35家下一财年记录为安永大华；采用事前名单避免按实际承接结果筛选处理组。第一阶段较强，但失败结果不显著且综合失败存在事前趋势，因而这次收购未提供清楚的质量改善证据。中国可用背景集中于安永—大华单一事件，难以区分事件特有变化与普遍四大作用。收购匹配版的倾向得分模型未收敛，未纳入结果。</p>
@@ -4089,13 +6658,13 @@ Y_{pct}=\text{relationship × cohort FE}+\text{cohort × industry × year FE}
 <figure class="latex-table figure" style="overflow-x:auto;">
 <img alt="同一人员—客户：四大平台转入DID" class="figure-img" loading="lazy" src="tables/monday_existing_results/same_partner_did.png" style="width:703px;max-width:none;height:auto;display:block;"/>
 <figcaption>
-同一人员—客户：四大平台转入DID
+同一人员—客户：四大平台转入DID ·  · 
 </figcaption>
 </figure>
 <figure class="latex-table figure" style="overflow-x:auto;">
 <img alt="同一人员—客户：匹配加权DID" class="figure-img" loading="lazy" src="tables/monday_existing_results/same_partner_psm_did.png" style="width:703px;max-width:none;height:auto;display:block;"/>
 <figcaption>
-同一人员—客户：匹配加权DID
+同一人员—客户：匹配加权DID ·  · 
 </figcaption>
 </figure>
 </section>
@@ -4337,13 +6906,13 @@ Y_{it}&amp;=\text{firm FE}+\text{industry × year FE}+b_3Big4_{it}+X'_{it}\gamma
 <figure class="latex-table figure" style="overflow-x:auto;">
 <img alt="Big 4 Client Differences on a Common Sample" class="figure-img" loading="lazy" src="tables/big4_regression_columns/failure_level_nested_p01.png" style="width:703px;max-width:none;height:auto;display:block;"/>
 <figcaption>
-Big 4 Client Differences on a Common Sample
+Big 4 Client Differences on a Common Sample ·  · 
 </figcaption>
 </figure>
 <figure class="latex-table figure" style="overflow-x:auto;">
 <img alt="Big 4 Client Differences on a Common Sample" class="figure-img" loading="lazy" src="tables/big4_regression_columns/failure_level_nested_p02.png" style="width:703px;max-width:none;height:auto;display:block;"/>
 <figcaption>
-Big 4 Client Differences on a Common Sample
+Big 4 Client Differences on a Common Sample ·  · 
 </figcaption>
 </figure>
 <p><strong>回归结果含义。</strong> 同一有效样本中的四大未预警失败较少，说明公共特征调整后仍保留质量梯度；下一步检查这些差异是否在进入前已经存在。</p>
@@ -4360,7 +6929,7 @@ Y_{i,c-1}-Y_{i,c-3}=\mu+u_i.
 <figure class="latex-table figure" style="overflow-x:auto;">
 <img alt="Characteristics Before First Qualifying Big 4 Entry" class="figure-img" loading="lazy" src="tables/big4_evidence/pre_entry_characteristics.png" style="width:540px;max-width:none;height:auto;display:block;"/>
 <figcaption>
-Characteristics Before First Qualifying Big 4 Entry
+Characteristics Before First Qualifying Big 4 Entry ·  · 
 </figcaption>
 </figure>
 <figure class="chapter-graph figure">
@@ -4383,7 +6952,7 @@ Characteristics Before First Qualifying Big 4 Entry
 <figure class="latex-table figure" style="overflow-x:auto;">
 <img alt="Annual Client Matching: Five and Nine Selection Controls" class="figure-img" loading="lazy" src="tables/big4_regression_columns/annual_client_psm.png" style="width:703px;max-width:none;height:auto;display:block;"/>
 <figcaption>
-Annual Client Matching: Five and Nine Selection Controls
+Annual Client Matching: Five and Nine Selection Controls ·  · 
 </figcaption>
 </figure>
 </section>
@@ -4401,7 +6970,7 @@ Transition_{i,t+1}=\text{firm FE}+\text{industry}\times\text{year FE}+\beta Sign
 <figure class="latex-table figure" style="overflow-x:auto;">
 <img alt="Audit Opinions and Next-Year Big 4 Client Transitions" class="figure-img" loading="lazy" src="tables/big4_regression_columns/client_flows.png" style="width:703px;max-width:none;height:auto;display:block;"/>
 <figcaption>
-Audit Opinions and Next-Year Big 4 Client Transitions
+Audit Opinions and Next-Year Big 4 Client Transitions ·  · 
 </figcaption>
 </figure>
 <details>
@@ -4425,31 +6994,31 @@ Audit Opinions and Next-Year Big 4 Client Transitions
 <figure class="latex-table figure" style="overflow-x:auto;">
 <img alt="Table M1, Panel A" class="figure-img" loading="lazy" src="tables/big4_mechanism/client_selection_opinion_mechanism_full_p01.png"/>
 <figcaption>
-Table M1, Panel A
+Table M1, Panel A ·  · 
 </figcaption>
 </figure>
 <figure class="latex-table figure" style="overflow-x:auto;">
 <img alt="Table M1, Panel B" class="figure-img" loading="lazy" src="tables/big4_mechanism/client_selection_opinion_mechanism_full_p02.png"/>
 <figcaption>
-Table M1, Panel B
+Table M1, Panel B ·  · 
 </figcaption>
 </figure>
 <figure class="latex-table figure" style="overflow-x:auto;">
 <img alt="Table M1, Panel C" class="figure-img" loading="lazy" src="tables/big4_mechanism/client_selection_opinion_mechanism_full_p03.png"/>
 <figcaption>
-Table M1, Panel C
+Table M1, Panel C ·  · 
 </figcaption>
 </figure>
 <figure class="latex-table figure" style="overflow-x:auto;">
 <img alt="Table M1, Panel D" class="figure-img" loading="lazy" src="tables/big4_mechanism/client_selection_opinion_mechanism_full_p04.png"/>
 <figcaption>
-Table M1, Panel D
+Table M1, Panel D ·  · 
 </figcaption>
 </figure>
 <figure class="latex-table figure" style="overflow-x:auto;">
 <img alt="Table M1, Panel E" class="figure-img" loading="lazy" src="tables/big4_mechanism/client_selection_opinion_mechanism_full_p05.png"/>
 <figcaption>
-Table M1, Panel E
+Table M1, Panel E ·  · 
 </figcaption>
 </figure>
 <p><span id="full-12_big4_effect-3"></span> <span id="certification-story"></span> <span id="certification-market"></span> <span id="certification-tests"></span></p>
@@ -4476,7 +7045,7 @@ H^m_{it}=\text{firm FE}+\text{industry × year FE}+\beta_m Enter_{i,t+1}
 <figure class="latex-table figure" style="overflow-x:auto;">
 <img alt="未来进入四大与后来暴露的历史财报问题" class="figure-img" loading="lazy" src="tables/monday_existing_results/selection_historical.png" style="width:703px;max-width:none;height:auto;display:block;"/>
 <figcaption>
-未来进入四大与后来暴露的历史财报问题
+未来进入四大与后来暴露的历史财报问题 ·  · 
 </figcaption>
 </figure>
 </section>
@@ -4490,7 +7059,7 @@ L^m_{it}=\text{firm FE}+\text{industry × year FE}+b_m Big4_{it}+d_m M_{it}
 <figure class="latex-table figure" style="overflow-x:auto;">
 <img alt="MAO／GC：三年后续披露关系及组间交互检验" class="figure-img" loading="lazy" src="tables/monday_existing_results/selection_warning_prediction.png" style="width:703px;max-width:none;height:auto;display:block;"/>
 <figcaption>
-MAO／GC：三年后续披露关系及组间交互检验
+MAO／GC：三年后续披露关系及组间交互检验 ·  · 
 </figcaption>
 </figure>
 </section>
@@ -4509,7 +7078,7 @@ Y^m_{it}=\text{firm FE}+\text{industry × year FE}+b_m Exit_{i,t+1}+d_mM_{it}
 <figure class="latex-table figure" style="overflow-x:auto;">
 <img alt="当前四大客户：退出−留任的风险差异" class="figure-img" loading="lazy" src="tables/monday_existing_results/selection_exit_risk.png" style="width:703px;max-width:none;height:auto;display:block;"/>
 <figcaption>
-当前四大客户：退出−留任的风险差异
+当前四大客户：退出−留任的风险差异 ·  · 
 </figcaption>
 </figure>
 <p>完整来源：侧检验说明 · 历史选择CSV · 意见关系CSV · 退出风险CSV。</p>
@@ -4526,19 +7095,13 @@ Y^m_{it}=\text{firm FE}+\text{industry × year FE}+b_m Exit_{i,t+1}+d_mM_{it}
 <p>第一部分已经展示市场事实；这里集中问客户调整后差异是否保留，以及是否存在独立声誉或身份变化的证据。市场反应差异可能来自服务、声誉和筛选，本节通过匹配与事件检验分别考察这些来源。</p>
 <section class="level3" id="market-psm-erc">
 <h3 class="anchored" data-anchor-id="market-psm-erc">4.1 客户匹配后的 ERC：PSM＋匹配加权回归</h3>
-<p><strong>四大的 ERC 优势在这套可观察客户特征匹配后仍然存在。</strong> 三个 CAR 窗口的四大−非四大斜率差分别为 <strong>0.144033、0.198599、0.189861</strong>，公司聚类标准误分别为0.040925、0.052374、0.050325，p值分别为0.000458、0.000161、0.000174。它们衡量同样盈利消息对应的反应斜率差，样本同时包含好消息与坏消息，系数衡量完整消息样本的ERC差异。</p>
+<p><strong>匹配加权ERC更新。</strong> car_m1_p1：0.144427（SE=0.040920，p=0.0004）；car_m2_p2：0.199523（SE=0.052339，p=0.0001）；car_m3_p3：0.190738（SE=0.050244，p=0.0002）。使用完整正负消息样本，系数仍是消息斜率差。</p>
 <p><strong>加权ERC方程。</strong></p>
 <p><span class="math display">\[
 CAR_{it}^{(w)}=\text{firm FE}+\text{year FE}+\delta Big4_{it}+\beta UE_{it}+\theta_w(Big4_{it}\times UE_{it})+\gamma'X_{it}+\varepsilon_{it}.
 \]</span></p>
 <p><span class="math inline">\(UE=(EPS_{actual}-EPS_{forecast})/P_{-1}\)</span>，预测为公告前180天中位数；<span class="math inline">\(w\)</span>依次为[−1,+1]、[−2,+2]、[−3,+3]，Y为市场调整CAR。<span class="math inline">\(X\)</span>包含市值对数、MB及预测覆盖对数，以匹配权重估计，按公司聚类。</p>
 <p><strong>做法。</strong> 将前文审计结果年度客户 PSM 的匹配步骤扩展到市场样本：以当年四大身份为处理状态，非四大合并本土八大与Other，Logit包含规模、杠杆、亏损、ROA、Z-score、杠杆变化、报告时滞、经营现金流、年龄及原始<code>mis_dummy</code>，并加入行业与年份预测项。沿用按年份中位数、必要时全样本中位数插补的规则；采用1:1最近邻、有放回、无卡尺，并列匹配分摊权重。行业和年份进入Logit，<strong>不是行业×年份内精确匹配</strong>。四大事件权重为1，对照权重为被选中的累计匹配份额。匹配后用这些权重估计本节加权ERC方程，保留公司与财年固定效应、原三项控制和公司聚类；不缩尾。</p>
-<figure class="latex-table figure" style="overflow-x:auto;">
-<img alt="客户匹配前后的四大盈余反应系数" class="figure-img" loading="lazy" src="tables/psm_erc/erc_client_matching.png" style="width:703px;max-width:none;height:auto;display:block;"/>
-<figcaption>
-客户匹配前后的四大−非四大 ERC 斜率差。括号为公司聚类标准误；保留原单位，星号按未四舍五入的p值标注。
-</figcaption>
-</figure>
 <p><strong>样本。</strong> 三个CAR窗口、UE和三项ERC控制共同有效的候选样本为30,319个事件。排除552条所在行业没有四大客户的非四大事件，以及12条经营现金流缺失状态没有四大对应观测的非四大事件后，进入匹配29,755条，全部四大候选事件保留。未匹配列采用同样的支持筛选。</p>
 <table class="caption-top table">
 <thead>
@@ -4577,7 +7140,7 @@ CAR_{it}^{(w)}=\text{firm FE}+\text{year FE}+\delta Big4_{it}+\beta UE_{it}+\the
 </tbody>
 </table>
 <p>三个窗口在每套规格内使用完全相同的事件。匹配加权回归包含774家公司；对照事件权重ESS为95.43，反映重复使用导致的权重集中，按权重折算的对照有效观测数。最终回归样本的多项特征差异明显缩小：杠杆SMD由0.424降至0.044、ROA由−0.152变为0.026、对数预测数量由0.556变为−0.012；但年龄0.196、报告时滞−0.170、Z-score<code>mis_dummy</code>0.187、对数市值−0.183仍有差异，匹配后仍有残留差异。</p>
-<p><strong>结果含义。</strong> 客户特征匹配后，四大的ERC优势在三个公告窗口均保留，支持市场赋予四大客户盈利消息更高权重的事实。匹配样本及权重与未匹配列不同，系数变化同时反映比较对象变化；目前仍有部分特征不平衡，标准误未计入第一步匹配的不确定性。服务、声誉与筛选信号的分解仍依赖进一步识别。</p>
+<p><strong>结果含义。</strong> 匹配加权后的方向和显著性按上表分别判断。匹配调整可观察客户特征，不能将交互系数直接解释为独立的审计服务或声誉效应；第一步匹配的不确定性未计入标准误。</p>
 <p>完整材料：结果CSV · 样本覆盖 · 最终样本平衡 · do-file · 完成日志。</p>
 <p><strong>匹配后回归方程。</strong> 使用 <a class="quarto-xref" href="#eq-big4-erc">式 9</a> 的完整主项和交互，保留公司／财年FE、三项控制与公司聚类，回归按固定匹配权重<span class="math inline">\(w_{it}\)</span>最小化</p>
 <p><span id="eq-big4-weighted-erc"><span class="math display">\[
@@ -4601,7 +7164,7 @@ CAR_i^{[0,2]}=\sum_{d\in\{1/11,1/14,1/15\}}(r_{id}-r_{md}).
 <figure class="latex-table figure" style="overflow-x:auto;">
 <img alt="安达信声誉消息：中国[0,+2]三组CAR比较" class="figure-img" loading="lazy" src="tables/monday_existing_results/andersen_jan2002.png" style="width:703px;max-width:none;height:auto;display:block;"/>
 <figcaption>
-安达信声誉消息：中国[0,+2]三组CAR比较
+安达信声誉消息：中国[0,+2]三组CAR比较 ·  · 
 </figcaption>
 </figure>
 <details id="andersen-additional-results">
@@ -4614,7 +7177,7 @@ CAR_i^{[0,2]}=\sum_{d\in\{1/11,1/14,1/15\}}(r_{id}-r_{md}).
 <figure class="latex-table figure" style="overflow-x:auto;">
 <img alt="安然重述消息窗口：并集及境内／境外客户" class="figure-img" loading="lazy" src="tables/monday_existing_results/andersen_nov2001.png" style="width:703px;max-width:none;height:auto;display:block;"/>
 <figcaption>
-安然重述消息窗口：并集及境内／境外客户
+安然重述消息窗口：并集及境内／境外客户 ·  · 
 </figcaption>
 </figure>
 <p>31家安达信A股客户的180日分析师预测全部缺失，真正的分析师surprise ERC无法估计。既有替代检验使用</p>
@@ -4623,16 +7186,16 @@ UE_i=\frac{EPS_{2001}-EPS_{2000}}{P_{公告前}},\quad
 CAR_i=a+\delta_A A_i+\delta_B Big4_i+\beta UE_i
 +\theta_A A_iUE_i+\theta_B Big4_iUE_i+\text{industry FE}+e_i.
 \tag{24}\]</span></span></p>
-<p>EPS年度差未经额外拆股／重述调整，不等于分析师surprise。年报CAR[-1,+1]要求三日完整，单财年、行业FE版本及无FE版本，公司聚类，没有公司FE。并集ERC有效953家（安达信25、四大34、其他894），境内947家（19、34、894）；安达信相对四大斜率没有显著较低。</p>
+<p>EPS年度差已对核实年度应用本轮原报还原，未核实年度仍保留数据库值，不另作拆股调整；该量不是分析师surprise。年报CAR[−1,+1]仍要求三日完整、按公司聚类。行业FE下，安达信−四大斜率差为：any：0.260661（SE=0.258713，p=0.3139），N=953；domestic：0.206669（SE=0.270094，p=0.4444），N=947。无公司FE。</p>
 <p>年报event study以EPS增加／不变或下降分组，令<span class="math inline">\(T_i=1\{\Delta EPS_i&gt;0\}\)</span>、<span class="math inline">\(A_i^g\)</span>表示安达信／四大／其他组，原受限方程为</p>
 <p><span id="eq-big4-andersen-annual-path"><span class="math display">\[
 \log P_{ik}=\text{firm FE}+\text{event time FE}+\text{trading date FE}
 +\sum_{k\ne-1}\sum_g\beta_{gk}A_i^gT_iD^k+e_{ik}.
 \tag{25}\]</span></span></p>
-<p>窗口−5至+5、−1基期，原方程没有额外组别×事件日低阶项；公司、事件日和实际交易日FE，公司聚类。并集候选925家、实际10,172日记录；境内920家、10,117日记录。四项公告前组间联合检验均显著，事前路径差异限制了因果解释。</p>
+<p>窗口−5至+5、−1基期，原方程不加组别×事件日低阶项；公司、事件日和实际交易日FE，公司聚类。更新后的事前路径联合检验p值为0.0044、0.0443、0.0027、0.0222；与事件期系数同时判断，不能只看公告后的差值。</p>
 <p><strong>共同限制。</strong> 中国首次报道时点和同期公司消息未充分核准；事件后年报名单尚未逐家核准事件日聘任状态；单一共同事件的横截面标准误不能排除共同冲击；消息日CAR与年报ERC回答不同问题。</p>
 <p>来源：主窗口说明 · 境内／境外说明 · 年报ERC CSV · 年报路径CSV。</p>
-<p>处理名单和2002财年服务转入见<a href="#ey-dahua-causal">审计收购设计</a>。市场有效样本中分析师消息处理组事前仅2条事件，交互工具KP F约1.37—1.49；这不是审计质量第一阶段强度。ΔEPS替代消息版本和三个CAR窗口分别保留，未形成稳健的认证因果证据。</p>
+<p>处理名单和2002财年服务转入见<a href="#ey-dahua-causal">审计收购设计</a>。市场分析师消息的IV交互KP F范围为1.37—1.49，年度EPS变化代理版为0.91—0.91；与审计结果的第一阶段诊断分别解释。</p>
 </details>
 </section>
 <section class="level3" id="ey-dahua-market">
@@ -4654,21 +7217,15 @@ X_{k,it}=\pi_{k1}Z_{it}+\pi_{k2}Z_{it}U_{it}+W_{it}'\gamma_k+\text{firm FE}+\tex
 <p><span class="math display">\[
 CAR_{it}^{(w)}=\beta_0\widehat X_{1,it}+\beta_1\widehat X_{2,it}+W_{it}'\eta+\text{firm FE}+\text{year FE}+\varepsilon_{it}.
 \]</span></p>
-<p><strong>主要结果。</strong> 分析师消息版DID交互在两个较宽窗口显著为正，但处理组事前仅2条事件；IV交互不显著，KP F为1.37—1.49。EPS变化代理版的DID与IV交互均不显著，KP F约0.91。这组结果的主要限制是事前市场事件支持及弱工具，未提供稳定的转入后市场认证证据。</p>
+<p><strong>主要结果。</strong> 分析师消息和年度EPS变化代理均按修复后的EPS重算；DID与IV交互的精确结果及KP诊断见更新表。处理组事前分析师消息支持仍很少，不能据个别显著项形成稳定认证因果结论。</p>
 <p>表中“IV: Big4 × earnings news”报告 <span class="math inline">\(\beta_1\)</span>。交互项由它自己的第一阶段预测，不能用 <span class="math inline">\(\widehat{Big4}_{it}\times U_{it}\)</span> 替代。市场表保留原始斜率单位；市场模型按双内生变量计算KP诊断，审计结果模型的42.56则对应另一第一阶段。</p>
-<figure class="latex-table figure" style="overflow-x:auto;">
-<img alt="EY–Dahua: earnings response DID and IV across three CAR windows" class="figure-img" loading="lazy" src="tables/ey_dahua_causal/ey_dahua_market_response.png" style="width:668px;max-width:none;height:auto;display:block;"/>
-<figcaption>
-安永—大华：市场盈利消息反应
-</figcaption>
-</figure>
 </section>
 </section>
 <section class="level2" id="big4-synthesis">
 <h2 class="anchored" data-anchor-id="big4-synthesis">5. 四大的经济作用：服务、声誉与筛选信号</h2>
-<p>四大客户的实际失败率较低，盈利消息获得更强的公告反应，整体ERC较高，好消息后的PEAD较低，同时收费存在明显溢价。解释这些共同事实，需要区分审计服务改善、声誉认证和客户筛选三条作用路径。</p>
+<p>四大客户的实际失败率较低，整体ERC较高，部分短窗好消息反应更强；好消息后的相对累计收益则较低，同时收费存在明显溢价。消息斜率、短期反应和后续收益差分别解释；服务、声誉和客户筛选的区分依赖相应识别。</p>
 <p><strong>审计服务改善财报质量。</strong> 同一客户换入四大后，Fin重述在DID及PSM-DID中下降；扩展窗口的匹配动态结果没有显著事前趋势。实际重述本身也下降，取消未来留任要求后结果保留，按换入前已能观察到的财务状况和风险历史进一步匹配后，完整样本的Fin重述概率下降5.30个百分点（p=0.056）。这些证据共同支持四大对部分财报更正事件的改善作用。改善并未一致扩展到全部传统盈余质量指标；收购和同一人员—客户转入的结果也没有提供全面改善的证据。</p>
-<p><strong>声誉与认证提高市场对盈利消息的反应。</strong> 四大客户整体ERC较高，在可观察客户特征匹配后，三个公告窗口的ERC优势仍显著。短期好消息路径与较低PEAD共同指向消息进入价格的速度：非四大客户的好消息也会被市场消化，但可能需要更长时间。四大声誉可能提供额外认证，不过现有匹配结果仍同时包含服务和筛选；安达信声誉事件及安永—大华市场检验尚未单独识别声誉渠道。</p>
+<p><strong>市场响应与认证解释。</strong> 整体及匹配加权ERC在三个公告窗口均为正且显著，显示四大客户的盈利消息斜率更高。短窗和后续收益差不直接识别消息消化速度。匹配结果仍可能包含服务、声誉及筛选；安达信与安永—大华市场检验尚未单独识别声誉渠道。</p>
 <p><strong>客户筛选也可能创造信息价值。</strong> 未来进入者在规模、亏损和风险上已有差异，MAO与次年退出正相关、与进入负相关，说明客户组合并非随机形成。可观察选择解释了部分质量及市场差异；如果四大接受与留任客户时还利用市场不知道的质量信息，四大身份就能作为良好客户类型的信号，进一步提高市场对财报的信任。现有三年风险检验仅提供部分风险选择支持，尚未直接确认筛选使用了市场未知的信息，因此这条路径是已有选择证据与市场证据之间的机制解释。</p>
 <p><strong>2012年前的模式连接声誉与筛选信号。</strong> 早期好消息反应优势更明显，滚动公告日差异随时间减弱；同期本土八大的市场占比扩大。这与两种解释相容：早期四大的国际声誉认证更强；非四大优质审计替代供给较少，使四大身份所传递的筛选信号更有价值。这一解释主要来自门槛路径和市场结构，连续ERC分期并未呈现相同的统一模式。</p>
 <p><strong>费用溢价贯穿三条路径。</strong> 四大收费更高，而且同一客户换入后收费上升、换出后下降。服务投入、声誉认证和筛选信息都可能解释客户为何愿意支付溢价；当前费用结果确定了价格随四大身份变化，但没有分解三个来源的贡献。</p>
@@ -4831,7 +7388,7 @@ CAR_{it}^{(w)}=\beta_0\widehat X_{1,it}+\beta_1\widehat X_{2,it}+W_{it}'\eta+\te
 <p><strong>供应链IV程序。</strong> run_zero5_channels.do</p>
 </details>
 </section>
-</main> <!-- /main -->
+<p><a href="sources/23_big4_effect.qmd">下载本页 QMD 源文件</a></p></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -4843,7 +7400,7 @@ CAR_{it}^{(w)}=\beta_0\widehat X_{1,it}+\beta_1\widehat X_{2,it}+W_{it}'\eta+\te
     anchorJS.add('.anchored');
     const isCodeAnnotation = (el) => {
       for (const clz of el.classList) {
-        if (clz.startsWith('code-annotation-')) {
+        if (clz.startsWith('code-annotation-')) {                     
           return true;
         }
       }
@@ -4863,11 +7420,11 @@ CAR_{it}^{(w)}=\beta_0\widehat X_{1,it}+\beta_1\widehat X_{2,it}+W_{it}'\eta+\te
         button.setAttribute("data-bs-toggle", "tooltip");
         button.setAttribute("data-bs-placement", "left");
         button.setAttribute("data-bs-title", "已复制");
-        tooltip = new bootstrap.Tooltip(button,
-          { trigger: "manual",
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
             customClass: "code-copy-button-tooltip",
             offset: [0, -8]});
-        tooltip.show();
+        tooltip.show();    
       }
       setTimeout(function() {
         if (tooltip) {
@@ -4944,7 +7501,7 @@ CAR_{it}^{(w)}=\beta_0\widehat X_{1,it}+\beta_1\widehat X_{2,it}+W_{it}'\eta+\te
       if (onUntriggerFn) {
         config.onUntrigger = onUntriggerFn;
       }
-      window.tippy(el, config);
+      window.tippy(el, config); 
     }
     const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
     for (var i=0; i<noterefs.length; i++) {
@@ -5019,7 +7576,7 @@ CAR_{it}^{(w)}=\beta_0\widehat X_{1,it}+\beta_1\widehat X_{2,it}+W_{it}'\eta+\te
       tippyHover(xref, undefined, function(instance) {
         instance.disable();
         let url = xref.getAttribute('href');
-        let hash = undefined;
+        let hash = undefined; 
         if (url.startsWith('#')) {
           hash = url;
         } else {
@@ -5047,7 +7604,7 @@ CAR_{it}^{(w)}=\beta_0\widehat X_{1,it}+\beta_1\widehat X_{2,it}+W_{it}'\eta+\te
               if (note !== null) {
                 const html = processXRef(id, note);
                 instance.setContent(html);
-              }
+              } 
             }).finally(() => {
               instance.enable();
               instance.show();
@@ -5071,7 +7628,7 @@ CAR_{it}^{(w)}=\beta_0\widehat X_{1,it}+\beta_1\widehat X_{2,it}+W_{it}'\eta+\te
               }
               const html = processXRef(null, note);
               instance.setContent(html);
-            }
+            } 
           }).finally(() => {
             instance.enable();
             instance.show();
@@ -5111,7 +7668,7 @@ CAR_{it}^{(w)}=\beta_0\widehat X_{1,it}+\beta_1\widehat X_{2,it}+W_{it}'\eta+\te
               height = bottom - top;
             }
             if (top !== null && height !== null && parent !== null) {
-              // cook up a div (if necessary) and position it
+              // cook up a div (if necessary) and position it 
               let div = window.document.getElementById("code-annotation-line-highlight");
               if (div === null) {
                 div = window.document.createElement("div");

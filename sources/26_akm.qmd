@@ -1,0 +1,234 @@
+---
+title: "AKM"
+css: empirical.css
+body-classes: empirical-report
+---
+
+## 概述
+
+本章以双边固定效应分解描述客户、事务所和审计师之间的异质性，并检查 AKM 的 auditor FE 的识别支持与可迁移性。方差分解显示客户份额较大，审计师份额通常高于事务所；样本拆分与前瞻诊断进一步评估个人固定效应的可靠性。
+
+## 核心结果
+
+**不同观察门槛下，客户差异占据较大的方差份额，审计师份额通常高于事务所。** 未预警综合失败的分解比较不设门槛、3 份／3 年和 5 份／5 年三种样本。观测为公司—年；模型分别吸收客户与事务所、客户与 A1、事务所与 A1，再加年度 FE，按客户聚类。控制规模、杠杆、亏损、ROA、Z-score、杠杆变化、报告时滞、经营现金流、年龄、成长性、市净率、应计项目及缺失dummy。
+
+**回归设定（三个双边模型分别估计）。**
+
+$$
+\begin{aligned}
+Y_{it}&=\alpha_i+\psi_{f(i,t)}+\lambda_t+X_{it}'\gamma+\varepsilon_{it},\\
+Y_{it}&=\alpha_i+\theta_{a(i,t)}+\lambda_t+X_{it}'\gamma+\varepsilon_{it},\\
+Y_{it}&=\psi_{f(i,t)}+\theta_{a(i,t)}+\lambda_t+X_{it}'\gamma+\varepsilon_{it}.
+\end{aligned}
+$$
+
+$Y_{it}$ 为标准无保留意见的审计失败，$\alpha_i$、$\psi_f$、$\theta_a$、$\lambda_t$ 分别为客户、事务所、A1 和年份效应；$X_{it}$ 为上段列明的控制变量与缺失dummy。各模型、门槛使用各自有效样本并按客户聚类。图中呈现各模型拟合成分的插件方差分解，协方差单列。该分解描述样本内异质性，auditor FE 的测量精度及估计误差另在可靠性诊断中检验。
+
+![精选分解：标准无保留意见的审计失败、全部三种样本门槛](figures/akm_overview/akm_pairwise_threshold_any_failure_clean.png){width=100%}
+
+[全部结果变量和门槛](#full-11_akm-4) · [实施、方程与网络](#full-11_akm-2) · [auditor FE 可靠性与前瞻诊断](#full-11_akm-7)
+
+<span id="full-11_akm-1"></span>
+
+
+<span id="settings-11_akm"></span>
+
+
+
+
+<span id="full-11_akm-2"></span>
+
+## 1. 样本构建与网络识别
+
+### 1.1 观测单位与筛选门槛
+
+研究以公司—年度（client-year）为基本观测单位。样本整合上市公司客户（`stock_code`）、会计师事务所（`dom_firm_id`）与首位签字注册会计师（A1，优先采用统一的 `a1_auditor_id`）。仅当客户、事务所、A1 审计师与年度四项标识均有效时，方进入候选网络。
+
+为检验样本选择对异质性识别的影响，设定三档观察门槛：
+1. **全样本（无门槛）**：保留全部有效匹配记录。
+2. **基准样本（3 份／3 年）**：要求审计师在样本期内累计签字不少于 3 份报告且执业跨度不少于 3 个日历年。
+3. **严格样本（5 份／5 年）**：要求签字不少于 5 份报告且执业跨度不少于 5 年。
+
+各规格统一控制常规财务与治理变量：公司规模（`size`）、资产负债率（`lev`）、亏损指示（`loss`）、总资产报酬率（`roa`）、Altman Z-score（`zscore`）、杠杆变动（`chg_lev`）、报告时滞（`report_lag`）、经营现金流（`cfo`）、上市年龄（`age`）、营收增长率（`growth`）、市净率（`mtb`）以及应计项目（`accruals`）。缺失值采用候选网络中位数填补，并加入对应的缺失指示 dummy。
+
+### 1.2 二部网络结构：Mover 与 Stayer
+
+AKM 模型的实体识别依赖于匹配网络中重复连接的流动性（mobility）。以“事务所×审计师”网络为例：
+- **跨所流动者（Mover）**：在不同年份服务于多家事务所的审计师构成网络骨干。Mover 的执业跨越将不同事务所节点连接在同一连通分量内，使事务所固定效应具备跨所相对可比性。
+- **留任者（Stayer）**：始终在单一事务所执业的审计师。Stayer 虽不直接桥接事务所，但只要其所在事务所已被 Mover 接入连通网络，其个人固定效应可在相应归一化下识别；估计精度还取决于个人记录长度。
+
+在 A1 审计师网络中，存在 1,307 名事务所 Mover 与 2,064 名 Stayer。下图汇报了潜在连通样本、不同执业门槛及流动结构的覆盖分布。
+
+<span id="full-11_akm-3"></span>
+
+![](figures/akm_overview/akm_pairwise_sample_coverage.png){fig-alt="A1 审计师的潜在连通样本、不同观察门槛样本及流动结构。" fig-cap="A1 审计师 AKM 样本覆盖与流动结构。" width="100%"}
+
+双边固定效应通过TWFE直接估计，标准误均在客户公司层面聚类。
+
+<span id="full-11_akm-4"></span>
+
+## 2. 双边 AKM 方差分解
+
+沿用加性固定效应框架，对核心结果展示的三个双边模型进行方差分解。对每个估计样本，将拟合成分（客户效应、事务所效应、审计师效应、年份效应及控制变量）的样本方差除以结果变量总方差，计算方差贡献份额（协方差项单独列示）。
+
+### 2.1 3 份／3 年基准方差分解
+
+下表给出基准样本（3 份报告／3 年）下四个结果变量的固定效应方差分解结果。
+
+<figure class="latex-table"><a href="tables/akm/11_akm_summary_01_full.pdf"><img src="tables/akm/11_akm_summary_01_full.png" alt="未预警综合失败的固定效应方差分解" loading="lazy"></a><figcaption>未预警综合失败的固定效应方差分解 · <a href="tables/akm/11_akm_summary_01_full.tex">TeX</a> · <a href="tables/akm/11_akm_summary_01_full.pdf">PDF</a></figcaption></figure>
+
+分解呈现出高度一致的层级特征：
+1. **客户公司异质性居首**：在控制客户固定效应的模型中，客户效应解释了 27.6%–31.4% 的综合失败方差，显示模型中的稳定客户差异占较大份额。
+2. **审计师效应高于事务所效应**：审计师固定效应解释了约 14.2%–14.3% 的总方差，而事务所固定效应仅解释 1.9%–4.1%。
+3. **残差项占主导**：残差占比在 62.0% 至 83.4% 之间，表明加性固定效应刻画的是跨实体的稳定异质性，而非对偶发事件的完全解释。
+
+### 2.2 跨门槛稳定性与替代结果变量
+
+更严格的 5 份／5 年门槛（剔除低执业频次审计师后）并未改变上述排序：客户×审计师模型中客户份额为 32.3%、审计师份额为 12.6%；事务所×审计师模型中事务所份额为 3.9%、审计师份额为 12.5%。
+
+对于财务重述、财务违规及 Jones 异常应计绝对值，上述模式同样稳健：
+- **财务重述与违规**：与综合失败类似，客户固定效应解释约 26.5%–30.6% 的方差，审计师效应（13.6%–14.7%）的点估计均高于事务所效应（1.4%–4.2%）。
+- **Jones 异常应计绝对值**：连续型应计质量指标的残差比例更高（77.9%–88.2%），客户份额降至 13.0%–20.7%，但审计师份额（7.4%–13.2%）仍明显大于事务所份额（0.4%–1.1%）。
+
+![](figures/akm_overview/akm_pairwise_threshold_restated_clean.png){fig-alt="财务重述的三种双边 AKM 模型，在不筛选、3份3年和5份5年门槛下的竖向堆叠方差分解。" fig-cap="财务重述：三种双边模型与三种审计师门槛。" width="100%"}
+
+![](figures/akm_overview/akm_pairwise_threshold_violated_clean.png){fig-alt="财务违规的三种双边 AKM 模型，在不筛选、3份3年和5份5年门槛下的竖向堆叠方差分解。" fig-cap="财务违规：三种双边模型与三种审计师门槛。" width="100%"}
+
+![](figures/akm_overview/akm_pairwise_threshold_abs_da_jones.png){fig-alt="Jones异常应计绝对值的三种双边 AKM 模型，在不筛选、3份3年和5份5年门槛下的竖向堆叠方差分解。" fig-cap="Jones 异常应计绝对值：三种双边模型与三种审计师门槛。" width="100%"}
+
+<span id="full-11_akm-5"></span>
+
+## 3. 双边模型与三维 AKM 基准对照
+
+下图将双边模型的 3 份／3 年基准结果与客户×事务所×审计师三维全固定效应 AKM 模型进行并列对照。
+
+![](figures/akm_overview/akm_pairwise_vs_triadic_client_audit_firm.png){fig-alt="客户与事务所双边 AKM 的3份3年分解，与客户事务所审计师三维AKM的3份3年分解对照。" fig-cap="客户×事务所双边模型与三维参照。" width="100%"}
+
+![](figures/akm_overview/akm_pairwise_vs_triadic_client_auditor.png){fig-alt="客户与审计师双边 AKM 的3份3年分解，与客户事务所审计师三维AKM的3份3年分解对照。" fig-cap="客户×审计师双边模型与三维参照。" width="100%"}
+
+![](figures/akm_overview/akm_pairwise_vs_triadic_audit_firm_auditor.png){fig-alt="事务所与审计师双边 AKM 的3份3年分解，与客户事务所审计师三维AKM的3份3年分解对照。" fig-cap="事务所×审计师双边模型与三维参照。" width="100%"}
+
+在三维全固定效应基准中，综合失败的客户、事务所和审计师方差份额分别为 31.4%、2.9% 和 15.0%（重述为 30.6%、2.0%、14.1%；违规为 30.5%、3.4%、16.3%）。其量级与客户×审计师双边模型高度吻合，显示双边与三维模型的份额排序接近。这一描述性分解刻画各层级异质性在总方差中的相对份额。
+
+<span id="full-11_akm-7"></span>
+
+<span id="a1-审计师质量指标的补充诊断"></span>
+
+## 4. Auditor FE 的增量解释力与测量可靠性诊断
+
+本节通过连通度、样本拆分和前瞻预测，检验auditor FE 的估计精度与跨样本稳定性。
+
+### 4.1 增量解释力与网络连通性支持
+
+在嵌套模型中检验审计师固定效应 $\alpha_a$ 的增量解释力：
+
+$$Y_{it}=X_{it}'\gamma+\alpha_{a(i,t)}+\phi_{p(i,t)}+\mu_i+\lambda_t+\varepsilon_{it},$$
+
+其中 $a(i,t)$ 为 A1 签字审计师，$p(i,t)$ 为事务所，$\mu_i$ 为客户公司固定效应，$\lambda_t$ 为年度效应，标准误在客户层面聚类。下表通过在同一估计样本内剔除 $\alpha_a$ 汇报 $R^2$ 变化与部分 F 统计量。
+
+<figure class="latex-table"><a href="tables/auditor_quality_run_20260925/narrow/akm_explanatory_power_full_p01.pdf"><img src="tables/auditor_quality_run_20260925/narrow/akm_explanatory_power_full_p01.png" alt="审计师 FE 的增量解释力及方差占比。&lt;a href=&quot;tables/auditor_quality_run_20260925/narrow/akm_explanatory_power.tex&quot;&gt;LaTeX 源文件&lt;/a&gt;。" loading="lazy"></a><figcaption>审计师 FE 的增量解释力及方差占比。<a href="tables/auditor_quality_run_20260925/narrow/akm_explanatory_power.tex">LaTeX 源文件</a>。 · <a href="tables/auditor_quality_run_20260925/narrow/akm_explanatory_power_full_p01.tex">TeX</a> · <a href="tables/auditor_quality_run_20260925/narrow/akm_explanatory_power_full_p01.pdf">PDF</a></figcaption></figure>
+
+<figure class="latex-table"><a href="tables/auditor_quality_run_20260925/narrow/akm_explanatory_power_full_p02.pdf"><img src="tables/auditor_quality_run_20260925/narrow/akm_explanatory_power_full_p02.png" alt="审计师 FE 的增量解释力及方差占比。&lt;a href=&quot;tables/auditor_quality_run_20260925/narrow/akm_explanatory_power.tex&quot;&gt;LaTeX 源文件&lt;/a&gt;。" loading="lazy"></a><figcaption>审计师 FE 的增量解释力及方差占比。<a href="tables/auditor_quality_run_20260925/narrow/akm_explanatory_power.tex">LaTeX 源文件</a>。 · <a href="tables/auditor_quality_run_20260925/narrow/akm_explanatory_power_full_p02.tex">TeX</a> · <a href="tables/auditor_quality_run_20260925/narrow/akm_explanatory_power_full_p02.pdf">PDF</a></figcaption></figure>
+
+在 65,320 个观测值、3,361 名审计师的样本中，加入审计师 FE 后，综合失败、重述与违规的 $R^2$ 分别显著提高 0.0766、0.0765 和 0.0801，部分 F 统计量约为 2.07–2.11，整体具有显著的统计解释力。下表进一步展示了包含与不包含客户 FE 设定下的完整方差与协方差分量。
+
+<figure class="latex-table"><a href="tables/auditor_quality_run_20260925/narrow/akm_full_variance_decomposition_full_p01.pdf"><img src="tables/auditor_quality_run_20260925/narrow/akm_full_variance_decomposition_full_p01.png" alt="含和不含客户 FE 两组估计的全部方差分量与协方差。&lt;a href=&quot;tables/auditor_quality_run_20260925/narrow/akm_full_variance_decomposition.tex&quot;&gt;LaTeX 源文件&lt;/a&gt;。" loading="lazy"></a><figcaption>含和不含客户 FE 两组估计的全部方差分量与协方差。<a href="tables/auditor_quality_run_20260925/narrow/akm_full_variance_decomposition.tex">LaTeX 源文件</a>。 · <a href="tables/auditor_quality_run_20260925/narrow/akm_full_variance_decomposition_full_p01.tex">TeX</a> · <a href="tables/auditor_quality_run_20260925/narrow/akm_full_variance_decomposition_full_p01.pdf">PDF</a></figcaption></figure>
+
+<figure class="latex-table"><a href="tables/auditor_quality_run_20260925/narrow/akm_full_variance_decomposition_full_p02.pdf"><img src="tables/auditor_quality_run_20260925/narrow/akm_full_variance_decomposition_full_p02.png" alt="含和不含客户 FE 两组估计的全部方差分量与协方差。&lt;a href=&quot;tables/auditor_quality_run_20260925/narrow/akm_full_variance_decomposition.tex&quot;&gt;LaTeX 源文件&lt;/a&gt;。" loading="lazy"></a><figcaption>含和不含客户 FE 两组估计的全部方差分量与协方差。<a href="tables/auditor_quality_run_20260925/narrow/akm_full_variance_decomposition.tex">LaTeX 源文件</a>。 · <a href="tables/auditor_quality_run_20260925/narrow/akm_full_variance_decomposition_full_p02.tex">TeX</a> · <a href="tables/auditor_quality_run_20260925/narrow/akm_full_variance_decomposition_full_p02.pdf">PDF</a></figcaption></figure>
+
+<figure class="latex-table"><a href="tables/auditor_quality_run_20260925/narrow/akm_full_variance_decomposition_full_p03.pdf"><img src="tables/auditor_quality_run_20260925/narrow/akm_full_variance_decomposition_full_p03.png" alt="含和不含客户 FE 两组估计的全部方差分量与协方差。&lt;a href=&quot;tables/auditor_quality_run_20260925/narrow/akm_full_variance_decomposition.tex&quot;&gt;LaTeX 源文件&lt;/a&gt;。" loading="lazy"></a><figcaption>含和不含客户 FE 两组估计的全部方差分量与协方差。<a href="tables/auditor_quality_run_20260925/narrow/akm_full_variance_decomposition.tex">LaTeX 源文件</a>。 · <a href="tables/auditor_quality_run_20260925/narrow/akm_full_variance_decomposition_full_p03.tex">TeX</a> · <a href="tables/auditor_quality_run_20260925/narrow/akm_full_variance_decomposition_full_p03.pdf">PDF</a></figcaption></figure>
+
+<figure class="latex-table"><a href="tables/auditor_quality_run_20260925/narrow/akm_full_variance_decomposition_full_p04.pdf"><img src="tables/auditor_quality_run_20260925/narrow/akm_full_variance_decomposition_full_p04.png" alt="含和不含客户 FE 两组估计的全部方差分量与协方差。&lt;a href=&quot;tables/auditor_quality_run_20260925/narrow/akm_full_variance_decomposition.tex&quot;&gt;LaTeX 源文件&lt;/a&gt;。" loading="lazy"></a><figcaption>含和不含客户 FE 两组估计的全部方差分量与协方差。<a href="tables/auditor_quality_run_20260925/narrow/akm_full_variance_decomposition.tex">LaTeX 源文件</a>。 · <a href="tables/auditor_quality_run_20260925/narrow/akm_full_variance_decomposition_full_p04.tex">TeX</a> · <a href="tables/auditor_quality_run_20260925/narrow/akm_full_variance_decomposition_full_p04.pdf">PDF</a></figcaption></figure>
+
+在网络连通性方面，最大连通分量容纳了 99.7% 的审计师，表明大部分实体处在同一可比网络中。但如下表所示，61.3% 的审计师仅在单一执业平台出现，且有 14.5% 执业记录少于 5 份报告，网络识别对少数桥接者的依赖较为明显。
+
+<figure class="latex-table"><a href="tables/auditor_quality_run_20260925/narrow/akm_identification_support_full_p01.pdf"><img src="tables/auditor_quality_run_20260925/narrow/akm_identification_support_full_p01.png" alt="AKM 网络连通和个人观察支持。&lt;a href=&quot;tables/auditor_quality_run_20260925/narrow/akm_identification_support.tex&quot;&gt;LaTeX 源文件&lt;/a&gt;。" loading="lazy"></a><figcaption>AKM 网络连通和个人观察支持。<a href="tables/auditor_quality_run_20260925/narrow/akm_identification_support.tex">LaTeX 源文件</a>。 · <a href="tables/auditor_quality_run_20260925/narrow/akm_identification_support_full_p01.tex">TeX</a> · <a href="tables/auditor_quality_run_20260925/narrow/akm_identification_support_full_p01.pdf">PDF</a></figcaption></figure>
+
+<figure class="latex-table"><a href="tables/auditor_quality_run_20260925/narrow/akm_identification_support_full_p02.pdf"><img src="tables/auditor_quality_run_20260925/narrow/akm_identification_support_full_p02.png" alt="AKM 网络连通和个人观察支持。&lt;a href=&quot;tables/auditor_quality_run_20260925/narrow/akm_identification_support.tex&quot;&gt;LaTeX 源文件&lt;/a&gt;。" loading="lazy"></a><figcaption>AKM 网络连通和个人观察支持。<a href="tables/auditor_quality_run_20260925/narrow/akm_identification_support.tex">LaTeX 源文件</a>。 · <a href="tables/auditor_quality_run_20260925/narrow/akm_identification_support_full_p02.tex">TeX</a> · <a href="tables/auditor_quality_run_20260925/narrow/akm_identification_support_full_p02.pdf">PDF</a></figcaption></figure>
+
+<figure class="latex-table"><a href="tables/auditor_quality_run_20260925/narrow/akm_identification_support_full_p03.pdf"><img src="tables/auditor_quality_run_20260925/narrow/akm_identification_support_full_p03.png" alt="AKM 网络连通和个人观察支持。&lt;a href=&quot;tables/auditor_quality_run_20260925/narrow/akm_identification_support.tex&quot;&gt;LaTeX 源文件&lt;/a&gt;。" loading="lazy"></a><figcaption>AKM 网络连通和个人观察支持。<a href="tables/auditor_quality_run_20260925/narrow/akm_identification_support.tex">LaTeX 源文件</a>。 · <a href="tables/auditor_quality_run_20260925/narrow/akm_identification_support_full_p03.tex">TeX</a> · <a href="tables/auditor_quality_run_20260925/narrow/akm_identification_support_full_p03.pdf">PDF</a></figcaption></figure>
+
+### 4.2 跨样本可靠性与人力资本投影
+
+为检验个体 auditor FE 的测量稳定性，将样本按不同维度（奇偶年份、随机客户项目、早晚时期、留出客户）拆分为两个子样本，分别估计 $\widehat\alpha_a^{(0)}$ 与 $\widehat\alpha_a^{(1)}$，计算相关性及样本外预测增量。
+
+<figure class="latex-table"><a href="tables/auditor_quality_run_20260925/narrow/akm_split_reliability_full_p01.pdf"><img src="tables/auditor_quality_run_20260925/narrow/akm_split_reliability_full_p01.png" alt="四种分样本方式的相关性及样本外增量解释力。&lt;a href=&quot;tables/auditor_quality_run_20260925/narrow/akm_split_reliability.tex&quot;&gt;LaTeX 源文件&lt;/a&gt;。" loading="lazy"></a><figcaption>四种分样本方式的相关性及样本外增量解释力。<a href="tables/auditor_quality_run_20260925/narrow/akm_split_reliability.tex">LaTeX 源文件</a>。 · <a href="tables/auditor_quality_run_20260925/narrow/akm_split_reliability_full_p01.tex">TeX</a> · <a href="tables/auditor_quality_run_20260925/narrow/akm_split_reliability_full_p01.pdf">PDF</a></figcaption></figure>
+
+<figure class="latex-table"><a href="tables/auditor_quality_run_20260925/narrow/akm_split_reliability_full_p02.pdf"><img src="tables/auditor_quality_run_20260925/narrow/akm_split_reliability_full_p02.png" alt="四种分样本方式的相关性及样本外增量解释力。&lt;a href=&quot;tables/auditor_quality_run_20260925/narrow/akm_split_reliability.tex&quot;&gt;LaTeX 源文件&lt;/a&gt;。" loading="lazy"></a><figcaption>四种分样本方式的相关性及样本外增量解释力。<a href="tables/auditor_quality_run_20260925/narrow/akm_split_reliability.tex">LaTeX 源文件</a>。 · <a href="tables/auditor_quality_run_20260925/narrow/akm_split_reliability_full_p02.tex">TeX</a> · <a href="tables/auditor_quality_run_20260925/narrow/akm_split_reliability_full_p02.pdf">PDF</a></figcaption></figure>
+
+<figure class="latex-table"><a href="tables/auditor_quality_run_20260925/narrow/akm_split_reliability_full_p03.pdf"><img src="tables/auditor_quality_run_20260925/narrow/akm_split_reliability_full_p03.png" alt="四种分样本方式的相关性及样本外增量解释力。&lt;a href=&quot;tables/auditor_quality_run_20260925/narrow/akm_split_reliability.tex&quot;&gt;LaTeX 源文件&lt;/a&gt;。" loading="lazy"></a><figcaption>四种分样本方式的相关性及样本外增量解释力。<a href="tables/auditor_quality_run_20260925/narrow/akm_split_reliability.tex">LaTeX 源文件</a>。 · <a href="tables/auditor_quality_run_20260925/narrow/akm_split_reliability_full_p03.tex">TeX</a> · <a href="tables/auditor_quality_run_20260925/narrow/akm_split_reliability_full_p03.pdf">PDF</a></figcaption></figure>
+
+<figure class="latex-table"><a href="tables/auditor_quality_run_20260925/narrow/akm_tail_stability_full_p01.pdf"><img src="tables/auditor_quality_run_20260925/narrow/akm_tail_stability_full_p01.png" alt="质量分位组跨样本保留率。&lt;a href=&quot;tables/auditor_quality_run_20260925/narrow/akm_tail_stability.tex&quot;&gt;LaTeX 源文件&lt;/a&gt;。" loading="lazy"></a><figcaption>质量分位组跨样本保留率。<a href="tables/auditor_quality_run_20260925/narrow/akm_tail_stability.tex">LaTeX 源文件</a>。 · <a href="tables/auditor_quality_run_20260925/narrow/akm_tail_stability_full_p01.tex">TeX</a> · <a href="tables/auditor_quality_run_20260925/narrow/akm_tail_stability_full_p01.pdf">PDF</a></figcaption></figure>
+
+<figure class="latex-table"><a href="tables/auditor_quality_run_20260925/narrow/akm_tail_stability_full_p02.pdf"><img src="tables/auditor_quality_run_20260925/narrow/akm_tail_stability_full_p02.png" alt="质量分位组跨样本保留率。&lt;a href=&quot;tables/auditor_quality_run_20260925/narrow/akm_tail_stability.tex&quot;&gt;LaTeX 源文件&lt;/a&gt;。" loading="lazy"></a><figcaption>质量分位组跨样本保留率。<a href="tables/auditor_quality_run_20260925/narrow/akm_tail_stability.tex">LaTeX 源文件</a>。 · <a href="tables/auditor_quality_run_20260925/narrow/akm_tail_stability_full_p02.tex">TeX</a> · <a href="tables/auditor_quality_run_20260925/narrow/akm_tail_stability_full_p02.pdf">PDF</a></figcaption></figure>
+
+<figure class="latex-table"><a href="tables/auditor_quality_run_20260925/narrow/akm_tail_stability_full_p03.pdf"><img src="tables/auditor_quality_run_20260925/narrow/akm_tail_stability_full_p03.png" alt="质量分位组跨样本保留率。&lt;a href=&quot;tables/auditor_quality_run_20260925/narrow/akm_tail_stability.tex&quot;&gt;LaTeX 源文件&lt;/a&gt;。" loading="lazy"></a><figcaption>质量分位组跨样本保留率。<a href="tables/auditor_quality_run_20260925/narrow/akm_tail_stability.tex">LaTeX 源文件</a>。 · <a href="tables/auditor_quality_run_20260925/narrow/akm_tail_stability_full_p03.tex">TeX</a> · <a href="tables/auditor_quality_run_20260925/narrow/akm_tail_stability_full_p03.pdf">PDF</a></figcaption></figure>
+
+拆分检验显示：
+- 综合失败 FE 在奇偶年份拆分中的相关系数为 0.452，在随机客户项目拆分中降至 0.220，而在早晚时期拆分（0.030）与留出客户拆分（−0.048）中近乎归零。
+- 这表明固定效应在早晚时期和不同客户间的迁移性较弱；测量噪声、客户关系和时变服务差异都是可能来源。
+
+将估计出的 auditor FE 对审计师可观察人力资本（四大从业经历、985/211 院校背景、学历）进行投影：
+
+$$\widehat\alpha_a=\theta_0+\theta_1\mathrm{Big4Bg}_a+\theta_2\mathrm{School985/211}_a+\theta_3\mathrm{MasterPlus}_a+\theta_4\mathrm{BachelorPlus}_a+u_a.$$
+
+<figure class="latex-table"><a href="tables/auditor_quality_run_20260925/narrow/akm_human_capital_projection_full_p01.pdf"><img src="tables/auditor_quality_run_20260925/narrow/akm_human_capital_projection_full_p01.png" alt="四类 AKM FE 的加权与不加权人力资本投影。&lt;a href=&quot;tables/auditor_quality_run_20260925/narrow/akm_human_capital_projection.tex&quot;&gt;LaTeX 源文件&lt;/a&gt;。" loading="lazy"></a><figcaption>四类 AKM FE 的加权与不加权人力资本投影。<a href="tables/auditor_quality_run_20260925/narrow/akm_human_capital_projection.tex">LaTeX 源文件</a>。 · <a href="tables/auditor_quality_run_20260925/narrow/akm_human_capital_projection_full_p01.tex">TeX</a> · <a href="tables/auditor_quality_run_20260925/narrow/akm_human_capital_projection_full_p01.pdf">PDF</a></figcaption></figure>
+
+<figure class="latex-table"><a href="tables/auditor_quality_run_20260925/narrow/akm_human_capital_projection_full_p02.pdf"><img src="tables/auditor_quality_run_20260925/narrow/akm_human_capital_projection_full_p02.png" alt="四类 AKM FE 的加权与不加权人力资本投影。&lt;a href=&quot;tables/auditor_quality_run_20260925/narrow/akm_human_capital_projection.tex&quot;&gt;LaTeX 源文件&lt;/a&gt;。" loading="lazy"></a><figcaption>四类 AKM FE 的加权与不加权人力资本投影。<a href="tables/auditor_quality_run_20260925/narrow/akm_human_capital_projection.tex">LaTeX 源文件</a>。 · <a href="tables/auditor_quality_run_20260925/narrow/akm_human_capital_projection_full_p02.tex">TeX</a> · <a href="tables/auditor_quality_run_20260925/narrow/akm_human_capital_projection_full_p02.pdf">PDF</a></figcaption></figure>
+
+<figure class="latex-table"><a href="tables/auditor_quality_run_20260925/narrow/akm_human_capital_projection_full_p03.pdf"><img src="tables/auditor_quality_run_20260925/narrow/akm_human_capital_projection_full_p03.png" alt="四类 AKM FE 的加权与不加权人力资本投影。&lt;a href=&quot;tables/auditor_quality_run_20260925/narrow/akm_human_capital_projection.tex&quot;&gt;LaTeX 源文件&lt;/a&gt;。" loading="lazy"></a><figcaption>四类 AKM FE 的加权与不加权人力资本投影。<a href="tables/auditor_quality_run_20260925/narrow/akm_human_capital_projection.tex">LaTeX 源文件</a>。 · <a href="tables/auditor_quality_run_20260925/narrow/akm_human_capital_projection_full_p03.tex">TeX</a> · <a href="tables/auditor_quality_run_20260925/narrow/akm_human_capital_projection_full_p03.pdf">PDF</a></figcaption></figure>
+
+可观察的人力资本特征仅解释了失败类 auditor FE 极小的方差（等权 0.16%，加权 0.26%），显示这些履历变量对估计分数的解释力较低；分数中的测量误差也可能削弱投影关系。
+
+最后，下述表格刻画了 auditor FE 分布两端与中间组的特征对比及跨梯队事务所流动：
+
+<figure class="latex-table"><a href="tables/auditor_quality_run_20260925/narrow/akm_quality_group_profile_full_p01.pdf"><img src="tables/auditor_quality_run_20260925/narrow/akm_quality_group_profile_full_p01.png" alt="AKM 质量组的覆盖和事务所类别。&lt;a href=&quot;tables/auditor_quality_run_20260925/narrow/akm_quality_group_profile.tex&quot;&gt;LaTeX 源文件&lt;/a&gt;。" loading="lazy"></a><figcaption>AKM 质量组的覆盖和事务所类别。<a href="tables/auditor_quality_run_20260925/narrow/akm_quality_group_profile.tex">LaTeX 源文件</a>。 · <a href="tables/auditor_quality_run_20260925/narrow/akm_quality_group_profile_full_p01.tex">TeX</a> · <a href="tables/auditor_quality_run_20260925/narrow/akm_quality_group_profile_full_p01.pdf">PDF</a></figcaption></figure>
+
+<figure class="latex-table"><a href="tables/auditor_quality_run_20260925/narrow/akm_quality_group_profile_full_p02.pdf"><img src="tables/auditor_quality_run_20260925/narrow/akm_quality_group_profile_full_p02.png" alt="AKM 质量组的覆盖和事务所类别。&lt;a href=&quot;tables/auditor_quality_run_20260925/narrow/akm_quality_group_profile.tex&quot;&gt;LaTeX 源文件&lt;/a&gt;。" loading="lazy"></a><figcaption>AKM 质量组的覆盖和事务所类别。<a href="tables/auditor_quality_run_20260925/narrow/akm_quality_group_profile.tex">LaTeX 源文件</a>。 · <a href="tables/auditor_quality_run_20260925/narrow/akm_quality_group_profile_full_p02.tex">TeX</a> · <a href="tables/auditor_quality_run_20260925/narrow/akm_quality_group_profile_full_p02.pdf">PDF</a></figcaption></figure>
+
+<figure class="latex-table"><a href="tables/auditor_quality_run_20260925/narrow/akm_extreme_middle_difference_full_p01.pdf"><img src="tables/auditor_quality_run_20260925/narrow/akm_extreme_middle_difference_full_p01.png" alt="AKM 两端组与中间组的七项描述性差异。&lt;a href=&quot;tables/auditor_quality_run_20260925/narrow/akm_extreme_middle_difference.tex&quot;&gt;LaTeX 源文件&lt;/a&gt;。" loading="lazy"></a><figcaption>AKM 两端组与中间组的七项描述性差异。<a href="tables/auditor_quality_run_20260925/narrow/akm_extreme_middle_difference.tex">LaTeX 源文件</a>。 · <a href="tables/auditor_quality_run_20260925/narrow/akm_extreme_middle_difference_full_p01.tex">TeX</a> · <a href="tables/auditor_quality_run_20260925/narrow/akm_extreme_middle_difference_full_p01.pdf">PDF</a></figcaption></figure>
+
+<figure class="latex-table"><a href="tables/auditor_quality_run_20260925/narrow/akm_extreme_middle_difference_full_p02.pdf"><img src="tables/auditor_quality_run_20260925/narrow/akm_extreme_middle_difference_full_p02.png" alt="AKM 两端组与中间组的七项描述性差异。&lt;a href=&quot;tables/auditor_quality_run_20260925/narrow/akm_extreme_middle_difference.tex&quot;&gt;LaTeX 源文件&lt;/a&gt;。" loading="lazy"></a><figcaption>AKM 两端组与中间组的七项描述性差异。<a href="tables/auditor_quality_run_20260925/narrow/akm_extreme_middle_difference.tex">LaTeX 源文件</a>。 · <a href="tables/auditor_quality_run_20260925/narrow/akm_extreme_middle_difference_full_p02.tex">TeX</a> · <a href="tables/auditor_quality_run_20260925/narrow/akm_extreme_middle_difference_full_p02.pdf">PDF</a></figcaption></figure>
+
+<figure class="latex-table"><a href="tables/auditor_quality_run_20260925/narrow/akm_mobility_flow_full_p01.pdf"><img src="tables/auditor_quality_run_20260925/narrow/akm_mobility_flow_full_p01.png" alt="审计师在事务所梯队间的流动计数。&lt;a href=&quot;tables/auditor_quality_run_20260925/narrow/akm_mobility_flow.tex&quot;&gt;LaTeX 源文件&lt;/a&gt;。" loading="lazy"></a><figcaption>审计师在事务所梯队间的流动计数。<a href="tables/auditor_quality_run_20260925/narrow/akm_mobility_flow.tex">LaTeX 源文件</a>。 · <a href="tables/auditor_quality_run_20260925/narrow/akm_mobility_flow_full_p01.tex">TeX</a> · <a href="tables/auditor_quality_run_20260925/narrow/akm_mobility_flow_full_p01.pdf">PDF</a></figcaption></figure>
+
+<figure class="latex-table"><a href="tables/auditor_quality_run_20260925/narrow/akm_mobility_flow_full_p02.pdf"><img src="tables/auditor_quality_run_20260925/narrow/akm_mobility_flow_full_p02.png" alt="审计师在事务所梯队间的流动计数。&lt;a href=&quot;tables/auditor_quality_run_20260925/narrow/akm_mobility_flow.tex&quot;&gt;LaTeX 源文件&lt;/a&gt;。" loading="lazy"></a><figcaption>审计师在事务所梯队间的流动计数。<a href="tables/auditor_quality_run_20260925/narrow/akm_mobility_flow.tex">LaTeX 源文件</a>。 · <a href="tables/auditor_quality_run_20260925/narrow/akm_mobility_flow_full_p02.tex">TeX</a> · <a href="tables/auditor_quality_run_20260925/narrow/akm_mobility_flow_full_p02.pdf">PDF</a></figcaption></figure>
+
+<span id="稀有失败个人排名与平均服务效应"></span>
+
+### 4.3 Rare-event Outcome、Auditor FE 噪声与平均服务效应 {#sec-rare-event-akm}
+
+**稀有失败主要限制个人固定效应的信息量，系数无偏性、估计精度和方差分解偏误需要分别判断。** 下文依次说明三者的条件及其在本项目中的诊断。
+
+**在线性 AKM 中，无偏性取决于条件均值假设，而不要求结果变量连续或服从正态分布。** 将控制变量和各组固定效应的设计矩阵统一记为 $Z$，模型可以写为：
+
+$$
+Y=Z\theta+\varepsilon.
+$$
+
+在施加必要的固定效应归一化、保留可识别的参数后，若 $Z$ 满列秩，且满足 $E[\varepsilon\mid Z]=0$，则：
+
+$$
+\widehat{\theta}-\theta
+=(Z'Z)^{-1}Z'\varepsilon,
+\qquad
+E[\widehat{\theta}\mid Z]=\theta.
+$$
+
+这一推导不依赖 $Y$ 是连续变量还是二元变量，也不要求失败事件达到某一发生比例。因此，失败率低并不会自动使线性系数或 auditor FE 向某个方向系统性偏离真实参数。不过，这一结论以正确的条件均值设定为前提：如果审计师更替与未控制的客户风险变化相关，或者不同客户和审计师的失败被发现概率存在系统性差异，条件均值假设仍可能不成立。因此，无偏性检验应关注匹配机制、遗漏变量和失败发现过程。
+
+**有限样本中的 auditor FE 精度取决于事件信息和网络连接。** 审计师可能存在真实能力差异，但有限职业记录中的“零失败”，不足以区分较低的失败概率、较低的客户风险和暂时没有实现的失败事件。例如，在各次审计相互独立且失败概率固定的简化情形下，$n$ 份报告均未发生失败的概率为 $(1-p)^n$；当 $p$ 较低且 $n$ 有限时，不同失败概率的审计师都可能留下零失败记录。少量事件一旦出现，又可能明显改变估计出的 auditor FE。这里的困难是相对于待识别差异而言信息不足，而不是失败率越低，线性估计的绝对方差就必然越大。此外，客户—审计师—事务所网络中的连接和流动决定了不同固定效应能否被区分；单纯增加同一匹配关系下的观测，并不一定提供足够的识别信息。[Jochmans 与 Weidner（2019）](https://www.tse-fr.eu/articles/fixed-effect-regressions-network-data?lang=en)讨论了网络结构对固定效应估计精度与推断的影响。
+
+在我们的数据中，获得前瞻 auditor FE 的当期 A1 观测共 **22,464 条，其中 74.84% 对应的训练历史没有观察到综合失败，训练报告数中位数为 12 份**。该比例按获得 FE 的当期观测计算，并非独立审计师人数比例。新接任项目中，前瞻 auditor FE 对结果变量的回归系数为 −0.00121（标准误 0.00466，p=0.795，N=2,641）；限制历史至少审计 20 份报告后，也未形成稳定的预测改善。这些结果与较大的测量噪声相容。客户组合变化、时变服务效应和失败发现时滞也可能影响跨项目预测，需要分别诊断。
+
+**插件方差分解会混入固定效应的估计误差。** 若估计出的 auditor FE 可以写为 $\widehat{\psi}_a=\psi_a+u_a$，即使 $u_a$ 的条件期望为零，直接计算 $\widehat{\psi}_a$ 的离散程度，仍会混入估计误差的离散程度。因此，未经修正的 FE 方差不能全部解释为真实能力差异；不同组固定效应的估计误差还可能相关，影响协方差项及方差贡献比例。[Kline、Saggio 与 Sølvsten（2020）](https://onlinelibrary.wiley.com/doi/full/10.3982/ECTA16410)提出的 leave-out 方法正是针对这类二次型估计问题。不同 cutoff 下方差分解的模式一致，可以支持结果对样本限制的稳定性，但不能据此认定估计噪声已被消除。
+
+**logit/probit 的适用性取决于记录长度、分离和附带参数问题。** 非线性模型将预测概率限制在 $[0,1]$ 内，但不会增加实际观察到的失败事件。对于记录较短、结果全部为零的审计师，包含其固定效应的二元响应模型还可能出现分离，使相应 FE 趋向负无穷而没有有限的极大似然估计。与此同时，当每个固定效应所对应的观测有限时，大量固定效应的估计误差可能通过非线性似然传递到其他参数，产生附带参数偏误。[Hahn 与 Newey（2004）](https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1468-0262.2004.00533.x)及 [Fernández-Val 与 Weidner（2016）](https://discovery.ucl.ac.uk/id/eprint/1473260/)讨论了非线性面板中的这一问题及其修正。模型选择据此需要同时考虑概率设定与有限记录下的估计性质；相应偏误修正对本研究多组固定效应和稀疏匹配网络的适用性仍需验证。
+
+**平均审计服务效应可以利用可信的轮换或分配变化直接识别。** 可信的审计师轮换或分配变化，可以直接用于估计某类服务提供者对审计结果的平均影响。稀有事件会限制这类检验的统计功效，但是否能够作出因果解释，主要取决于分配机制及相应识别假设，而不是能否将每个 auditor FE 估准。
+
+## 数据与估计程序记录
+
+**估计程序（存档）。** [45_pairwise_akm_report_year_sensitivity.do](maintenance/source_code/code/stata/40_selection_matching/akm/45_pairwise_akm_report_year_sensitivity.do) · [30_auditor_akm_fe.do](maintenance/source_code/code/stata/30_partner_humancapital/30_auditor_akm_fe.do) · [30_auditor_akm_reliability_tests.do](maintenance/source_code/code/stata/30_partner_humancapital/30_auditor_akm_reliability_tests.do)
+
+**Rare-event 补充诊断。** 数值核对自 `results/reports/partner_humancapital/audit_outcome_identification/audit_outcome_identification.md`，其中 role=0 为当期／继任 A1。文献在线核验日期：2026-09-27。

@@ -1,0 +1,63 @@
+body,
+.quarto-title-block,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+table,
+button,
+input {
+  font-family: "STFangsong", "华文仿宋", serif;
+}
+
+:root {
+  --report-blue: #1f4e79;
+  --report-muted: #607080;
+  --report-rule: #dce6ee;
+}
+
+#quarto-document-content {
+  max-width: 56rem;
+}
+
+#quarto-content main.content h1,
+#quarto-content main.content h2,
+#quarto-content main.content h3 {
+  color: var(--report-blue);
+  font-weight: 600;
+}
+
+#quarto-content main.content h1 {
+  margin-top: 2.4rem;
+  padding-bottom: 0.55rem;
+  border-bottom: 1px solid var(--report-rule);
+  font-size: 1.85rem;
+}
+
+#quarto-content main.content h2 {
+  margin-top: 1.7rem;
+  font-size: 1.35rem;
+}
+
+#quarto-content main.content p {
+  line-height: 1.9;
+}
+
+#quarto-margin-sidebar nav#TOC {
+  border-left: 2px solid var(--report-rule);
+  padding-left: 0.9rem;
+}
+
+#quarto-margin-sidebar nav#TOC .nav-link {
+  color: var(--report-muted);
+  line-height: 1.45;
+  padding: 0.28rem 0;
+}
+
+#quarto-margin-sidebar nav#TOC .nav-link.active,
+#quarto-margin-sidebar nav#TOC .nav-link:hover {
+  color: var(--report-blue);
+  font-weight: 600;
+}

@@ -1,0 +1,45 @@
+project:
+  type: website
+  output-dir: _site
+  render:
+    - index.qmd
+    - 01_core_summary.qmd
+    - 02_core_results.qmd
+    - 03_background.qmd
+    - 21_adoption.qmd
+    - 22_diffusion.qmd
+    - 23_big4_effect.qmd
+    - 24_auditor_quality.qmd
+    - 25_matching.qmd
+    - 26_akm.qmd
+    - 31_biweekly_memo.qmd
+    - 32_active_tasks.qmd
+    - 33_data_pipeline.qmd
+
+website:
+  title: "会计研究项目报告"
+  sidebar:
+    style: docked
+    search: true
+    contents:
+      - 01_core_summary.qmd
+      - 02_core_results.qmd
+      - 03_background.qmd
+      - 21_adoption.qmd
+      - 22_diffusion.qmd
+      - 23_big4_effect.qmd
+      - 24_auditor_quality.qmd
+      - 25_matching.qmd
+      - 26_akm.qmd
+      - 31_biweekly_memo.qmd
+      - 32_active_tasks.qmd
+      - 33_data_pipeline.qmd
+
+format:
+  html:
+    lang: zh
+    theme: cosmo
+    toc: true
+    toc-location: right
+    anchor-sections: true
+    css: styles.css

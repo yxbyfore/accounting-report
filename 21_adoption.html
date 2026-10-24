@@ -20,7 +20,7 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
 </style>
@@ -246,6 +246,7 @@ window.Quarto = {
 <ul class="collapse">
 <li><a class="nav-link" data-scroll-target="#四大分所设立与地区审计服务供给" href="#四大分所设立与地区审计服务供给" id="toc-四大分所设立与地区审计服务供给">6.1 四大分所设立与地区审计服务供给</a></li>
 <li><a class="nav-link" data-scroll-target="#分所进入的事件研究" href="#分所进入的事件研究" id="toc-分所进入的事件研究">6.2 分所进入的事件研究</a></li>
+<li><a class="nav-link" data-scroll-target="#剔除事前最大客户的敏感性检查" href="#剔除事前最大客户的敏感性检查" id="toc-剔除事前最大客户的敏感性检查">6.3 剔除事前最大客户的敏感性检查</a></li>
 </ul></li>
 <li><a class="nav-link" data-scroll-target="#稳健性与识别边界" href="#稳健性与识别边界" id="toc-稳健性与识别边界">7. 稳健性与识别边界</a></li>
 <li><a class="nav-link" data-scroll-target="#数据程序与输出记录" href="#数据程序与输出记录" id="toc-数据程序与输出记录">数据、程序与输出记录</a></li>
@@ -267,8 +268,8 @@ window.Quarto = {
 </section>
 <section class="level2" id="核心结果">
 <h2 class="anchored" data-anchor-id="核心结果">核心结果</h2>
-<p><strong>企业国际化与四大分所扩张后，境内四大采用率均显著上升。</strong> 跨境上市、引入外资控制与分所进入分别对应需求端和供给端的变化。跨市场监管、国际声誉需求及地理距离与搜寻成本是这些变化的可能机制，现有估计刻画事件前后的采用路径。</p>
-<p><strong>样本与设定。</strong> 观测为公司—年，TWFE 吸收公司和年份固定效应、按公司聚类，未加额外财务控制；基期为事件前一年，区间为 95%。B/H 输入处理公司分别为 91、161；外资图实际控制人与控股股东分别为 303、340；分所本省及邻省口径为 818。以上均为输入计数，逐回归实际年份和有效处理数待核验。外资关系合并两端尾部，跨境上市与分所 TWFE 剔除处理公司窗口外观测；H 股与控股股东的部分处理前系数偏离零。</p>
+<p><strong>企业国际化与四大分所扩张后，境内四大采用率均显著上升。</strong> 跨境上市、引入外资控制与分所进入分别提供需求变化与潜在供给变化的观察场景。跨市场监管、国际声誉需求及地理距离与搜寻成本是这些变化的可能机制，现有估计刻画事件前后的采用路径。</p>
+<p><strong>样本与设定。</strong> 观测为公司—年，TWFE 吸收公司和年份固定效应、按公司聚类，未加额外财务控制；基期为事件前一年，区间为 95%。B/H 输入处理公司分别为 91、161；外资图实际控制人与控股股东分别为 303、340；分所本省及邻省口径为 868（校对后事件年输入计数）。以上均为输入计数，逐回归实际年份和有效处理数待核验。外资关系合并两端尾部，跨境上市与分所 TWFE 剔除处理公司窗口外观测；H 股、控股股东及本省分所口径的部分处理前系数偏离零。</p>
 <p><strong>基准事件研究设定（Event Study Specification）：</strong></p>
 <p><span class="math display">\[
 Y_{it} = \sum_{k \in \mathcal{K}, \, k \ne -1} \beta_k \mathbf{1}\{t - T_i = k\} + \alpha_i + \lambda_t + \varepsilon_{it}.
@@ -288,7 +289,7 @@ Y_{it} = \sum_{k \in \mathcal{K}, \, k \ne -1} \beta_k \mathbf{1}\{t - T_i = k\}
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img class="img-fluid figure-img" src="tables/core_result/assets/branch_expansion_neighbors_pre2012.png" style="width:100.0%"/></p>
+<p><img class="img-fluid figure-img" src="figures/market_entry/branch_entry_corrected_20261023/event_study_local_and_neighbors_pre2012.png" style="width:100.0%"/></p>
 <figcaption>精选结果：四大分所进入的地理供给扩张（截至 2012 年，本省及邻省）</figcaption>
 </figure>
 </div>
@@ -338,7 +339,7 @@ Y_{it} = \sum_{k \ne -1} \beta_k \mathbf{1}\{t - T_i = k\} + \alpha_i + \lambda_
 <figure class="latex-table figure">
 <img alt="H 股上市队列的处理公司数与处理前联合检验" class="figure-img" loading="lazy" src="tables/adoption/02_adoption_summary_02_full.png"/>
 <figcaption>
-H 股上市队列的处理公司数与处理前联合检验
+H 股上市队列的处理公司数与处理前联合检验 ·  · 
 </figcaption>
 </figure>
 <p>检验结果显示，全样本中 2010 年前上市队列的 pre-trends 联合检验 <span class="math inline">\(p\)</span> 值为 0.1824，2010 年及以后队列为 0.4849；在剔除金融与房地产样本后，<span class="math inline">\(p\)</span> 值分别为 0.1774 与 0.1636。各组检验均未在 5% 水平拒绝所检验的处理前系数联合为零。该检验为趋势可比性提供支持，结论仍受处理前观测和估计精度约束。</p>
@@ -389,14 +390,14 @@ Big4_{it} = \alpha_i + \lambda_t + \sum_{s=1998, \, s \ne 2001}^{2010} \beta_s T
 <figure class="latex-table figure">
 <img alt="WTO 暴露指标的定义与对照组" class="figure-img" loading="lazy" src="tables/adoption/02_adoption_summary_03_full.png"/>
 <figcaption>
-WTO 暴露指标的定义与对照组
+WTO 暴露指标的定义与对照组 ·  · 
 </figcaption>
 </figure>
 <p>下表列出不同暴露定义在 2002 年（入世首年）的相对位移估计：</p>
 <figure class="latex-table figure">
 <img alt="不同 WTO 暴露口径的 2002 年估计系数" class="figure-img" loading="lazy" src="tables/adoption/02_adoption_summary_04_full.png"/>
 <figcaption>
-不同 WTO 暴露口径的 2002 年估计系数
+不同 WTO 暴露口径的 2002 年估计系数 ·  · 
 </figcaption>
 </figure>
 <p>如下图所示，沿海企业的四大采用率在 2002 年相对于 2001 年出现显著跳升，并在 2002—2007 年间维持相对较高的溢价水平；处理前年份（1998—2000）未见显著的发散走势。</p>
@@ -451,16 +452,81 @@ WTO 暴露指标的定义与对照组
 <h2 class="anchored" data-anchor-id="供给侧扩张四大分所设立">6. 供给侧扩张：四大分所设立</h2>
 <section class="level3" id="四大分所设立与地区审计服务供给">
 <h3 class="anchored" data-anchor-id="四大分所设立与地区审计服务供给">6.1 四大分所设立与地区审计服务供给</h3>
-<p>四大分所扩张增加本地服务网点，可能通过缩短差旅距离、降低服务与搜寻成本影响企业采用。本节以分所进入前后的采用路径检验区域供给扩张与审计选择的联系。</p>
+<p>四大分所扩张增加本地服务网点，可能通过缩短差旅距离、降低服务与搜寻成本影响企业采用。同时，分所选址也可能响应已经形成的客户需求。本节考察分所进入前后的采用路径，并区分服务供给变化与需求驱动选址这两种解释。</p>
 </section>
 <section class="level3" id="分所进入的事件研究">
 <h3 class="anchored" data-anchor-id="分所进入的事件研究">6.2 分所进入的事件研究</h3>
-<p>我们分别以“四大分所进入本省”以及“四大分所进入本省或邻省”作为区域服务供给变化的事件，并在全样本与 2012 年前（包含 2012 年）两个时间截断下估计动态采用效应。</p>
-<p>如下方四组图所示，本省分所进入后，本地企业采用四大的概率在事件当年及随后数年呈现明确的正向增长。在引入邻省外溢口径后，不仅估计精度显著提高，而且在 CS-DID 模型下事件当年至第 5 年的采用效应均显著高于零线。本省及邻省口径的结果支持服务覆盖跨省延伸的解释；分所选址与当地需求的共同变化仍需区分。</p>
-<p><img alt="本省分所进入、截至2012年的事件研究。" class="img-fluid" data-fig-cap="分所扩张：本省暴露（年份 ≤ 2012）。左：TWFE；右：CS-DID。" src="figures/market_entry/branch_entry_local_pre2012.png" style="width:100.0%"/></p>
-<p><img alt="本省分所进入、全样本的事件研究。" class="img-fluid" data-fig-cap="分所扩张：本省暴露（全样本）。左：TWFE；右：CS-DID。" src="figures/market_entry/event_study_local_only.png" style="width:100.0%"/></p>
-<p><img alt="本省及邻省分所进入、截至2012年的事件研究。" class="img-fluid" data-fig-cap="分所扩张：本省及邻省暴露（年份 ≤ 2012）。左：TWFE；右：CS-DID。" src="figures/market_entry/event_study_local_and_neighbors_pre2012.png" style="width:100.0%"/></p>
-<p><img alt="本省及邻省分所进入、全样本的事件研究。" class="img-fluid" data-fig-cap="分所扩张：本省及邻省暴露（全样本）。左：TWFE；右：CS-DID。" src="figures/market_entry/event_study_local_and_neighbors.png" style="width:100.0%"/></p>
+<p>我们分别以“四大分所进入本省”以及“四大分所进入本省或邻省”作为事件，在全时期与截至 2012 年（含）两个版本下估计动态采用路径。四家事务所合并为一类，结果变量为当年是否聘用任一家境内四大。下方四图均使用 2026 年 10 月 23 日校对后的事件日期；普华广州的 2008 年按已确认口径暂代事件年，证据只表明该年最迟已存在，并非已确认的首次开所年。其余样本、固定效应和公司聚类沿用原13程序。</p>
+<p>新日期下，四套规格的事后平均系数均为正。CS-DID 的事件后 0—5 年平均变化，在本省口径下为全时期 1.00 个百分点、截至 2012 年 2.40 个百分点；本省及邻省口径分别为 2.82 和 2.99 个百分点。这些数值描述开所前后的采用变化，尚不能单独识别纯粹的供给效应。</p>
+<p>本省 TWFE 在开所前已有明显上升走势。大客户先聘用四大、事务所随后在当地开所，是与这一模式相容的解释：四大在设所前也可能跨地区服务客户。但图形不能判断变化是否由最大一家客户驱动。此次已按新日期重估最大客户剔除版本：剔除后本省两个样本的第−5、−4、−3年TWFE系数仍分别在5%水平显著为负，事前上升路径未消失；客户识别仍受境内审计费缺失限制。TWFE 与 CS-DID 的比较组及事前参考方式也不同，不能把两图的差异完全解释为经济机制。</p>
+<p><img alt="本省分所进入、截至2012年的事件研究。" class="img-fluid" data-fig-cap="分所扩张：本省暴露（年份 ≤ 2012）。左：TWFE；右：CS-DID。" src="figures/market_entry/branch_entry_corrected_20261023/event_study_local_only_pre2012.png" style="width:100.0%"/></p>
+<p><img alt="本省分所进入、全样本的事件研究。" class="img-fluid" data-fig-cap="分所扩张：本省暴露（全样本）。左：TWFE；右：CS-DID。" src="figures/market_entry/branch_entry_corrected_20261023/event_study_local_only.png" style="width:100.0%"/></p>
+<p><img alt="本省及邻省分所进入、截至2012年的事件研究。" class="img-fluid" data-fig-cap="分所扩张：本省及邻省暴露（年份 ≤ 2012）。左：TWFE；右：CS-DID。" src="figures/market_entry/branch_entry_corrected_20261023/event_study_local_and_neighbors_pre2012.png" style="width:100.0%"/></p>
+<p><img alt="本省及邻省分所进入、全样本的事件研究。" class="img-fluid" data-fig-cap="分所扩张：本省及邻省暴露（全样本）。左：TWFE；右：CS-DID。" src="figures/market_entry/branch_entry_corrected_20261023/event_study_local_and_neighbors.png" style="width:100.0%"/></p>
+</section>
+<section class="level3" id="剔除事前最大客户的敏感性检查">
+<h3 class="anchored" data-anchor-id="剔除事前最大客户的敏感性检查">6.3 剔除事前最大客户的敏感性检查</h3>
+<p>每个事件在受影响省的前一年，从全部当地上市公司中按正值人民币境内审计费选最大客户，含并列，删除所选公司的全部年份；本省及邻省口径在各受影响省分别排名。截至2012年版本不使用未来事件。仅这一项样本删除发生变化，其他估计口径沿用6.2节。</p>
+<p>本省全时期选中20家公司，截至2012年选中10家；本省及邻省两个版本均选中20家。剔除前后，四套规格的事后平均效应都为正且变化较小。下表为CS-DID的事件后0—5年平均变化，单位为百分点。</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>冲击口径</th>
+<th>时期</th>
+<th style="text-align: right;">全部客户</th>
+<th style="text-align: right;">剔除最大客户</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>本省</td>
+<td>全时期</td>
+<td style="text-align: right;">1.00</td>
+<td style="text-align: right;">1.06</td>
+</tr>
+<tr class="even">
+<td>本省</td>
+<td>截至2012年</td>
+<td style="text-align: right;">2.40</td>
+<td style="text-align: right;">2.59</td>
+</tr>
+<tr class="odd">
+<td>本省及邻省</td>
+<td>全时期</td>
+<td style="text-align: right;">2.82</td>
+<td style="text-align: right;">3.01</td>
+</tr>
+<tr class="even">
+<td>本省及邻省</td>
+<td>截至2012年</td>
+<td style="text-align: right;">2.99</td>
+<td style="text-align: right;">3.19</td>
+</tr>
+</tbody>
+</table>
+<p>本省截至2012年的TWFE事前联合检验p值从0.0446变为0.0512，变化接近5%门槛，且第−5、−4、−3年单项系数仍显著为负，不能认为剔除后已满足平行趋势。本省全时期的联合p值从0.1163变为0.1558，CS-DID事前检验p值从0.0513变为0.0903；两种方法检验的参数不同。</p>
+<p>名单覆盖存在明显限制：本省有北京、上海2个事件无法排名；邻省口径有11个事件无法排名。广东开所前一年116家上市公司中仅1家有有效境内费用。因此，所选者是已观测费用中的最大客户；这项检查不能完全排除大客户需求或区域整体需求推动开所。</p>
+<p>完整比较表、剔除名单与费用覆盖记录</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout" class="callout-header d-flex align-content-center collapsed" data-bs-target=".callout-2-contents" data-bs-toggle="collapse">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">注记</span>剔除前后比较图
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div class="callout-2-contents callout-collapse collapse" id="callout-2">
+<div class="callout-body-container callout-body">
+<p>上排保留全部客户，下排剔除最大客户；左侧TWFE，右侧CS-DID。各子图纵轴自动缩放，需结合刻度比较。</p>
+<p><img alt="本省，全时期：剔除最大客户前后比较。" class="img-fluid" data-fig-cap="本省，全时期。上：全部客户；下：剔除最大客户。" src="figures/market_entry/branch_compare_20261023/comparison_local_only.png" style="width:100.0%"/></p>
+<p><img alt="本省，截至2012年：剔除最大客户前后比较。" class="img-fluid" data-fig-cap="本省，截至2012年。上：全部客户；下：剔除最大客户。" src="figures/market_entry/branch_compare_20261023/comparison_local_only_pre2012.png" style="width:100.0%"/></p>
+<p><img alt="本省及邻省，全时期：剔除最大客户前后比较。" class="img-fluid" data-fig-cap="本省及邻省，全时期。上：全部客户；下：剔除最大客户。" src="figures/market_entry/branch_compare_20261023/comparison_local_and_neighbors.png" style="width:100.0%"/></p>
+<p><img alt="本省及邻省，截至2012年：剔除最大客户前后比较。" class="img-fluid" data-fig-cap="本省及邻省，截至2012年。上：全部客户；下：剔除最大客户。" src="figures/market_entry/branch_compare_20261023/comparison_local_and_neighbors_pre2012.png" style="width:100.0%"/></p>
+</div>
+</div>
+</div>
 <p><span id="full-02_adoption-7"></span></p>
 </section>
 </section>
@@ -478,7 +544,7 @@ WTO 暴露指标的定义与对照组
 <h2 class="anchored" data-anchor-id="数据程序与输出记录">数据、程序与输出记录</h2>
 <p><strong>估计程序归档。</strong> 11_crosslisting_auditor_choice.do · 10_foreign_demand_auditor_choice.do · 13_big4_branch_entry.do · 22_supplychain_adoption_variants.do</p>
 <div class="callout callout-style-default callout-note callout-titled">
-<div aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout" class="callout-header d-flex align-content-center collapsed" data-bs-target=".callout-2-contents" data-bs-toggle="collapse">
+<div aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout" class="callout-header d-flex align-content-center collapsed" data-bs-target=".callout-3-contents" data-bs-toggle="collapse">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -487,13 +553,13 @@ WTO 暴露指标的定义与对照组
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div class="callout-2-contents callout-collapse collapse" id="callout-2">
+<div class="callout-3-contents callout-collapse collapse" id="callout-3">
 <div class="callout-body-container callout-body">
 <p>本章实证分析基于 CSMAR 上市公司基本信息、股票发行与财务报告数据库，结合中国注册会计师协会（CICPA）发布的会计师事务所分支机构设立年鉴与各地对外开放统计数据构建。</p>
 <figure class="latex-table figure">
 <img alt="估计结果与输出状态" class="figure-img" loading="lazy" src="tables/adoption/02_adoption_summary_01_full.png"/>
 <figcaption>
-估计结果与输出状态
+估计结果与输出状态 ·  · 
 </figcaption>
 </figure>
 <p>股东关联数据来自上市公司前十大股东明细（CSMAR 股东关系表），区分控股股东、实际控制人、直接股东与间接控制人；对外开放度数据来自地方统计年鉴中的进出口总额与地区 GDP 汇总指标。</p>
@@ -501,7 +567,7 @@ WTO 暴露指标的定义与对照组
 </div>
 </div>
 </section>
-</main> <!-- /main -->
+<p><a href="sources/21_adoption.qmd">下载本页 QMD 源文件</a></p></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -513,7 +579,7 @@ WTO 暴露指标的定义与对照组
     anchorJS.add('.anchored');
     const isCodeAnnotation = (el) => {
       for (const clz of el.classList) {
-        if (clz.startsWith('code-annotation-')) {
+        if (clz.startsWith('code-annotation-')) {                     
           return true;
         }
       }
@@ -533,11 +599,11 @@ WTO 暴露指标的定义与对照组
         button.setAttribute("data-bs-toggle", "tooltip");
         button.setAttribute("data-bs-placement", "left");
         button.setAttribute("data-bs-title", "已复制");
-        tooltip = new bootstrap.Tooltip(button,
-          { trigger: "manual",
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
             customClass: "code-copy-button-tooltip",
             offset: [0, -8]});
-        tooltip.show();
+        tooltip.show();    
       }
       setTimeout(function() {
         if (tooltip) {
@@ -614,7 +680,7 @@ WTO 暴露指标的定义与对照组
       if (onUntriggerFn) {
         config.onUntrigger = onUntriggerFn;
       }
-      window.tippy(el, config);
+      window.tippy(el, config); 
     }
     const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
     for (var i=0; i<noterefs.length; i++) {
@@ -689,7 +755,7 @@ WTO 暴露指标的定义与对照组
       tippyHover(xref, undefined, function(instance) {
         instance.disable();
         let url = xref.getAttribute('href');
-        let hash = undefined;
+        let hash = undefined; 
         if (url.startsWith('#')) {
           hash = url;
         } else {
@@ -717,7 +783,7 @@ WTO 暴露指标的定义与对照组
               if (note !== null) {
                 const html = processXRef(id, note);
                 instance.setContent(html);
-              }
+              } 
             }).finally(() => {
               instance.enable();
               instance.show();
@@ -741,7 +807,7 @@ WTO 暴露指标的定义与对照组
               }
               const html = processXRef(null, note);
               instance.setContent(html);
-            }
+            } 
           }).finally(() => {
             instance.enable();
             instance.show();
@@ -781,7 +847,7 @@ WTO 暴露指标的定义与对照组
               height = bottom - top;
             }
             if (top !== null && height !== null && parent !== null) {
-              // cook up a div (if necessary) and position it
+              // cook up a div (if necessary) and position it 
               let div = window.document.getElementById("code-annotation-line-highlight");
               if (div === null) {
                 div = window.document.createElement("div");

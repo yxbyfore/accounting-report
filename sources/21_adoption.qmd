@@ -1,0 +1,288 @@
+---
+title: "四大审计师的采用"
+css: empirical.css
+body-classes: empirical-report
+---
+
+## 概述
+
+本章研究企业国际化与区域服务供给扩张如何关联四大采用。需求侧考察跨境上市（B/H 股）、海外母公司、外资股东控制与 WTO 入世；供给侧考察四大分所进入本省及邻省。公司—年（firm-year）非平衡面板中的 TWFE 事件研究与 CS-DID 结果显示，主要事件后四大采用率上升。
+
+## 核心结果
+
+**企业国际化与四大分所扩张后，境内四大采用率均显著上升。** 跨境上市、引入外资控制与分所进入分别提供需求变化与潜在供给变化的观察场景。跨市场监管、国际声誉需求及地理距离与搜寻成本是这些变化的可能机制，现有估计刻画事件前后的采用路径。
+
+**样本与设定。** 观测为公司—年，TWFE 吸收公司和年份固定效应、按公司聚类，未加额外财务控制；基期为事件前一年，区间为 95%。B/H 输入处理公司分别为 91、161；外资图实际控制人与控股股东分别为 303、340；分所本省及邻省口径为 868（校对后事件年输入计数）。以上均为输入计数，逐回归实际年份和有效处理数待核验。外资关系合并两端尾部，跨境上市与分所 TWFE 剔除处理公司窗口外观测；H 股、控股股东及本省分所口径的部分处理前系数偏离零。
+
+**基准事件研究设定（Event Study Specification）：**
+
+$$
+Y_{it} = \sum_{k \in \mathcal{K}, \, k \ne -1} \beta_k \mathbf{1}\{t - T_i = k\} + \alpha_i + \lambda_t + \varepsilon_{it}.
+$$
+
+其中 $T_i$ 为公司 $i$ 首次发生特定事件（B/H 股上市、首次出现外资控制关系、四大分所进入本省或邻省）的年份；$Y_{it}$ 为公司 $i$ 在第 $t$ 年聘任目标事务所的指示变量，主线关注境内四大（$Big4_{it}$），并以本土八大（$Local8_{it}$）作为替代品参照；$\alpha_i$ 为公司固定效应，$\lambda_t$ 为年份固定效应。
+
+![精选结果：B/H 股上市对四大采用的动态效应（TWFE）](figures/market_entry/bh_listing_twfe.png){width=100%}
+
+![精选结果：外资股东关系与四大采用（TWFE）](figures/market_entry/foreign_relations_no_hmt_twfe.png){width=100%}
+
+![精选结果：四大分所进入的地理供给扩张（截至 2012 年，本省及邻省）](figures/market_entry/branch_entry_corrected_20261023/event_study_local_and_neighbors_pre2012.png){width=100%}
+
+[海外上市完整结果](#full-02_adoption-2) · [外资与国际业务完整结果](#full-02_adoption-4) · [分所完整结果及 CS-DID](#full-02_adoption-6)
+
+<span id="full-02_adoption-1"></span>
+
+<span id="settings-02_adoption"></span>
+
+## 1. 四大在中国市场的扩张
+
+### 1.1 结果变量与基准设定
+
+核心被解释变量为公司 $i$ 在年份 $t$ 是否聘用境内四大事务所（$Big4_{it} \in \{0, 1\}$）。为识别审计师选择是否存在对本土优质事务所的替代效应，我们同时构建是否聘用本土八大事务所的指示变量（$Local8_{it} \in \{0, 1\}$）。
+
+基准静态模型设定为多期双向固定效应模型：
+
+$$
+Y_{it} = \beta D_{it} + \alpha_i + \lambda_t + \varepsilon_{it},
+$$
+
+其中 $D_{it}$ 表示企业是否已发生对应的上市、控制权或分所进入事件，$\beta$ 捕捉事件后同一企业聘用目标事务所概率的平均位移。
+
+为刻画动态调整路径并检验平行趋势（parallel trends），我们估计相对事件年份 $k$ 的动态事件研究方程：
+
+$$
+Y_{it} = \sum_{k \ne -1} \beta_k \mathbf{1}\{t - T_i = k\} + \alpha_i + \lambda_t + \varepsilon_{it}.
+$$
+
+以事件发生前一年（$k = -1$）作为基期。图示中展示估计系数及其 95% 置信区间。处理前系数（$k < -1$）用于检验处理前趋势（pre-trends）是否平稳；处理后系数（$k \ge 0$）刻画采用效应的持续性与动态演变。基准回归吸收公司与年份固定效应，不加入可能受国际化事件影响的时变财务控制变量。
+
+<span id="full-02_adoption-2"></span>
+
+## 2. 海外上市与四大采用
+
+### 2.1 B 股与 H 股上市的动态效应
+
+跨境上市对企业财报披露准则和国际投资者认可度提出了更高要求。以公司首次在境内发行 B 股或在香港发行 H 股为事件时点，分别考察对境内四大和本土八大采用的动态影响。
+
+实证结果显示，B 股上市后，四大采用概率在事件当年即呈现正向变化，并在后续年份逐步增强；相比之下，本土八大的聘用概率在上市后未出现持续上升，显现出国际化上市对国际声誉审计师的倾斜倾向。对于 H 股上市，四大采用点估计在上市后显著为正，与跨市场披露要求和国际审计需求增加的解释相容。
+
+### 2.2 B/H 股总体对比：TWFE 与 CS-DID
+
+下图分别展示 B 股与 H 股首次上市的动态路径。输入样本中，首次发行 B 股和 H 股的处理组公司分别为 91 家和 161 家。为检验交错进入下的异质性偏误，我们并列汇报 Callaway & Sant'Anna (2021) 分组—时间平均处理效应（CS-DID）与标准 TWFE 估计结果。
+
+![](figures/market_entry/bh_listing_csdid.png){fig-alt="以未处理及尚未处理公司为对照组的B股与H股上市事件研究图。" fig-cap="B 股与 H 股上市：分组—时间平均处理效应（CS-DID）。上排为境内四大，下排为本土八大；绿色区域为处理前估计，橙色区域为处理后估计。" width="100%"}
+
+![](figures/market_entry/bh_listing_twfe.png){fig-alt="B股与H股上市的双向固定效应事件研究图。" fig-cap="B 股与 H 股上市：双向固定效应估计（TWFE）。上排为境内四大，下排为本土八大；与 CS-DID 并列展示。" width="100%"}
+
+对比显示，在两种估计方法下，B 股与 H 股上市后对境内四大的采用均呈持续且显著的正向跃升，而本土八大的置信区间普遍较宽且在零线附近摆动。跨境上市后的采用增长主要集中于四大。本土八大估计的不确定性较高，四大与本土八大的替代程度需要结合组间差异进一步判断。
+
+### 2.3 制度分期与异质性分析
+
+审计市场的政策与监管演进对审计师选择具有重要调节作用。我们从两个历史制度节点考察时间异质性：
+
+**2002 年审计市场整肃前后的异质性。** 2001—2002 年，随着“银广夏”等财务造假案件暴露以及中天勤解体，财政部与证监会启动审计市场重组与脱钩改制。我们以首次 B/H 股上市是否发生在 2002 年及以后构建分组事件研究，并排除金融与房地产行业以避免特定行业周期的干扰。
+
+如下图所示，在 2002 年及以后上市的公司中，四大采用概率在上市当年即迅速跳升，且处理后效应更为集中和陡峭；而在 2002 年以前上市的公司中，四大的正向采用虽然存在，但上升路径相对平缓且滞后。这一分期结果显示，较晚上市队列的四大采用变化更集中于上市当年；制度变化与队列构成可能共同解释这一差异。
+
+![](figures/market_entry/bh_listing_post2002_twfe.png){fig-alt="剔除金融和房地产公司后，按2002年前后分组的B/H股上市事件研究图。" fig-cap="B/H 股上市的时间异质性：剔除金融与房地产后，实线为 2002 年及以后首次上市的公司，虚线为 2002 年前首次上市的公司。" width="100%"}
+
+**2010 年 H 股审计准入放开的制度检验。** 2010 年底，财政部与证监会发布获准从事 H 股企业审计业务的内地会计师事务所名单，允许内地优质事务所承接 H 股审计。针对这一制度转变，我们按首次上市年份划分上市队列（< 2010 与 ≥ 2010），检验不同队列下 H 股上市的采用动态与平行趋势。下表汇报各组样本量及事件前第 4、3、2 年系数联合为零的平行趋势检验结果。
+
+<figure class="latex-table"><a href="tables/adoption/02_adoption_summary_02_full.pdf"><img src="tables/adoption/02_adoption_summary_02_full.png" alt="H 股上市队列的处理公司数与处理前联合检验" loading="lazy"></a><figcaption>H 股上市队列的处理公司数与处理前联合检验 · <a href="tables/adoption/02_adoption_summary_02_full.tex">TeX</a> · <a href="tables/adoption/02_adoption_summary_02_full.pdf">PDF</a></figcaption></figure>
+
+检验结果显示，全样本中 2010 年前上市队列的 pre-trends 联合检验 $p$ 值为 0.1824，2010 年及以后队列为 0.4849；在剔除金融与房地产样本后，$p$ 值分别为 0.1774 与 0.1636。各组检验均未在 5% 水平拒绝所检验的处理前系数联合为零。该检验为趋势可比性提供支持，结论仍受处理前观测和估计精度约束。
+
+<span id="full-02_adoption-3"></span>
+
+## 3. 境外审计师与境内四大
+
+### 3.1 使用境外事务所
+
+企业聘用境外事务所通常伴随着境外融资或业务扩张。以公司首次聘任境外事务所为事件冲击，TWFE 与 CS-DID 均显示境内四大的采用概率显著提升，而本土八大呈现相反的负向替代走势。该口径涵盖不同类型的境外事务所，描述境内外审计选择的联动。
+
+![](figures/market_entry/overseas_auditor_csdid.png){fig-alt="以未处理及尚未处理公司为对照组的境外事务所事件研究图。" fig-cap="使用任一境外事务所后的境内审计师选择：分组—时间平均处理效应（CS-DID）。左图为境内四大，右图为本土八大。" width="100%"}
+
+![](figures/market_entry/overseas_auditor_twfe.png){fig-alt="使用任一境外事务所后的双向固定效应事件研究图。" fig-cap="使用任一境外事务所后的境内审计师选择：双向固定效应估计（TWFE）。与上方 CS-DID 并列展示。" width="100%"}
+
+### 3.2 使用境外四大与网络协同
+
+当将境外事务所限定为“境外四大”（Overseas Big 4）时，采用境内四大的概率显著上升：TWFE 与 CS-DID 均显示，企业在首次聘任境外四大当年，境内四大采用率立即出现大幅跳升，且在后续五年内保持高度稳定（95% 置信区间均显著高于零）。
+
+境内外四大的同步采用与审计网络协同（network synergies）的解释一致。统一使用国际品牌成员所可能降低跨司法辖区的财报合并与沟通成本；具体协同渠道仍需单独检验。
+
+![](figures/market_entry/overseas_big4_csdid.png){fig-alt="以未处理及尚未处理公司为对照组的境外四大事件研究图。" fig-cap="境外四大到境内四大：首次聘用境外四大后的境内四大采用路径，采用分组—时间平均处理效应（CS-DID）。" width="100%"}
+
+![](figures/market_entry/overseas_big4_twfe.png){fig-alt="首次使用境外四大审计师后的双向固定效应事件研究图。" fig-cap="境外四大到境内四大：双向固定效应估计（TWFE）。处理后呈现显著且持续的正向效应。" width="100%"}
+
+### 3.3 剔除金融与房地产行业的稳健性检验
+
+鉴于金融与房地产企业在境外发债和海外融资中的特殊性及其庞大规模，我们排除这两类行业后重新估计。剔除金融与房地产企业后，CS-DID 与 TWFE 的处理后系数仍为正，幅度接近基准结果。境内外四大采用的联动在其余行业中同样存在。
+
+![](figures/market_entry/overseas_big4_excl_finre_csdid.png){fig-alt="剔除金融与房地产公司后，首次使用境外四大审计师的分组—时间事件研究图。" fig-cap="境外四大到境内四大：剔除金融与房地产公司的分组—时间平均处理效应（CS-DID）。" width="100%"}
+
+![](figures/market_entry/overseas_big4_excl_finre_twfe.png){fig-alt="剔除金融与房地产公司后，首次使用境外四大审计师的双向固定效应事件研究图。" fig-cap="境外四大到境内四大：剔除金融与房地产公司的双向固定效应估计（TWFE）。" width="100%"}
+
+<span id="full-02_adoption-4"></span>
+
+## 4. 外资与国际业务暴露
+
+### 4.1 股权结构与外资控制权
+
+外资进入直接改变了企业的公司治理结构与委托代理关系。我们区分纯外国资本（排除港澳台）的四类股东关系层级：控股股东、实际控制人、直接股东与间接控制人。
+
+下方四联图分别展示四类关系的 TWFE 与 CS-DID 估计结果。在控制权具有实质影响的“实际控制人”与“控股股东”组中，事件发生后境内四大采用概率均显著上升；其中实际控制人口径在事件后 1—5 年持续显著为正，而控股股东组在处理前有轻微上升。相比之下，不具有控股地位的“直接股东”正向效应较弱，而“间接控制人”组因样本规模较小未能显现出清晰模式。外资控制关系对应更明显的采用变化；控股股东组已有处理前上升，需要结合其先行趋势解释。
+
+![](figures/market_entry/foreign_relations_no_hmt_twfe.png){fig-alt="排除港澳台后四类外资股东关系的TWFE事件研究图。" fig-cap="海外股东关系与境内四大采用：全样本、排除港澳台（TWFE）。输入处理公司数分别为实际控制人 303 家、控股股东 340 家、直接股东 545 家、间接控制人 49 家。基期为 −1，展示 95% 置信区间。" width="100%"}
+
+![](figures/market_entry/foreign_relations_no_hmt_csdid.png){fig-alt="排除港澳台后四类外资股东关系的CS-DID事件研究图。" fig-cap="海外股东关系与境内四大采用：全样本、排除港澳台（CS-DID）。对照组为 not treated 和 not yet treated 公司，展示 95% 置信区间。" width="100%"}
+
+作为辅助口径，下图展示独立控制人面板（含港澳台）在 2012 年前的实证表现。TWFE 与 CS-DID 的处理后系数整体为正，但各期置信区间较宽，该样本中的采用变化估计精度较低。
+
+![](figures/market_entry/foreign_controller_with_hmt_pre2012.png){fig-alt="2012年以前、含港澳台的外资实际控制事件研究，比较TWFE和CS-DID。" fig-cap="独立控制人面板：首次外资实际控制（含港澳台）与境内四大采用（年份 < 2012）。左：TWFE；右：CS-DID。输入处理公司 280 家，对照公司 2,129 家；95% 置信区间。" width="100%"}
+
+### 4.2 WTO 入世冲击与四大采用
+
+中国于 2001 年 12 月加入世界贸易组织（WTO），构成全国范围内的制度性开放冲击。我们采用 1998—2010 年非平衡面板，以 2001 年为基期，构建外向型地理暴露的交互模型：
+
+$$
+Big4_{it} = \alpha_i + \lambda_t + \sum_{s=1998, \, s \ne 2001}^{2010} \beta_s Treat_i \times \mathbf{1}\{t=s\} + \varepsilon_{it}.
+$$
+
+其中 $Treat_i$ 基于上市公司注册地划分：沿海组包括辽宁、河北、天津、山东、江苏、上海、浙江、福建、广东、广西、海南。$\beta_s$ 衡量沿海暴露组相对于内陆企业在各年份四大聘用率的相对差距变化。
+
+<figure class="latex-table"><a href="tables/adoption/02_adoption_summary_03_full.pdf"><img src="tables/adoption/02_adoption_summary_03_full.png" alt="WTO 暴露指标的定义与对照组" loading="lazy"></a><figcaption>WTO 暴露指标的定义与对照组 · <a href="tables/adoption/02_adoption_summary_03_full.tex">TeX</a> · <a href="tables/adoption/02_adoption_summary_03_full.pdf">PDF</a></figcaption></figure>
+
+下表列出不同暴露定义在 2002 年（入世首年）的相对位移估计：
+
+<figure class="latex-table"><a href="tables/adoption/02_adoption_summary_04_full.pdf"><img src="tables/adoption/02_adoption_summary_04_full.png" alt="不同 WTO 暴露口径的 2002 年估计系数" loading="lazy"></a><figcaption>不同 WTO 暴露口径的 2002 年估计系数 · <a href="tables/adoption/02_adoption_summary_04_full.tex">TeX</a> · <a href="tables/adoption/02_adoption_summary_04_full.pdf">PDF</a></figcaption></figure>
+
+如下图所示，沿海企业的四大采用率在 2002 年相对于 2001 年出现显著跳升，并在 2002—2007 年间维持相对较高的溢价水平；处理前年份（1998—2000）未见显著的发散走势。
+
+![](figures/market_entry/wto_exposure/treat_coast_big4.png){fig-alt="沿海相对非沿海企业在2002年后四大聘用概率差距上升的事件研究。" fig-cap="WTO 入世前后：沿海暴露组的四大聘用概率差距变化（以 2001 年为基期）。公司层面聚类标准误，95% 置信区间。" width="100%"}
+
+::: {.callout-note collapse="true"}
+## 补充分析：城市开放度与跨国合营维度的辅助检验
+
+为进一步核验国际化业务暴露的异质性，我们结合城市进出口总额占当地 GDP 比例（$Openness_{c,2003} > 1$）以及跨国合营企业（JV）数据展开探索性检验。
+
+![](figures/market_entry/wto_exposure/treat_open_big4.png){fig-alt="以注册城市2003年进出口总额占GDP比例是否超过100%分组的历史事件研究。" fig-cap="城市开放度：2003 年进出口总额／GDP > 1 的公司相对比值 ≤ 1 的公司。" width="100%"}
+
+![](figures/market_entry/wto_exposure/treat_overseas_jv_big4.png){fig-alt="按全样本期曾有海外合营企业分组、统一以2002年为事件点的历史结果。" fig-cap="海外合营：全期曾出现海外合营标记的公司相对其余公司。" width="100%"}
+
+![](figures/market_entry/wto_exposure/treat_oecd_jv_big4.png){fig-alt="按全样本期曾有OECD合营企业分组的历史结果。" fig-cap="OECD 合营：全期曾出现 OECD 成员国合营标记的公司相对其余公司。" width="100%"}
+
+![](figures/market_entry/wto_exposure/treat_us_eu_jv_big4.png){fig-alt="按全样本期曾有美欧日韩合营企业分组的历史结果。" fig-cap="美欧日韩合营：全期曾出现美欧日韩合营标记的公司相对其余公司。" width="100%"}
+
+![](figures/market_entry/wto_exposure/treat_trade_transport_big4.png){fig-alt="特定运输行业相对其他行业的历史事件研究。" fig-cap="运输行业：外向型运输相关行业（G55/G56/G58/G59）相对其他行业。" width="100%"}
+:::
+
+<span id="full-02_adoption-5"></span>
+
+## 5. 四大早期客户画像
+
+本节将 2001—2002 年聘用境内四大的 121 家公司定义为“早期四大客户”，与 2002 年及以前上市的其他公司及全样本公司比较规模、行业和上市背景。
+
+### 5.1 企业规模
+
+在资产与业务规模上，早期四大客户规模较大。早期客户的注册资本均值为 39.19 亿元，显著高于同时期普通上市公司的 18.15 亿元；在 2002 年营业收入上，早期客户均值达 59.57 亿元，为普通上市公司（15.44 亿元）的近 4 倍。
+
+![](figures/early_big4_clients/reg_capital_ci_bar.png){fig-alt="2001至2002年早期四大客户、2002年及以前上市公司和全样本公司的注册资本均值对比。" fig-cap="早期四大客户的注册资本画像（单位：亿元）。" width="100%"}
+
+![](figures/early_big4_clients/revenue_ci_bar_2002.png){fig-alt="三组公司在2002年的营业总收入均值对比。" fig-cap="早期四大客户的 2002 年营业收入画像（单位：亿元）。" width="100%"}
+
+### 5.2 行业分布与市场渗透
+
+早期四大客户在行业分布上高度集中于金融、交通运输、公用事业及大型制造业等重资产与高度规范化行业。
+
+![](figures/early_big4_clients/early_big4_industry_dist.png){fig-alt="早期四大客户与两个参照组的行业构成对比。" fig-cap="早期四大客户与参照组的行业分布对比。" width="100%"}
+
+![](figures/early_big4_clients/early_big4_industry_penetration.png){fig-alt="早期四大客户占各行业2002年及以前上市公司的比例。" fig-cap="各行业中早期四大客户占 2002 年及以前上市公司的比例。" width="100%"}
+
+### 5.3 跨境上市背景与其他客户属性
+
+在资本结构与上市属性上，早期四大客户中具有 A/B/H 交叉挂牌背景的比例达到 45.06%，而同时期普通上市公司中仅为 10.10%。这一差距显示早期四大客户中跨市场挂牌更为普遍，与跨市场合规需求的解释一致。
+
+![](figures/early_big4_clients/abh_ratio_ci_bar.png){fig-alt="早期四大客户与两个参照组的历史A/B/H交叉挂牌比例。" fig-cap="历史 A/B/H 交叉挂牌比例对比。" width="100%"}
+
+<span id="full-02_adoption-6"></span>
+
+## 6. 供给侧扩张：四大分所设立
+
+### 6.1 四大分所设立与地区审计服务供给
+
+四大分所扩张增加本地服务网点，可能通过缩短差旅距离、降低服务与搜寻成本影响企业采用。同时，分所选址也可能响应已经形成的客户需求。本节考察分所进入前后的采用路径，并区分服务供给变化与需求驱动选址这两种解释。
+
+### 6.2 分所进入的事件研究
+
+我们分别以“四大分所进入本省”以及“四大分所进入本省或邻省”作为事件，在全时期与截至 2012 年（含）两个版本下估计动态采用路径。四家事务所合并为一类，结果变量为当年是否聘用任一家境内四大。下方四图均使用 2026 年 10 月 23 日校对后的事件日期；普华广州的 2008 年按已确认口径暂代事件年，证据只表明该年最迟已存在，并非已确认的首次开所年。其余样本、固定效应和公司聚类沿用原13程序。
+
+新日期下，四套规格的事后平均系数均为正。CS-DID 的事件后 0—5 年平均变化，在本省口径下为全时期 1.00 个百分点、截至 2012 年 2.40 个百分点；本省及邻省口径分别为 2.82 和 2.99 个百分点。这些数值描述开所前后的采用变化，尚不能单独识别纯粹的供给效应。
+
+本省 TWFE 在开所前已有明显上升走势。大客户先聘用四大、事务所随后在当地开所，是与这一模式相容的解释：四大在设所前也可能跨地区服务客户。但图形不能判断变化是否由最大一家客户驱动。此次已按新日期重估最大客户剔除版本：剔除后本省两个样本的第−5、−4、−3年TWFE系数仍分别在5%水平显著为负，事前上升路径未消失；客户识别仍受境内审计费缺失限制。TWFE 与 CS-DID 的比较组及事前参考方式也不同，不能把两图的差异完全解释为经济机制。
+
+![](figures/market_entry/branch_entry_corrected_20261023/event_study_local_only_pre2012.png){fig-alt="本省分所进入、截至2012年的事件研究。" fig-cap="分所扩张：本省暴露（年份 ≤ 2012）。左：TWFE；右：CS-DID。" width="100%"}
+
+![](figures/market_entry/branch_entry_corrected_20261023/event_study_local_only.png){fig-alt="本省分所进入、全样本的事件研究。" fig-cap="分所扩张：本省暴露（全样本）。左：TWFE；右：CS-DID。" width="100%"}
+
+![](figures/market_entry/branch_entry_corrected_20261023/event_study_local_and_neighbors_pre2012.png){fig-alt="本省及邻省分所进入、截至2012年的事件研究。" fig-cap="分所扩张：本省及邻省暴露（年份 ≤ 2012）。左：TWFE；右：CS-DID。" width="100%"}
+
+![](figures/market_entry/branch_entry_corrected_20261023/event_study_local_and_neighbors.png){fig-alt="本省及邻省分所进入、全样本的事件研究。" fig-cap="分所扩张：本省及邻省暴露（全样本）。左：TWFE；右：CS-DID。" width="100%"}
+
+### 6.3 剔除事前最大客户的敏感性检查
+
+每个事件在受影响省的前一年，从全部当地上市公司中按正值人民币境内审计费选最大客户，含并列，删除所选公司的全部年份；本省及邻省口径在各受影响省分别排名。截至2012年版本不使用未来事件。仅这一项样本删除发生变化，其他估计口径沿用6.2节。
+
+本省全时期选中20家公司，截至2012年选中10家；本省及邻省两个版本均选中20家。剔除前后，四套规格的事后平均效应都为正且变化较小。下表为CS-DID的事件后0—5年平均变化，单位为百分点。
+
+|冲击口径|时期|全部客户|剔除最大客户|
+|---|---|---:|---:|
+|本省|全时期|1.00|1.06|
+|本省|截至2012年|2.40|2.59|
+|本省及邻省|全时期|2.82|3.01|
+|本省及邻省|截至2012年|2.99|3.19|
+
+本省截至2012年的TWFE事前联合检验p值从0.0446变为0.0512，变化接近5%门槛，且第−5、−4、−3年单项系数仍显著为负，不能认为剔除后已满足平行趋势。本省全时期的联合p值从0.1163变为0.1558，CS-DID事前检验p值从0.0513变为0.0903；两种方法检验的参数不同。
+
+名单覆盖存在明显限制：本省有北京、上海2个事件无法排名；邻省口径有11个事件无法排名。广东开所前一年116家上市公司中仅1家有有效境内费用。因此，所选者是已观测费用中的最大客户；这项检查不能完全排除大客户需求或区域整体需求推动开所。
+
+[完整比较表、剔除名单与费用覆盖记录](tables/market_entry/branch_compare_20261023/comparison.xlsx)
+
+::: {.callout-note collapse="true"}
+## 剔除前后比较图
+
+上排保留全部客户，下排剔除最大客户；左侧TWFE，右侧CS-DID。各子图纵轴自动缩放，需结合刻度比较。
+
+![](figures/market_entry/branch_compare_20261023/comparison_local_only.png){fig-alt="本省，全时期：剔除最大客户前后比较。" fig-cap="本省，全时期。上：全部客户；下：剔除最大客户。" width="100%"}
+
+![](figures/market_entry/branch_compare_20261023/comparison_local_only_pre2012.png){fig-alt="本省，截至2012年：剔除最大客户前后比较。" fig-cap="本省，截至2012年。上：全部客户；下：剔除最大客户。" width="100%"}
+
+![](figures/market_entry/branch_compare_20261023/comparison_local_and_neighbors.png){fig-alt="本省及邻省，全时期：剔除最大客户前后比较。" fig-cap="本省及邻省，全时期。上：全部客户；下：剔除最大客户。" width="100%"}
+
+![](figures/market_entry/branch_compare_20261023/comparison_local_and_neighbors_pre2012.png){fig-alt="本省及邻省，截至2012年：剔除最大客户前后比较。" fig-cap="本省及邻省，截至2012年。上：全部客户；下：剔除最大客户。" width="100%"}
+
+:::
+
+<span id="full-02_adoption-7"></span>
+
+## 7. 稳健性与识别边界
+
+国际化事件与分所进入后，四大采用率整体上升。估计方法、行业样本和处理前路径提供以下比较：
+
+1. **估计方法的一致性：** 主要处理后路径在 TWFE 与 CS-DID 下方向一致，支持结果对估计方法的稳定性。
+2. **行业敏感性排查：** 剔除金融与房地产行业后，跨境上市和境外四大采用对应的主要正向变化仍然存在。
+3. **平行趋势检验：** 在 H 股上市队列的联合检验中，处理前第 4、3、2 年系数均未在 5% 水平显著偏离零，为事件研究提供了基础支撑。
+4. **因果识别边界：** 分所选址可能响应区域经济与潜在需求，跨境上市和外资进入也涉及企业的前瞻性选择。因果解释需要处理这些共同决定采用与事件时点的因素；现有结果刻画国际化需求、服务覆盖与采用的动态联系。
+
+## 数据、程序与输出记录
+
+**估计程序归档。** [11_crosslisting_auditor_choice.do](maintenance/source_code/code/stata/10_market_entry/11_crosslisting_auditor_choice.do) · [10_foreign_demand_auditor_choice.do](maintenance/source_code/code/stata/10_market_entry/10_foreign_demand_auditor_choice.do) · [13_big4_branch_entry.do](maintenance/source_code/code/stata/10_market_entry/13_big4_branch_entry.do) · [22_supplychain_adoption_variants.do](maintenance/source_code/code/stata/20_network_spillovers/22_supplychain_adoption_variants.do)
+
+::: {.callout-note collapse="true"}
+## 模块估计与数据来源说明
+
+本章实证分析基于 CSMAR 上市公司基本信息、股票发行与财务报告数据库，结合中国注册会计师协会（CICPA）发布的会计师事务所分支机构设立年鉴与各地对外开放统计数据构建。
+
+<figure class="latex-table"><a href="tables/adoption/02_adoption_summary_01_full.pdf"><img src="tables/adoption/02_adoption_summary_01_full.png" alt="估计结果与输出状态" loading="lazy"></a><figcaption>估计结果与输出状态 · <a href="tables/adoption/02_adoption_summary_01_full.tex">TeX</a> · <a href="tables/adoption/02_adoption_summary_01_full.pdf">PDF</a></figcaption></figure>
+
+股东关联数据来自上市公司前十大股东明细（CSMAR 股东关系表），区分控股股东、实际控制人、直接股东与间接控制人；对外开放度数据来自地方统计年鉴中的进出口总额与地区 GDP 汇总指标。
+:::

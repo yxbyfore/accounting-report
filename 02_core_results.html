@@ -20,7 +20,7 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
 </style>
@@ -307,7 +307,7 @@ ul.task-list li input[type="checkbox"] {
 <figure class="latex-table figure">
 <img alt="Audit Opinions and Next-Year Big 4 Client Transitions" class="figure-img" loading="lazy" src="tables/big4_evidence/client_flows.png" style="width:734px"/>
 <figcaption>
-Audit Opinions and Next-Year Big 4 Client Transitions
+Audit Opinions and Next-Year Big 4 Client Transitions ·  · 
 </figcaption>
 </figure>
 <p><span id="fig-core-client-selection"></span></p>
@@ -353,7 +353,7 @@ Audit Opinions and Next-Year Big 4 Client Transitions
 <p>注：四组均为 All Matches；表内保留第一阶段系数、标准误、F、p 值、partial R²、二阶段系数及标准误、样本量和聚类数。这是按显著性及预期方向筛选后的探索性展示，显著性未作筛选调整，排除限制需另行论证。“历史无失败／无违规”度量可观察的执业历史，个人能力的测量可靠性见审计师章节。<a href="./24_auditor_quality.html#候选池-iv上一年事务所候选供给">完整规格与识别讨论</a> · 表格 TeX · 。</p>
 <p>完整设定、替代规格与输出来源见各节所链接的专题章节。</p>
 </section>
-</main> <!-- /main -->
+<p><a href="sources/02_core_results.qmd">下载本页 QMD 源文件</a></p></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -365,7 +365,7 @@ Audit Opinions and Next-Year Big 4 Client Transitions
     anchorJS.add('.anchored');
     const isCodeAnnotation = (el) => {
       for (const clz of el.classList) {
-        if (clz.startsWith('code-annotation-')) {
+        if (clz.startsWith('code-annotation-')) {                     
           return true;
         }
       }
@@ -385,11 +385,11 @@ Audit Opinions and Next-Year Big 4 Client Transitions
         button.setAttribute("data-bs-toggle", "tooltip");
         button.setAttribute("data-bs-placement", "left");
         button.setAttribute("data-bs-title", "已复制");
-        tooltip = new bootstrap.Tooltip(button,
-          { trigger: "manual",
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
             customClass: "code-copy-button-tooltip",
             offset: [0, -8]});
-        tooltip.show();
+        tooltip.show();    
       }
       setTimeout(function() {
         if (tooltip) {
@@ -466,7 +466,7 @@ Audit Opinions and Next-Year Big 4 Client Transitions
       if (onUntriggerFn) {
         config.onUntrigger = onUntriggerFn;
       }
-      window.tippy(el, config);
+      window.tippy(el, config); 
     }
     const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
     for (var i=0; i<noterefs.length; i++) {
@@ -541,7 +541,7 @@ Audit Opinions and Next-Year Big 4 Client Transitions
       tippyHover(xref, undefined, function(instance) {
         instance.disable();
         let url = xref.getAttribute('href');
-        let hash = undefined;
+        let hash = undefined; 
         if (url.startsWith('#')) {
           hash = url;
         } else {
@@ -569,7 +569,7 @@ Audit Opinions and Next-Year Big 4 Client Transitions
               if (note !== null) {
                 const html = processXRef(id, note);
                 instance.setContent(html);
-              }
+              } 
             }).finally(() => {
               instance.enable();
               instance.show();
@@ -593,7 +593,7 @@ Audit Opinions and Next-Year Big 4 Client Transitions
               }
               const html = processXRef(null, note);
               instance.setContent(html);
-            }
+            } 
           }).finally(() => {
             instance.enable();
             instance.show();
@@ -633,7 +633,7 @@ Audit Opinions and Next-Year Big 4 Client Transitions
               height = bottom - top;
             }
             if (top !== null && height !== null && parent !== null) {
-              // cook up a div (if necessary) and position it
+              // cook up a div (if necessary) and position it 
               let div = window.document.getElementById("code-annotation-line-highlight");
               if (div === null) {
                 div = window.document.createElement("div");
