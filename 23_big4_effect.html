@@ -3091,13 +3091,13 @@ CAR_{if}^{[-1,d]}=\text{firm FE}+\text{year FE}
 <section id="market-long-window" class="level3">
 <h3 class="anchored" data-anchor-id="market-long-window">2.2 长窗事件研究：公告前后的价格路径</h3>
 <p>本节把窗口延伸至公告前后各60个市场交易日，以−60日为基期，区分公告前已形成的差异与公告后的新增变化。先展示四组实际价格路径，再报告各审计组内部的消息响应及共同模型的组间响应差。</p>
-<p><strong>CAR定义：全市场调整，不是市值十分位组调整。</strong> 本节描述性四路径图、组内回归和interaction图的CAR均使用同一个全市场基准。个股日收益<span class="math inline">\(r^{TR}_{it}\)</span>为含现金红利再投资总收益；市场日收益按前一市场交易日流通市值加权：</p>
+<p><strong>原基准CAR定义：全市场调整。</strong> 原描述性四路径图及既有组内回归、interaction图使用同一个全市场基准；下文另列的规模敏感性检验改用市值组基准，分别解释。个股日收益<span class="math inline">\(r^{TR}_{it}\)</span>为含现金红利再投资总收益；市场日收益按前一市场交易日流通市值加权：</p>
 <p><span class="math display">\[
 r_{mt}=\frac{\sum_{i\in\mathcal M_t}MV^{float}_{i,t-1}r^{TR}_{it}}
 {\sum_{i\in\mathcal M_t}MV^{float}_{i,t-1}},\qquad
 AR_{it}=r^{TR}_{it}-r_{mt}.
 \]</span></p>
-<p><span class="math inline">\(\mathcal M_t\)</span>为当日构造市场组合的有效股票集合，<span class="math inline">\(MV^{float}_{i,t-1}\)</span>为前一市场交易日流通市值。这里没有按市值分成10组，也没有减去公司所在市值组的收益；此前08 notebook的市值组调整收益是另一套变量。</p>
+<p><span class="math inline">\(\mathcal M_t\)</span>为当日构造市场组合的有效股票集合，<span class="math inline">\(MV^{float}_{i,t-1}\)</span>为前一市场交易日流通市值。这一定义不减去公司所在市值组收益；下文另列市值十分组调整的敏感性结果。</p>
 <p>公告相对交易日记为<span class="math inline">\(k\)</span>，长窗[−60,+60]以−60日归零：</p>
 <p><span class="math display">\[
 C_{i,-60}=0,\qquad C_{ik}=\sum_{j=-59}^{k}\left(r^{TR}_{ij}-r_{m,t(i,j)}\right),\quad k&gt;-60.
@@ -3131,6 +3131,38 @@ C_{i,-60}=0,\qquad C_{ik}=\sum_{j=-59}^{k}\left(r^{TR}_{ij}-r_{m,t(i,j)}\right),
 </figure>
 </div>
 </details>
+<section id="market-size-top70" class="level5">
+<h5 class="anchored" data-anchor-id="market-size-top70">规模敏感性：市值组调整并剔除最小30%</h5>
+<p><strong>为什么做这项规模检验？</strong> <a href="https://doi.org/10.1016/j.jfineco.2019.03.008">Jianan Liu、Robert F. Stambaugh与Yu Yuan（2019），《Size and value in China》</a>，发表于 <em>Journal of Financial Economics</em> 134(1):48–69。论文指出，中国最小30%的股票包含较高的潜在壳价值，收益与盈利意外的联系较弱、与IPO活动的联系较强，因此在构造因子时剔除最小30%（见<a href="https://rodneywhitecenter.wharton.upenn.edu/wp-content/uploads/2019/04/01-18-Stambaugh.Published.BlumePrize.pdf">作者接收稿第2页及第5.1节</a>）。若四大与非四大客户的规模分布不同，全市场调整后的收益差可能同时反映规模及壳价值暴露。为检查这一竞争解释，这里改用公司所在市值十分组的收益作基准，并剔除公告年最小三组。检索词：<code>Liu Stambaugh Yuan 2019 Size and value in China</code>。</p>
+<p><strong>本次口径。</strong> 按自然年首个可用流通市值划分十组，按公告交易年份保留第4—10组，不将剩余公司重新分组；窗口跨年时按交易日当年所属组取基准。组内基准使用前一市场交易日流通市值加权的含分红总收益。令<span class="math inline">\(g(i,t)\)</span>为当年组别，<span class="math inline">\(\mathcal V_{g,t}\)</span>为基准中具有有效收益及前一市场交易日正流通市值的股票集合：</p>
+<p><span class="math display">\[
+r^{size}_{g,t}=\frac{\sum_{j\in\mathcal V_{g,t}}MV^{float}_{j,t-1}r^{TR}_{jt}}
+{\sum_{j\in\mathcal V_{g,t}}MV^{float}_{j,t-1}},\qquad
+C^{size}_{i,-60}=0,\quad
+C^{size}_{ik}=\sum_{s=-59}^{k}\left[r^{TR}_{i,s}-r^{size}_{g(i,t(i,s)),t(i,s)}\right].
+\]</span></p>
+<p>原队列20,408份公告，剔除最小三组3,024份，另按确认排除两份在窗口内缺少当年组别的公告（000831的2012财年、601375的2016财年），最终保留17,382份。四条线各自的公告数、公司数在−60至+60的每个日期均固定；缺日个股收益记0、仍扣组收益。图为等公告权重的实际均值，无固定效应调整；好消息实线、中性虚线，仅画路径。分期按财年，纵轴为CAR百分点。</p>
+<p>本次同时更换基准与筛选样本，用于检查原路径的规模敏感性；尚未分别识别两项调整的贡献。论文按月总市值构造CH-3，本次沿用年度流通市值十分组，不构造CH-3因子。</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/market_information/size_decile_car_top70/four_paths_all.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>全样本：2001—2024财年；市值十分组调整CAR、剔除最小三组；四大／非四大×好消息／中性，−60日归零，均值路径。</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/market_information/size_decile_car_top70/four_paths_before2012.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>2012年前：2001—2011财年；市值十分组调整CAR、剔除最小三组；四大／非四大×好消息／中性，−60日归零，均值路径。</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/market_information/size_decile_car_top70/four_paths_after2012.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>2012年起：2012—2024财年；市值十分组调整CAR、剔除最小三组；四大／非四大×好消息／中性，−60日归零，均值路径。</figcaption>
+</figure>
+</div>
+<p><strong>描述性结果。</strong> 2012年起，+60日四大好消息和中性组的平均CAR分别为3.86%、1.77%，非四大分别为5.24%、4.80%。这些数值累计自−60日，包含公告前形成的差异；图中未做组间差异显著性检验。</p>
+</section>
 </section>
 <section id="market-news-persistence" class="level4">
 <h4 class="anchored" data-anchor-id="market-news-persistence">2.2.2 年度好消息延续：上一年好消息，本年是否仍为好消息？</h4>
