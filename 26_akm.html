@@ -258,7 +258,7 @@ window.Quarto = {
   <li><a href="#sec-akm-big4-gap" id="toc-sec-akm-big4-gap" class="nav-link" data-scroll-target="#sec-akm-big4-gap">四大观察差距对应哪些稳定成分？</a></li>
   <li><a href="#sec-akm-exploratory-sorting" id="toc-sec-akm-exploratory-sorting" class="nav-link" data-scroll-target="#sec-akm-exploratory-sorting">为什么四大客户较低风险，可以与总体负相关同时出现？</a></li>
   </ul></li>
-  <li><a href="#sec-akm-kss" id="toc-sec-akm-kss" class="nav-link" data-scroll-target="#sec-akm-kss">3. 分项KSS：估计噪声改变了多少？</a>
+  <li><a href="#sec-akm-kss" id="toc-sec-akm-kss" class="nav-link" data-scroll-target="#sec-akm-kss">3. rare events、limited mobility与KSS纠偏</a>
   <ul class="collapse">
   <li><a href="#kss扣除了什么客户跨年相关还剩下什么" id="toc-kss扣除了什么客户跨年相关还剩下什么" class="nav-link" data-scroll-target="#kss扣除了什么客户跨年相关还剩下什么">KSS扣除了什么，客户跨年相关还剩下什么？</a></li>
   </ul></li>
@@ -510,9 +510,81 @@ Y_{it}=X_{it}'\beta+\alpha_i+\psi_{J_{it}}+\phi_t+\varepsilon_{it}.
 </section>
 </section>
 <section id="sec-akm-kss" class="level2">
-<h2 class="anchored" data-anchor-id="sec-akm-kss">3. 分项KSS：估计噪声改变了多少？</h2>
+<h2 class="anchored" data-anchor-id="sec-akm-kss">3. rare events、limited mobility与KSS纠偏</h2>
 <p><span id="sec-akm-sorting-completion"></span></p>
-<p><span class="citation" data-cites="kss2020">Kline 等 (<a href="#ref-kss2020" role="doc-biblioref">2020</a>)</span> 的leave-out方法校正固定效应方差、协方差中的估计噪声。本项目已将纠偏分别应用到梯队内、梯队间及总体，并核对两项精确加总。<strong>公司年误差独立时，估计偏误主要压低组内项，组间正项变化较小。</strong></p>
+<p><strong>rare events使风险类型难以精确区分，limited mobility使客户与事务所FE难以精确拆开；KSS校正二阶矩中的估计噪声。</strong> 本节先讨论配置外生条件下的信息与估计问题，下一节再讨论短期风险影响换所的内生性。</p>
+<section id="rare-events首先是信息不足偏误方向并不固定" class="level3">
+<h3 class="anchored" data-anchor-id="rare-events首先是信息不足偏误方向并不固定">rare events：首先是信息不足，偏误方向并不固定</h3>
+<p>本项目的失败指标是dummy，且失败发生率较低。将全部FE与控制变量组成设计矩阵<span class="math inline">\(Z\)</span>，线性AKM可写为</p>
+<p><span class="math display">\[
+Y=Z\beta+\varepsilon,\qquad
+\widehat\beta=\beta+(Z'Z)^{-1}Z'\varepsilon.
+\]</span></p>
+<p>在模型正确、归一化后设计满秩且配置外生时，</p>
+<p><span class="math display">\[
+\mathrm E[\varepsilon\mid Z]=0
+\quad\Longrightarrow\quad
+\mathrm E[\widehat\beta\mid Z]=\beta.
+\]</span></p>
+<p>因此，<strong>dummy和rare events本身不会机械地使事务所FE向零偏，也不会自动使sorting向负偏。</strong> 困难在于：观察到零失败，可能代表长期风险低，也可能只是观察期内没有发生事件。</p>
+<p>用一个简化例子说明。若某客户有<span class="math inline">\(T\)</span>年相互独立、失败概率均为<span class="math inline">\(p\)</span>的记录，则</p>
+<p><span class="math display">\[
+\Pr(\text{所有年份均无失败})=(1-p)^T,\qquad
+\operatorname{Var}(\bar Y)=\frac{p(1-p)}T,
+\]</span></p>
+<p><span class="math display">\[
+\frac{\operatorname{SD}(\bar Y)}p=\sqrt{\frac{1-p}{Tp}}.
+\]</span></p>
+<p>当预期事件数<span class="math inline">\(Tp\)</span>很小时，零失败记录很常见，估计误差相对于真实失败概率也很大。这里强调的是相对于微小信号的信息不足，绝对误差方差未必更大。零失败客户仍贡献信息，不能因为结果一直为0就删除。对当前AKM，rare events削弱个体成分的精度，并使插件方差及sorting更容易受到估计噪声影响；方向还取决于网络和误差结构。</p>
+</section>
+<section id="limited-mobility为什么fe方差容易偏大sorting容易偏负" class="level3">
+<h3 class="anchored" data-anchor-id="limited-mobility为什么fe方差容易偏大sorting容易偏负">limited mobility：为什么FE方差容易偏大、sorting容易偏负？</h3>
+<p>假设两家事务所A、B之间只有<span class="math inline">\(m\)</span>个客户从A换到B。省略已控制的协变量后，差分消去客户FE：</p>
+<p><span class="math display">\[
+\Delta Y_i=(\psi_B-\psi_A)+\Delta\varepsilon_i,
+\]</span></p>
+<p><span class="math display">\[
+\widehat{\psi_B-\psi_A}
+=(\psi_B-\psi_A)+\frac1m\sum_{i=1}^{m}\Delta\varepsilon_i.
+\]</span></p>
+<p>若这些换所客户的差分冲击相互独立、方差均为<span class="math inline">\(v\)</span>，则</p>
+<p><span class="math display">\[
+\operatorname{Var}\!\left(\widehat{\psi_B-\psi_A}\right)=\frac vm.
+\]</span></p>
+<p><strong>跨所连接越少，相对FE越依赖少数客户的偶然结果。</strong> 即使两所各有很多不换所客户，也未必能弥补缺少跨所连接的问题。limited mobility本身不要求FE系数有方向性的偏误；它首先增加估计噪声，噪声再进入方差和协方差。</p>
+<p>写作<span class="math inline">\(\widehat\alpha=\alpha+e_\alpha\)</span>、<span class="math inline">\(\widehat\psi=\psi+e_\psi\)</span>，其中<span class="math inline">\(e_\alpha,e_\psi\)</span>为映射到公司年记录上的FE估计误差。在给定网络、估计误差条件均值为0时，以公司年权重计算的插件矩满足</p>
+<p><span class="math display">\[
+\mathrm E[\widehat V_\psi\mid Z]
+=V_\psi+\mathrm E[V(e_\psi)\mid Z]\geq V_\psi,
+\]</span></p>
+<p><span class="math display">\[
+\mathrm E[\widehat C_{\alpha,\psi}\mid Z]
+=C_{\alpha,\psi}+\mathrm E[C(e_\alpha,e_\psi)\mid Z].
+\]</span></p>
+<p>客户FE方差也有相同的向上噪声项。协方差方向则取决于两端估计误差怎样共同变化：同一条结果拆给客户与事务所时，事务所成分偶然估高，客户成分便可能估低，以维持拟合。在最简单的误差分配例子中，</p>
+<p><span class="math display">\[
+e_\alpha=-e_\psi
+\quad\Longrightarrow\quad
+C(e_\alpha,e_\psi)=-V(e_\psi)&lt;0.
+\]</span></p>
+<p>这说明limited mobility bias为何可能压低正sorting，甚至产生负sorting。上述等式是直观例子；实际网络包含控制变量与不同连接结构，特别是组内、组间分项，必须分别计算噪声偏误，不能预设每一项都向下偏。</p>
+</section>
+<section id="kss扣除什么实际改变了多少" class="level3">
+<h3 class="anchored" data-anchor-id="kss扣除什么实际改变了多少">KSS扣除什么，实际改变了多少？</h3>
+<p>任一目标方差或协方差均可写为<span class="math inline">\(\theta=\beta'A\beta\)</span>，其中<span class="math inline">\(A\)</span>由目标和样本权重确定。直接代入估计FE，得到插件值<span class="math inline">\(\widehat\theta_{\mathrm{PI}}=\widehat\beta'A\widehat\beta\)</span>。其偏误为</p>
+<p><span class="math display">\[
+\mathrm E[\widehat\theta_{\mathrm{PI}}\mid Z]-\theta
+=\operatorname{tr}\!\left(A\operatorname{Var}(\widehat\beta\mid Z)\right).
+\]</span></p>
+<p><span class="citation" data-cites="kss2020">Kline 等 (<a href="#ref-kss2020" role="doc-biblioref">2020</a>)</span> 的leave-out方法估计并扣除这一噪声项。令<span class="math inline">\(L=(Z'Z)^{-1}Z'\)</span>、<span class="math inline">\(B=L'AL\)</span>，逐观测纠偏为</p>
+<p><span class="math display">\[
+\widehat\theta_{\mathrm{KSS}}
+=\widehat\theta_{\mathrm{PI}}-\sum_k B_{kk}\widehat\sigma_k^2,
+\qquad
+\widehat\sigma_k^2=Y_k\bigl(Y_k-z_k'\widehat\beta_{-k}\bigr).
+\]</span></p>
+<p>这里<span class="math inline">\(k\)</span>是一条公司年记录，<span class="math inline">\(z_k'\)</span>是其设计行，<span class="math inline">\(\widehat\beta_{-k}\)</span>由留出该条记录后估计。误差独立、外生性成立且留出后仍可识别时，该方法对目标二次型无偏，允许异方差，不要求结果正态；因此二元结果本身不排除使用KSS。它也不是分别识别一个“rare events偏误”和一个“limited mobility偏误”后相加，而是按实际设计估计二阶矩中的总噪声项。</p>
+<p>本项目已分别校正梯队内、梯队间及总体协方差，并核对两项精确加总。</p>
 <div class="table-responsive">
 <table class="table caption-top">
 <thead>
@@ -564,13 +636,15 @@ Y_{it}=X_{it}'\beta+\alpha_i+\psi_{J_{it}}+\phi_t+\varepsilon_{it}.
 </figcaption>
 </figure>
 </div>
-<p>总体相关由−0.0322、−0.0445、−0.0574变为−0.0020、−0.0177、−0.0315；三套点估计仍为负，不筛选样本接近0。符号相同不等于已经统计确认负sorting。</p>
-<section id="kss扣除了什么客户跨年相关还剩下什么" class="level3">
-<h3 class="anchored" data-anchor-id="kss扣除了什么客户跨年相关还剩下什么">KSS扣除了什么，客户跨年相关还剩下什么？</h3>
-<p><strong>KSS主要扣除“估计噪声混入sorting”的部分。</strong> 每个客户和事务所的FE都只能用有限记录估计；算出来的高低差异，一部分可能来自真实差异，一部分来自这几年的偶然结果。客户FE和事务所FE又由同一批数据估计，两端的估计误差可能相关，直接计算它们的协方差就会把这种误差相关也算进去。KSS估计并扣除的，正是这部分偏误。</p>
-<p><strong>异方差是它允许存在的情况。</strong> 不同公司、不同年份的随机波动可以大小不同；KSS逐条估计所需的误差方差，不要求所有公司年波动一样。因此，这里并不是把异方差“消除”，也不只是换一套异方差稳健标准误，而是在允许异方差的条件下校正FE方差和协方差的估计噪声。</p>
-<p><strong>我们还担心同一客户的随机冲击会连续几年一起变化。</strong> 例如，一家公司进入持续两三年的经营困难期；客户FE只能吸收长期不变部分，剩下的年度风险仍可能前后相关。如果纠偏只计算每一年自身的噪声大小，漏掉这些年份之间的共同波动，扣除的偏误就可能不完整。客户聚类标准误或重抽样用于衡量估计的不确定性，也不会自动从协方差点估计中扣掉这部分偏误。</p>
-<p>我们用实际70,339行网络做了600次模拟：年度冲击相互独立时，逐观测纠偏平均能恢复设定的sorting；让同一客户的冲击跨年相关后，即使没有内生换所，纠偏后仍可能把设定的正sorting估成负。<strong>所以，这里提示的是当前纠偏尚未处理完整的客户跨年相关，不能仅凭纠偏后仍为负，就认定真实匹配一定为负。</strong></p>
+<p><strong>KSS使梯队内负协方差的绝对值减少约40%—50%，梯队间正协方差增加约3%—4%。</strong> 不筛选、33、55的组内负项绝对值分别减少49.5%、43.0%、40.4%；组间正项分别增加2.9%、3.3%、4.1%。因此，在这一纠偏规格下，原始组内负项有相当一部分对应估计噪声，组间正项的点估计变化较小。这里的百分比描述纠偏前后的数值变化，不能解释为已消除了40%—50%的全部真实偏误，也不能分别归因为rare events或limited mobility。</p>
+<p>总体相关由−0.0322、−0.0445、−0.0574变为−0.0020、−0.0177、−0.0315；三套点估计仍为负，不筛选样本接近0。相关系数是纠偏协方差与纠偏方差构成的比值，不因此获得有限样本无偏保证；符号相同也不等于已经统计确认负sorting。</p>
+</section>
+<section id="客户跨年相关为什么仍重要" class="level3">
+<h3 class="anchored" data-anchor-id="客户跨年相关为什么仍重要">客户跨年相关为什么仍重要？</h3>
+<p><strong>KSS扣除平均噪声偏误之后，limited mobility造成的信息不足仍然存在。</strong> 它不会增加换所客户，校正后的估计仍可能不精确；短期风险导致的内生换所也需要另外处理。</p>
+<p>不同公司年的随机波动可以大小不同，这是KSS允许的异方差。当前另一个问题是同一客户的冲击可能连续几年共同变化：例如，公司进入持续两三年的经营困难期，客户FE吸收长期不变部分后，年度风险仍可能相关。如果只扣每一年自身的噪声，遗漏年份之间的共同波动，纠偏便不完整。客户聚类标准误或bootstrap衡量估计的不确定性，不会自动从协方差点估计中扣除这部分偏误。</p>
+<p><span class="citation" data-cites="kss2020">Kline 等 (<a href="#ref-kss2020" role="doc-biblioref">2020</a>)</span> 的Remark 3讨论整cluster leave-out以处理cluster内相关，但需要相应的留出识别支持。当前不筛选／33／55样本分别有14／8／8位客户在整客户留出后造成变换设计失秩，而且失秩方向会影响组内及组间目标。因此，当前逐观测版本尚不能写成已经完全处理客户跨年相关。</p>
+<p>我们用实际70,339行网络做了600次稀有二元结果模拟：年度冲击相互独立时，逐观测纠偏平均能恢复设定的sorting；让同一客户的冲击跨年相关后，即使没有内生换所，纠偏后仍可能把设定的正sorting估成负。<strong>当前剩余负项因此还需结合误差跨年相关与网络支持解释。</strong></p>
 <details>
 <summary>
 查看真实网络模拟及分项纠偏的识别条件
