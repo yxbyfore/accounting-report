@@ -1,12 +1,9 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-Hans" xml:lang="zh-Hans"><head>
 
-<meta charset="utf-8">
-<meta name="generator" content="quarto-1.10.18">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
-
+<html lang="zh-Hans" xml:lang="zh-Hans" xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta charset="utf-8"/>
+<meta content="quarto-1.10.18" name="generator"/>
+<meta content="width=device-width, initial-scale=1.0, user-scalable=yes" name="viewport"/>
 <title>AKM：客户配置、估计噪声与风险择所 – 会计研究项目报告</title>
 <style>
 /* Default styles provided by pandoc.
@@ -46,25 +43,23 @@ div.csl-right-inline {
 div.csl-indent {
   margin-left: 2em;
 }</style>
-
-
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
 <script src="site_libs/quarto-search/autocomplete.umd.js"></script>
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
+<meta content="./" name="quarto:offset"/>
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet"/>
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" id="quarto-text-highlighting-styles" rel="stylesheet"/>
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-a6637644d079b9c9e4a7748db4e43f09.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet"/>
+<link append-hash="true" data-mode="light" href="site_libs/bootstrap/bootstrap-a6637644d079b9c9e4a7748db4e43f09.min.css" id="quarto-bootstrap" rel="stylesheet"/>
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -92,10 +87,8 @@ div.csl-indent {
     "search-label": "搜索"
   }
 }</script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
-
+<script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+<script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
 <script type="text/javascript">
 const typesetMath = (el) => {
   if (window.MathJax) {
@@ -122,190 +115,176 @@ window.Quarto = {
   typesetMath
 };
 </script>
-
-<link rel="stylesheet" href="styles.css">
-<link rel="stylesheet" href="empirical.css">
+<link href="styles.css" rel="stylesheet"/>
+<link href="empirical.css" rel="stylesheet"/>
 </head>
-
 <body class="nav-sidebar floating empirical-report quarto-light">
-
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="展开或折叠侧边栏导航" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-        <i class="bi bi-layout-text-sidebar-reverse"></i>
-      </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./26_akm.html">AKM：客户配置、估计噪声与风险择所</a></li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="展开或折叠侧边栏导航" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-        </a>
-      <button type="button" class="btn quarto-search-button" aria-label="搜索" onclick="window.quartoOpenSearch();">
-        <i class="bi bi-search"></i>
-      </button>
-    </div>
-  </nav>
+<header class="headroom fixed-top" id="quarto-header">
+<nav class="quarto-secondary-nav">
+<div class="container-fluid d-flex">
+<button aria-controls="quarto-sidebar" aria-expanded="false" aria-label="展开或折叠侧边栏导航" class="quarto-btn-toggle btn" data-bs-target=".quarto-sidebar-collapse-item" data-bs-toggle="collapse" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }" role="button" type="button">
+<i class="bi bi-layout-text-sidebar-reverse"></i>
+</button>
+<nav aria-label="breadcrumb" class="quarto-page-breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./26_akm.html">AKM：客户配置、估计噪声与风险择所</a></li></ol></nav>
+<a aria-controls="quarto-sidebar" aria-expanded="false" aria-label="展开或折叠侧边栏导航" class="flex-grow-1" data-bs-target=".quarto-sidebar-collapse-item" data-bs-toggle="collapse" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }" role="navigation">
+</a>
+<button aria-label="搜索" class="btn quarto-search-button" onclick="window.quartoOpenSearch();" type="button">
+<i class="bi bi-search"></i>
+</button>
+</div>
+</nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<div class="quarto-container page-columns page-rows-contents page-layout-article" id="quarto-content">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header">
-    <div class="sidebar-title mb-0 py-0">
-      <a href="./">会计研究项目报告</a> 
-    </div>
-      </div>
-        <div class="mt-2 flex-shrink-0 align-items-center">
-        <div class="sidebar-search">
-        <div id="quarto-search" class="" title="搜索"></div>
-        </div>
-        </div>
-    <div class="sidebar-menu-container"> 
-    <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./01_core_summary.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">核心摘要</span></a>
-  </div>
+<nav class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto" id="quarto-sidebar">
+<div class="pt-lg-2 mt-2 text-left sidebar-header">
+<div class="sidebar-title mb-0 py-0">
+<a href="./">会计研究项目报告</a>
+</div>
+</div>
+<div class="mt-2 flex-shrink-0 align-items-center">
+<div class="sidebar-search">
+<div class="" id="quarto-search" title="搜索"></div>
+</div>
+</div>
+<div class="sidebar-menu-container">
+<ul class="list-unstyled mt-1">
+<li class="sidebar-item">
+<div class="sidebar-item-container">
+<a class="sidebar-item-text sidebar-link" href="./01_core_summary.html">
+<span class="menu-text">核心摘要</span></a>
+</div>
 </li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./02_core_results.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">核心结果</span></a>
-  </div>
+<li class="sidebar-item">
+<div class="sidebar-item-container">
+<a class="sidebar-item-text sidebar-link" href="./02_core_results.html">
+<span class="menu-text">核心结果</span></a>
+</div>
 </li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./03_background.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">背景</span></a>
-  </div>
+<li class="sidebar-item">
+<div class="sidebar-item-container">
+<a class="sidebar-item-text sidebar-link" href="./03_background.html">
+<span class="menu-text">背景</span></a>
+</div>
 </li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./21_adoption.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">四大审计师的采用</span></a>
-  </div>
+<li class="sidebar-item">
+<div class="sidebar-item-container">
+<a class="sidebar-item-text sidebar-link" href="./21_adoption.html">
+<span class="menu-text">四大审计师的采用</span></a>
+</div>
 </li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./22_diffusion.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">企业网络传导</span></a>
-  </div>
+<li class="sidebar-item">
+<div class="sidebar-item-container">
+<a class="sidebar-item-text sidebar-link" href="./22_diffusion.html">
+<span class="menu-text">企业网络传导</span></a>
+</div>
 </li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./23_big4_effect.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">四大事务所效应</span></a>
-  </div>
+<li class="sidebar-item">
+<div class="sidebar-item-container">
+<a class="sidebar-item-text sidebar-link" href="./23_big4_effect.html">
+<span class="menu-text">四大事务所效应</span></a>
+</div>
 </li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./24_auditor_quality.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">审计师效应</span></a>
-  </div>
+<li class="sidebar-item">
+<div class="sidebar-item-container">
+<a class="sidebar-item-text sidebar-link" href="./24_auditor_quality.html">
+<span class="menu-text">审计师效应</span></a>
+</div>
 </li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./25_matching.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">客户、事务所和审计师的匹配</span></a>
-  </div>
+<li class="sidebar-item">
+<div class="sidebar-item-container">
+<a class="sidebar-item-text sidebar-link" href="./25_matching.html">
+<span class="menu-text">客户、事务所和审计师的匹配</span></a>
+</div>
 </li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./26_akm.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">AKM：客户配置、估计噪声与风险择所</span></a>
-  </div>
+<li class="sidebar-item">
+<div class="sidebar-item-container">
+<a class="sidebar-item-text sidebar-link active" href="./26_akm.html">
+<span class="menu-text">AKM：客户配置、估计噪声与风险择所</span></a>
+</div>
 </li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./31_biweekly_memo.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">双周备忘录</span></a>
-  </div>
+<li class="sidebar-item">
+<div class="sidebar-item-container">
+<a class="sidebar-item-text sidebar-link" href="./31_biweekly_memo.html">
+<span class="menu-text">双周备忘录</span></a>
+</div>
 </li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./32_active_tasks.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">当前任务</span></a>
-  </div>
+<li class="sidebar-item">
+<div class="sidebar-item-container">
+<a class="sidebar-item-text sidebar-link" href="./32_active_tasks.html">
+<span class="menu-text">当前任务</span></a>
+</div>
 </li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./33_data_pipeline.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">数据流程</span></a>
-  </div>
+<li class="sidebar-item">
+<div class="sidebar-item-container">
+<a class="sidebar-item-text sidebar-link" href="./33_data_pipeline.html">
+<span class="menu-text">数据流程</span></a>
+</div>
 </li>
-    </ul>
-    </div>
+</ul>
+</div>
 </nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<div class="quarto-sidebar-collapse-item" data-bs-target=".quarto-sidebar-collapse-item" data-bs-toggle="collapse" id="quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">该页面内容</h2>
-   
-  <ul>
-  <li><a href="#sec-akm-three-way" id="toc-sec-akm-three-way" class="nav-link active" data-scroll-target="#sec-akm-three-way">总体框架：客户、事务所与审计师</a>
-  <ul class="collapse">
-  <li><a href="#双边与三维的其他对照" id="toc-双边与三维的其他对照" class="nav-link" data-scroll-target="#双边与三维的其他对照">双边与三维的其他对照</a></li>
-  <li><a href="#三套资格与四个结果变量的完整双边分解" id="toc-三套资格与四个结果变量的完整双边分解" class="nav-link" data-scroll-target="#三套资格与四个结果变量的完整双边分解">三套资格与四个结果变量的完整双边分解</a></li>
-  </ul></li>
-  <li><a href="#sec-client-auditfirm-sorting" id="toc-sec-client-auditfirm-sorting" class="nav-link" data-scroll-target="#sec-client-auditfirm-sorting">聚焦客户—事务所：研究问题与主要结果</a></li>
-  <li><a href="#sec-akm-exogeneity" id="toc-sec-akm-exogeneity" class="nav-link" data-scroll-target="#sec-akm-exogeneity">1. AKM怎样容纳sorting？</a>
-  <ul class="collapse">
-  <li><a href="#sec-akm-current-specification" id="toc-sec-akm-current-specification" class="nav-link" data-scroll-target="#sec-akm-current-specification">样本和结果</a></li>
-  </ul></li>
-  <li><a href="#akm发现四大差距与梯队内外配置" id="toc-akm发现四大差距与梯队内外配置" class="nav-link" data-scroll-target="#akm发现四大差距与梯队内外配置">2. AKM发现：四大差距与梯队内外配置</a>
-  <ul class="collapse">
-  <li><a href="#sec-akm-big4-gap" id="toc-sec-akm-big4-gap" class="nav-link" data-scroll-target="#sec-akm-big4-gap">四大观察差距对应哪些稳定成分？</a></li>
-  <li><a href="#sec-akm-exploratory-sorting" id="toc-sec-akm-exploratory-sorting" class="nav-link" data-scroll-target="#sec-akm-exploratory-sorting">为什么四大客户较低风险，可以与总体负相关同时出现？</a></li>
-  </ul></li>
-  <li><a href="#sec-akm-kss" id="toc-sec-akm-kss" class="nav-link" data-scroll-target="#sec-akm-kss">3. rare events、limited mobility与KSS纠偏</a>
-  <ul class="collapse">
-  <li><a href="#kss扣除了什么客户跨年相关还剩下什么" id="toc-kss扣除了什么客户跨年相关还剩下什么" class="nav-link" data-scroll-target="#kss扣除了什么客户跨年相关还剩下什么">KSS扣除了什么，客户跨年相关还剩下什么？</a></li>
-  </ul></li>
-  <li><a href="#sec-akm-endogenous-mobility" id="toc-sec-akm-endogenous-mobility" class="nav-link" data-scroll-target="#sec-akm-endogenous-mobility">4. 为什么进一步研究风险与换所？</a>
-  <ul class="collapse">
-  <li><a href="#失败记录与有效换所支持" id="toc-失败记录与有效换所支持" class="nav-link" data-scroll-target="#失败记录与有效换所支持">失败记录与有效换所支持</a></li>
-  <li><a href="#sec-akm-future-assignment" id="toc-sec-akm-future-assignment" class="nav-link" data-scroll-target="#sec-akm-future-assignment">当前剩余结果是否关联未来配置？</a></li>
-  <li><a href="#sec-akm-selection-bias" id="toc-sec-akm-selection-bias" class="nav-link" data-scroll-target="#sec-akm-selection-bias">短期风险选择为什么可能低估组间正向sorting？</a></li>
-  </ul></li>
-  <li><a href="#sec-window-joint-mixture" id="toc-sec-window-joint-mixture" class="nav-link" data-scroll-target="#sec-window-joint-mixture">5. 参考BLM的最小联合模型怎样估计？</a>
-  <ul class="collapse">
-  <li><a href="#先给事务所分类class是审计事务所类别" id="toc-先给事务所分类class是审计事务所类别" class="nav-link" data-scroll-target="#先给事务所分类class是审计事务所类别">先给事务所分类：Class是审计事务所类别</a></li>
-  <li><a href="#再估计客户类型type是客户潜在类型" id="toc-再估计客户类型type是客户潜在类型" class="nav-link" data-scroll-target="#再估计客户类型type是客户潜在类型">再估计客户类型：Type是客户潜在类型</a></li>
-  </ul></li>
-  <li><a href="#联合模型回答的两个问题" id="toc-联合模型回答的两个问题" class="nav-link" data-scroll-target="#联合模型回答的两个问题">6. 联合模型回答的两个问题</a>
-  <ul class="collapse">
-  <li><a href="#什么客户类型配到什么事务所" id="toc-什么客户类型配到什么事务所" class="nav-link" data-scroll-target="#什么客户类型配到什么事务所">6.1 什么客户类型配到什么事务所？</a></li>
-  <li><a href="#上一年财务风险怎样关联换所" id="toc-上一年财务风险怎样关联换所" class="nav-link" data-scroll-target="#上一年财务风险怎样关联换所">6.2 上一年财务风险怎样关联换所？</a></li>
-  </ul></li>
-  <li><a href="#当前结果的解释与执行范围" id="toc-当前结果的解释与执行范围" class="nav-link" data-scroll-target="#当前结果的解释与执行范围">当前结果的解释与执行范围</a></li>
-  <li><a href="#参考文献" id="toc-参考文献" class="nav-link" data-scroll-target="#参考文献">参考文献</a></li>
-  </ul>
+<div class="sidebar margin-sidebar" id="quarto-margin-sidebar">
+<nav class="toc-active" id="TOC" role="doc-toc">
+<h2 id="toc-title">该页面内容</h2>
+<ul>
+<li><a class="nav-link active" data-scroll-target="#sec-akm-three-way" href="#sec-akm-three-way" id="toc-sec-akm-three-way">总体框架：客户、事务所与审计师</a>
+<ul class="collapse">
+<li><a class="nav-link" data-scroll-target="#双边与三维的其他对照" href="#双边与三维的其他对照" id="toc-双边与三维的其他对照">双边与三维的其他对照</a></li>
+<li><a class="nav-link" data-scroll-target="#三套资格与四个结果变量的完整双边分解" href="#三套资格与四个结果变量的完整双边分解" id="toc-三套资格与四个结果变量的完整双边分解">三套资格与四个结果变量的完整双边分解</a></li>
+</ul></li>
+<li><a class="nav-link" data-scroll-target="#sec-client-auditfirm-sorting" href="#sec-client-auditfirm-sorting" id="toc-sec-client-auditfirm-sorting">聚焦客户—事务所：研究问题与主要结果</a></li>
+<li><a class="nav-link" data-scroll-target="#sec-akm-exogeneity" href="#sec-akm-exogeneity" id="toc-sec-akm-exogeneity">1. AKM怎样容纳sorting？</a>
+<ul class="collapse">
+<li><a class="nav-link" data-scroll-target="#sec-akm-current-specification" href="#sec-akm-current-specification" id="toc-sec-akm-current-specification">样本和结果</a></li>
+</ul></li>
+<li><a class="nav-link" data-scroll-target="#akm发现四大差距与梯队内外配置" href="#akm发现四大差距与梯队内外配置" id="toc-akm发现四大差距与梯队内外配置">2. AKM发现：四大差距与梯队内外配置</a>
+<ul class="collapse">
+<li><a class="nav-link" data-scroll-target="#sec-akm-big4-gap" href="#sec-akm-big4-gap" id="toc-sec-akm-big4-gap">四大观察差距对应哪些稳定成分？</a></li>
+<li><a class="nav-link" data-scroll-target="#sec-akm-exploratory-sorting" href="#sec-akm-exploratory-sorting" id="toc-sec-akm-exploratory-sorting">为什么四大客户较低风险，可以与总体负相关同时出现？</a></li>
+</ul></li>
+<li><a class="nav-link" data-scroll-target="#sec-akm-kss" href="#sec-akm-kss" id="toc-sec-akm-kss">3. rare events、limited mobility与KSS纠偏</a>
+<ul class="collapse">
+<li><a class="nav-link" data-scroll-target="#rare-events首先是信息不足偏误方向并不固定" href="#rare-events首先是信息不足偏误方向并不固定" id="toc-rare-events首先是信息不足偏误方向并不固定">rare events：首先是信息不足，偏误方向并不固定</a></li>
+<li><a class="nav-link" data-scroll-target="#limited-mobility为什么fe方差容易偏大sorting容易偏负" href="#limited-mobility为什么fe方差容易偏大sorting容易偏负" id="toc-limited-mobility为什么fe方差容易偏大sorting容易偏负">limited mobility：为什么FE方差容易偏大、sorting容易偏负？</a></li>
+<li><a class="nav-link" data-scroll-target="#kss扣除什么实际改变了多少" href="#kss扣除什么实际改变了多少" id="toc-kss扣除什么实际改变了多少">KSS扣除什么，实际改变了多少？</a></li>
+<li><a class="nav-link" data-scroll-target="#客户跨年相关为什么仍重要" href="#客户跨年相关为什么仍重要" id="toc-客户跨年相关为什么仍重要">客户跨年相关为什么仍重要？</a></li>
+</ul></li>
+<li><a class="nav-link" data-scroll-target="#sec-akm-endogenous-mobility" href="#sec-akm-endogenous-mobility" id="toc-sec-akm-endogenous-mobility">4. 为什么进一步研究风险与换所？</a>
+<ul class="collapse">
+<li><a class="nav-link" data-scroll-target="#失败记录与有效换所支持" href="#失败记录与有效换所支持" id="toc-失败记录与有效换所支持">失败记录与有效换所支持</a></li>
+<li><a class="nav-link" data-scroll-target="#sec-akm-future-assignment" href="#sec-akm-future-assignment" id="toc-sec-akm-future-assignment">当前剩余结果是否关联未来配置？</a></li>
+<li><a class="nav-link" data-scroll-target="#sec-akm-selection-bias" href="#sec-akm-selection-bias" id="toc-sec-akm-selection-bias">短期风险选择为什么可能低估组间正向sorting？</a></li>
+</ul></li>
+<li><a class="nav-link" data-scroll-target="#sec-window-joint-mixture" href="#sec-window-joint-mixture" id="toc-sec-window-joint-mixture">5. 参考BLM的最小联合模型怎样估计？</a>
+<ul class="collapse">
+<li><a class="nav-link" data-scroll-target="#先给事务所分类class是审计事务所类别" href="#先给事务所分类class是审计事务所类别" id="toc-先给事务所分类class是审计事务所类别">先给事务所分类：Class是审计事务所类别</a></li>
+<li><a class="nav-link" data-scroll-target="#再估计客户类型type是客户潜在类型" href="#再估计客户类型type是客户潜在类型" id="toc-再估计客户类型type是客户潜在类型">再估计客户类型：Type是客户潜在类型</a></li>
+</ul></li>
+<li><a class="nav-link" data-scroll-target="#联合模型回答的两个问题" href="#联合模型回答的两个问题" id="toc-联合模型回答的两个问题">6. 联合模型回答的两个问题</a>
+<ul class="collapse">
+<li><a class="nav-link" data-scroll-target="#什么客户类型配到什么事务所" href="#什么客户类型配到什么事务所" id="toc-什么客户类型配到什么事务所">6.1 什么客户类型配到什么事务所？</a></li>
+<li><a class="nav-link" data-scroll-target="#上一年财务风险怎样关联换所" href="#上一年财务风险怎样关联换所" id="toc-上一年财务风险怎样关联换所">6.2 上一年财务风险怎样关联换所？</a></li>
+</ul></li>
+<li><a class="nav-link" data-scroll-target="#当前结果的解释与执行范围" href="#当前结果的解释与执行范围" id="toc-当前结果的解释与执行范围">当前结果的解释与执行范围</a></li>
+<li><a class="nav-link" data-scroll-target="#参考文献" href="#参考文献" id="toc-参考文献">参考文献</a></li>
+</ul>
 </nav>
-    </div>
+</div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
+<header class="quarto-title-block default" id="title-block-header">
 <div class="quarto-title">
 <h1 class="title">AKM：客户配置、估计噪声与风险择所</h1>
 </div>
-
-
-
 <div class="quarto-title-meta">
-
-    
-  
-    
-  </div>
-  
-
-
+</div>
 </header>
-
-
-<section id="sec-akm-three-way" class="level2">
+<section class="level2" id="sec-akm-three-way">
 <h2 class="anchored" data-anchor-id="sec-akm-three-way">总体框架：客户、事务所与审计师</h2>
 <p>先保留三维AKM作为整体参照，将客户公司（firm）、审计事务所（audit firm）与签字审计师（auditor）的稳定成分放在同一模型中：</p>
 <p><span class="math display">\[
@@ -315,57 +294,57 @@ Y_{it}=\alpha_i+\psi_{J_{it}}+\theta_{A_{it}}
 <p><span class="math inline">\(i\)</span>是客户公司，<span class="math inline">\(J_{it}\)</span>是事务所，<span class="math inline">\(A_{it}\)</span>是稳定身份A1审计师。原有33资格三维基准中，未预警综合失败的客户、事务所和审计师插件方差份额分别为31.4%、2.9%、15.0%。这些是样本内估计成分的方差份额，不能据此比较三者的因果重要性。</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="figures/akm_overview/akm_pairwise_vs_triadic_client_audit_firm.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<p><img class="img-fluid figure-img" src="figures/akm_overview/akm_pairwise_vs_triadic_client_audit_firm.png" style="width:100.0%"/></p>
 <figcaption>原有33资格的双边／三维参照。左图为客户—事务所双边模型，右图加入A1审计师；横轴依次为综合失败、重述、违规和Abs DA，纵轴为各成分方差除以结果总方差。蓝色客户、橙色事务所、黄色审计师、紫色年份、青绿色控制、浅灰残差。Cov单列协方差贡献，因此柱高可超过100%。两图使用各自有效样本，属于描述性比较。</figcaption>
 </figure>
 </div>
-<section id="双边与三维的其他对照" class="level3">
+<section class="level3" id="双边与三维的其他对照">
 <h3 class="anchored" data-anchor-id="双边与三维的其他对照">双边与三维的其他对照</h3>
 <p>保留原来的另外两种双边模型与三维基准对照。它们用于说明三类稳定成分的分解，使用各自原规格与有效样本。</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="figures/akm_overview/akm_pairwise_vs_triadic_client_auditor.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<p><img class="img-fluid figure-img" src="figures/akm_overview/akm_pairwise_vs_triadic_client_auditor.png" style="width:100.0%"/></p>
 <figcaption>左图为客户—审计师双边模型，右图为客户—事务所—审计师三维基准；均为33资格。横轴为综合失败、重述、违规、Abs DA，纵轴为各成分方差占比。蓝色客户、橙色事务所、黄色审计师、紫色年份、青绿色控制、浅灰残差；Cov单列。两侧使用各自有效样本。</figcaption>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="figures/akm_overview/akm_pairwise_vs_triadic_audit_firm_auditor.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<p><img class="img-fluid figure-img" src="figures/akm_overview/akm_pairwise_vs_triadic_audit_firm_auditor.png" style="width:100.0%"/></p>
 <figcaption>左图为事务所—审计师双边模型，右图为三维基准，均为33资格；蓝色客户、橙色事务所、黄色审计师、紫色年份、青绿色控制、浅灰残差。横轴四个结果，纵轴插件方差份额，Cov单列；各模型有效样本不同。</figcaption>
 </figure>
 </div>
 </section>
-<section id="三套资格与四个结果变量的完整双边分解" class="level3">
+<section class="level3" id="三套资格与四个结果变量的完整双边分解">
 <h3 class="anchored" data-anchor-id="三套资格与四个结果变量的完整双边分解">三套资格与四个结果变量的完整双边分解</h3>
 <p>以下使用原有不筛选、33、55结果，协方差与各成分方差分开报告。</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="figures/akm_overview/akm_pairwise_threshold_any_failure_clean.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<p><img class="img-fluid figure-img" src="figures/akm_overview/akm_pairwise_threshold_any_failure_clean.png" style="width:100.0%"/></p>
 <figcaption>未预警综合失败的三种双边分解。三个面板分别为客户—事务所、客户—审计师、事务所—审计师；各面板横轴是不筛选、33、55资格，柱下N为该模型的公司年数，纵轴是结果总方差的百分比。蓝色客户、橙色事务所、黄色审计师、紫色年份、青绿色控制、浅灰残差，Cov单列。</figcaption>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="figures/akm_overview/akm_pairwise_threshold_restated_clean.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<p><img class="img-fluid figure-img" src="figures/akm_overview/akm_pairwise_threshold_restated_clean.png" style="width:100.0%"/></p>
 <figcaption>未预警重述：三个面板依次为客户—事务所、客户—审计师、事务所—审计师，每个面板比较不筛选、33、55资格。纵轴为插件方差占比，柱下N为公司年数；蓝色客户、橙色事务所、黄色审计师、紫色年份、青绿色控制、浅灰残差，协方差单列。</figcaption>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="figures/akm_overview/akm_pairwise_threshold_violated_clean.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<p><img class="img-fluid figure-img" src="figures/akm_overview/akm_pairwise_threshold_violated_clean.png" style="width:100.0%"/></p>
 <figcaption>未预警违规：三个双边模型分别比较不筛选、33、55资格，纵轴插件方差占比，柱下N为公司年数。蓝色客户、橙色事务所、黄色审计师、紫色年份、青绿色控制、浅灰残差；Cov为单列的协方差贡献。</figcaption>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="figures/akm_overview/akm_pairwise_threshold_abs_da_jones.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<p><img class="img-fluid figure-img" src="figures/akm_overview/akm_pairwise_threshold_abs_da_jones.png" style="width:100.0%"/></p>
 <figcaption>Jones异常应计绝对值：三个面板为客户—事务所、客户—审计师、事务所—审计师，各比较三套资格。颜色与前图一致：蓝色客户、橙色事务所、黄色审计师、紫色年份、青绿色控制、浅灰残差；纵轴为插件方差占比，Cov单列，柱下N为各模型公司年数。</figcaption>
 </figure>
 </div>
 <p><strong>下面先聚焦客户公司与审计事务所两方，研究客户构成、sorting和风险择所。</strong> 两方模型不再吸收审计师FE；它与上面的三维参照保留各自控制及有效样本，不把三维份额接入后面的两方纠偏。</p>
 </section>
 </section>
-<section id="sec-client-auditfirm-sorting" class="level2">
+<section class="level2" id="sec-client-auditfirm-sorting">
 <h2 class="anchored" data-anchor-id="sec-client-auditfirm-sorting">聚焦客户—事务所：研究问题与主要结果</h2>
 <p><strong>四大客户较低的失败率，对应怎样的客户构成与事务所成分？</strong> 本节先用客户—事务所AKM描述稳定配置，再用一个参考BLM的最小联合模型，补充考察客户潜在类型与年度财务风险如何关联事务所配置。</p>
 <p>目前得到三项结果。第一，AKM的失败指标呈现<strong>事务所梯队之间正向配置、梯队内部负向配置</strong>。第二，在公司年误差独立条件下，分项KSS明显减小组内负项，组间正项变化较小；客户内持续冲击仍会影响这一纠偏。第三，五年窗口联合模型中，2015—2019年四大所在类别的较高平均失败概率客户类型占比较低；上一年ROA较低还对应更多换所。客户类型的具体占比会随结果追踪窗的处理而改变。</p>
@@ -415,7 +394,7 @@ Y_{it}=\alpha_i+\psi_{J_{it}}+\theta_{A_{it}}
 </div>
 <p><strong>术语约定。</strong> “事务所梯队”始终指四大、本土八大、Other；“事务所类别Class 1—4”指财务分布聚类；“客户类型Type 1—2”指联合模型推断的潜在类型。三者不混用。</p>
 </section>
-<section id="sec-akm-exogeneity" class="level2">
+<section class="level2" id="sec-akm-exogeneity">
 <h2 class="anchored" data-anchor-id="sec-akm-exogeneity">1. AKM怎样容纳sorting？</h2>
 <p><span class="citation" data-cites="akm1999">Abowd 等 (<a href="#ref-akm1999" role="doc-biblioref">1999</a>)</span> 的加性框架在本项目中写为</p>
 <p><span id="eq-client-auditfirm-akm"><span class="math display">\[
@@ -428,7 +407,7 @@ Y_{it}=X_{it}'\beta+\alpha_i+\psi_{J_{it}}+\phi_t+\varepsilon_{it}.
 \boldsymbol\phi,\mathbf X_i,\mathcal F_i]=0,\qquad\forall t.
 \tag{2}\]</span></span></p>
 <p>如果尚未吸收的风险冲击影响之后换所，<span class="math inline">\(\varepsilon_{it}\)</span>与未来配置便可能相关。<strong>永久类型sorting、固定效应估计噪声、误差跨期相关、剩余风险影响未来配置，是四个不同对象。</strong> 下文分别检查，不以某一项检验代替其他条件。</p>
-<section id="sec-akm-current-specification" class="level3">
+<section class="level3" id="sec-akm-current-specification">
 <h3 class="anchored" data-anchor-id="sec-akm-current-specification">样本和结果</h3>
 <p>观测单位为公司年。沿用原始事务所ID；A1身份仅用于共同底样本及不筛选／33／55资格，不在本模型中吸收个人审计师FE。33和55分别要求A1累计报告数与不同执业年份均至少3、均至少5，资格在共同有效身份底样本计算；各估计递归去除单例。综合未预警失败为<span class="math inline">\(\mathbf1\{Restated=1\text{ 或 }Violated=1\}(1-MAO)\)</span>，MAO=1保留为0。</p>
 <div class="table-responsive">
@@ -473,7 +452,7 @@ Y_{it}=X_{it}'\beta+\alpha_i+\psi_{J_{it}}+\phi_t+\varepsilon_{it}.
 </summary>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="figures/akm_overview/akm_pairwise_sample_coverage.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<p><img class="img-fluid figure-img" src="figures/akm_overview/akm_pairwise_sample_coverage.png" style="width:100.0%"/></p>
 <figcaption>该图统计个人A1审计师，与上表的公司年、客户和事务所数量不同。左图分母为6,158名A1：浅灰低于33资格、蓝色仅通过33、绿色通过55；右图深灰为全部A1、绿色斜线为未筛选潜在连通样本、绿色实柱为33及55资格样本、深蓝为跨事务所执业者、青色为同所留任者、灰色为资格不足者。1,307名Mover和2,064名Stayer对应原33审计师网络，不是客户换所人数。</figcaption>
 </figure>
 </div>
@@ -481,23 +460,23 @@ Y_{it}=X_{it}'\beta+\alpha_i+\psi_{J_{it}}+\phi_t+\varepsilon_{it}.
 <p>失败指标控制规模、负债率、亏损、ROA、Z-score、杠杆变化、报告时滞、经营现金流和上市年龄及缺失指示。先在完整主面板按年中位数插补，再以年度插补后的总体中位数补剩余缺失。所有配置矩按公司年等权计算，保留三套样本；重述、违规和Abs DA另列在当前规格补充结果中。</p>
 </section>
 </section>
-<section id="akm发现四大差距与梯队内外配置" class="level2">
+<section class="level2" id="akm发现四大差距与梯队内外配置">
 <h2 class="anchored" data-anchor-id="akm发现四大差距与梯队内外配置">2. AKM发现：四大差距与梯队内外配置</h2>
-<section id="sec-akm-big4-gap" class="level3">
+<section class="level3" id="sec-akm-big4-gap">
 <h3 class="anchored" data-anchor-id="sec-akm-big4-gap">四大观察差距对应哪些稳定成分？</h3>
 <p>不筛选样本中，四大相对非四大的未预警综合失败率低3.687个百分点。同一模型的客户成分差为−5.148、事务所成分差为−2.064个百分点，可观察控制成分为+3.599个百分点，抵消部分差距。以下各项来自同一估计样本，加总回观察差距。</p>
-<div id="fig-akm-big4-gap" class="quarto-float quarto-figure quarto-figure-center anchored">
+<div class="quarto-float quarto-figure quarto-figure-center anchored" id="fig-akm-big4-gap">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-akm-big4-gap-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="figures/client_auditfirm_sorting/big4_gap_components.png" class="img-fluid figure-img" style="width:100.0%">
+<img class="img-fluid figure-img" src="figures/client_auditfirm_sorting/big4_gap_components.png" style="width:100.0%"/>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-akm-big4-gap-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-图&nbsp;1: 四大减非四大的综合未预警失败率差距及其加性分解，单位为百分点。横轴三组为不筛选、33、55；深灰菱形为观察差距，蓝柱为客户FE、橙柱为事务所FE、紫柱为年份、青绿柱为控制变量、浅灰柱为残差。负值表示该成分对应四大更低的失败率。控制变量项是整组Xβ；各项不是因果选择／服务贡献比例。
+图 1: 四大减非四大的综合未预警失败率差距及其加性分解，单位为百分点。横轴三组为不筛选、33、55；深灰菱形为观察差距，蓝柱为客户FE、橙柱为事务所FE、紫柱为年份、青绿柱为控制变量、浅灰柱为残差。负值表示该成分对应四大更低的失败率。控制变量项是整组Xβ；各项不是因果选择／服务贡献比例。
 </figcaption>
 </figure>
 </div>
 </section>
-<section id="sec-akm-exploratory-sorting" class="level3">
+<section class="level3" id="sec-akm-exploratory-sorting">
 <h3 class="anchored" data-anchor-id="sec-akm-exploratory-sorting">为什么四大客户较低风险，可以与总体负相关同时出现？</h3>
 <p>我又做了一些分析，我发现，<strong>事务所梯队之间与梯队内部的配置方向不同</strong>。按当年四大、本土八大和Other，对同一次pooled AKM的两个估计FE分解：</p>
 <p><span id="eq-akm-within-between"><span class="math display">\[
@@ -509,11 +488,11 @@ Y_{it}=X_{it}'\beta+\alpha_i+\psi_{J_{it}}+\phi_t+\varepsilon_{it}.
 <p>三个失败指标在三套样本中均为正组间、负组内。正组间项表示较低的平均客户失败成分与较低的平均事务所失败成分在梯队之间相配；梯队内部的负项更大，使总体插件协方差为负。相关系数本身不能按这个公式相加。</p>
 </section>
 </section>
-<section id="sec-akm-kss" class="level2">
+<section class="level2" id="sec-akm-kss">
 <h2 class="anchored" data-anchor-id="sec-akm-kss">3. rare events、limited mobility与KSS纠偏</h2>
 <p><span id="sec-akm-sorting-completion"></span></p>
 <p><strong>rare events使风险类型难以精确区分，limited mobility使客户与事务所FE难以精确拆开；KSS校正二阶矩中的估计噪声。</strong> 本节先讨论配置外生条件下的信息与估计问题，下一节再讨论短期风险影响换所的内生性。</p>
-<section id="rare-events首先是信息不足偏误方向并不固定" class="level3">
+<section class="level3" id="rare-events首先是信息不足偏误方向并不固定">
 <h3 class="anchored" data-anchor-id="rare-events首先是信息不足偏误方向并不固定">rare events：首先是信息不足，偏误方向并不固定</h3>
 <p>本项目的失败指标是dummy，且失败发生率较低。将全部FE与控制变量组成设计矩阵<span class="math inline">\(Z\)</span>，线性AKM可写为</p>
 <p><span class="math display">\[
@@ -537,7 +516,7 @@ Y=Z\beta+\varepsilon,\qquad
 \]</span></p>
 <p>当预期事件数<span class="math inline">\(Tp\)</span>很小时，零失败记录很常见，估计误差相对于真实失败概率也很大。这里强调的是相对于微小信号的信息不足，绝对误差方差未必更大。零失败客户仍贡献信息，不能因为结果一直为0就删除。对当前AKM，rare events削弱个体成分的精度，并使插件方差及sorting更容易受到估计噪声影响；方向还取决于网络和误差结构。</p>
 </section>
-<section id="limited-mobility为什么fe方差容易偏大sorting容易偏负" class="level3">
+<section class="level3" id="limited-mobility为什么fe方差容易偏大sorting容易偏负">
 <h3 class="anchored" data-anchor-id="limited-mobility为什么fe方差容易偏大sorting容易偏负">limited mobility：为什么FE方差容易偏大、sorting容易偏负？</h3>
 <p>假设两家事务所A、B之间只有<span class="math inline">\(m\)</span>个客户从A换到B。省略已控制的协变量后，差分消去客户FE：</p>
 <p><span class="math display">\[
@@ -569,7 +548,7 @@ C(e_\alpha,e_\psi)=-V(e_\psi)&lt;0.
 \]</span></p>
 <p>这说明limited mobility bias为何可能压低正sorting，甚至产生负sorting。上述等式是直观例子；实际网络包含控制变量与不同连接结构，特别是组内、组间分项，必须分别计算噪声偏误，不能预设每一项都向下偏。</p>
 </section>
-<section id="kss扣除什么实际改变了多少" class="level3">
+<section class="level3" id="kss扣除什么实际改变了多少">
 <h3 class="anchored" data-anchor-id="kss扣除什么实际改变了多少">KSS扣除什么，实际改变了多少？</h3>
 <p>任一目标方差或协方差均可写为<span class="math inline">\(\theta=\beta'A\beta\)</span>，其中<span class="math inline">\(A\)</span>由目标和样本权重确定。直接代入估计FE，得到插件值<span class="math inline">\(\widehat\theta_{\mathrm{PI}}=\widehat\beta'A\widehat\beta\)</span>。其偏误为</p>
 <p><span class="math display">\[
@@ -626,20 +605,20 @@ C(e_\alpha,e_\psi)=-V(e_\psi)&lt;0.
 </table>
 </div>
 <p>综合未预警失败；协方差均乘10,000。纠偏是在公司年误差独立条件下的点估计，当前没有分项有效置信区间。</p>
-<div id="fig-akm-kss-split" class="quarto-float quarto-figure quarto-figure-center anchored">
+<div class="quarto-float quarto-figure quarto-figure-center anchored" id="fig-akm-kss-split">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-akm-kss-split-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="figures/selection_matching/client_auditfirm_report/kss_split.png" class="img-fluid figure-img" style="width:100.0%">
+<img class="img-fluid figure-img" src="figures/selection_matching/client_auditfirm_report/kss_split.png" style="width:100.0%"/>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-akm-kss-split-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-图&nbsp;2: 左图为梯队内协方差，右图为梯队间协方差；横轴None、33、55对应三套A1资格。灰柱为原始插件值，蓝柱为逐观测leave-out纠偏值；纵轴为协方差×10,000，黑线为0。颜色区分纠偏方法，不表示事务所或客户类型。三套样本中组内负项减小，组间正项变化较小。
+图 2: 左图为梯队内协方差，右图为梯队间协方差；横轴None、33、55对应三套A1资格。灰柱为原始插件值，蓝柱为逐观测leave-out纠偏值；纵轴为协方差×10,000，黑线为0。颜色区分纠偏方法，不表示事务所或客户类型。三套样本中组内负项减小，组间正项变化较小。
 </figcaption>
 </figure>
 </div>
 <p><strong>KSS使梯队内负协方差的绝对值减少约40%—50%，梯队间正协方差增加约3%—4%。</strong> 不筛选、33、55的组内负项绝对值分别减少49.5%、43.0%、40.4%；组间正项分别增加2.9%、3.3%、4.1%。因此，在这一纠偏规格下，原始组内负项有相当一部分对应估计噪声，组间正项的点估计变化较小。这里的百分比描述纠偏前后的数值变化，不能解释为已消除了40%—50%的全部真实偏误，也不能分别归因为rare events或limited mobility。</p>
 <p>总体相关由−0.0322、−0.0445、−0.0574变为−0.0020、−0.0177、−0.0315；三套点估计仍为负，不筛选样本接近0。相关系数是纠偏协方差与纠偏方差构成的比值，不因此获得有限样本无偏保证；符号相同也不等于已经统计确认负sorting。</p>
 </section>
-<section id="客户跨年相关为什么仍重要" class="level3">
+<section class="level3" id="客户跨年相关为什么仍重要">
 <h3 class="anchored" data-anchor-id="客户跨年相关为什么仍重要">客户跨年相关为什么仍重要？</h3>
 <p><strong>KSS扣除平均噪声偏误之后，limited mobility造成的信息不足仍然存在。</strong> 它不会增加换所客户，校正后的估计仍可能不精确；短期风险导致的内生换所也需要另外处理。</p>
 <p>不同公司年的随机波动可以大小不同，这是KSS允许的异方差。当前另一个问题是同一客户的冲击可能连续几年共同变化：例如，公司进入持续两三年的经营困难期，客户FE吸收长期不变部分后，年度风险仍可能相关。如果只扣每一年自身的噪声，遗漏年份之间的共同波动，纠偏便不完整。客户聚类标准误或bootstrap衡量估计的不确定性，不会自动从协方差点估计中扣除这部分偏误。</p>
@@ -652,7 +631,7 @@ C(e_\alpha,e_\psi)=-V(e_\psi)&lt;0.
 <p>逐观测误差方差估计使用<span class="math inline">\(\widehat\sigma_k^2=Y_k\widehat\varepsilon_k/(1-h_{kk})\)</span>；其中<span class="math inline">\(k\)</span>为一条公司年观测、<span class="math inline">\(h_{kk}\)</span>是该观测的leverage。该式适用于当前逐观测留出所需的误差独立条件，允许各条观测的方差不同。</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="figures/selection_matching/client_auditfirm_report/network_simulation.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<p><img class="img-fluid figure-img" src="figures/selection_matching/client_auditfirm_report/network_simulation.png" style="width:100.0%"/></p>
 <figcaption>左图为独立误差，右图为高斯潜变量相关系数0.6的客户AR-copula。横轴是研究者设定的真实总体sorting符号；绿线是真值，灰虚线为插件估计均值，蓝线为逐观测纠偏均值；纵轴协方差×10,000。误差条是纠偏均值的1.96倍Monte Carlo标准误，每场景100次。两图固定真实样本网络，未生成内生换所；右图的0.6不是二元结果本身的相关系数。</figcaption>
 </figure>
 </div>
@@ -662,10 +641,10 @@ C(e_\alpha,e_\psi)=-V(e_\psi)&lt;0.
 </details>
 </section>
 </section>
-<section id="sec-akm-endogenous-mobility" class="level2">
+<section class="level2" id="sec-akm-endogenous-mobility">
 <h2 class="anchored" data-anchor-id="sec-akm-endogenous-mobility">4. 为什么进一步研究风险与换所？</h2>
 <p><strong>稳定类型不能吸收每年变化的风险。</strong> 如果未被模型解释的风险影响之后换所，AKM的配置正交条件可能不成立。这里将“风险有持续性”和“剩余风险关联未来配置”分开检验。</p>
-<section id="失败记录与有效换所支持" class="level3">
+<section class="level3" id="失败记录与有效换所支持">
 <h3 class="anchored" data-anchor-id="失败记录与有效换所支持">失败记录与有效换所支持</h3>
 <div class="table-responsive">
 <table class="table caption-top">
@@ -702,19 +681,19 @@ C(e_\alpha,e_\psi)=-V(e_\psi)&lt;0.
 <p>网络连通不等于每类转换都有充分事件。另一方面，无事件的换所也通过线性模型和网络限制贡献信息，不能简单只留下有失败的客户。</p>
 <p>3,030个正结果公司年至少关联一条覆盖多个报告年度的公告记录，相邻年失败延续因而包含重复标记。进一步只用截至2017年已公告的历史记录，间隔三年，并排除前期已出现记录ID后，后期有新记录的公司年占比仍为<strong>9.45%（有已知历史）对5.59%（无已知历史）</strong>。这说明历史风险有预测信息；该描述比较未调整行业、历史长度与存续，也未将永久类型、慢变风险和披露过程分离。</p>
 </section>
-<section id="sec-akm-future-assignment" class="level3">
+<section class="level3" id="sec-akm-future-assignment">
 <h3 class="anchored" data-anchor-id="sec-akm-future-assignment">当前剩余结果是否关联未来配置？</h3>
 <p>在同一样本重新吸收客户、当前事务所、年份和原控制，同时加入未来换所与未来四大指示变量，按客户聚类。综合失败一年期联合检验在三套样本均未拒绝；两年期不筛选样本原始<span class="math inline">\(p=0.00790\)</span>，按六项检验Holm校正后为0.04737，扩至全部24项后为0.18159，且未在33／55中重复。</p>
 <p><a href="./23_big4_effect.html#客户选择与审计意见四大如何形成较低风险的客户组合">23号报告的意见与客户进出结果</a>则显示，已观察风险信号与后续四大进出有关。两者承担不同角色：意见回归提供研究动机，未来配置检验考察当前AKM尚未吸收的部分。现有证据不支持把其中一个检验写成对全部外生性条件的确认或否定。</p>
 <p>下面直接列出23号报告的原回归表。Panel A以当期四大客户为样本，结果是次年退出四大；Panel B以当期非四大客户为样本，结果是次年进入四大。四列分别为MAO、持续经营意见GC、违规公告和未预警综合失败；系数按概率单位报告，乘100为百分点。沿用九项客户控制及<code>mis_dummy</code>、公司和行业×年份固定效应，按公司聚类，使用严格相邻年度风险集，未在这里重新估计。</p>
 <figure class="latex-table figure" style="overflow-x:auto;">
-<a href="tables/big4_regression_columns/client_flows.pdf"><img src="tables/big4_regression_columns/client_flows.png?v=20261025_3dp" style="width:703px;max-width:none;height:auto;display:block;" alt="Audit Opinions and Next-Year Big 4 Client Transitions" loading="lazy" class="figure-img"></a>
+<a href="tables/big4_regression_columns/client_flows.pdf"><img alt="Audit Opinions and Next-Year Big 4 Client Transitions" class="figure-img" loading="lazy" src="tables/big4_regression_columns/client_flows.png?v=20261025_3dp" style="width:703px;max-width:none;height:auto;display:block;"/></a>
 <figcaption>
 审计意见与次年四大客户进出：上半表为退出，下半表为进入；括号内为公司聚类标准误。MAO对应退出增加30.40个百分点、进入减少0.249个百分点。此表为23号报告的风险信号回归，与上文AKM剩余结果的未来配置检验是两个规格。 · <a href="tables/big4_regression_columns/client_flows.tex">TeX</a> · <a href="tables/big4_regression_columns/client_flows.pdf">PDF</a>
 </figcaption>
 </figure>
 </section>
-<section id="sec-akm-selection-bias" class="level3">
+<section class="level3" id="sec-akm-selection-bias">
 <h3 class="anchored" data-anchor-id="sec-akm-selection-bias">短期风险选择为什么可能低估组间正向sorting？</h3>
 <p><strong>若高风险冲击促使客户退出四大、低风险冲击使客户更容易进入四大，且这些冲击随后向正常水平回归，两种流动都会把四大降低失败率的优势估得偏小；在客户FE组间差距给定时，也会压低组间正向sorting。</strong> 上表中的MAO与次年退出正相关、与次年进入负相关，为风险相关的配置提供了证据。下面明确推导偏误方向所需的额外条件：选择反映的是尚未被控制变量及客户FE吸收的短期风险，而且它在换所后部分消退。</p>
 <p><strong>第一步：用两期、两类事务所说明风险如何进入换所估计。</strong> 令<span class="math inline">\(B_{it}=\mathbf1\{\text{使用四大}\}\)</span>，将已控制的年份和可观察特征省略，写为</p>
@@ -734,11 +713,11 @@ Y_{it}=\alpha_i+\delta B_{it}+\varepsilon_{it},\qquad
 \]</span></p>
 <table class="caption-top table">
 <colgroup>
-<col style="width: 20%">
-<col style="width: 20%">
-<col style="width: 20%">
-<col style="width: 20%">
-<col style="width: 20%">
+<col style="width: 20%"/>
+<col style="width: 20%"/>
+<col style="width: 20%"/>
+<col style="width: 20%"/>
+<col style="width: 20%"/>
 </colgroup>
 <thead>
 <tr class="header">
@@ -810,10 +789,10 @@ C_{\mathrm{between}}=p(1-p)\Delta\alpha\,\Delta\psi.
 <p>其符号还取决于<span class="math inline">\(a\)</span>。本节实际按四大、本土八大和Other三组分解；两组例子说明四大边界上的一个向下偏误渠道，三组总体的净偏误还需考虑所有组对的均值差和估计权重。上表识别的是风险信号与后续配置的关联；将其解释为此处的向下偏误，还需要确认信号中有未吸收的暂时冲击及换所后的风险回归。KSS校正FE估计噪声，风险相关的内生换所则由下一节的联合模型进一步刻画。</p>
 </section>
 </section>
-<section id="sec-window-joint-mixture" class="level2">
+<section class="level2" id="sec-window-joint-mixture">
 <h2 class="anchored" data-anchor-id="sec-window-joint-mixture">5. 参考BLM的最小联合模型怎样估计？</h2>
-<p><strong>为把一部分风险相关的选择显式纳入模型，我参考 <span class="citation" data-cites="blm2019">Bonhomme 等 (<a href="#ref-blm2019" role="doc-biblioref">2019</a>)</span> 做了一个最小模型尝试，作为AKM的补充。</strong> 原文研究工资市场：先按企业工资分布分类雇主，再由劳动者流动及工资结果估计潜在劳动者类型。静态模型允许双方类型非加性交互，动态模型进一步以一阶Markov结构容纳工资影响后续流动。这里用客户财务分布分类事务所，再将共享的客户类型和上一年风险放入失败、换所与目的地方程；当前估计并非原文完整动态结构的二元复制。<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
-<section id="先给事务所分类class是审计事务所类别" class="level3">
+<p><strong>为把一部分风险相关的选择显式纳入模型，我参考 <span class="citation" data-cites="blm2019">Bonhomme 等 (<a href="#ref-blm2019" role="doc-biblioref">2019</a>)</span> 做了一个最小模型尝试，作为AKM的补充。</strong> 原文研究工资市场：先按企业工资分布分类雇主，再由劳动者流动及工资结果估计潜在劳动者类型。静态模型允许双方类型非加性交互，动态模型进一步以一阶Markov结构容纳工资影响后续流动。这里用客户财务分布分类事务所，再将共享的客户类型和上一年风险放入失败、换所与目的地方程；当前估计并非原文完整动态结构的二元复制。<a class="footnote-ref" href="#fn1" id="fnref1" role="doc-noteref"><sup>1</sup></a></p>
+<section class="level3" id="先给事务所分类class是审计事务所类别">
 <h3 class="anchored" data-anchor-id="先给事务所分类class是审计事务所类别">先给事务所分类：Class是审计事务所类别</h3>
 <p>按日历五年分段。每年将客户上一年负债率、ROA、经营现金流／资产、Z-score和规模转换为同年百分位，再对每家事务所计算五项客户分布在10%、20%、……、90%位置的CDF，共45个坐标。K-means按这些分布的距离分四类，以事务所公司年数加权，使用30次初始化。</p>
 <p>具体地，<span class="math inline">\(r^v_{it}\)</span>是第<span class="math inline">\(v\)</span>项财务百分位，<span class="math inline">\(\mathcal I_{jbv}\)</span>是窗口<span class="math inline">\(b\)</span>内由事务所<span class="math inline">\(j\)</span>审计且该变量可观察的公司年。其分类坐标为<span class="math inline">\(\widehat F_{jbv}(u)=|\mathcal I_{jbv}|^{-1}\sum_{(i,t)\in\mathcal I_{jbv}}\mathbf1\{r^v_{it}\le u\}\)</span>，<span class="math inline">\(u=0.1,\ldots,0.9\)</span>。将45个坐标合为<span class="math inline">\(C_{jb}\)</span>后，估计</p>
@@ -825,12 +804,12 @@ C_{\mathrm{between}}=p(1-p)\Delta\alpha\,\Delta\psi.
 <p>类别在窗口内固定、跨窗口可变；四大／八大标签不参与聚类。<strong>Class 1—4的编号不是审计质量排名。</strong> 任何一项财务分布完全没有资料的事务所保持未分类。1990—1999年因Z-score整项缺失无法分类，当前可估计窗口从2000年开始；没有人为再设2012年起点，也没有1%配置概率修剪。</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="figures/selection_matching/client_auditfirm_report/audit_firm_class_composition.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<p><img class="img-fluid figure-img" src="figures/selection_matching/client_auditfirm_report/audit_firm_class_composition.png" style="width:100.0%"/></p>
 <figcaption>2015—2019年四类事务所的原始梯队构成。横轴是估计出的事务所Class；深蓝、橙色、灰色分别表示四大、本土八大和Other服务的公司年占比，每柱合计100%，柱顶N为公司年数。Class 4在该窗口全部为四大；图中颜色不表示客户Type。五项财务分布参与了分类，分布差异本身不再单独当作sorting证据。</figcaption>
 </figure>
 </div>
 </section>
-<section id="再估计客户类型type是客户潜在类型" class="level3">
+<section class="level3" id="再估计客户类型type是客户潜在类型">
 <h3 class="anchored" data-anchor-id="再估计客户类型type是客户潜在类型">再估计客户类型：Type是客户潜在类型</h3>
 <p>在每个五年窗口内，客户类型<span class="math inline">\(L_i\in\{1,2\}\)</span>保持不变；另估一类型作对照。客户不做K-means。模型根据同一客户的失败结果、是否实际换所和换所后的Class，以有限混合最大似然估计客户类型。</p>
 <p>记<span class="math inline">\(K_{it}\)</span>为当前事务所Class，<span class="math inline">\(R_{it}\)</span>为五项<span class="math inline">\(t-1\)</span>财务百分位经<span class="math inline">\(2r-1\)</span>变换后的状态，<span class="math inline">\(H_{it}\)</span>包括年份、原所类别、此前已完成合作年限及缺失指示。三个方程分别是</p>
@@ -884,8 +863,8 @@ v_{it\ell k}&amp;=d_{\ell k}+R_{it}'\omega_k+H_{it}'\xi_k.
 <td>同时估计类型、风险与配置</td>
 </tr>
 <tr class="even">
-<td>不重叠结果的风险联合模型</td>
-<td>仅缩减成熟结果集合，使三年追踪区间不重叠，保留全部可用流动</td>
+<td>每隔至少三年保留一次结果的风险联合模型</td>
+<td>从每家公司第一条可用结果开始，下一条须等上条三年观察结束后才使用；年度换所记录仍保留</td>
 <td>检查结果重复进入似然的影响</td>
 </tr>
 </tbody>
@@ -900,27 +879,439 @@ B(y_s;\theta_{\ell a})B(y_t;\theta_{\ell b}).
 \]</span></p>
 <p>这里<span class="math inline">\(\theta_{\ell k}\)</span>是类型—类别失败概率，<span class="math inline">\(\pi_{\ell,ab}\)</span>是路径内类型构成。27个两类型端点拟合在估计点均出现局部数值秩不足，所以正文的类型构成来自年度联合模型，不用端点结果给出选择贡献比例。</p>
 </details>
+<!-- window-math-derivation:start -->
+<details id="sec-window-math-derivation">
+<summary>
+详细数学推导：经验CDF、加权K-means与混合模型MLE（点击展开）
+</summary>
+<p><strong>两步估计和bootstrap分别做什么？</strong> 第一步先把审计事务所分成四类；第二步固定这些类别，用最大似然同时估计客户类型、失败、换所和换所后去哪类事务所。bootstrap是在这些估计之后按公司整段历史重新抽样，检查估计随样本变化的程度，不负责求解MLE。以下是本次代码实际使用的模型。</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%"/>
+<col style="width: 50%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th>部分</th>
+<th>所用分布或函数</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>客户财务分布用于事务所分类</td>
+<td>经验累积分布函数（经验CDF），不假定正态分布</td>
+</tr>
+<tr class="even">
+<td>是否失败、是否换所</td>
+<td>Bernoulli分布，概率用logistic函数表示</td>
+</tr>
+<tr class="odd">
+<td>换所后进入四类中的哪一类</td>
+<td>四类别离散分布，概率用多项logit表示</td>
+</tr>
+<tr class="even">
+<td>窗口内固定的客户类型</td>
+<td>两类别离散分布，初始类型概率用logit表示</td>
+</tr>
+</tbody>
+</table>
+<p><strong>一、第一步：从客户财务记录到四类事务所</strong></p>
+<p><strong>1. 将上一年财务变量换成同年的百分位。</strong> 令<span class="math inline">\(x^v_{i,t-1}\)</span>为客户<span class="math inline">\(i\)</span>上一年的第<span class="math inline">\(v\)</span>项财务变量，<span class="math inline">\(v\)</span>依次为负债率、ROA、经营现金流／资产、Z-score、规模。各变量只在本年非缺失记录中排序。代码使用平均秩处理并列值；若当年该变量有<span class="math inline">\(N_{tv}\)</span>条可用记录，则</p>
+<p><span class="math display">\[
+r^v_{it}=\frac{n^v_{&lt;,it}+(n^v_{=,it}+1)/2}{N_{tv}},
+\]</span></p>
+<p>其中<span class="math inline">\(n^v_{&lt;,it}\)</span>是严格小于该值的记录数，<span class="math inline">\(n^v_{=,it}\)</span>是等于该值的记录数（含本条）。例如，当年100条记录中该值无并列、排第20，则<span class="math inline">\(r=0.20\)</span>。百分位先在不筛选A1资格的共同样本中按年计算，33／55随后沿用相同尺度。分类不使用未来失败结果或四大标签。</p>
+<p><strong>2. 为每家事务所计算客户分布。</strong> 将年份按日历五年划入窗口<span class="math inline">\(b\)</span>。定义</p>
+<p><span class="math display">\[
+\mathcal I_{jbv}=\{(i,t):t\in b,\ J_{it}=j,\ r^v_{it}\text{非缺失}\},
+\qquad n_{jbv}=|\mathcal I_{jbv}|.
+\]</span></p>
+<p>事务所<span class="math inline">\(j\)</span>的第<span class="math inline">\(v\)</span>项客户财务分布，在<span class="math inline">\(u\)</span>处的经验CDF为</p>
+<p><span class="math display">\[
+\widehat F_{jbv}(u)=\frac{1}{n_{jbv}}
+\sum_{(i,t)\in\mathcal I_{jbv}}\mathbf1\{r^v_{it}\le u\}.
+\]</span></p>
+<p>例如<span class="math inline">\(\widehat F_{jb,ROA}(0.2)=0.35\)</span>，表示该所客户中，35%的可用公司年，其ROA位于全市场同年前20%或以下。分母按每项变量的非缺失记录分别计算，CDF这一步不填补缺失。任意一项变量整项没有记录的事务所不参与分类。</p>
+<p><strong>3. 把五条分布变成45个分类坐标。</strong> 对每项变量取<span class="math inline">\(u_m=m/10\)</span>，<span class="math inline">\(m=1,\ldots,9\)</span>，组成</p>
+<p><span class="math display">\[
+C_{jb}=
+\bigl(\widehat F_{jb,1}(u_1),\ldots,\widehat F_{jb,1}(u_9),
+\ldots,\widehat F_{jb,5}(u_1),\ldots,\widehat F_{jb,5}(u_9)\bigr)'
+\in[0,1]^{45}.
+\]</span></p>
+<p>两家事务所的距离为这些CDF坐标的平方差之和：</p>
+<p><span class="math display">\[
+D^2(j,j')=\|C_{jb}-C_{j'b}\|^2
+=\sum_{v=1}^{5}\sum_{m=1}^{9}
+\left[\widehat F_{jbv}(u_m)-\widehat F_{j'bv}(u_m)\right]^2.
+\]</span></p>
+<p>这是对客户分布相似程度的有限网格比较；没有假设财务变量或CDF坐标服从正态分布，也没有用PCA决定类别。</p>
+<p><strong>4. 写出加权K-means目标。</strong> 设<span class="math inline">\(c_{jb}\in\{1,2,3,4\}\)</span>为所类别，<span class="math inline">\(\mu_{kb}\in\mathbb R^{45}\)</span>为第<span class="math inline">\(k\)</span>类中心，<span class="math inline">\(n_{jb}\)</span>是该所窗口内全部公司年数。估计目标为</p>
+<p><span class="math display">\[
+(\widehat c,\widehat\mu)=\arg\min_{c,\mu}
+W(c,\mu),\qquad
+W(c,\mu)=\sum_j n_{jb}\|C_{jb}-\mu_{c_{jb},b}\|^2.
+\]</span></p>
+<p><span class="math inline">\(n_{jb}\)</span>使客户记录较多的所对目标贡献更大。每家所的五个变量仍各用九个坐标；不按失败率给变量或事务所加权。</p>
+<p><strong>5. 固定中心，更新类别。</strong> 给定第<span class="math inline">\(s\)</span>次迭代的中心，各所选距离最近的中心：</p>
+<p><span class="math display">\[
+c_{jb}^{(s+1)}=\arg\min_{k\in\{1,2,3,4\}}
+\|C_{jb}-\mu_{kb}^{(s)}\|^2.
+\]</span></p>
+<p>对同一家所，<span class="math inline">\(n_{jb}&gt;0\)</span>在四个候选距离中相同，所以不影响它选哪个中心。</p>
+<p><strong>6. 固定类别，更新中心。</strong> 对非空类别<span class="math inline">\(k\)</span>，目标中与该中心相关的部分为</p>
+<p><span class="math display">\[
+W_k(\mu_{kb})=
+\sum_{j:c_{jb}=k}n_{jb}\|C_{jb}-\mu_{kb}\|^2.
+\]</span></p>
+<p>对中心求导并令其为0：</p>
+<p><span class="math display">\[
+\frac{\partial W_k}{\partial\mu_{kb}}
+=2\sum_{j:c_{jb}=k}n_{jb}(\mu_{kb}-C_{jb})=0,
+\]</span></p>
+<p>得到</p>
+<p><span class="math display">\[
+\boxed{\mu_{kb}^{(s+1)}=
+\frac{\sum_{j:c_{jb}^{(s+1)}=k}n_{jb}C_{jb}}
+{\sum_{j:c_{jb}^{(s+1)}=k}n_{jb}}.}
+\]</span></p>
+<p>所以中心是同类事务所45维分布坐标的加权平均，不是研究者预先指定的高低风险标准。分配类别与更新中心都不会增加当前目标值，反复迭代到停止；但可能停在不同局部解。代码使用k-means++初始化、30次初始化，每次最多500次迭代，保留组内加权平方距离较小的解。</p>
+<p><strong>7. 类别编号和第二步的连接。</strong> 估计后，代码按各中心九个规模CDF坐标的均值由高到低编号，仅便于排列图表；规模CDF较高表示客户规模相对较小，不代表审计质量更高。四大、八大标签没有参与这一排序。对任一客户，公司年对应的所类别是</p>
+<p><span class="math display">\[
+\widehat K_{it}=\widehat c_{J_{it},b}.
+\]</span></p>
+<p>第二步将<span class="math inline">\(\widehat K_{it}\)</span>作为已估计好的类别使用，不在MLE迭代中重新做K-means。当前客户bootstrap也固定第一步类别，因此其抽样范围不包括重新分类带来的不确定性。</p>
+<p>为简化推导，将正文的财务风险和其他控制合并成三个向量<span class="math inline">\(x^Y,x^M,x^D\)</span>。相应系数统一写成<span class="math inline">\(\beta_Y,\beta_M,\beta_{D,k}\)</span>；其中<span class="math inline">\(\beta_Y\)</span>对应正文结果方程的两组系数，<span class="math inline">\(\beta_M\)</span>对应正文换所方程的两组系数。目的地截距在下面记为<span class="math inline">\(b_{\ell k}\)</span>，即正文的<span class="math inline">\(d_{\ell k}\)</span>，以避免与目的地概率<span class="math inline">\(d_{it\ell k}\)</span>混淆。<span class="math inline">\(Q_i\)</span>沿用正文的初始信息向量。以下所有求和固定在一个五年窗口内。</p>
+<p><strong>二、第二步：写出三个概率模型</strong></p>
+<p>设：</p>
+<ul>
+<li><span class="math inline">\(L_i\in\{1,2\}\)</span>：客户潜在类型，五年窗口内不变；</li>
+<li><span class="math inline">\(K_{it}\in\{1,2,3,4\}\)</span>：当前事务所类别；</li>
+<li><span class="math inline">\(Y_{it}\in\{0,1\}\)</span>：成熟追踪窗内的未预警失败；</li>
+<li><span class="math inline">\(M_{it}\in\{0,1\}\)</span>：是否更换真实事务所ID。</li>
+</ul>
+<p>为对应代码，将风险和其他控制分别合并为 <span class="math inline">\(x^Y_{it},x^M_{it},x^D_{it}\)</span>。三个向量的可用列可能因精确共线性处理而不同。</p>
+<p>先定义logistic CDF：</p>
+<p><span class="math display">\[
+\boxed{\Lambda(z)=\frac{e^z}{1+e^z}}.
+\]</span></p>
+<p><strong>① 失败方程</strong></p>
+<p><span class="math display">\[
+Y_{it}\mid L_i=\ell,K_{it},x^Y_{it}
+\sim\operatorname{Bernoulli}(p^Y_{it\ell}),
+\]</span></p>
+<p><span class="math display">\[
+\eta^Y_{it\ell}
+=a_{\ell,K_{it}}+(x^Y_{it})'\beta_Y,
+\qquad
+p^Y_{it\ell}=\Lambda(\eta^Y_{it\ell}).
+\]</span></p>
+<p>这里有 <span class="math inline">\(2\times4=8\)</span> 个类型—事务所类别截距 <span class="math inline">\(a_{\ell k}\)</span>。</p>
+<p><strong>② 换所方程</strong></p>
+<p><span class="math display">\[
+M_{it}\mid L_i=\ell,x^M_{it}
+\sim\operatorname{Bernoulli}(p^M_{it\ell}),
+\]</span></p>
+<p><span class="math display">\[
+\eta^M_{it\ell}
+=c_\ell+(x^M_{it})'\beta_M,
+\qquad
+p^M_{it\ell}=\Lambda(\eta^M_{it\ell}).
+\]</span></p>
+<p>风险联合模型的 <span class="math inline">\(x^M\)</span> 包含上一年财务风险，因此风险可以直接改变换所概率。</p>
+<p><strong>③ 换所目的地方程</strong></p>
+<p>只对 <span class="math inline">\(M_{it}=1\)</span> 的记录建模：</p>
+<p><span class="math display">\[
+K_{it}\mid M_{it}=1,L_i=\ell,x^D_{it}
+\sim\operatorname{Categorical}(d_{it\ell1},\ldots,d_{it\ell4}),
+\]</span></p>
+<p><span class="math display">\[
+v_{it\ell k}
+=b_{\ell k}+(x^D_{it})'\beta_{D,k},
+\]</span></p>
+<p><span class="math display">\[
+\boxed{
+d_{it\ell k}
+=
+\frac{\exp(v_{it\ell k})}
+{\sum_{h=1}^{4}\exp(v_{it\ell h})}
+}.
+\]</span></p>
+<p>以Class 1为基准：</p>
+<p><span class="math display">\[
+b_{\ell1}=0,\qquad \beta_{D,1}=0.
+\]</span></p>
+<p>否则，给四个指数同时加一个常数不会改变概率，参数无法唯一表示。</p>
+<p><strong>④ 客户类型的初始概率</strong></p>
+<p>令 <span class="math inline">\(Q_i\)</span> 包括窗口初始事务所类别、初始财务状态和缺失指示：</p>
+<p><span class="math display">\[
+\pi_{i2}=\Pr(L_i=2\mid Q_i)=\Lambda(Q_i'\zeta),
+\qquad
+\pi_{i1}=1-\pi_{i2}.
+\]</span></p>
+<p>因此，连“初始进入哪类事务所”与客户类型之间也不要求独立。</p>
+<hr/>
+<p><strong>三、从单条概率推到整家公司的联合似然</strong></p>
+<p>对于Bernoulli变量：</p>
+<p><span class="math display">\[
+\Pr(Y=y)=p^y(1-p)^{1-y}.
+\]</span></p>
+<p>代入 <span class="math inline">\(p=\Lambda(\eta)\)</span>，其对数概率可以简化为：</p>
+<p><span class="math display">\[
+\begin{aligned}
+\log\Pr(Y=y)
+&amp;=y\log p+(1-y)\log(1-p)\\
+&amp;=\boxed{y\eta-\log(1+e^\eta)}.
+\end{aligned}
+\]</span></p>
+<p>目的地的对数概率为：</p>
+<p><span class="math display">\[
+\boxed{
+\log\Pr(K=k\mid L=\ell,M=1)
+=
+v_{it\ell k}-\log\sum_{h=1}^{4}e^{v_{it\ell h}}
+}.
+\]</span></p>
+<p>分别用 <span class="math inline">\(\mathcal T_i^Y,\mathcal T_i^M,\mathcal T_i^D\)</span> 表示：</p>
+<ul>
+<li>有成熟失败结果的年份；</li>
+<li>原所可识别、可以判断是否换所的年份；</li>
+<li>其中实际换所的年份。</li>
+</ul>
+<p><strong>如果我们知道客户就是类型 <span class="math inline">\(\ell\)</span></strong>，该类型先验概率与公司记录概率之乘积的对数为：</p>
+<p><span class="math display">\[
+\begin{aligned}
+s_{i\ell}(\theta)
+={}&amp;\log\pi_{i\ell}\\
+&amp;+\sum_{t\in\mathcal T_i^Y}
+\left[
+Y_{it}\eta^Y_{it\ell}
+-\log(1+e^{\eta^Y_{it\ell}})
+\right]\\
+&amp;+\sum_{t\in\mathcal T_i^M}
+\left[
+M_{it}\eta^M_{it\ell}
+-\log(1+e^{\eta^M_{it\ell}})
+\right]\\
+&amp;+\sum_{t\in\mathcal T_i^D}
+\left[
+v_{it\ell,K_{it}}
+-\log\sum_{h=1}^{4}e^{v_{it\ell h}}
+\right].
+\end{aligned}
+\]</span></p>
+<p>这里的 <span class="math inline">\(\theta\)</span> 包含全部未知参数：</p>
+<p><span class="math display">\[
+\boxed{
+\theta=(a,\beta_Y,c,\beta_M,b,\beta_D,\zeta).
+}
+\]</span></p>
+<p><strong>但客户类型不知道，所以要把两种可能加起来：</strong></p>
+<p><span class="math display">\[
+\mathcal L_i(\theta)
+=e^{s_{i1}(\theta)}+e^{s_{i2}(\theta)}.
+\]</span></p>
+<p>所有公司的观测对数似然为：</p>
+<p><span class="math display">\[
+\boxed{
+\ell(\theta)
+=
+\sum_i
+\log\left[e^{s_{i1}(\theta)}+e^{s_{i2}(\theta)}\right].
+}
+\]</span></p>
+<p>这就是代码实际最大化的目标。</p>
+<p>注意：条件概率相乘本身是模型限制——给定类型、财务路径和控制后，剩余结果与配置按上述方式分解。它没有允许任意私人风险同时影响所有方程。</p>
+<hr/>
+<p><strong>四、对联合似然求导，得到客户类型后验权重</strong></p>
+<p>对一家公司：</p>
+<p><span class="math display">\[
+\ell_i(\theta)
+=\log\sum_{\ell=1}^{2}e^{s_{i\ell}(\theta)}.
+\]</span></p>
+<p>使用链式法则：</p>
+<p><span class="math display">\[
+\frac{\partial\ell_i}{\partial\theta}
+=
+\frac{\sum_\ell e^{s_{i\ell}}
+\frac{\partial s_{i\ell}}{\partial\theta}}
+{\sum_h e^{s_{ih}}}.
+\]</span></p>
+<p>定义：</p>
+<p><span class="math display">\[
+\boxed{
+\tau_{i\ell}(\theta)
+=
+\frac{e^{s_{i\ell}(\theta)}}
+{\sum_h e^{s_{ih}(\theta)}}.
+}
+\]</span></p>
+<p>它正是观察全部记录以后，公司 <span class="math inline">\(i\)</span> 属于类型 <span class="math inline">\(\ell\)</span> 的后验概率。于是：</p>
+<p><span class="math display">\[
+\boxed{
+\frac{\partial\ell}{\partial\theta}
+=
+\sum_i\sum_{\ell=1}^{2}
+\tau_{i\ell}(\theta)
+\frac{\partial s_{i\ell}(\theta)}{\partial\theta}.
+}
+\]</span></p>
+<p><strong>所以最终估计方程，看起来像一组由客户后验类型概率加权的logit方程。</strong>这些权重也随参数变化，不是预先固定的客户分组。</p>
+<hr/>
+<p><strong>五、最终参数估计的七组score方程</strong></p>
+<p>核心求导公式只有两个：</p>
+<p><span class="math display">\[
+\frac{\partial}{\partial\eta}
+\left[y\eta-\log(1+e^\eta)\right]
+=y-\Lambda(\eta),
+\]</span></p>
+<p><span class="math display">\[
+\frac{\partial\log d_{it\ell,K_{it}}}{\partial v_{it\ell k}}
+=
+\mathbf1\{K_{it}=k\}-d_{it\ell k}.
+\]</span></p>
+<p>因此，在有限、内部的驻点，参数满足以下方程。所有概率和权重均在最终参数处计算。</p>
+<p><strong>① 失败方程的类型—类别截距</strong></p>
+<p>对每个 <span class="math inline">\(\ell=1,2\)</span>、<span class="math inline">\(k=1,\ldots,4\)</span>：</p>
+<p><span class="math display">\[
+\boxed{
+\sum_i\sum_{t\in\mathcal T_i^Y}
+\tau_{i\ell}\mathbf1\{K_{it}=k\}
+\left(Y_{it}-p^Y_{it\ell}\right)=0.
+}
+\]</span></p>
+<p>即：<strong>每个类型—事务所类别中的后验加权实际失败数，等于模型预测失败数。</strong></p>
+<p>失败方程共同斜率：</p>
+<p><span class="math display">\[
+\boxed{
+\sum_i\sum_{t\in\mathcal T_i^Y}\sum_\ell
+\tau_{i\ell}x^Y_{it}
+\left(Y_{it}-p^Y_{it\ell}\right)=0.
+}
+\]</span></p>
+<p><strong>② 换所方程</strong></p>
+<p>类型截距：</p>
+<p><span class="math display">\[
+\boxed{
+\sum_i\sum_{t\in\mathcal T_i^M}
+\tau_{i\ell}
+\left(M_{it}-p^M_{it\ell}\right)=0.
+}
+\]</span></p>
+<p>共同斜率：</p>
+<p><span class="math display">\[
+\boxed{
+\sum_i\sum_{t\in\mathcal T_i^M}\sum_\ell
+\tau_{i\ell}x^M_{it}
+\left(M_{it}-p^M_{it\ell}\right)=0.
+}
+\]</span></p>
+<p><strong>③ 目的地方程</strong></p>
+<p>对非基准类别 <span class="math inline">\(k=2,3,4\)</span>，类型—目的地截距满足：</p>
+<p><span class="math display">\[
+\boxed{
+\sum_i\sum_{t\in\mathcal T_i^D}
+\tau_{i\ell}
+\left[
+\mathbf1\{K_{it}=k\}-d_{it\ell k}
+\right]=0.
+}
+\]</span></p>
+<p>目的地协变量系数满足：</p>
+<p><span class="math display">\[
+\boxed{
+\sum_i\sum_{t\in\mathcal T_i^D}\sum_\ell
+\tau_{i\ell}x^D_{it}
+\left[
+\mathbf1\{K_{it}=k\}-d_{it\ell k}
+\right]=0.
+}
+\]</span></p>
+<p><strong>④ 初始类型概率方程</strong></p>
+<p><span class="math display">\[
+\boxed{
+\sum_i Q_i\left(\tau_{i2}-\pi_{i2}\right)=0.
+}
+\]</span></p>
+<p>这里比较的是：看完结果与流动记录后的Type 2后验概率，与只根据初始状态预测的Type 2概率。</p>
+<p><strong>以上七组方程，就是当前程序中全部参数的score方程（对数似然的一阶导数方程）。</strong>它们共同组成：</p>
+<p><span class="math display">\[
+\boxed{\nabla_\theta\ell(\widehat\theta)=0.}
+\]</span></p>
+<hr/>
+<p><strong>六、数值优化如何求解这些方程？</strong></p>
+<p>这些方程没有OLS那样的闭式解，因为：</p>
+<ul>
+<li>logit和softmax是非线性的；</li>
+<li>后验权重 <span class="math inline">\(\tau_{i\ell}\)</span> 又依赖所有参数；</li>
+<li>混合似然可能有多个局部极值。</li>
+</ul>
+<p>实际程序不是按上述方程逐个独立回归，也不是用bootstrap求解，而是：</p>
+<ol type="1">
+<li>给全部参数一组初始值。</li>
+<li>计算三个方程的概率。</li>
+<li>计算每家公司的两类对数概率、联合似然和后验权重。</li>
+<li>用上面的解析梯度更新全部参数。</li>
+<li>重复直至满足程序的停止检查。</li>
+<li>两类型模型使用12个起点，保留观测似然最高的解。</li>
+</ol>
+<p>代码使用 <strong>L-BFGS-B</strong> 直接最小化：</p>
+<p><span class="math display">\[
+\boxed{
+Q(\theta)=-\frac1N\ell(\theta),
+}
+\]</span></p>
+<p>并提供上面推导的解析梯度。代码判断为收敛的条件是平均负对数似然梯度的最大绝对值小于<span class="math inline">\(2\times10^{-5}\)</span>，或优化器返回成功且该值小于<span class="math inline">\(2\times10^{-4}\)</span>；这里没有给参数设置有限上下界，也没有加入惩罚项。后续数值核查还使用了更严格设置和BFGS。</p>
+<p>如果是接近分离的边界解，例如某个失败概率趋近0，相应截距可能趋向负无穷，<strong>未必存在有限参数使全部score精确等于0</strong>。所以“优化结束”和“存在稳定、有限、唯一的MLE”仍要分别检查。</p>
+<p><strong>七、从参数到sorting和风险—配置结果。</strong> 令<span class="math inline">\(N_Y\)</span>为进入估计的结果记录数。固定共同财务及其他控制条件，类型<span class="math inline">\(\ell\)</span>在所类<span class="math inline">\(k\)</span>的平均预测失败概率为</p>
+<p><span class="math display">\[
+\widehat\theta_{\ell k}
+=\frac{1}{N_Y}\sum_{(i,t)\in\mathcal T^Y}
+\Lambda(\widehat a_{\ell k}+(x^Y_{it})'\widehat\beta_Y).
+\]</span></p>
+<p>它是非线性概率的平均，不是直接将平均协变量代入logit。按<span class="math inline">\(\frac14\sum_k\widehat\theta_{\ell k}\)</span>由低到高给客户Type编号后，计算</p>
+<p><span class="math display">\[
+\widehat q_{\ell\mid k}
+=\frac{1}{N_k^Y}\sum_{(i,t)\in\mathcal T^Y}
+\mathbf1\{K_{it}=k\}\widehat\tau_{i\ell},
+\qquad
+\widehat{\bar q}_\ell=\frac{1}{N_Y}\sum_{(i,t)\in\mathcal T^Y}\widehat\tau_{i\ell}.
+\]</span></p>
+<p>其中<span class="math inline">\(N_k^Y\)</span>是该类别进入估计的结果公司年数。使用该类自己的客户类型构成与使用共同构成的标准化失败率，以及两者之差，分别为</p>
+<p><span class="math display">\[
+\widehat P_k^{\mathrm{own}}=\sum_\ell\widehat q_{\ell\mid k}\widehat\theta_{\ell k},
+\qquad
+\widehat P_k^{\mathrm{common}}=\sum_\ell\widehat{\bar q}_\ell\widehat\theta_{\ell k},
+\]</span></p>
+<p><span class="math display">\[
+\boxed{\widehat S_k=\widehat P_k^{\mathrm{own}}-\widehat P_k^{\mathrm{common}}
+=\sum_\ell(\widehat q_{\ell\mid k}-\widehat{\bar q}_\ell)\widehat\theta_{\ell k}.}
+\]</span></p>
+<p>这是模型内的客户类型构成差异，不是自动获得因果解释的服务／选择分解。后验类型构成使用公司整个窗口内的记录；用于预测当期换所的类型权重另只根据初始信息和过去流动更新，不使用未来失败结果。</p>
+<p><strong>八、两种年度结果使用方式。</strong> “每年的审计结果都进入估计”是使用全部可用且有完整三年追踪的年度结果。“同一家公司每隔至少三年保留一次审计结果进入估计”是从第一条可用结果开始，下一条报告签字日必须不早于前一条三年追踪期的结束日；这是按日期依次选取，不是每三年随机抽一年。后者只减少结果方程里的记录，仍保留可用的年度换所和目的地记录。改变使用哪些结果，会改变有效信息和重新估计的客户类型。</p>
+</details>
+<!-- window-math-derivation:end -->
 </section>
 </section>
-<section id="联合模型回答的两个问题" class="level2">
+<section class="level2" id="联合模型回答的两个问题">
 <h2 class="anchored" data-anchor-id="联合模型回答的两个问题">6. 联合模型回答的两个问题</h2>
-<section id="什么客户类型配到什么事务所" class="level3">
+<section class="level3" id="什么客户类型配到什么事务所">
 <h3 class="anchored" data-anchor-id="什么客户类型配到什么事务所">6.1 什么客户类型配到什么事务所？</h3>
-<p>对客户两类初始概率分别乘该类下的结果与流动似然，再归一化，得到后验概率<span class="math inline">\(\widehat\tau_{i\ell}\)</span>。在纳入似然的成熟结果公司年中，按事务所类别求平均：</p>
+<p>对客户两类初始概率分别乘该类下的结果与流动似然，再归一化，得到后验概率<span class="math inline">\(\widehat\tau_{i\ell}\)</span>。在有完整三年追踪并进入估计的公司年中，按事务所类别求平均：</p>
 <p><span class="math display">\[
 \widehat q_{\ell\mid k}=
 \frac{\sum_{(i,t)\in\mathcal T^Y}\mathbf1\{K_{it}=k\}\widehat\tau_{i\ell}}
 {\sum_{(i,t)\in\mathcal T^Y}\mathbf1\{K_{it}=k\}}.
 \]</span></p>
 <p>这就是类型sorting的展示对象：各类事务所内部的客户类型构成是否不同。<strong>Type 1／2按该模型在共同财务参考下、四类事务所中平均预测失败概率由低到高编号</strong>；不保证Type 2在每个Class中都更高，跨模型同名类型也不保证对应同一批客户。它是五年内固定潜在类型，不是每年观测到的ROA风险组。</p>
-<p><strong>2015—2019年，四大所在Class 4的Type 2占比最低。</strong> 四类占比分别为17.3%、29.9%、17.5%、3.4%。改用不重叠追踪窗结果，比例变为47.2%、55.0%、24.7%、4.3%；Class 4仍最低，但其他类别的构成重新分配。Class 2中Type 2的共同参考失败概率也由33.9%变为11.7%。</p>
-<div id="fig-window-client-sorting" class="quarto-float quarto-figure quarto-figure-center anchored">
+<p><strong>2015—2019年，四大所在Class 4的Type 2占比最低。</strong> 四类占比分别为17.3%、29.9%、17.5%、3.4%。改为同一家公司每隔至少三年保留一次结果进入估计，比例变为47.2%、55.0%、24.7%、4.3%；Class 4仍最低，但其他类别的构成重新分配。Class 2中Type 2的共同参考失败概率也由33.9%变为11.7%。</p>
+<div class="quarto-float quarto-figure quarto-figure-center anchored" id="fig-window-client-sorting">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-window-client-sorting-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="figures/selection_matching/client_auditfirm_window_mixture/client_type_sorting_2015.png" class="img-fluid figure-img" style="width:100.0%">
+<img class="img-fluid figure-img" src="figures/selection_matching/client_auditfirm_window_mixture/client_type_sorting_2015.png" style="width:100.0%"/>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-window-client-sorting-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-图&nbsp;3: 2015—2019年不筛选样本。横轴Class 1—4是事务所类别，Class 4该窗口全部为四大；浅蓝为客户Type 1，深蓝为平均预测失败概率较高的Type 2。纵轴为类内成熟结果公司年的平均后验类型概率，每柱100%，不是事务所家数或硬分类客户人数占比。左图年度结果，右图不重叠结果；两图各自重新估计类型。
+图 3: 2015—2019年不筛选样本。横轴Class 1—4是事务所类别，Class 4该窗口全部为四大；浅蓝为客户Type 1，深蓝为平均预测失败概率较高的Type 2。纵轴为类内有完整三年追踪并进入估计的公司年的平均后验类型概率，每柱100%，不是事务所家数或硬分类客户人数占比。左图每年的审计结果都进入估计，右图同一家公司每隔至少三年保留一次结果；两图各自重新估计类型。
 </figcaption>
 </figure>
 </div>
@@ -931,25 +1322,25 @@ B(y_s;\theta_{\ell a})B(y_t;\theta_{\ell b}).
 </summary>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="figures/selection_matching/client_auditfirm_report/client_type_composition_windows.png" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption>各窗口不筛选样本、两类型风险联合模型。横轴1—4为事务所Class；浅蓝为客户Type 1、深蓝为Type 2，纵轴为类内成熟结果公司年的后验类型占比。柱顶深蓝数字为Type 2百分比，每柱100%。类型在各窗口独立估计并排序；同一数字标签不表示跨窗口固定不变的客户群。</figcaption>
+<p><img class="img-fluid figure-img" src="figures/selection_matching/client_auditfirm_report/client_type_composition_windows.png" style="width:100.0%"/></p>
+<figcaption>各窗口不筛选样本、两类型风险联合模型。横轴1—4为事务所Class；浅蓝为客户Type 1、深蓝为Type 2，纵轴为类内有完整三年追踪并进入估计的公司年的后验类型占比。柱顶深蓝数字为Type 2百分比，每柱100%。类型在各窗口独立估计并排序；同一数字标签不表示跨窗口固定不变的客户群。</figcaption>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="figures/selection_matching/client_auditfirm_window_mixture/type_failure_profiles.png" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption>共同财务参考下的类型—类别失败概率，格内数字为百分比。浅黄到深红表示概率由低到高；横轴1—4为事务所Class，纵轴为客户Type，列标题为窗口起点。上排年度结果，下排不重叠结果；颜色表示概率，不是类型占比或事件数。</figcaption>
+<p><img class="img-fluid figure-img" src="figures/selection_matching/client_auditfirm_window_mixture/type_failure_profiles.png" style="width:100.0%"/></p>
+<figcaption>共同财务参考下的类型—类别失败概率，格内数字为百分比。浅黄到深红表示概率由低到高；横轴1—4为事务所Class，纵轴为客户Type，列标题为窗口起点。上排使用每年的审计结果，下排同一家公司每隔至少三年保留一次结果；颜色表示概率，不是类型占比或事件数。</figcaption>
 </figure>
 </div>
-<p>五个窗口分类公司年分别为5,175、6,947、11,162、15,709、23,421；成熟结果公司年为4,997、6,826、11,118、15,707、8,123。2020—2024年较晚记录仍提供流动信息，未知失败结果不填零。共同参考概率对少见的类型—财务状态—事务所组合会依赖模型外推。</p>
+<p>五个窗口分类公司年分别为5,175、6,947、11,162、15,709、23,421；有完整三年追踪的结果公司年为4,997、6,826、11,118、15,707、8,123。2020—2024年较晚记录仍提供流动信息，未知失败结果不填零。共同参考概率对少见的类型—财务状态—事务所组合会依赖模型外推。</p>
 </details>
 </section>
-<section id="上一年财务风险怎样关联换所" class="level3">
+<section class="level3" id="上一年财务风险怎样关联换所">
 <h3 class="anchored" data-anchor-id="上一年财务风险怎样关联换所">6.2 上一年财务风险怎样关联换所？</h3>
 <p>在同一模型中，将上一年ROA从同年第25百分位提高到第75百分位，其他状态和预测用类型权重固定，2015—2019年、2020—2024年的平均换所概率分别下降<strong>4.06、3.04个百分点</strong>。配置预测权重仅使用初始状态和此前流动，不使用未来失败结果。</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="figures/selection_matching/client_auditfirm_report/roa_mobility.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<p><img class="img-fluid figure-img" src="figures/selection_matching/client_auditfirm_report/roa_mobility.png" style="width:100.0%"/></p>
 <figcaption>横轴为五年窗口，纵轴为ROA从第25到第75百分位的平均预测换所概率差，单位为百分点。深蓝实线为全样本点估计，橙色虚线为100次整客户重抽样的中位数，浅蓝阴影为2.5%—97.5%经验分位范围，灰线为0。固定第一步事务所分类；此处深浅蓝区分估计与抽样范围，不表示Type 1／2。</figcaption>
 </figure>
 </div>
@@ -961,21 +1352,21 @@ B(y_s;\theta_{\ell a})B(y_t;\theta_{\ell b}).
 </summary>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="figures/selection_matching/client_auditfirm_window_mixture/risk_mobility_effects.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<p><img class="img-fluid figure-img" src="figures/selection_matching/client_auditfirm_window_mixture/risk_mobility_effects.png" style="width:100.0%"/></p>
 <figcaption>五面板依次为负债率、ROA、经营现金流／资产、Z-score、规模；横轴窗口起点，纵轴为第75对第25百分位的预测换所概率差，单位百分点。蓝、橙、绿线分别为不筛选、33、55三套A1资格，灰线为0；颜色区分样本，不表示客户类型或事务所类别。</figcaption>
 </figure>
 </div>
 <p>三折按客户整体留出，固定第一步类别。加入风险后，两类型模型的择所log-score增益在2010、2015、2020起点窗口的每折均为正；2000、2005窗口各有折为负。失败结果的预测增益没有同样一致的方向。</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="figures/selection_matching/client_auditfirm_window_mixture/risk_choice_validation.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<p><img class="img-fluid figure-img" src="figures/selection_matching/client_auditfirm_window_mixture/risk_choice_validation.png" style="width:100.0%"/></p>
 <figcaption>横轴为窗口起点，纵轴为加入风险后的留出log-score增益，大于0表示改善。左图是换所与目的地，右图是给定配置路径的失败结果。蓝线一客户类型、橙线两客户类型；阴影为三折最小至最大值，不是置信区间。右图用对称对数纵轴保留早期窗口的较大负值。</figcaption>
 </figure>
 </div>
 </details>
 </section>
 </section>
-<section id="当前结果的解释与执行范围" class="level2">
+<section class="level2" id="当前结果的解释与执行范围">
 <h2 class="anchored" data-anchor-id="当前结果的解释与执行范围">当前结果的解释与执行范围</h2>
 <p>AKM的梯队间正向配置，在三套样本和逐观测独立误差纠偏下保持；梯队内负项的绝对量级经纠偏减小。客户内持续冲击及局部网络支持，仍限制把剩余二阶矩直接解释为真实匹配机制。最小联合模型进一步给出窗口内客户类型配对分布，并显示近期盈利能力与换所的关系；其类型构成会随结果追踪窗处理改变，且私人信息选择仍受给定类型和状态后的条件分解限制。</p>
 <details>
@@ -988,28 +1379,23 @@ B(y_s;\theta_{\ell a})B(y_t;\theta_{\ell b}).
 <p>48个基准／分梯队模型与24个未来配置模型已有Stata—Python核对。分项KSS、记录级支持和600次模拟为后续Python诊断；窗口联合模型为Python估计。本次仅重写报告、重画展示图和静态渲染，未重新估计模型，未运行Stata。</p>
 </details>
 </section>
-<section id="参考文献" class="level2">
+<section class="level2" id="参考文献">
 <h2 class="anchored" data-anchor-id="参考文献">参考文献</h2>
-<div id="refs" class="references csl-bib-body hanging-indent" role="list">
-<div id="ref-akm1999" class="csl-entry" role="listitem">
+<div class="references csl-bib-body hanging-indent" id="refs" role="list">
+<div class="csl-entry" id="ref-akm1999" role="listitem">
 Abowd, John M., Francis Kramarz, 和 David N. Margolis. 1999. <span>《High Wage Workers and High Wage Firms》</span>. <em>Econometrica</em> 67 (2): 251～333. <a href="https://doi.org/10.1111/1468-0262.00020">https://doi.org/10.1111/1468-0262.00020</a>.
 </div>
-<div id="ref-blm2019" class="csl-entry" role="listitem">
+<div class="csl-entry" id="ref-blm2019" role="listitem">
 Bonhomme, Stéphane, Thibaut Lamadon, 和 Elena Manresa. 2019. <span>《A Distributional Framework for Matched Employer Employee Data》</span>. <em>Econometrica</em> 87 (3): 699～739. <a href="https://doi.org/10.3982/ECTA15722">https://doi.org/10.3982/ECTA15722</a>.
 </div>
-<div id="ref-kss2020" class="csl-entry" role="listitem">
+<div class="csl-entry" id="ref-kss2020" role="listitem">
 Kline, Patrick, Raffaele Saggio, 和 Mikkel Sølvsten. 2020. <span>《Leave-Out Estimation of Variance Components》</span>. <em>Econometrica</em> 88 (5): 1859～98. <a href="https://doi.org/10.3982/ECTA16410">https://doi.org/10.3982/ECTA16410</a>.
 </div>
 </div>
-
-
 </section>
-
-
-<div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">脚注</h2>
-
+<div class="default" id="quarto-appendix"><section class="footnotes footnotes-end-of-document" id="footnotes" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">脚注</h2>
 <ol>
-<li id="fn1"><p>Bonhomme、Lamadon和Manresa（2019），<em>A Distributional Framework for Matched Employer Employee Data</em>，<em>Econometrica</em> 87(3), 699–739。发表信息见<a href="https://doi.org/10.3982/ECTA15722">DOI</a>，两步估计及动态限制核对<a href="https://bfi.uchicago.edu/wp-content/uploads/BFI-WP-2019-15.pdf">作者工作稿</a>引言、§2.2与§3.2。<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn1"><p>Bonhomme、Lamadon和Manresa（2019），<em>A Distributional Framework for Matched Employer Employee Data</em>，<em>Econometrica</em> 87(3), 699–739。发表信息见<a href="https://doi.org/10.3982/ECTA15722">DOI</a>，两步估计及动态限制核对<a href="https://bfi.uchicago.edu/wp-content/uploads/BFI-WP-2019-15.pdf">作者工作稿</a>引言、§2.2与§3.2。<a class="footnote-back" href="#fnref1" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -1413,9 +1799,5 @@ Kline, Patrick, Raffaele Saggio, 和 Mikkel Sølvsten. 2020. <span>《Leave-Out 
   });
   </script>
 </div> <!-- /content -->
-<script src="report-toc.js" defer=""></script>
-
-
-
-
+<script defer="" src="report-toc.js"></script>
 </body></html>

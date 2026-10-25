@@ -183,7 +183,7 @@ window.Quarto = {
 <li class="sidebar-item">
 <div class="sidebar-item-container">
 <a class="sidebar-item-text sidebar-link" href="./26_akm.html">
-<span class="menu-text">AKM</span></a>
+<span class="menu-text">AKM：客户配置、估计噪声与风险择所</span></a>
 </div>
 </li>
 <li class="sidebar-item">
@@ -275,7 +275,7 @@ R_t^{\,s}=\frac{\#\{\text{eligible type-}s\text{ links retained in }t+1\}}
 <figcaption>精选描述：年度配对保留率</figcaption>
 </figure>
 </div>
-<p><a href="#full-10_matching-1">累计匹配全部六项统计</a> <a href="#full-10_matching-6">配对稳定性完整分析</a> <a href="#full-10_matching-4">匹配模型与识别诊断</a></p>
+<p><a href="#full-10_matching-1">累计匹配全部六项统计</a> · <a href="#full-10_matching-6">配对稳定性完整分析</a> · <a href="#full-10_matching-4">匹配模型与识别诊断</a></p>
 <p><span id="full-10_matching-1"></span></p>
 <p><span id="settings-10_matching"></span></p>
 <p><strong>统计与回归设定。</strong> 第 1 节累计配对和第 6 节保留率为描述统计，不适用回归控制、FE 或标准误；其主体、分母和缺失处理分别列示。当前 <code>44_triadic_sorting_blm.do</code> 的热图实际吸收“配对类型”和“年份”两个 FE；方程中的 <span class="math inline">\(\eta_{kl}+\lambda_t\)</span> 与命令一致。代码控制 <code>size</code>、<code>roa</code>、<code>lev</code>，按客户聚类。历史图与当前脚本的版本一致性、估计年份和 N 尚待核验，因此仍按旧版描述诊断展示。五年滚动秩回归没有额外控制或 FE，使用 OLS 常规标准误；它不是严格的 Spearman 统计量。AKM 有限流动诊断的样本门槛、归一化和各图有效 N 须与对应输出继续核对。</p>
@@ -435,8 +435,7 @@ I_t(K;L)=\sum_{k,l}P_t(k,l)\ln\frac{P_t(k,l)}{P_t(k)P_t(l)}.
 </section>
 <section class="level2" id="数据程序与输出记录">
 <h2 class="anchored" data-anchor-id="数据程序与输出记录">数据、程序与输出记录</h2>
-
-<p>结果来源为 <code>results/tables/selection_matching/matching_degree_distribution/</code> 下六个 <code>*_counts.csv</code> 文件；三张组合图已按 A1 ID 口径生成并同步到本报告目录。生成脚本为 <code>code/stata/40_selection_matching/45_matching_degree_distribution.do</code>。</p>
+<p><strong>估计程序（存档）。</strong> · 结果来源为 <code>results/tables/selection_matching/matching_degree_distribution/</code> 下六个 <code>*_counts.csv</code> 文件；三张组合图已按 A1 ID 口径生成并同步到本报告目录。生成脚本为 <code>code/stata/40_selection_matching/45_matching_degree_distribution.do</code>。</p>
 </section>
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
