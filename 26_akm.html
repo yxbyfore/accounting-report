@@ -931,9 +931,7 @@ Y_{it}=\alpha_i+\psi_{f(i,t)}+\lambda_t+X_{it}'\beta
 <h3 class="anchored" data-anchor-id="sec-akm-sorting-record">执行核对与全部结果下载</h3>
 <p>本段旧AKM主输入为公司年度正式面板与auditor_team_features，SHA256记录在<a href="tables/client_auditfirm_sorting/run_manifest.json">输入manifest</a>。旧分支已运行48个基准／分梯队模型与24个未来配置模型；Stata—Python逐行核对公司年、原始事务所与稳定A1身份、变量构造、连通分量及归一化成分通过，拟合值最大差异约<span class="math inline">\(4.44\times10^{-9}\)</span>。<a href="tables/client_auditfirm_sorting/stata_integration_manifest.json">跨语言执行记录</a>、<a href="tables/client_auditfirm_sorting/completion_checks.json">完成检查</a>。这些旧结果保留；本轮另行实际运行的新估计、输入哈希和完整执行记录见<a href="#sec-dynamic-risk-record">动态风险分支</a>。</p>
 <details>
-<summary>
-全部当前规格CSV、Stata输出与复现代码
-</summary>
+<summary>全部当前规格CSV与结果表</summary>
 <ul>
 <li><a href="tables/client_auditfirm_sorting/audit_firm_support.csv">audit_firm_support</a></li>
 <li><a href="tables/client_auditfirm_sorting/baseline_fit.csv">baseline_fit</a></li>
@@ -979,9 +977,6 @@ Y_{it}=\alpha_i+\psi_{f(i,t)}+\lambda_t+X_{it}'\beta
 <li><a href="tables/client_auditfirm_sorting/stata/residual_future_assignment_tests.csv">residual_future_assignment_tests</a></li>
 <li><a href="tables/client_auditfirm_sorting/stata/sample_flow.csv">sample_flow</a></li>
 <li><a href="tables/client_auditfirm_sorting/stata/within_between_sorting.csv">within_between_sorting</a></li>
-
-
-
 </ul>
 </details>
 <!-- client-auditfirm-sorting:end -->
@@ -2315,7 +2310,6 @@ E[\widehat{\theta}\mid Z]=\theta.
 </section>
 <section class="level2" id="数据与估计程序记录">
 <h2 class="anchored" data-anchor-id="数据与估计程序记录">数据与估计程序记录</h2>
-
 <p><strong>Rare-event 补充诊断。</strong> 数值核对自 <code>results/reports/partner_humancapital/audit_outcome_identification/audit_outcome_identification.md</code>，其中 role=0 为当期／继任 A1。文献在线核验日期：2026-09-27。</p>
 </section>
 <section class="level2" id="参考文献">
