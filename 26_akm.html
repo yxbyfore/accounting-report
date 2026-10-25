@@ -266,6 +266,7 @@ window.Quarto = {
   <ul class="collapse">
   <li><a href="#失败记录与有效换所支持" id="toc-失败记录与有效换所支持" class="nav-link" data-scroll-target="#失败记录与有效换所支持">失败记录与有效换所支持</a></li>
   <li><a href="#sec-akm-future-assignment" id="toc-sec-akm-future-assignment" class="nav-link" data-scroll-target="#sec-akm-future-assignment">当前剩余结果是否关联未来配置？</a></li>
+  <li><a href="#sec-akm-selection-bias" id="toc-sec-akm-selection-bias" class="nav-link" data-scroll-target="#sec-akm-selection-bias">短期风险选择为什么可能低估组间正向sorting？</a></li>
   </ul></li>
   <li><a href="#sec-window-joint-mixture" id="toc-sec-window-joint-mixture" class="nav-link" data-scroll-target="#sec-window-joint-mixture">5. 参考BLM的最小联合模型怎样估计？</a>
   <ul class="collapse">
@@ -639,6 +640,101 @@ Y_{it}=X_{it}'\beta+\alpha_i+\psi_{J_{it}}+\phi_t+\varepsilon_{it}.
 </figcaption>
 </figure>
 </section>
+<section id="sec-akm-selection-bias" class="level3">
+<h3 class="anchored" data-anchor-id="sec-akm-selection-bias">短期风险选择为什么可能低估组间正向sorting？</h3>
+<p><strong>若高风险冲击促使客户退出四大、低风险冲击使客户更容易进入四大，且这些冲击随后向正常水平回归，两种流动都会把四大降低失败率的优势估得偏小；在客户FE组间差距给定时，也会压低组间正向sorting。</strong> 上表中的MAO与次年退出正相关、与次年进入负相关，为风险相关的配置提供了证据。下面明确推导偏误方向所需的额外条件：选择反映的是尚未被控制变量及客户FE吸收的短期风险，而且它在换所后部分消退。</p>
+<p><strong>第一步：用两期、两类事务所说明风险如何进入换所估计。</strong> 令<span class="math inline">\(B_{it}=\mathbf1\{\text{使用四大}\}\)</span>，将已控制的年份和可观察特征省略，写为</p>
+<p><span id="eq-akm-selection-level"><span class="math display">\[
+Y_{it}=\alpha_i+\delta B_{it}+\varepsilon_{it},\qquad
+\delta=\psi_{\mathrm{Big4}}-\psi_{\mathrm{NonBig4}}&lt;0.
+\tag{4}\]</span></span></p>
+<p><span class="math inline">\(Y\)</span>按失败方向定义，故<span class="math inline">\(\delta&lt;0\)</span>表示四大降低失败概率。这里是对条件失败概率的线性表示；下文的<span class="math inline">\(\pm s\)</span>表示换所者在换所前的平均剩余风险冲击，并非每个二元结果都等于某个固定数。设</p>
+<p><span id="eq-akm-selection-persistence"><span class="math display">\[
+\varepsilon_{i,t+1}=\rho\varepsilon_{it}+u_{i,t+1},\qquad
+0\leq\rho&lt;1,\qquad
+\mathrm E[u_{i,t+1}\mid D_i]=0,
+\tag{5}\]</span></span></p>
+<p>其中<span class="math inline">\(D_i\)</span>表示进入或退出方向。<span class="math inline">\(\rho\)</span>是短期冲击下一年保留的比例；最后一个条件要求两类换所者没有额外、方向不同的新冲击。两期差分消去客户长期成分：</p>
+<p><span class="math display">\[
+\Delta Y_i=\delta\Delta B_i+\Delta\varepsilon_i.
+\]</span></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 20%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>换所方向</th>
+<th>换所前平均冲击</th>
+<th>下一期平均冲击</th>
+<th><span class="math inline">\(\Delta B\)</span></th>
+<th>平均<span class="math inline">\(\Delta\varepsilon\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>四大→非四大：风险异常升高时退出</td>
+<td><span class="math inline">\(+s\)</span></td>
+<td><span class="math inline">\(+\rho s\)</span></td>
+<td><span class="math inline">\(-1\)</span></td>
+<td><span class="math inline">\(-(1-\rho)s\)</span></td>
+</tr>
+<tr class="even">
+<td>非四大→四大：风险异常较低时进入</td>
+<td><span class="math inline">\(-s\)</span></td>
+<td><span class="math inline">\(-\rho s\)</span></td>
+<td><span class="math inline">\(+1\)</span></td>
+<td><span class="math inline">\(+(1-\rho)s\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>这里<span class="math inline">\(s&gt;0\)</span>；为便于比较，表中令两个方向的冲击绝对值相同。</p>
+<p><strong>第二步：高风险客户退出四大，风险回落掩盖失去四大服务的影响。</strong> 若<span class="math inline">\(\mathrm E[\varepsilon_{it}\mid\mathrm{exit}]=s\)</span>，则</p>
+<p><span id="eq-akm-selection-exit-bias"><span class="math display">\[
+\mathrm E[\Delta Y_i\mid\mathrm{exit}]
+=-\delta-(1-\rho)s,
+\qquad
+\delta^{\mathrm{naive}}_{\mathrm{exit}}
+\equiv-\mathrm E[\Delta Y_i\mid\mathrm{exit}]
+=\delta+(1-\rho)s&gt;\delta.
+\tag{6}\]</span></span></p>
+<p>真实的服务变化是<span class="math inline">\(-\delta&gt;0\)</span>，即失去四大后失败概率上升；同时，退出前异常升高的风险回落，使观测到的上升幅度缩小。仅按前后变化推断事务所差异，就会低估四大的优势。</p>
+<p><strong>第三步：低风险客户进入四大，风险回升抵消四大的改善作用。</strong> 若<span class="math inline">\(\mathrm E[\varepsilon_{it}\mid\mathrm{entry}]=-s\)</span>，则</p>
+<p><span id="eq-akm-selection-entry-bias"><span class="math display">\[
+\mathrm E[\Delta Y_i\mid\mathrm{entry}]
+=\delta+(1-\rho)s,
+\qquad
+\delta^{\mathrm{naive}}_{\mathrm{entry}}
+\equiv\mathrm E[\Delta Y_i\mid\mathrm{entry}]
+=\delta+(1-\rho)s&gt;\delta.
+\tag{7}\]</span></span></p>
+<p>进入四大本应降低失败概率，但进入前异常低的风险随后回升，抵消部分改善。两个方向因此产生同向偏误：<span class="math inline">\(\delta\)</span>向上偏，四大的失败率优势被估得偏小。只有当风险回归超过服务变化时，才会出现“退出后失败下降”或“进入后失败上升”；得到上述偏误方向并不要求实际变化一定反号。</p>
+<p><strong>第四步：事务所FE差距被压缩，如何传递到组间sorting？</strong> 在四大与非四大的两组例子中，沿用公司年权重，令四大占比为<span class="math inline">\(p\)</span>，客户与事务所成分的组间均值差分别为</p>
+<p><span class="math display">\[
+\Delta\alpha=\mathrm E[\alpha_i\mid B=1]-\mathrm E[\alpha_i\mid B=0],\qquad
+\Delta\psi=\mathrm E[\psi_{J_{it}}\mid B=1]-\mathrm E[\psi_{J_{it}}\mid B=0].
+\]</span></p>
+<p>组间协方差为</p>
+<p><span id="eq-akm-selection-between"><span class="math display">\[
+C_{\mathrm{between}}=p(1-p)\Delta\alpha\,\Delta\psi.
+\tag{8}\]</span></span></p>
+<p>当四大客户的长期失败成分较低（<span class="math inline">\(\Delta\alpha&lt;0\)</span>），四大的事务所失败成分也较低（<span class="math inline">\(\Delta\psi&lt;0\)</span>）时，两者乘积为正，这就是组间正向sorting。若前述流动选择使事务所差距向上偏<span class="math inline">\(b&gt;0\)</span>，即<span class="math inline">\(\widehat{\Delta\psi}=\Delta\psi+b\)</span>，在客户FE均值差与权重给定时，</p>
+<p><span id="eq-akm-selection-between-bias"><span class="math display">\[
+\widehat C_{\mathrm{between}}-C_{\mathrm{between}}
+=p(1-p)\Delta\alpha\,b&lt;0.
+\tag{9}\]</span></span></p>
+<p>因此，<strong>这条机制会使组间正向sorting被低估</strong>：四大服务低长期风险客户的配置仍在，但估计出的事务所优势被短期风险均值回归压小，使两端均值差的乘积偏小。FE绝对水平依赖归一化，这里的方向指四大相对非四大的FE差距。</p>
+<p>上述方向是条件推导。若客户FE差距本身也有估计偏误<span class="math inline">\(a\)</span>，则总变化为</p>
+<p><span class="math display">\[
+\widehat C_{\mathrm{between}}-C_{\mathrm{between}}
+=p(1-p)\bigl(\Delta\alpha\,b+\Delta\psi\,a+ab\bigr),
+\]</span></p>
+<p>其符号还取决于<span class="math inline">\(a\)</span>。本节实际按四大、本土八大和Other三组分解；两组例子说明四大边界上的一个向下偏误渠道，三组总体的净偏误还需考虑所有组对的均值差和估计权重。上表识别的是风险信号与后续配置的关联；将其解释为此处的向下偏误，还需要确认信号中有未吸收的暂时冲击及换所后的风险回归。KSS校正FE估计噪声，风险相关的内生换所则由下一节的联合模型进一步刻画。</p>
+</section>
 </section>
 <section id="sec-window-joint-mixture" class="level2">
 <h2 class="anchored" data-anchor-id="sec-window-joint-mixture">5. 参考BLM的最小联合模型怎样估计？</h2>
@@ -671,7 +767,7 @@ p^M_{it\ell}&amp;=\Lambda(c_\ell+R_{it}'\lambda+H_{it}'\eta),\\
 d_{it\ell k}&amp;=\frac{\exp(v_{it\ell k})}{\sum_{h=1}^{4}\exp(v_{it\ell h})},\\
 v_{it\ell k}&amp;=d_{\ell k}+R_{it}'\omega_k+H_{it}'\xi_k.
 \end{aligned}
-\tag{4}\]</span></span></p>
+\tag{10}\]</span></span></p>
 <p><span class="math inline">\(p^Y\)</span>为给定客户类型、当前Class和状态后的失败概率，<span class="math inline">\(p^M\)</span>为给定客户类型和状态后的换所概率，<span class="math inline">\(d_k\)</span>为已换所条件下进入Class <span class="math inline">\(k\)</span>的概率。<span class="math inline">\(\Lambda\)</span>是logistic函数；<span class="math inline">\(M_{it}=\mathbf1\{J_{it}\ne J_{i,t-1}\}\)</span>，同类内换到另一家事务所也算换所。“目的地”就是换所后的事务所类别。多项logit以Class 1为基准，其指数标准化为0。结果方程的<span class="math inline">\(a_{\ell k}\)</span>允许客户类型与事务所类别交互；财务风险斜率在客户类型间共同。</p>
 <p>将窗口初始事务所类、财务状态及缺失指示记为<span class="math inline">\(Q_i\)</span>，类型初始概率为<span class="math inline">\(\pi_{i2}=\Lambda(Q_i'\zeta)\)</span>、<span class="math inline">\(\pi_{i1}=1-\pi_{i2}\)</span>。以<span class="math inline">\(B(y;p)=p^y(1-p)^{1-y}\)</span>表示Bernoulli概率，联合似然为</p>
 <p><span id="eq-window-joint-likelihood"><span class="math display">\[
@@ -682,7 +778,7 @@ v_{it\ell k}&amp;=d_{\ell k}+R_{it}'\omega_k+H_{it}'\xi_k.
 \prod_{t\in\mathcal T_i^D}d_{it\ell,K_{it}}\Bigr],\\
 \widehat\vartheta&amp;=\arg\max_\vartheta\sum_i\log\mathcal L_i.
 \end{aligned}
-\tag{5}\]</span></span></p>
+\tag{11}\]</span></span></p>
 <p>三个集合分别是成熟结果、可识别的年度转移、实际换所年份。每个客户—窗口首条记录不进入流动项；缺失财务状态设中位位置0并带缺失指示。程序使用12个两类型起点。当前版本在给定类型、财务路径和控制变量后，将各项写为条件概率乘积；未另建财务风险过程，也未允许未观测私人风险任意同时影响选择与结果。</p>
 <details>
 <summary>

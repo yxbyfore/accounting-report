@@ -3585,6 +3585,67 @@ Transition_{i,t+1}=\text{firm FE}+\text{industry}\times\text{year FE}+\beta Sign
 Audit Opinions and Next-Year Big 4 Client Transitions · <a href="tables/big4_regression_columns/client_flows.tex">TeX</a> · <a href="tables/big4_regression_columns/client_flows.pdf">PDF</a>
 </figcaption>
 </figure>
+<section class="level4" id="短期风险选择对akm组间sorting的含义">
+<h4 class="anchored" data-anchor-id="短期风险选择对akm组间sorting的含义">短期风险选择对AKM组间sorting的含义</h4>
+<p><strong>意见所反映的风险信号与四大进出方向相反：MAO对应更多退出、更少进入。</strong> 若这种选择还包含控制变量与客户FE未吸收的暂时风险，那么换所后的风险均值回归会掩盖四大的服务优势。用<span class="math inline">\(Y_{it}=\alpha_i+\delta B_{it}+\varepsilon_{it}\)</span>说明，<span class="math inline">\(\delta&lt;0\)</span>表示四大降低失败概率。设退出者换所前平均剩余风险为<span class="math inline">\(+s\)</span>，进入者为<span class="math inline">\(-s\)</span>，下一年保留比例为<span class="math inline">\(0\leq\rho&lt;1\)</span>，且两类换所者下一期新冲击的条件均值均为0。则</p>
+<p><span class="math display">\[
+\begin{aligned}
+\mathrm E[\Delta Y\mid\mathrm{exit}]&amp;=-\delta-(1-\rho)s,\\
+\mathrm E[\Delta Y\mid\mathrm{entry}]&amp;=\delta+(1-\rho)s.
+\end{aligned}
+\]</span></p>
+<p>退出者的风险回落、进入者的风险回升，都会使仅据前后变化推断的<span class="math inline">\(\delta\)</span>变为<span class="math inline">\(\delta+(1-\rho)s\)</span>，即估计的四大优势偏小。在四大客户长期失败成分较低、客户FE组间差距给定时，这又会压低客户与事务所成分的组间正协方差。<strong>因此，风险相关流动加上风险均值回归，提供了一条低估组间正向sorting的机制。</strong> 当前流动回归给出前一环的关联证据；暂时冲击及其回归速度是偏误方向推导另需的条件。完整的进出推导、组间协方差公式，以及客户FE同时改变时的限制，见<a href="./26_akm.html#sec-akm-selection-bias">AKM：短期风险选择与组间sorting</a>。</p>
+<details>
+<summary>
+补充：客户变更公告与意见预测的完整证据
+</summary>
+<p>变更公告中的微观线索</p>
+<p>对收到 MAO 后更换事务所的案例分析进一步佐证了双方的动态博弈：</p>
+<ul>
+<li><strong>深圳华强（2001→2002）：</strong> 数据库记录为辞任，公告称服务未达要求，改聘本土所；</li>
+<li><strong>退市拉夏（2019→2020）：</strong> 公告提及“合理控制审计成本”，另一来源为收费分歧；尚无明确风险分歧证据；</li>
+<li><strong>卓郎智能（2019→2020）：</strong> 集团控股股东主导更换；</li>
+<li><strong>上海临港（2014→2015）：</strong> 重大资产重组导致审计机构重新洗牌；</li>
+<li><strong>新城控股（2023→2024）：</strong> 业务发展与整体审计需求调整；</li>
+<li><strong>鼎信通讯（2023→2024）：</strong> 连续服务超过十年，基于独立性与招投标程序轮换。</li>
+</ul>
+<p>这些案例提供任期、费用、集团安排及重组等具体线索。深圳华强的“辞任”原因码与董事会改聘文字不一致；新城控股公告还明确不存在工作、费用或意见分歧，案例对应不同更换动因，需分别识别发起方。</p>
+<p>以下综合机制表沿用其独立回归样本；Panel A为原流动规格，严格相邻年度的流动结果以正文表为准，两者不混作同一估计。Panels B—E保留意见预测、分类概率和客户特征证据。</p>
+<p>综合机制表：流动、预警与风险构成</p>
+<p>Table M1 将客户进入、退出、预警后风险差异及财务特征整合汇报：</p>
+<figure class="latex-table figure" style="overflow-x:auto;">
+<a href="tables/big4_mechanism/client_selection_opinion_mechanism_full_p01.pdf"><img alt="Table M1, Panel A" class="figure-img" loading="lazy" src="tables/big4_mechanism/client_selection_opinion_mechanism_full_p01.png"/></a>
+<figcaption>
+Table M1, Panel A · <a href="tables/big4_mechanism/client_selection_opinion_mechanism_full_p01.tex">TeX</a> · <a href="tables/big4_mechanism/client_selection_opinion_mechanism_full_p01.pdf">PDF</a>
+</figcaption>
+</figure>
+<figure class="latex-table figure" style="overflow-x:auto;">
+<a href="tables/big4_mechanism/client_selection_opinion_mechanism_full_p02.pdf"><img alt="Table M1, Panel B" class="figure-img" loading="lazy" src="tables/big4_mechanism/client_selection_opinion_mechanism_full_p02.png"/></a>
+<figcaption>
+Table M1, Panel B · <a href="tables/big4_mechanism/client_selection_opinion_mechanism_full_p02.tex">TeX</a> · <a href="tables/big4_mechanism/client_selection_opinion_mechanism_full_p02.pdf">PDF</a>
+</figcaption>
+</figure>
+<figure class="latex-table figure" style="overflow-x:auto;">
+<a href="tables/big4_mechanism/client_selection_opinion_mechanism_full_p03.pdf"><img alt="Table M1, Panel C" class="figure-img" loading="lazy" src="tables/big4_mechanism/client_selection_opinion_mechanism_full_p03.png"/></a>
+<figcaption>
+Table M1, Panel C · <a href="tables/big4_mechanism/client_selection_opinion_mechanism_full_p03.tex">TeX</a> · <a href="tables/big4_mechanism/client_selection_opinion_mechanism_full_p03.pdf">PDF</a>
+</figcaption>
+</figure>
+<figure class="latex-table figure" style="overflow-x:auto;">
+<a href="tables/big4_mechanism/client_selection_opinion_mechanism_full_p04.pdf"><img alt="Table M1, Panel D" class="figure-img" loading="lazy" src="tables/big4_mechanism/client_selection_opinion_mechanism_full_p04.png"/></a>
+<figcaption>
+Table M1, Panel D · <a href="tables/big4_mechanism/client_selection_opinion_mechanism_full_p04.tex">TeX</a> · <a href="tables/big4_mechanism/client_selection_opinion_mechanism_full_p04.pdf">PDF</a>
+</figcaption>
+</figure>
+<figure class="latex-table figure" style="overflow-x:auto;">
+<a href="tables/big4_mechanism/client_selection_opinion_mechanism_full_p05.pdf"><img alt="Table M1, Panel E" class="figure-img" loading="lazy" src="tables/big4_mechanism/client_selection_opinion_mechanism_full_p05.png"/></a>
+<figcaption>
+Table M1, Panel E · <a href="tables/big4_mechanism/client_selection_opinion_mechanism_full_p05.tex">TeX</a> · <a href="tables/big4_mechanism/client_selection_opinion_mechanism_full_p05.pdf">PDF</a>
+</figcaption>
+</figure>
+<p><span id="full-12_big4_effect-3"></span> <span id="certification-story"></span> <span id="certification-market"></span> <span id="certification-tests"></span></p>
+</details>
+</section>
 <details>
 <summary>
 补充：客户变更公告与意见预测的完整证据
