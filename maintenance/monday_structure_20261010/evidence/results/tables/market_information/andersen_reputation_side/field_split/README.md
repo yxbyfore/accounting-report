@@ -8,7 +8,16 @@
 使用2001财年末批客户，三组两个dummy、行业FE、HC1、不缩尾；1月剔除江西铜业600362。
 Stata四个模型已执行，八项对比系数与标准误独立OLS核对通过；境内结果与此前输出完全一致。
 
-事件|安达信定义|客户数|对比|CAR差异（百分点）|标准误（百分点）|p值 · ---|---|---:|---|---:|---:|---: · nov2001|domestic|22|Andersen_minus_Other|1.340|0.647|0.0386 · nov2001|domestic|22|Andersen_minus_Big4|1.749|0.857|0.0416 · nov2001|overseas|19|Andersen_minus_Other|0.861|0.950|0.3647 · nov2001|overseas|19|Andersen_minus_Big4|1.283|1.104|0.2454 · jan2002|domestic|20|Andersen_minus_Other|0.042|0.924|0.9638 · jan2002|domestic|20|Andersen_minus_Big4|0.676|1.107|0.5415 · jan2002|overseas|20|Andersen_minus_Other|-1.248|0.921|0.1756 · jan2002|overseas|20|Andersen_minus_Big4|-0.629|1.096|0.5660
+|事件|安达信定义|客户数|对比|CAR差异（百分点）|标准误（百分点）|p值|
+|---|---|---:|---|---:|---:|---:|
+|nov2001|domestic|22|Andersen_minus_Other|1.340|0.647|0.0386|
+|nov2001|domestic|22|Andersen_minus_Big4|1.749|0.857|0.0416|
+|nov2001|overseas|19|Andersen_minus_Other|0.861|0.950|0.3647|
+|nov2001|overseas|19|Andersen_minus_Big4|1.283|1.104|0.2454|
+|jan2002|domestic|20|Andersen_minus_Other|0.042|0.924|0.9638|
+|jan2002|domestic|20|Andersen_minus_Big4|0.676|1.107|0.5415|
+|jan2002|overseas|20|Andersen_minus_Other|-1.248|0.921|0.1756|
+|jan2002|overseas|20|Andersen_minus_Big4|-0.629|1.096|0.5660|
 
 11月境内客户两项正差异在5%水平显著，境外两项为正但不显著；1月境内近零或略正，境外两项为负但不显著。
 不能用一组显著、一组不显著推断境内/境外效应显著不同；两组有重叠客户，尚未做正式组间系数差检验。
