@@ -1,0 +1,65 @@
+sample,scale,outcome,spec,controls,n,firms,big4_n,nonbig4_n,coefficient,se,p,df,r2,status,stars
+full,raw,mean_revision,no_controls,,22427,3702,2871,19556,.0630546225140622,.011559883,5.2295192e-08,3701,.0011691757,ok,***
+full,raw,mean_revision,common_baseline,,13719,3216,1822,11897,.0407532860332641,.013568331,.0026889844,3215,.00070107938,ok,***
+full,raw,mean_revision,three_controls,abs_surprise_60 mb_current n,13719,3216,1822,11897,.0485049993832805,.01315257,.00022987742,3215,.0012168614,ok,***
+full,raw,mean_revision,four_controls,abs_surprise_60 mb_current n ln_market_cap,13719,3216,1822,11897,.0412593890723211,.015841026,.0092407661,3215,.0013305501,ok,***
+full,rank,mean_revision,no_controls,,22427,3702,2871,19556,.0227054107787376,.0064507439,.00043705452,3701,.00070195476,ok,***
+full,rank,mean_revision,common_baseline,,13719,3216,1822,11897,.0152428948941603,.0073277266,.037589241,3215,.00032882008,ok,**
+full,rank,mean_revision,three_controls,rank_abs_surprise_60 rank_mb_current rank_n,13719,3216,1822,11897,.0173337113078869,.0074098352,.019381646,3215,.0024937761,ok,**
+full,rank,mean_revision,four_controls,rank_abs_surprise_60 rank_mb_current rank_n rank_ln_market_cap,13719,3216,1822,11897,.0141958856760488,.0076243435,.062706135,3215,.0028099613,ok,*
+top25,raw,mean_revision,no_controls,,10101,1812,2232,7869,.0680353062133389,.014260436,1.9808535e-06,1811,.0013946819,ok,***
+top25,raw,mean_revision,common_baseline,,6787,1601,1511,5276,.0472296197545084,.015272665,.0020195635,1600,.0010346058,ok,***
+top25,raw,mean_revision,three_controls,abs_surprise_60 mb_current n,6787,1601,1511,5276,.0550947875086492,.015189011,.00029541191,1600,.0016307491,ok,***
+top25,raw,mean_revision,four_controls,abs_surprise_60 mb_current n ln_market_cap,6787,1601,1511,5276,.0407399698923747,.018542375,.028154248,1600,.0020997776,ok,**
+top25,rank,mean_revision,no_controls,,10101,1812,2232,7869,.0188840605961663,.0077552777,.014987973,1811,.0007440726,ok,**
+top25,rank,mean_revision,common_baseline,,6787,1601,1511,5276,.0144870971109315,.0086829215,.095420338,1600,.00044003603,ok,*
+top25,rank,mean_revision,three_controls,rank_abs_surprise_60 rank_mb_current rank_n,6787,1601,1511,5276,.0112329629711314,.0086458512,.19405167,1600,.0021992915,ok,
+top25,rank,mean_revision,four_controls,rank_abs_surprise_60 rank_mb_current rank_n rank_ln_market_cap,6787,1601,1511,5276,.0102831991982584,.008664133,.23545513,1600,.0026113291,ok,
+full,raw,mean_abs_revision,no_controls,,22427,3702,2871,19556,-.0355941277939021,.017588491,.043070994,3701,.00039397299,ok,**
+full,raw,mean_abs_revision,common_baseline,,13719,3216,1822,11897,-.0023635398523096,.021442467,.91223621,3215,2.4767417e-06,ok,
+full,raw,mean_abs_revision,three_controls,abs_surprise_60 mb_current n,13719,3216,1822,11897,-.0151684544894375,.021559734,.48176101,3215,.012397142,ok,
+full,raw,mean_abs_revision,four_controls,abs_surprise_60 mb_current n ln_market_cap,13719,3216,1822,11897,-.0641887462371974,.025147131,.010740277,3215,.017862668,ok,**
+full,rank,mean_abs_revision,no_controls,,22427,3702,2871,19556,-.0054144200806788,.011155539,.62745178,3701,.000039918283,ok,
+full,rank,mean_abs_revision,common_baseline,,13719,3216,1822,11897,.0145293609098434,.012450469,.24330781,3215,.00029888662,ok,
+full,rank,mean_abs_revision,three_controls,rank_abs_surprise_60 rank_mb_current rank_n,13719,3216,1822,11897,.0021337953669332,.011916019,.85789442,3215,.039933875,ok,
+full,rank,mean_abs_revision,four_controls,rank_abs_surprise_60 rank_mb_current rank_n rank_ln_market_cap,13719,3216,1822,11897,.0017091240173318,.012148253,.88812453,3215,.039939672,ok,
+top25,raw,mean_abs_revision,no_controls,,10101,1812,2232,7869,-.078532550005623,.021275656,.00022980959,1811,.0019311518,ok,***
+top25,raw,mean_abs_revision,common_baseline,,6787,1601,1511,5276,-.0469218697943559,.024129121,.051996253,1600,.0010532677,ok,*
+top25,raw,mean_abs_revision,three_controls,abs_surprise_60 mb_current n,6787,1601,1511,5276,-.0206845767420588,.024156081,.39196637,1600,.018031523,ok,
+top25,raw,mean_abs_revision,four_controls,abs_surprise_60 mb_current n ln_market_cap,6787,1601,1511,5276,-.0617334327981052,.029267672,.035076257,1600,.021987448,ok,**
+top25,rank,mean_abs_revision,no_controls,,10101,1812,2232,7869,-.0188192521648987,.013284344,.15675756,1811,.00075813133,ok,
+top25,rank,mean_abs_revision,common_baseline,,6787,1601,1511,5276,-.0049667137838718,.014298664,.72837025,1600,.000053979878,ok,
+top25,rank,mean_abs_revision,three_controls,rank_abs_surprise_60 rank_mb_current rank_n,6787,1601,1511,5276,.0036878750094745,.01356777,.78580207,1600,.043929078,ok,
+top25,rank,mean_abs_revision,four_controls,rank_abs_surprise_60 rank_mb_current rank_n rank_ln_market_cap,6787,1601,1511,5276,.003335449712431,.013644679,.8069132,1600,.043988287,ok,
+full,raw,fraction_revised,no_controls,,22427,3702,2871,19556,.0130858970531901,.0029382391,8.6914815e-06,3701,.00083237683,ok,***
+full,raw,fraction_revised,common_baseline,,13719,3216,1822,11897,.0254440704908465,.0037144816,8.8147501e-12,3215,.0029367779,ok,***
+full,raw,fraction_revised,three_controls,abs_surprise_60 mb_current n,13719,3216,1822,11897,.0133972206771556,.0037139554,.00031415091,3215,.016287183,ok,***
+full,raw,fraction_revised,four_controls,abs_surprise_60 mb_current n ln_market_cap,13719,3216,1822,11897,.0053698787801819,.0041783918,.19883087,3215,.017786752,ok,
+full,rank,fraction_revised,no_controls,,22427,3702,2871,19556,-.02416753747883,.0056665731,.000020496167,3701,.0011145682,ok,***
+full,rank,fraction_revised,common_baseline,,13719,3216,1822,11897,-.0103288267683902,.0070125209,.14087263,3215,.00019503111,ok,
+full,rank,fraction_revised,three_controls,rank_abs_surprise_60 rank_mb_current rank_n,13719,3216,1822,11897,.0038473402401167,.0067239031,.56723428,3215,.014958496,ok,
+full,rank,fraction_revised,four_controls,rank_abs_surprise_60 rank_mb_current rank_n rank_ln_market_cap,13719,3216,1822,11897,.0035621877054318,.006891496,.60526425,3215,.014961869,ok,
+top25,raw,fraction_revised,no_controls,,10101,1812,2232,7869,.0103477513248863,.0033568153,.0020828824,1811,.0010806031,ok,***
+top25,raw,fraction_revised,common_baseline,,6787,1601,1511,5276,.0156383533352483,.0040299282,.00010844981,1600,.0024894609,ok,***
+top25,raw,fraction_revised,three_controls,abs_surprise_60 mb_current n,6787,1601,1511,5276,.0128164390789313,.003977065,.0012959541,1600,.014040763,ok,***
+top25,raw,fraction_revised,four_controls,abs_surprise_60 mb_current n ln_market_cap,6787,1601,1511,5276,.0098192184106826,.0043208101,.023185998,1600,.014489528,ok,**
+top25,rank,fraction_revised,no_controls,,10101,1812,2232,7869,-.0090805938282071,.0067918743,.18139739,1811,.00025724457,ok,
+top25,rank,fraction_revised,common_baseline,,6787,1601,1511,5276,-.0031256557370493,.0080224201,.69687307,1600,.000029878882,ok,
+top25,rank,fraction_revised,three_controls,rank_abs_surprise_60 rank_mb_current rank_n,6787,1601,1511,5276,.0029157831027098,.0076057864,.70150101,1600,.016570164,ok,
+top25,rank,fraction_revised,four_controls,rank_abs_surprise_60 rank_mb_current rank_n rank_ln_market_cap,6787,1601,1511,5276,.0038017895361195,.0075839576,.61623347,1600,.017093206,ok,
+full,raw,delta_abs_error,no_controls,,7990,2609,1050,6940,-.0010228145126405,.017536199,.95349354,2608,6.4965184e-07,ok,
+full,raw,delta_abs_error,common_baseline,,7862,2590,1033,6829,-.0021663622129757,.017619839,.90215611,2589,3.0348554e-06,ok,
+full,raw,delta_abs_error,three_controls,abs_surprise_60 mb_current n,7862,2590,1033,6829,.0121953838835963,.017732332,.49167278,2589,.0049568377,ok,
+full,raw,delta_abs_error,four_controls,abs_surprise_60 mb_current n ln_market_cap,7862,2590,1033,6829,.0305842994489845,.019531623,.11749744,2589,.0059993933,ok,
+full,rank,delta_abs_error,no_controls,,7990,2609,1050,6940,.0077891148798593,.0097688464,.42532483,2608,.000087390828,ok,
+full,rank,delta_abs_error,common_baseline,,7862,2590,1033,6829,.0071400304951177,.0098074907,.46666837,2589,.000073396506,ok,
+full,rank,delta_abs_error,three_controls,rank_abs_surprise_60 rank_mb_current rank_n,7862,2590,1033,6829,.0156734401609104,.0098647056,.11221858,2589,.01615851,ok,
+full,rank,delta_abs_error,four_controls,rank_abs_surprise_60 rank_mb_current rank_n rank_ln_market_cap,7862,2590,1033,6829,.0139617945390704,.010087799,.16646922,2589,.016256595,ok,
+top25,raw,delta_abs_error,no_controls,,4439,1376,961,3478,.018608593230831,.020567074,.36574262,1375,.00023191272,ok,
+top25,raw,delta_abs_error,common_baseline,,4367,1367,945,3422,.015804911519117,.020433035,.43936154,1366,.0001768665,ok,
+top25,raw,delta_abs_error,three_controls,abs_surprise_60 mb_current n,4367,1367,945,3422,.0100254933473655,.020782394,.62959683,1366,.0045840875,ok,
+top25,raw,delta_abs_error,four_controls,abs_surprise_60 mb_current n ln_market_cap,4367,1367,945,3422,.0308128672780712,.023080802,.18209882,1366,.0059582926,ok,
+top25,rank,delta_abs_error,no_controls,,4439,1376,961,3478,.0174989076445583,.010885149,.10815357,1375,.00065527967,ok,
+top25,rank,delta_abs_error,common_baseline,,4367,1367,945,3422,.0162604532239543,.010942551,.13751419,1366,.00056425761,ok,
+top25,rank,delta_abs_error,three_controls,rank_abs_surprise_60 rank_mb_current rank_n,4367,1367,945,3422,.012224498969727,.010896731,.26212335,1366,.014357551,ok,
+top25,rank,delta_abs_error,four_controls,rank_abs_surprise_60 rank_mb_current rank_n rank_ln_market_cap,4367,1367,945,3422,.0125625979704435,.010949289,.25144053,1366,.014395141,ok,

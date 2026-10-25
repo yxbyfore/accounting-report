@@ -1,0 +1,34 @@
+\documentclass[10pt]{article}
+\usepackage[paperwidth=34cm,paperheight=35cm,margin=0.8cm]{geometry}
+\usepackage{booktabs,array,amsmath}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\newcommand{\sym}[1]{\textsuperscript{#1}}
+\begin{document}
+\begin{minipage}{18.4cm}
+\fontsize{10}{12}\selectfont
+\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.12}
+{\large\bfseries Common and private information precision: 180-day window}\par\medskip
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}lcccc@{}}
+\toprule
+ & (1) & (2) & (3) & (4) \\
+Outcome & $\Delta h$ & $\Delta h$ & $\Delta s$ & $\Delta s$ \\
+Scale & Raw & Industry-year rank & Raw & Industry-year rank \\
+\midrule
+Big4 & 64.740443 & 0.009462 & 10.071907 & 0.005250 \\
+ & (51.257626) & (0.009286) & (15.357961) & (0.008937) \\
+$p$-value & 0.2067 & 0.3083 & 0.5120 & 0.5569 \\
+\midrule
+Absolute earnings surprise & Yes & Yes & Yes & Yes \\
+Log market capitalization & Yes & Yes & Yes & Yes \\
+Market-to-book ratio & Yes & Yes & Yes & Yes \\
+Paired brokerage count & Yes & Yes & Yes & Yes \\
+Fixed effects & No & No & No & No \\
+Firm-clustered standard errors & Yes & Yes & Yes & Yes \\
+Observations & 9,977 & 9,977 & 9,977 & 9,977 \\
+Big4 observations & 1,354 & 1,354 & 1,354 & 1,354 \\
+$R^2$ & 0.0002 & 0.0064 & 0.0010 & 0.0073 \\
+\bottomrule\end{tabular*}\par\medskip
+\fontsize{9}{11}\selectfont\textit{Notes:} Each column is one fitted regression of the post-minus-pre information measure on Big4 and the indicated controls. The comparison group is non-Big4. Forecasts refer to the same next fiscal year, paired by brokerage. The 180-day window includes days -180 to -1 and +1 to +180; day zero is excluded. Rank models transform the outcome and continuous controls to industry-year percentile ranks before restricting to complete controls. Standard errors are in parentheses. * $p<0.10$, ** $p<0.05$, *** $p<0.01$.
+\end{minipage}
+\end{document}

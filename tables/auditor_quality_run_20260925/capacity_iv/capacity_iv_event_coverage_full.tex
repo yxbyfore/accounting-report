@@ -1,0 +1,55 @@
+\documentclass[10pt]{article}
+\usepackage[paperwidth=32cm,paperheight=45cm,margin=1cm]{geometry}
+\usepackage{fontspec,xeCJK}
+\setmainfont{lmroman10-regular.otf}[BoldFont=lmroman10-bold.otf,ItalicFont=lmroman10-italic.otf,BoldItalicFont=lmroman10-bolditalic.otf]
+\setCJKmainfont{SimSun}
+\usepackage{booktabs,array,threeparttable,graphicx,caption,longtable,amsmath,amssymb,hyperref,xcolor}
+\usepackage[active,tightpage]{preview}
+\PreviewEnvironment{minipage}
+\setlength\PreviewBorder{6pt}
+\newcommand{\sym}[1]{\textsuperscript{#1}}
+\captionsetup{font=normalsize,labelformat=empty,skip=6pt}
+\setlength{\parindent}{0pt}
+\begin{document}
+\begin{minipage}{19cm}\fontsize{10}{12}\selectfont\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.12}
+
+
+\centering
+\captionof{table}{Same-firm five-year rotation: event coverage}
+\begin{threeparttable}
+\begin{tabular}{p{0.38\textwidth}cc}
+\toprule
+Event count or indicator & Events & Share of 1,438 events \\
+\midrule
+rotation\_events & 1,438 & 100.0\% \\
+events\_with\_other\_release & 1,241 & 86.3\% \\
+events\_with\_pool\_match & 147 & 10.2\% \\
+events\_with\_successor\_high\_hc & 12 & 0.8\% \\
+events\_succ\_hi\_fail & 60 & 4.2\% \\
+events\_succ\_hi\_rest & 24 & 1.7\% \\
+events\_succ\_hi\_viol & 46 & 3.2\% \\
+events\_succ\_zero\_fail & 548 & 38.1\% \\
+events\_succ\_zero\_rest & 774 & 53.8\% \\
+events\_succ\_zero\_viol & 622 & 43.3\% \\
+events\_with\_successor\_hc & 1,427 & 99.2\% \\
+events\_succ\_bach\_plus & 1,427 & 99.2\% \\
+events\_succ\_mast\_plus & 1,427 & 99.2\% \\
+events\_with\_successor\_985 & 1,420 & 98.7\% \\
+events\_with\_successor\_985\_211 & 1,420 & 98.7\% \\
+events\_with\_successor\_big4 & 1,438 & 100.0\% \\
+events\_with\_succ\_cpa\_quality & 975 & 67.8\% \\
+events\_with\_advanced\_hc\_workload & 1,361 & 94.6\% \\
+events\_with\_zero\_fail\_workload & 1,430 & 99.4\% \\
+events\_with\_zero\_rest\_workload & 1,437 & 99.9\% \\
+events\_with\_zero\_viol\_workload & 1,431 & 99.5\% \\
+events\_with\_complete\_hc\_release & 1,395 & 97.0\% \\
+events\_with\_complete\_cpa\_release & 1,438 & 100.0\% \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}\fontsize{9}{11}\selectfont
+\item \raggedright \fontsize{9}{11}\selectfont \textit{Notes:} Counts sum the 21 reported rotation years. Attribute and instrument coverage may overlap; rows are not mutually exclusive. See the source CSV for annual counts and workload means.
+\end{tablenotes}
+\end{threeparttable}
+
+\end{minipage}
+\end{document}

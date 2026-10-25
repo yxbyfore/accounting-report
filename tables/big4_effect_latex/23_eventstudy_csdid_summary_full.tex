@@ -1,0 +1,40 @@
+\documentclass[10pt]{article}
+\usepackage[paperwidth=32cm,paperheight=45cm,margin=1cm]{geometry}
+\usepackage{fontspec}
+\setmainfont{lmroman10-regular.otf}[BoldFont=lmroman10-bold.otf,ItalicFont=lmroman10-italic.otf,BoldItalicFont=lmroman10-bolditalic.otf]
+\usepackage{booktabs,array,threeparttable,graphicx,caption,longtable,amsmath,amssymb,hyperref,xcolor}
+\usepackage[active,tightpage]{preview}
+\PreviewEnvironment{minipage}
+\setlength\PreviewBorder{6pt}
+\newcommand{\sym}[1]{\textsuperscript{#1}}
+\captionsetup{font=normalsize,labelformat=empty,skip=6pt}
+\setlength{\parindent}{0pt}
+\begin{document}
+\begin{minipage}{19cm}\fontsize{10}{12}\selectfont\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.15}
+
+
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\centering
+\captionof{table}{Callaway--Sant'Anna Event-Study Summary}
+\label{tab:big4-eventstudy-csdid}
+\begin{threeparttable}
+
+\begin{tabular}{l c c c c c c }
+\toprule
+ & \multicolumn{3}{c}{Switch into Big 4} & \multicolumn{3}{c}{Switch out of Big 4} \\
+\cmidrule(lr){2-4}\cmidrule(lr){5-7}
+ & Any Failure & Restatement & Violation & Any Failure & Restatement & Violation \\
+\midrule
+Average pre-treatment effect & 0.003 & 0.002 & 0.001 & 0.016 & 0.083 & -0.008 \\
+ & (0.007) & (0.005) & (0.007) & (0.042) & (0.078) & (0.040) \\
+Average post-treatment effect & -0.015 & -0.015 & 0.002 & 0.002 & -0.030 & 0.020 \\
+ & (0.017) & (0.015) & (0.013) & (0.031) & (0.027) & (0.033) \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}\fontsize{9}{11}\selectfont
+\item \raggedright \fontsize{9}{11}\selectfont \textit{Notes:} SE clustered by firm. Nine audit-failure controls and mis\_dummy. * $p<0.10$, ** $p<0.05$, *** $p<0.01$.
+\end{tablenotes}
+\end{threeparttable}
+
+\end{minipage}
+\end{document}

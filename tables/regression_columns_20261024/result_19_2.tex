@@ -1,0 +1,31 @@
+\documentclass[10pt]{article}
+\usepackage[paperwidth=34cm,paperheight=48cm,margin=0.8cm]{geometry}
+\usepackage{booktabs,array,amsmath}
+\newcommand{\sym}[1]{\textsuperscript{#1}}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\begin{document}
+\begin{minipage}{28.80cm}
+\fontsize{10}{12}\selectfont
+\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.08}
+{\large\bfseries Forecast Revisions: Top Market-Cap Quartile, Ranks (2/2)}\par\medskip
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}lcccccccc@{}}
+\toprule
+ & (1) & (2) & (3) & (4) & (5) & (6) & (7) & (8) \\
+Dependent variable & Share revised & Share revised & Share revised & Share revised & $\Delta$ abs. error & $\Delta$ abs. error & $\Delta$ abs. error & $\Delta$ abs. error \\
+Specification & No controls & Common, no X & 3 controls & 4 controls & No controls & Common, no X & 3 controls & 4 controls \\
+\midrule
+Big4 & -0.009081 & -0.003126 & 0.002916 & 0.003802 & 0.017499 & 0.016260 & 0.012224 & 0.012563 \\
+ & (0.006792) & (0.008022) & (0.007606) & (0.007584) & (0.010885) & (0.010943) & (0.010897) & (0.010949) \\
+$p$ & 0.1814 & 0.6969 & 0.7015 & 0.6162 & 0.1082 & 0.1375 & 0.2621 & 0.2514 \\
+\midrule
+Observations & 10,101 & 6,787 & 6,787 & 6,787 & 4,439 & 4,367 & 4,367 & 4,367 \\
+Firm clusters & 1,812 & 1,601 & 1,601 & 1,601 & 1,376 & 1,367 & 1,367 & 1,367 \\
+Firm / year FE & No & No & No & No & No & No & No & No \\
+Market capitalization control & No & No & No & Yes & No & No & No & Yes \\
+R-squared & 0.0003 & 0.0000 & 0.0166 & 0.0171 & 0.0007 & 0.0006 & 0.0144 & 0.0144 \\
+\bottomrule\end{tabular*}\par\medskip
+\fontsize{9}{11}\selectfont\textit{Notes:} Each column is a separate outcome/specification regression. Sample: top quartile of market capitalization. Scale: rank. Three controls are absolute earnings surprise, market-to-book, and paired forecast count; four controls add log market capitalization. Common, no X uses the complete-control sample without controls. Original samples, rank definitions and firm clustering are retained.
+\par Standard errors are in parentheses. * $p<0.10$, ** $p<0.05$, *** $p<0.01$.
+\end{minipage}
+\end{document}

@@ -1,0 +1,8 @@
+source,path,field,n_records,n_clients,n_valid_dates,min_date,max_date,sha256
+auditor_change,data/raw/上市公司会计师事务所变更情况表/AR_AFCHANGE.xlsx,DeclareDate,16469,3583,16469,2001-10-10,2026-02-28,5713672adfdf48cde3c213ed6a540092bf2c76a50633e44cfc02af986d2a85d7
+auditor_change,data/raw/上市公司会计师事务所变更情况表/AR_AFCHANGE.xlsx,ChangeDate,16469,3583,15107,2001-10-11,2026-02-28,5713672adfdf48cde3c213ed6a540092bf2c76a50633e44cfc02af986d2a85d7
+restatement_old_current_builder,data/raw/会计信息质量/财务报告信息/上市公司财务重述情况表(2001-2021)/AR_FINRESTAT.xlsx,DeclareDate,23175,3801,23175,2001-04-29,2021-07-16,d65e2aaa4c14ef7b366afa3358dd5a426ef0feb123044b65d8c722258c672c59
+restatement_new_current_builder,data/raw/会计信息质量/财务报告信息/财务重述公告表/AEC_FinResAnn.xlsx,DeclareDate,31675,5361,31675,2017-01-05,2026-05-26,a6be2471b072abc04708aa15fdaf5fffe14459629ff96a3893b423364735a421
+restatement_new_current_builder,data/raw/会计信息质量/财务报告信息/财务重述公告表/AEC_FinResAnn.xlsx,DirectorDecisionDate,31675,5361,15492,2016-03-29,2026-05-22,a6be2471b072abc04708aa15fdaf5fffe14459629ff96a3893b423364735a421
+violation_daily_source,data/raw/会计信息质量/财务报告信息/上市公司财务违规表(日)/AIQ_LCFinViolationD.xlsx,DeclareDate,2233,1088,2233,2000-02-23,2026-01-10,5fd318ede419a03928fbaddd97f75c1e5ee307c9951535b5de82c74cdc01c932
+violation_daily_source,data/raw/会计信息质量/财务报告信息/上市公司财务违规表(日)/AIQ_LCFinViolationD.xlsx,DisposalDate,2233,1088,2233,2000-02-22,2026-01-09,5fd318ede419a03928fbaddd97f75c1e5ee307c9951535b5de82c74cdc01c932

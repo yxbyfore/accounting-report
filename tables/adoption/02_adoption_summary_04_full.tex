@@ -1,0 +1,30 @@
+\documentclass[10pt]{article}
+\usepackage[paperwidth=32cm,paperheight=45cm,margin=1cm]{geometry}
+\usepackage{fontspec,xeCJK}
+\setmainfont{lmroman10-regular.otf}[BoldFont=lmroman10-bold.otf,ItalicFont=lmroman10-italic.otf,BoldItalicFont=lmroman10-bolditalic.otf]
+\setCJKmainfont{SimSun}
+\usepackage{booktabs,array,threeparttable,graphicx,caption,longtable,amsmath,amssymb,hyperref,xcolor}
+\usepackage[active,tightpage]{preview}
+\PreviewEnvironment{minipage}
+\setlength\PreviewBorder{6pt}
+\newcommand{\sym}[1]{\textsuperscript{#1}}
+\captionsetup{font=normalsize,labelformat=empty,skip=6pt}
+\setlength{\parindent}{0pt}
+\begin{document}
+\begin{minipage}{19cm}\fontsize{10}{12}\selectfont\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.12}
+
+\centering
+\begin{tabular}{>{\raggedright\arraybackslash}p{4.20cm}>{\raggedright\arraybackslash}p{4.20cm}>{\raggedright\arraybackslash}p{4.20cm}>{\raggedright\arraybackslash}p{4.20cm}}
+\toprule
+Exposure & 2002 coefficient & 95\% confidence interval & p-value \\
+\midrule
+Coastal & 7.39 & [4.45, 10.33] & <0.001 \\
+2003 openness & 7.73 & [3.29, 12.16] & 0.001 \\
+Overseas joint venture & 4.19 & [1.51, 6.87] & 0.002 \\
+OECD joint venture & 3.76 & [0.71, 6.81] & 0.016 \\
+US/\allowbreak EU/\allowbreak Japan/\allowbreak Korea joint venture & 3.54 & [0.43, 6.64] & 0.025 \\
+Transport & 12.02 & [-1.37, 25.41] & 0.078 \\
+\bottomrule\end{tabular}
+
+\end{minipage}
+\end{document}

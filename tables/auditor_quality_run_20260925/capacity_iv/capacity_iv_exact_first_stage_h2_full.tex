@@ -1,0 +1,37 @@
+\documentclass[10pt]{article}
+\usepackage[paperwidth=32cm,paperheight=45cm,margin=1cm]{geometry}
+\usepackage{fontspec,xeCJK}
+\setmainfont{lmroman10-regular.otf}[BoldFont=lmroman10-bold.otf,ItalicFont=lmroman10-italic.otf,BoldItalicFont=lmroman10-bolditalic.otf]
+\setCJKmainfont{SimSun}
+\usepackage{booktabs,array,threeparttable,graphicx,caption,longtable,amsmath,amssymb,hyperref,xcolor}
+\usepackage[active,tightpage]{preview}
+\PreviewEnvironment{minipage}
+\setlength\PreviewBorder{6pt}
+\newcommand{\sym}[1]{\textsuperscript{#1}}
+\captionsetup{font=normalsize,labelformat=empty,skip=6pt}
+\setlength{\parindent}{0pt}
+\begin{document}
+\begin{minipage}{19cm}\fontsize{10}{12}\selectfont\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.12}
+
+
+\centering
+\captionof{table}{Exact-2SLS-sample first stage: successor year + 2}
+\begin{threeparttable}
+\begin{tabular}{p{0.38\textwidth}ccc}
+\toprule
+Successor attribute & Instrument coefficient (SE) & Excluded-IV F & Observations \\
+\midrule
+From release pool & \shortstack{0.010**\\(0.005)} & 4.469 & 1,032 \\
+Big 4 background & \shortstack{0.336*\\(0.195)} & 2.962 & 1,032 \\
+Zero prior failure & \shortstack{0.060**\\(0.027)} & 4.899 & 647 \\
+Zero prior restatement & \shortstack{0.012\\(0.070)} & 0.0289 & 653 \\
+Zero prior violation & \shortstack{0.068\\(0.043)} & 2.536 & 647 \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}\fontsize{9}{11}\selectfont
+\item \raggedright \fontsize{9}{11}\selectfont \textit{Notes:} The three audit-failure outcomes have identical first-stage estimates within each horizon; one copy is shown. Audit-firm and rotation-year fixed effects; firm controls supplied as lagged panel values; standard errors clustered by audit firm.
+\end{tablenotes}
+\end{threeparttable}
+
+\end{minipage}
+\end{document}

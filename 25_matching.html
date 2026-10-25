@@ -224,9 +224,9 @@ window.Quarto = {
 <ul class="collapse">
 <li><a class="nav-link" data-scroll-target="#启发式事前排序" href="#启发式事前排序" id="toc-启发式事前排序">3.1 启发式事前排序</a></li>
 <li><a class="nav-link" data-scroll-target="#pca-综合分组" href="#pca-综合分组" id="toc-pca-综合分组">3.2 PCA 综合分组</a></li>
-<li><a class="nav-link" data-scroll-target="#审计收费-cdf-的-k-means-分组" href="#审计收费-cdf-的-k-means-分组" id="toc-审计收费-cdf-的-k-means-分组">3.3 审计收费 CDF 的 K-means 分组</a></li>
+<li><a class="nav-link" data-scroll-target="#sec-blm-fee-cdf" href="#sec-blm-fee-cdf" id="toc-sec-blm-fee-cdf">3.3 审计收费 CDF 的 K-means 分组</a></li>
 </ul></li>
-<li><a class="nav-link" data-scroll-target="#配对单元格是否存在非加性模式" href="#配对单元格是否存在非加性模式" id="toc-配对单元格是否存在非加性模式">4. 配对单元格：是否存在非加性模式</a></li>
+<li><a class="nav-link" data-scroll-target="#sec-blm-client-firm-results" href="#sec-blm-client-firm-results" id="toc-sec-blm-client-firm-results">4. 配对单元格：是否存在非加性模式</a></li>
 <li><a class="nav-link" data-scroll-target="#匹配强度的时间变化" href="#匹配强度的时间变化" id="toc-匹配强度的时间变化">5. 匹配强度的时间变化</a>
 <ul class="collapse">
 <li><a class="nav-link" data-scroll-target="#五年窗口的秩关联" href="#五年窗口的秩关联" id="toc-五年窗口的秩关联">5.1 五年窗口的秩关联</a></li>
@@ -299,9 +299,9 @@ R_t^{\,s}=\frac{\#\{\text{eligible type-}s\text{ links retained in }t+1\}}
 <p>六项分布均采用百分比直方图，展示完整取值范围，不截断或合并尾部。审计师匹配客户数、报告数的组距分别为 1、2，横轴刻度间隔分别为 5、20；客户匹配事务所数、审计师数的组距分别为 1、2，刻度间隔分别为 1、5；事务所匹配客户数、审计师数的组距均为 10，刻度间隔均为 100。空区间保留数值轴位置；均值、中位数和最大值按原始数量计算。</p>
 <p><strong>样本覆盖与结果。</strong> 主面板有 71,584 条客户—年度记录，其中 70,476 条匹配到 A1 ID；其余 1,108 条不进入涉及审计师的统计。有效配对覆盖 6,159 个 A1 ID、5,729 家客户和 299 家事务所。六项精确计数的汇总如下：</p>
 <figure class="latex-table figure">
-<img alt="客户、事务所与 A1 的累计匹配数量" class="figure-img" loading="lazy" src="tables/matching/10_matching_summary_01_full.png"/>
+<a href="tables/matching/10_matching_summary_01_full.pdf"><img alt="客户、事务所与 A1 的累计匹配数量" class="figure-img" loading="lazy" src="tables/matching/10_matching_summary_01_full.png"/></a>
 <figcaption>
-客户、事务所与 A1 的累计匹配数量 ·  · 
+客户、事务所与 A1 的累计匹配数量 · <a href="tables/matching/10_matching_summary_01_full.tex">TeX</a> · <a href="tables/matching/10_matching_summary_01_full.pdf">PDF</a>
 </figcaption>
 </figure>
 <p>六项分布均呈右偏，均值高于中位数。A1 的累计客户数中位数为 2，报告数中位数为 4，说明应区分客户覆盖与跨年重复签字。客户累计匹配的 A1 数中位数为 4，高于事务所数的中位数 2；年度更换情况由第 6 节的保留率单独衡量。</p>
@@ -337,9 +337,10 @@ Y_{ift}=X_{it}'\gamma+\alpha_i+\psi_f+\lambda_t+\varepsilon_{ift},
 <p><code>12_audit_blm_model.ipynb</code> 另行以客户规模／财务状况／事前风险、事务所梯队与历史风险、CPA 历史风险和可得人力资本变量构建 PCA 分组。它的价值是把多个可观测维度压缩为便于展示的分类；PCA 第一主成分的方向已在 notebook 中按选定风险变量校正。</p>
 <p>PCA用于描述性降维，图中单元格报告市场配对份额。</p>
 <p><img alt="由客户规模、财务状况和风险与事务所及 CPA 特征组成的 PCA 描述性匹配矩阵。" class="img-fluid" data-fig-cap="PCA 分组的描述性匹配矩阵：每个单元格显示样本配对占比，而非因果效应。" src="figures/sorting/heatmap_sorting_matrix_full.png" style="width:100.0%"/></p>
+<p><span id="审计收费-cdf-的-k-means-分组"></span></p>
 </section>
-<section class="level3" id="审计收费-cdf-的-k-means-分组">
-<h3 class="anchored" data-anchor-id="审计收费-cdf-的-k-means-分组">3.3 审计收费 CDF 的 K-means 分组</h3>
+<section class="level3" id="sec-blm-fee-cdf">
+<h3 class="anchored" data-anchor-id="sec-blm-fee-cdf">3.3 审计收费 CDF 的 K-means 分组</h3>
 <p>本项目对 BLM 思路的实施分四步：</p>
 <ol type="1">
 <li>在正的对数审计费用 <span class="math inline">\(\ln(AuditFee)\)</span> 上取全市场 20 等分位点，得到 19 个阈值 <span class="math inline">\(p_q\)</span>；</li>
@@ -350,10 +351,11 @@ Y_{ift}=X_{it}'\gamma+\alpha_i+\psi_f+\lambda_t+\varepsilon_{ift},
 <p>费用 CDF 保留了平均收费之外的定价分布信息，同时反映客户组合、业务复杂度、风险与审计质量。下图先展示事务所十类的费用 CDF，再展示两类客户配对热图。</p>
 <p><img alt="按审计费用经验累积分布聚类的十类事务所 CDF 曲线。" class="img-fluid" data-fig-cap="事务所层面的收费经验 CDF。横轴是全市场收费分位点；簇的质量编号使用样本内失败率事后定向。" src="figures/sorting/blm_firm_cdf_curves.png" style="width:100.0%"/></p>
 <p><span id="full-10_matching-4"></span></p>
+<p><span id="配对单元格是否存在非加性模式"></span></p>
 </section>
 </section>
-<section class="level2" id="配对单元格是否存在非加性模式">
-<h2 class="anchored" data-anchor-id="配对单元格是否存在非加性模式">4. 配对单元格：是否存在非加性模式</h2>
+<section class="level2" id="sec-blm-client-firm-results">
+<h2 class="anchored" data-anchor-id="sec-blm-client-firm-results">4. 配对单元格：是否存在非加性模式</h2>
 <p>对客户类型 <span class="math inline">\(k\)</span>、事务所类型 <span class="math inline">\(l\)</span> 与 CPA 类型 <span class="math inline">\(m\)</span>，正式的分组匹配模型希望识别配对项：</p>
 <p><strong>回归／统计设定。</strong> 热图方程采用配对类型 FE 加年份 FE；当前代码控制 size、roa、lev，公司聚类。旧图有效 N、年份与代码版本待核验，原有“配对×年份”表述已注明核对差异。 <a href="#settings-10_matching">变量与回归设定</a>。</p>
 <p><span class="math display">\[
@@ -433,7 +435,7 @@ I_t(K;L)=\sum_{k,l}P_t(k,l)\ln\frac{P_t(k,l)}{P_t(k)P_t(l)}.
 </section>
 <section class="level2" id="数据程序与输出记录">
 <h2 class="anchored" data-anchor-id="数据程序与输出记录">数据、程序与输出记录</h2>
-<p><strong>估计程序（存档）。</strong> 44_triadic_sorting_blm.do · 45_matching_degree_distribution.do · 42_audit_firm_sorting_akm.do</p>
+<p><strong>估计程序（存档）。</strong> <a href="maintenance/source_code/code/stata/40_selection_matching/44_triadic_sorting_blm.do">44_triadic_sorting_blm.do</a> · <a href="maintenance/source_code/code/stata/40_selection_matching/45_matching_degree_distribution.do">45_matching_degree_distribution.do</a> · <a href="maintenance/source_code/code/stata/40_selection_matching/42_audit_firm_sorting_akm.do">42_audit_firm_sorting_akm.do</a></p>
 <p>结果来源为 <code>results/tables/selection_matching/matching_degree_distribution/</code> 下六个 <code>*_counts.csv</code> 文件；三张组合图已按 A1 ID 口径生成并同步到本报告目录。生成脚本为 <code>code/stata/40_selection_matching/45_matching_degree_distribution.do</code>。</p>
 </section>
 <p><a href="sources/25_matching.qmd">下载本页 QMD 源文件</a></p></main> <!-- /main -->
@@ -838,5 +840,5 @@ I_t(K;L)=\sum_{k,l}P_t(k,l)\ln\frac{P_t(k,l)}{P_t(k)P_t(l)}.
   });
   </script>
 </div> <!-- /content -->
-<script src="report-toc.js" defer></script>
+<script defer="" src="report-toc.js"></script>
 </body></html>

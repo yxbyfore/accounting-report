@@ -1,0 +1,13 @@
+family,expected_models,attempted_models,estimated,failed
+industryyear_controls,396,396,360,36
+main_top25,48,48,48,0
+ablation,60,60,60,0
+top50,24,24,24,0
+sequential,54,54,54,0
+raw_coverage,1188,1188,1080,108
+rank_coverage,1188,1188,1080,108
+year_industryfe,396,396,360,36
+raw_controls,396,396,360,36
+legacy_dual_none,3,3,3,0
+legacy_dual_firm_year,3,3,3,0
+legacy_dual_industry_year,3,3,3,0

@@ -1,0 +1,55 @@
+\documentclass[10pt]{article}
+\usepackage[paperwidth=21cm,paperheight=45cm,margin=1cm]{geometry}
+\usepackage{fontspec,booktabs,array,amsmath,graphicx}
+\setmainfont{lmroman10-regular.otf}[BoldFont=lmroman10-bold.otf,ItalicFont=lmroman10-italic.otf,BoldItalicFont=lmroman10-bolditalic.otf]
+\pagestyle{empty}\setlength{\parindent}{0pt}
+\newcommand{\sym}[1]{\textsuperscript{#1}}
+\begin{document}\fontsize{10}{12}\selectfont
+\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.15}
+\begin{center}\large Failure and Opinion Decomposition: Unmatched\end{center}
+\medskip\textbf{Actual failure / columns 1--4}\par\smallskip
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lcccc@{}}
+\toprule
+ & Fin restatement & Strict restatement & Raw restatement & Fin any failure \\
+ & (1) & (2) & (3) & (4) \\
+\midrule
+Switch into Big 4 & -0.063531\sym{***} & -0.007895 & -0.066006\sym{***} & -0.074085\sym{***} \\
+ & (0.016371) & (0.008203) & (0.020154) & (0.017529) \\
+$p$ & 0.0001 & 0.3359 & 0.0011 & 0.0000 \\
+Observations & 366,189 & 366,189 & 366,189 & 366,189 \\
+\bottomrule\end{tabular*}\par
+\medskip\textbf{Actual failure / columns 5--7}\par\smallskip
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lccc@{}}
+\toprule
+ & Strict any failure & Raw any failure & Violation \\
+ & (5) & (6) & (7) \\
+\midrule
+Switch into Big 4 & -0.023291\sym{*} & -0.077294\sym{***} & -0.016133 \\
+ & (0.012556) & (0.020342) & (0.010862) \\
+$p$ & 0.0637 & 0.0001 & 0.1376 \\
+Observations & 366,189 & 366,189 & 366,189 \\
+\bottomrule\end{tabular*}\par
+\medskip\textbf{Unwarned failure / columns 1--4}\par\smallskip
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lcccc@{}}
+\toprule
+ & Fin restatement & Strict restatement & Raw restatement & Fin any failure \\
+ & (1) & (2) & (3) & (4) \\
+\midrule
+Switch into Big 4 & -0.062410\sym{***} & -0.007305 & -0.066439\sym{***} & -0.069700\sym{***} \\
+ & (0.015599) & (0.008101) & (0.018884) & (0.016887) \\
+$p$ & 0.0001 & 0.3672 & 0.0004 & 0.0000 \\
+Observations & 366,189 & 366,189 & 366,189 & 366,189 \\
+\bottomrule\end{tabular*}\par
+\medskip\textbf{Unwarned failure / columns 5--7}\par\smallskip
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lccc@{}}
+\toprule
+ & Strict any failure & Raw any failure & Violation \\
+ & (5) & (6) & (7) \\
+\midrule
+Switch into Big 4 & -0.018912 & -0.073971\sym{***} & -0.011720 \\
+ & (0.012302) & (0.019384) & (0.010485) \\
+$p$ & 0.1243 & 0.0001 & 0.2637 \\
+Observations & 366,189 & 366,189 & 366,189 \\
+\bottomrule\end{tabular*}\par
+\medskip\fontsize{9}{11}\selectfont\textit{Notes:} SE clustered by firm. Nine audit-failure controls and mis\_dummy. * $p<0.10$, ** $p<0.05$, *** $p<0.01$.
+\end{document}

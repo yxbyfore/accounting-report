@@ -1,0 +1,33 @@
+\begin{table}[htbp]
+\footnotesize
+\centering
+\caption{Big4 Voluntary: Models 1--3}
+\begin{threeparttable}
+\begin{tabular}{p{0.42\textwidth}ccc}
+\toprule
+ & (1) & (2) & (3) \\
+ & Voluntary Rotations & Voluntary Rotations & Voluntary Rotations \\
+VARIABLES & any\_failure\_clean & restated\_clean & violated\_clean \\
+\midrule
+ &  &  &  \\
+grp\_big4 & -0.015* & 0.000 & -0.015** \\
+ & (0.009) & (0.006) & (0.007) \\
+grp\_alumni & 0.007 & 0.003 & 0.005 \\
+ & (0.007) & (0.005) & (0.006) \\
+Constant & -0.246*** & -0.127*** & -0.226*** \\
+ & (0.053) & (0.033) & (0.048) \\
+ &  &  &  \\
+Observations & 57,007 & 57,007 & 57,007 \\
+R-squared & 0.272 & 0.283 & 0.251 \\
+Sample & Voluntary Rotations & Voluntary Rotations & Voluntary Rotations \\
+Firm FE & Yes & Yes & Yes \\
+Year FE & Yes & Yes & Yes \\
+P Big4 vs Alumni & 0.0376 & 0.7418 & 0.0200 \\
+F Big4 vs Alumni & 4.33 & 0.11 & 5.41 \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}\footnotesize
+\item \raggedright \textit{Notes:} Note: Split-sample TWFE regression by rotation entry type. Base group is Non-Big4 Firm with Non-Big4 Background. Standard errors clustered by firm. *** p<0.01, ** p<0.05, * p<0.1.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

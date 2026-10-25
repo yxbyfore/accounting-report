@@ -1,0 +1,28 @@
+\documentclass[10pt]{article}
+\usepackage[paperwidth=34cm,paperheight=48cm,margin=0.8cm]{geometry}
+\usepackage{booktabs,array,amsmath}
+\newcommand{\sym}[1]{\textsuperscript{#1}}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\begin{document}
+\begin{minipage}{18.40cm}
+\fontsize{10}{12}\selectfont
+\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.08}
+{\large\bfseries Pre-Announcement Joint Tests: Before 2012}\par\medskip
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}lcccc@{}}
+\toprule
+ & (1) & (2) & (3) & (4) \\
+Fitted model & Big4 only & Local 8 only & Other only & Joint interaction \\
+\midrule
+Within-group joint p & 0.2259 & 0.5388 & 0.3635 & -- \\
+Big4 - Other joint p & -- & -- & -- & 0.0299 \\
+Local 8 - Other joint p & -- & -- & -- & 0.2826 \\
+Big4 - Local 8 joint p & -- & -- & -- & 0.1152 \\
+\midrule
+Daily observations & 5,997 & 19,446 & 24,780 & 50,391 \\
+Event clusters & 549 & 1,773 & 2,255 & 4,583 \\
+\bottomrule\end{tabular*}\par\medskip
+\fontsize{9}{11}\selectfont\textit{Notes:} One saved regression per column. The tests jointly set the day -5, -4, -3 and -2 coefficients to zero, relative to day -1. The three pooled contrast tests share column (4). These are p-values, not coefficients; no significance stars are added. Original firm-fiscal-year clustering is retained.
+\par Standard errors are in parentheses. * $p<0.10$, ** $p<0.05$, *** $p<0.01$.
+\end{minipage}
+\end{document}

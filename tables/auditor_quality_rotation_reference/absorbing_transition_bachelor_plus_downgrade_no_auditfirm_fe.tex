@@ -1,0 +1,74 @@
+\begin{table}[htbp]
+\footnotesize
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\centering
+\caption{Absorbing Transition DID Results: Bachelor Plus --- Downgrade}
+\label{tab:absorbing-transition-bachelor-plus-downgrade-no-auditfirm-fe}
+\begin{threeparttable}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{l cc cc cc}
+\toprule
+ & \multicolumn{2}{c}{Any Failure} & \multicolumn{2}{c}{Restatement} & \multicolumn{2}{c}{Violation} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule(lr){6-7}
+ & Pooled & Mandatory / Voluntary & Pooled & Mandatory / Voluntary & Pooled & Mandatory / Voluntary \\
+\midrule
+\multicolumn{7}{l}{\textbf{Panel A: Absorbing DID: Trim}} \\
+$\times$ Mandatory Rotation &  & -0.003 &  & -0.019 &  & 0.014 \\
+ &  & (0.019) &  & (0.016) &  & (0.012) \\
+$\times$ Voluntary Rotation &  & 0.001 &  & 0.004 &  & -0.002 \\
+ &  & (0.007) &  & (0.004) &  & (0.006) \\
+Pooled & 0.001 &  & 0.002 &  & 0.000 &  \\
+ & (0.005) &  & (0.003) &  & (0.005) &  \\
+Mandatory $-$ Voluntary &  & -0.004 &  & -0.023 &  & 0.016 \\
+Difference p-value &  & 0.832 &  & 0.162 &  & 0.232 \\
+Observations & 41,470 & 36,301 & 41,470 & 36,301 & 41,470 & 36,301 \\
+Firms & 5,304 & 4,907 & 5,304 & 4,907 & 5,304 & 4,907 \\
+\addlinespace
+\multicolumn{7}{l}{\textbf{Panel B: Absorbing DID: Strict}} \\
+$\times$ Mandatory Rotation &  & 0.026 &  & 0.004 &  & 0.023 \\
+ &  & (0.023) &  & (0.016) &  & (0.016) \\
+$\times$ Voluntary Rotation &  & 0.003 &  & \textcolor{red}{0.012\sym{*}} &  & -0.005 \\
+ &  & (0.012) &  & (0.007) &  & (0.011) \\
+Pooled & 0.003 &  & \textcolor{red}{0.011\sym{*}} &  & -0.005 &  \\
+ & (0.010) &  & (0.006) &  & (0.010) &  \\
+Mandatory $-$ Voluntary &  & 0.022 &  & -0.008 &  & 0.028 \\
+Difference p-value &  & 0.385 &  & 0.629 &  & 0.144 \\
+Observations & 26,408 & 25,079 & 26,408 & 25,079 & 26,408 & 25,079 \\
+Firms & 3,121 & 3,096 & 3,121 & 3,096 & 3,121 & 3,096 \\
+\addlinespace
+\multicolumn{7}{l}{\textbf{Panel C: Fixed-Window DID: 2-Year Window}} \\
+$\times$ Mandatory Rotation &  & 0.012 &  & -0.014 &  & \textcolor{red}{0.027\sym{*}} \\
+ &  & (0.017) &  & (0.012) &  & (0.015) \\
+$\times$ Voluntary Rotation &  & -0.006 &  & -0.000 &  & -0.005 \\
+ &  & (0.005) &  & (0.003) &  & (0.004) \\
+Pooled & -0.003 &  & -0.001 &  & -0.003 &  \\
+ & (0.004) &  & (0.003) &  & (0.003) &  \\
+Mandatory $-$ Voluntary &  & 0.018 &  & -0.013 &  & \textcolor{red}{0.032\sym{**}} \\
+Difference p-value &  & 0.326 &  & 0.283 &  & 0.042 \\
+Observations & 46,190 & 40,491 & 46,190 & 40,491 & 46,190 & 40,491 \\
+Firms & 5,618 & 5,263 & 5,618 & 5,263 & 5,618 & 5,263 \\
+\addlinespace
+\multicolumn{7}{l}{\textbf{Panel D: Fixed-Window DID: 3-Year Window}} \\
+$\times$ Mandatory Rotation &  & 0.014 &  & -0.012 &  & \textcolor{red}{0.030\sym{**}} \\
+ &  & (0.016) &  & (0.011) &  & (0.014) \\
+$\times$ Voluntary Rotation &  & -0.005 &  & -0.001 &  & -0.006 \\
+ &  & (0.005) &  & (0.004) &  & (0.004) \\
+Pooled & -0.003 &  & -0.001 &  & -0.003 &  \\
+ & (0.004) &  & (0.003) &  & (0.003) &  \\
+Mandatory $-$ Voluntary &  & 0.020 &  & -0.012 &  & \textcolor{red}{0.037\sym{***}} \\
+Difference p-value &  & 0.246 &  & 0.320 &  & 0.010 \\
+Observations & 48,254 & 42,370 & 48,254 & 42,370 & 48,254 & 42,370 \\
+Firms & 5,618 & 5,311 & 5,618 & 5,311 & 5,618 & 5,311 \\
+\midrule
+Controls & Yes & Yes & Yes & Yes & Yes & Yes \\
+Firm FE & Yes & Yes & Yes & Yes & Yes & Yes \\
+Year FE & Yes & Yes & Yes & Yes & Yes & Yes \\
+Audit Firm FE & No & No & No & No & No & No \\
+Sample years & Full & 2004 onward & Full & 2004 onward & Full & 2004 onward \\
+\bottomrule
+\end{tabular}}
+\begin{tablenotes}\footnotesize
+\item \textit{Notes:} Each panel reports a firm-year regression with firm and year fixed effects; audit-firm fixed effects are not included. Standard errors clustered at the firm level are in parentheses. The pooled row uses the full observed period and reports the overall quality-dummy coefficient. Mandatory and voluntary rows use 2004 onward and report coefficients from the rotation-type specification. *** \(p<0.01\), ** \(p<0.05\), * \(p<0.10\).
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

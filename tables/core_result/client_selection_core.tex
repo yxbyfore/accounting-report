@@ -1,0 +1,47 @@
+\documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,booktabs,array}
+\usepackage[active,tightpage]{preview}
+\PreviewEnvironment{minipage}
+\setlength\PreviewBorder{7pt}
+\newcommand{\sym}[1]{\textsuperscript{#1}}
+\begin{document}
+\begin{minipage}{19cm}
+\centering
+\textbf{Client Selection, Audit Warnings, and Big 4 Client Risk}\par\medskip
+\small\renewcommand{\arraystretch}{1.12}\setlength{\tabcolsep}{5pt}
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}lrrrr@{}}
+\toprule
+ & MAO & GC & Observations & Firms \\
+\midrule
+\multicolumn{5}{l}{\textbf{Panel A. Warning and next-year client transition (percentage points)}} \\
+Exit Big 4: current Big 4 clients & 35.16\sym{***} & 20.39\sym{*} & 3,504 & 489 \\
+ & (7.33) & (11.33) & & \\
+Enter Big 4: current non-Big-4 clients & -0.29\sym{**} & 0.03 & 59,865 & 5,119 \\
+ & (0.12) & (0.17) & & \\
+\midrule
+\multicolumn{5}{l}{\textbf{Panel B. Big 4 minus non-Big-4 gap among warned clients (percentage points)}} \\
+Current restatement or violation & -6.25\sym{*} & -11.88\sym{***} & 70,197 & 5,623 \\
+ & (3.37) & (4.46) & & \\
+Violation announcement, next year & -5.30\sym{**} & -8.87\sym{***} & 64,299 & 5,352 \\
+ & (2.28) & (2.41) & & \\
+Restatement, next year & -1.26 & 1.85 & 64,299 & 5,352 \\
+ & (2.27) & (4.52) & & \\
+\midrule
+\multicolumn{5}{l}{\textbf{Panel C. Descriptive classification rates: current failure (percent)}} \\
+ & \multicolumn{2}{c}{MAO} & \multicolumn{2}{c}{GC} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}
+ & Big 4 & Non-Big-4 & Big 4 & Non-Big-4 \\
+No failure among warned: $P(Y=0\mid M=1)$ & 87.85 & 78.33 & 93.18 & 78.03 \\
+Denominator & 107 & 4,545 & 44 & 1,866 \\
+Type I: $P(M=1\mid Y=0)$ & 2.01 & 5.74 & 0.88 & 2.35 \\
+Denominator & 4,671 & 62,047 & 4,671 & 62,047 \\
+Type II: $P(M=0\mid Y=1)$ & 88.29 & 79.28 & 97.30 & 91.38 \\
+Denominator & 111 & 4,755 & 111 & 4,755 \\
+\bottomrule\end{tabular*}
+\par\medskip\raggedright\footnotesize
+\textit{Notes:} MAO denotes a modified audit opinion; GC denotes a going-concern opinion. Panels A--B report coefficients and company-clustered standard errors in percentage points. Models include company and industry-by-year fixed effects, original controls, and missing-value indicators. Panel A estimates the warning association separately within current Big 4 and non-Big-4 clients; the two rows have different dependent variables and are not a formal cross-group slope test. Exit means leaving all Big 4 firms, not switching between Big 4 firms. It does not identify which party initiated the change.\par\smallskip
+Panel B reports the Big 4 gap conditional on receiving the stated opinion, calculated as the Big 4 main effect plus its opinion interaction. Observations and firms refer to the full regression sample, not only warned clients. Current failure combines restatement and violation attributed to the financial-statement year. Next-year violation refers to announcement timing, not necessarily misconduct beginning after the warning.\par\smallskip
+Panel C is descriptive, with its probability-specific denominator shown below each rate; $M$ denotes the opinion and $Y$ denotes current failure. A larger no-failure share among warned clients is not a larger Type I error rate. Non-Big-4 pools Local 8 and other firms. These results support client selection and portfolio adjustment as mechanisms, not a causal improvement in audit quality or a uniformly stricter warning threshold.\par\smallskip
+Source: existing client-selection/opinion mechanism estimates (Panels A, B and D); no re-estimation. *** $p<0.01$, ** $p<0.05$, * $p<0.10$.
+\end{minipage}\end{document}

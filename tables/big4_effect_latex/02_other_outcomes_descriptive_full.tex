@@ -1,0 +1,43 @@
+\documentclass[10pt]{article}
+\usepackage[paperwidth=32cm,paperheight=45cm,margin=1cm]{geometry}
+\usepackage{fontspec}
+\setmainfont{lmroman10-regular.otf}[BoldFont=lmroman10-bold.otf,ItalicFont=lmroman10-italic.otf,BoldItalicFont=lmroman10-bolditalic.otf]
+\usepackage{booktabs,array,threeparttable,graphicx,caption,longtable,amsmath,amssymb,hyperref,xcolor}
+\usepackage[active,tightpage]{preview}
+\PreviewEnvironment{minipage}
+\setlength\PreviewBorder{6pt}
+\newcommand{\sym}[1]{\textsuperscript{#1}}
+\captionsetup{font=normalsize,labelformat=empty,skip=6pt}
+\setlength{\parindent}{0pt}
+\begin{document}
+\begin{minipage}{19cm}\fontsize{10}{12}\selectfont\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.15}
+
+
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\centering
+\captionof{table}{Other Outcomes by Audit-Firm Group}
+\label{tab:big4-other-outcomes-descriptive}
+\begin{threeparttable}
+\begin{tabular}{l c c c }
+\toprule
+ & Big 4 & Local 8 & Other \\
+\midrule
+Modified opinion (\%) & 2.24 & 4.51 & 9.44 \\
+Going-concern opinion (\%) & 0.92 & 1.98 & 3.72 \\
+Absolute Jones DA & 0.058 & 0.068 & 0.070 \\
+Absolute DD DA & 0.068 & 0.089 & 0.087 \\
+Absolute nonlinear DA & 0.033 & 0.043 & 0.044 \\
+Absolute REM & 0.157 & 0.161 & 0.157 \\
+Audit fee & 3,813,926 & 1,031,044 & 821,822 \\
+Audit-fee increase & 121,118 & 55,053 & 35,741 \\
+Market value & 70,390,223 & 10,233,078 & 6,665,070 \\
+Observations & 4,782 & 35,720 & 31,082 \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}\fontsize{9}{11}\selectfont
+\item \raggedright \fontsize{9}{11}\selectfont \textit{Notes:} Group means; opinion rates in percent.
+\end{tablenotes}
+\end{threeparttable}
+
+\end{minipage}
+\end{document}

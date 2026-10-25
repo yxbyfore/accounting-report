@@ -1,0 +1,55 @@
+\documentclass[10pt]{article}
+\usepackage[paperwidth=21cm,paperheight=45cm,margin=1cm]{geometry}
+\usepackage{fontspec,booktabs,array,amsmath,graphicx}
+\setmainfont{lmroman10-regular.otf}[BoldFont=lmroman10-bold.otf,ItalicFont=lmroman10-italic.otf,BoldItalicFont=lmroman10-bolditalic.otf]
+\pagestyle{empty}\setlength{\parindent}{0pt}
+\newcommand{\sym}[1]{\textsuperscript{#1}}
+\begin{document}\fontsize{10}{12}\selectfont
+\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.15}
+\begin{center}\large Pre-entry Risk-path Matching: Sample Intersection\end{center}
+\medskip\textbf{Baseline weighted PSM-DID / columns 1--4}\par\smallskip
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lcccc@{}}
+\toprule
+ & Fin restatement & Strict restatement & Raw restatement & Fin any failure \\
+ & (1) & (2) & (3) & (4) \\
+\midrule
+Switch into Big 4 & 0.004874 & -0.007920 & 0.030409 & -0.059500 \\
+ & (0.061078) & (0.011847) & (0.090579) & (0.115304) \\
+$p$ & 0.9366 & 0.5054 & 0.7378 & 0.6070 \\
+Observations & 756 & 756 & 756 & 756 \\
+\bottomrule\end{tabular*}\par
+\medskip\textbf{Baseline weighted PSM-DID / columns 5--7}\par\smallskip
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lccc@{}}
+\toprule
+ & Strict any failure & Raw any failure & Violation \\
+ & (5) & (6) & (7) \\
+\midrule
+Switch into Big 4 & -0.061989 & -0.031840 & -0.055349 \\
+ & (0.079286) & (0.134189) & (0.079094) \\
+$p$ & 0.4362 & 0.8129 & 0.4857 \\
+Observations & 756 & 756 & 756 \\
+\bottomrule\end{tabular*}\par
+\medskip\textbf{Pre-entry risk-path weighted PSM-DID / columns 1--4}\par\smallskip
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lcccc@{}}
+\toprule
+ & Fin restatement & Strict restatement & Raw restatement & Fin any failure \\
+ & (1) & (2) & (3) & (4) \\
+\midrule
+Switch into Big 4 & 0.005758 & -0.008087 & 0.021662 & -0.059218 \\
+ & (0.063207) & (0.012169) & (0.090355) & (0.117781) \\
+$p$ & 0.9276 & 0.5079 & 0.8110 & 0.6162 \\
+Observations & 756 & 756 & 756 & 756 \\
+\bottomrule\end{tabular*}\par
+\medskip\textbf{Pre-entry risk-path weighted PSM-DID / columns 5--7}\par\smallskip
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lccc@{}}
+\toprule
+ & Strict any failure & Raw any failure & Violation \\
+ & (5) & (6) & (7) \\
+\midrule
+Switch into Big 4 & -0.062355 & -0.040962 & -0.055470 \\
+ & (0.080449) & (0.134190) & (0.080246) \\
+$p$ & 0.4401 & 0.7608 & 0.4910 \\
+Observations & 756 & 756 & 756 \\
+\bottomrule\end{tabular*}\par
+\medskip\fontsize{9}{11}\selectfont\textit{Notes:} SE clustered by firm. Nine audit-failure controls and mis\_dummy. * $p<0.10$, ** $p<0.05$, *** $p<0.01$.
+\end{document}

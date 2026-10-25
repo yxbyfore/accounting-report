@@ -1,0 +1,22 @@
+\documentclass[10pt]{article}
+\usepackage[paperwidth=21cm,paperheight=45cm,margin=1cm]{geometry}
+\usepackage{fontspec,booktabs,array,amsmath,graphicx}
+\setmainfont{lmroman10-regular.otf}[BoldFont=lmroman10-bold.otf,ItalicFont=lmroman10-italic.otf,BoldItalicFont=lmroman10-bolditalic.otf]
+\pagestyle{empty}\setlength{\parindent}{0pt}
+\newcommand{\sym}[1]{\textsuperscript{#1}}
+\begin{document}\fontsize{10}{12}\selectfont
+\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.15}
+\begin{center}\large Big 4 Client Differences on a Common Sample\end{center}
+\medskip\textbf{Panel C: FE plus nine controls}\par\smallskip
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lccc@{}}
+\toprule
+ & Any failure / strict & Restatement / strict & Violation \\
+ & (1) & (2) & (3) \\
+\midrule
+Reported effect & \shortstack{-0.016437\sym{**}\\(0.006911)} & \shortstack{-0.004174\\(0.004626)} & \shortstack{-0.015119\sym{***}\\(0.005721)} \\
+$p$ & 0.017 & 0.367 & 0.008 \\
+95\% CI & [-0.029986, -0.002888] & [-0.013243, 0.004896] & [-0.026333, -0.003904] \\
+Observations & 71,241 & 71,241 & 71,241 \\
+\bottomrule\end{tabular*}\par
+\medskip\fontsize{9}{11}\selectfont\textit{Notes:} SE clustered by firm. Panel C: nine audit-failure controls and mis\_dummy. * $p<0.10$, ** $p<0.05$, *** $p<0.01$.
+\end{document}

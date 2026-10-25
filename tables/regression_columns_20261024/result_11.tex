@@ -1,0 +1,44 @@
+\documentclass[10pt]{article}
+\usepackage[paperwidth=34cm,paperheight=48cm,margin=0.8cm]{geometry}
+\usepackage{booktabs,array,amsmath}
+\newcommand{\sym}[1]{\textsuperscript{#1}}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\begin{document}
+\begin{minipage}{18.00cm}
+\fontsize{10}{12}\selectfont
+\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.08}
+{\large\bfseries Long-Window Cumulative Market-Adjusted Returns}\par\medskip
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}lcc@{}}
+\toprule
+ & (1) & (2) \\
+Model & Good news only & Good minus neutral \\
+\midrule
+Cumulative contrast, day +0 & -0.000473 & 0.000447 \\
+ & (0.001505) & (0.001517) \\
+$p$ & 0.7535 & 0.7680 \\
+Cumulative contrast, day +1 & -0.001725 & -0.000368 \\
+ & (0.002073) & (0.002079) \\
+$p$ & 0.4053 & 0.8596 \\
+Cumulative contrast, day +5 & -0.002904 & -0.000513 \\
+ & (0.003004) & (0.002994) \\
+$p$ & 0.3339 & 0.8640 \\
+Cumulative contrast, day +20 & -0.000590 & 0.002669 \\
+ & (0.004474) & (0.004404) \\
+$p$ & 0.8951 & 0.5446 \\
+Cumulative contrast, day +40 & -0.018105\sym{***} & -0.014602\sym{***} \\
+ & (0.005528) & (0.005483) \\
+$p$ & 0.0011 & 0.0078 \\
+Cumulative contrast, day +60 & -0.020135\sym{***} & -0.020332\sym{***} \\
+ & (0.007340) & (0.007205) \\
+$p$ & 0.0061 & 0.0048 \\
+\midrule
+Daily observations & 252,270 & 988,260 \\
+Firm-by-year FE & Yes & Yes \\
+Event / trading-date FE & Yes & Yes \\
+Additional controls & No & No \\
+\bottomrule\end{tabular*}\par\medskip
+\fontsize{9}{11}\selectfont\textit{Notes:} Each column is one dynamic model, with selected event days in rows. Column (1) compares Big4 and non-Big4 within good news. Column (2) contrasts their good-minus-neutral responses using the original restricted interaction. The base is day -1 and cumulative returns include announcement-day returns. Original return units and firm clustering are retained.
+\par Standard errors are in parentheses. * $p<0.10$, ** $p<0.05$, *** $p<0.01$.
+\end{minipage}
+\end{document}

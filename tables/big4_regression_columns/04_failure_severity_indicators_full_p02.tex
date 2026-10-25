@@ -1,0 +1,33 @@
+\documentclass[10pt]{article}
+\usepackage[paperwidth=21cm,paperheight=45cm,margin=1cm]{geometry}
+\usepackage{fontspec,booktabs,array,amsmath,graphicx}
+\setmainfont{lmroman10-regular.otf}[BoldFont=lmroman10-bold.otf,ItalicFont=lmroman10-italic.otf,BoldItalicFont=lmroman10-bolditalic.otf]
+\pagestyle{empty}\setlength{\parindent}{0pt}
+\newcommand{\sym}[1]{\textsuperscript{#1}}
+\begin{document}\fontsize{10}{12}\selectfont
+\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.15}
+\begin{center}\large Big 4 Auditors and Indicators of Unwarned Failure Severity\end{center}
+\medskip\textbf{Big 4: Firm and Industry $\times$ Year FE}\par\smallskip
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lcccc@{}}
+\toprule
+ & Severe Restatement & Severe Violation & Passive-Regulatory & Fraud-Related \\
+ & (1) & (2) & (3) & (4) \\
+\midrule
+Big 4 & -0.00002 & -0.018\sym{***} & -0.00045 & -0.002 \\
+ & (0.003) & (0.006) & (0.00038) & (0.003) \\
+Observations & 70,197 & 70,197 & 70,197 & 70,197 \\
+\bottomrule\end{tabular*}\par
+\medskip\textbf{Switch into Big 4}\par\smallskip
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lcccc@{}}
+\toprule
+ & Severe Restatement & Severe Violation & Passive-Regulatory & Fraud-Related \\
+ & (1) & (2) & (3) & (4) \\
+\midrule
+Switch into Big 4 & -0.002 & -0.017\sym{*} & -0.001 & -0.001 \\
+ & (0.005) & (0.009) & (0.001) & (0.005) \\
+Observations & 63,674 & 63,674 & 63,674 & 63,674 \\
+Treated firms & 202 & 202 & 202 & 202 \\
+Control firms & 4,990 & 4,990 & 4,990 & 4,990 \\
+\bottomrule\end{tabular*}\par
+\medskip\fontsize{9}{11}\selectfont\textit{Notes:} SE clustered by firm. Nine audit-failure controls and mis\_dummy. * $p<0.10$, ** $p<0.05$, *** $p<0.01$.
+\end{document}

@@ -1,0 +1,7 @@
+specification,outcome,candidate_n,matched_n,estimation_n,treated_n,control_n,firms,control_ess
+candidate_unweighted,car_m1_p1,29755,29755,29085,3246,25839,4114,25839
+candidate_unweighted,car_m2_p2,29755,29755,29085,3246,25839,4114,25839
+candidate_unweighted,car_m3_p3,29755,29755,29085,3246,25839,4114,25839
+matched_weighted,car_m1_p1,29755,5248,4552,3211,1341,774,95.42970769817612
+matched_weighted,car_m2_p2,29755,5248,4552,3211,1341,774,95.42970769817612
+matched_weighted,car_m3_p3,29755,5248,4552,3211,1341,774,95.42970769817612

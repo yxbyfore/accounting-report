@@ -1,0 +1,30 @@
+\documentclass[10pt]{article}
+\usepackage[paperwidth=34cm,paperheight=48cm,margin=0.8cm]{geometry}
+\usepackage{booktabs,array,amsmath}
+\newcommand{\sym}[1]{\textsuperscript{#1}}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\begin{document}
+\begin{minipage}{23.60cm}
+\fontsize{10}{12}\selectfont
+\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.08}
+{\large\bfseries Branch Entry Reduced Forms: Full Period}\par\medskip
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}lcccccc@{}}
+\toprule
+ & (1) & (2) & (3) & (4) & (5) & (6) \\
+Dependent variable & Any failure & Fin restatement & Violation & Any failure & Fin restatement & Violation \\
+Shock coverage & Province & Province & Province & Province + neighbors & Province + neighbors & Province + neighbors \\
+\midrule
+Post-entry average, years 0--5 & -0.176051 & -0.749347 & -0.162344 & 2.760791\sym{**} & 1.861384\sym{**} & 0.486742 \\
+ & (0.935443) & (0.752193) & (0.703001) & (1.173438) & (0.675995) & (1.004766) \\
+$p$ & 0.8520 & 0.3271 & 0.8189 & 0.0268 & 0.0108 & 0.6323 \\
+\midrule
+Firms & 1,565 & 1,565 & 1,565 & 741 & 741 & 741 \\
+Two-period pairs & 44,422 & 44,422 & 44,422 & 9,649 & 9,649 & 9,649 \\
+Clusters & 31 & 31 & 31 & 26 & 26 & 26 \\
+Largest client & Excluded & Excluded & Excluded & Excluded & Excluded & Excluded \\
+\bottomrule\end{tabular*}\par\medskip
+\fontsize{9}{11}\selectfont\textit{Notes:} Each outcome and spatial-design column is a distinct reduced-form estimate using the existing cohort aggregation. All outcomes are failure indicators interacted with non-MAO. Estimates and standard errors are in percentage points. The original province-cluster (cluster\_id=2) output is used. Two-period pair counts are not unique company-year counts. These are not city-level second-stage results.
+\par Standard errors are in parentheses. * $p<0.10$, ** $p<0.05$, *** $p<0.01$.
+\end{minipage}
+\end{document}

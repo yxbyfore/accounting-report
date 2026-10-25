@@ -1,0 +1,35 @@
+\documentclass[10pt]{article}
+\usepackage[paperwidth=34cm,paperheight=48cm,margin=0.8cm]{geometry}
+\usepackage{booktabs,array,amsmath}
+\newcommand{\sym}[1]{\textsuperscript{#1}}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\begin{document}
+\begin{minipage}{23.60cm}
+\fontsize{10}{12}\selectfont
+\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.08}
+{\large\bfseries Forecast Timing and Common-Support Specifications}\par\medskip
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}lcccccc@{}}
+\toprule
+ & (1) & (2) & (3) & (4) & (5) & (6) \\
+Sample & Original & Original & Public dates & Public dates & Common support & Common support \\
+\midrule
+Big4 - Other, day +0 & 0.003837\sym{***} & 0.001349 & 0.003606\sym{***} & 0.001079 & 0.002905\sym{*} & 0.001510 \\
+ & (0.001331) & (0.001382) & (0.001338) & (0.001388) & (0.001653) & (0.001671) \\
+$p$ & 0.0040 & 0.3289 & 0.0071 & 0.4371 & 0.0788 & 0.3663 \\
+Big4 - Other, day +1 & 0.003671\sym{**} & 0.000933 & 0.003475\sym{*} & 0.000683 & 0.002431 & 0.000876 \\
+ & (0.001790) & (0.001853) & (0.001800) & (0.001863) & (0.002241) & (0.002268) \\
+$p$ & 0.0403 & 0.6144 & 0.0536 & 0.7137 & 0.2781 & 0.6993 \\
+Big4 - Other, day +5 & 0.003066 & 0.001794 & 0.002675 & 0.001349 & 0.001204 & 0.000174 \\
+ & (0.002672) & (0.002766) & (0.002688) & (0.002783) & (0.003300) & (0.003337) \\
+$p$ & 0.2512 & 0.5166 & 0.3197 & 0.6279 & 0.7152 & 0.9584 \\
+\midrule
+Event-day controls & No & Yes & No & Yes & No & Yes \\
+Daily observations & 223,640 & 223,607 & 222,375 & 222,342 & 177,188 & 177,188 \\
+Firm-by-year FE & Yes & Yes & Yes & Yes & Yes & Yes \\
+Event / trading-date FE & Yes & Yes & Yes & Yes & Yes & Yes \\
+\bottomrule\end{tabular*}\par\medskip
+\fontsize{9}{11}\selectfont\textit{Notes:} One dynamic regression per sample and control specification. The rows are selected event-day contrasts. Controls are log market capitalization, market-to-book and log forecast count interacted with event day. The public-date and common-support checks do not change the main forecast timing rule. Clustering is by firm-fiscal-year.
+\par Standard errors are in parentheses. * $p<0.10$, ** $p<0.05$, *** $p<0.01$.
+\end{minipage}
+\end{document}

@@ -1,0 +1,2631 @@
+{
+  "started_at": "2026-10-24T00:20:54.380916",
+  "inputs": [
+    {
+      "path": "data/analysis/panel_firm_year_final_audit_report_panel_full.dta",
+      "bytes": 163752947,
+      "mtime": "2026-10-06T17:26:47.699554",
+      "sha256": "a802afe5ccb3a1fe75358d07a7b0c9b608560800e6376bfb6a1e16e5be0f1b6b"
+    },
+    {
+      "path": "data/analysis/auditor_team_features.dta",
+      "bytes": 30405151,
+      "mtime": "2026-09-12T21:34:56.700635",
+      "sha256": "ed7dd480350a39a608404b9b95c308ec919e52ac09cd18f375a5cc1833e2ae7e"
+    }
+  ],
+  "stata_run": true,
+  "stata_log": "results\\logs\\20261024_001023_akm_stata_final\\40_selection_matching\\42_audit_firm_sorting_akm.log",
+  "panel_rows": 71584,
+  "valid_id_rows": 70471,
+  "gate": {
+    "n_valid": 70471,
+    "gate_max_error": 0.0,
+    "gate_sample_hash": "c59d0491ddb0ef68534f6aff093c96aa9d1882efcdf32aa45cb73edd839dd280"
+  },
+  "completed_at": "2026-10-24T00:21:33.331244",
+  "all_checks_passed": true,
+  "compared_output_sha256": {
+    "results\\tables\\selection_matching\\client_auditfirm_sorting\\baseline_fit.csv": "87daba9f28f73c6a7fe643f59b0bfe006976717e8b28ada271a8979f4673a834",
+    "results\\tables\\selection_matching\\client_auditfirm_sorting\\sample_flow.csv": "758b22de2a33cddd45d49cd53ead95f788081e800ca5be69222dd42d88686587",
+    "results\\tables\\selection_matching\\client_auditfirm_sorting\\within_between_sorting.csv": "edb5eccdf967e0ab81d8e6fa5150223e028fdea39adbf408b6f2aa669e463434",
+    "results\\tables\\selection_matching\\client_auditfirm_sorting\\big4_gap.csv": "c50714def65aefaa759df882a5925ed973998e9fc45c9a16a0c856fb65b101a2",
+    "results\\tables\\selection_matching\\client_auditfirm_sorting\\residual_future_assignment_tests.csv": "2ebf435aa6529af116e9e2353525e8c772cf8dfbcf22a2ccdaad6e69b8736432",
+    "results\\tables\\selection_matching\\client_auditfirm_sorting\\stata\\baseline_fit.csv": "1c17789bcecf7e5f271eac0c8d4b9d61456dac63e5eb0383192098d3f57d2f52",
+    "results\\tables\\selection_matching\\client_auditfirm_sorting\\stata\\sample_flow.csv": "9aaa60a430073675a3d2e0f50fdb5a1ce98713260c96db91ecd8ce09964b4c6a",
+    "results\\tables\\selection_matching\\client_auditfirm_sorting\\stata\\within_between_sorting.csv": "0cd84945d6470dad97c7dacc0c5f27e96b1257654c80214e8d9f4d9fe06a298f",
+    "results\\tables\\selection_matching\\client_auditfirm_sorting\\stata\\big4_gap.csv": "a5b2389176aa7b3b0c7293c336d0332825f8b24925a5fa970005d3bc410e0187",
+    "results\\tables\\selection_matching\\client_auditfirm_sorting\\stata\\residual_future_assignment_tests.csv": "b38e141dc29ffef03ddb6b8246da4c51fb72fd2a3c3757eee76e30997f7b580d"
+  },
+  "baseline_models": 48,
+  "mobility_models": 24,
+  "max_baseline_prediction_error": 4.4391683273139885e-09,
+  "max_mobility_beta_error": 4.996003610813204e-16,
+  "max_aligned_se_error": 5.12332162805329e-10,
+  "read_audit": [
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/stata/sample_gate.dta",
+      "bytes": 12427100,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "audit_id",
+        "size",
+        "lev",
+        "chg_lev",
+        "roa",
+        "loss",
+        "cfo",
+        "accruals",
+        "growth",
+        "mtb",
+        "report_lag",
+        "zscore",
+        "age",
+        "client_id",
+        "size_mis",
+        "lev_mis",
+        "loss_mis",
+        "roa_mis",
+        "zscore_mis",
+        "chg_lev_mis",
+        "report_lag_mis",
+        "cfo_mis",
+        "age_mis",
+        "growth_mis",
+        "mtb_mis",
+        "accruals_mis",
+        "restated_clean",
+        "violated_clean",
+        "any_failure_clean",
+        "abs_da_jones",
+        "tier",
+        "a1_auditor_id",
+        "a1_reports",
+        "a1_years"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/components_none_any_failure_clean_0.csv.gz",
+      "bytes": 2238884,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "audit_id",
+        "a1",
+        "tier",
+        "any_failure_clean",
+        "client_fe",
+        "audit_firm_fe",
+        "year_fe",
+        "controls",
+        "residual",
+        "component"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/stata/components_none_any_failure_clean_0.dta",
+      "bytes": 16842265,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "audit_id",
+        "a1_auditor_id",
+        "tier",
+        "any_failure_clean",
+        "component",
+        "client_fe",
+        "audit_firm_fe",
+        "year_fe",
+        "controls",
+        "residual"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/components_none_any_failure_clean_1.csv.gz",
+      "bytes": 143570,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "audit_id",
+        "a1",
+        "tier",
+        "any_failure_clean",
+        "client_fe",
+        "audit_firm_fe",
+        "year_fe",
+        "controls",
+        "residual",
+        "component"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/stata/components_none_any_failure_clean_1.dta",
+      "bytes": 1136619,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "audit_id",
+        "a1_auditor_id",
+        "tier",
+        "any_failure_clean",
+        "component",
+        "client_fe",
+        "audit_firm_fe",
+        "year_fe",
+        "controls",
+        "residual"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/components_none_any_failure_clean_2.csv.gz",
+      "bytes": 1080072,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "audit_id",
+        "a1",
+        "tier",
+        "any_failure_clean",
+        "client_fe",
+        "audit_firm_fe",
+        "year_fe",
+        "controls",
+        "residual",
+        "component"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/stata/components_none_any_failure_clean_2.dta",
+      "bytes": 8432094,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "audit_id",
+        "a1_auditor_id",
+        "tier",
+        "any_failure_clean",
+        "component",
+        "client_fe",
+        "audit_firm_fe",
+        "year_fe",
+        "controls",
+        "residual"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/components_none_any_failure_clean_3.csv.gz",
+      "bytes": 976599,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "audit_id",
+        "a1",
+        "tier",
+        "any_failure_clean",
+        "client_fe",
+        "audit_firm_fe",
+        "year_fe",
+        "controls",
+        "residual",
+        "component"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/stata/components_none_any_failure_clean_3.dta",
+      "bytes": 7184275,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "audit_id",
+        "a1_auditor_id",
+        "tier",
+        "any_failure_clean",
+        "component",
+        "client_fe",
+        "audit_firm_fe",
+        "year_fe",
+        "controls",
+        "residual"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/components_none_restated_clean_0.csv.gz",
+      "bytes": 2240580,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "audit_id",
+        "a1",
+        "tier",
+        "restated_clean",
+        "client_fe",
+        "audit_firm_fe",
+        "year_fe",
+        "controls",
+        "residual",
+        "component"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/stata/components_none_restated_clean_0.dta",
+      "bytes": 16842265,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "audit_id",
+        "a1_auditor_id",
+        "tier",
+        "restated_clean",
+        "component",
+        "client_fe",
+        "audit_firm_fe",
+        "year_fe",
+        "controls",
+        "residual"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/components_none_restated_clean_1.csv.gz",
+      "bytes": 143217,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "audit_id",
+        "a1",
+        "tier",
+        "restated_clean",
+        "client_fe",
+        "audit_firm_fe",
+        "year_fe",
+        "controls",
+        "residual",
+        "component"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/stata/components_none_restated_clean_1.dta",
+      "bytes": 1136619,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "audit_id",
+        "a1_auditor_id",
+        "tier",
+        "restated_clean",
+        "component",
+        "client_fe",
+        "audit_firm_fe",
+        "year_fe",
+        "controls",
+        "residual"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/components_none_restated_clean_2.csv.gz",
+      "bytes": 1080957,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "audit_id",
+        "a1",
+        "tier",
+        "restated_clean",
+        "client_fe",
+        "audit_firm_fe",
+        "year_fe",
+        "controls",
+        "residual",
+        "component"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/stata/components_none_restated_clean_2.dta",
+      "bytes": 8432094,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "audit_id",
+        "a1_auditor_id",
+        "tier",
+        "restated_clean",
+        "component",
+        "client_fe",
+        "audit_firm_fe",
+        "year_fe",
+        "controls",
+        "residual"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/components_none_restated_clean_3.csv.gz",
+      "bytes": 975868,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "audit_id",
+        "a1",
+        "tier",
+        "restated_clean",
+        "client_fe",
+        "audit_firm_fe",
+        "year_fe",
+        "controls",
+        "residual",
+        "component"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/stata/components_none_restated_clean_3.dta",
+      "bytes": 7184275,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "audit_id",
+        "a1_auditor_id",
+        "tier",
+        "restated_clean",
+        "component",
+        "client_fe",
+        "audit_firm_fe",
+        "year_fe",
+        "controls",
+        "residual"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/components_none_violated_clean_0.csv.gz",
+      "bytes": 2241738,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "audit_id",
+        "a1",
+        "tier",
+        "violated_clean",
+        "client_fe",
+        "audit_firm_fe",
+        "year_fe",
+        "controls",
+        "residual",
+        "component"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/stata/components_none_violated_clean_0.dta",
+      "bytes": 16842265,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "audit_id",
+        "a1_auditor_id",
+        "tier",
+        "violated_clean",
+        "component",
+        "client_fe",
+        "audit_firm_fe",
+        "year_fe",
+        "controls",
+        "residual"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/components_none_violated_clean_1.csv.gz",
+      "bytes": 144652,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "audit_id",
+        "a1",
+        "tier",
+        "violated_clean",
+        "client_fe",
+        "audit_firm_fe",
+        "year_fe",
+        "controls",
+        "residual",
+        "component"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/stata/components_none_violated_clean_1.dta",
+      "bytes": 1136619,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "audit_id",
+        "a1_auditor_id",
+        "tier",
+        "violated_clean",
+        "component",
+        "client_fe",
+        "audit_firm_fe",
+        "year_fe",
+        "controls",
+        "residual"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/components_none_violated_clean_2.csv.gz",
+      "bytes": 1084828,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "audit_id",
+        "a1",
+        "tier",
+        "violated_clean",
+        "client_fe",
+        "audit_firm_fe",
+        "year_fe",
+        "controls",
+        "residual",
+        "component"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/stata/components_none_violated_clean_2.dta",
+      "bytes": 8432094,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "audit_id",
+        "a1_auditor_id",
+        "tier",
+        "violated_clean",
+        "component",
+        "client_fe",
+        "audit_firm_fe",
+        "year_fe",
+        "controls",
+        "residual"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/components_none_violated_clean_3.csv.gz",
+      "bytes": 976244,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "audit_id",
+        "a1",
+        "tier",
+        "violated_clean",
+        "client_fe",
+        "audit_firm_fe",
+        "year_fe",
+        "controls",
+        "residual",
+        "component"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/stata/components_none_violated_clean_3.dta",
+      "bytes": 7184275,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "audit_id",
+        "a1_auditor_id",
+        "tier",
+        "violated_clean",
+        "component",
+        "client_fe",
+        "audit_firm_fe",
+        "year_fe",
+        "controls",
+        "residual"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/components_none_abs_da_jones_0.csv.gz",
+      "bytes": 2416903,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "audit_id",
+        "a1",
+        "tier",
+        "abs_da_jones",
+        "client_fe",
+        "audit_firm_fe",
+        "year_fe",
+        "controls",
+        "residual",
+        "component"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/stata/components_none_abs_da_jones_0.dta",
+      "bytes": 13594016,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "audit_id",
+        "a1_auditor_id",
+        "tier",
+        "abs_da_jones",
+        "component",
+        "client_fe",
+        "audit_firm_fe",
+        "year_fe",
+        "controls",
+        "residual"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/components_none_abs_da_jones_1.csv.gz",
+      "bytes": 149332,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "audit_id",
+        "a1",
+        "tier",
+        "abs_da_jones",
+        "client_fe",
+        "audit_firm_fe",
+        "year_fe",
+        "controls",
+        "residual",
+        "component"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/stata/components_none_abs_da_jones_1.dta",
+      "bytes": 891166,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "audit_id",
+        "a1_auditor_id",
+        "tier",
+        "abs_da_jones",
+        "component",
+        "client_fe",
+        "audit_firm_fe",
+        "year_fe",
+        "controls",
+        "residual"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/components_none_abs_da_jones_2.csv.gz",
+      "bytes": 1256456,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "audit_id",
+        "a1",
+        "tier",
+        "abs_da_jones",
+        "client_fe",
+        "audit_firm_fe",
+        "year_fe",
+        "controls",
+        "residual",
+        "component"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/stata/components_none_abs_da_jones_2.dta",
+      "bytes": 7152966,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "audit_id",
+        "a1_auditor_id",
+        "tier",
+        "abs_da_jones",
+        "component",
+        "client_fe",
+        "audit_firm_fe",
+        "year_fe",
+        "controls",
+        "residual"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/components_none_abs_da_jones_3.csv.gz",
+      "bytes": 976984,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "audit_id",
+        "a1",
+        "tier",
+        "abs_da_jones",
+        "client_fe",
+        "audit_firm_fe",
+        "year_fe",
+        "controls",
+        "residual",
+        "component"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/stata/components_none_abs_da_jones_3.dta",
+      "bytes": 5457739,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "audit_id",
+        "a1_auditor_id",
+        "tier",
+        "abs_da_jones",
+        "component",
+        "client_fe",
+        "audit_firm_fe",
+        "year_fe",
+        "controls",
+        "residual"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/components_r3y3_any_failure_clean_0.csv.gz",
+      "bytes": 2049007,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "audit_id",
+        "a1",
+        "tier",
+        "any_failure_clean",
+        "client_fe",
+        "audit_firm_fe",
+        "year_fe",
+        "controls",
+        "residual",
+        "component"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/stata/components_r3y3_any_failure_clean_0.dta",
+      "bytes": 15642724,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "audit_id",
+        "a1_auditor_id",
+        "tier",
+        "any_failure_clean",
+        "component",
+        "client_fe",
+        "audit_firm_fe",
+        "year_fe",
+        "controls",
+        "residual"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/components_r3y3_any_failure_clean_1.csv.gz",
+      "bytes": 132624,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "audit_id",
+        "a1",
+        "tier",
+        "any_failure_clean",
+        "client_fe",
+        "audit_firm_fe",
+        "year_fe",
+        "controls",
+        "residual",
+        "component"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/stata/components_r3y3_any_failure_clean_1.dta",
+      "bytes": 1061573,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "audit_id",
+        "a1_auditor_id",
+        "tier",
+        "any_failure_clean",
+        "component",
+        "client_fe",
+        "audit_firm_fe",
+        "year_fe",
+        "controls",
+        "residual"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/components_r3y3_any_failure_clean_2.csv.gz",
+      "bytes": 1021755,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "audit_id",
+        "a1",
+        "tier",
+        "any_failure_clean",
+        "client_fe",
+        "audit_firm_fe",
+        "year_fe",
+        "controls",
+        "residual",
+        "component"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/stata/components_r3y3_any_failure_clean_2.dta",
+      "bytes": 8027467,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "audit_id",
+        "a1_auditor_id",
+        "tier",
+        "any_failure_clean",
+        "component",
+        "client_fe",
+        "audit_firm_fe",
+        "year_fe",
+        "controls",
+        "residual"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/components_r3y3_any_failure_clean_3.csv.gz",
+      "bytes": 863392,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "audit_id",
+        "a1",
+        "tier",
+        "any_failure_clean",
+        "client_fe",
+        "audit_firm_fe",
+        "year_fe",
+        "controls",
+        "residual",
+        "component"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/stata/components_r3y3_any_failure_clean_3.dta",
+      "bytes": 6482571,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "audit_id",
+        "a1_auditor_id",
+        "tier",
+        "any_failure_clean",
+        "component",
+        "client_fe",
+        "audit_firm_fe",
+        "year_fe",
+        "controls",
+        "residual"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/components_r3y3_restated_clean_0.csv.gz",
+      "bytes": 2053694,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "audit_id",
+        "a1",
+        "tier",
+        "restated_clean",
+        "client_fe",
+        "audit_firm_fe",
+        "year_fe",
+        "controls",
+        "residual",
+        "component"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/stata/components_r3y3_restated_clean_0.dta",
+      "bytes": 15642724,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "audit_id",
+        "a1_auditor_id",
+        "tier",
+        "restated_clean",
+        "component",
+        "client_fe",
+        "audit_firm_fe",
+        "year_fe",
+        "controls",
+        "residual"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/components_r3y3_restated_clean_1.csv.gz",
+      "bytes": 132679,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "audit_id",
+        "a1",
+        "tier",
+        "restated_clean",
+        "client_fe",
+        "audit_firm_fe",
+        "year_fe",
+        "controls",
+        "residual",
+        "component"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/stata/components_r3y3_restated_clean_1.dta",
+      "bytes": 1061573,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "audit_id",
+        "a1_auditor_id",
+        "tier",
+        "restated_clean",
+        "component",
+        "client_fe",
+        "audit_firm_fe",
+        "year_fe",
+        "controls",
+        "residual"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/components_r3y3_restated_clean_2.csv.gz",
+      "bytes": 1021208,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "audit_id",
+        "a1",
+        "tier",
+        "restated_clean",
+        "client_fe",
+        "audit_firm_fe",
+        "year_fe",
+        "controls",
+        "residual",
+        "component"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/stata/components_r3y3_restated_clean_2.dta",
+      "bytes": 8027467,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "audit_id",
+        "a1_auditor_id",
+        "tier",
+        "restated_clean",
+        "component",
+        "client_fe",
+        "audit_firm_fe",
+        "year_fe",
+        "controls",
+        "residual"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/components_r3y3_restated_clean_3.csv.gz",
+      "bytes": 862710,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "audit_id",
+        "a1",
+        "tier",
+        "restated_clean",
+        "client_fe",
+        "audit_firm_fe",
+        "year_fe",
+        "controls",
+        "residual",
+        "component"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/stata/components_r3y3_restated_clean_3.dta",
+      "bytes": 6482571,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "audit_id",
+        "a1_auditor_id",
+        "tier",
+        "restated_clean",
+        "component",
+        "client_fe",
+        "audit_firm_fe",
+        "year_fe",
+        "controls",
+        "residual"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/components_r3y3_violated_clean_0.csv.gz",
+      "bytes": 2049494,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "audit_id",
+        "a1",
+        "tier",
+        "violated_clean",
+        "client_fe",
+        "audit_firm_fe",
+        "year_fe",
+        "controls",
+        "residual",
+        "component"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/stata/components_r3y3_violated_clean_0.dta",
+      "bytes": 15642724,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "audit_id",
+        "a1_auditor_id",
+        "tier",
+        "violated_clean",
+        "component",
+        "client_fe",
+        "audit_firm_fe",
+        "year_fe",
+        "controls",
+        "residual"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/components_r3y3_violated_clean_1.csv.gz",
+      "bytes": 133463,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "audit_id",
+        "a1",
+        "tier",
+        "violated_clean",
+        "client_fe",
+        "audit_firm_fe",
+        "year_fe",
+        "controls",
+        "residual",
+        "component"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/stata/components_r3y3_violated_clean_1.dta",
+      "bytes": 1061573,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "audit_id",
+        "a1_auditor_id",
+        "tier",
+        "violated_clean",
+        "component",
+        "client_fe",
+        "audit_firm_fe",
+        "year_fe",
+        "controls",
+        "residual"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/components_r3y3_violated_clean_2.csv.gz",
+      "bytes": 1024769,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "audit_id",
+        "a1",
+        "tier",
+        "violated_clean",
+        "client_fe",
+        "audit_firm_fe",
+        "year_fe",
+        "controls",
+        "residual",
+        "component"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/stata/components_r3y3_violated_clean_2.dta",
+      "bytes": 8027467,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "audit_id",
+        "a1_auditor_id",
+        "tier",
+        "violated_clean",
+        "component",
+        "client_fe",
+        "audit_firm_fe",
+        "year_fe",
+        "controls",
+        "residual"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/components_r3y3_violated_clean_3.csv.gz",
+      "bytes": 862717,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "audit_id",
+        "a1",
+        "tier",
+        "violated_clean",
+        "client_fe",
+        "audit_firm_fe",
+        "year_fe",
+        "controls",
+        "residual",
+        "component"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/stata/components_r3y3_violated_clean_3.dta",
+      "bytes": 6482571,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "audit_id",
+        "a1_auditor_id",
+        "tier",
+        "violated_clean",
+        "component",
+        "client_fe",
+        "audit_firm_fe",
+        "year_fe",
+        "controls",
+        "residual"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/components_r3y3_abs_da_jones_0.csv.gz",
+      "bytes": 2251014,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "audit_id",
+        "a1",
+        "tier",
+        "abs_da_jones",
+        "client_fe",
+        "audit_firm_fe",
+        "year_fe",
+        "controls",
+        "residual",
+        "component"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/stata/components_r3y3_abs_da_jones_0.dta",
+      "bytes": 12757994,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "audit_id",
+        "a1_auditor_id",
+        "tier",
+        "abs_da_jones",
+        "component",
+        "client_fe",
+        "audit_firm_fe",
+        "year_fe",
+        "controls",
+        "residual"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/components_r3y3_abs_da_jones_1.csv.gz",
+      "bytes": 138233,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "audit_id",
+        "a1",
+        "tier",
+        "abs_da_jones",
+        "client_fe",
+        "audit_firm_fe",
+        "year_fe",
+        "controls",
+        "residual",
+        "component"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/stata/components_r3y3_abs_da_jones_1.dta",
+      "bytes": 833806,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "audit_id",
+        "a1_auditor_id",
+        "tier",
+        "abs_da_jones",
+        "component",
+        "client_fe",
+        "audit_firm_fe",
+        "year_fe",
+        "controls",
+        "residual"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/components_r3y3_abs_da_jones_2.csv.gz",
+      "bytes": 1190829,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "audit_id",
+        "a1",
+        "tier",
+        "abs_da_jones",
+        "client_fe",
+        "audit_firm_fe",
+        "year_fe",
+        "controls",
+        "residual",
+        "component"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/stata/components_r3y3_abs_da_jones_2.dta",
+      "bytes": 6814303,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "audit_id",
+        "a1_auditor_id",
+        "tier",
+        "abs_da_jones",
+        "component",
+        "client_fe",
+        "audit_firm_fe",
+        "year_fe",
+        "controls",
+        "residual"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/components_r3y3_abs_da_jones_3.csv.gz",
+      "bytes": 892917,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "audit_id",
+        "a1",
+        "tier",
+        "abs_da_jones",
+        "client_fe",
+        "audit_firm_fe",
+        "year_fe",
+        "controls",
+        "residual",
+        "component"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/stata/components_r3y3_abs_da_jones_3.dta",
+      "bytes": 5036860,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "audit_id",
+        "a1_auditor_id",
+        "tier",
+        "abs_da_jones",
+        "component",
+        "client_fe",
+        "audit_firm_fe",
+        "year_fe",
+        "controls",
+        "residual"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/components_r5y5_any_failure_clean_0.csv.gz",
+      "bytes": 1835124,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "audit_id",
+        "a1",
+        "tier",
+        "any_failure_clean",
+        "client_fe",
+        "audit_firm_fe",
+        "year_fe",
+        "controls",
+        "residual",
+        "component"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/stata/components_r5y5_any_failure_clean_0.dta",
+      "bytes": 14074167,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "audit_id",
+        "a1_auditor_id",
+        "tier",
+        "any_failure_clean",
+        "component",
+        "client_fe",
+        "audit_firm_fe",
+        "year_fe",
+        "controls",
+        "residual"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/components_r5y5_any_failure_clean_1.csv.gz",
+      "bytes": 116981,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "audit_id",
+        "a1",
+        "tier",
+        "any_failure_clean",
+        "client_fe",
+        "audit_firm_fe",
+        "year_fe",
+        "controls",
+        "residual",
+        "component"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/stata/components_r5y5_any_failure_clean_1.dta",
+      "bytes": 939205,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "audit_id",
+        "a1_auditor_id",
+        "tier",
+        "any_failure_clean",
+        "component",
+        "client_fe",
+        "audit_firm_fe",
+        "year_fe",
+        "controls",
+        "residual"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/components_r5y5_any_failure_clean_2.csv.gz",
+      "bytes": 941914,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "audit_id",
+        "a1",
+        "tier",
+        "any_failure_clean",
+        "client_fe",
+        "audit_firm_fe",
+        "year_fe",
+        "controls",
+        "residual",
+        "component"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/stata/components_r5y5_any_failure_clean_2.dta",
+      "bytes": 7419451,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "audit_id",
+        "a1_auditor_id",
+        "tier",
+        "any_failure_clean",
+        "component",
+        "client_fe",
+        "audit_firm_fe",
+        "year_fe",
+        "controls",
+        "residual"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/components_r5y5_any_failure_clean_3.csv.gz",
+      "bytes": 744628,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "audit_id",
+        "a1",
+        "tier",
+        "any_failure_clean",
+        "client_fe",
+        "audit_firm_fe",
+        "year_fe",
+        "controls",
+        "residual",
+        "component"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/stata/components_r5y5_any_failure_clean_3.dta",
+      "bytes": 5659694,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "audit_id",
+        "a1_auditor_id",
+        "tier",
+        "any_failure_clean",
+        "component",
+        "client_fe",
+        "audit_firm_fe",
+        "year_fe",
+        "controls",
+        "residual"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/components_r5y5_restated_clean_0.csv.gz",
+      "bytes": 1833834,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "audit_id",
+        "a1",
+        "tier",
+        "restated_clean",
+        "client_fe",
+        "audit_firm_fe",
+        "year_fe",
+        "controls",
+        "residual",
+        "component"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/stata/components_r5y5_restated_clean_0.dta",
+      "bytes": 14074167,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "audit_id",
+        "a1_auditor_id",
+        "tier",
+        "restated_clean",
+        "component",
+        "client_fe",
+        "audit_firm_fe",
+        "year_fe",
+        "controls",
+        "residual"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/components_r5y5_restated_clean_1.csv.gz",
+      "bytes": 116787,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "audit_id",
+        "a1",
+        "tier",
+        "restated_clean",
+        "client_fe",
+        "audit_firm_fe",
+        "year_fe",
+        "controls",
+        "residual",
+        "component"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/stata/components_r5y5_restated_clean_1.dta",
+      "bytes": 939205,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "audit_id",
+        "a1_auditor_id",
+        "tier",
+        "restated_clean",
+        "component",
+        "client_fe",
+        "audit_firm_fe",
+        "year_fe",
+        "controls",
+        "residual"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/components_r5y5_restated_clean_2.csv.gz",
+      "bytes": 940585,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "audit_id",
+        "a1",
+        "tier",
+        "restated_clean",
+        "client_fe",
+        "audit_firm_fe",
+        "year_fe",
+        "controls",
+        "residual",
+        "component"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/stata/components_r5y5_restated_clean_2.dta",
+      "bytes": 7419451,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "audit_id",
+        "a1_auditor_id",
+        "tier",
+        "restated_clean",
+        "component",
+        "client_fe",
+        "audit_firm_fe",
+        "year_fe",
+        "controls",
+        "residual"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/components_r5y5_restated_clean_3.csv.gz",
+      "bytes": 746676,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "audit_id",
+        "a1",
+        "tier",
+        "restated_clean",
+        "client_fe",
+        "audit_firm_fe",
+        "year_fe",
+        "controls",
+        "residual",
+        "component"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/stata/components_r5y5_restated_clean_3.dta",
+      "bytes": 5659694,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "audit_id",
+        "a1_auditor_id",
+        "tier",
+        "restated_clean",
+        "component",
+        "client_fe",
+        "audit_firm_fe",
+        "year_fe",
+        "controls",
+        "residual"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/components_r5y5_violated_clean_0.csv.gz",
+      "bytes": 1833627,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "audit_id",
+        "a1",
+        "tier",
+        "violated_clean",
+        "client_fe",
+        "audit_firm_fe",
+        "year_fe",
+        "controls",
+        "residual",
+        "component"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/stata/components_r5y5_violated_clean_0.dta",
+      "bytes": 14074167,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "audit_id",
+        "a1_auditor_id",
+        "tier",
+        "violated_clean",
+        "component",
+        "client_fe",
+        "audit_firm_fe",
+        "year_fe",
+        "controls",
+        "residual"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/components_r5y5_violated_clean_1.csv.gz",
+      "bytes": 117802,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "audit_id",
+        "a1",
+        "tier",
+        "violated_clean",
+        "client_fe",
+        "audit_firm_fe",
+        "year_fe",
+        "controls",
+        "residual",
+        "component"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/stata/components_r5y5_violated_clean_1.dta",
+      "bytes": 939205,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "audit_id",
+        "a1_auditor_id",
+        "tier",
+        "violated_clean",
+        "component",
+        "client_fe",
+        "audit_firm_fe",
+        "year_fe",
+        "controls",
+        "residual"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/components_r5y5_violated_clean_2.csv.gz",
+      "bytes": 945467,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "audit_id",
+        "a1",
+        "tier",
+        "violated_clean",
+        "client_fe",
+        "audit_firm_fe",
+        "year_fe",
+        "controls",
+        "residual",
+        "component"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/stata/components_r5y5_violated_clean_2.dta",
+      "bytes": 7419451,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "audit_id",
+        "a1_auditor_id",
+        "tier",
+        "violated_clean",
+        "component",
+        "client_fe",
+        "audit_firm_fe",
+        "year_fe",
+        "controls",
+        "residual"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/components_r5y5_violated_clean_3.csv.gz",
+      "bytes": 747270,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "audit_id",
+        "a1",
+        "tier",
+        "violated_clean",
+        "client_fe",
+        "audit_firm_fe",
+        "year_fe",
+        "controls",
+        "residual",
+        "component"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/stata/components_r5y5_violated_clean_3.dta",
+      "bytes": 5659694,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "audit_id",
+        "a1_auditor_id",
+        "tier",
+        "violated_clean",
+        "component",
+        "client_fe",
+        "audit_firm_fe",
+        "year_fe",
+        "controls",
+        "residual"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/components_r5y5_abs_da_jones_0.csv.gz",
+      "bytes": 2029533,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "audit_id",
+        "a1",
+        "tier",
+        "abs_da_jones",
+        "client_fe",
+        "audit_firm_fe",
+        "year_fe",
+        "controls",
+        "residual",
+        "component"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/stata/components_r5y5_abs_da_jones_0.dta",
+      "bytes": 11535270,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "audit_id",
+        "a1_auditor_id",
+        "tier",
+        "abs_da_jones",
+        "component",
+        "client_fe",
+        "audit_firm_fe",
+        "year_fe",
+        "controls",
+        "residual"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/components_r5y5_abs_da_jones_1.csv.gz",
+      "bytes": 121360,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "audit_id",
+        "a1",
+        "tier",
+        "abs_da_jones",
+        "client_fe",
+        "audit_firm_fe",
+        "year_fe",
+        "controls",
+        "residual",
+        "component"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/stata/components_r5y5_abs_da_jones_1.dta",
+      "bytes": 736294,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "audit_id",
+        "a1_auditor_id",
+        "tier",
+        "abs_da_jones",
+        "component",
+        "client_fe",
+        "audit_firm_fe",
+        "year_fe",
+        "controls",
+        "residual"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/components_r5y5_abs_da_jones_2.csv.gz",
+      "bytes": 1092218,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "audit_id",
+        "a1",
+        "tier",
+        "abs_da_jones",
+        "client_fe",
+        "audit_firm_fe",
+        "year_fe",
+        "controls",
+        "residual",
+        "component"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/stata/components_r5y5_abs_da_jones_2.dta",
+      "bytes": 6299497,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "audit_id",
+        "a1_auditor_id",
+        "tier",
+        "abs_da_jones",
+        "component",
+        "client_fe",
+        "audit_firm_fe",
+        "year_fe",
+        "controls",
+        "residual"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/components_r5y5_abs_da_jones_3.csv.gz",
+      "bytes": 784325,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "audit_id",
+        "a1",
+        "tier",
+        "abs_da_jones",
+        "client_fe",
+        "audit_firm_fe",
+        "year_fe",
+        "controls",
+        "residual",
+        "component"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/stata/components_r5y5_abs_da_jones_3.dta",
+      "bytes": 4440555,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "audit_id",
+        "a1_auditor_id",
+        "tier",
+        "abs_da_jones",
+        "component",
+        "client_fe",
+        "audit_firm_fe",
+        "year_fe",
+        "controls",
+        "residual"
+      ]
+    },
+    {
+      "path": "results/tables/selection_matching/client_auditfirm_sorting/baseline_fit.csv",
+      "bytes": 9997,
+      "preview_rows": 10,
+      "columns": [
+        "threshold",
+        "outcome",
+        "tier",
+        "status",
+        "n",
+        "n_clients",
+        "n_audit_firms",
+        "n_components",
+        "n_years",
+        "design_rank",
+        "design_columns",
+        "omitted_controls",
+        "max_normal_equation_error",
+        "var_client",
+        "var_audit_firm",
+        "cov_client_audit_firm",
+        "corr",
+        "largest_component_share"
+      ]
+    },
+    {
+      "path": "results/tables/selection_matching/client_auditfirm_sorting/stata/baseline_fit.csv",
+      "bytes": 5283,
+      "preview_rows": 10,
+      "columns": [
+        "threshold",
+        "outcome",
+        "tier",
+        "n",
+        "n_clients",
+        "n_audit_firms",
+        "n_components",
+        "var_y",
+        "var_client",
+        "var_audit_firm",
+        "cov_client_audit_firm",
+        "corr"
+      ]
+    },
+    {
+      "path": "results/tables/selection_matching/client_auditfirm_sorting/sample_flow.csv",
+      "bytes": 3098,
+      "preview_rows": 10,
+      "columns": [
+        "threshold",
+        "outcome",
+        "tier",
+        "panel_n",
+        "valid_id_n",
+        "gate_n",
+        "tier_n",
+        "outcome_nonmissing_n",
+        "estimation_n",
+        "dropped_singletons"
+      ]
+    },
+    {
+      "path": "results/tables/selection_matching/client_auditfirm_sorting/stata/sample_flow.csv",
+      "bytes": 2899,
+      "preview_rows": 10,
+      "columns": [
+        "threshold",
+        "outcome",
+        "tier",
+        "panel_n",
+        "valid_id_n",
+        "gate_n",
+        "tier_n",
+        "outcome_nonmissing_n",
+        "estimation_n"
+      ]
+    },
+    {
+      "path": "results/tables/selection_matching/client_auditfirm_sorting/within_between_sorting.csv",
+      "bytes": 18556,
+      "preview_rows": 10,
+      "columns": [
+        "threshold",
+        "outcome",
+        "tier",
+        "grouping",
+        "group",
+        "n",
+        "weight",
+        "mean_client",
+        "mean_audit_firm",
+        "var_client",
+        "var_audit_firm",
+        "cov_within",
+        "weighted_within",
+        "corr_within",
+        "cov_total",
+        "cov_within_total",
+        "cov_between",
+        "identity_error"
+      ]
+    },
+    {
+      "path": "results/tables/selection_matching/client_auditfirm_sorting/stata/within_between_sorting.csv",
+      "bytes": 10178,
+      "preview_rows": 10,
+      "columns": [
+        "threshold",
+        "outcome",
+        "grouping",
+        "group",
+        "n",
+        "weight",
+        "mean_client",
+        "mean_audit_firm",
+        "cov_within",
+        "weighted_within",
+        "cov_total",
+        "cov_within_total",
+        "cov_between",
+        "identity_error"
+      ]
+    },
+    {
+      "path": "results/tables/selection_matching/client_auditfirm_sorting/big4_gap.csv",
+      "bytes": 7553,
+      "preview_rows": 10,
+      "columns": [
+        "threshold",
+        "outcome",
+        "tier",
+        "comparison",
+        "n_big4",
+        "n_baseline",
+        "observed_gap",
+        "client_fe_gap",
+        "audit_firm_fe_gap",
+        "year_fe_gap",
+        "controls_gap",
+        "residual_gap",
+        "identity_error"
+      ]
+    },
+    {
+      "path": "results/tables/selection_matching/client_auditfirm_sorting/stata/big4_gap.csv",
+      "bytes": 5443,
+      "preview_rows": 10,
+      "columns": [
+        "threshold",
+        "outcome",
+        "comparison",
+        "n_big4",
+        "n_baseline",
+        "observed_gap",
+        "client_fe_gap",
+        "audit_firm_fe_gap",
+        "year_fe_gap",
+        "controls_gap",
+        "residual_gap",
+        "identity_error"
+      ]
+    },
+    {
+      "path": "results/tables/selection_matching/client_auditfirm_sorting/residual_future_assignment_tests.csv",
+      "bytes": 11591,
+      "preview_rows": 10,
+      "columns": [
+        "threshold",
+        "outcome",
+        "horizon",
+        "status",
+        "term",
+        "n",
+        "clients",
+        "beta",
+        "cluster_se",
+        "p_value",
+        "joint_f",
+        "joint_p",
+        "diagnostic",
+        "omitted_controls"
+      ]
+    },
+    {
+      "path": "results/tables/selection_matching/client_auditfirm_sorting/stata/residual_future_assignment_tests.csv",
+      "bytes": 6659,
+      "preview_rows": 10,
+      "columns": [
+        "threshold",
+        "outcome",
+        "horizon",
+        "term",
+        "n",
+        "clients",
+        "beta",
+        "cluster_se",
+        "p_value",
+        "joint_f",
+        "joint_p",
+        "df_residual",
+        "df_model",
+        "df_absorbed",
+        "df_absorbed_nested"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/components_none_any_failure_clean_0.csv.gz",
+      "bytes": 2238884,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/stata/mobility_sample_none_any_failure_clean_1.dta",
+      "bytes": 766075,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "future_audit_firm_change",
+        "future_big4_assignment"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/stata/mobility_sample_none_any_failure_clean_2.dta",
+      "bytes": 697747,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "future_audit_firm_change",
+        "future_big4_assignment"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/components_none_restated_clean_0.csv.gz",
+      "bytes": 2240580,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/stata/mobility_sample_none_restated_clean_1.dta",
+      "bytes": 766075,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "future_audit_firm_change",
+        "future_big4_assignment"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/stata/mobility_sample_none_restated_clean_2.dta",
+      "bytes": 697747,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "future_audit_firm_change",
+        "future_big4_assignment"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/components_none_violated_clean_0.csv.gz",
+      "bytes": 2241738,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/stata/mobility_sample_none_violated_clean_1.dta",
+      "bytes": 766075,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "future_audit_firm_change",
+        "future_big4_assignment"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/stata/mobility_sample_none_violated_clean_2.dta",
+      "bytes": 697747,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "future_audit_firm_change",
+        "future_big4_assignment"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/components_none_abs_da_jones_0.csv.gz",
+      "bytes": 2416903,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/stata/mobility_sample_none_abs_da_jones_1.dta",
+      "bytes": 617731,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "future_audit_firm_change",
+        "future_big4_assignment"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/stata/mobility_sample_none_abs_da_jones_2.dta",
+      "bytes": 558811,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "future_audit_firm_change",
+        "future_big4_assignment"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/components_r3y3_any_failure_clean_0.csv.gz",
+      "bytes": 2049007,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/stata/mobility_sample_r3y3_any_failure_clean_1.dta",
+      "bytes": 682219,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "future_audit_firm_change",
+        "future_big4_assignment"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/stata/mobility_sample_r3y3_any_failure_clean_2.dta",
+      "bytes": 616939,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "future_audit_firm_change",
+        "future_big4_assignment"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/components_r3y3_restated_clean_0.csv.gz",
+      "bytes": 2053694,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/stata/mobility_sample_r3y3_restated_clean_1.dta",
+      "bytes": 682219,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "future_audit_firm_change",
+        "future_big4_assignment"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/stata/mobility_sample_r3y3_restated_clean_2.dta",
+      "bytes": 616939,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "future_audit_firm_change",
+        "future_big4_assignment"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/components_r3y3_violated_clean_0.csv.gz",
+      "bytes": 2049494,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/stata/mobility_sample_r3y3_violated_clean_1.dta",
+      "bytes": 682219,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "future_audit_firm_change",
+        "future_big4_assignment"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/stata/mobility_sample_r3y3_violated_clean_2.dta",
+      "bytes": 616939,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "future_audit_firm_change",
+        "future_big4_assignment"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/components_r3y3_abs_da_jones_0.csv.gz",
+      "bytes": 2251014,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/stata/mobility_sample_r3y3_abs_da_jones_1.dta",
+      "bytes": 559219,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "future_audit_firm_change",
+        "future_big4_assignment"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/stata/mobility_sample_r3y3_abs_da_jones_2.dta",
+      "bytes": 503119,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "future_audit_firm_change",
+        "future_big4_assignment"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/components_r5y5_any_failure_clean_0.csv.gz",
+      "bytes": 1835124,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/stata/mobility_sample_r5y5_any_failure_clean_1.dta",
+      "bytes": 593059,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "future_audit_firm_change",
+        "future_big4_assignment"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/stata/mobility_sample_r5y5_any_failure_clean_2.dta",
+      "bytes": 531139,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "future_audit_firm_change",
+        "future_big4_assignment"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/components_r5y5_restated_clean_0.csv.gz",
+      "bytes": 1833834,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/stata/mobility_sample_r5y5_restated_clean_1.dta",
+      "bytes": 593059,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "future_audit_firm_change",
+        "future_big4_assignment"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/stata/mobility_sample_r5y5_restated_clean_2.dta",
+      "bytes": 531139,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "future_audit_firm_change",
+        "future_big4_assignment"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/components_r5y5_violated_clean_0.csv.gz",
+      "bytes": 1833627,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/stata/mobility_sample_r5y5_violated_clean_1.dta",
+      "bytes": 593059,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "future_audit_firm_change",
+        "future_big4_assignment"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/stata/mobility_sample_r5y5_violated_clean_2.dta",
+      "bytes": 531139,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "future_audit_firm_change",
+        "future_big4_assignment"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/components_r5y5_abs_da_jones_0.csv.gz",
+      "bytes": 2029533,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/stata/mobility_sample_r5y5_abs_da_jones_1.dta",
+      "bytes": 491335,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "future_audit_firm_change",
+        "future_big4_assignment"
+      ]
+    },
+    {
+      "path": "data/intermediate/selection_matching/client_auditfirm_sorting/stata/mobility_sample_r5y5_abs_da_jones_2.dta",
+      "bytes": 438343,
+      "preview_rows": 10,
+      "columns": [
+        "stock_code",
+        "year",
+        "future_audit_firm_change",
+        "future_big4_assignment"
+      ]
+    },
+    {
+      "path": "results/tables/selection_matching/client_auditfirm_sorting/residual_future_assignment_tests.csv",
+      "bytes": 11591,
+      "preview_rows": 10,
+      "columns": [
+        "threshold",
+        "outcome",
+        "horizon",
+        "status",
+        "term",
+        "n",
+        "clients",
+        "beta",
+        "cluster_se",
+        "p_value",
+        "joint_f",
+        "joint_p",
+        "diagnostic",
+        "omitted_controls"
+      ]
+    },
+    {
+      "path": "results/tables/selection_matching/client_auditfirm_sorting/stata/residual_future_assignment_tests.csv",
+      "bytes": 6659,
+      "preview_rows": 10,
+      "columns": [
+        "threshold",
+        "outcome",
+        "horizon",
+        "term",
+        "n",
+        "clients",
+        "beta",
+        "cluster_se",
+        "p_value",
+        "joint_f",
+        "joint_p",
+        "df_residual",
+        "df_model",
+        "df_absorbed",
+        "df_absorbed_nested"
+      ]
+    },
+    {
+      "path": "data/raw/上市公司会计师事务所变更情况表/AR_AFCHANGE.xlsx",
+      "bytes": 1939780,
+      "preview_rows": 10,
+      "columns": [
+        "Symbol",
+        "DeclareDate",
+        "ChangeDate",
+        "AuditContent",
+        "InfoSource",
+        "ChangedOfficeID",
+        "ChangeFormerOfficeID"
+      ]
+    },
+    {
+      "path": "data/raw/会计信息质量/财务报告信息/上市公司财务重述情况表(2001-2021)/AR_FINRESTAT.xlsx",
+      "bytes": 8298594,
+      "preview_rows": 10,
+      "columns": [
+        "Symbol",
+        "DeclareDate",
+        "RestatementYear",
+        "RestatementObject"
+      ]
+    },
+    {
+      "path": "data/raw/会计信息质量/财务报告信息/财务重述公告表/AEC_FinResAnn.xlsx",
+      "bytes": 10854725,
+      "preview_rows": 10,
+      "columns": [
+        "Symbol",
+        "DeclareDate",
+        "DirectorDecisionDate",
+        "Accper",
+        "CorrectionType"
+      ]
+    },
+    {
+      "path": "data/raw/会计信息质量/财务报告信息/上市公司财务违规表(日)/AIQ_LCFinViolationD.xlsx",
+      "bytes": 2495978,
+      "preview_rows": 10,
+      "columns": [
+        "Symbol",
+        "DeclareDate",
+        "DisposalDate",
+        "ViolationYear",
+        "Relationship"
+      ]
+    },
+    {
+      "path": "results/tables/selection_matching/client_auditfirm_sorting/baseline_fit.csv",
+      "bytes": 9997,
+      "preview_rows": 10,
+      "columns": [
+        "threshold",
+        "outcome",
+        "tier",
+        "status",
+        "n",
+        "n_clients",
+        "n_audit_firms",
+        "n_components",
+        "n_years",
+        "design_rank",
+        "design_columns",
+        "omitted_controls",
+        "max_normal_equation_error",
+        "var_client",
+        "var_audit_firm",
+        "cov_client_audit_firm",
+        "corr",
+        "largest_component_share"
+      ]
+    },
+    {
+      "path": "results/tables/selection_matching/client_auditfirm_sorting/stata/baseline_fit.csv",
+      "bytes": 5283,
+      "preview_rows": 10,
+      "columns": [
+        "threshold",
+        "outcome",
+        "tier",
+        "n",
+        "n_clients",
+        "n_audit_firms",
+        "n_components",
+        "var_y",
+        "var_client",
+        "var_audit_firm",
+        "cov_client_audit_firm",
+        "corr"
+      ]
+    }
+  ],
+  "source_sha256": {
+    "code\\python\\client_auditfirm_stata_integration.py": "91c311042d303755403f1e4116d9d9923a569bfac128d0b9f7798aebcfe61e5b",
+    "code\\stata\\40_selection_matching\\42_audit_firm_sorting_akm.do": "4ddbfb84dfb531a3d45dab53099a4e18939ab60e881990bf03210a8cda57a905"
+  }
+}

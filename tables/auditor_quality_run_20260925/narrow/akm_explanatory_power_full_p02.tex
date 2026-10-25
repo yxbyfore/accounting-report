@@ -1,0 +1,36 @@
+\documentclass[10pt]{article}
+\usepackage[paperwidth=32cm,paperheight=45cm,margin=1cm]{geometry}
+\usepackage{fontspec,xeCJK}
+\setmainfont{lmroman10-regular.otf}[BoldFont=lmroman10-bold.otf,ItalicFont=lmroman10-italic.otf,BoldItalicFont=lmroman10-bolditalic.otf]
+\setCJKmainfont{SimSun}
+\usepackage{booktabs,array,threeparttable,graphicx,caption,longtable,amsmath,amssymb,hyperref,xcolor}
+\usepackage[active,tightpage]{preview}
+\PreviewEnvironment{minipage}
+\setlength\PreviewBorder{6pt}
+\newcommand{\sym}[1]{\textsuperscript{#1}}
+\captionsetup{font=normalsize,labelformat=empty,skip=6pt}
+\setlength{\parindent}{0pt}
+\begin{document}
+\begin{minipage}{19cm}\fontsize{10}{12}\selectfont\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.12}
+
+
+\centering
+\captionof{table}{Auditor FE: explanatory power and variance share (part 2 of 2)}
+\begin{threeparttable}
+\begin{tabular}{p{0.36\textwidth}ccc}
+\toprule
+Outcome & Partial F & FE share, no client FE (\%) & FE share, client FE (\%) \\
+\midrule
+Any failure & 2.08 & 14.2 & 15.0 \\
+Restatement & 2.07 & 14.1 & 14.0 \\
+Violation & 2.11 & 14.1 & 16.3 \\
+Abs. DA (Jones) & 1.29 & 7.4 & 15.2 \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}\fontsize{9}{11}\selectfont
+\item \raggedright \fontsize{9}{11}\selectfont \textit{Notes:} Delta R2 uses client, audit firm and year FE; variance shares compare with/without client FE.
+\end{tablenotes}
+\end{threeparttable}
+
+\end{minipage}
+\end{document}

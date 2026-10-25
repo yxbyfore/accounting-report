@@ -1,0 +1,31 @@
+\documentclass[10pt]{article}
+\usepackage[paperwidth=21cm,paperheight=45cm,margin=1cm]{geometry}
+\usepackage{fontspec,booktabs,array,amsmath,graphicx}
+\setmainfont{lmroman10-regular.otf}[BoldFont=lmroman10-bold.otf,ItalicFont=lmroman10-italic.otf,BoldItalicFont=lmroman10-bolditalic.otf]
+\pagestyle{empty}\setlength{\parindent}{0pt}
+\newcommand{\sym}[1]{\textsuperscript{#1}}
+\begin{document}\fontsize{10}{12}\selectfont
+\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.15}
+\begin{center}\large Big 4 Auditors and Log Magnitudes of Unwarned Failures\end{center}
+\medskip\textbf{Big 4: Industry $\times$ Year FE}\par\smallskip
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lcccc@{}}
+\toprule
+ & \shortstack{Log(1 +\\Restatement Amount)} & \shortstack{Log(1 +\\Restated Years)} & \shortstack{Log(1 +\\Violation Amount)} & \shortstack{Log(1 +\\Violation Years)} \\
+ & (1) & (2) & (3) & (4) \\
+\midrule
+Big 4 & -0.024\sym{***} & -0.031\sym{***} & -0.151\sym{***} & -0.031\sym{***} \\
+ & (0.009) & (0.007) & (0.034) & (0.006) \\
+Observations & 70,298 & 70,298 & 70,298 & 70,298 \\
+\bottomrule\end{tabular*}\par
+\medskip\textbf{Big 4: Firm and Year FE}\par\smallskip
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lcccc@{}}
+\toprule
+ & \shortstack{Log(1 +\\Restatement Amount)} & \shortstack{Log(1 +\\Restated Years)} & \shortstack{Log(1 +\\Violation Amount)} & \shortstack{Log(1 +\\Violation Years)} \\
+ & (1) & (2) & (3) & (4) \\
+\midrule
+Big 4 & -0.018 & -0.008 & -0.104\sym{**} & -0.024\sym{***} \\
+ & (0.015) & (0.007) & (0.049) & (0.008) \\
+Observations & 71,482 & 71,482 & 71,482 & 71,482 \\
+\bottomrule\end{tabular*}\par
+\medskip\fontsize{9}{11}\selectfont\textit{Notes:} SE clustered by firm. Nine audit-failure controls and mis\_dummy. * $p<0.10$, ** $p<0.05$, *** $p<0.01$.
+\end{document}

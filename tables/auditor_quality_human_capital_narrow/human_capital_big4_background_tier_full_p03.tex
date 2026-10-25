@@ -1,0 +1,48 @@
+\documentclass[10pt]{article}
+\usepackage[paperwidth=32cm,paperheight=45cm,margin=1cm]{geometry}
+\usepackage{fontspec,xeCJK}
+\setmainfont{lmroman10-regular.otf}[BoldFont=lmroman10-bold.otf,ItalicFont=lmroman10-italic.otf,BoldItalicFont=lmroman10-bolditalic.otf]
+\setCJKmainfont{SimSun}
+\usepackage{booktabs,array,threeparttable,graphicx,caption,longtable,amsmath,amssymb,hyperref,xcolor}
+\usepackage[active,tightpage]{preview}
+\PreviewEnvironment{minipage}
+\setlength\PreviewBorder{6pt}
+\newcommand{\sym}[1]{\textsuperscript{#1}}
+\captionsetup{font=normalsize,labelformat=empty,skip=6pt}
+\setlength{\parindent}{0pt}
+\begin{document}
+\begin{minipage}{19cm}\fontsize{10}{12}\selectfont\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.12}
+
+
+\centering
+\captionof{table}{A1 Big 4 Work Background by Audit Firm Tier: Columns 7--9}
+\begin{threeparttable}
+\begin{tabular}{p{0.38\textwidth}ccc}
+\toprule
+ & (7) & (8) & (9) \\
+Variables & GC & MAO & Ln(Fee) \\
+\midrule
+Big 4 audit firm & -0.003 & -0.016* & 0.323*** \\
+ & (0.006) & (0.008) & (0.033) \\
+Local 8 audit firm & -0.007** & -0.014*** & 0.017* \\
+ & (0.003) & (0.004) & (0.009) \\
+Local 8 $\times$ Big 4 background & 0.000 & 0.005 & 0.016 \\
+ & (0.004) & (0.006) & (0.014) \\
+Other $\times$ Big 4 background & 0.003 & 0.009 & 0.002 \\
+ & (0.007) & (0.010) & (0.018) \\
+Observations & 70,374 & 70,374 & 63,510 \\
+$R^{2}$ & 0.279 & 0.297 & 0.845 \\
+Client FE & Yes & Yes & Yes \\
+Audit firm FE & No & No & No \\
+Year FE & Yes & Yes & Yes \\
+Controls & Yes & Yes & Yes \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}\fontsize{9}{11}\selectfont
+\item \raggedright \fontsize{9}{11}\selectfont \textit{Notes:} Robust standard errors clustered by client firm are in parentheses. *** $p<0.01$, ** $p<0.05$, * $p<0.1$. All specifications include outcome-specific financial controls. Degree and university indicators are cumulative where included.
+Columns 1--9 absorb client and year fixed effects; column 10 uses client FE as the outcome and absorbs audit firm and year fixed effects.
+\end{tablenotes}
+\end{threeparttable}
+
+\end{minipage}
+\end{document}

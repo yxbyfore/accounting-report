@@ -1,0 +1,13 @@
+threshold,outcome,n,n_clients,n_audit_firms,n_links,n_components,n_movers,n_cross_tier_clients,n_big4_bridge_clients,largest_observation_share,n_articulation_clients,n_mover_bridge_edges
+none,any_failure_clean,70471,5729,297,14924,1,3400,2468,440,1.0,41,44
+none,restated_clean,70471,5729,297,14924,1,3400,2468,440,1.0,41,44
+none,violated_clean,70471,5729,297,14924,1,3400,2468,440,1.0,41,44
+none,abs_da_jones,57019,5293,161,12232,1,3007,2197,365,1.0,25,26
+r3y3,any_failure_clean,65506,5682,271,13972,1,3224,2315,426,1.0,31,32
+r3y3,restated_clean,65506,5682,271,13972,1,3224,2315,426,1.0,31,32
+r3y3,violated_clean,65506,5682,271,13972,1,3224,2315,426,1.0,31,32
+r3y3,abs_da_jones,53570,5210,151,11573,1,2845,2041,352,1.0,21,23
+r5y5,any_failure_clean,59069,5551,256,12952,1,3013,2130,379,1.0,38,40
+r5y5,restated_clean,59069,5551,256,12952,1,3013,2130,379,1.0,38,40
+r5y5,violated_clean,59069,5551,256,12952,1,3013,2130,379,1.0,38,40
+r5y5,abs_da_jones,48564,5027,140,10743,1,2657,1868,311,1.0,15,16

@@ -1,0 +1,62 @@
+\documentclass[10pt]{article}
+\usepackage[paperwidth=34cm,paperheight=48cm,margin=0.8cm]{geometry}
+\usepackage{booktabs,array,amsmath}
+\newcommand{\sym}[1]{\textsuperscript{#1}}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\begin{document}
+\begin{minipage}{18.00cm}
+\fontsize{10}{12}\selectfont
+\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.08}
+{\large\bfseries Continuous News: Joint Three-Group Models}\par\medskip
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}lcc@{}}
+\toprule
+ & (1) & (2) \\
+Model & Linear & Spline \\
+\midrule
+Big4 - Other, slope / 10pp news, +0 & 0.008277\sym{**} & -- \\
+ & (0.003714) &  \\
+$p$ & 0.0259 &  \\
+Big4 - Other, slope / 10pp news, +1 & 0.011245\sym{**} & -- \\
+ & (0.005489) &  \\
+$p$ & 0.0405 &  \\
+Big4 - Other, slope / 10pp news, +5 & 0.000454 & -- \\
+ & (0.009929) &  \\
+$p$ & 0.9635 &  \\
+Big4 - Other, level contrast, +0 & 0.186240\sym{***} & 0.336592\sym{***} \\
+ & (0.069182) & (0.109965) \\
+$p$ & 0.0071 & 0.0022 \\
+Big4 - Other, level contrast, +1 & 0.212337\sym{**} & 0.366366\sym{**} \\
+ & (0.090946) & (0.149633) \\
+$p$ & 0.0196 & 0.0144 \\
+Big4 - Other, level contrast, +5 & 0.243411\sym{*} & 0.544893\sym{**} \\
+ & (0.137583) & (0.221627) \\
+$p$ & 0.0769 & 0.0140 \\
+Local 8 - Other, slope / 10pp news, +0 & 0.003108 & -- \\
+ & (0.001967) &  \\
+$p$ & 0.1140 &  \\
+Local 8 - Other, slope / 10pp news, +1 & 0.003717 & -- \\
+ & (0.002936) &  \\
+$p$ & 0.2055 &  \\
+Local 8 - Other, slope / 10pp news, +5 & 0.004049 & -- \\
+ & (0.005747) &  \\
+$p$ & 0.4812 &  \\
+Local 8 - Other, level contrast, +0 & 0.059902 & 0.249677\sym{***} \\
+ & (0.047608) & (0.086543) \\
+$p$ & 0.2083 & 0.0039 \\
+Local 8 - Other, level contrast, +1 & 0.068256 & 0.255387\sym{**} \\
+ & (0.063415) & (0.117533) \\
+$p$ & 0.2818 & 0.0298 \\
+Local 8 - Other, level contrast, +5 & 0.080690 & 0.181543 \\
+ & (0.093362) & (0.169606) \\
+$p$ & 0.3874 & 0.2845 \\
+\midrule
+Outcome & CAR, percentage points & CAR, percentage points \\
+Observations & 330,646 & 330,646 \\
+Event clusters & 30,064 & 30,064 \\
+R-squared & 0.6860 & 0.6888 \\
+\bottomrule\end{tabular*}\par\medskip
+\fontsize{9}{11}\selectfont\textit{Notes:} Each column is one joint three-group dynamic model. Both group contrasts and all selected event days come from that same fitted model. Blank spline slope cells were not reported in the source excerpt. Firm-fiscal-year, event-time and trading-date FE are retained; clustering is by firm-fiscal-year.
+\par Standard errors are in parentheses. * $p<0.10$, ** $p<0.05$, *** $p<0.01$.
+\end{minipage}
+\end{document}

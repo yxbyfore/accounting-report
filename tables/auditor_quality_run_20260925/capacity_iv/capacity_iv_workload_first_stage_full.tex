@@ -1,0 +1,36 @@
+\documentclass[10pt]{article}
+\usepackage[paperwidth=32cm,paperheight=45cm,margin=1cm]{geometry}
+\usepackage{fontspec,xeCJK}
+\setmainfont{lmroman10-regular.otf}[BoldFont=lmroman10-bold.otf,ItalicFont=lmroman10-italic.otf,BoldItalicFont=lmroman10-bolditalic.otf]
+\setCJKmainfont{SimSun}
+\usepackage{booktabs,array,threeparttable,graphicx,caption,longtable,amsmath,amssymb,hyperref,xcolor}
+\usepackage[active,tightpage]{preview}
+\PreviewEnvironment{minipage}
+\setlength\PreviewBorder{6pt}
+\newcommand{\sym}[1]{\textsuperscript{#1}}
+\captionsetup{font=normalsize,labelformat=empty,skip=6pt}
+\setlength{\parindent}{0pt}
+\begin{document}
+\begin{minipage}{20cm}\fontsize{10}{12}\selectfont\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.12}
+
+
+\centering
+\captionof{table}{Workload availability: first stage}
+\begin{threeparttable}
+\begin{tabular}{p{0.38\textwidth}ccc}
+\toprule
+Successor attribute & Negative prior workload instrument & Coefficient (SE) & First-stage F / N \\
+\midrule
+Advanced human capital & z\_workload\_advanced\_hc & \shortstack{0.007\\(0.009)} & F=0.653; N=1,329 \\
+Zero prior failure & z\_workload\_zero\_fail & \shortstack{0.073**\\(0.029)} & F=6.196; N=956 \\
+Zero prior restatement & z\_workload\_zero\_rest & \shortstack{0.001\\(0.069)} & F=0.000250; N=962 \\
+Zero prior violation & z\_workload\_zero\_viol & \shortstack{0.083**\\(0.035)} & F=5.532; N=956 \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}\fontsize{9}{11}\selectfont
+\item \raggedright \fontsize{9}{11}\selectfont \textit{Notes:} Prior workload is measured before successor assignment. Each row is a separate first-stage design; the advanced-human-capital specification has no exported second stage. Audit-firm and rotation-year fixed effects; audit-firm-clustered standard errors.
+\end{tablenotes}
+\end{threeparttable}
+
+\end{minipage}
+\end{document}

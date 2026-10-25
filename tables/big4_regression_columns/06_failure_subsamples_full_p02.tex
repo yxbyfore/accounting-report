@@ -1,0 +1,35 @@
+\documentclass[10pt]{article}
+\usepackage[paperwidth=21cm,paperheight=45cm,margin=1cm]{geometry}
+\usepackage{fontspec,booktabs,array,amsmath,graphicx}
+\setmainfont{lmroman10-regular.otf}[BoldFont=lmroman10-bold.otf,ItalicFont=lmroman10-italic.otf,BoldItalicFont=lmroman10-bolditalic.otf]
+\pagestyle{empty}\setlength{\parindent}{0pt}
+\newcommand{\sym}[1]{\textsuperscript{#1}}
+\begin{document}\fontsize{10}{12}\selectfont
+\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.15}
+\begin{center}\large Switching Big 4 Auditors and Unwarned Failures: Subsamples\end{center}
+\medskip\textbf{Panel: Ever Unwarned Failure / Switch into Big 4}\par\smallskip
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lccc@{}}
+\toprule
+ & Any Failure & Restatement & Violation \\
+ & (1) & (2) & (3) \\
+\midrule
+Switch into Big 4 & -0.073 & -0.017 & -0.062\sym{*} \\
+ & (0.050) & (0.033) & (0.037) \\
+Observations & 20,418 & 20,418 & 20,418 \\
+Treated firms & 49 & 49 & 49 \\
+Control firms & 1,202 & 1,202 & 1,202 \\
+\bottomrule\end{tabular*}\par
+\medskip\textbf{Panel: Ever Unwarned Failure / Switch out of Big 4}\par\smallskip
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lccc@{}}
+\toprule
+ & Any Failure & Restatement & Violation \\
+ & (1) & (2) & (3) \\
+\midrule
+Switch out of Big 4 & 0.054 & -0.061 & 0.123 \\
+ & (0.111) & (0.048) & (0.077) \\
+Observations & 459 & 459 & 459 \\
+Treated firms & 32 & 32 & 32 \\
+Control firms & 3 & 3 & 3 \\
+\bottomrule\end{tabular*}\par
+\medskip\fontsize{9}{11}\selectfont\textit{Notes:} SE clustered by firm. Nine audit-failure controls and mis\_dummy. * $p<0.10$, ** $p<0.05$, *** $p<0.01$.
+\end{document}

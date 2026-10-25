@@ -1,0 +1,23 @@
+\documentclass[10pt]{article}
+\usepackage[paperwidth=21cm,paperheight=45cm,margin=1cm]{geometry}
+\usepackage{fontspec,booktabs,array,amsmath,graphicx}
+\setmainfont{lmroman10-regular.otf}[BoldFont=lmroman10-bold.otf,ItalicFont=lmroman10-italic.otf,BoldItalicFont=lmroman10-bolditalic.otf]
+\pagestyle{empty}\setlength{\parindent}{0pt}
+\newcommand{\sym}[1]{\textsuperscript{#1}}
+\begin{document}\fontsize{10}{12}\selectfont
+\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.15}
+\begin{center}\large Supply-chain Exposure: First Stage\end{center}
+\medskip\textbf{First stage: current Big 4 adoption}\par\smallskip
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lcc@{}}
+\toprule
+ & Supplier & Customer or supplier \\
+ & (1) & (2) \\
+\midrule
+Network exposure & 0.012935\sym{**} & 0.004800 \\
+ & (0.006088) & (0.004874) \\
+$p$ & 0.0336 & 0.3247 \\
+Observations & 63,857 & 57,996 \\
+KP F & 4.5152 & 0.9699 \\
+\bottomrule\end{tabular*}\par
+\medskip\fontsize{9}{11}\selectfont\textit{Notes:} SE clustered by firm. Nine audit-failure controls and mis\_dummy. * $p<0.10$, ** $p<0.05$, *** $p<0.01$.
+\end{document}

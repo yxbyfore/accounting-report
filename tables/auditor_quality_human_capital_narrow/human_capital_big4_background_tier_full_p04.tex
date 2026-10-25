@@ -1,0 +1,48 @@
+\documentclass[10pt]{article}
+\usepackage[paperwidth=32cm,paperheight=45cm,margin=1cm]{geometry}
+\usepackage{fontspec,xeCJK}
+\setmainfont{lmroman10-regular.otf}[BoldFont=lmroman10-bold.otf,ItalicFont=lmroman10-italic.otf,BoldItalicFont=lmroman10-bolditalic.otf]
+\setCJKmainfont{SimSun}
+\usepackage{booktabs,array,threeparttable,graphicx,caption,longtable,amsmath,amssymb,hyperref,xcolor}
+\usepackage[active,tightpage]{preview}
+\PreviewEnvironment{minipage}
+\setlength\PreviewBorder{6pt}
+\newcommand{\sym}[1]{\textsuperscript{#1}}
+\captionsetup{font=normalsize,labelformat=empty,skip=6pt}
+\setlength{\parindent}{0pt}
+\begin{document}
+\begin{minipage}{19cm}\fontsize{10}{12}\selectfont\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.12}
+
+
+\centering
+\captionof{table}{A1 Big 4 Work Background by Audit Firm Tier: Columns 10--10}
+\begin{threeparttable}
+\begin{tabular}{p{0.38\textwidth}ccc}
+\toprule
+ & (10) &  &  \\
+Variables & Client FE &  &  \\
+\midrule
+Big 4 audit firm & -0.033*** &  &  \\
+ & (0.007) &  &  \\
+Local 8 audit firm & -0.009** &  &  \\
+ & (0.004) &  &  \\
+Local 8 $\times$ Big 4 background & -0.000 &  &  \\
+ & (0.005) &  &  \\
+Other $\times$ Big 4 background & 0.003 &  &  \\
+ & (0.006) &  &  \\
+Observations & 69,941 &  &  \\
+$R^{2}$ & 0.071 &  &  \\
+Client FE & No &  &  \\
+Audit firm FE & Yes &  &  \\
+Year FE & Yes &  &  \\
+Controls & Yes &  &  \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}\fontsize{9}{11}\selectfont
+\item \raggedright \fontsize{9}{11}\selectfont \textit{Notes:} Robust standard errors clustered by client firm are in parentheses. *** $p<0.01$, ** $p<0.05$, * $p<0.1$. All specifications include outcome-specific financial controls. Degree and university indicators are cumulative where included.
+Columns 1--9 absorb client and year fixed effects; column 10 uses client FE as the outcome and absorbs audit firm and year fixed effects.
+\end{tablenotes}
+\end{threeparttable}
+
+\end{minipage}
+\end{document}

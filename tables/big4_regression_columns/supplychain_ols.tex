@@ -1,0 +1,33 @@
+\documentclass[10pt]{article}
+\usepackage[paperwidth=21cm,paperheight=45cm,margin=1cm]{geometry}
+\usepackage{fontspec,booktabs,array,amsmath,graphicx}
+\setmainfont{lmroman10-regular.otf}[BoldFont=lmroman10-bold.otf,ItalicFont=lmroman10-italic.otf,BoldItalicFont=lmroman10-bolditalic.otf]
+\pagestyle{empty}\setlength{\parindent}{0pt}
+\newcommand{\sym}[1]{\textsuperscript{#1}}
+\begin{document}\fontsize{10}{12}\selectfont
+\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.15}
+\begin{center}\large Supply-chain Exposure: Ols\end{center}
+\medskip\textbf{supplier}\par\smallskip
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lccc@{}}
+\toprule
+ & Any failure & Fin restatement & Violation \\
+ & (1) & (2) & (3) \\
+\midrule
+Big 4 & -0.041006\sym{***} & -0.035218\sym{***} & -0.015357\sym{**} \\
+ & (0.010918) & (0.009752) & (0.006546) \\
+$p$ & 0.0002 & 0.0003 & 0.0190 \\
+Observations & 63,857 & 63,857 & 63,857 \\
+\bottomrule\end{tabular*}\par
+\medskip\textbf{either}\par\smallskip
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lccc@{}}
+\toprule
+ & Any failure & Fin restatement & Violation \\
+ & (1) & (2) & (3) \\
+\midrule
+Big 4 & -0.047503\sym{***} & -0.039255\sym{***} & -0.018730\sym{**} \\
+ & (0.012025) & (0.010639) & (0.007630) \\
+$p$ & 0.0001 & 0.0002 & 0.0141 \\
+Observations & 57,996 & 57,996 & 57,996 \\
+\bottomrule\end{tabular*}\par
+\medskip\fontsize{9}{11}\selectfont\textit{Notes:} SE clustered by firm. Nine audit-failure controls and mis\_dummy. * $p<0.10$, ** $p<0.05$, *** $p<0.01$.
+\end{document}

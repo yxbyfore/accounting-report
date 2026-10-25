@@ -1,0 +1,42 @@
+\begin{table}[htbp]
+\footnotesize
+\centering
+\caption{Big4 Interaction: Models 1--3}
+\begin{threeparttable}
+\begin{tabular}{p{0.42\textwidth}ccc}
+\toprule
+ & (1) & (2) & (3) \\
+ & Interaction & Interaction & Interaction \\
+VARIABLES & any\_failure\_clean & restated\_clean & violated\_clean \\
+\midrule
+ &  &  &  \\
+b4\_m & -0.033*** & -0.021** & -0.024** \\
+ & (0.013) & (0.009) & (0.010) \\
+b4\_v & -0.020** & -0.002 & -0.019*** \\
+ & (0.009) & (0.006) & (0.007) \\
+alumni\_m & -0.024 & -0.025*** & -0.012 \\
+ & (0.017) & (0.008) & (0.016) \\
+alumni\_v & 0.010 & 0.003 & 0.006 \\
+ & (0.008) & (0.006) & (0.006) \\
+stint\_mand & 0.002 & 0.012** & -0.005 \\
+ & (0.008) & (0.006) & (0.007) \\
+stint\_vol & 0.003 & 0.006 & -0.002 \\
+ & (0.006) & (0.004) & (0.005) \\
+Constant & -0.249*** & -0.137*** & -0.230*** \\
+ & (0.055) & (0.035) & (0.049) \\
+ &  &  &  \\
+Observations & 61,208 & 61,208 & 61,208 \\
+R-squared & 0.267 & 0.281 & 0.246 \\
+Model & Saturated DID & Saturated DID & Saturated DID \\
+Firm FE & Yes & Yes & Yes \\
+Year FE & Yes & Yes & Yes \\
+P B4M vs AlumniM & 0.6130 & 0.7178 & 0.4806 \\
+t Alumni M vs V & -1.79 & -2.63 & -1.06 \\
+P Alumni M vs V & 0.0728 & 0.0086 & 0.2915 \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}\footnotesize
+\item \raggedright \textit{Notes:} Note: Saturated interaction TWFE DID model. The omitted base category across all stints is Pure Local. Interaction terms b4\_m and b4\_v represent Big4 Firm partners in Mandatory and Voluntary stints; alumni\_m and alumni\_v represent Big4 Alumni in Non-Big4 firms in Mandatory and Voluntary stints. Standard errors clustered by firm. *** p<0.01, ** p<0.05, * p<0.1.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

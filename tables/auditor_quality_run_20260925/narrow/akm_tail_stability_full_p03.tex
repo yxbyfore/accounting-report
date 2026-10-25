@@ -1,0 +1,48 @@
+\documentclass[10pt]{article}
+\usepackage[paperwidth=32cm,paperheight=45cm,margin=1cm]{geometry}
+\usepackage{fontspec,xeCJK}
+\setmainfont{lmroman10-regular.otf}[BoldFont=lmroman10-bold.otf,ItalicFont=lmroman10-italic.otf,BoldItalicFont=lmroman10-bolditalic.otf]
+\setCJKmainfont{SimSun}
+\usepackage{booktabs,array,threeparttable,graphicx,caption,longtable,amsmath,amssymb,hyperref,xcolor}
+\usepackage[active,tightpage]{preview}
+\PreviewEnvironment{minipage}
+\setlength\PreviewBorder{6pt}
+\newcommand{\sym}[1]{\textsuperscript{#1}}
+\captionsetup{font=normalsize,labelformat=empty,skip=6pt}
+\setlength{\parindent}{0pt}
+\begin{document}
+\begin{minipage}{19cm}\fontsize{10}{12}\selectfont\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.12}
+
+
+\centering
+\captionof{table}{Auditor FE: quality-group stability across splits (part 3 of 3)}
+\begin{threeparttable}
+\begin{tabular}{p{0.36\textwidth}ccc}
+\toprule
+Split & Outcome & Bottom 10 (\%) &  \\
+\midrule
+odd even & Any failure & 31.5 &  \\
+odd even & Restatement & 28.4 &  \\
+odd even & Violation & 32.9 &  \\
+odd even & Abs. DA (Jones) & 14.6 &  \\
+random engagement & Any failure & 21.8 &  \\
+random engagement & Restatement & 21.0 &  \\
+random engagement & Violation & 21.0 &  \\
+random engagement & Abs. DA (Jones) & 10.7 &  \\
+early late & Any failure & 12.4 &  \\
+early late & Restatement & 10.5 &  \\
+early late & Violation & 13.3 &  \\
+early late & Abs. DA (Jones) & 5.4 &  \\
+client held out & Any failure & 10.6 &  \\
+client held out & Restatement & 8.9 &  \\
+client held out & Violation & 13.6 &  \\
+client held out & Abs. DA (Jones) & 11.0 &  \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}\fontsize{9}{11}\selectfont
+\item \raggedright \fontsize{9}{11}\selectfont \textit{Notes:} Share remaining in the corresponding tail in the second split; one direction is shown.
+\end{tablenotes}
+\end{threeparttable}
+
+\end{minipage}
+\end{document}

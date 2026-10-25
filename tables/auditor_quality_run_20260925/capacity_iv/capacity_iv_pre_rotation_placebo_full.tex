@@ -1,0 +1,39 @@
+\documentclass[10pt]{article}
+\usepackage[paperwidth=32cm,paperheight=45cm,margin=1cm]{geometry}
+\usepackage{fontspec,xeCJK}
+\setmainfont{lmroman10-regular.otf}[BoldFont=lmroman10-bold.otf,ItalicFont=lmroman10-italic.otf,BoldItalicFont=lmroman10-bolditalic.otf]
+\setCJKmainfont{SimSun}
+\usepackage{booktabs,array,threeparttable,graphicx,caption,longtable,amsmath,amssymb,hyperref,xcolor}
+\usepackage[active,tightpage]{preview}
+\PreviewEnvironment{minipage}
+\setlength\PreviewBorder{6pt}
+\newcommand{\sym}[1]{\textsuperscript{#1}}
+\captionsetup{font=normalsize,labelformat=empty,skip=6pt}
+\setlength{\parindent}{0pt}
+\begin{document}
+\begin{minipage}{19cm}\fontsize{10}{12}\selectfont\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.12}
+
+
+\centering
+\captionof{table}{Pre-rotation client failure placebo}
+\begin{threeparttable}
+\begin{tabular}{p{0.38\textwidth}cc}
+\toprule
+Release-based design & Instrument coefficient (SE) & Observations \\
+\midrule
+Successor Education Level & \shortstack{-0.030\\(0.376)} & 1,408 \\
+Successor Bachelor-or-Above & \shortstack{0.363\\(0.620)} & 1,408 \\
+Successor Master-or-Above & \shortstack{-1.045\\(0.710)} & 1,408 \\
+Successor 985 Background & \shortstack{-1.011\\(0.800)} & 1,413 \\
+Successor 985 or 211 Background & \shortstack{0.339\\(0.496)} & 1,413 \\
+Successor Big 4 Background & \shortstack{-0.211\\(0.355)} & 1,424 \\
+Successor CPA Quality & \shortstack{2.513\\(3.313)} & 1,424 \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}\fontsize{9}{11}\selectfont
+\item \raggedright \fontsize{9}{11}\selectfont \textit{Notes:} Dependent variable: target client's any-failure outcome in the predecessor's final audit year. This is a diagnostic for release-based instruments, not a test of the exclusion restriction. Audit-firm and rotation-year fixed effects; audit-firm-clustered standard errors.
+\end{tablenotes}
+\end{threeparttable}
+
+\end{minipage}
+\end{document}

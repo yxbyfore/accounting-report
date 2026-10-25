@@ -1,0 +1,39 @@
+\documentclass[10pt]{article}
+\usepackage[paperwidth=32cm,paperheight=45cm,margin=1cm]{geometry}
+\usepackage{fontspec,xeCJK}
+\setmainfont{lmroman10-regular.otf}[BoldFont=lmroman10-bold.otf,ItalicFont=lmroman10-italic.otf,BoldItalicFont=lmroman10-bolditalic.otf]
+\setCJKmainfont{SimSun}
+\usepackage{booktabs,array,threeparttable,graphicx,caption,longtable,amsmath,amssymb,hyperref,xcolor}
+\usepackage[active,tightpage]{preview}
+\PreviewEnvironment{minipage}
+\setlength\PreviewBorder{6pt}
+\newcommand{\sym}[1]{\textsuperscript{#1}}
+\captionsetup{font=normalsize,labelformat=empty,skip=6pt}
+\setlength{\parindent}{0pt}
+\begin{document}
+\begin{minipage}{19cm}\fontsize{10}{12}\selectfont\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.12}
+
+
+\centering
+\captionof{table}{AKM extreme versus middle group: descriptive differences (part 2 of 2)}
+\begin{threeparttable}
+\begin{tabular}{p{0.36\textwidth}ccc}
+\toprule
+Characteristic & p &  &  \\
+\midrule
+is\_big4 & 0.005411 &  &  \\
+is\_local8 & 1.918e-12 &  &  \\
+is\_other & 1.997e-18 &  &  \\
+a1\_clients & 1.051e-31 &  &  \\
+a1\_obs & 1.455e-26 &  &  \\
+firm\_auditor\_cnt & 7.854e-14 &  &  \\
+firm\_client\_cnt & 1.314e-17 &  &  \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}\fontsize{9}{11}\selectfont
+\item \raggedright \fontsize{9}{11}\selectfont \textit{Notes:} Extreme group combines the top and bottom quartiles of the client-FE failure score.
+\end{tablenotes}
+\end{threeparttable}
+
+\end{minipage}
+\end{document}

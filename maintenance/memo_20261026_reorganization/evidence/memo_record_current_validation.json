@@ -1,0 +1,19 @@
+{
+  "all_six_cohorts_match": true,
+  "strict_transition_matches": true,
+  "ledger_unchanged": true,
+  "official_eps_exactly_matches_ledger": true,
+  "official_surprise_exactly_matches_ledger": true,
+  "forecasts_shares_dates_raw_financials_unchanged": true,
+  "unresolved_unchanged": true,
+  "far_six_decimal_precision_preserved": true,
+  "full_signal_eps_changed": 1751,
+  "full_signal_group_changed": 136,
+  "full_signal_surprise_available": 32086,
+  "strict_unrecovered": 811,
+  "strict_no_consolidated_profit_edge": 671,
+  "stata_run": false,
+  "ifcorrect_coverage_matches": true,
+  "full_signal_eps_available": 70563,
+  "full_signal_group_change_pct": 0.42386087390139
+}

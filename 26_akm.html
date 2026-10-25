@@ -23,7 +23,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
@@ -214,7 +233,31 @@ window.Quarto = {
 <h2 id="toc-title">该页面内容</h2>
 <ul>
 <li><a class="nav-link active" data-scroll-target="#概述" href="#概述" id="toc-概述">概述</a></li>
-<li><a class="nav-link" data-scroll-target="#核心结果" href="#核心结果" id="toc-核心结果">核心结果</a></li>
+<li><a class="nav-link" data-scroll-target="#sec-client-auditfirm-sorting" href="#sec-client-auditfirm-sorting" id="toc-sec-client-auditfirm-sorting">客户—事务所sorting：永久类型、估计噪声与内生流动</a>
+<ul class="collapse">
+<li><a class="nav-link" data-scroll-target="#sec-akm-exogeneity" href="#sec-akm-exogeneity" id="toc-sec-akm-exogeneity">AKM允许哪些相关，限制哪些相关？</a></li>
+<li><a class="nav-link" data-scroll-target="#sec-akm-current-specification" href="#sec-akm-current-specification" id="toc-sec-akm-current-specification">当前样本、结果及控制变量</a></li>
+<li><a class="nav-link" data-scroll-target="#sec-akm-exploratory-sorting" href="#sec-akm-exploratory-sorting" id="toc-sec-akm-exploratory-sorting">我又做了一些分析：组间与组内配置方向不同</a></li>
+<li><a class="nav-link" data-scroll-target="#sec-akm-big4-gap" href="#sec-akm-big4-gap" id="toc-sec-akm-big4-gap">四大观察差距的稳定成分</a></li>
+<li><a class="nav-link" data-scroll-target="#sec-akm-network-sensitivity" href="#sec-akm-network-sensitivity" id="toc-sec-akm-network-sensitivity">网络、关键客户与信息量检查</a></li>
+<li><a class="nav-link" data-scroll-target="#sec-akm-kss" href="#sec-akm-kss" id="toc-sec-akm-kss">KSS：量级减弱，点估计方向保持为负</a></li>
+<li><a class="nav-link" data-scroll-target="#sec-akm-endogenous-mobility" href="#sec-akm-endogenous-mobility" id="toc-sec-akm-endogenous-mobility">上一期风险与下一期选所：两条拓展方向</a></li>
+<li><a class="nav-link" data-scroll-target="#sec-akm-future-assignment" href="#sec-akm-future-assignment" id="toc-sec-akm-future-assignment">剩余结果—未来配置诊断</a></li>
+<li><a class="nav-link" data-scroll-target="#sec-akm-dynamic-support" href="#sec-akm-dynamic-support" id="toc-sec-akm-dynamic-support">动态模型的序列与日期支持</a></li>
+<li><a class="nav-link" data-scroll-target="#sec-akm-sorting-record" href="#sec-akm-sorting-record" id="toc-sec-akm-sorting-record">执行核对与全部结果下载</a></li>
+</ul></li>
+<li><a class="nav-link" data-scroll-target="#sec-dynamic-risk-gfe" href="#sec-dynamic-risk-gfe" id="toc-sec-dynamic-risk-gfe">风险驱动配置：动态风险GFE与静态二元混合的实际估计</a>
+<ul class="collapse">
+<li><a class="nav-link" data-scroll-target="#sec-dynamic-risk-timing" href="#sec-dynamic-risk-timing" id="toc-sec-dynamic-risk-timing">时间、样本与结果的实际覆盖</a></li>
+<li><a class="nav-link" data-scroll-target="#sec-dynamic-risk-movement" href="#sec-dynamic-risk-movement" id="toc-sec-dynamic-risk-movement">当前风险怎样关联换所和目的地</a></li>
+<li><a class="nav-link" data-scroll-target="#sec-dynamic-risk-groups" href="#sec-dynamic-risk-groups" id="toc-sec-dynamic-risk-groups">历史分组的支持：主规格选中一组</a></li>
+<li><a class="nav-link" data-scroll-target="#sec-dynamic-risk-standardization" href="#sec-dynamic-risk-standardization" id="toc-sec-dynamic-risk-standardization">同风险状态下的条件结果比较</a></li>
+<li><a class="nav-link" data-scroll-target="#sec-dynamic-risk-diagnostics" href="#sec-dynamic-risk-diagnostics" id="toc-sec-dynamic-risk-diagnostics">状态记忆、实际所与推断</a></li>
+<li><a class="nav-link" data-scroll-target="#sec-static-binary-mixture" href="#sec-static-binary-mixture" id="toc-sec-static-binary-mixture">静态二元潜在类型混合：能拟合，但边界限制解释</a></li>
+<li><a class="nav-link" data-scroll-target="#sec-dynamic-risk-simulations" href="#sec-dynamic-risk-simulations" id="toc-sec-dynamic-risk-simulations">模拟揭示模型能回答到哪一步</a></li>
+<li><a class="nav-link" data-scroll-target="#sec-dynamic-risk-record" href="#sec-dynamic-risk-record" id="toc-sec-dynamic-risk-record">本轮完成范围与可复现文件</a></li>
+</ul></li>
+<li><a class="nav-link" data-scroll-target="#核心结果" href="#核心结果" id="toc-核心结果">既有双边与三方分解：个人审计师参照</a></li>
 <li><a class="nav-link" data-scroll-target="#样本构建与网络识别" href="#样本构建与网络识别" id="toc-样本构建与网络识别">1. 样本构建与网络识别</a>
 <ul class="collapse">
 <li><a class="nav-link" data-scroll-target="#观测单位与筛选门槛" href="#观测单位与筛选门槛" id="toc-观测单位与筛选门槛">1.1 观测单位与筛选门槛</a></li>
@@ -223,7 +266,7 @@ window.Quarto = {
 <li><a class="nav-link" data-scroll-target="#双边-akm-方差分解" href="#双边-akm-方差分解" id="toc-双边-akm-方差分解">2. 双边 AKM 方差分解</a>
 <ul class="collapse">
 <li><a class="nav-link" data-scroll-target="#份3-年基准方差分解" href="#份3-年基准方差分解" id="toc-份3-年基准方差分解">2.1 3 份／3 年基准方差分解</a></li>
-<li><a class="nav-link" data-scroll-target="#跨门槛稳定性与替代结果变量" href="#跨门槛稳定性与替代结果变量" id="toc-跨门槛稳定性与替代结果变量">2.2 跨门槛稳定性与替代结果变量</a></li>
+<li><a class="nav-link" data-scroll-target="#sec-pairwise-cutoff-comparison" href="#sec-pairwise-cutoff-comparison" id="toc-sec-pairwise-cutoff-comparison">2.2 跨门槛稳定性与替代结果变量</a></li>
 </ul></li>
 <li><a class="nav-link" data-scroll-target="#双边模型与三维-akm-基准对照" href="#双边模型与三维-akm-基准对照" id="toc-双边模型与三维-akm-基准对照">3. 双边模型与三维 AKM 基准对照</a></li>
 <li><a class="nav-link" data-scroll-target="#auditor-fe-的增量解释力与测量可靠性诊断" href="#auditor-fe-的增量解释力与测量可靠性诊断" id="toc-auditor-fe-的增量解释力与测量可靠性诊断">4. Auditor FE 的增量解释力与测量可靠性诊断</a>
@@ -233,6 +276,7 @@ window.Quarto = {
 <li><a class="nav-link" data-scroll-target="#sec-rare-event-akm" href="#sec-rare-event-akm" id="toc-sec-rare-event-akm">4.3 Rare-event Outcome、Auditor FE 噪声与平均服务效应</a></li>
 </ul></li>
 <li><a class="nav-link" data-scroll-target="#数据与估计程序记录" href="#数据与估计程序记录" id="toc-数据与估计程序记录">数据与估计程序记录</a></li>
+<li><a class="nav-link" data-scroll-target="#参考文献" href="#参考文献" id="toc-参考文献">参考文献</a></li>
 </ul>
 </nav>
 </div>
@@ -247,10 +291,1272 @@ window.Quarto = {
 </header>
 <section class="level2" id="概述">
 <h2 class="anchored" data-anchor-id="概述">概述</h2>
-<p>本章以双边固定效应分解描述客户、事务所和审计师之间的异质性，并检查 AKM 的 auditor FE 的识别支持与可迁移性。方差分解显示客户份额较大，审计师份额通常高于事务所；样本拆分与前瞻诊断进一步评估个人固定效应的可靠性。</p>
+<p>本章先集中展示当前客户—事务所sorting：AKM允许的永久类型相关、外生流动条件、组内／组间配置、KSS噪声校正与四大差距；全部三套样本、主要图和支持诊断均已接入。本轮进一步完成<a href="#sec-dynamic-risk-gfe">动态风险GFE与独立静态二元混合</a>，包括重抽样、模拟及Stata核对。后半部分保留既有双边／三方分解及个人审计师可靠性，分别说明各自口径。</p>
+<!-- client-auditfirm-sorting:start -->
+</section>
+<section class="level2" id="sec-client-auditfirm-sorting">
+<h2 class="anchored" data-anchor-id="sec-client-auditfirm-sorting">客户—事务所sorting：永久类型、估计噪声与内生流动</h2>
+<p><strong>AKM允许永久客户类型与事务所类型相关；当前新增探索发现，失败指标呈现正组间、负组内，KSS校正后总体点估计仍为负。</strong> 本节集中展示原始事务所ID、统一结果与控制口径下的客户—事务所分析。A1身份仅用于共同底样本及33／55资格门槛，不作为本模型的第三个固定效应。后文原有个人审计师及三方分析保留其各自规格。<a href="./31_biweekly_memo.html#sec-memo-akm-sorting">返回memo的研究问题</a>。</p>
+<section class="level3" id="sec-akm-exogeneity">
+<h3 class="anchored" data-anchor-id="sec-akm-exogeneity">AKM允许哪些相关，限制哪些相关？</h3>
+<p><span class="citation" data-cites="akm1999">Abowd 等 (<a href="#ref-akm1999" role="doc-biblioref">1999年</a>)</span> 的加性框架允许两端永久效应相关。本研究估计</p>
+<p><span id="eq-client-auditfirm-akm"><span class="math display">\[
+Y_{it}=X_{it}'\beta+\alpha_i+\psi_{f(i,t)}+\lambda_t+\varepsilon_{it},
+\qquad \text{允许 }\operatorname{Cov}(\alpha_i,\psi_{f(i,t)})\ne0.
+\tag{1}\]</span></span></p>
+<p><span class="math inline">\(\alpha_i\)</span>为控制可观察特征后的客户持久失败成分，<span class="math inline">\(\psi_f\)</span>为事务所的共同稳定结果成分，<span class="math inline">\(\lambda_t\)</span>为年份效应。设<span class="math inline">\(\mathcal F_i=(f(i,1),\ldots,f(i,T_i))\)</span>为完整事务所配置路径，<span class="math inline">\(\mathcal X_i=(X_{i1},\ldots,X_{iT_i})\)</span>为控制变量路径，<span class="math inline">\(\boldsymbol\psi\)</span>和<span class="math inline">\(\boldsymbol\lambda\)</span>为全部事务所与年份效应。所采用的严格外生性条件为</p>
+<p><span id="eq-akm-strict-exogeneity"><span class="math display">\[
+\operatorname E\!\left[\varepsilon_{it}\mid
+\alpha_i,\boldsymbol\psi,\boldsymbol\lambda,\mathcal X_i,\mathcal F_i\right]=0,
+\qquad \forall t.
+\tag{2}\]</span></span></p>
+<p>它蕴含剩余冲击与任意时期的事务所配置指示变量正交：</p>
+<p><span id="eq-akm-assignment-orthogonality"><span class="math display">\[
+\operatorname{Cov}\!\left(\varepsilon_{it},\mathbf1\{f(i,s)=j\}\mid
+\alpha_i,\boldsymbol\psi,\boldsymbol\lambda,\mathcal X_i\right)=0,
+\qquad \forall t,s,j.
+\tag{3}\]</span></span></p>
+<p>因此，长期低风险客户更常选择四大可以与AKM相容；模型限制的是<strong>未被吸收的结果冲击与配置路径的关系</strong>。基准回归可以允许同一客户不同年份的误差相关，并按客户聚类；即<span class="math inline">\(\operatorname{Cov}(\varepsilon_{it},\varepsilon_{is})\)</span>可以非零，但这些冲击仍须满足上式的配置正交条件。当前逐观测KSS另有公司年误差独立的要求，见<a href="#sec-akm-kss">噪声校正</a>。外生流动与残差诊断的关系参见 <span class="citation" data-cites="ams2019">Abowd 等 (<a href="#ref-ams2019" role="doc-biblioref">2019年</a>)</span>。</p>
+<p><strong>本项目的具体问题是上一期风险与下一期选所相关。</strong> <a href="./23_big4_effect.html#客户选择与审计意见四大如何形成较低风险的客户组合">已有客户选择、意见与退出分析</a>表明，风险和审计意见与后续客户进出存在关联。需要区分风险中已由<span class="math inline">\(X\)</span>及永久效应吸收的部分与剩余冲击：如果上一期未吸收的风险冲击参与下一期改聘决策，可能出现</p>
+<p><span id="eq-akm-lagged-risk-selection"><span class="math display">\[
+\operatorname{Cov}\!\left(\varepsilon_{i,t-1},\mathbf1\{f(i,t)=j\}\mid
+\alpha_i,\boldsymbol\psi,\boldsymbol\lambda,\mathcal X_i\right)\ne0,
+\tag{4}\]</span></span></p>
+<p>从而违反严格外生性。观测风险与改聘相关本身尚不足以确认这一违背；本节的<a href="#sec-akm-future-assignment">剩余结果—未来配置检验</a>直接针对未吸收部分。共同事务所效应的解释还要求加性与稳定性，客户类型相关的服务效果、持续匹配收益或事务所质量随时间变化需要进一步建模。</p>
+</section>
+<section class="level3" id="sec-akm-current-specification">
+<h3 class="anchored" data-anchor-id="sec-akm-current-specification">当前样本、结果及控制变量</h3>
+<p>观测单位为公司年。底样本要求客户、原始事务所、稳定A1身份与年份有效；不将不合格事务所合并为共同0类。不筛选／33／55分别是不额外施加A1门槛、A1累计报告数与不同执业年份均至少3、均至少5。累计口径在结果缺失剔除前的共同有效身份底样本上计算；每个模型递归去除客户、事务所、年份单例。</p>
+<p>未预警重述、未预警违规及未预警综合失败分别为<span class="math inline">\(Restated\times(1-MAO)\)</span>、<span class="math inline">\(Violated\times(1-MAO)\)</span>、<span class="math inline">\(\mathbf1\{Restated=1\text{ 或 }Violated=1\}\times(1-MAO)\)</span>；MAO=1的记录保留为0，各结果要求其原始构成字段非缺失。第四个结果为<span class="math inline">\(|DA_{Jones}|\)</span>。失败指标控制size、lev、loss、roa、zscore、chg_lev、report_lag、cfo、age；Abs DA控制size、lev、loss、growth、cfo、mtb、accruals；均加入对应缺失指示。在完整主面板先标记缺失、按年中位数插补，再用年度插补后的总体中位数补剩余缺失。</p>
+<p>三套综合失败pooled样本如下；四个结果、四种估计范围的完整样本流与省略变量记录见<a href="tables/client_auditfirm_sorting/baseline_fit.csv">基准估计</a>及<a href="tables/client_auditfirm_sorting/sample_flow.csv">样本流</a>。方差协方差按公司年等权、总体方差约定计算。</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">样本</th>
+<th style="text-align: left;">公司年</th>
+<th style="text-align: left;">客户</th>
+<th style="text-align: right;">事务所</th>
+<th style="text-align: right;">分量</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">不筛选</td>
+<td style="text-align: left;">70,339</td>
+<td style="text-align: left;">5,628</td>
+<td style="text-align: right;">268</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">33</td>
+<td style="text-align: left;">65,320</td>
+<td style="text-align: left;">5,521</td>
+<td style="text-align: right;">247</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">55</td>
+<td style="text-align: left;">58,757</td>
+<td style="text-align: left;">5,271</td>
+<td style="text-align: right;">224</td>
+<td style="text-align: right;">1</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section class="level3" id="sec-akm-exploratory-sorting">
+<h3 class="anchored" data-anchor-id="sec-akm-exploratory-sorting">我又做了一些分析：组间与组内配置方向不同</h3>
+<p><strong>我又做了一些分析，我发现，组间配置与组内配置的方向不同。</strong> 按当年四大、本土八大与Other分解同一次全样本拟合，三套样本的失败指标均为正组间协方差、负组内协方差，且负组内项更大。较低的客户失败成分与较低的事务所失败成分在梯队之间相配，而梯队内部的配置呈负相关。因此，四大服务于持久失败倾向较低的客户，与总体客户—事务所插件相关为负可以同时成立。这是新增探索性分析，尚不据此推断服务互补或特定选择机制。</p>
+<p><span id="eq-akm-within-between"><span class="math display">\[
+\operatorname{Cov}(\widehat\alpha,\widehat\psi)
+=\sum_g p_g\operatorname{Cov}(\widehat\alpha,\widehat\psi\mid G=g)
++\operatorname{Cov}\!\left(\operatorname E[\widehat\alpha\mid G],
+\operatorname E[\widehat\psi\mid G]\right).
+\tag{5}\]</span></span></p>
+<p>该恒等式分解的是协方差，相关系数不按同一方式相加。以下协方差列乘10,000，相关系数不缩放。重述与违规分别估计时组间项也为正；Abs DA的组间项为负，需要单独解释。</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 8%"/>
+<col style="width: 12%"/>
+<col style="width: 21%"/>
+<col style="width: 21%"/>
+<col style="width: 21%"/>
+<col style="width: 17%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">样本</th>
+<th style="text-align: right;">插件相关</th>
+<th style="text-align: right;">组内协方差×10,000</th>
+<th style="text-align: right;">组间协方差×10,000</th>
+<th style="text-align: right;">总体协方差×10,000</th>
+<th style="text-align: right;">逐观测KSS相关</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">不筛选</td>
+<td style="text-align: right;">-0.0322</td>
+<td style="text-align: right;">-1.7039</td>
+<td style="text-align: right;">0.7969</td>
+<td style="text-align: right;">-0.907</td>
+<td style="text-align: right;">-0.002</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">33</td>
+<td style="text-align: right;">-0.0445</td>
+<td style="text-align: right;">-2.1347</td>
+<td style="text-align: right;">0.8222</td>
+<td style="text-align: right;">-1.3125</td>
+<td style="text-align: right;">-0.0177</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">55</td>
+<td style="text-align: right;">-0.0574</td>
+<td style="text-align: right;">-2.5065</td>
+<td style="text-align: right;">0.8051</td>
+<td style="text-align: right;">-1.7014</td>
+<td style="text-align: right;">-0.0315</td>
+</tr>
+</tbody>
+</table>
+<div class="quarto-float quarto-figure quarto-figure-center anchored" id="fig-akm-within-between">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-akm-within-between-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img class="img-fluid figure-img" src="figures/client_auditfirm_sorting/within_between_covariance.png" style="width:100.0%"/>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-akm-within-between-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+图 1: 同一次全样本拟合的组内、组间与总体协方差：三个失败指标呈正组间、负组内；Abs DA的组间项为负。
+</figcaption>
+</figure>
+</div>
+<p><strong>同一FE的组内条件相关与在组内重新估计是两个对象。</strong> 前者在统一pooled模型中按梯队计算；后者仅用该组保留的客户历史，样本及流动支持随之变化。综合失败在三个梯队内均为负，当前结果没有显示四大内部正相关。Other单独估计有两个连通分量，使用分量内中心化的二阶矩，分量之间的FE水平不作直接比较。<a href="tables/client_auditfirm_sorting/within_between_sorting.csv">分组明细</a>与<a href="tables/client_auditfirm_sorting/tier_estimation_support_loss.csv">组内估计支持损失</a>逐项保留。</p>
+<div class="quarto-float quarto-figure quarto-figure-center anchored" id="fig-akm-within-tier">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-akm-within-tier-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img class="img-fluid figure-img" src="figures/client_auditfirm_sorting/conditional_and_separate_tier_sorting.png" style="width:100.0%"/>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-akm-within-tier-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+图 2: 综合失败的组内sorting：同一pooled FE的条件相关与分梯队重新估计对照；三套样本的三个梯队均为负。
+</figcaption>
+</figure>
+</div>
+</section>
+<section class="level3" id="sec-akm-big4-gap">
+<h3 class="anchored" data-anchor-id="sec-akm-big4-gap">四大观察差距的稳定成分</h3>
+<p><strong>客户与事务所稳定成分共同对应四大较低的未预警综合失败率，可观察成分抵消部分差距。</strong> 不筛选样本中，观察差距为−3.687个百分点，客户与事务所成分分别为−5.148和−2.064个百分点。以下所有项来自同一估计样本，并加总为观察差距；事务所成分的因果解释依赖前述外生性与加性条件，不把各项转换为因果selection／treatment比例。</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 11%"/>
+<col style="width: 16%"/>
+<col style="width: 13%"/>
+<col style="width: 16%"/>
+<col style="width: 13%"/>
+<col style="width: 16%"/>
+<col style="width: 11%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">样本</th>
+<th style="text-align: right;">观察差距</th>
+<th style="text-align: right;">客户FE</th>
+<th style="text-align: right;">事务所FE</th>
+<th style="text-align: right;">年份FE</th>
+<th style="text-align: right;">控制变量</th>
+<th style="text-align: right;">残差</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">不筛选</td>
+<td style="text-align: right;">-3.687</td>
+<td style="text-align: right;">-5.148</td>
+<td style="text-align: right;">-2.064</td>
+<td style="text-align: right;">-0.074</td>
+<td style="text-align: right;">3.599</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">33</td>
+<td style="text-align: right;">-3.681</td>
+<td style="text-align: right;">-5.168</td>
+<td style="text-align: right;">-2.119</td>
+<td style="text-align: right;">-0.048</td>
+<td style="text-align: right;">3.655</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">55</td>
+<td style="text-align: right;">-3.538</td>
+<td style="text-align: right;">-5.443</td>
+<td style="text-align: right;">-1.955</td>
+<td style="text-align: right;">-0.018</td>
+<td style="text-align: right;">3.878</td>
+<td style="text-align: right;">0</td>
+</tr>
+</tbody>
+</table>
+<div class="quarto-float quarto-figure quarto-figure-center anchored" id="fig-akm-big4-gap">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-akm-big4-gap-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img class="img-fluid figure-img" src="figures/client_auditfirm_sorting/big4_gap_components.png" style="width:100.0%"/>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-akm-big4-gap-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+图 3: 四大减非四大的未预警综合失败率差距及其客户、事务所、年份、控制变量与残差成分，单位为百分点。
+</figcaption>
+</figure>
+</div>
+<p>完整结果还包括四大减本土八大、四大减Other及另外三个结果，见<a href="tables/client_auditfirm_sorting/big4_gap.csv">差距成分</a>与<a href="tables/client_auditfirm_sorting/variance_components.csv">同一样本的方差分解</a>。控制变量成分为整组<span class="math inline">\(X\widehat\beta\)</span>，其正贡献不归因于某一个单独机制。</p>
+</section>
+<section class="level3" id="sec-akm-network-sensitivity">
+<h3 class="anchored" data-anchor-id="sec-akm-network-sensitivity">网络、关键客户与信息量检查</h3>
+<p>三套综合失败pooled网络均连通。跨所客户分别为3,400、3,224、3,013位，其中连接四大与非四大的客户分别为439、425、378位。递归单例剔除前的覆盖见<a href="tables/client_auditfirm_sorting/pre_singleton_network_support.csv">前置网络</a>，各事务所支持与梯队流动见<a href="tables/client_auditfirm_sorting/audit_firm_support.csv">事务所明细</a>及<a href="tables/client_auditfirm_sorting/tier_transitions.csv">转换表</a>。</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 11%"/>
+<col style="width: 17%"/>
+<col style="width: 22%"/>
+<col style="width: 17%"/>
+<col style="width: 31%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">样本</th>
+<th style="text-align: left;">跨所客户</th>
+<th style="text-align: right;">四大桥接客户</th>
+<th style="text-align: right;">客户割点</th>
+<th style="text-align: right;">最大分量公司年占比</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">不筛选</td>
+<td style="text-align: left;">3,400</td>
+<td style="text-align: right;">439</td>
+<td style="text-align: right;">14</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">33</td>
+<td style="text-align: left;">3,224</td>
+<td style="text-align: right;">425</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">55</td>
+<td style="text-align: left;">3,013</td>
+<td style="text-align: right;">378</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">1</td>
+</tr>
+</tbody>
+</table>
+<p>逐一删除客户割点、主要跨所客户及关键客户—事务所关系，共447次重估。综合失败相关系数的最大绝对变化在三套样本中分别约0.00192、0.00113、0.00154；个别删除会令最多两家事务所失去支持。下表同时报告其他结果，不能仅凭总体变化较小忽略边缘事务所的支持损失。<a href="tables/client_auditfirm_sorting/key_client_relationship_deletion.csv">删除明细</a>。</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 11%"/>
+<col style="width: 14%"/>
+<col style="width: 17%"/>
+<col style="width: 29%"/>
+<col style="width: 26%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">样本</th>
+<th style="text-align: left;">结果</th>
+<th style="text-align: right;">重估次数</th>
+<th style="text-align: right;">相关最大绝对变化</th>
+<th style="text-align: right;">最多损失事务所</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">不筛选</td>
+<td style="text-align: left;">综合失败</td>
+<td style="text-align: right;">49</td>
+<td style="text-align: right;">0.00192</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">不筛选</td>
+<td style="text-align: left;">重述</td>
+<td style="text-align: right;">49</td>
+<td style="text-align: right;">0.00435</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">不筛选</td>
+<td style="text-align: left;">违规</td>
+<td style="text-align: right;">49</td>
+<td style="text-align: right;">0.00301</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">不筛选</td>
+<td style="text-align: left;">Abs DA</td>
+<td style="text-align: right;">32</td>
+<td style="text-align: right;">0.00117</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">33</td>
+<td style="text-align: left;">综合失败</td>
+<td style="text-align: right;">36</td>
+<td style="text-align: right;">0.00112</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">33</td>
+<td style="text-align: left;">重述</td>
+<td style="text-align: right;">36</td>
+<td style="text-align: right;">0.00495</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">33</td>
+<td style="text-align: left;">违规</td>
+<td style="text-align: right;">36</td>
+<td style="text-align: right;">0.00141</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">33</td>
+<td style="text-align: left;">Abs DA</td>
+<td style="text-align: right;">28</td>
+<td style="text-align: right;">0.00157</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">55</td>
+<td style="text-align: left;">综合失败</td>
+<td style="text-align: right;">36</td>
+<td style="text-align: right;">0.00154</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">55</td>
+<td style="text-align: left;">重述</td>
+<td style="text-align: right;">36</td>
+<td style="text-align: right;">0.00553</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">55</td>
+<td style="text-align: left;">违规</td>
+<td style="text-align: right;">36</td>
+<td style="text-align: right;">0.00107</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">55</td>
+<td style="text-align: left;">Abs DA</td>
+<td style="text-align: right;">24</td>
+<td style="text-align: right;">0.0022</td>
+<td style="text-align: right;">1</td>
+</tr>
+</tbody>
+</table>
+<p><strong>保留较少客户历史时，插件相关更负；增加信息后向全样本结果靠近。</strong> 按完整客户历史抽取10%至100%，使用50个种子，100%每个模型只拟合一次。共16,848次拟合：16,772次有效，36次秩不足，40次FE无变异；后两类保留状态但不进入相关统计。综合失败pooled在10%与100%的中位数分别由约−0.27至−0.30，靠近−0.03至−0.06。抽样同时改变信息量、组成和网络，曲线本身不构成纠偏。<a href="tables/client_auditfirm_sorting/repeated_client_subsampling_summary.csv">分位数与覆盖</a>。</p>
+<div class="quarto-float quarto-figure quarto-figure-center anchored" id="fig-akm-subsampling-failure">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-akm-subsampling-failure-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img class="img-fluid figure-img" src="figures/client_auditfirm_sorting/repeated_subsampling_any_failure_clean.png" style="width:100.0%"/>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-akm-subsampling-failure-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+图 4: 综合失败的重复客户抽样：三套门槛、pooled及各梯队；阴影是50次抽样的2.5%—97.5%分位数，不是参数置信区间。
+</figcaption>
+</figure>
+</div>
+<details>
+<summary>
+另外三个结果的重复抽样图
+</summary>
+<div class="quarto-float quarto-figure quarto-figure-center anchored" id="fig-akm-subsampling-restatement">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-akm-subsampling-restatement-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img class="img-fluid figure-img" src="figures/client_auditfirm_sorting/repeated_subsampling_restated_clean.png" style="width:100.0%"/>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-akm-subsampling-restatement-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+图 5: 未预警重述的重复客户抽样；分位区间表示抽样敏感性。
+</figcaption>
+</figure>
+</div>
+<div class="quarto-float quarto-figure quarto-figure-center anchored" id="fig-akm-subsampling-violation">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-akm-subsampling-violation-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img class="img-fluid figure-img" src="figures/client_auditfirm_sorting/repeated_subsampling_violated_clean.png" style="width:100.0%"/>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-akm-subsampling-violation-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+图 6: 未预警违规的重复客户抽样；分位区间表示抽样敏感性。
+</figcaption>
+</figure>
+</div>
+<div class="quarto-float quarto-figure quarto-figure-center anchored" id="fig-akm-subsampling-da">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-akm-subsampling-da-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img class="img-fluid figure-img" src="figures/client_auditfirm_sorting/repeated_subsampling_abs_da_jones.png" style="width:100.0%"/>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-akm-subsampling-da-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+图 7: Jones异常应计绝对值的重复客户抽样；分位区间表示抽样敏感性。
+</figcaption>
+</figure>
+</div>
+</details>
+<p>共同实体FE比较先匹配同一客户或事务所，再在抽样分量内归一化。50%样本中，综合失败事务所FE的实体等权Pearson中位数约0.80，客户FE约0.99。两次估计有数据重叠，因此这是抽样敏感性指标。<a href="tables/client_auditfirm_sorting/common_entity_fe_stability.csv">完整实体比较</a>。</p>
+<div class="quarto-float quarto-figure quarto-figure-center anchored" id="fig-akm-fe-stability">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-akm-fe-stability-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img class="img-fluid figure-img" src="figures/client_auditfirm_sorting/common_entity_fe_stability.png" style="width:100.0%"/>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-akm-fe-stability-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+图 8: 综合失败的共同实体FE稳定性：实体覆盖、Pearson、Spearman及归一化RMSE；比较基准与客户抽样结果。
+</figcaption>
+</figure>
+</div>
+</section>
+<section class="level3" id="sec-akm-kss">
+<h3 class="anchored" data-anchor-id="sec-akm-kss">KSS：量级减弱，点估计方向保持为负</h3>
+<p><span class="citation" data-cites="kss2020">Kline 等 (<a href="#ref-kss2020" role="doc-biblioref">2020年</a>)</span> 的leave-out方法针对固定效应二次型的估计偏误。本轮同时校正客户方差、事务所方差与协方差；综合失败相关在不筛选、33、55样本中分别由−0.0322、−0.0445、−0.0574变为−0.0020、−0.0177、−0.0315。<strong>校正明显减弱负相关的绝对量级，三套样本的点估计符号均保持为负。</strong> 不筛选样本已接近0；因尚无完整客户聚类稳健置信区间，符号一致不等于统计上确认了负sorting。<a href="tables/client_auditfirm_sorting/kss_observation_leaveout.csv">三个二次型的完整结果</a>。</p>
+<div class="quarto-float quarto-figure quarto-figure-center anchored" id="fig-akm-kss">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-akm-kss-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img class="img-fluid figure-img" src="figures/client_auditfirm_sorting/kss_observation_leaveout.png" style="width:100.0%"/>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-akm-kss-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+图 9: 综合失败的KSS逐观测校正：客户方差、事务所方差与协方差；假定公司年误差独立，当前为点估计。
+</figcaption>
+</figure>
+</div>
+<p>逐观测误差方差估计为<span class="math inline">\(\widehat\sigma_k^2=Y_k\widehat\varepsilon_k/(1-h_{kk})\)</span>，不是用残差平方直接替代。最大leverage约0.999，虽然小于1，局部估计仍可能对噪声敏感。整位客户留出时，综合失败三套设计分别有14、8、8个客户造成变换设计失秩；完整客户聚类推断需另行处理这些支持问题。<a href="tables/client_auditfirm_sorting/kss_feasibility.csv">留出可行性</a>及<a href="tables/client_auditfirm_sorting/high_leverage_observations.csv">高leverage记录</a>。KSS处理估计噪声，内生换所问题见以下两条研究方向。</p>
+</section>
+<section class="level3" id="sec-akm-endogenous-mobility">
+<h3 class="anchored" data-anchor-id="sec-akm-endogenous-mobility">上一期风险与下一期选所：两条拓展方向</h3>
+<p><strong>BLM方向：在类型模型中允许非加性及规定形式的动态选择。</strong> <span class="citation" data-cites="blm2019">Bonhomme 等 (<a href="#ref-blm2019" role="doc-biblioref">2019年</a>)</span> 的静态与动态框架区分加性限制和流动限制；动态版本在类型条件下采用Markov结构，使当前结果可以影响后续移动与目的地。<a class="footnote-ref" href="#fn1" id="fnref1" role="doc-noteref"><sup>1</sup></a> 前期<a href="./25_matching.html#sec-blm-client-firm-results">收费CDF分类及配对结果</a>属于描述性分类与类型交互探索，主体按收费分布聚类，再按样本内失败率定向。本轮已另行估计<a href="#sec-dynamic-risk-gfe">动态风险GFE和独立两类型Bernoulli混合</a>，区分可见状态配置与静态潜在类型基准；并未将任一分支称为原文完整动态转移结构。<a href="#sec-akm-dynamic-support">前期序列支持诊断</a>继续保留作历史支持对照。</p>
+<p><strong>AMS方向：先检验剩余成分能否预测未来配置，再建立结果与流动的联合模型。</strong> <span class="citation" data-cites="ams2019">Abowd 等 (<a href="#ref-ams2019" role="doc-biblioref">2019年</a>)</span> 从AKM残差构造外生流动诊断，并使用客户、机构与匹配的潜在类型描述结果和流动。本项目先采用这一思路，将未来换所和未来四大身份同时加入当前结果方程，在同一诊断样本中重新吸收全部基准FE和controls，按客户聚类。该检验的配置变量为观察到的梯队，不用同一结果估计的事务所FE进行目的地排序；它是本项目适配的诊断，尚未拟合AMS的Bayesian类型模型。</p>
+</section>
+<section class="level3" id="sec-akm-future-assignment">
+<h3 class="anchored" data-anchor-id="sec-akm-future-assignment">剩余结果—未来配置诊断</h3>
+<p><span id="eq-akm-future-assignment"><span class="math display">\[
+Y_{it}=\alpha_i+\psi_{f(i,t)}+\lambda_t+X_{it}'\beta
++\delta_h\mathbf1\{f(i,t+h)\ne f(i,t)\}
++\gamma_h\mathbf1\{Big4_{i,t+h}=1\}+u_{it},
+\qquad h\in\{1,2\}.
+\tag{6}\]</span></span></p>
+<p>联合检验<span class="math inline">\(H_0:\delta_h=\gamma_h=0\)</span>。综合失败的一年期在三套样本均未拒绝；两年期不筛选样本原Python联合<span class="math inline">\(p=0.00790\)</span>，按综合失败六项检验校正后为0.04737，扩展至全部四个结果的24项检验后为0.18159。信号对检验族范围敏感，也未在33与55中重复出现；不据此接受严格外生性或确认某种选择机制。</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">样本</th>
+<th style="text-align: right;">期数</th>
+<th style="text-align: right;">原始联合p</th>
+<th style="text-align: right;">六项Holm p</th>
+<th style="text-align: right;">24项Holm p</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">不筛选</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0.45007</td>
+<td style="text-align: right;">0.98646</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">不筛选</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0.0079</td>
+<td style="text-align: right;">0.04737</td>
+<td style="text-align: right;">0.18159</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">33</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0.46444</td>
+<td style="text-align: right;">0.98646</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">33</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0.17589</td>
+<td style="text-align: right;">0.87947</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">55</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0.32882</td>
+<td style="text-align: right;">0.98646</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">55</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0.21394</td>
+<td style="text-align: right;">0.87947</td>
+<td style="text-align: right;">1</td>
+</tr>
+</tbody>
+</table>
+<p>Stata与Python均按客户聚类。原Python按完整设计秩扣除自由度，reghdfe默认不重复扣除嵌套于客户聚类的客户FE；这导致默认标准误略有不同，统一自由度因子后标准误一致。上表延续原Python约定；<a href="tables/client_auditfirm_sorting/future_assignment_joint_multiplicity.csv">全部结果与两种默认约定</a>、<a href="tables/client_auditfirm_sorting/stata_python_mobility_check.csv">逐系数核对</a>均保留。</p>
+<div class="quarto-float quarto-figure quarto-figure-center anchored" id="fig-akm-switch-residuals">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-akm-switch-residuals-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img class="img-fluid figure-img" src="figures/client_auditfirm_sorting/switch_residual_paths.png" style="width:100.0%"/>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-akm-switch-residuals-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+图 10: 按实际起点／目的地梯队分组的换所前后AKM残差路径；客户可以贡献多次换所，图为关联诊断。
+</figcaption>
+</figure>
+</div>
+</section>
+<section class="level3" id="sec-akm-dynamic-support">
+<h3 class="anchored" data-anchor-id="sec-akm-dynamic-support">动态模型的序列与日期支持</h3>
+<p>四期连续窗口要求原所两年、目的所两年，中间实际换所。综合失败三套样本的窗口数、涉及客户／事务所以及出现过正事件的窗口如下。二元端点的<span class="math inline">\(2\times2\)</span>联合分布矩阵最多秩2，状态稀疏使更多潜在类型的识别依赖额外测量或分布设定。<a href="tables/client_auditfirm_sorting/dynamic_sequence_support.csv">四结果完整序列支持</a>与<a href="tables/client_auditfirm_sorting/dynamic_binary_state_cells_complete_grid.csv">包括空格子的状态表</a>。</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">样本</th>
+<th style="text-align: left;">窗口</th>
+<th style="text-align: left;">客户</th>
+<th style="text-align: right;">事务所</th>
+<th style="text-align: right;">正事件窗口</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">不筛选</td>
+<td style="text-align: left;">5,146</td>
+<td style="text-align: left;">2,553</td>
+<td style="text-align: right;">201</td>
+<td style="text-align: right;">772</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">33</td>
+<td style="text-align: left;">4,015</td>
+<td style="text-align: left;">2,279</td>
+<td style="text-align: right;">168</td>
+<td style="text-align: right;">599</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">55</td>
+<td style="text-align: left;">3,192</td>
+<td style="text-align: left;">1,970</td>
+<td style="text-align: right;">154</td>
+<td style="text-align: right;">469</td>
+</tr>
+</tbody>
+</table>
+<p>下表保留前期的原始改聘ID对候选支持，当时尚未把逐次改聘与风险披露日期接入模型。该候选表没有限定具体生效财年，同一ID对可能有多年重复事件，因此属于覆盖上限。本轮已完成<a href="#sec-dynamic-risk-timing">年度地标风险集与日期核准改聘样本的实际估计</a>，同时明确变更记录日期仍不等于普遍可见的最初决策日。<a href="tables/client_auditfirm_sorting/raw_timing_source_coverage.csv">前期日期来源覆盖</a>、<a href="tables/client_auditfirm_sorting/switch_date_candidate_year_offsets.csv">前期候选日历偏移</a>。</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 11%"/>
+<col style="width: 17%"/>
+<col style="width: 20%"/>
+<col style="width: 25%"/>
+<col style="width: 25%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">样本</th>
+<th style="text-align: left;">年度换所</th>
+<th style="text-align: left;">有ID对候选</th>
+<th style="text-align: left;">有变更日期候选</th>
+<th style="text-align: left;">有多个变更日期</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">不筛选</td>
+<td style="text-align: left;">9,218</td>
+<td style="text-align: left;">6,630</td>
+<td style="text-align: left;">5,800</td>
+<td style="text-align: left;">2,002</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">33</td>
+<td style="text-align: left;">7,356</td>
+<td style="text-align: left;">5,409</td>
+<td style="text-align: left;">4,721</td>
+<td style="text-align: left;">1,594</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">55</td>
+<td style="text-align: left;">5,927</td>
+<td style="text-align: left;">4,260</td>
+<td style="text-align: left;">3,676</td>
+<td style="text-align: left;">1,182</td>
+</tr>
+</tbody>
+</table>
+<p>前期准备诊断之后，本轮已按后续确认的方案运行<a href="#sec-dynamic-risk-gfe">动态状态GFE与静态二元混合</a>，并完成模拟、重抽样与时点检查。原文完整动态结构的续聘时点与私人信息识别条件仍未由现有数据提供。</p>
+</section>
+<section class="level3" id="sec-akm-sorting-record">
+<h3 class="anchored" data-anchor-id="sec-akm-sorting-record">执行核对与全部结果下载</h3>
+<p>本段旧AKM主输入为公司年度正式面板与auditor_team_features，SHA256记录在<a href="tables/client_auditfirm_sorting/run_manifest.json">输入manifest</a>。旧分支已运行48个基准／分梯队模型与24个未来配置模型；Stata—Python逐行核对公司年、原始事务所与稳定A1身份、变量构造、连通分量及归一化成分通过，拟合值最大差异约<span class="math inline">\(4.44\times10^{-9}\)</span>。<a href="tables/client_auditfirm_sorting/stata_integration_manifest.json">跨语言执行记录</a>、<a href="tables/client_auditfirm_sorting/completion_checks.json">完成检查</a>。这些旧结果保留；本轮另行实际运行的新估计、输入哈希和完整执行记录见<a href="#sec-dynamic-risk-record">动态风险分支</a>。</p>
+<details>
+<summary>
+全部当前规格CSV、Stata输出与复现代码
+</summary>
+<ul>
+<li><a href="tables/client_auditfirm_sorting/audit_firm_support.csv">audit_firm_support</a></li>
+<li><a href="tables/client_auditfirm_sorting/baseline_fit.csv">baseline_fit</a></li>
+<li><a href="tables/client_auditfirm_sorting/big4_gap.csv">big4_gap</a></li>
+<li><a href="tables/client_auditfirm_sorting/common_entity_fe_stability.csv">common_entity_fe_stability</a></li>
+<li><a href="tables/client_auditfirm_sorting/control_imputation.csv">control_imputation</a></li>
+<li><a href="tables/client_auditfirm_sorting/dynamic_binary_state_cells.csv">dynamic_binary_state_cells</a></li>
+<li><a href="tables/client_auditfirm_sorting/dynamic_binary_state_cells_complete_grid.csv">dynamic_binary_state_cells_complete_grid</a></li>
+<li><a href="tables/client_auditfirm_sorting/dynamic_sequence_support.csv">dynamic_sequence_support</a></li>
+<li><a href="tables/client_auditfirm_sorting/dynamic_timing_audit.csv">dynamic_timing_audit</a></li>
+<li><a href="tables/client_auditfirm_sorting/future_assignment_joint_multiplicity.csv">future_assignment_joint_multiplicity</a></li>
+<li><a href="tables/client_auditfirm_sorting/high_leverage_observations.csv">high_leverage_observations</a></li>
+<li><a href="tables/client_auditfirm_sorting/key_client_relationship_deletion.csv">key_client_relationship_deletion</a></li>
+<li><a href="tables/client_auditfirm_sorting/kss_feasibility.csv">kss_feasibility</a></li>
+<li><a href="tables/client_auditfirm_sorting/kss_observation_leaveout.csv">kss_observation_leaveout</a></li>
+<li><a href="tables/client_auditfirm_sorting/network_support.csv">network_support</a></li>
+<li><a href="tables/client_auditfirm_sorting/pre_singleton_network_support.csv">pre_singleton_network_support</a></li>
+<li><a href="tables/client_auditfirm_sorting/raw_timing_source_coverage.csv">raw_timing_source_coverage</a></li>
+<li><a href="tables/client_auditfirm_sorting/repeated_client_subsampling.csv">repeated_client_subsampling</a></li>
+<li><a href="tables/client_auditfirm_sorting/repeated_client_subsampling_summary.csv">repeated_client_subsampling_summary</a></li>
+<li><a href="tables/client_auditfirm_sorting/residual_future_assignment_tests.csv">residual_future_assignment_tests</a></li>
+<li><a href="tables/client_auditfirm_sorting/residual_serial_diagnostic.csv">residual_serial_diagnostic</a></li>
+<li><a href="tables/client_auditfirm_sorting/sample_flow.csv">sample_flow</a></li>
+<li><a href="tables/client_auditfirm_sorting/stata_python_mobility_check.csv">stata_python_mobility_check</a></li>
+<li><a href="tables/client_auditfirm_sorting/stata_python_observation_check.csv">stata_python_observation_check</a></li>
+<li><a href="tables/client_auditfirm_sorting/stata_python_table_check.csv">stata_python_table_check</a></li>
+<li><a href="tables/client_auditfirm_sorting/switch_date_candidate_support.csv">switch_date_candidate_support</a></li>
+<li><a href="tables/client_auditfirm_sorting/switch_date_candidate_year_offsets.csv">switch_date_candidate_year_offsets</a></li>
+<li><a href="tables/client_auditfirm_sorting/switch_residual_paths.csv">switch_residual_paths</a></li>
+<li><a href="tables/client_auditfirm_sorting/tier_estimation_support_loss.csv">tier_estimation_support_loss</a></li>
+<li><a href="tables/client_auditfirm_sorting/tier_transitions.csv">tier_transitions</a></li>
+<li><a href="tables/client_auditfirm_sorting/variance_components.csv">variance_components</a></li>
+<li><a href="tables/client_auditfirm_sorting/within_between_sorting.csv">within_between_sorting</a></li>
+<li><a href="tables/client_auditfirm_sorting/completion_checks.json">completion_checks</a></li>
+<li><a href="tables/client_auditfirm_sorting/diagnostic_run_manifest.json">diagnostic_run_manifest</a></li>
+<li><a href="tables/client_auditfirm_sorting/mobility_run_manifest.json">mobility_run_manifest</a></li>
+<li><a href="tables/client_auditfirm_sorting/numerical_validation.json">numerical_validation</a></li>
+<li><a href="tables/client_auditfirm_sorting/presentation_run_manifest.json">presentation_run_manifest</a></li>
+<li><a href="tables/client_auditfirm_sorting/run_manifest.json">run_manifest</a></li>
+<li><a href="tables/client_auditfirm_sorting/stata_integration_manifest.json">stata_integration_manifest</a></li>
+<li><a href="tables/client_auditfirm_sorting/stata/baseline_fit.csv">baseline_fit</a></li>
+<li><a href="tables/client_auditfirm_sorting/stata/big4_gap.csv">big4_gap</a></li>
+<li><a href="tables/client_auditfirm_sorting/stata/residual_future_assignment_tests.csv">residual_future_assignment_tests</a></li>
+<li><a href="tables/client_auditfirm_sorting/stata/sample_flow.csv">sample_flow</a></li>
+<li><a href="tables/client_auditfirm_sorting/stata/within_between_sorting.csv">within_between_sorting</a></li>
+<li><a href="maintenance/akm_sorting_20261024/source/42_audit_firm_sorting_akm.do">复现代码：42_audit_firm_sorting_akm.do</a></li>
+<li><a href="maintenance/akm_sorting_20261024/source/client_auditfirm_sorting.py">复现代码：client_auditfirm_sorting.py</a></li>
+<li><a href="maintenance/akm_sorting_20261024/source/client_auditfirm_stata_integration.py">复现代码：client_auditfirm_stata_integration.py</a></li>
+</ul>
+</details>
+<!-- client-auditfirm-sorting:end -->
+<!-- dynamic-risk-gfe:start -->
+</section>
+</section>
+<section class="level2" id="sec-dynamic-risk-gfe">
+<h2 class="anchored" data-anchor-id="sec-dynamic-risk-gfe">风险驱动配置：动态风险GFE与静态二元混合的实际估计</h2>
+<p><strong>本轮已经运行动态风险分步模型、静态二类型二元混合、真实数据敏感性、模拟恢复与客户重抽样，并用Stata独立核对主方程。</strong> 两条路线分别报告。这里的动态风险GFE借鉴 <span class="citation" data-cites="gfe2022">Bonhomme 等 (<a href="#ref-gfe2022" role="doc-biblioref">2022年</a>)</span> 的历史分组思路，以可见状态描述当期配置；静态混合借鉴 <span class="citation" data-cites="blm2019">Bonhomme 等 (<a href="#ref-blm2019" role="doc-biblioref">2019年</a>)</span> 的类型及配对分布思路。二者均不等同于已完成原文的全部动态结构估计。</p>
+<section class="level3" id="sec-dynamic-risk-timing">
+<h3 class="anchored" data-anchor-id="sec-dynamic-risk-timing">时间、样本与结果的实际覆盖</h3>
+<p>保留原始客户与事务所身份，并严格沿用不筛选／33／55的A1累计报告数与不同年份资格。分类只用进入估计前的3年／5年连续财务历史；共同分类中心只用2012年前已公开的历史训练。正式结果覆盖2012—2021财年，2012—2017用于拟合选择，2018—2019用于组数验证，2020—2021保留作时间外测试。主结果是原有重述／违规定义与“签署后3年内合格披露”的交集，再乘以MAO=0；签署日起3年尚未观察完整的记录不进入估计。MAO=1保留为0。重复披露逐条核对，查找签署后的首次合格披露；不能用签署前的一次披露阻断后续事件。原始无限发现窗标签另估作对照。</p>
+<p><strong>现有数据未完整覆盖续聘决策日。</strong> 主风险集采用目标财年1月1日的年度地标，财务信息公布日严格早于该日，已知在地标前决定或财年后决定的换所另行剔除；它估计年度配置的条件关联。另有日期核准的真实改聘者单独估计目的地与结果，不能为其补造未换所客户的决策日。供应商财务快照虽然按公布日对齐，历史修订前原始值仍未普遍恢复。少量无法构造完整非Z-score状态的记录单列剔除；金融客户等Z-score缺失仍保留并带缺失标记。</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img class="img-fluid figure-img" loading="lazy" src="figures/selection_matching/client_auditfirm_dynamic_risk_gfe/appointment_date_coverage.png" style="width:100.0%"/></p>
+<figcaption>实际换所记录与唯一匹配变更日期的覆盖。</figcaption>
+</figure>
+</div>
+<p>日期核准的改聘结果样本分别有1,545／1,463／1,342条记录，仍存在结果方程边界。日期覆盖改善了时点核准，却没有增加足够的二元事件来保证有限估计；该分支因此作为有边界标记的敏感性，不替代年度主规格。</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 6%"/>
+<col style="width: 5%"/>
+<col style="width: 8%"/>
+<col style="width: 7%"/>
+<col style="width: 18%"/>
+<col style="width: 17%"/>
+<col style="width: 21%"/>
+<col style="width: 13%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">gate</th>
+<th style="text-align: right;">n</th>
+<th style="text-align: right;">events</th>
+<th style="text-align: right;">firms</th>
+<th style="text-align: left;">outcome_converged</th>
+<th style="text-align: left;">outcome_boundary</th>
+<th style="text-align: left;">destination_converged</th>
+<th style="text-align: right;">max_gradient</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">none</td>
+<td style="text-align: right;">1545</td>
+<td style="text-align: right;">94.000</td>
+<td style="text-align: right;">50</td>
+<td style="text-align: left;">True</td>
+<td style="text-align: left;">True</td>
+<td style="text-align: left;">True</td>
+<td style="text-align: right;">0.000</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">r3y3</td>
+<td style="text-align: right;">1463</td>
+<td style="text-align: right;">84.000</td>
+<td style="text-align: right;">48</td>
+<td style="text-align: left;">True</td>
+<td style="text-align: left;">True</td>
+<td style="text-align: left;">True</td>
+<td style="text-align: right;">0.000</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">r5y5</td>
+<td style="text-align: right;">1342</td>
+<td style="text-align: right;">77.000</td>
+<td style="text-align: right;">44</td>
+<td style="text-align: left;">True</td>
+<td style="text-align: left;">True</td>
+<td style="text-align: left;">True</td>
+<td style="text-align: right;">0.000</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section class="level3" id="sec-dynamic-risk-movement">
+<h3 class="anchored" data-anchor-id="sec-dynamic-risk-movement">当前风险怎样关联换所和目的地</h3>
+<p>换所使用logit，目的地在真实换所者中使用三类multinomial logit；同一梯队内换到另一家事务所也算换所。合作年限只使用上一期已完成合作记录。下面把风险从训练分布第25分位改为第75分位，在相同状态样本中平均；多维风险分别展示，不把四项视为四种独立类型测量。</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">样本</th>
+<th style="text-align: left;">风险变量</th>
+<th style="text-align: right;">IQR换所变化(pp)</th>
+<th style="text-align: right;">下限</th>
+<th style="text-align: right;">上限</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">none</td>
+<td style="text-align: left;">lev</td>
+<td style="text-align: right;">1.238</td>
+<td style="text-align: right;">-1.492</td>
+<td style="text-align: right;">4.834</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">none</td>
+<td style="text-align: left;">roa</td>
+<td style="text-align: right;">-0.681</td>
+<td style="text-align: right;">-1.463</td>
+<td style="text-align: right;">0.079</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">none</td>
+<td style="text-align: left;">cfo</td>
+<td style="text-align: right;">0.259</td>
+<td style="text-align: right;">-0.316</td>
+<td style="text-align: right;">0.841</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">none</td>
+<td style="text-align: left;">zscore</td>
+<td style="text-align: right;">1.107</td>
+<td style="text-align: right;">-0.110</td>
+<td style="text-align: right;">2.339</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">r3y3</td>
+<td style="text-align: left;">lev</td>
+<td style="text-align: right;">1.547</td>
+<td style="text-align: right;">-1.053</td>
+<td style="text-align: right;">5.521</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">r3y3</td>
+<td style="text-align: left;">roa</td>
+<td style="text-align: right;">-0.497</td>
+<td style="text-align: right;">-1.316</td>
+<td style="text-align: right;">0.245</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">r3y3</td>
+<td style="text-align: left;">cfo</td>
+<td style="text-align: right;">0.375</td>
+<td style="text-align: right;">-0.175</td>
+<td style="text-align: right;">0.968</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">r3y3</td>
+<td style="text-align: left;">zscore</td>
+<td style="text-align: right;">0.963</td>
+<td style="text-align: right;">-0.237</td>
+<td style="text-align: right;">2.150</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">r5y5</td>
+<td style="text-align: left;">lev</td>
+<td style="text-align: right;">1.024</td>
+<td style="text-align: right;">-1.682</td>
+<td style="text-align: right;">4.823</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">r5y5</td>
+<td style="text-align: left;">roa</td>
+<td style="text-align: right;">-0.438</td>
+<td style="text-align: right;">-1.286</td>
+<td style="text-align: right;">0.322</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">r5y5</td>
+<td style="text-align: left;">cfo</td>
+<td style="text-align: right;">0.553</td>
+<td style="text-align: right;">-0.004</td>
+<td style="text-align: right;">1.165</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">r5y5</td>
+<td style="text-align: left;">zscore</td>
+<td style="text-align: right;">0.973</td>
+<td style="text-align: right;">-0.189</td>
+<td style="text-align: right;">2.241</td>
+</tr>
+</tbody>
+</table>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img class="img-fluid figure-img" loading="lazy" src="figures/selection_matching/client_auditfirm_dynamic_risk_gfe/risk_movement.png" style="width:100.0%"/></p>
+<figcaption>决策前风险与换所概率，按原所类别分面。</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img class="img-fluid figure-img" loading="lazy" src="figures/selection_matching/client_auditfirm_dynamic_risk_gfe/risk_total_flows.png" style="width:100.0%"/></p>
+<figcaption>总体流向概率：Pr(换所)乘以Pr(目的地|换所)。</figcaption>
+</figure>
+</div>
+</section>
+<section class="level3" id="sec-dynamic-risk-groups">
+<h3 class="anchored" data-anchor-id="sec-dynamic-risk-groups">历史分组的支持：主规格选中一组</h3>
+<p>历史长度3／5年、客户组数1—4和多个初始化均已比较。训练样本中部分“四大×客户组”单元没有失败事件，增加分组也未改善2018—2019的时间外损失；按既定支持与验证规则，主规格选中G=1。因此主结果不能宣称已经分出可靠的长期客户潜在类型，也不能把一组模型构成项机械为0解释为没有sorting。两组及更多组的客户构成、P1—P4和概率差仍完整保留为探索，明确标记分离／边界。</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img class="img-fluid figure-img" loading="lazy" src="figures/selection_matching/client_auditfirm_dynamic_risk_gfe/classification_validation.png" style="width:100.0%"/></p>
+<figcaption>组数与历史长度：时间外损失和最少单元失败数。</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img class="img-fluid figure-img" loading="lazy" src="figures/selection_matching/client_auditfirm_dynamic_risk_gfe/exploratory_group_composition.png" style="width:100.0%"/></p>
+<figcaption>独立保留两组历史分类的客户构成；主规格未选择该组数。</figcaption>
+</figure>
+</div>
+</section>
+<section class="level3" id="sec-dynamic-risk-standardization">
+<h3 class="anchored" data-anchor-id="sec-dynamic-risk-standardization">同风险状态下的条件结果比较</h3>
+<p>二元结果采用Bernoulli-probit，P0—P3使用同一有效样本，P4允许组×年差异；对照logit、不同历史、原结果标签、重述、违规和失败本身。P3加入已公开问题、已知意见、原所、先前合作长度、风险二次项和较早状态。只在当前梯队配置模型具有重叠的参考样本中标准化；这一筛选不是因果识别的充分条件。</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 6%"/>
+<col style="width: 8%"/>
+<col style="width: 9%"/>
+<col style="width: 12%"/>
+<col style="width: 12%"/>
+<col style="width: 9%"/>
+<col style="width: 14%"/>
+<col style="width: 13%"/>
+<col style="width: 13%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">样本</th>
+<th style="text-align: right;">客户年</th>
+<th style="text-align: right;">共同支持</th>
+<th style="text-align: right;">四大概率(%)</th>
+<th style="text-align: right;">本土八大(%)</th>
+<th style="text-align: right;">Other(%)</th>
+<th style="text-align: right;">四大−Other(pp)</th>
+<th style="text-align: right;">名义区间下限</th>
+<th style="text-align: right;">名义区间上限</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">none</td>
+<td style="text-align: right;">24428</td>
+<td style="text-align: right;">2377</td>
+<td style="text-align: right;">0.989</td>
+<td style="text-align: right;">3.281</td>
+<td style="text-align: right;">5.129</td>
+<td style="text-align: right;">-4.140</td>
+<td style="text-align: right;">-6.452</td>
+<td style="text-align: right;">-1.858</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">r3y3</td>
+<td style="text-align: right;">23516</td>
+<td style="text-align: right;">2153</td>
+<td style="text-align: right;">1.245</td>
+<td style="text-align: right;">2.997</td>
+<td style="text-align: right;">4.643</td>
+<td style="text-align: right;">-3.397</td>
+<td style="text-align: right;">-5.663</td>
+<td style="text-align: right;">-0.934</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">r5y5</td>
+<td style="text-align: right;">22212</td>
+<td style="text-align: right;">1878</td>
+<td style="text-align: right;">1.252</td>
+<td style="text-align: right;">3.118</td>
+<td style="text-align: right;">4.953</td>
+<td style="text-align: right;">-3.701</td>
+<td style="text-align: right;">-6.010</td>
+<td style="text-align: right;">-0.945</td>
+</tr>
+</tbody>
+</table>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img class="img-fluid figure-img" loading="lazy" src="figures/selection_matching/client_auditfirm_dynamic_risk_gfe/standardized_failure.png" style="width:100.0%"/></p>
+<figcaption>共同支持参考分布上的联合失败概率。区间为客户重抽样的名义百分位区间。</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img class="img-fluid figure-img" loading="lazy" src="figures/selection_matching/client_auditfirm_dynamic_risk_gfe/gap_standardization.png" style="width:100.0%"/></p>
+<figcaption>共同支持样本的原始组间差距，与以该样本为参考分布的标准化差距。主规格只有一组，最后两步重合。</figcaption>
+</figure>
+</div>
+<p>这里估计的是给定状态后的结果比较。服务贡献解释仍要求剩余创新在当前配置条件下满足</p>
+<p><span class="math display">\[
+U_{it}\mid G_i,S^-_{it},j_{it}\sim N(0,1).
+\]</span></p>
+<p>过去风险可以影响当前选择；未进入状态的私人预测若同时影响当前选所和后续结果，仍会破坏这一条件。模型没有把选择概率或inverse Mills ratio塞入结果方程，也没有通过先估选择方程自动解决内生性。</p>
+</section>
+<section class="level3" id="sec-dynamic-risk-diagnostics">
+<h3 class="anchored" data-anchor-id="sec-dynamic-risk-diagnostics">状态记忆、实际所与推断</h3>
+<p>较早风险的联合检验如下；其显著性用于判断需要多少历史，不以“残差必须与未来换所无关”作为动态模型的通过标准。客户聚类、所×年聚类和双向聚类已另列比较。</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">gate</th>
+<th style="text-align: left;">test</th>
+<th style="text-align: right;">statistic</th>
+<th style="text-align: right;">df</th>
+<th style="text-align: right;">p_value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">none</td>
+<td style="text-align: left;">earlier_risk_joint</td>
+<td style="text-align: right;">15.984</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">0.003</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">r3y3</td>
+<td style="text-align: left;">earlier_risk_joint</td>
+<td style="text-align: right;">15.886</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">0.003</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">r5y5</td>
+<td style="text-align: left;">earlier_risk_joint</td>
+<td style="text-align: right;">14.942</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">0.005</td>
+</tr>
+</tbody>
+</table>
+<p>训练期固定结点的低自由度线性样条、前后时期及完整Z-score子样本进一步比较如下。分时期差距的变化还会受到参考客户构成变化影响，不直接解释成服务质量的时间变化。</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 8%"/>
+<col style="width: 32%"/>
+<col style="width: 7%"/>
+<col style="width: 16%"/>
+<col style="width: 8%"/>
+<col style="width: 13%"/>
+<col style="width: 12%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">gate</th>
+<th style="text-align: left;">extension</th>
+<th style="text-align: right;">n</th>
+<th style="text-align: right;">reference_n</th>
+<th style="text-align: right;">gap</th>
+<th style="text-align: left;">converged</th>
+<th style="text-align: left;">boundary</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">none</td>
+<td style="text-align: left;">training_knots_linear_spline</td>
+<td style="text-align: right;">24428</td>
+<td style="text-align: right;">2377.000</td>
+<td style="text-align: right;">-0.042</td>
+<td style="text-align: left;">True</td>
+<td style="text-align: left;">False</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">none</td>
+<td style="text-align: left;">early_2012_2016</td>
+<td style="text-align: right;">10149</td>
+<td style="text-align: right;">812.000</td>
+<td style="text-align: right;">-0.017</td>
+<td style="text-align: left;">True</td>
+<td style="text-align: left;">False</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">none</td>
+<td style="text-align: left;">late_2017_2021</td>
+<td style="text-align: right;">14279</td>
+<td style="text-align: right;">1565.000</td>
+<td style="text-align: right;">-0.056</td>
+<td style="text-align: left;">True</td>
+<td style="text-align: left;">False</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">none</td>
+<td style="text-align: left;">complete_zscore</td>
+<td style="text-align: right;">23255</td>
+<td style="text-align: right;">2061.000</td>
+<td style="text-align: right;">-0.041</td>
+<td style="text-align: left;">True</td>
+<td style="text-align: left;">False</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">r3y3</td>
+<td style="text-align: left;">training_knots_linear_spline</td>
+<td style="text-align: right;">23516</td>
+<td style="text-align: right;">2153.000</td>
+<td style="text-align: right;">-0.034</td>
+<td style="text-align: left;">True</td>
+<td style="text-align: left;">False</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">r3y3</td>
+<td style="text-align: left;">early_2012_2016</td>
+<td style="text-align: right;">9777</td>
+<td style="text-align: right;">733.000</td>
+<td style="text-align: right;">0.003</td>
+<td style="text-align: left;">True</td>
+<td style="text-align: left;">False</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">r3y3</td>
+<td style="text-align: left;">late_2017_2021</td>
+<td style="text-align: right;">13739</td>
+<td style="text-align: right;">1420.000</td>
+<td style="text-align: right;">-0.054</td>
+<td style="text-align: left;">True</td>
+<td style="text-align: left;">False</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">r3y3</td>
+<td style="text-align: left;">complete_zscore</td>
+<td style="text-align: right;">22406</td>
+<td style="text-align: right;">1854.000</td>
+<td style="text-align: right;">-0.034</td>
+<td style="text-align: left;">True</td>
+<td style="text-align: left;">False</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">r5y5</td>
+<td style="text-align: left;">training_knots_linear_spline</td>
+<td style="text-align: right;">22212</td>
+<td style="text-align: right;">1878.000</td>
+<td style="text-align: right;">-0.037</td>
+<td style="text-align: left;">True</td>
+<td style="text-align: left;">False</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">r5y5</td>
+<td style="text-align: left;">early_2012_2016</td>
+<td style="text-align: right;">9378</td>
+<td style="text-align: right;">643.000</td>
+<td style="text-align: right;">0.003</td>
+<td style="text-align: left;">True</td>
+<td style="text-align: left;">False</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">r5y5</td>
+<td style="text-align: left;">late_2017_2021</td>
+<td style="text-align: right;">12834</td>
+<td style="text-align: right;">1235.000</td>
+<td style="text-align: right;">-0.059</td>
+<td style="text-align: left;">True</td>
+<td style="text-align: left;">False</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">r5y5</td>
+<td style="text-align: left;">complete_zscore</td>
+<td style="text-align: right;">21182</td>
+<td style="text-align: right;">1617.000</td>
+<td style="text-align: right;">-0.038</td>
+<td style="text-align: left;">True</td>
+<td style="text-align: left;">False</td>
+</tr>
+</tbody>
+</table>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img class="img-fluid figure-img" loading="lazy" src="figures/selection_matching/client_auditfirm_dynamic_risk_gfe/model_calibration.png" style="width:100.0%"/></p>
+<figcaption>分年度的换所与结果校准。</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img class="img-fluid figure-img" loading="lazy" src="figures/selection_matching/client_auditfirm_dynamic_risk_gfe/firm_state_configuration.png" style="width:100.0%"/></p>
+<figcaption>所级部分汇聚估计与客户动态风险配置；圆点大小随客户年数变化。</figcaption>
+</figure>
+</div>
+<p>实际事务所版本保留所有身份，先报告零事件所和分离；无惩罚模型仅在有支持子样本估计。全体所的图使用明确的所截距惩罚，并比较0.25／1／4三种强度，不能称为全部事务所有限MLE或无偏排名。动态状态指数与所级统一概率的配置协方差已按梯队内／梯队间精确分解，它是本模型下的描述性配置统计，不能等同于AKM或KSS协方差。收费CDF的三类所替代划分只使用2012年前历史，另列未分类新所的覆盖。</p>
+<p>每套样本客户整段重抽500次，冻结A1资格，重做训练期处理、客户分类与三个方程；主区间固定原始参考支持，另100次重选支持作敏感性。分类组数按原验证选择固定；非线性近似、模型选择与私人信息偏差不由bootstrap消除。全部重复的收敛与边界记录如下，未静默丢弃失败重复。</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: left;">gate</th>
+<th style="text-align: right;">repetitions</th>
+<th style="text-align: right;">converged</th>
+<th style="text-align: right;">boundary</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">none</td>
+<td style="text-align: right;">500</td>
+<td style="text-align: right;">500</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">r3y3</td>
+<td style="text-align: right;">500</td>
+<td style="text-align: right;">500</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">r5y5</td>
+<td style="text-align: right;">500</td>
+<td style="text-align: right;">500</td>
+<td style="text-align: right;">0</td>
+</tr>
+</tbody>
+</table>
+<p>Stata独立核对同样本probit、logit和multinomial logit的预测；最大绝对概率差为0.000055。</p>
+</section>
+<section class="level3" id="sec-static-binary-mixture">
+<h3 class="anchored" data-anchor-id="sec-static-binary-mixture">静态二元潜在类型混合：能拟合，但边界限制解释</h3>
+<p>固定L=2、观察到的所类别K=3，每位换所客户取最早合格两期窗口。类型×类别的Bernoulli概率在路径及两端共享，路径混合权重可不同；另估L=1和probit指数加性版本。给定类型后的端点独立及共享限制是额外假设，这套静态基准没有自动处理风险冲击驱动配置。留任者另取预定一次结果估计类型构成，不把换所者构成推广为所有客户。</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 5%"/>
+<col style="width: 11%"/>
+<col style="width: 12%"/>
+<col style="width: 9%"/>
+<col style="width: 9%"/>
+<col style="width: 11%"/>
+<col style="width: 14%"/>
+<col style="width: 11%"/>
+<col style="width: 13%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">gate</th>
+<th style="text-align: right;">clients_mover</th>
+<th style="text-align: right;">clients_stayer</th>
+<th style="text-align: right;">ll_types2</th>
+<th style="text-align: right;">ll_types1</th>
+<th style="text-align: right;">jacobian_rank</th>
+<th style="text-align: right;">smallest_singular</th>
+<th style="text-align: left;">boundary_prob</th>
+<th style="text-align: left;">boundary_weight</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">none</td>
+<td style="text-align: right;">1666</td>
+<td style="text-align: right;">1862</td>
+<td style="text-align: right;">-653.352</td>
+<td style="text-align: right;">-714.840</td>
+<td style="text-align: right;">15</td>
+<td style="text-align: right;">0.026</td>
+<td style="text-align: left;">True</td>
+<td style="text-align: left;">True</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">r3y3</td>
+<td style="text-align: right;">1562</td>
+<td style="text-align: right;">1814</td>
+<td style="text-align: right;">-611.444</td>
+<td style="text-align: right;">-667.052</td>
+<td style="text-align: right;">15</td>
+<td style="text-align: right;">0.014</td>
+<td style="text-align: left;">True</td>
+<td style="text-align: left;">True</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">r5y5</td>
+<td style="text-align: right;">1445</td>
+<td style="text-align: right;">1727</td>
+<td style="text-align: right;">-564.417</td>
+<td style="text-align: right;">-623.373</td>
+<td style="text-align: right;">15</td>
+<td style="text-align: right;">0.001</td>
+<td style="text-align: left;">True</td>
+<td style="text-align: left;">True</td>
+</tr>
+</tbody>
+</table>
+<p>各样本进行64起点优化、解析梯度与直接似然核对、参数映射Jacobian、剖面和500次客户重抽样。局部满秩不能排除边界与全局不唯一；三套样本出现边界概率或边界路径权重，不能把两个潜在类型视为已稳健识别。以下保留点估计和重抽样稳定性分布，不使用常规卡方检验类型数，也不将非正则处的百分位数冒称有效置信区间。</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img class="img-fluid figure-img" loading="lazy" src="figures/selection_matching/client_auditfirm_dynamic_risk_gfe/static_mixture_probabilities.png" style="width:100.0%"/></p>
+<figcaption>两类型×三类事务所的失败概率；边界解，作描述性基准。</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img class="img-fluid figure-img" loading="lazy" src="figures/selection_matching/client_auditfirm_dynamic_risk_gfe/static_mixture_profile.png" style="width:100.0%"/></p>
+<figcaption>静态混合似然剖面。虚线仅作参照，不是已验证的置信集合边界。</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img class="img-fluid figure-img" loading="lazy" src="figures/selection_matching/client_auditfirm_dynamic_risk_gfe/static_mixture_stability.png" style="width:100.0%"/></p>
+<figcaption>500次客户重抽样中的概率稳定性分布。</figcaption>
+</figure>
+</div>
+<p>两条路线还在共同换所客户端点上比较实际频率和积分预测，未用留出结果先计算后验再冒称时间外预测。路径权重、软后验、留任权重、条件类型份额及市场联合配对分布均可在notebook与下载表中核对。</p>
+</section>
+<section class="level3" id="sec-dynamic-risk-simulations">
+<h3 class="anchored" data-anchor-id="sec-dynamic-risk-simulations">模拟揭示模型能回答到哪一步</h3>
+<p>六类机制按真实样本的客户数、平均长度、事件率、风险持续性、梯队份额及换所率校准。每种机制500个数据集；其中前100个运行1—4组×3／5年历史完整网格，并估计静态混合。其余重复检查保留规格的误差和区间覆盖。参数化机制由研究者设定，不是从数据识别出的结构原始参数。</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img class="img-fluid figure-img" loading="lazy" src="figures/selection_matching/client_auditfirm_dynamic_risk_gfe/simulation_recovery.png" style="width:100.0%"/></p>
+<figcaption>六类数据生成机制下的差距恢复误差与名义区间覆盖。</figcaption>
+</figure>
+</div>
+<p>保留的两组、3年分类设计中，只有永久构成差异且真实服务技术相同的情形，平均差距偏差为-0.42个百分点；风险可见的动态选择情形偏差为-0.35个百分点、名义区间覆盖为87.4%；存在私人风险选择时偏差为-1.31个百分点、覆盖仅37.6%。构成相同而存在类型相关服务差异的情形，偏差为0.04个百分点、覆盖95.2%。这些覆盖率针对模拟中的客户聚类delta区间，不能替代本次实证bootstrap的覆盖验证。结果表明分组误差与状态遗漏会留下误归因，现有程序能够估计模型，但未由此建立服务贡献的识别。</p>
+<p>同时报告只有永久构成、状态可见的风险选择、类型相关服务差异、状态测量误差／长记忆、私人风险选择、稀疏事务所等结果。模拟中的“真实服务差异”为已知设定；真实数据的标准化预测差距仍不自动获得该解释。覆盖率低的情形意味着名义区间不能当作已经验证的95%推断。</p>
+</section>
+<section class="level3" id="sec-dynamic-risk-record">
+<h3 class="anchored" data-anchor-id="sec-dynamic-risk-record">本轮完成范围与可复现文件</h3>
+<p>已执行数据时间核准、三套样本、历史分类网格、P0—P4、换所／目的地、替代结果与链接、日期换所样本、实际所支持和部分汇聚、收费CDF替代划分、两方配置统计、500次主bootstrap、静态混合及500次稳定性重抽样、六类模拟、独立Stata核对和本notebook。正式续聘决策日期、普遍恢复的历史财务原始版本、私人信息的结构识别仍不由现有输入提供；本轮没有伪造这些条件，也没有把条件GFE命名为原文完整动态BLM。第三个签字审计师维度与多年政策反事实按计划留作后续扩展。</p>
+<p><a href="maintenance/dynamic_risk_gfe/execution_report.md">完整执行记录</a> · <a href="maintenance/dynamic_risk_gfe/estimation_plan.md">原估计计划</a> · <a href="maintenance/dynamic_risk_gfe/main_point_estimates.csv">主结果表</a> · <a href="maintenance/dynamic_risk_gfe/bootstrap_intervals.csv">区间与完整诊断</a> · <a href="maintenance/dynamic_risk_gfe/mixture_identification.csv">静态混合识别表</a> · <a href="maintenance/dynamic_risk_gfe/simulation_summary.csv">模拟汇总</a> · <a href="./31_biweekly_memo.html#sec-memo-akm-sorting">返回memo</a></p>
+<!-- dynamic-risk-gfe:end -->
+</section>
 </section>
 <section class="level2" id="核心结果">
-<h2 class="anchored" data-anchor-id="核心结果">核心结果</h2>
+<h2 class="anchored" data-anchor-id="核心结果">既有双边与三方分解：个人审计师参照</h2>
 <p><strong>不同观察门槛下，客户差异占据较大的方差份额，审计师份额通常高于事务所。</strong> 未预警综合失败的分解比较不设门槛、3 份／3 年和 5 份／5 年三种样本。观测为公司—年；模型分别吸收客户与事务所、客户与 A1、事务所与 A1，再加年度 FE，按客户聚类。控制规模、杠杆、亏损、ROA、Z-score、杠杆变化、报告时滞、经营现金流、年龄、成长性、市净率、应计项目及缺失dummy。</p>
 <p><strong>回归设定（三个双边模型分别估计）。</strong></p>
 <p><span class="math display">\[
@@ -297,16 +1603,17 @@ Y_{it}&amp;=\psi_{f(i,t)}+\theta_{a(i,t)}+\lambda_t+X_{it}'\gamma+\varepsilon_{i
 <h3 class="anchored" data-anchor-id="份3-年基准方差分解">2.1 3 份／3 年基准方差分解</h3>
 <p>下表给出基准样本（3 份报告／3 年）下四个结果变量的固定效应方差分解结果。</p>
 <figure class="latex-table figure">
-<img alt="未预警综合失败的固定效应方差分解" class="figure-img" loading="lazy" src="tables/akm/11_akm_summary_01_full.png"/>
+<a href="tables/akm/11_akm_summary_01_full.pdf"><img alt="未预警综合失败的固定效应方差分解" class="figure-img" loading="lazy" src="tables/akm/11_akm_summary_01_full.png"/></a>
 <figcaption>
-未预警综合失败的固定效应方差分解 ·  · 
+未预警综合失败的固定效应方差分解 · <a href="tables/akm/11_akm_summary_01_full.tex">TeX</a> · <a href="tables/akm/11_akm_summary_01_full.pdf">PDF</a>
 </figcaption>
 </figure>
 <p>分解呈现出高度一致的层级特征： 1. <strong>客户公司异质性居首</strong>：在控制客户固定效应的模型中，客户效应解释了 27.6%–31.4% 的综合失败方差，显示模型中的稳定客户差异占较大份额。 2. <strong>审计师效应高于事务所效应</strong>：审计师固定效应解释了约 14.2%–14.3% 的总方差，而事务所固定效应仅解释 1.9%–4.1%。 3. <strong>残差项占主导</strong>：残差占比在 62.0% 至 83.4% 之间，表明加性固定效应刻画的是跨实体的稳定异质性，而非对偶发事件的完全解释。</p>
 </section>
-<section class="level3" id="跨门槛稳定性与替代结果变量">
-<h3 class="anchored" data-anchor-id="跨门槛稳定性与替代结果变量">2.2 跨门槛稳定性与替代结果变量</h3>
+<section class="level3" id="sec-pairwise-cutoff-comparison">
+<h3 class="anchored" data-anchor-id="sec-pairwise-cutoff-comparison">2.2 跨门槛稳定性与替代结果变量</h3>
 <p>更严格的 5 份／5 年门槛（剔除低执业频次审计师后）并未改变上述排序：客户×审计师模型中客户份额为 32.3%、审计师份额为 12.6%；事务所×审计师模型中事务所份额为 3.9%、审计师份额为 12.5%。</p>
+<p>旧备忘录的三套门槛对照并入本节：综合未预警失败的客户×审计师模型中，客户方差份额在不设门槛、3份／3年、5份／5年下分别为30.9%、31.4%、32.3%，审计师为15.8%、14.3%、12.6%；事务所×审计师模型中，事务所为4.4%、4.1%、3.9%，审计师为16.4%、14.2%、12.5%。这是既有双边模型的插件方差比较。最新客户—事务所sorting采用另一套已统一的结果与控制口径，见<a href="./23_big4_effect.html#sec-client-auditfirm-sorting">四大报告的组内／组间分解</a>，不将两套份额混为同一估计。</p>
 <p>对于财务重述、财务违规及 Jones 异常应计绝对值，上述模式同样稳健： - <strong>财务重述与违规</strong>：与综合失败类似，客户固定效应解释约 26.5%–30.6% 的方差，审计师效应（13.6%–14.7%）的点估计均高于事务所效应（1.4%–4.2%）。 - <strong>Jones 异常应计绝对值</strong>：连续型应计质量指标的残差比例更高（77.9%–88.2%），客户份额降至 13.0%–20.7%，但审计师份额（7.4%–13.2%）仍明显大于事务所份额（0.4%–1.1%）。</p>
 <p><img alt="财务重述的三种双边 AKM 模型，在不筛选、3份3年和5份5年门槛下的竖向堆叠方差分解。" class="img-fluid" data-fig-cap="财务重述：三种双边模型与三种审计师门槛。" src="figures/akm_overview/akm_pairwise_threshold_restated_clean.png" style="width:100.0%"/></p>
 <p><img alt="财务违规的三种双边 AKM 模型，在不筛选、3份3年和5份5年门槛下的竖向堆叠方差分解。" class="img-fluid" data-fig-cap="财务违规：三种双边模型与三种审计师门槛。" src="figures/akm_overview/akm_pairwise_threshold_violated_clean.png" style="width:100.0%"/></p>
@@ -333,59 +1640,59 @@ Y_{it}&amp;=\psi_{f(i,t)}+\theta_{a(i,t)}+\lambda_t+X_{it}'\gamma+\varepsilon_{i
 <p><span class="math display">\[Y_{it}=X_{it}'\gamma+\alpha_{a(i,t)}+\phi_{p(i,t)}+\mu_i+\lambda_t+\varepsilon_{it},\]</span></p>
 <p>其中 <span class="math inline">\(a(i,t)\)</span> 为 A1 签字审计师，<span class="math inline">\(p(i,t)\)</span> 为事务所，<span class="math inline">\(\mu_i\)</span> 为客户公司固定效应，<span class="math inline">\(\lambda_t\)</span> 为年度效应，标准误在客户层面聚类。下表通过在同一估计样本内剔除 <span class="math inline">\(\alpha_a\)</span> 汇报 <span class="math inline">\(R^2\)</span> 变化与部分 F 统计量。</p>
 <figure class="latex-table figure">
-<img alt='审计师 FE 的增量解释力及方差占比。&lt;a href="tables/auditor_quality_run_20260925/narrow/akm_explanatory_power.tex"&gt;LaTeX 源文件&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_run_20260925/narrow/akm_explanatory_power_full_p01.png"/>
+<a href="tables/auditor_quality_run_20260925/narrow/akm_explanatory_power_full_p01.pdf"><img alt='审计师 FE 的增量解释力及方差占比。&lt;a href="tables/auditor_quality_run_20260925/narrow/akm_explanatory_power.tex"&gt;LaTeX 源文件&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_run_20260925/narrow/akm_explanatory_power_full_p01.png"/></a>
 <figcaption>
-审计师 FE 的增量解释力及方差占比。LaTeX 源文件。 ·  · 
+审计师 FE 的增量解释力及方差占比。<a href="tables/auditor_quality_run_20260925/narrow/akm_explanatory_power.tex">LaTeX 源文件</a>。 · <a href="tables/auditor_quality_run_20260925/narrow/akm_explanatory_power_full_p01.tex">TeX</a> · <a href="tables/auditor_quality_run_20260925/narrow/akm_explanatory_power_full_p01.pdf">PDF</a>
 </figcaption>
 </figure>
 <figure class="latex-table figure">
-<img alt='审计师 FE 的增量解释力及方差占比。&lt;a href="tables/auditor_quality_run_20260925/narrow/akm_explanatory_power.tex"&gt;LaTeX 源文件&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_run_20260925/narrow/akm_explanatory_power_full_p02.png"/>
+<a href="tables/auditor_quality_run_20260925/narrow/akm_explanatory_power_full_p02.pdf"><img alt='审计师 FE 的增量解释力及方差占比。&lt;a href="tables/auditor_quality_run_20260925/narrow/akm_explanatory_power.tex"&gt;LaTeX 源文件&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_run_20260925/narrow/akm_explanatory_power_full_p02.png"/></a>
 <figcaption>
-审计师 FE 的增量解释力及方差占比。LaTeX 源文件。 ·  · 
+审计师 FE 的增量解释力及方差占比。<a href="tables/auditor_quality_run_20260925/narrow/akm_explanatory_power.tex">LaTeX 源文件</a>。 · <a href="tables/auditor_quality_run_20260925/narrow/akm_explanatory_power_full_p02.tex">TeX</a> · <a href="tables/auditor_quality_run_20260925/narrow/akm_explanatory_power_full_p02.pdf">PDF</a>
 </figcaption>
 </figure>
 <p>在 65,320 个观测值、3,361 名审计师的样本中，加入审计师 FE 后，综合失败、重述与违规的 <span class="math inline">\(R^2\)</span> 分别显著提高 0.0766、0.0765 和 0.0801，部分 F 统计量约为 2.07–2.11，整体具有显著的统计解释力。下表进一步展示了包含与不包含客户 FE 设定下的完整方差与协方差分量。</p>
 <figure class="latex-table figure">
-<img alt='含和不含客户 FE 两组估计的全部方差分量与协方差。&lt;a href="tables/auditor_quality_run_20260925/narrow/akm_full_variance_decomposition.tex"&gt;LaTeX 源文件&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_run_20260925/narrow/akm_full_variance_decomposition_full_p01.png"/>
+<a href="tables/auditor_quality_run_20260925/narrow/akm_full_variance_decomposition_full_p01.pdf"><img alt='含和不含客户 FE 两组估计的全部方差分量与协方差。&lt;a href="tables/auditor_quality_run_20260925/narrow/akm_full_variance_decomposition.tex"&gt;LaTeX 源文件&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_run_20260925/narrow/akm_full_variance_decomposition_full_p01.png"/></a>
 <figcaption>
-含和不含客户 FE 两组估计的全部方差分量与协方差。LaTeX 源文件。 ·  · 
+含和不含客户 FE 两组估计的全部方差分量与协方差。<a href="tables/auditor_quality_run_20260925/narrow/akm_full_variance_decomposition.tex">LaTeX 源文件</a>。 · <a href="tables/auditor_quality_run_20260925/narrow/akm_full_variance_decomposition_full_p01.tex">TeX</a> · <a href="tables/auditor_quality_run_20260925/narrow/akm_full_variance_decomposition_full_p01.pdf">PDF</a>
 </figcaption>
 </figure>
 <figure class="latex-table figure">
-<img alt='含和不含客户 FE 两组估计的全部方差分量与协方差。&lt;a href="tables/auditor_quality_run_20260925/narrow/akm_full_variance_decomposition.tex"&gt;LaTeX 源文件&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_run_20260925/narrow/akm_full_variance_decomposition_full_p02.png"/>
+<a href="tables/auditor_quality_run_20260925/narrow/akm_full_variance_decomposition_full_p02.pdf"><img alt='含和不含客户 FE 两组估计的全部方差分量与协方差。&lt;a href="tables/auditor_quality_run_20260925/narrow/akm_full_variance_decomposition.tex"&gt;LaTeX 源文件&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_run_20260925/narrow/akm_full_variance_decomposition_full_p02.png"/></a>
 <figcaption>
-含和不含客户 FE 两组估计的全部方差分量与协方差。LaTeX 源文件。 ·  · 
+含和不含客户 FE 两组估计的全部方差分量与协方差。<a href="tables/auditor_quality_run_20260925/narrow/akm_full_variance_decomposition.tex">LaTeX 源文件</a>。 · <a href="tables/auditor_quality_run_20260925/narrow/akm_full_variance_decomposition_full_p02.tex">TeX</a> · <a href="tables/auditor_quality_run_20260925/narrow/akm_full_variance_decomposition_full_p02.pdf">PDF</a>
 </figcaption>
 </figure>
 <figure class="latex-table figure">
-<img alt='含和不含客户 FE 两组估计的全部方差分量与协方差。&lt;a href="tables/auditor_quality_run_20260925/narrow/akm_full_variance_decomposition.tex"&gt;LaTeX 源文件&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_run_20260925/narrow/akm_full_variance_decomposition_full_p03.png"/>
+<a href="tables/auditor_quality_run_20260925/narrow/akm_full_variance_decomposition_full_p03.pdf"><img alt='含和不含客户 FE 两组估计的全部方差分量与协方差。&lt;a href="tables/auditor_quality_run_20260925/narrow/akm_full_variance_decomposition.tex"&gt;LaTeX 源文件&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_run_20260925/narrow/akm_full_variance_decomposition_full_p03.png"/></a>
 <figcaption>
-含和不含客户 FE 两组估计的全部方差分量与协方差。LaTeX 源文件。 ·  · 
+含和不含客户 FE 两组估计的全部方差分量与协方差。<a href="tables/auditor_quality_run_20260925/narrow/akm_full_variance_decomposition.tex">LaTeX 源文件</a>。 · <a href="tables/auditor_quality_run_20260925/narrow/akm_full_variance_decomposition_full_p03.tex">TeX</a> · <a href="tables/auditor_quality_run_20260925/narrow/akm_full_variance_decomposition_full_p03.pdf">PDF</a>
 </figcaption>
 </figure>
 <figure class="latex-table figure">
-<img alt='含和不含客户 FE 两组估计的全部方差分量与协方差。&lt;a href="tables/auditor_quality_run_20260925/narrow/akm_full_variance_decomposition.tex"&gt;LaTeX 源文件&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_run_20260925/narrow/akm_full_variance_decomposition_full_p04.png"/>
+<a href="tables/auditor_quality_run_20260925/narrow/akm_full_variance_decomposition_full_p04.pdf"><img alt='含和不含客户 FE 两组估计的全部方差分量与协方差。&lt;a href="tables/auditor_quality_run_20260925/narrow/akm_full_variance_decomposition.tex"&gt;LaTeX 源文件&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_run_20260925/narrow/akm_full_variance_decomposition_full_p04.png"/></a>
 <figcaption>
-含和不含客户 FE 两组估计的全部方差分量与协方差。LaTeX 源文件。 ·  · 
+含和不含客户 FE 两组估计的全部方差分量与协方差。<a href="tables/auditor_quality_run_20260925/narrow/akm_full_variance_decomposition.tex">LaTeX 源文件</a>。 · <a href="tables/auditor_quality_run_20260925/narrow/akm_full_variance_decomposition_full_p04.tex">TeX</a> · <a href="tables/auditor_quality_run_20260925/narrow/akm_full_variance_decomposition_full_p04.pdf">PDF</a>
 </figcaption>
 </figure>
 <p>在网络连通性方面，最大连通分量容纳了 99.7% 的审计师，表明大部分实体处在同一可比网络中。但如下表所示，61.3% 的审计师仅在单一执业平台出现，且有 14.5% 执业记录少于 5 份报告，网络识别对少数桥接者的依赖较为明显。</p>
 <figure class="latex-table figure">
-<img alt='AKM 网络连通和个人观察支持。&lt;a href="tables/auditor_quality_run_20260925/narrow/akm_identification_support.tex"&gt;LaTeX 源文件&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_run_20260925/narrow/akm_identification_support_full_p01.png"/>
+<a href="tables/auditor_quality_run_20260925/narrow/akm_identification_support_full_p01.pdf"><img alt='AKM 网络连通和个人观察支持。&lt;a href="tables/auditor_quality_run_20260925/narrow/akm_identification_support.tex"&gt;LaTeX 源文件&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_run_20260925/narrow/akm_identification_support_full_p01.png"/></a>
 <figcaption>
-AKM 网络连通和个人观察支持。LaTeX 源文件。 ·  · 
+AKM 网络连通和个人观察支持。<a href="tables/auditor_quality_run_20260925/narrow/akm_identification_support.tex">LaTeX 源文件</a>。 · <a href="tables/auditor_quality_run_20260925/narrow/akm_identification_support_full_p01.tex">TeX</a> · <a href="tables/auditor_quality_run_20260925/narrow/akm_identification_support_full_p01.pdf">PDF</a>
 </figcaption>
 </figure>
 <figure class="latex-table figure">
-<img alt='AKM 网络连通和个人观察支持。&lt;a href="tables/auditor_quality_run_20260925/narrow/akm_identification_support.tex"&gt;LaTeX 源文件&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_run_20260925/narrow/akm_identification_support_full_p02.png"/>
+<a href="tables/auditor_quality_run_20260925/narrow/akm_identification_support_full_p02.pdf"><img alt='AKM 网络连通和个人观察支持。&lt;a href="tables/auditor_quality_run_20260925/narrow/akm_identification_support.tex"&gt;LaTeX 源文件&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_run_20260925/narrow/akm_identification_support_full_p02.png"/></a>
 <figcaption>
-AKM 网络连通和个人观察支持。LaTeX 源文件。 ·  · 
+AKM 网络连通和个人观察支持。<a href="tables/auditor_quality_run_20260925/narrow/akm_identification_support.tex">LaTeX 源文件</a>。 · <a href="tables/auditor_quality_run_20260925/narrow/akm_identification_support_full_p02.tex">TeX</a> · <a href="tables/auditor_quality_run_20260925/narrow/akm_identification_support_full_p02.pdf">PDF</a>
 </figcaption>
 </figure>
 <figure class="latex-table figure">
-<img alt='AKM 网络连通和个人观察支持。&lt;a href="tables/auditor_quality_run_20260925/narrow/akm_identification_support.tex"&gt;LaTeX 源文件&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_run_20260925/narrow/akm_identification_support_full_p03.png"/>
+<a href="tables/auditor_quality_run_20260925/narrow/akm_identification_support_full_p03.pdf"><img alt='AKM 网络连通和个人观察支持。&lt;a href="tables/auditor_quality_run_20260925/narrow/akm_identification_support.tex"&gt;LaTeX 源文件&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_run_20260925/narrow/akm_identification_support_full_p03.png"/></a>
 <figcaption>
-AKM 网络连通和个人观察支持。LaTeX 源文件。 ·  · 
+AKM 网络连通和个人观察支持。<a href="tables/auditor_quality_run_20260925/narrow/akm_identification_support.tex">LaTeX 源文件</a>。 · <a href="tables/auditor_quality_run_20260925/narrow/akm_identification_support_full_p03.tex">TeX</a> · <a href="tables/auditor_quality_run_20260925/narrow/akm_identification_support_full_p03.pdf">PDF</a>
 </figcaption>
 </figure>
 </section>
@@ -393,98 +1700,98 @@ AKM 网络连通和个人观察支持。LaTeX 源文件。 ·  ·
 <h3 class="anchored" data-anchor-id="跨样本可靠性与人力资本投影">4.2 跨样本可靠性与人力资本投影</h3>
 <p>为检验个体 auditor FE 的测量稳定性，将样本按不同维度（奇偶年份、随机客户项目、早晚时期、留出客户）拆分为两个子样本，分别估计 <span class="math inline">\(\widehat\alpha_a^{(0)}\)</span> 与 <span class="math inline">\(\widehat\alpha_a^{(1)}\)</span>，计算相关性及样本外预测增量。</p>
 <figure class="latex-table figure">
-<img alt='四种分样本方式的相关性及样本外增量解释力。&lt;a href="tables/auditor_quality_run_20260925/narrow/akm_split_reliability.tex"&gt;LaTeX 源文件&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_run_20260925/narrow/akm_split_reliability_full_p01.png"/>
+<a href="tables/auditor_quality_run_20260925/narrow/akm_split_reliability_full_p01.pdf"><img alt='四种分样本方式的相关性及样本外增量解释力。&lt;a href="tables/auditor_quality_run_20260925/narrow/akm_split_reliability.tex"&gt;LaTeX 源文件&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_run_20260925/narrow/akm_split_reliability_full_p01.png"/></a>
 <figcaption>
-四种分样本方式的相关性及样本外增量解释力。LaTeX 源文件。 ·  · 
+四种分样本方式的相关性及样本外增量解释力。<a href="tables/auditor_quality_run_20260925/narrow/akm_split_reliability.tex">LaTeX 源文件</a>。 · <a href="tables/auditor_quality_run_20260925/narrow/akm_split_reliability_full_p01.tex">TeX</a> · <a href="tables/auditor_quality_run_20260925/narrow/akm_split_reliability_full_p01.pdf">PDF</a>
 </figcaption>
 </figure>
 <figure class="latex-table figure">
-<img alt='四种分样本方式的相关性及样本外增量解释力。&lt;a href="tables/auditor_quality_run_20260925/narrow/akm_split_reliability.tex"&gt;LaTeX 源文件&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_run_20260925/narrow/akm_split_reliability_full_p02.png"/>
+<a href="tables/auditor_quality_run_20260925/narrow/akm_split_reliability_full_p02.pdf"><img alt='四种分样本方式的相关性及样本外增量解释力。&lt;a href="tables/auditor_quality_run_20260925/narrow/akm_split_reliability.tex"&gt;LaTeX 源文件&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_run_20260925/narrow/akm_split_reliability_full_p02.png"/></a>
 <figcaption>
-四种分样本方式的相关性及样本外增量解释力。LaTeX 源文件。 ·  · 
+四种分样本方式的相关性及样本外增量解释力。<a href="tables/auditor_quality_run_20260925/narrow/akm_split_reliability.tex">LaTeX 源文件</a>。 · <a href="tables/auditor_quality_run_20260925/narrow/akm_split_reliability_full_p02.tex">TeX</a> · <a href="tables/auditor_quality_run_20260925/narrow/akm_split_reliability_full_p02.pdf">PDF</a>
 </figcaption>
 </figure>
 <figure class="latex-table figure">
-<img alt='四种分样本方式的相关性及样本外增量解释力。&lt;a href="tables/auditor_quality_run_20260925/narrow/akm_split_reliability.tex"&gt;LaTeX 源文件&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_run_20260925/narrow/akm_split_reliability_full_p03.png"/>
+<a href="tables/auditor_quality_run_20260925/narrow/akm_split_reliability_full_p03.pdf"><img alt='四种分样本方式的相关性及样本外增量解释力。&lt;a href="tables/auditor_quality_run_20260925/narrow/akm_split_reliability.tex"&gt;LaTeX 源文件&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_run_20260925/narrow/akm_split_reliability_full_p03.png"/></a>
 <figcaption>
-四种分样本方式的相关性及样本外增量解释力。LaTeX 源文件。 ·  · 
+四种分样本方式的相关性及样本外增量解释力。<a href="tables/auditor_quality_run_20260925/narrow/akm_split_reliability.tex">LaTeX 源文件</a>。 · <a href="tables/auditor_quality_run_20260925/narrow/akm_split_reliability_full_p03.tex">TeX</a> · <a href="tables/auditor_quality_run_20260925/narrow/akm_split_reliability_full_p03.pdf">PDF</a>
 </figcaption>
 </figure>
 <figure class="latex-table figure">
-<img alt='质量分位组跨样本保留率。&lt;a href="tables/auditor_quality_run_20260925/narrow/akm_tail_stability.tex"&gt;LaTeX 源文件&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_run_20260925/narrow/akm_tail_stability_full_p01.png"/>
+<a href="tables/auditor_quality_run_20260925/narrow/akm_tail_stability_full_p01.pdf"><img alt='质量分位组跨样本保留率。&lt;a href="tables/auditor_quality_run_20260925/narrow/akm_tail_stability.tex"&gt;LaTeX 源文件&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_run_20260925/narrow/akm_tail_stability_full_p01.png"/></a>
 <figcaption>
-质量分位组跨样本保留率。LaTeX 源文件。 ·  · 
+质量分位组跨样本保留率。<a href="tables/auditor_quality_run_20260925/narrow/akm_tail_stability.tex">LaTeX 源文件</a>。 · <a href="tables/auditor_quality_run_20260925/narrow/akm_tail_stability_full_p01.tex">TeX</a> · <a href="tables/auditor_quality_run_20260925/narrow/akm_tail_stability_full_p01.pdf">PDF</a>
 </figcaption>
 </figure>
 <figure class="latex-table figure">
-<img alt='质量分位组跨样本保留率。&lt;a href="tables/auditor_quality_run_20260925/narrow/akm_tail_stability.tex"&gt;LaTeX 源文件&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_run_20260925/narrow/akm_tail_stability_full_p02.png"/>
+<a href="tables/auditor_quality_run_20260925/narrow/akm_tail_stability_full_p02.pdf"><img alt='质量分位组跨样本保留率。&lt;a href="tables/auditor_quality_run_20260925/narrow/akm_tail_stability.tex"&gt;LaTeX 源文件&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_run_20260925/narrow/akm_tail_stability_full_p02.png"/></a>
 <figcaption>
-质量分位组跨样本保留率。LaTeX 源文件。 ·  · 
+质量分位组跨样本保留率。<a href="tables/auditor_quality_run_20260925/narrow/akm_tail_stability.tex">LaTeX 源文件</a>。 · <a href="tables/auditor_quality_run_20260925/narrow/akm_tail_stability_full_p02.tex">TeX</a> · <a href="tables/auditor_quality_run_20260925/narrow/akm_tail_stability_full_p02.pdf">PDF</a>
 </figcaption>
 </figure>
 <figure class="latex-table figure">
-<img alt='质量分位组跨样本保留率。&lt;a href="tables/auditor_quality_run_20260925/narrow/akm_tail_stability.tex"&gt;LaTeX 源文件&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_run_20260925/narrow/akm_tail_stability_full_p03.png"/>
+<a href="tables/auditor_quality_run_20260925/narrow/akm_tail_stability_full_p03.pdf"><img alt='质量分位组跨样本保留率。&lt;a href="tables/auditor_quality_run_20260925/narrow/akm_tail_stability.tex"&gt;LaTeX 源文件&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_run_20260925/narrow/akm_tail_stability_full_p03.png"/></a>
 <figcaption>
-质量分位组跨样本保留率。LaTeX 源文件。 ·  · 
+质量分位组跨样本保留率。<a href="tables/auditor_quality_run_20260925/narrow/akm_tail_stability.tex">LaTeX 源文件</a>。 · <a href="tables/auditor_quality_run_20260925/narrow/akm_tail_stability_full_p03.tex">TeX</a> · <a href="tables/auditor_quality_run_20260925/narrow/akm_tail_stability_full_p03.pdf">PDF</a>
 </figcaption>
 </figure>
 <p>拆分检验显示： - 综合失败 FE 在奇偶年份拆分中的相关系数为 0.452，在随机客户项目拆分中降至 0.220，而在早晚时期拆分（0.030）与留出客户拆分（−0.048）中近乎归零。 - 这表明固定效应在早晚时期和不同客户间的迁移性较弱；测量噪声、客户关系和时变服务差异都是可能来源。</p>
 <p>将估计出的 auditor FE 对审计师可观察人力资本（四大从业经历、985/211 院校背景、学历）进行投影：</p>
 <p><span class="math display">\[\widehat\alpha_a=\theta_0+\theta_1\mathrm{Big4Bg}_a+\theta_2\mathrm{School985/211}_a+\theta_3\mathrm{MasterPlus}_a+\theta_4\mathrm{BachelorPlus}_a+u_a.\]</span></p>
 <figure class="latex-table figure">
-<img alt='四类 AKM FE 的加权与不加权人力资本投影。&lt;a href="tables/auditor_quality_run_20260925/narrow/akm_human_capital_projection.tex"&gt;LaTeX 源文件&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_run_20260925/narrow/akm_human_capital_projection_full_p01.png"/>
+<a href="tables/auditor_quality_run_20260925/narrow/akm_human_capital_projection_full_p01.pdf"><img alt='四类 AKM FE 的加权与不加权人力资本投影。&lt;a href="tables/auditor_quality_run_20260925/narrow/akm_human_capital_projection.tex"&gt;LaTeX 源文件&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_run_20260925/narrow/akm_human_capital_projection_full_p01.png"/></a>
 <figcaption>
-四类 AKM FE 的加权与不加权人力资本投影。LaTeX 源文件。 ·  · 
+四类 AKM FE 的加权与不加权人力资本投影。<a href="tables/auditor_quality_run_20260925/narrow/akm_human_capital_projection.tex">LaTeX 源文件</a>。 · <a href="tables/auditor_quality_run_20260925/narrow/akm_human_capital_projection_full_p01.tex">TeX</a> · <a href="tables/auditor_quality_run_20260925/narrow/akm_human_capital_projection_full_p01.pdf">PDF</a>
 </figcaption>
 </figure>
 <figure class="latex-table figure">
-<img alt='四类 AKM FE 的加权与不加权人力资本投影。&lt;a href="tables/auditor_quality_run_20260925/narrow/akm_human_capital_projection.tex"&gt;LaTeX 源文件&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_run_20260925/narrow/akm_human_capital_projection_full_p02.png"/>
+<a href="tables/auditor_quality_run_20260925/narrow/akm_human_capital_projection_full_p02.pdf"><img alt='四类 AKM FE 的加权与不加权人力资本投影。&lt;a href="tables/auditor_quality_run_20260925/narrow/akm_human_capital_projection.tex"&gt;LaTeX 源文件&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_run_20260925/narrow/akm_human_capital_projection_full_p02.png"/></a>
 <figcaption>
-四类 AKM FE 的加权与不加权人力资本投影。LaTeX 源文件。 ·  · 
+四类 AKM FE 的加权与不加权人力资本投影。<a href="tables/auditor_quality_run_20260925/narrow/akm_human_capital_projection.tex">LaTeX 源文件</a>。 · <a href="tables/auditor_quality_run_20260925/narrow/akm_human_capital_projection_full_p02.tex">TeX</a> · <a href="tables/auditor_quality_run_20260925/narrow/akm_human_capital_projection_full_p02.pdf">PDF</a>
 </figcaption>
 </figure>
 <figure class="latex-table figure">
-<img alt='四类 AKM FE 的加权与不加权人力资本投影。&lt;a href="tables/auditor_quality_run_20260925/narrow/akm_human_capital_projection.tex"&gt;LaTeX 源文件&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_run_20260925/narrow/akm_human_capital_projection_full_p03.png"/>
+<a href="tables/auditor_quality_run_20260925/narrow/akm_human_capital_projection_full_p03.pdf"><img alt='四类 AKM FE 的加权与不加权人力资本投影。&lt;a href="tables/auditor_quality_run_20260925/narrow/akm_human_capital_projection.tex"&gt;LaTeX 源文件&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_run_20260925/narrow/akm_human_capital_projection_full_p03.png"/></a>
 <figcaption>
-四类 AKM FE 的加权与不加权人力资本投影。LaTeX 源文件。 ·  · 
+四类 AKM FE 的加权与不加权人力资本投影。<a href="tables/auditor_quality_run_20260925/narrow/akm_human_capital_projection.tex">LaTeX 源文件</a>。 · <a href="tables/auditor_quality_run_20260925/narrow/akm_human_capital_projection_full_p03.tex">TeX</a> · <a href="tables/auditor_quality_run_20260925/narrow/akm_human_capital_projection_full_p03.pdf">PDF</a>
 </figcaption>
 </figure>
 <p>可观察的人力资本特征仅解释了失败类 auditor FE 极小的方差（等权 0.16%，加权 0.26%），显示这些履历变量对估计分数的解释力较低；分数中的测量误差也可能削弱投影关系。</p>
 <p>最后，下述表格刻画了 auditor FE 分布两端与中间组的特征对比及跨梯队事务所流动：</p>
 <figure class="latex-table figure">
-<img alt='AKM 质量组的覆盖和事务所类别。&lt;a href="tables/auditor_quality_run_20260925/narrow/akm_quality_group_profile.tex"&gt;LaTeX 源文件&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_run_20260925/narrow/akm_quality_group_profile_full_p01.png"/>
+<a href="tables/auditor_quality_run_20260925/narrow/akm_quality_group_profile_full_p01.pdf"><img alt='AKM 质量组的覆盖和事务所类别。&lt;a href="tables/auditor_quality_run_20260925/narrow/akm_quality_group_profile.tex"&gt;LaTeX 源文件&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_run_20260925/narrow/akm_quality_group_profile_full_p01.png"/></a>
 <figcaption>
-AKM 质量组的覆盖和事务所类别。LaTeX 源文件。 ·  · 
+AKM 质量组的覆盖和事务所类别。<a href="tables/auditor_quality_run_20260925/narrow/akm_quality_group_profile.tex">LaTeX 源文件</a>。 · <a href="tables/auditor_quality_run_20260925/narrow/akm_quality_group_profile_full_p01.tex">TeX</a> · <a href="tables/auditor_quality_run_20260925/narrow/akm_quality_group_profile_full_p01.pdf">PDF</a>
 </figcaption>
 </figure>
 <figure class="latex-table figure">
-<img alt='AKM 质量组的覆盖和事务所类别。&lt;a href="tables/auditor_quality_run_20260925/narrow/akm_quality_group_profile.tex"&gt;LaTeX 源文件&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_run_20260925/narrow/akm_quality_group_profile_full_p02.png"/>
+<a href="tables/auditor_quality_run_20260925/narrow/akm_quality_group_profile_full_p02.pdf"><img alt='AKM 质量组的覆盖和事务所类别。&lt;a href="tables/auditor_quality_run_20260925/narrow/akm_quality_group_profile.tex"&gt;LaTeX 源文件&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_run_20260925/narrow/akm_quality_group_profile_full_p02.png"/></a>
 <figcaption>
-AKM 质量组的覆盖和事务所类别。LaTeX 源文件。 ·  · 
+AKM 质量组的覆盖和事务所类别。<a href="tables/auditor_quality_run_20260925/narrow/akm_quality_group_profile.tex">LaTeX 源文件</a>。 · <a href="tables/auditor_quality_run_20260925/narrow/akm_quality_group_profile_full_p02.tex">TeX</a> · <a href="tables/auditor_quality_run_20260925/narrow/akm_quality_group_profile_full_p02.pdf">PDF</a>
 </figcaption>
 </figure>
 <figure class="latex-table figure">
-<img alt='AKM 两端组与中间组的七项描述性差异。&lt;a href="tables/auditor_quality_run_20260925/narrow/akm_extreme_middle_difference.tex"&gt;LaTeX 源文件&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_run_20260925/narrow/akm_extreme_middle_difference_full_p01.png"/>
+<a href="tables/auditor_quality_run_20260925/narrow/akm_extreme_middle_difference_full_p01.pdf"><img alt='AKM 两端组与中间组的七项描述性差异。&lt;a href="tables/auditor_quality_run_20260925/narrow/akm_extreme_middle_difference.tex"&gt;LaTeX 源文件&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_run_20260925/narrow/akm_extreme_middle_difference_full_p01.png"/></a>
 <figcaption>
-AKM 两端组与中间组的七项描述性差异。LaTeX 源文件。 ·  · 
+AKM 两端组与中间组的七项描述性差异。<a href="tables/auditor_quality_run_20260925/narrow/akm_extreme_middle_difference.tex">LaTeX 源文件</a>。 · <a href="tables/auditor_quality_run_20260925/narrow/akm_extreme_middle_difference_full_p01.tex">TeX</a> · <a href="tables/auditor_quality_run_20260925/narrow/akm_extreme_middle_difference_full_p01.pdf">PDF</a>
 </figcaption>
 </figure>
 <figure class="latex-table figure">
-<img alt='AKM 两端组与中间组的七项描述性差异。&lt;a href="tables/auditor_quality_run_20260925/narrow/akm_extreme_middle_difference.tex"&gt;LaTeX 源文件&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_run_20260925/narrow/akm_extreme_middle_difference_full_p02.png"/>
+<a href="tables/auditor_quality_run_20260925/narrow/akm_extreme_middle_difference_full_p02.pdf"><img alt='AKM 两端组与中间组的七项描述性差异。&lt;a href="tables/auditor_quality_run_20260925/narrow/akm_extreme_middle_difference.tex"&gt;LaTeX 源文件&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_run_20260925/narrow/akm_extreme_middle_difference_full_p02.png"/></a>
 <figcaption>
-AKM 两端组与中间组的七项描述性差异。LaTeX 源文件。 ·  · 
+AKM 两端组与中间组的七项描述性差异。<a href="tables/auditor_quality_run_20260925/narrow/akm_extreme_middle_difference.tex">LaTeX 源文件</a>。 · <a href="tables/auditor_quality_run_20260925/narrow/akm_extreme_middle_difference_full_p02.tex">TeX</a> · <a href="tables/auditor_quality_run_20260925/narrow/akm_extreme_middle_difference_full_p02.pdf">PDF</a>
 </figcaption>
 </figure>
 <figure class="latex-table figure">
-<img alt='审计师在事务所梯队间的流动计数。&lt;a href="tables/auditor_quality_run_20260925/narrow/akm_mobility_flow.tex"&gt;LaTeX 源文件&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_run_20260925/narrow/akm_mobility_flow_full_p01.png"/>
+<a href="tables/auditor_quality_run_20260925/narrow/akm_mobility_flow_full_p01.pdf"><img alt='审计师在事务所梯队间的流动计数。&lt;a href="tables/auditor_quality_run_20260925/narrow/akm_mobility_flow.tex"&gt;LaTeX 源文件&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_run_20260925/narrow/akm_mobility_flow_full_p01.png"/></a>
 <figcaption>
-审计师在事务所梯队间的流动计数。LaTeX 源文件。 ·  · 
+审计师在事务所梯队间的流动计数。<a href="tables/auditor_quality_run_20260925/narrow/akm_mobility_flow.tex">LaTeX 源文件</a>。 · <a href="tables/auditor_quality_run_20260925/narrow/akm_mobility_flow_full_p01.tex">TeX</a> · <a href="tables/auditor_quality_run_20260925/narrow/akm_mobility_flow_full_p01.pdf">PDF</a>
 </figcaption>
 </figure>
 <figure class="latex-table figure">
-<img alt='审计师在事务所梯队间的流动计数。&lt;a href="tables/auditor_quality_run_20260925/narrow/akm_mobility_flow.tex"&gt;LaTeX 源文件&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_run_20260925/narrow/akm_mobility_flow_full_p02.png"/>
+<a href="tables/auditor_quality_run_20260925/narrow/akm_mobility_flow_full_p02.pdf"><img alt='审计师在事务所梯队间的流动计数。&lt;a href="tables/auditor_quality_run_20260925/narrow/akm_mobility_flow.tex"&gt;LaTeX 源文件&lt;/a&gt;。' class="figure-img" loading="lazy" src="tables/auditor_quality_run_20260925/narrow/akm_mobility_flow_full_p02.png"/></a>
 <figcaption>
-审计师在事务所梯队间的流动计数。LaTeX 源文件。 ·  · 
+审计师在事务所梯队间的流动计数。<a href="tables/auditor_quality_run_20260925/narrow/akm_mobility_flow.tex">LaTeX 源文件</a>。 · <a href="tables/auditor_quality_run_20260925/narrow/akm_mobility_flow_full_p02.tex">TeX</a> · <a href="tables/auditor_quality_run_20260925/narrow/akm_mobility_flow_full_p02.pdf">PDF</a>
 </figcaption>
 </figure>
 <p><span id="稀有失败个人排名与平均服务效应"></span></p>
@@ -513,10 +1820,34 @@ E[\widehat{\theta}\mid Z]=\theta.
 </section>
 <section class="level2" id="数据与估计程序记录">
 <h2 class="anchored" data-anchor-id="数据与估计程序记录">数据与估计程序记录</h2>
-<p><strong>估计程序（存档）。</strong> 45_pairwise_akm_report_year_sensitivity.do · 30_auditor_akm_fe.do · 30_auditor_akm_reliability_tests.do</p>
+<p><strong>估计程序（存档）。</strong> <a href="maintenance/source_code/code/stata/40_selection_matching/akm/45_pairwise_akm_report_year_sensitivity.do">45_pairwise_akm_report_year_sensitivity.do</a> · <a href="maintenance/source_code/code/stata/30_partner_humancapital/30_auditor_akm_fe.do">30_auditor_akm_fe.do</a> · <a href="maintenance/source_code/code/stata/30_partner_humancapital/30_auditor_akm_reliability_tests.do">30_auditor_akm_reliability_tests.do</a></p>
 <p><strong>Rare-event 补充诊断。</strong> 数值核对自 <code>results/reports/partner_humancapital/audit_outcome_identification/audit_outcome_identification.md</code>，其中 role=0 为当期／继任 A1。文献在线核验日期：2026-09-27。</p>
 </section>
-<p><a href="sources/26_akm.qmd">下载本页 QMD 源文件</a></p></main> <!-- /main -->
+<section class="level2" id="参考文献">
+<h2 class="anchored" data-anchor-id="参考文献">参考文献</h2>
+<div class="references csl-bib-body hanging-indent" id="refs" role="list">
+<div class="csl-entry" id="ref-akm1999" role="listitem">
+Abowd, John M., Francis Kramarz, 和 David N. Margolis. 1999年. <span>《High Wage Workers and High Wage Firms》</span>. <em>Econometrica</em> 67 (2): 251～333. <a href="https://doi.org/10.1111/1468-0262.00020">https://doi.org/10.1111/1468-0262.00020</a>.
+</div>
+<div class="csl-entry" id="ref-ams2019" role="listitem">
+Abowd, John M., Kevin L. McKinney, 和 Ian M. Schmutte. 2019年. <span>《Modeling Endogenous Mobility in Earnings Determination》</span>. <em>Journal of Business &amp; Economic Statistics</em> 37 (3): 405～18. <a href="https://doi.org/10.1080/07350015.2017.1356727">https://doi.org/10.1080/07350015.2017.1356727</a>.
+</div>
+<div class="csl-entry" id="ref-blm2019" role="listitem">
+Bonhomme, Stéphane, Thibaut Lamadon, 和 Elena Manresa. 2019年. <span>《A Distributional Framework for Matched Employer Employee Data》</span>. <em>Econometrica</em> 87 (3): 699～739. <a href="https://doi.org/10.3982/ECTA15722">https://doi.org/10.3982/ECTA15722</a>.
+</div>
+<div class="csl-entry" id="ref-gfe2022" role="listitem">
+Bonhomme, Stéphane, Thibaut Lamadon, 和 Elena Manresa. 2022年. <span>《Discretizing Unobserved Heterogeneity》</span>. <em>Econometrica</em> 90 (2): 625～43. <a href="https://doi.org/10.3982/ECTA15238">https://doi.org/10.3982/ECTA15238</a>.
+</div>
+<div class="csl-entry" id="ref-kss2020" role="listitem">
+Kline, Patrick, Raffaele Saggio, 和 Mikkel Sølvsten. 2020年. <span>《Leave-Out Estimation of Variance Components》</span>. <em>Econometrica</em> 88 (5): 1859～98. <a href="https://doi.org/10.3982/ECTA16410">https://doi.org/10.3982/ECTA16410</a>.
+</div>
+</div>
+</section>
+<div class="default" id="quarto-appendix"><section class="footnotes footnotes-end-of-document" id="footnotes" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">脚注</h2>
+<ol>
+<li id="fn1"><p>动态条件的原文核对使用2017年9月工作稿§2.2及Assumption 2；发表信息按2019年Econometrica版本著录，阅读版本和位置另存维护记录。<a class="footnote-back" href="#fnref1" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div><p><a href="sources/26_akm.qmd">下载本页 QMD 源文件</a></p></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
@@ -918,5 +2249,5 @@ E[\widehat{\theta}\mid Z]=\theta.
   });
   </script>
 </div> <!-- /content -->
-<script src="report-toc.js" defer></script>
+<script defer="" src="report-toc.js"></script>
 </body></html>

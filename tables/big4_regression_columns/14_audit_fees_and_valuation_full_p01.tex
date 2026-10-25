@@ -1,0 +1,31 @@
+\documentclass[10pt]{article}
+\usepackage[paperwidth=21cm,paperheight=45cm,margin=1cm]{geometry}
+\usepackage{fontspec,booktabs,array,amsmath,graphicx}
+\setmainfont{lmroman10-regular.otf}[BoldFont=lmroman10-bold.otf,ItalicFont=lmroman10-italic.otf,BoldItalicFont=lmroman10-bolditalic.otf]
+\pagestyle{empty}\setlength{\parindent}{0pt}
+\newcommand{\sym}[1]{\textsuperscript{#1}}
+\begin{document}\fontsize{10}{12}\selectfont
+\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.15}
+\begin{center}\large Big 4 Auditors, Audit Fees, and Market Value\end{center}
+\medskip\textbf{Big 4: Industry $\times$ Year FE}\par\smallskip
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lccc@{}}
+\toprule
+ & Log Audit Fee & Log Fee Increase & Log Market Value \\
+ & (1) & (2) & (3) \\
+\midrule
+Big 4 & 0.591\sym{***} & 2.562\sym{***} & 0.207\sym{***} \\
+ & (0.027) & (0.195) & (0.038) \\
+Observations & 62,707 & 48,970 & 63,921 \\
+\bottomrule\end{tabular*}\par
+\medskip\textbf{Big 4: Firm and Year FE}\par\smallskip
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lccc@{}}
+\toprule
+ & Log Audit Fee & Log Fee Increase & Log Market Value \\
+ & (1) & (2) & (3) \\
+\midrule
+Big 4 & 0.311\sym{***} & 2.450\sym{***} & 0.106\sym{***} \\
+ & (0.032) & (0.268) & (0.026) \\
+Observations & 63,513 & 49,460 & 64,828 \\
+\bottomrule\end{tabular*}\par
+\medskip\fontsize{9}{11}\selectfont\textit{Notes:} SE clustered by firm. Audit-fee or valuation controls, with mis\_dummy. * $p<0.10$, ** $p<0.05$, *** $p<0.01$.
+\end{document}

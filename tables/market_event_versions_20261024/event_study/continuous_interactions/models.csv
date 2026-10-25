@@ -1,0 +1,5 @@
+spec,outcome,n,clusters,r2,df_r,omitted
+linear,log_price,330646,30064,.99797606,30063,0
+linear,car_pct,330646,30064,.68600303,30063,0
+spline,log_price,330646,30064,.9979949,30063,0
+spline,car_pct,330646,30064,.68880248,30063,0

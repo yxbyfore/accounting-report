@@ -1,0 +1,28 @@
+\documentclass[10pt]{article}
+\usepackage[paperwidth=32cm,paperheight=45cm,margin=1cm]{geometry}
+\usepackage{fontspec,xeCJK}
+\setmainfont{lmroman10-regular.otf}[BoldFont=lmroman10-bold.otf,ItalicFont=lmroman10-italic.otf,BoldItalicFont=lmroman10-bolditalic.otf]
+\setCJKmainfont{SimSun}
+\usepackage{booktabs,array,threeparttable,graphicx,caption,longtable,amsmath,amssymb,hyperref,xcolor}
+\usepackage[active,tightpage]{preview}
+\PreviewEnvironment{minipage}
+\setlength\PreviewBorder{6pt}
+\newcommand{\sym}[1]{\textsuperscript{#1}}
+\captionsetup{font=normalsize,labelformat=empty,skip=6pt}
+\setlength{\parindent}{0pt}
+\begin{document}
+\begin{minipage}{19cm}\fontsize{10}{12}\selectfont\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.12}
+
+\centering
+\begin{tabular}{>{\raggedright\arraybackslash}p{2.70cm}>{\raggedright\arraybackslash}p{2.70cm}>{\raggedright\arraybackslash}p{2.70cm}>{\raggedright\arraybackslash}p{2.70cm}>{\raggedright\arraybackslash}p{2.70cm}>{\raggedright\arraybackslash}p{2.70cm}}
+\toprule
+Model: unwarned any failure & Client FE & Audit-firm FE & Auditor FE & Residual & Covariance \\
+\midrule
+Client x audit firm & 27.6\% & 1.9\% & -- & 69.3\% & -0.8\% \\
+Client x auditor & 31.4\% & -- & 14.3\% & 62.0\% & -9.9\% \\
+Audit firm x auditor & -- & 4.1\% & 14.2\% & 83.4\% & -3.5\% \\
+Three-way reference & 31.4\% & 2.9\% & 15.0\% & 61.6\% & -13.1\% \\
+\bottomrule\end{tabular}
+
+\end{minipage}
+\end{document}

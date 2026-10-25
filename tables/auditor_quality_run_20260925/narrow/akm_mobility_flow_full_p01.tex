@@ -1,0 +1,41 @@
+\documentclass[10pt]{article}
+\usepackage[paperwidth=32cm,paperheight=45cm,margin=1cm]{geometry}
+\usepackage{fontspec,xeCJK}
+\setmainfont{lmroman10-regular.otf}[BoldFont=lmroman10-bold.otf,ItalicFont=lmroman10-italic.otf,BoldItalicFont=lmroman10-bolditalic.otf]
+\setCJKmainfont{SimSun}
+\usepackage{booktabs,array,threeparttable,graphicx,caption,longtable,amsmath,amssymb,hyperref,xcolor}
+\usepackage[active,tightpage]{preview}
+\PreviewEnvironment{minipage}
+\setlength\PreviewBorder{6pt}
+\newcommand{\sym}[1]{\textsuperscript{#1}}
+\captionsetup{font=normalsize,labelformat=empty,skip=6pt}
+\setlength{\parindent}{0pt}
+\begin{document}
+\begin{minipage}{19cm}\fontsize{10}{12}\selectfont\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.12}
+
+
+\centering
+\captionof{table}{Auditor movement across firm tiers (part 1 of 2)}
+\begin{threeparttable}
+\begin{tabular}{p{0.36\textwidth}ccc}
+\toprule
+From tier & To tier & Moves & Good AKM \\
+\midrule
+1 & 1 & 30 & 3 \\
+1 & 2 & 10 & 1 \\
+1 & 3 & 10 & 3 \\
+2 & 1 & 23 & 2 \\
+2 & 2 & 315 & 74 \\
+2 & 3 & 103 & 40 \\
+3 & 1 & 10 & 2 \\
+3 & 2 & 223 & 61 \\
+3 & 3 & 467 & 107 \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}\fontsize{9}{11}\selectfont
+\item \raggedright \fontsize{9}{11}\selectfont \textit{Notes:} Tier coding follows the source do-file; these are descriptive transition counts.
+\end{tablenotes}
+\end{threeparttable}
+
+\end{minipage}
+\end{document}

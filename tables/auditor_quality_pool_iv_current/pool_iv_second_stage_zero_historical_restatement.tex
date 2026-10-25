@@ -1,0 +1,33 @@
+\begin{table}[htbp]
+\footnotesize
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\centering
+\caption{Pool IV: No Historical Restatement}
+\begin{threeparttable}
+\begin{tabular}{p{0.30\textwidth}cccc}
+\toprule
+Instrument & First-stage F & Any failure & Restatement & Violation \\
+\midrule
+\multicolumn{5}{l}{\textbf{All matches: Successor year}} \\
+Pool rate & F=75.66 & \shortstack{0.107\\(0.069)} & \shortstack{0.042\\(0.050)} & \shortstack{0.090\\(0.057)} \\
+Mean caseload & F=0.34 & \shortstack{1.524\\(2.694)} & \shortstack{0.817\\(1.387)} & \shortstack{1.114\\(2.048)} \\
+Caseload at most 1 share & F=5.38 & \shortstack{\textcolor{red}{0.570\sym{**}}\\(0.271)} & \shortstack{0.254\\(0.159)} & \shortstack{0.336\\(0.208)} \\
+\multicolumn{5}{l}{\textbf{All matches: Successor tenure}} \\
+Pool rate & F=75.66 & \shortstack{\textcolor{red}{0.136\sym{**}}\\(0.066)} & \shortstack{0.054\\(0.053)} & \shortstack{0.089\\(0.055)} \\
+Mean caseload & F=0.34 & \shortstack{1.073\\(1.928)} & \shortstack{0.411\\(0.710)} & \shortstack{0.710\\(1.490)} \\
+Caseload at most 1 share & F=5.38 & \shortstack{0.456\\(0.287)} & \shortstack{0.151\\(0.223)} & \shortstack{0.242\\(0.216)} \\
+\multicolumn{5}{l}{\textbf{Predecessor A1 exactly five years: Successor year}} \\
+Pool rate & F=30.89 & \shortstack{0.267\\(0.177)} & \shortstack{0.151\\(0.118)} & \shortstack{0.172\\(0.151)} \\
+Mean caseload & F=0.09 & \shortstack{-6.252\\(21.464)} & \shortstack{-3.321\\(12.175)} & \shortstack{-5.581\\(18.909)} \\
+Caseload at most 1 share & F=0.12 & \shortstack{-5.900\\(17.738)} & \shortstack{-1.232\\(4.330)} & \shortstack{-4.632\\(13.881)} \\
+\multicolumn{5}{l}{\textbf{Predecessor A1 exactly five years: Successor tenure}} \\
+Pool rate & F=30.89 & \shortstack{0.252\\(0.160)} & \shortstack{0.121\\(0.121)} & \shortstack{0.179\\(0.143)} \\
+Mean caseload & F=0.09 & \shortstack{-6.328\\(21.738)} & \shortstack{-2.934\\(11.100)} & \shortstack{-5.640\\(19.118)} \\
+Caseload at most 1 share & F=0.12 & \shortstack{-6.306\\(18.959)} & \shortstack{-1.556\\(5.225)} & \shortstack{-4.927\\(14.782)} \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}\footnotesize
+\item \raggedright \textit{Notes:} Destination audit-firm and assignment-year fixed effects; financial controls included. Standard errors clustered by destination audit firm. All matches retain observed years; five-year predecessor sample starts in 2004. Each outcome cell reports the 2SLS coefficient and its clustered standard error.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

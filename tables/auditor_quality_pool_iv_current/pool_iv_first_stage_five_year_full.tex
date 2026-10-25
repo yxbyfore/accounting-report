@@ -1,0 +1,69 @@
+\documentclass[10pt]{article}
+\usepackage[paperwidth=32cm,paperheight=45cm,margin=1cm]{geometry}
+\usepackage{fontspec,xeCJK}
+\setmainfont{lmroman10-regular.otf}[BoldFont=lmroman10-bold.otf,ItalicFont=lmroman10-italic.otf,BoldItalicFont=lmroman10-bolditalic.otf]
+\setCJKmainfont{SimSun}
+\usepackage{booktabs,array,threeparttable,graphicx,caption,longtable,amsmath,amssymb,hyperref,xcolor}
+\usepackage[active,tightpage]{preview}
+\PreviewEnvironment{minipage}
+\setlength\PreviewBorder{6pt}
+\newcommand{\sym}[1]{\textsuperscript{#1}}
+\captionsetup{font=normalsize,labelformat=empty,skip=6pt}
+\setlength{\parindent}{0pt}
+\begin{document}
+\begin{minipage}{19cm}\fontsize{10}{12}\selectfont\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.12}
+
+
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\centering
+\captionof{table}{Pool IV first stage: Predecessor A1 exactly five years}
+\begin{threeparttable}
+\begin{tabular}{p{0.30\textwidth}cccc}
+\toprule
+Instrument & Coefficient & SE & F & Partial R-squared \\
+\midrule
+\multicolumn{5}{l}{\textbf{Doctorate Degree+}} \\
+Pool rate & -0.030 & (0.073) & 0.17 & 0.000 \\
+Mean caseload & -0.007 & (0.005) & 1.75 & 0.003 \\
+Caseload at most 1 share & 0.032 & (0.025) & 1.53 & 0.005 \\
+\multicolumn{5}{l}{\textbf{Master Degree+}} \\
+Pool rate & 0.250 & (0.162) & 2.38 & 0.001 \\
+Mean caseload & -0.006 & (0.007) & 0.68 & 0.000 \\
+Caseload at most 1 share & -0.061 & (0.042) & 2.14 & 0.001 \\
+\multicolumn{5}{l}{\textbf{Bachelor Degree+}} \\
+Pool rate & 0.297 & (0.205) & 2.10 & 0.002 \\
+Mean caseload & -0.017 & (0.025) & 0.49 & 0.000 \\
+Caseload at most 1 share & 0.079 & (0.100) & 0.64 & 0.000 \\
+\multicolumn{5}{l}{\textbf{985 University}} \\
+Pool rate & 0.327 & (0.125) & 6.82 & 0.002 \\
+Mean caseload & -0.003 & (0.011) & 0.10 & 0.000 \\
+Caseload at most 1 share & -0.048 & (0.046) & 1.10 & 0.001 \\
+\multicolumn{5}{l}{\textbf{985/211 University}} \\
+Pool rate & 0.392 & (0.176) & 4.99 & 0.003 \\
+Mean caseload & -0.034 & (0.023) & 2.17 & 0.001 \\
+Caseload at most 1 share & 0.055 & (0.073) & 0.57 & 0.000 \\
+\multicolumn{5}{l}{\textbf{Big 4 Background}} \\
+Pool rate & -0.004 & (0.204) & 0.00 & 0.000 \\
+Mean caseload & -0.007 & (0.006) & 1.50 & 0.001 \\
+Caseload at most 1 share & -0.027 & (0.019) & 1.88 & 0.001 \\
+\multicolumn{5}{l}{\textbf{No Historical Any Failure}} \\
+Pool rate & 0.897 & (0.195) & 21.27 & 0.025 \\
+Mean caseload & -0.051 & (0.029) & 3.03 & 0.003 \\
+Caseload at most 1 share & 0.227 & (0.132) & 2.98 & 0.004 \\
+\multicolumn{5}{l}{\textbf{No Historical Restatement}} \\
+Pool rate & 0.941 & (0.169) & 30.89 & 0.020 \\
+Mean caseload & -0.006 & (0.022) & 0.09 & 0.000 \\
+Caseload at most 1 share & 0.036 & (0.102) & 0.12 & 0.000 \\
+\multicolumn{5}{l}{\textbf{No Historical Violation}} \\
+Pool rate & 0.769 & (0.169) & 20.75 & 0.019 \\
+Mean caseload & -0.068 & (0.029) & 5.53 & 0.005 \\
+Caseload at most 1 share & 0.274 & (0.138) & 3.98 & 0.005 \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}\fontsize{9}{11}\selectfont
+\item \raggedright \fontsize{9}{11}\selectfont \textit{Notes:} Destination audit-firm and assignment-year fixed effects; financial controls included. Standard errors clustered by destination audit firm. All matches retain observed years; five-year predecessor sample starts in 2004.
+\end{tablenotes}
+\end{threeparttable}
+
+\end{minipage}
+\end{document}

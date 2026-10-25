@@ -1,0 +1,40 @@
+\documentclass[10pt]{article}
+\usepackage[paperwidth=32cm,paperheight=45cm,margin=1cm]{geometry}
+\usepackage{fontspec}
+\setmainfont{lmroman10-regular.otf}[BoldFont=lmroman10-bold.otf,ItalicFont=lmroman10-italic.otf,BoldItalicFont=lmroman10-bolditalic.otf]
+\usepackage{booktabs,array,threeparttable,graphicx,caption,longtable,amsmath,amssymb,hyperref,xcolor}
+\usepackage[active,tightpage]{preview}
+\PreviewEnvironment{minipage}
+\setlength\PreviewBorder{6pt}
+\newcommand{\sym}[1]{\textsuperscript{#1}}
+\captionsetup{font=normalsize,labelformat=empty,skip=6pt}
+\setlength{\parindent}{0pt}
+\begin{document}
+\begin{minipage}{19cm}\fontsize{10}{12}\selectfont\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.15}
+
+
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\centering
+\captionof{table}{Big 4 Auditors and Components of Real Earnings Management}
+\label{tab:big4-roe-threshold-rem-components}
+\begin{threeparttable}
+\begin{tabular}{l c c c c }
+\toprule
+ & REM & Abnormal CFO & Abnormal Production & Abnormal Discretionary Expense \\
+\midrule
+Threshold $\times$ Big 4 & -0.006 & -0.002 & -0.009 & -0.001 \\
+ & (0.026) & (0.009) & (0.015) & (0.007) \\
+Big 4 & -0.043\sym{*} & 0.011 & -0.013 & 0.019\sym{***} \\
+ & (0.024) & (0.009) & (0.015) & (0.006) \\
+Threshold & 0.007 & -0.002 & 0.006 & 0.001 \\
+ & (0.006) & (0.002) & (0.004) & (0.002) \\
+Observations & 6,824 & 6,824 & 6,824 & 6,824 \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}\fontsize{9}{11}\selectfont
+\item \raggedright \fontsize{9}{11}\selectfont \textit{Notes:} SE clustered by firm. Earnings-quality controls and mis\_dummy. * $p<0.10$, ** $p<0.05$, *** $p<0.01$.
+\end{tablenotes}
+\end{threeparttable}
+
+\end{minipage}
+\end{document}

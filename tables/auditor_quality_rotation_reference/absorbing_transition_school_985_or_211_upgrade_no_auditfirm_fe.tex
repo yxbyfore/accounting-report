@@ -1,0 +1,74 @@
+\begin{table}[htbp]
+\footnotesize
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\centering
+\caption{Absorbing Transition DID Results: School 985/211 --- Upgrade}
+\label{tab:absorbing-transition-school-985-or-211-upgrade-no-auditfirm-fe}
+\begin{threeparttable}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{l cc cc cc}
+\toprule
+ & \multicolumn{2}{c}{Any Failure} & \multicolumn{2}{c}{Restatement} & \multicolumn{2}{c}{Violation} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule(lr){6-7}
+ & Pooled & Mandatory / Voluntary & Pooled & Mandatory / Voluntary & Pooled & Mandatory / Voluntary \\
+\midrule
+\multicolumn{7}{l}{\textbf{Panel A: Absorbing DID: Trim}} \\
+$\times$ Mandatory Rotation &  & -0.023 &  & -0.003 &  & -0.012 \\
+ &  & (0.018) &  & (0.014) &  & (0.019) \\
+$\times$ Voluntary Rotation &  & 0.003 &  & 0.001 &  & 0.004 \\
+ &  & (0.006) &  & (0.005) &  & (0.006) \\
+Pooled & -0.001 &  & 0.002 &  & 0.000 &  \\
+ & (0.005) &  & (0.003) &  & (0.004) &  \\
+Mandatory $-$ Voluntary &  & -0.027 &  & -0.004 &  & -0.015 \\
+Difference p-value &  & 0.172 &  & 0.757 &  & 0.431 \\
+Observations & 34,428 & 29,662 & 34,428 & 29,662 & 34,428 & 29,662 \\
+Firms & 5,173 & 4,737 & 5,173 & 4,737 & 5,173 & 4,737 \\
+\addlinespace
+\multicolumn{7}{l}{\textbf{Panel B: Absorbing DID: Strict}} \\
+$\times$ Mandatory Rotation &  & \textcolor{red}{-0.043\sym{**}} &  & \textcolor{red}{-0.013\sym{**}} &  & \textcolor{red}{-0.031\sym{*}} \\
+ &  & (0.019) &  & (0.006) &  & (0.018) \\
+$\times$ Voluntary Rotation &  & -0.005 &  & -0.000 &  & -0.008 \\
+ &  & (0.010) &  & (0.007) &  & (0.008) \\
+Pooled & -0.010 &  & -0.002 &  & -0.012 &  \\
+ & (0.009) &  & (0.006) &  & (0.007) &  \\
+Mandatory $-$ Voluntary &  & \textcolor{red}{-0.038\sym{*}} &  & -0.012 &  & -0.023 \\
+Difference p-value &  & 0.063 &  & 0.147 &  & 0.228 \\
+Observations & 16,375 & 15,692 & 16,375 & 15,692 & 16,375 & 15,692 \\
+Firms & 2,274 & 2,249 & 2,274 & 2,249 & 2,274 & 2,249 \\
+\addlinespace
+\multicolumn{7}{l}{\textbf{Panel C: Fixed-Window DID: 2-Year Window}} \\
+$\times$ Mandatory Rotation &  & -0.019 &  & -0.011 &  & -0.009 \\
+ &  & (0.013) &  & (0.009) &  & (0.012) \\
+$\times$ Voluntary Rotation &  & -0.003 &  & -0.003 &  & 0.000 \\
+ &  & (0.004) &  & (0.003) &  & (0.004) \\
+Pooled & -0.004 &  & -0.002 &  & -0.002 &  \\
+ & (0.003) &  & (0.002) &  & (0.003) &  \\
+Mandatory $-$ Voluntary &  & -0.016 &  & -0.007 &  & -0.010 \\
+Difference p-value &  & 0.249 &  & 0.450 &  & 0.435 \\
+Observations & 41,068 & 35,709 & 41,068 & 35,709 & 41,068 & 35,709 \\
+Firms & 5,602 & 5,245 & 5,602 & 5,245 & 5,602 & 5,245 \\
+\addlinespace
+\multicolumn{7}{l}{\textbf{Panel D: Fixed-Window DID: 3-Year Window}} \\
+$\times$ Mandatory Rotation &  & -0.018 &  & -0.008 &  & -0.008 \\
+ &  & (0.013) &  & (0.010) &  & (0.011) \\
+$\times$ Voluntary Rotation &  & -0.004 &  & -0.003 &  & -0.001 \\
+ &  & (0.004) &  & (0.003) &  & (0.004) \\
+Pooled & -0.004 &  & -0.001 &  & -0.002 &  \\
+ & (0.003) &  & (0.002) &  & (0.003) &  \\
+Mandatory $-$ Voluntary &  & -0.014 &  & -0.005 &  & -0.008 \\
+Difference p-value &  & 0.285 &  & 0.654 &  & 0.522 \\
+Observations & 43,778 & 38,268 & 43,778 & 38,268 & 43,778 & 38,268 \\
+Firms & 5,602 & 5,308 & 5,602 & 5,308 & 5,602 & 5,308 \\
+\midrule
+Controls & Yes & Yes & Yes & Yes & Yes & Yes \\
+Firm FE & Yes & Yes & Yes & Yes & Yes & Yes \\
+Year FE & Yes & Yes & Yes & Yes & Yes & Yes \\
+Audit Firm FE & No & No & No & No & No & No \\
+Sample years & Full & 2004 onward & Full & 2004 onward & Full & 2004 onward \\
+\bottomrule
+\end{tabular}}
+\begin{tablenotes}\footnotesize
+\item \textit{Notes:} Each panel reports a firm-year regression with firm and year fixed effects; audit-firm fixed effects are not included. Standard errors clustered at the firm level are in parentheses. The pooled row uses the full observed period and reports the overall quality-dummy coefficient. Mandatory and voluntary rows use 2004 onward and report coefficients from the rotation-type specification. *** \(p<0.01\), ** \(p<0.05\), * \(p<0.10\).
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

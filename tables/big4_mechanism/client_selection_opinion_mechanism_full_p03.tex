@@ -1,0 +1,42 @@
+\documentclass[10pt]{article}
+\usepackage[paperwidth=32cm,paperheight=45cm,margin=1cm]{geometry}
+\usepackage{fontspec}
+\setmainfont{lmroman10-regular.otf}[BoldFont=lmroman10-bold.otf,ItalicFont=lmroman10-italic.otf,BoldItalicFont=lmroman10-bolditalic.otf]
+\usepackage{booktabs,array,threeparttable,graphicx,caption,longtable,amsmath,amssymb,hyperref,xcolor}
+\usepackage[active,tightpage]{preview}
+\PreviewEnvironment{minipage}
+\setlength\PreviewBorder{6pt}
+\newcommand{\sym}[1]{\textsuperscript{#1}}
+\captionsetup{font=normalsize,labelformat=empty,skip=6pt}
+\setlength{\parindent}{0pt}
+\begin{document}
+\begin{minipage}{19cm}\fontsize{10}{12}\selectfont\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.15}
+
+\begin{center} Table M1: Client Selection, Audit Warnings, and Big 4 Client Risk\end{center}
+\noindent\textbf{Panel C: Audit Opinion Responses to Client Risk}\par\medskip
+\begin{center}\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lcccccc@{}}
+\toprule
+ & \multicolumn{2}{c}{Loss} & \multicolumn{2}{c}{Z-score} & \multicolumn{2}{c}{Violation announcement} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule(lr){6-7}
+ & (1) & (2) & (3) & (4) & (5) & (6) \\
+Dependent variable & MAO & GC & MAO & GC & MAO & GC \\
+\midrule
+Risk slope: non-Big-4 & 0.084\sym{***} & 0.040\sym{***} & -0.00002 & 0.00001 & 0.055\sym{***} & 0.028\sym{***} \\
+ & (0.005) & (0.003) & (0.00007) & (0.00007) & (0.010) & (0.008) \\
+Risk slope: Big 4 & 0.050\sym{***} & 0.002 & -0.00048\sym{**} & -0.00011 & 0.035 & -0.004 \\
+ & (0.016) & (0.012) & (0.00024) & (0.00009) & (0.044) & (0.008) \\
+Big 4 $\times$ Risk & -0.035\sym{**} & -0.038\sym{***} & -0.00046\sym{*} & -0.00012 & -0.020 & -0.032\sym{***} \\
+ & (0.016) & (0.012) & (0.00024) & (0.00010) & (0.045) & (0.011) \\
+\midrule
+Observations & 70,197 & 70,197 & 70,197 & 70,197 & 70,197 & 70,197 \\
+Firms & 5,623 & 5,623 & 5,623 & 5,623 & 5,623 & 5,623 \\
+Controls & Yes & Yes & Yes & Yes & Yes & Yes \\
+Missing-value indicators & Yes & Yes & Yes & Yes & Yes & Yes \\
+Firm FE & Yes & Yes & Yes & Yes & Yes & Yes \\
+Industry $\times$ Year FE & Yes & Yes & Yes & Yes & Yes & Yes \\
+SE clustering & Firm & Firm & Firm & Firm & Firm & Firm \\
+\bottomrule\end{tabular*}\end{center}
+
+\par\smallskip\raggedright\fontsize{9}{11}\selectfont Significance: * $p<0.10$, ** $p<0.05$, *** $p<0.01$.
+\end{minipage}
+\end{document}

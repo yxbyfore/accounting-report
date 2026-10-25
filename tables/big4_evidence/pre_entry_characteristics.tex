@@ -1,0 +1,40 @@
+\documentclass[10pt]{article}
+\usepackage[paperwidth=32cm,paperheight=45cm,margin=1cm]{geometry}
+\usepackage{fontspec,booktabs,array,graphicx,caption,amsmath}
+\setmainfont{lmroman10-regular.otf}[BoldFont=lmroman10-bold.otf,ItalicFont=lmroman10-italic.otf,BoldItalicFont=lmroman10-bolditalic.otf]
+\usepackage[active,tightpage]{preview}
+\PreviewEnvironment{minipage}\setlength\PreviewBorder{6pt}
+\captionsetup{font=normalsize,labelformat=empty,skip=6pt}
+\begin{document}
+\begin{minipage}{19cm}\fontsize{10}{12}\selectfont\centering
+\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.15}
+\captionof{table}{Characteristics Before First Qualifying Big 4 Entry}
+\begin{tabular}{lccc}\toprule
+Relative year & Future Big 4 entrants & Always non-Big 4 & Entrants \\ \midrule
+\multicolumn{4}{l}{\textbf{Any failure}} \\
+-3 & 3.43 & 6.15 & 204 \\
+-2 & 3.92 & 6.61 & 204 \\
+-1 & 4.90 & 7.12 & 204 \\
+\multicolumn{4}{l}{\textbf{Restatement}} \\
+-3 & 1.47 & 2.37 & 204 \\
+-2 & 1.47 & 2.69 & 204 \\
+-1 & 3.43 & 2.92 & 204 \\
+\multicolumn{4}{l}{\textbf{Violation}} \\
+-3 & 1.96 & 4.79 & 204 \\
+-2 & 2.45 & 5.09 & 204 \\
+-1 & 1.96 & 5.45 & 204 \\
+\multicolumn{4}{l}{\textbf{Loss}} \\
+-3 & 8.37 & 11.32 & 203 \\
+-2 & 8.87 & 12.05 & 203 \\
+-1 & 9.36 & 12.83 & 203 \\
+\multicolumn{4}{l}{\textbf{Size (log assets)}} \\
+-3 & 22.40 & 21.41 & 203 \\
+-2 & 22.55 & 21.49 & 203 \\
+-1 & 22.77 & 21.55 & 203 \\
+\multicolumn{4}{l}{\textbf{Operating cash flow / assets}} \\
+-3 & 5.91 & 4.03 & 199 \\
+-2 & 6.04 & 4.44 & 199 \\
+-1 & 5.99 & 4.31 & 199 \\
+\bottomrule\end{tabular}\par\smallskip\raggedright\fontsize{9}{11}\selectfont Notes: Pre-entry group means; rates and CFO in percent.
+\end{minipage}
+\end{document}

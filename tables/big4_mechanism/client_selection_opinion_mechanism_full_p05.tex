@@ -1,0 +1,59 @@
+\documentclass[10pt]{article}
+\usepackage[paperwidth=32cm,paperheight=45cm,margin=1cm]{geometry}
+\usepackage{fontspec}
+\setmainfont{lmroman10-regular.otf}[BoldFont=lmroman10-bold.otf,ItalicFont=lmroman10-italic.otf,BoldItalicFont=lmroman10-bolditalic.otf]
+\usepackage{booktabs,array,threeparttable,graphicx,caption,longtable,amsmath,amssymb,hyperref,xcolor}
+\usepackage[active,tightpage]{preview}
+\PreviewEnvironment{minipage}
+\setlength\PreviewBorder{6pt}
+\newcommand{\sym}[1]{\textsuperscript{#1}}
+\captionsetup{font=normalsize,labelformat=empty,skip=6pt}
+\setlength{\parindent}{0pt}
+\begin{document}
+\begin{minipage}{19cm}\fontsize{10}{12}\selectfont\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.15}
+
+\begin{center} Table M1: Client Selection, Audit Warnings, and Big 4 Client Risk\end{center}
+\noindent\textbf{Panel E1: Client Characteristics --- MAO Clients}\par\medskip
+\begin{center}\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lcccccc@{}}
+\toprule
+ & (1) & (2) & (3) & (4) & (5) & (6) \\
+Dependent variable & Z-score & ROA & Loss & Leverage & \shortstack{Violation\\announcement} & Restatement \\
+\midrule
+Big 4 & 8.953 & 3.604 & -0.087\sym{**} & 0.085 & -0.041\sym{**} & -0.022 \\
+ & (12.551) & (4.327) & (0.043) & (0.260) & (0.018) & (0.031) \\
+\midrule
+Observations & 4,627 & 4,627 & 4,627 & 4,627 & 4,627 & 4,627 \\
+Firms & 1,319 & 1,319 & 1,319 & 1,319 & 1,319 & 1,319 \\
+Controls & No & No & No & No & No & No \\
+Missing-value indicators & No & No & No & No & No & No \\
+Firm FE & No & No & No & No & No & No \\
+Industry $\times$ Year FE & No & No & No & No & No & No \\
+Industry FE & Yes & Yes & Yes & Yes & Yes & Yes \\
+Year FE & Yes & Yes & Yes & Yes & Yes & Yes \\
+SE clustering & Firm & Firm & Firm & Firm & Firm & Firm \\
+\bottomrule\end{tabular*}\end{center}
+\bigskip
+\noindent\textbf{Panel E2: Client Characteristics --- GC Clients}\par\medskip
+\begin{center}\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lcccccc@{}}
+\toprule
+ & (1) & (2) & (3) & (4) & (5) & (6) \\
+Dependent variable & Z-score & ROA & Loss & Leverage & \shortstack{Violation\\announcement} & Restatement \\
+\midrule
+Big 4 & 30.524 & 12.155 & -0.202\sym{**} & 0.548 & -0.060\sym{*} & -0.098\sym{***} \\
+ & (40.232) & (14.128) & (0.079) & (0.866) & (0.032) & (0.031) \\
+\midrule
+Observations & 1,888 & 1,888 & 1,888 & 1,888 & 1,888 & 1,888 \\
+Firms & 610 & 610 & 610 & 610 & 610 & 610 \\
+Controls & No & No & No & No & No & No \\
+Missing-value indicators & No & No & No & No & No & No \\
+Firm FE & No & No & No & No & No & No \\
+Industry $\times$ Year FE & No & No & No & No & No & No \\
+Industry FE & Yes & Yes & Yes & Yes & Yes & Yes \\
+Year FE & Yes & Yes & Yes & Yes & Yes & Yes \\
+SE clustering & Firm & Firm & Firm & Firm & Firm & Firm \\
+\bottomrule\end{tabular*}\end{center}
+\bigskip
+
+\par\smallskip\raggedright\fontsize{9}{11}\selectfont Significance: * $p<0.10$, ** $p<0.05$, *** $p<0.01$.
+\end{minipage}
+\end{document}

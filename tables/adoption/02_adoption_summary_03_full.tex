@@ -1,0 +1,30 @@
+\documentclass[10pt]{article}
+\usepackage[paperwidth=32cm,paperheight=45cm,margin=1cm]{geometry}
+\usepackage{fontspec,xeCJK}
+\setmainfont{lmroman10-regular.otf}[BoldFont=lmroman10-bold.otf,ItalicFont=lmroman10-italic.otf,BoldItalicFont=lmroman10-bolditalic.otf]
+\setCJKmainfont{SimSun}
+\usepackage{booktabs,array,threeparttable,graphicx,caption,longtable,amsmath,amssymb,hyperref,xcolor}
+\usepackage[active,tightpage]{preview}
+\PreviewEnvironment{minipage}
+\setlength\PreviewBorder{6pt}
+\newcommand{\sym}[1]{\textsuperscript{#1}}
+\captionsetup{font=normalsize,labelformat=empty,skip=6pt}
+\setlength{\parindent}{0pt}
+\begin{document}
+\begin{minipage}{19cm}\fontsize{10}{12}\selectfont\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.12}
+
+\centering
+\begin{tabular}{>{\raggedright\arraybackslash}p{5.70cm}>{\raggedright\arraybackslash}p{5.70cm}>{\raggedright\arraybackslash}p{5.70cm}}
+\toprule
+Exposure group & Treatment definition in current code & Comparison group and limitations \\
+\midrule
+Coastal: treat\_\allowbreak coast & Registered in one of 11 coastal provincial-level regions in any observed year; firm-level full-period maximum. & Other firms. Missing province is coded as zero and must be distinguished from a confirmed inland location. \\
+Openness: treat\_\allowbreak open & Registered-city imports plus exports divided by GDP in 2003 exceed 1 (100\%) in any matched record. & Matched values at or below 1 form the comparison group. Firms with all values missing are excluded. \\
+Overseas joint venture: treat\_\allowbreak overseas\_\allowbreak jv & dummy\_\allowbreak overseas\_\allowbreak jv equals 1 in any observed year. & Firms never flagged. The full-period maximum includes post-WTO information. \\
+OECD joint venture: treat\_\allowbreak oecd\_\allowbreak jv & dummy\_\allowbreak oecd\_\allowbreak jv equals 1 in any observed year. & Firms never flagged for OECD joint ventures; this does not imply no overseas business. \\
+US/\allowbreak EU/\allowbreak Japan/\allowbreak Korea joint venture: treat\_\allowbreak us\_\allowbreak eu\_\allowbreak jv & dummy\_\allowbreak us\_\allowbreak eu\_\allowbreak jp\_\allowbreak kr\_\allowbreak jv equals 1 in any observed year. & The filename omits Japan and Korea. Classification includes post-WTO information. \\
+Transport: treat\_\allowbreak trade\_\allowbreak transport & Industry code G55, G56, G58, or G59 in any observed year. & Other industries. Full-period industry classification is not necessarily predetermined before WTO entry. \\
+\bottomrule\end{tabular}
+
+\end{minipage}
+\end{document}

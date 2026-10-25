@@ -1,0 +1,48 @@
+\documentclass[10pt]{article}
+\usepackage[paperwidth=32cm,paperheight=45cm,margin=1cm]{geometry}
+\usepackage{fontspec,xeCJK}
+\setmainfont{lmroman10-regular.otf}[BoldFont=lmroman10-bold.otf,ItalicFont=lmroman10-italic.otf,BoldItalicFont=lmroman10-bolditalic.otf]
+\setCJKmainfont{SimSun}
+\usepackage{booktabs,array,threeparttable,graphicx,caption,longtable,amsmath,amssymb,hyperref,xcolor}
+\usepackage[active,tightpage]{preview}
+\PreviewEnvironment{minipage}
+\setlength\PreviewBorder{6pt}
+\newcommand{\sym}[1]{\textsuperscript{#1}}
+\captionsetup{font=normalsize,labelformat=empty,skip=6pt}
+\setlength{\parindent}{0pt}
+\begin{document}
+\begin{minipage}{19cm}\fontsize{10}{12}\selectfont\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.12}
+
+
+\centering
+\captionof{table}{Auditor FE: split-sample reliability (part 1 of 3)}
+\begin{threeparttable}
+\begin{tabular}{p{0.36\textwidth}ccc}
+\toprule
+Split & Outcome & Common & Pearson \\
+\midrule
+odd even & Any failure & 2,920 & 0.452 \\
+odd even & Restatement & 2,920 & 0.395 \\
+odd even & Violation & 2,920 & 0.482 \\
+odd even & Abs. DA (Jones) & 2,602 & 0.033 \\
+random engagement & Any failure & 3,089 & 0.220 \\
+random engagement & Restatement & 3,089 & 0.218 \\
+random engagement & Violation & 3,089 & 0.212 \\
+random engagement & Abs. DA (Jones) & 2,715 & 0.069 \\
+early late & Any failure & 1,050 & 0.030 \\
+early late & Restatement & 1,050 & 0.005 \\
+early late & Violation & 1,050 & 0.032 \\
+early late & Abs. DA (Jones) & 927 & 0.013 \\
+client held out & Any failure & 2,366 & -0.048 \\
+client held out & Restatement & 2,366 & -0.025 \\
+client held out & Violation & 2,366 & -0.028 \\
+client held out & Abs. DA (Jones) & 2,086 & -0.014 \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}\fontsize{9}{11}\selectfont
+\item \raggedright \fontsize{9}{11}\selectfont \textit{Notes:} Correlations and out-of-sample incremental R2; rankings need not be precise for every auditor.
+\end{tablenotes}
+\end{threeparttable}
+
+\end{minipage}
+\end{document}

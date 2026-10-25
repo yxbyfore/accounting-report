@@ -1,0 +1,48 @@
+\documentclass[10pt]{article}
+\usepackage[paperwidth=32cm,paperheight=45cm,margin=1cm]{geometry}
+\usepackage{fontspec,xeCJK}
+\setmainfont{lmroman10-regular.otf}[BoldFont=lmroman10-bold.otf,ItalicFont=lmroman10-italic.otf,BoldItalicFont=lmroman10-bolditalic.otf]
+\setCJKmainfont{SimSun}
+\usepackage{booktabs,array,threeparttable,graphicx,caption,longtable,amsmath,amssymb,hyperref,xcolor}
+\usepackage[active,tightpage]{preview}
+\PreviewEnvironment{minipage}
+\setlength\PreviewBorder{6pt}
+\newcommand{\sym}[1]{\textsuperscript{#1}}
+\captionsetup{font=normalsize,labelformat=empty,skip=6pt}
+\setlength{\parindent}{0pt}
+\begin{document}
+\begin{minipage}{19cm}\fontsize{10}{12}\selectfont\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.12}
+
+
+\centering
+\captionof{table}{Observable human capital and estimated auditor FE (part 1 of 3)}
+\begin{threeparttable}
+\begin{tabular}{p{0.36\textwidth}ccc}
+\toprule
+AKM outcome & Auditor characteristic & WLS coef. (SE) & p \\
+\midrule
+Any failure & Big 4 background & \shortstack{0.0034\\(0.0047)} & 0.469 \\
+Any failure & 985/211 university & \shortstack{-0.0043\\(0.0038)} & 0.257 \\
+Any failure & Master or above & \shortstack{0.0111\\(0.0044)} & 0.011 \\
+Any failure & Bachelor or above & \shortstack{-0.0061\\(0.0049)} & 0.212 \\
+Restatement & Big 4 background & \shortstack{-0.0019\\(0.0029)} & 0.523 \\
+Restatement & 985/211 university & \shortstack{-0.0023\\(0.0025)} & 0.343 \\
+Restatement & Master or above & \shortstack{0.0068\\(0.0028)} & 0.014 \\
+Restatement & Bachelor or above & \shortstack{-0.0048\\(0.0034)} & 0.161 \\
+Violation & Big 4 background & \shortstack{0.0091\\(0.0040)} & 0.022 \\
+Violation & 985/211 university & \shortstack{0.0002\\(0.0034)} & 0.945 \\
+Violation & Master or above & \shortstack{0.0111\\(0.0040)} & 0.005 \\
+Violation & Bachelor or above & \shortstack{-0.0019\\(0.0042)} & 0.644 \\
+Abs. DA (Jones) & Big 4 background & \shortstack{0.0010\\(0.0022)} & 0.663 \\
+Abs. DA (Jones) & 985/211 university & \shortstack{0.0043\\(0.0019)} & 0.020 \\
+Abs. DA (Jones) & Master or above & \shortstack{0.0008\\(0.0021)} & 0.709 \\
+Abs. DA (Jones) & Bachelor or above & \shortstack{-0.0080\\(0.0025)} & 0.001 \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}\fontsize{9}{11}\selectfont
+\item \raggedright \fontsize{9}{11}\selectfont \textit{Notes:} Auditor-level projection; WLS weights by auditor observations. FE estimates contain sampling error.
+\end{tablenotes}
+\end{threeparttable}
+
+\end{minipage}
+\end{document}

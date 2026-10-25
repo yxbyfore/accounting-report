@@ -1,0 +1,48 @@
+\documentclass[10pt]{article}
+\usepackage[paperwidth=32cm,paperheight=45cm,margin=1cm]{geometry}
+\usepackage{fontspec,xeCJK}
+\setmainfont{lmroman10-regular.otf}[BoldFont=lmroman10-bold.otf,ItalicFont=lmroman10-italic.otf,BoldItalicFont=lmroman10-bolditalic.otf]
+\setCJKmainfont{SimSun}
+\usepackage{booktabs,array,threeparttable,graphicx,caption,longtable,amsmath,amssymb,hyperref,xcolor}
+\usepackage[active,tightpage]{preview}
+\PreviewEnvironment{minipage}
+\setlength\PreviewBorder{6pt}
+\newcommand{\sym}[1]{\textsuperscript{#1}}
+\captionsetup{font=normalsize,labelformat=empty,skip=6pt}
+\setlength{\parindent}{0pt}
+\begin{document}
+\begin{minipage}{20cm}\fontsize{10}{12}\selectfont\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.12}
+
+
+\centering
+\captionof{table}{Big4 Level: Models 4--6}
+\begin{threeparttable}
+\begin{tabular}{p{0.42\textwidth}ccc}
+\toprule
+ & (4) & (5) & (6) \\
+ & Non-Big4 Only & All & Non-Big4 Only \\
+VARIABLES & restated\_clean & violated\_clean & violated\_clean \\
+\midrule
+ &  &  &  \\
+grp\_big4 &  & -0.014** &  \\
+ &  & (0.006) &  \\
+grp\_alumni & -0.001 & 0.004 & 0.005 \\
+ & (0.004) & (0.005) & (0.005) \\
+Constant & -0.133*** & -0.136*** & -0.189*** \\
+ & (0.034) & (0.041) & (0.046) \\
+ &  &  &  \\
+Observations & 63,999 & 68,676 & 63,999 \\
+R-squared & 0.270 & 0.228 & 0.241 \\
+Fixed Effects & Firm + Year + Audit Firm & Firm + Year & Firm + Year + Audit Firm \\
+Audit Firm FE & Yes & No & Yes \\
+P Big4 vs Alumni & N/A & 0.0076 & N/A \\
+F Big4 vs Alumni & N/A & 7.14 & N/A \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}\fontsize{9}{11}\selectfont
+\item \raggedright \fontsize{9}{11}\selectfont \textit{Notes:} Note: Full-panel TWFE regression. The omitted benchmark group is Non-Big4 Firm with Non-Big4 Background (Pure Local). grp\_big4 denotes auditors in Big4 firms; grp\_alumni denotes Big4-background auditors in Non-Big4 firms. Standard errors clustered by firm. *** p<0.01, ** p<0.05, * p<0.1.
+\end{tablenotes}
+\end{threeparttable}
+
+\end{minipage}
+\end{document}

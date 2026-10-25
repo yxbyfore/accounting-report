@@ -1,0 +1,29 @@
+\documentclass[10pt]{article}
+\usepackage[paperwidth=34cm,paperheight=48cm,margin=0.8cm]{geometry}
+\usepackage{booktabs,array,amsmath}
+\newcommand{\sym}[1]{\textsuperscript{#1}}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\begin{document}
+\begin{minipage}{23.60cm}
+\fontsize{10}{12}\selectfont
+\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.08}
+{\large\bfseries Earnings Response Before and After Matching}\par\medskip
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}lcccccc@{}}
+\toprule
+ & (1) & (2) & (3) & (4) & (5) & (6) \\
+Dependent variable & [-1,+1] & [-2,+2] & [-3,+3] & [-1,+1] & [-2,+2] & [-3,+3] \\
+\midrule
+Big4 $\times$ UE & 0.112267\sym{**} & 0.157854\sym{***} & 0.128512\sym{**} & 0.144427\sym{***} & 0.199523\sym{***} & 0.190738\sym{***} \\
+ & (0.045444) & (0.057984) & (0.060367) & (0.040920) & (0.052339) & (0.050244) \\
+$p$ & 0.0135 & 0.0065 & 0.0333 & 0.0004 & 0.0001 & 0.0002 \\
+\midrule
+Observations & 29,085 & 29,085 & 29,085 & 4,552 & 4,552 & 4,552 \\
+Weighting & Unmatched & Unmatched & Unmatched & PSM weighted & PSM weighted & PSM weighted \\
+Firm / fiscal-year FE & Yes & Yes & Yes & Yes & Yes & Yes \\
+ERC controls & Yes & Yes & Yes & Yes & Yes & Yes \\
+\bottomrule\end{tabular*}\par\medskip
+\fontsize{9}{11}\selectfont\textit{Notes:} Each column is one CAR regression. Non-Big4 includes Local 8. Unmatched and PSM-weighted specifications retain their own supported samples. Standard errors are clustered by firm; matching uncertainty is not added.
+\par Standard errors are in parentheses. * $p<0.10$, ** $p<0.05$, *** $p<0.01$.
+\end{minipage}
+\end{document}

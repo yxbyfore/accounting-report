@@ -1,0 +1,63 @@
+\documentclass[10pt]{article}
+\usepackage[paperwidth=25.2cm,paperheight=45cm,margin=0.8cm]{geometry}
+\usepackage{booktabs,array,amsmath}
+\newcommand{\sym}[1]{\textsuperscript{#1}}
+\pagestyle{empty}\setlength{\parindent}{0pt}
+\begin{document}
+\begin{minipage}{23.60cm}
+\fontsize{10}{12}\selectfont
+\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.08}
+{\large\bfseries Branch Expansion: TWFE-2SLS}\par\medskip
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}lccccccc@{}}
+\toprule
+ & \multicolumn{2}{c}{First stage} & \multicolumn{2}{c}{Sample} & \multicolumn{3}{c}{Second stage} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule(lr){6-8}
+Shock / sample & Big 4 & KP F & Firms & Firm-years & Any failure & Fin restatement & Violation \\
+\midrule
+\multicolumn{8}{l}{\textbf{Panel A: Full period}} \\
+\addlinespace[3pt]
+Own province: all clients & 0.019\sym{***} & 9.41 & 2,246 & 21,108 & -0.018 & -0.318 & 0.005 \\
+ & (0.006) &  &  &  & (0.479) & (0.425) & (0.328) \\
+\multicolumn{8}{l}{\hspace{1em}\textit{Clusters: 2,246}} \\
+\addlinespace[3pt]
+Own province: exclude largest & 0.019\sym{***} & 9.68 & 2,229 & 20,924 & -0.045 & -0.307 & -0.028 \\
+ & (0.006) &  &  &  & (0.470) & (0.419) & (0.321) \\
+\multicolumn{8}{l}{\hspace{1em}\textit{Clusters: 2,229}} \\
+\addlinespace[3pt]
+Own + neighbors: all clients & 0.025\sym{**} & 4.70 & 1,161 & 9,740 & 0.657 & 0.731 & -0.075 \\
+ & (0.011) &  &  &  & (0.627) & (0.543) & (0.375) \\
+\multicolumn{8}{l}{\hspace{1em}\textit{Clusters: 1,161}} \\
+\addlinespace[3pt]
+Own + neighbors: exclude largest & 0.026\sym{**} & 4.87 & 1,144 & 9,575 & 0.553 & 0.688 & -0.155 \\
+ & (0.012) &  &  &  & (0.585) & (0.519) & (0.358) \\
+\multicolumn{8}{l}{\hspace{1em}\textit{Clusters: 1,144}} \\
+\addlinespace[3pt]
+\midrule
+\multicolumn{8}{l}{\textbf{Panel B: Through 2012}} \\
+\addlinespace[3pt]
+Own province: all clients & 0.040\sym{***} & 11.54 & 1,470 & 10,211 & 0.524 & 0.183 & 0.289 \\
+ & (0.012) &  &  &  & (0.390) & (0.268) & (0.260) \\
+\multicolumn{8}{l}{\hspace{1em}\textit{Clusters: 1,470}} \\
+\addlinespace[3pt]
+Own province: exclude largest & 0.042\sym{***} & 12.46 & 1,461 & 10,138 & 0.442 & 0.172 & 0.222 \\
+ & (0.012) &  &  &  & (0.360) & (0.256) & (0.236) \\
+\multicolumn{8}{l}{\hspace{1em}\textit{Clusters: 1,461}} \\
+\addlinespace[3pt]
+Own + neighbors: all clients & 0.028\sym{***} & 6.84 & 1,176 & 9,149 & 0.637 & 0.600 & -0.033 \\
+ & (0.011) &  &  &  & (0.523) & (0.436) & (0.321) \\
+\multicolumn{8}{l}{\hspace{1em}\textit{Clusters: 1,176}} \\
+\addlinespace[3pt]
+Own + neighbors: exclude largest & 0.029\sym{***} & 7.46 & 1,159 & 8,979 & 0.518 & 0.538 & -0.124 \\
+ & (0.011) &  &  &  & (0.477) & (0.407) & (0.303) \\
+\multicolumn{8}{l}{\hspace{1em}\textit{Clusters: 1,159}} \\
+\addlinespace[3pt]
+\midrule
+\multicolumn{8}{l}{Controls: size, leverage, loss, ROA, Z-score, change in leverage, report lag, CFO, age, and nine missing indicators.} \\
+\multicolumn{8}{l}{Fixed effects: firm and industry $\times$ year. Standard errors: clustered by firm.} \\
+\bottomrule\end{tabular*}\par\medskip
+\fontsize{9}{11}\selectfont\textit{Notes:} Each row reports a separate instrument/sample specification. The first-stage column reports the exposure coefficient for current-year Big 4 appointment; the three right-hand columns report the instrumented Big 4 coefficient. All outcomes are joint indicators of failure and a non-modified audit opinion (MAO=0); Fin is the financial-restatement definition. Coefficients and standard errors use raw 0/1 units. The first stage is identical across the three outcomes within each row.
+Exposed firms retain event years $-5$ through $+5$; never-exposed firms retain all eligible years. First stage, reduced form and 2SLS use the same observations. KP F is the Kleibergen--Paap statistic.
+Coverage is the first entry of any Big 4 in the own province, or in the own/adjacent provinces. Firms whose exposure cohort changes with location are removed in each spatial design. Largest-client exclusions follow the saved pre-entry domestic-audit-fee lists; all years of listed firms are removed.
+Panel B requires all included outcome years to be no later than 2012. Standard errors are in parentheses; stars use conventional clustered inference. * $p<0.10$, ** $p<0.05$, *** $p<0.01$. Weak-instrument confidence sets for DID-IV are available in the accompanying workbook.
+\end{minipage}
+\end{document}

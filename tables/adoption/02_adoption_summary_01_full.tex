@@ -1,0 +1,29 @@
+\documentclass[10pt]{article}
+\usepackage[paperwidth=32cm,paperheight=45cm,margin=1cm]{geometry}
+\usepackage{fontspec,xeCJK}
+\setmainfont{lmroman10-regular.otf}[BoldFont=lmroman10-bold.otf,ItalicFont=lmroman10-italic.otf,BoldItalicFont=lmroman10-bolditalic.otf]
+\setCJKmainfont{SimSun}
+\usepackage{booktabs,array,threeparttable,graphicx,caption,longtable,amsmath,amssymb,hyperref,xcolor}
+\usepackage[active,tightpage]{preview}
+\PreviewEnvironment{minipage}
+\setlength\PreviewBorder{6pt}
+\newcommand{\sym}[1]{\textsuperscript{#1}}
+\captionsetup{font=normalsize,labelformat=empty,skip=6pt}
+\setlength{\parindent}{0pt}
+\begin{document}
+\begin{minipage}{19cm}\fontsize{10}{12}\selectfont\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.12}
+
+\centering
+\begin{tabular}{>{\raggedright\arraybackslash}p{5.70cm}>{\raggedright\arraybackslash}p{5.70cm}>{\raggedright\arraybackslash}p{5.70cm}}
+\toprule
+Analysis & Source code & Current output status \\
+\midrule
+Cross-listing and overseas auditors & 10\_\allowbreak market\_\allowbreak entry/\allowbreak 11\_\allowbreak crosslisting\_\allowbreak auditor\_\allowbreak choice.do & Overall and full-sample overseas-auditor figures updated early on September 27. The first H-share subgroup figure failed to export. Specifications excluding finance and real estate retain the valid September 26 afternoon outputs. \\
+Branch expansion & 10\_\allowbreak market\_\allowbreak entry/\allowbreak 13\_\allowbreak big4\_\allowbreak branch\_\allowbreak entry.do & The current run stopped upstream. Four figures retain valid September 26, 19:14--19:18 outputs. See Section 6.2 for the actual event window. \\
+Foreign controllers and ownership relations & 10\_\allowbreak market\_\allowbreak entry/\allowbreak 10\_\allowbreak foreign\_\allowbreak demand\_\allowbreak auditor\_\allowbreak choice.do, Stages 2--3 & Rerun on September 26 at night; updated TWFE and CS-DID layouts. The module log reached its end at 23:45. \\
+WTO exposure & 20\_\allowbreak network\_\allowbreak spillovers/\allowbreak 22\_\allowbreak supplychain\_\allowbreak adoption\_\allowbreak variants.do, Stage 1 & All six figures have export records in the September 25, 2026 log. Definition limitations are discussed in Section 4.5. \\
+Early Big 4 clients & code/\allowbreak python/\allowbreak 06\_\allowbreak financial\_\allowbreak report\_\allowbreak preprocessing\_\allowbreak analysis.ipynb, Section 12 & Python descriptive outputs; separate from the Stata market-entry module. \\
+\bottomrule\end{tabular}
+
+\end{minipage}
+\end{document}

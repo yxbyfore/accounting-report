@@ -1,0 +1,31 @@
+\documentclass[10pt]{article}
+\usepackage[paperwidth=21cm,paperheight=38cm,margin=1cm]{geometry}
+\usepackage{fontspec,booktabs,array}
+\setmainfont{lmroman10-regular.otf}[BoldFont=lmroman10-bold.otf,ItalicFont=lmroman10-italic.otf,BoldItalicFont=lmroman10-bolditalic.otf]
+\newcommand{\sym}[1]{\textsuperscript{#1}}
+\pagestyle{empty}
+\begin{document}\fontsize{10}{12}\selectfont\setlength{\parindent}{0pt}
+\noindent\textbf{Same Signer and Client: DID after Big4 Entry}\par\medskip
+\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.15}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lcccc@{}}
+\toprule
+Y & \shortstack{All cohorts\\window $\pm2$} & \shortstack{All cohorts\\window $\pm5$} & \shortstack{Excluding 2002\\window $\pm2$} & \shortstack{Excluding 2002\\window $\pm5$} \\
+\midrule
+Unwarned any failure & \shortstack{-0.049453\sym{}\\(0.057100)\\$p=0.3865$} & \shortstack{-0.014032\sym{}\\(0.050113)\\$p=0.7795$} & \shortstack{-0.067929\sym{}\\(0.194141)\\$p=0.7264$} & \shortstack{0.045592\sym{}\\(0.168584)\\$p=0.7868$} \\
+N / Treated clients & 20473 / 21 & 29136 / 21 & 18218 / 6 & 26335 / 6 \\ \addlinespace
+Unwarned restatement & \shortstack{-0.038046\sym{}\\(0.055553)\\$p=0.4935$} & \shortstack{-0.014260\sym{}\\(0.049824)\\$p=0.7747$} & \shortstack{-0.048252\sym{}\\(0.193596)\\$p=0.8032$} & \shortstack{0.052974\sym{}\\(0.170107)\\$p=0.7555$} \\
+N / Treated clients & 20473 / 21 & 29136 / 21 & 18218 / 6 & 26335 / 6 \\ \addlinespace
+Unwarned violation & \shortstack{-0.013951\sym{}\\(0.014135)\\$p=0.3237$} & \shortstack{-0.001456\sym{}\\(0.013017)\\$p=0.9110$} & \shortstack{-0.025574\sym{}\\(0.019778)\\$p=0.1961$} & \shortstack{-0.015132\sym{}\\(0.018688)\\$p=0.4182$} \\
+N / Treated clients & 20473 / 21 & 29136 / 21 & 18218 / 6 & 26335 / 6 \\ \addlinespace
+Restatement & \shortstack{-0.043343\sym{}\\(0.054240)\\$p=0.4243$} & \shortstack{-0.018062\sym{}\\(0.047916)\\$p=0.7062$} & \shortstack{-0.064799\sym{}\\(0.187356)\\$p=0.7295$} & \shortstack{0.036300\sym{}\\(0.164153)\\$p=0.8250$} \\
+N / Treated clients & 20473 / 21 & 29136 / 21 & 18218 / 6 & 26335 / 6 \\ \addlinespace
+Violation & \shortstack{-0.009717\sym{}\\(0.014136)\\$p=0.4919$} & \shortstack{0.001314\sym{}\\(0.013423)\\$p=0.9220$} & \shortstack{-0.026361\sym{}\\(0.020838)\\$p=0.2060$} & \shortstack{-0.020768\sym{}\\(0.021022)\\$p=0.3233$} \\
+N / Treated clients & 20473 / 21 & 29136 / 21 & 18218 / 6 & 26335 / 6 \\ \addlinespace
+Absolute Jones DA & \shortstack{-0.002943\sym{}\\(0.008460)\\$p=0.7279$} & \shortstack{0.000242\sym{}\\(0.007699)\\$p=0.9750$} & \shortstack{-0.010043\sym{}\\(0.011690)\\$p=0.3904$} & \shortstack{-0.010974\sym{}\\(0.010068)\\$p=0.2758$} \\
+N / Treated clients & 17782 / 21 & 25985 / 21 & 15830 / 6 & 23568 / 6 \\ \addlinespace
+Absolute DD DA & \shortstack{-0.014846\sym{}\\(0.011561)\\$p=0.1992$} & \shortstack{-0.011704\sym{}\\(0.011062)\\$p=0.2901$} & \shortstack{-0.039759\sym{***}\\(0.014968)\\$p=0.0079$} & \shortstack{-0.041147\sym{***}\\(0.014523)\\$p=0.0046$} \\
+N / Treated clients & 17194 / 21 & 25336 / 21 & 15249 / 6 & 22928 / 6 \\ \addlinespace
+\bottomrule
+\end{tabular*}
+\par\medskip\fontsize{9}{11}\selectfont\textit{Notes:} SE clustered by firm. Nine audit-failure controls and mis\_dummy. * $p<0.10$, ** $p<0.05$, *** $p<0.01$.
+\end{document}

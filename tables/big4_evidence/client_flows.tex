@@ -1,0 +1,26 @@
+\documentclass[10pt]{article}
+\usepackage[paperwidth=32cm,paperheight=45cm,margin=1cm]{geometry}
+\usepackage{fontspec,booktabs,array,graphicx,caption,amsmath}
+\setmainfont{lmroman10-regular.otf}[BoldFont=lmroman10-bold.otf,ItalicFont=lmroman10-italic.otf]
+\usepackage[active,tightpage]{preview}
+\PreviewEnvironment{minipage}\setlength\PreviewBorder{6pt}
+\captionsetup{font=normalsize,labelformat=empty,skip=6pt}
+\begin{document}
+\begin{minipage}{19cm}\fontsize{10}{12}\selectfont\centering
+\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.15}
+\captionof{table}{Audit Opinions and Next-Year Big 4 Client Transitions}
+\begin{tabular}{lcccc}\toprule
+Signal & Difference (SE) & p & 95\% CI & N \\ \midrule
+\multicolumn{5}{l}{\textbf{Panel A: Current Big 4 clients (next-year exit)}} \\
+MAO & \shortstack{30.399\\(7.348)} & $<0.001$ & [15.963, 44.835] & 3,877 \\
+GC & \shortstack{20.619\\(10.138)} & 0.042 & [0.701, 40.536] & 3,877 \\
+Violation announcement & \shortstack{2.919\\(6.633)} & 0.660 & [-10.112, 15.950] & 3,877 \\
+Unwarned any failure & \shortstack{5.119\\(5.117)} & 0.318 & [-4.935, 15.173] & 3,877 \\
+\multicolumn{5}{l}{\textbf{Panel B: Current non-Big-4 clients (next-year entry)}} \\
+MAO & \shortstack{-0.249\\(0.121)} & 0.039 & [-0.485, -0.012] & 60,917 \\
+GC & \shortstack{0.119\\(0.196)} & 0.544 & [-0.265, 0.502] & 60,917 \\
+Violation announcement & \shortstack{-0.213\\(0.146)} & 0.145 & [-0.499, 0.073] & 60,917 \\
+Unwarned any failure & \shortstack{0.043\\(0.127)} & 0.738 & [-0.207, 0.292] & 60,917 \\
+\bottomrule\end{tabular}\par\smallskip\raggedright\fontsize{9}{11}\selectfont Notes: Percentage points. Panel A reverses the next-Big-4 coefficient to report exit; Panel B reports entry. Strictly adjacent observed years; no next observation is not counted as exit. Original failure controls and missing flags, firm and industry-year FE, firm-clustered SE. Panel A: 516 firms; Panel B: 5,125 firms. These are conditional associations, not identified auditor-initiated resignations.
+\end{minipage}
+\end{document}

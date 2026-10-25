@@ -1,0 +1,23 @@
+\documentclass[10pt]{article}
+\usepackage[paperwidth=21cm,paperheight=45cm,margin=1cm]{geometry}
+\usepackage{fontspec,booktabs,array,amsmath,graphicx}
+\setmainfont{lmroman10-regular.otf}[BoldFont=lmroman10-bold.otf,ItalicFont=lmroman10-italic.otf,BoldItalicFont=lmroman10-bolditalic.otf]
+\pagestyle{empty}\setlength{\parindent}{0pt}
+\newcommand{\sym}[1]{\textsuperscript{#1}}
+\begin{document}\fontsize{10}{12}\selectfont
+\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.15}
+\begin{center}\large Big 4 Auditors and Earnings Quality\end{center}
+\medskip\textbf{Switch out of Big 4}\par\smallskip
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lcccc@{}}
+\toprule
+ & Abs. Jones DA & Abs. DD DA & Abs. Nonlinear DA & Abs. REM \\
+ & (1) & (2) & (3) & (4) \\
+\midrule
+Switch out of Big 4 & 0.010 & 0.227 & -0.001 & -0.003 \\
+ & (0.016) & (0.212) & (0.004) & (0.024) \\
+Observations & 2,453 & 1,989 & 2,506 & 2,263 \\
+Treated firms & 112 & 111 & 112 & 111 \\
+Control firms & 147 & 114 & 151 & 130 \\
+\bottomrule\end{tabular*}\par
+\medskip\fontsize{9}{11}\selectfont\textit{Notes:} SE clustered by firm. Earnings-quality controls and mis\_dummy. * $p<0.10$, ** $p<0.05$, *** $p<0.01$.
+\end{document}

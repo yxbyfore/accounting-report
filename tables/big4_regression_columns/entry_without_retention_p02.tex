@@ -1,0 +1,37 @@
+\documentclass[10pt]{article}
+\usepackage[paperwidth=21cm,paperheight=45cm,margin=1cm]{geometry}
+\usepackage{fontspec,booktabs,array,amsmath,graphicx}
+\setmainfont{lmroman10-regular.otf}[BoldFont=lmroman10-bold.otf,ItalicFont=lmroman10-italic.otf,BoldItalicFont=lmroman10-bolditalic.otf]
+\pagestyle{empty}\setlength{\parindent}{0pt}
+\newcommand{\sym}[1]{\textsuperscript{#1}}
+\begin{document}\fontsize{10}{12}\selectfont
+\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.15}
+\begin{center}\large Entry Without Future Retention Restrictions\end{center}
+\medskip\textbf{No future retention: common cohorts / columns 1--4}\par\smallskip
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lcccc@{}}
+\toprule
+ & Fin restatement & Strict restatement & Raw restatement & Fin any failure \\
+ & (1) & (2) & (3) & (4) \\
+\midrule
+Switch into Big 4 & -0.056191\sym{***} & -0.005428 & -0.073206\sym{***} & -0.067354\sym{***} \\
+ & (0.013754) & (0.007289) & (0.017274) & (0.015338) \\
+$p$ & 0.0000 & 0.4565 & 0.0000 & 0.0000 \\
+Observations & 366,544 & 366,544 & 366,544 & 366,544 \\
+Treated firms & 238 & 238 & 238 & 238 \\
+Control firms & 4,344 & 4,344 & 4,344 & 4,344 \\
+\bottomrule\end{tabular*}\par
+\medskip\textbf{No future retention: common cohorts / columns 5--7}\par\smallskip
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lccc@{}}
+\toprule
+ & Strict any failure & Raw any failure & Violation \\
+ & (5) & (6) & (7) \\
+\midrule
+Switch into Big 4 & -0.021609\sym{*} & -0.081982\sym{***} & -0.016710 \\
+ & (0.011579) & (0.018000) & (0.010377) \\
+$p$ & 0.0621 & 0.0000 & 0.1074 \\
+Observations & 366,544 & 366,544 & 366,544 \\
+Treated firms & 238 & 238 & 238 \\
+Control firms & 4,344 & 4,344 & 4,344 \\
+\bottomrule\end{tabular*}\par
+\medskip\fontsize{9}{11}\selectfont\textit{Notes:} SE clustered by firm. Nine audit-failure controls and mis\_dummy. * $p<0.10$, ** $p<0.05$, *** $p<0.01$.
+\end{document}

@@ -1,0 +1,21 @@
+\documentclass[10pt]{article}
+\usepackage[paperwidth=21cm,paperheight=38cm,margin=1cm]{geometry}
+\usepackage{fontspec,booktabs,array}
+\setmainfont{lmroman10-regular.otf}[BoldFont=lmroman10-bold.otf,ItalicFont=lmroman10-italic.otf,BoldItalicFont=lmroman10-bolditalic.otf]
+\newcommand{\sym}[1]{\textsuperscript{#1}}
+\pagestyle{empty}
+\begin{document}\fontsize{10}{12}\selectfont\setlength{\parindent}{0pt}
+\noindent\textbf{Current Big4 Clients: Exit minus Retention}\par\medskip
+\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.15}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lccc@{}}
+\toprule
+Y & All Big4 clients & MAO clients & GC clients \\
+\midrule
+Subsequent violation & \shortstack{0.024407\sym{}\\(0.023212)\\$p=0.2936$} & \shortstack{-0.076394\sym{}\\(0.073815)\\$p=0.3013$} & \shortstack{0.030799\sym{}\\(0.071859)\\$p=0.6684$} \\ \addlinespace
+Historical violation & \shortstack{0.035328\sym{*}\\(0.020630)\\$p=0.0876$} & \shortstack{0.020316\sym{}\\(0.054996)\\$p=0.7120$} & \shortstack{0.147582\sym{*}\\(0.080914)\\$p=0.0689$} \\ \addlinespace
+Exit / retention & 132 / 2,812 & 19 / 30 & 8 / 17 \\
+Regression N / Firm clusters & 2,944 / 418 & 2,944 / 418 & 2,944 / 418 \\
+\bottomrule
+\end{tabular*}
+\par\medskip\fontsize{9}{11}\selectfont\textit{Notes:} SE clustered by firm. Nine audit-failure controls and mis\_dummy. * $p<0.10$, ** $p<0.05$, *** $p<0.01$.
+\end{document}

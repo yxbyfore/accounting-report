@@ -1,0 +1,35 @@
+\documentclass[10pt]{article}
+\usepackage[paperwidth=32cm,paperheight=45cm,margin=1cm]{geometry}
+\usepackage{fontspec,xeCJK}
+\setmainfont{lmroman10-regular.otf}[BoldFont=lmroman10-bold.otf,ItalicFont=lmroman10-italic.otf,BoldItalicFont=lmroman10-bolditalic.otf]
+\setCJKmainfont{SimSun}
+\usepackage{booktabs,array,threeparttable,graphicx,caption,longtable,amsmath,amssymb,hyperref,xcolor}
+\usepackage[active,tightpage]{preview}
+\PreviewEnvironment{minipage}
+\setlength\PreviewBorder{6pt}
+\newcommand{\sym}[1]{\textsuperscript{#1}}
+\captionsetup{font=normalsize,labelformat=empty,skip=6pt}
+\setlength{\parindent}{0pt}
+\begin{document}
+\begin{minipage}{19cm}\fontsize{10}{12}\selectfont\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.12}
+
+
+\centering
+\captionof{table}{Release-pool selection: CPA career tenure}
+\begin{threeparttable}
+\begin{tabular}{p{0.38\textwidth}ccc}
+\toprule
+Statistic & Years or coefficient (SE) & Observations or CPAs & Mixed firm-years \\
+\midrule
+Release-pool member & \shortstack{4.961***\\(0.242)} & 16,961 & 354 \\
+Pool-member mean tenure & 13.02 & 1026 &  \\
+Non-pool mean tenure & 7.811 & 15935 &  \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}\fontsize{9}{11}\selectfont
+\item \raggedright \fontsize{9}{11}\selectfont \textit{Notes:} The release-pool member coefficient compares CPAs within the same audit firm and year; standard errors cluster by audit firm. Mean tenure and CPA counts are descriptive. This is a selection diagnostic, not an audit-outcome effect.
+\end{tablenotes}
+\end{threeparttable}
+
+\end{minipage}
+\end{document}

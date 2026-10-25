@@ -1,0 +1,55 @@
+\documentclass[10pt]{article}
+\usepackage[paperwidth=21cm,paperheight=45cm,margin=1cm]{geometry}
+\usepackage{fontspec,booktabs,array,amsmath,graphicx}
+\setmainfont{lmroman10-regular.otf}[BoldFont=lmroman10-bold.otf,ItalicFont=lmroman10-italic.otf,BoldItalicFont=lmroman10-bolditalic.otf]
+\pagestyle{empty}\setlength{\parindent}{0pt}
+\newcommand{\sym}[1]{\textsuperscript{#1}}
+\begin{document}\fontsize{10}{12}\selectfont
+\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.15}
+\begin{center}\large Failure and Opinion Decomposition: Matched Unweighted\end{center}
+\medskip\textbf{Warned failure / columns 1--4}\par\smallskip
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lcccc@{}}
+\toprule
+ & Fin restatement & Strict restatement & Raw restatement & Fin any failure \\
+ & (1) & (2) & (3) & (4) \\
+\midrule
+Switch into Big 4 & 0.016873\sym{*} & 0.000425 & 0.016785 & 0.028659\sym{**} \\
+ & (0.010167) & (0.002887) & (0.019716) & (0.013215) \\
+$p$ & 0.0984 & 0.8831 & 0.3955 & 0.0311 \\
+Observations & 1,763 & 1,763 & 1,763 & 1,763 \\
+\bottomrule\end{tabular*}\par
+\medskip\textbf{Warned failure / columns 5--7}\par\smallskip
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lccc@{}}
+\toprule
+ & Strict any failure & Raw any failure & Violation \\
+ & (5) & (6) & (7) \\
+\midrule
+Switch into Big 4 & 0.017911\sym{*} & 0.025753 & 0.017486\sym{*} \\
+ & (0.009814) & (0.019869) & (0.009739) \\
+$p$ & 0.0693 & 0.1962 & 0.0739 \\
+Observations & 1,763 & 1,763 & 1,763 \\
+\bottomrule\end{tabular*}\par
+\medskip\textbf{MAO / columns 1--4}\par\smallskip
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lcccc@{}}
+\toprule
+ & Fin restatement & Strict restatement & Raw restatement & Fin any failure \\
+ & (1) & (2) & (3) & (4) \\
+\midrule
+Switch into Big 4 & -0.016670 & -0.016670 & -0.016670 & -0.016670 \\
+ & (0.034673) & (0.034673) & (0.034673) & (0.034673) \\
+$p$ & 0.6311 & 0.6311 & 0.6311 & 0.6311 \\
+Observations & 1,763 & 1,763 & 1,763 & 1,763 \\
+\bottomrule\end{tabular*}\par
+\medskip\textbf{MAO / columns 5--7}\par\smallskip
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lccc@{}}
+\toprule
+ & Strict any failure & Raw any failure & Violation \\
+ & (5) & (6) & (7) \\
+\midrule
+Switch into Big 4 & -0.016670 & -0.016670 & -0.016670 \\
+ & (0.034673) & (0.034673) & (0.034673) \\
+$p$ & 0.6311 & 0.6311 & 0.6311 \\
+Observations & 1,763 & 1,763 & 1,763 \\
+\bottomrule\end{tabular*}\par
+\medskip\fontsize{9}{11}\selectfont\textit{Notes:} SE clustered by firm. Nine audit-failure controls and mis\_dummy. * $p<0.10$, ** $p<0.05$, *** $p<0.01$.
+\end{document}

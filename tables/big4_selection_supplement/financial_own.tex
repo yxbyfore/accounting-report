@@ -1,0 +1,35 @@
+\documentclass[10pt]{article}
+\usepackage[paperwidth=21cm,paperheight=29.7cm,margin=1cm]{geometry}
+\usepackage{fontspec,booktabs,array,amsmath}
+\setmainfont{lmroman10-regular.otf}[BoldFont=lmroman10-bold.otf,ItalicFont=lmroman10-italic.otf,BoldItalicFont=lmroman10-bolditalic.otf]
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\newcommand{\sym}[1]{\textsuperscript{#1}}
+\begin{document}\fontsize{10}{12}\selectfont\setlength{\parindent}{0pt}
+\fontsize{10}{12}\selectfont
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.15}
+\begin{center}\large Table S5b: Financial Conditions Around Entry\end{center}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lcccc@{}}
+\toprule
+ & ROA & Leverage & Sales growth & Loss \\
+\midrule
+\multicolumn{5}{l}{\textit{Unmatched DID}} \\
+Switch into Big 4 & -0.1861 & 0.2509\sym{**} & -6.6533 & -0.0117 \\
+ & (0.1591) & (0.1123) & (13.2944) & (0.0173) \\
+Observations & 366,155 & 366,155 & 350,056 & 366,155 \\
+\addlinespace
+\multicolumn{5}{l}{\textit{Unweighted PSM-DID}} \\
+Switch into Big 4 & -0.0028 & -0.0121 & -0.8669 & -0.0568 \\
+ & (0.0100) & (0.0209) & (0.6439) & (0.0411) \\
+Observations & 1,761 & 1,761 & 1,678 & 1,761 \\
+\addlinespace
+\multicolumn{5}{l}{\textit{Weighted PSM-DID}} \\
+Switch into Big 4 & -0.0034 & -0.0088 & -0.8357 & -0.0613 \\
+ & (0.0101) & (0.0222) & (0.6100) & (0.0405) \\
+Observations & 1,761 & 1,761 & 1,678 & 1,761 \\
+\addlinespace
+\bottomrule\end{tabular*}
+\medskip\par\fontsize{9}{11}\selectfont
+\textit{Notes:} SE clustered by firm. Nine audit-failure controls and mis\_dummy. * $p<0.10$, ** $p<0.05$, *** $p<0.01$.
+\end{document}

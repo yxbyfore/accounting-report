@@ -1,0 +1,28 @@
+\documentclass[10pt]{article}
+\usepackage[paperwidth=34cm,paperheight=48cm,margin=0.8cm]{geometry}
+\usepackage{booktabs,array,amsmath}
+\newcommand{\sym}[1]{\textsuperscript{#1}}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\begin{document}
+\begin{minipage}{18.00cm}
+\fontsize{10}{12}\selectfont
+\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.08}
+{\large\bfseries Earnings Response: Main Specification}\par\medskip
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}lccc@{}}
+\toprule
+ & (1) & (2) & (3) \\
+Dependent variable & [-1,+1] & [-2,+2] & [-3,+3] \\
+\midrule
+Big4 $\times$ UE & 0.116073\sym{***} & 0.160490\sym{***} & 0.132594\sym{**} \\
+ & (0.044493) & (0.056745) & (0.058719) \\
+$p$ & 0.0091 & 0.0047 & 0.0240 \\
+\midrule
+Observations & 30,008 & 29,805 & 29,657 \\
+Firm / fiscal-year FE & Yes & Yes & Yes \\
+ERC controls & Yes & Yes & Yes \\
+\bottomrule\end{tabular*}\par\medskip
+\fontsize{9}{11}\selectfont\textit{Notes:} Each column is one CAR regression. The outcome is market-adjusted CAR; UE is scaled by the pre-announcement price. Selected interaction coefficients only. Standard errors are clustered by firm.
+\par Standard errors are in parentheses. * $p<0.10$, ** $p<0.05$, *** $p<0.01$.
+\end{minipage}
+\end{document}

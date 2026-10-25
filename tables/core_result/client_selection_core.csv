@@ -1,0 +1,23 @@
+row,panel,opinion,label,coefficient,standard_error,p_value,ci_lower,ci_upper,observations,firms
+1,A,mao,Warning and next-year exit: current Big 4 clients,0.3515517303835489,0.073268816,2.1318974e-06,0.20759045,0.49551302,3504,489.0
+1,A,gc,Warning and next-year exit: current Big 4 clients,0.2038552732911803,0.11333197,0.072676867,-0.018823585,0.42653412,3504,489.0
+2,A,mao,Warning and next-year entry: current non-Big-4 clients,-0.0029271739105764,0.0012261095,0.017005593,-0.0053308727,-0.00052347517,59865,5119.0
+2,A,gc,Warning and next-year entry: current non-Big-4 clients,0.0002699111747473,0.0016952888,0.87350774,-0.0030535799,0.0035934022,59865,5119.0
+4,B,mao,Current failure: Big 4 gap among warned,-0.0625249886171308,0.033736106,0.063883819,-0.12866078,0.0036108042,70197,5623.0
+4,B,gc,Current failure: Big 4 gap among warned,-0.1188389784170786,0.044647966,0.0077970931,-0.20636623,-0.031311728,70197,5623.0
+7,B,mao,Next-year violation announcement: Big 4 gap among warned,-0.053008340574652,0.022844234,0.020355294,-0.09779235,-0.0082243346,64299,5352.0
+7,B,gc,Next-year violation announcement: Big 4 gap among warned,-0.088684986105916,0.024100475,0.00023571037,-0.13593173,-0.041438237,64299,5352.0
+10,B,mao,Next-year restatement: Big 4 gap among warned,-0.0125653055646786,0.022698391,0.57989156,-0.057063401,0.03193279,64299,5352.0
+10,B,gc,Next-year restatement: Big 4 gap among warned,0.0184536991216084,0.045161318,0.68283683,-0.070080884,0.10698828,64299,5352.0
+21,D,mao,"Current failure, Big 4: No event among warned",0.8785046728971964,,,,,107,
+25,D,mao,"Current failure, Non-Big-4: No event among warned",0.7832783278327833,,,,,4545,
+21,D,gc,"Current failure, Big 4: No event among warned",0.9318181818181818,,,,,44,
+25,D,gc,"Current failure, Non-Big-4: No event among warned",0.7802786709539121,,,,,1866,
+23,D,mao,"Current failure, Big 4: Type I error rate",0.0201241704131878,,,,,4671,
+27,D,mao,"Current failure, Non-Big-4: Type I error rate",0.0573758602349832,,,,,62047,
+23,D,gc,"Current failure, Big 4: Type I error rate",0.0087775636908585,,,,,4671,
+27,D,gc,"Current failure, Non-Big-4: Type I error rate",0.0234660821635212,,,,,62047,
+24,D,mao,"Current failure, Big 4: Type II error rate",0.8828828828828829,,,,,111,
+28,D,mao,"Current failure, Non-Big-4: Type II error rate",0.7928496319663512,,,,,4755,
+24,D,gc,"Current failure, Big 4: Type II error rate",0.972972972972973,,,,,111,
+28,D,gc,"Current failure, Non-Big-4: Type II error rate",0.9137749737118822,,,,,4755,

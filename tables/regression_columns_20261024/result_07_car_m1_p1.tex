@@ -1,0 +1,33 @@
+\documentclass[10pt]{article}
+\usepackage[paperwidth=34cm,paperheight=48cm,margin=0.8cm]{geometry}
+\usepackage{booktabs,array,amsmath}
+\newcommand{\sym}[1]{\textsuperscript{#1}}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\begin{document}
+\begin{minipage}{23.60cm}
+\fontsize{10}{12}\selectfont
+\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.08}
+{\large\bfseries ERC: Full Sample, CAR [-1,+1]}\par\medskip
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}lcccccc@{}}
+\toprule
+ & (1) & (2) & (3) & (4) & (5) & (6) \\
+Comparison & Big4 / non-Big4 & Big4 / non-Big4 & Big4 / non-Big4 & Joint three-group & Joint three-group & Joint three-group \\
+Specification & No FE / X & Firm/year FE & FE + controls & No FE / X & Firm/year FE & FE + controls \\
+\midrule
+Big4 $\times$ UE & 0.079565\sym{**} & 0.115318\sym{***} & 0.116073\sym{***} & 0.084947\sym{**} & 0.120246\sym{**} & 0.120583\sym{**} \\
+ & (0.038305) & (0.044438) & (0.044493) & (0.041026) & (0.051880) & (0.051707) \\
+$p$ & 0.0378 & 0.0095 & 0.0091 & 0.0385 & 0.0205 & 0.0197 \\
+Local 8 $\times$ UE & -- & -- & -- & 0.007578 & 0.007548 & 0.006890 \\
+ &  &  &  & (0.038792) & (0.045467) & (0.045473) \\
+$p$ &  &  &  & 0.8451 & 0.8682 & 0.8796 \\
+\midrule
+Observations & 30,676 & 30,014 & 30,008 & 30,676 & 30,014 & 30,008 \\
+Firm clusters & 4,859 & 4,197 & 4,196 & 4,859 & 4,197 & 4,196 \\
+Firm / fiscal-year FE & No & Yes & Yes & No & Yes & Yes \\
+ERC controls & No & No & Yes & No & No & Yes \\
+\bottomrule\end{tabular*}\par\medskip
+\fontsize{9}{11}\selectfont\textit{Notes:} Each column is one fitted regression. The three-group model has both Big4 and Local 8 interactions in the same column, with Other as the reference. The binary reference combines Local 8 and Other. Original units, own effective samples and firm clustering are retained. Selected slope contrasts only.
+\par Standard errors are in parentheses. * $p<0.10$, ** $p<0.05$, *** $p<0.01$.
+\end{minipage}
+\end{document}

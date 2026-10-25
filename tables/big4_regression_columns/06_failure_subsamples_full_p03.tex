@@ -1,0 +1,35 @@
+\documentclass[10pt]{article}
+\usepackage[paperwidth=21cm,paperheight=45cm,margin=1cm]{geometry}
+\usepackage{fontspec,booktabs,array,amsmath,graphicx}
+\setmainfont{lmroman10-regular.otf}[BoldFont=lmroman10-bold.otf,ItalicFont=lmroman10-italic.otf,BoldItalicFont=lmroman10-bolditalic.otf]
+\pagestyle{empty}\setlength{\parindent}{0pt}
+\newcommand{\sym}[1]{\textsuperscript{#1}}
+\begin{document}\fontsize{10}{12}\selectfont
+\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.15}
+\begin{center}\large Switching Big 4 Auditors and Unwarned Failures: Subsamples\end{center}
+\medskip\textbf{Panel: Long Pre-Switch Tenure / Switch into Big 4}\par\smallskip
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lccc@{}}
+\toprule
+ & Any Failure & Restatement & Violation \\
+ & (1) & (2) & (3) \\
+\midrule
+Switch into Big 4 & -0.041\sym{**} & -0.008 & -0.029\sym{*} \\
+ & (0.020) & (0.015) & (0.017) \\
+Observations & 51,619 & 51,619 & 51,619 \\
+Treated firms & 92 & 92 & 92 \\
+Control firms & 4,340 & 4,340 & 4,340 \\
+\bottomrule\end{tabular*}\par
+\medskip\textbf{Panel: Long Pre-Switch Tenure / Switch out of Big 4}\par\smallskip
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lccc@{}}
+\toprule
+ & Any Failure & Restatement & Violation \\
+ & (1) & (2) & (3) \\
+\midrule
+Switch out of Big 4 & 0.036 & -0.039 & 0.059 \\
+ & (0.045) & (0.026) & (0.036) \\
+Observations & 1,683 & 1,683 & 1,683 \\
+Treated firms & 50 & 50 & 50 \\
+Control firms & 153 & 153 & 153 \\
+\bottomrule\end{tabular*}\par
+\medskip\fontsize{9}{11}\selectfont\textit{Notes:} SE clustered by firm. Nine audit-failure controls and mis\_dummy. * $p<0.10$, ** $p<0.05$, *** $p<0.01$.
+\end{document}

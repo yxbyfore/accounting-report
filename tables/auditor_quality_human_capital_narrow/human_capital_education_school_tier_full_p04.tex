@@ -1,0 +1,88 @@
+\documentclass[10pt]{article}
+\usepackage[paperwidth=32cm,paperheight=45cm,margin=1cm]{geometry}
+\usepackage{fontspec,xeCJK}
+\setmainfont{lmroman10-regular.otf}[BoldFont=lmroman10-bold.otf,ItalicFont=lmroman10-italic.otf,BoldItalicFont=lmroman10-bolditalic.otf]
+\setCJKmainfont{SimSun}
+\usepackage{booktabs,array,threeparttable,graphicx,caption,longtable,amsmath,amssymb,hyperref,xcolor}
+\usepackage[active,tightpage]{preview}
+\PreviewEnvironment{minipage}
+\setlength\PreviewBorder{6pt}
+\newcommand{\sym}[1]{\textsuperscript{#1}}
+\captionsetup{font=normalsize,labelformat=empty,skip=6pt}
+\setlength{\parindent}{0pt}
+\begin{document}
+\begin{minipage}{19cm}\fontsize{10}{12}\selectfont\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.12}
+
+
+\centering
+\captionof{table}{A1 Education and University Prestige by Audit Firm Tier: Columns 10--10}
+\begin{threeparttable}
+\begin{tabular}{p{0.38\textwidth}ccc}
+\toprule
+ & (10) &  &  \\
+Variables & Client FE &  &  \\
+\midrule
+\addlinespace
+\multicolumn{4}{l}{\textbf{Panel A: Cumulative degree thresholds (base: below bachelor)}} \\
+Big 4 audit firm & -0.038*** &  &  \\
+ & (0.012) &  &  \\
+Local 8 audit firm & -0.008 &  &  \\
+ & (0.005) &  &  \\
+Bachelor or above & 0.001 &  &  \\
+ & (0.003) &  &  \\
+Master or above & -0.006 &  &  \\
+ & (0.004) &  &  \\
+Doctorate or above & -0.001 &  &  \\
+ & (0.014) &  &  \\
+Big 4 $\times$ Bachelor+ & 0.007 &  &  \\
+ & (0.011) &  &  \\
+Big 4 $\times$ Master+ & -0.008 &  &  \\
+ & (0.006) &  &  \\
+Big 4 $\times$ Doctorate+ & -0.004 &  &  \\
+ & (0.017) &  &  \\
+Local 8 $\times$ Bachelor+ & -0.004 &  &  \\
+ & (0.005) &  &  \\
+Local 8 $\times$ Master+ & 0.007 &  &  \\
+ & (0.005) &  &  \\
+Local 8 $\times$ Doctorate+ & 0.000 &  &  \\
+ & (0.016) &  &  \\
+Observations & 67,182 &  &  \\
+$R^{2}$ & 0.071 &  &  \\
+Client FE & No &  &  \\
+Audit firm FE & Yes &  &  \\
+Year FE & Yes &  &  \\
+Controls & Yes &  &  \\
+\addlinespace
+\multicolumn{4}{l}{\textbf{Panel B: Cumulative university tiers (base: neither 985 nor 211)}} \\
+Big 4 audit firm & -0.037*** &  &  \\
+ & (0.008) &  &  \\
+Local 8 audit firm & -0.009** &  &  \\
+ & (0.004) &  &  \\
+985 or 211 university & -0.006 &  &  \\
+ & (0.004) &  &  \\
+985 university & 0.009 &  &  \\
+ & (0.006) &  &  \\
+Big 4 $\times$ 985/211 & 0.009 &  &  \\
+ & (0.006) &  &  \\
+Big 4 $\times$ 985 & -0.005 &  &  \\
+ & (0.008) &  &  \\
+Local 8 $\times$ 985/211 & 0.003 &  &  \\
+ & (0.005) &  &  \\
+Local 8 $\times$ 985 & -0.006 &  &  \\
+ & (0.007) &  &  \\
+Observations & 66,214 &  &  \\
+$R^{2}$ & 0.070 &  &  \\
+Client FE & No &  &  \\
+Audit firm FE & Yes &  &  \\
+Year FE & Yes &  &  \\
+Controls & Yes &  &  \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}\fontsize{9}{11}\selectfont
+\item \raggedright \fontsize{9}{11}\selectfont \textit{Notes:} Robust standard errors clustered by client firm are in parentheses. *** $p<0.01$, ** $p<0.05$, * $p<0.1$. All specifications include outcome-specific financial controls. Degree and university indicators are cumulative where included.
+Columns 1--9 absorb client and year fixed effects; column 10 uses client FE as the outcome and absorbs audit firm and year fixed effects.
+\end{tablenotes}
+\end{threeparttable}
+
+\end{minipage}
+\end{document}

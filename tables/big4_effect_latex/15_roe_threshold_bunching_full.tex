@@ -1,0 +1,41 @@
+\documentclass[10pt]{article}
+\usepackage[paperwidth=32cm,paperheight=45cm,margin=1cm]{geometry}
+\usepackage{fontspec}
+\setmainfont{lmroman10-regular.otf}[BoldFont=lmroman10-bold.otf,ItalicFont=lmroman10-italic.otf,BoldItalicFont=lmroman10-bolditalic.otf]
+\usepackage{booktabs,array,threeparttable,graphicx,caption,longtable,amsmath,amssymb,hyperref,xcolor}
+\usepackage[active,tightpage]{preview}
+\PreviewEnvironment{minipage}
+\setlength\PreviewBorder{6pt}
+\newcommand{\sym}[1]{\textsuperscript{#1}}
+\captionsetup{font=normalsize,labelformat=empty,skip=6pt}
+\setlength{\parindent}{0pt}
+\begin{document}
+\begin{minipage}{19cm}\fontsize{10}{12}\selectfont\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.15}
+
+
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\centering
+\captionof{table}{Big 4 Auditors and ROE Threshold Indicators}
+\label{tab:big4-roe-threshold-bunching}
+\begin{threeparttable}
+\begin{tabular}{l c c c c }
+\toprule
+ & ROE 0\% & ROE 6\% & ROE 10\% & Pooled \\
+\midrule
+Big 4 & -0.019 & 0.096\sym{***} & -0.165\sym{*} & 0.040\sym{*} \\
+ & (0.017) & (0.025) & (0.094) & (0.023) \\
+Observations & 2,325 & 7,588 & 991 & 10,966 \\
+Big 4 observations & 107 & 468 & 24 & 602 \\
+Non-Big-4 observations & 2,218 & 7,120 & 967 & 10,364 \\
+\midrule
+Controls & Yes & Yes & Yes & Yes \\
+Firm-clustered SE & Yes & Yes & Yes & Yes \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}\fontsize{9}{11}\selectfont
+\item \raggedright \fontsize{9}{11}\selectfont \textit{Notes:} SE clustered by firm. Earnings-quality controls and mis\_dummy. * $p<0.10$, ** $p<0.05$, *** $p<0.01$.
+\end{tablenotes}
+\end{threeparttable}
+
+\end{minipage}
+\end{document}

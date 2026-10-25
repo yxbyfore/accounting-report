@@ -1,0 +1,245 @@
+\documentclass[10pt]{article}
+\usepackage[paperwidth=21cm,paperheight=29.7cm,margin=1cm]{geometry}
+\usepackage{fontspec,booktabs,array,amsmath}
+\setmainfont{lmroman10-regular.otf}[BoldFont=lmroman10-bold.otf,ItalicFont=lmroman10-italic.otf]
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\newcommand{\sym}[1]{\textsuperscript{#1}}
+\begin{document}
+\fontsize{10}{12}\selectfont
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.15}
+\begin{center}\large Table S1a: Failure and Opinion Decomposition\end{center}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lcccc@{}}
+\toprule
+ & Failure $F$ & Unwarned $F(1-M)$ & Warned $FM$ & MAO $M$ \\
+\midrule
+Fin restatement & -0.0635\sym{***} & -0.0624\sym{***} & -0.0011 & -0.0028 \\
+ & (0.0164) & (0.0156) & (0.0039) & (0.0142) \\
+Strict restatement & -0.0079 & -0.0073 & -0.0006 & -0.0028 \\
+ & (0.0082) & (0.0081) & (0.0020) & (0.0142) \\
+Raw restatement & -0.0660\sym{***} & -0.0664\sym{***} & 0.0004 & -0.0028 \\
+ & (0.0202) & (0.0189) & (0.0073) & (0.0142) \\
+Fin any failure & -0.0741\sym{***} & -0.0697\sym{***} & -0.0044 & -0.0028 \\
+ & (0.0175) & (0.0169) & (0.0051) & (0.0142) \\
+Strict any failure & -0.0233\sym{*} & -0.0189 & -0.0044 & -0.0028 \\
+ & (0.0126) & (0.0123) & (0.0041) & (0.0142) \\
+Raw any failure & -0.0773\sym{***} & -0.0740\sym{***} & -0.0033 & -0.0028 \\
+ & (0.0203) & (0.0194) & (0.0077) & (0.0142) \\
+Violation & -0.0161 & -0.0117 & -0.0044 & -0.0028 \\
+ & (0.0109) & (0.0105) & (0.0037) & (0.0142) \\
+\midrule
+Observations & 366,189 & 366,189 & 366,189 & 366,189 \\
+\bottomrule\end{tabular*}
+\medskip\par\fontsize{9}{11}\selectfont
+\textit{Notes:} Unmatched DID. Each outcome is estimated on the same final sample across its four components. $F=F(1-M)+FM$. No observations are removed based on opinions. All models include nine controls and missing indicators, cohort $\times$ firm and cohort $\times$ industry $\times$ year FE. Firm-clustered SE are in parentheses. Coefficients are in original probability units. *** $p<0.01$, ** $p<0.05$, * $p<0.10$.
+\par\fontsize{10}{12}\selectfont
+\clearpage
+\begin{center}\large Table S1b: Failure and Opinion Decomposition\end{center}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lcccc@{}}
+\toprule
+ & Failure $F$ & Unwarned $F(1-M)$ & Warned $FM$ & MAO $M$ \\
+\midrule
+Fin restatement & -0.0862\sym{***} & -0.1031\sym{***} & 0.0169\sym{*} & -0.0167 \\
+ & (0.0320) & (0.0296) & (0.0102) & (0.0347) \\
+Strict restatement & -0.0394\sym{**} & -0.0399\sym{**} & 0.0004 & -0.0167 \\
+ & (0.0171) & (0.0169) & (0.0029) & (0.0347) \\
+Raw restatement & -0.0666 & -0.0834\sym{**} & 0.0168 & -0.0167 \\
+ & (0.0478) & (0.0422) & (0.0197) & (0.0347) \\
+Fin any failure & -0.1024\sym{***} & -0.1310\sym{***} & 0.0287\sym{**} & -0.0167 \\
+ & (0.0385) & (0.0358) & (0.0132) & (0.0347) \\
+Strict any failure & -0.0513\sym{*} & -0.0692\sym{***} & 0.0179\sym{*} & -0.0167 \\
+ & (0.0285) & (0.0258) & (0.0098) & (0.0347) \\
+Raw any failure & -0.0848\sym{*} & -0.1106\sym{**} & 0.0258 & -0.0167 \\
+ & (0.0509) & (0.0472) & (0.0199) & (0.0347) \\
+Violation & -0.0217 & -0.0392 & 0.0175\sym{*} & -0.0167 \\
+ & (0.0268) & (0.0238) & (0.0097) & (0.0347) \\
+\midrule
+Observations & 1,763 & 1,763 & 1,763 & 1,763 \\
+\bottomrule\end{tabular*}
+\medskip\par\fontsize{9}{11}\selectfont
+\textit{Notes:} Unweighted PSM-DID. Each outcome is estimated on the same final sample across its four components. $F=F(1-M)+FM$. No observations are removed based on opinions. All models include nine controls and missing indicators, cohort $\times$ firm and cohort $\times$ industry $\times$ year FE. Firm-clustered SE are in parentheses. Coefficients are in original probability units. *** $p<0.01$, ** $p<0.05$, * $p<0.10$.
+\par\fontsize{10}{12}\selectfont
+\clearpage
+\begin{center}\large Table S1c: Failure and Opinion Decomposition\end{center}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lcccc@{}}
+\toprule
+ & Failure $F$ & Unwarned $F(1-M)$ & Warned $FM$ & MAO $M$ \\
+\midrule
+Fin restatement & -0.0801\sym{**} & -0.1004\sym{***} & 0.0204\sym{*} & -0.0203 \\
+ & (0.0327) & (0.0287) & (0.0121) & (0.0357) \\
+Strict restatement & -0.0373\sym{**} & -0.0377\sym{**} & 0.0004 & -0.0203 \\
+ & (0.0163) & (0.0162) & (0.0029) & (0.0357) \\
+Raw restatement & -0.0670 & -0.0829\sym{**} & 0.0159 & -0.0203 \\
+ & (0.0482) & (0.0409) & (0.0218) & (0.0357) \\
+Fin any failure & -0.0934\sym{**} & -0.1259\sym{***} & 0.0325\sym{**} & -0.0203 \\
+ & (0.0396) & (0.0348) & (0.0153) & (0.0357) \\
+Strict any failure & -0.0455 & -0.0644\sym{**} & 0.0189\sym{*} & -0.0203 \\
+ & (0.0284) & (0.0248) & (0.0106) & (0.0357) \\
+Raw any failure & -0.0836 & -0.1082\sym{**} & 0.0245 & -0.0203 \\
+ & (0.0508) & (0.0456) & (0.0218) & (0.0357) \\
+Violation & -0.0177 & -0.0361 & 0.0185\sym{*} & -0.0203 \\
+ & (0.0267) & (0.0228) & (0.0108) & (0.0357) \\
+\midrule
+Observations & 1,763 & 1,763 & 1,763 & 1,763 \\
+\bottomrule\end{tabular*}
+\medskip\par\fontsize{9}{11}\selectfont
+\textit{Notes:} Weighted PSM-DID. Each outcome is estimated on the same final sample across its four components. $F=F(1-M)+FM$. No observations are removed based on opinions. All models include nine controls and missing indicators, cohort $\times$ firm and cohort $\times$ industry $\times$ year FE. Firm-clustered SE are in parentheses. Coefficients are in original probability units. *** $p<0.01$, ** $p<0.05$, * $p<0.10$.
+\par\fontsize{10}{12}\selectfont
+\clearpage
+\begin{center}\large Table S2: Fin Restatement and Opinion Cells\end{center}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lcccc@{}}
+\toprule
+ & $F=0,M=0$ & $F=0,M=1$ & $F=1,M=0$ & $F=1,M=1$ \\
+\midrule
+\multicolumn{5}{l}{\textit{Unmatched DID}} \\
+Control: pre & 0.8531 & 0.0571 & 0.0766 & 0.0132 \\
+Control: post & 0.8359 & 0.0526 & 0.0918 & 0.0197 \\
+Treated: pre & 0.8383 & 0.0724 & 0.0867 & 0.0026 \\
+Treated: post & 0.9147 & 0.0267 & 0.0533 & 0.0053 \\
+\addlinespace
+\multicolumn{5}{l}{\textit{Unweighted PSM-DID}} \\
+Control: pre & 0.8937 & 0.0633 & 0.0405 & 0.0025 \\
+Control: post & 0.8825 & 0.0532 & 0.0621 & 0.0022 \\
+Treated: pre & 0.8568 & 0.0742 & 0.0665 & 0.0026 \\
+Treated: post & 0.9049 & 0.0209 & 0.0665 & 0.0076 \\
+\addlinespace
+\multicolumn{5}{l}{\textit{Weighted PSM-DID}} \\
+Control: pre & 0.8964 & 0.0627 & 0.0386 & 0.0024 \\
+Control: post & 0.8758 & 0.0568 & 0.0653 & 0.0021 \\
+Treated: pre & 0.8568 & 0.0742 & 0.0665 & 0.0026 \\
+Treated: post & 0.9049 & 0.0209 & 0.0665 & 0.0076 \\
+\addlinespace
+\bottomrule\end{tabular*}
+\medskip\par\fontsize{9}{11}\selectfont
+\textit{Notes:} Descriptive rates in the final estimation sample; weighted for weighted PSM-DID. Pre covers years -4 to -1; post covers years 0 to +4. These are not FE-adjusted coefficients.
+\par\fontsize{10}{12}\selectfont
+\clearpage
+\begin{center}\large Table S3: Entry Without Future Retention Restrictions\end{center}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lccc@{}}
+\toprule
+ & \shortstack{Original stable\\entry} & \shortstack{All new entry\\cohorts} & \shortstack{Common entry\\cohorts} \\
+\midrule
+Fin restatement & -0.0624\sym{***} & -0.0533\sym{***} & -0.0562\sym{***} \\
+ & (0.0156) & (0.0132) & (0.0138) \\
+Strict restatement & -0.0073 & -0.0045 & -0.0054 \\
+ & (0.0081) & (0.0071) & (0.0073) \\
+Raw restatement & -0.0664\sym{***} & -0.0687\sym{***} & -0.0732\sym{***} \\
+ & (0.0189) & (0.0164) & (0.0173) \\
+Fin any failure & -0.0697\sym{***} & -0.0632\sym{***} & -0.0674\sym{***} \\
+ & (0.0169) & (0.0147) & (0.0153) \\
+Strict any failure & -0.0189 & -0.0189\sym{*} & -0.0216\sym{*} \\
+ & (0.0123) & (0.0110) & (0.0116) \\
+Raw any failure & -0.0740\sym{***} & -0.0764\sym{***} & -0.0820\sym{***} \\
+ & (0.0194) & (0.0171) & (0.0180) \\
+Violation & -0.0117 & -0.0151 & -0.0167 \\
+ & (0.0105) & (0.0100) & (0.0104) \\
+\midrule
+Observations & 366,189 & 414,556 & 366,544 \\
+\bottomrule\end{tabular*}
+\medskip\par\fontsize{9}{11}\selectfont
+\textit{Notes:} Outcomes are unwarned joint events. New entry requires three consecutive pre-entry non-Big-4 years, but no future retention. Later exits are retained. Original always-non-Big-4 controls and baseline-year availability are retained. Nine controls and missing indicators; cohort $\times$ firm and cohort $\times$ industry $\times$ year FE; firm-clustered SE. No new matching is applied. *** $p<0.01$, ** $p<0.05$, * $p<0.10$.
+\par\fontsize{10}{12}\selectfont
+\clearpage
+\begin{center}\large Table S4a: Pre-entry Risk-path Matching\end{center}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lcc@{}}
+\toprule
+ & Baseline PSM-DID & Risk-path PSM-DID \\
+\midrule
+Fin restatement & -0.1004\sym{***} & -0.0530\sym{*} \\
+ & (0.0287) & (0.0276) \\
+Strict restatement & -0.0377\sym{**} & -0.0023 \\
+ & (0.0162) & (0.0126) \\
+Raw restatement & -0.0829\sym{**} & -0.0036 \\
+ & (0.0409) & (0.0417) \\
+Fin any failure & -0.1259\sym{***} & -0.0503 \\
+ & (0.0348) & (0.0390) \\
+Strict any failure & -0.0644\sym{**} & -0.0048 \\
+ & (0.0248) & (0.0295) \\
+Raw any failure & -0.1082\sym{**} & -0.0040 \\
+ & (0.0456) & (0.0478) \\
+Violation & -0.0361 & -0.0014 \\
+ & (0.0228) & (0.0283) \\
+\midrule
+Observations & 1,763 & 1,748 \\
+\bottomrule\end{tabular*}
+\medskip\par\fontsize{9}{11}\selectfont
+\textit{Notes:} Each matched sample. Risk matching adds pre-entry financial paths and announcement histories to the baseline Logit. History means use covered years only, with coverage counts and missing indicators. Same-year nearest-neighbor matching with replacement, without a caliper. Outcomes are unwarned joint events. Nine controls; cohort $\times$ firm and cohort $\times$ industry $\times$ year FE; firm-clustered SE. *** $p<0.01$, ** $p<0.05$, * $p<0.10$.
+\par\fontsize{10}{12}\selectfont
+\clearpage
+\begin{center}\large Table S4b: Pre-entry Risk-path Matching\end{center}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lcc@{}}
+\toprule
+ & Baseline PSM-DID & Risk-path PSM-DID \\
+\midrule
+Fin restatement & 0.0049 & 0.0058 \\
+ & (0.0611) & (0.0632) \\
+Strict restatement & -0.0079 & -0.0081 \\
+ & (0.0118) & (0.0122) \\
+Raw restatement & 0.0304 & 0.0217 \\
+ & (0.0906) & (0.0904) \\
+Fin any failure & -0.0595 & -0.0592 \\
+ & (0.1153) & (0.1178) \\
+Strict any failure & -0.0620 & -0.0624 \\
+ & (0.0793) & (0.0804) \\
+Raw any failure & -0.0318 & -0.0410 \\
+ & (0.1342) & (0.1342) \\
+Violation & -0.0553 & -0.0555 \\
+ & (0.0791) & (0.0802) \\
+\midrule
+Observations & 756 & 756 \\
+\bottomrule\end{tabular*}
+\medskip\par\fontsize{9}{11}\selectfont
+\textit{Notes:} Intersection of the two matched samples, each with its own weights. Risk matching adds pre-entry financial paths and announcement histories to the baseline Logit. History means use covered years only, with coverage counts and missing indicators. Same-year nearest-neighbor matching with replacement, without a caliper. Outcomes are unwarned joint events. Nine controls; cohort $\times$ firm and cohort $\times$ industry $\times$ year FE; firm-clustered SE. *** $p<0.01$, ** $p<0.05$, * $p<0.10$.
+\par\fontsize{10}{12}\selectfont
+\clearpage
+\begin{center}\large Table S5a: Financial Conditions Around Entry\end{center}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lcccc@{}}
+\toprule
+ & ROA & Leverage & Sales growth & Loss \\
+\midrule
+\multicolumn{5}{l}{\textit{Unmatched DID}} \\
+Switch into Big 4 & -0.1307 & 0.0541 & -6.6608 & -0.0109 \\
+ & (0.2144) & (0.0350) & (13.2980) & (0.0178) \\
+Observations & 350,047 & 350,047 & 350,047 & 350,047 \\
+\addlinespace
+\multicolumn{5}{l}{\textit{Unweighted PSM-DID}} \\
+Switch into Big 4 & -0.0056 & -0.0136 & -0.8669 & -0.0572 \\
+ & (0.0113) & (0.0208) & (0.6439) & (0.0436) \\
+Observations & 1,678 & 1,678 & 1,678 & 1,678 \\
+\addlinespace
+\multicolumn{5}{l}{\textit{Weighted PSM-DID}} \\
+Switch into Big 4 & -0.0061 & -0.0116 & -0.8357 & -0.0620 \\
+ & (0.0116) & (0.0216) & (0.6100) & (0.0432) \\
+Observations & 1,678 & 1,678 & 1,678 & 1,678 \\
+\addlinespace
+\bottomrule\end{tabular*}
+\medskip\par\fontsize{9}{11}\selectfont
+\textit{Notes:} Common sample with all four raw outcomes observed. Outcome values are not imputed or trimmed. The outcome and its missing indicator are excluded from its control list; other baseline controls are retained. Frozen matching and weights; cohort $\times$ firm and cohort $\times$ industry $\times$ year FE; firm-clustered SE. ROA, leverage and growth use original ratio units; loss uses probability units. *** $p<0.01$, ** $p<0.05$, * $p<0.10$.
+\par\fontsize{10}{12}\selectfont
+\clearpage
+\begin{center}\large Table S5b: Financial Conditions Around Entry\end{center}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lcccc@{}}
+\toprule
+ & ROA & Leverage & Sales growth & Loss \\
+\midrule
+\multicolumn{5}{l}{\textit{Unmatched DID}} \\
+Switch into Big 4 & -0.1861 & 0.2509\sym{**} & -6.6533 & -0.0117 \\
+ & (0.1591) & (0.1123) & (13.2944) & (0.0173) \\
+Observations & 366,155 & 366,155 & 350,056 & 366,155 \\
+\addlinespace
+\multicolumn{5}{l}{\textit{Unweighted PSM-DID}} \\
+Switch into Big 4 & -0.0028 & -0.0121 & -0.8669 & -0.0568 \\
+ & (0.0100) & (0.0209) & (0.6439) & (0.0411) \\
+Observations & 1,761 & 1,761 & 1,678 & 1,761 \\
+\addlinespace
+\multicolumn{5}{l}{\textit{Weighted PSM-DID}} \\
+Switch into Big 4 & -0.0034 & -0.0088 & -0.8357 & -0.0613 \\
+ & (0.0101) & (0.0222) & (0.6100) & (0.0405) \\
+Observations & 1,761 & 1,761 & 1,678 & 1,761 \\
+\addlinespace
+\bottomrule\end{tabular*}
+\medskip\par\fontsize{9}{11}\selectfont
+\textit{Notes:} Outcome-specific valid samples. Outcome values are not imputed or trimmed. The outcome and its missing indicator are excluded from its control list; other baseline controls are retained. Frozen matching and weights; cohort $\times$ firm and cohort $\times$ industry $\times$ year FE; firm-clustered SE. ROA, leverage and growth use original ratio units; loss uses probability units. *** $p<0.01$, ** $p<0.05$, * $p<0.10$.
+\par\fontsize{10}{12}\selectfont
+\end{document}

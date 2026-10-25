@@ -1,0 +1,40 @@
+\documentclass[10pt]{article}
+\usepackage[paperwidth=32cm,paperheight=45cm,margin=1cm]{geometry}
+\usepackage{fontspec,xeCJK}
+\setmainfont{lmroman10-regular.otf}[BoldFont=lmroman10-bold.otf,ItalicFont=lmroman10-italic.otf,BoldItalicFont=lmroman10-bolditalic.otf]
+\setCJKmainfont{SimSun}
+\usepackage{booktabs,array,threeparttable,graphicx,caption,longtable,amsmath,amssymb,hyperref,xcolor}
+\usepackage[active,tightpage]{preview}
+\PreviewEnvironment{minipage}
+\setlength\PreviewBorder{6pt}
+\newcommand{\sym}[1]{\textsuperscript{#1}}
+\captionsetup{font=normalsize,labelformat=empty,skip=6pt}
+\setlength{\parindent}{0pt}
+\begin{document}
+\begin{minipage}{19cm}\fontsize{10}{12}\selectfont\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.12}
+
+
+\centering
+\captionof{table}{AKM variance decomposition: all components (part 1 of 4)}
+\begin{threeparttable}
+\begin{tabular}{p{0.36\textwidth}ccc}
+\toprule
+Specification & Outcome & Auditor & Audit firm \\
+\midrule
+No Firm FE & Any failure & 14.2 & 4.0 \\
+No Firm FE & Restatement & 14.1 & 2.7 \\
+No Firm FE & Violation & 14.1 & 4.1 \\
+No Firm FE & Abs. DA (Jones) & 7.4 & 1.1 \\
+With Firm FE & Any failure & 15.0 & 2.9 \\
+With Firm FE & Restatement & 14.0 & 2.0 \\
+With Firm FE & Violation & 16.3 & 3.4 \\
+With Firm FE & Abs. DA (Jones) & 15.2 & 1.8 \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}\fontsize{9}{11}\selectfont
+\item \raggedright \fontsize{9}{11}\selectfont \textit{Notes:} Shares of outcome variance in percent; covariance may be negative, and FE components are estimated.
+\end{tablenotes}
+\end{threeparttable}
+
+\end{minipage}
+\end{document}

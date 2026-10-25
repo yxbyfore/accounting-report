@@ -1,0 +1,26 @@
+{
+  "run_id": "20261023_220314",
+  "python": "3.12.5",
+  "numpy": "1.26.4",
+  "pandas": "2.3.3",
+  "scipy": "1.16.2",
+  "stata_run": false,
+  "specification": "client + original audit firm + year FE + outcome-specific controls; annual median imputation; A1 gates",
+  "weight": "equal firm-year; population covariance (ddof=0)",
+  "inputs": [
+    {
+      "path": "data/analysis/panel_firm_year_final_audit_report_panel_full.dta",
+      "bytes": 163752947,
+      "mtime": "2026-10-06T17:26:47.699554",
+      "sha256": "a802afe5ccb3a1fe75358d07a7b0c9b608560800e6376bfb6a1e16e5be0f1b6b"
+    },
+    {
+      "path": "data/analysis/auditor_team_features.dta",
+      "bytes": 30405151,
+      "mtime": "2026-09-12T21:34:56.700635",
+      "sha256": "ed7dd480350a39a608404b9b95c308ec919e52ac09cd18f375a5cc1833e2ae7e"
+    }
+  ],
+  "panel_rows": 71584,
+  "valid_id_rows": 70471
+}

@@ -1,0 +1,41 @@
+\documentclass[10pt]{article}
+\usepackage[paperwidth=32cm,paperheight=45cm,margin=1cm]{geometry}
+\usepackage{fontspec}
+\setmainfont{lmroman10-regular.otf}[BoldFont=lmroman10-bold.otf,ItalicFont=lmroman10-italic.otf,BoldItalicFont=lmroman10-bolditalic.otf]
+\usepackage{booktabs,array,threeparttable,graphicx,caption,longtable,amsmath,amssymb,hyperref,xcolor}
+\usepackage[active,tightpage]{preview}
+\PreviewEnvironment{minipage}
+\setlength\PreviewBorder{6pt}
+\newcommand{\sym}[1]{\textsuperscript{#1}}
+\captionsetup{font=normalsize,labelformat=empty,skip=6pt}
+\setlength{\parindent}{0pt}
+\begin{document}
+\begin{minipage}{19cm}\fontsize{10}{12}\selectfont\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.15}
+
+\setlength{\tabcolsep}{4pt}
+\begin{center} Table M1: Client Selection, Audit Warnings, and Big 4 Client Risk\end{center}
+\noindent\textbf{Panel A: Audit Warnings and Client Transitions}\par\medskip
+\begin{center}\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lcccc@{}}
+\toprule
+ & \multicolumn{2}{c}{Exit Big 4, $t+1$} & \multicolumn{2}{c}{Enter Big 4, $t+1$} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}
+ & (1) & (2) & (3) & (4) \\
+Current clients & Big 4 & Big 4 & Non-Big-4 & Non-Big-4 \\
+\midrule
+MAO & 0.352\sym{***} &  & -0.003\sym{**} &  \\
+ & (0.073) &  & (0.001) &  \\
+GC &  & 0.204\sym{*} &  & 0.00027 \\
+ &  & (0.113) &  & (0.002) \\
+\midrule
+Observations & 3,504 & 3,504 & 59,865 & 59,865 \\
+Firms & 489 & 489 & 5,119 & 5,119 \\
+Controls & Yes & Yes & Yes & Yes \\
+Missing-value indicators & Yes & Yes & Yes & Yes \\
+Firm FE & Yes & Yes & Yes & Yes \\
+Industry $\times$ Year FE & Yes & Yes & Yes & Yes \\
+SE clustering & Firm & Firm & Firm & Firm \\
+\bottomrule\end{tabular*}\end{center}
+
+\par\smallskip\raggedright\fontsize{9}{11}\selectfont Significance: * $p<0.10$, ** $p<0.05$, *** $p<0.01$.
+\end{minipage}
+\end{document}

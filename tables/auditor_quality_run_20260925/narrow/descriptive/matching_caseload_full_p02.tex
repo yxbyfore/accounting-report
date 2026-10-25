@@ -1,0 +1,42 @@
+\documentclass[10pt]{article}
+\usepackage[paperwidth=32cm,paperheight=45cm,margin=1cm]{geometry}
+\usepackage{fontspec,xeCJK}
+\setmainfont{lmroman10-regular.otf}[BoldFont=lmroman10-bold.otf,ItalicFont=lmroman10-italic.otf,BoldItalicFont=lmroman10-bolditalic.otf]
+\setCJKmainfont{SimSun}
+\usepackage{booktabs,array,threeparttable,graphicx,caption,longtable,amsmath,amssymb,hyperref,xcolor}
+\usepackage[active,tightpage]{preview}
+\PreviewEnvironment{minipage}
+\setlength\PreviewBorder{6pt}
+\newcommand{\sym}[1]{\textsuperscript{#1}}
+\captionsetup{font=normalsize,labelformat=empty,skip=6pt}
+\setlength{\parindent}{0pt}
+\begin{document}
+\begin{minipage}{19cm}\fontsize{10}{12}\selectfont\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.12}
+
+
+\centering
+\captionof{table}{Auditor caseload distribution (part 2 of 3)}
+\begin{threeparttable}
+\begin{tabular}{p{0.36\textwidth}ccc}
+\toprule
+Sample & Group & Median & Zero (\%) \\
+\midrule
+All\_Auditors & All Auditors & 1.0 & 14.5 \\
+All\_Auditors & Big 4 Background & 1.0 & 18.1 \\
+All\_Auditors & Bachelor or Above & 1.0 & 14.6 \\
+All\_Auditors & 985/211 Universities & 1.0 & 15.8 \\
+All\_Auditors & Master or Above & 1.0 & 15.5 \\
+Matching\_Events & All Auditors & 3.0 & 0.0 \\
+Matching\_Events & Big 4 Background & 2.0 & 0.0 \\
+Matching\_Events & Bachelor or Above & 3.0 & 0.0 \\
+Matching\_Events & 985/211 Universities & 3.0 & 0.0 \\
+Matching\_Events & Master or Above & 3.0 & 0.0 \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}\fontsize{9}{11}\selectfont
+\item \raggedright \fontsize{9}{11}\selectfont \textit{Notes:} The source workbook reports auditor-year and matching-event samples separately.
+\end{tablenotes}
+\end{threeparttable}
+
+\end{minipage}
+\end{document}

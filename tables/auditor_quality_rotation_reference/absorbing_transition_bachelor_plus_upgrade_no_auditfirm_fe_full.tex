@@ -1,0 +1,90 @@
+\documentclass[10pt]{article}
+\usepackage[paperwidth=32cm,paperheight=45cm,margin=1cm]{geometry}
+\usepackage{fontspec,xeCJK}
+\setmainfont{lmroman10-regular.otf}[BoldFont=lmroman10-bold.otf,ItalicFont=lmroman10-italic.otf,BoldItalicFont=lmroman10-bolditalic.otf]
+\setCJKmainfont{SimSun}
+\usepackage{booktabs,array,threeparttable,graphicx,caption,longtable,amsmath,amssymb,hyperref,xcolor}
+\usepackage[active,tightpage]{preview}
+\PreviewEnvironment{minipage}
+\setlength\PreviewBorder{6pt}
+\newcommand{\sym}[1]{\textsuperscript{#1}}
+\captionsetup{font=normalsize,labelformat=empty,skip=6pt}
+\setlength{\parindent}{0pt}
+\begin{document}
+\begin{minipage}{19cm}\fontsize{10}{12}\selectfont\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.12}
+
+
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\centering
+\captionof{table}{Absorbing Transition DID Results: Bachelor Plus --- Upgrade}
+\label{tab:absorbing-transition-bachelor-plus-upgrade-no-auditfirm-fe}
+\begin{threeparttable}
+
+\begin{tabular}{l cc cc cc}
+\toprule
+ & \multicolumn{2}{c}{Any Failure} & \multicolumn{2}{c}{Restatement} & \multicolumn{2}{c}{Violation} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule(lr){6-7}
+ & Pooled & \shortstack{Mandatory /\\Voluntary} & Pooled & \shortstack{Mandatory /\\Voluntary} & Pooled & \shortstack{Mandatory /\\Voluntary} \\
+\midrule
+\multicolumn{7}{l}{\textbf{Panel A: Absorbing DID: Trim}} \\
+$\times$ Mandatory Rotation &  & -0.044 &  & 0.037 &  & -0.056 \\
+ &  & (0.048) &  & (0.033) &  & (0.050) \\
+$\times$ Voluntary Rotation &  & -0.006 &  & -0.005 &  & -0.006 \\
+ &  & (0.008) &  & (0.006) &  & (0.007) \\
+Pooled & -0.004 &  & -0.001 &  & -0.004 &  \\
+ & (0.006) &  & (0.004) &  & (0.005) &  \\
+Mandatory $-$ Voluntary &  & -0.038 &  & 0.042 &  & -0.050 \\
+Difference p-value &  & 0.435 &  & 0.213 &  & 0.325 \\
+Observations & 41,129 & 36,058 & 41,129 & 36,058 & 41,129 & 36,058 \\
+Firms & 5,298 & 4,885 & 5,298 & 4,885 & 5,298 & 4,885 \\
+\addlinespace
+\multicolumn{7}{l}{\textbf{Panel B: Absorbing DID: Strict}} \\
+$\times$ Mandatory Rotation &  & -0.096 &  & 0.024 &  & -0.103 \\
+ &  & (0.062) &  & (0.039) &  & (0.074) \\
+$\times$ Voluntary Rotation &  & -0.002 &  & -0.000 &  & -0.006 \\
+ &  & (0.011) &  & (0.010) &  & (0.008) \\
+Pooled & -0.006 &  & 0.001 &  & -0.010 &  \\
+ & (0.010) &  & (0.008) &  & (0.008) &  \\
+Mandatory $-$ Voluntary &  & -0.094 &  & 0.025 &  & -0.097 \\
+Difference p-value &  & 0.138 &  & 0.540 &  & 0.193 \\
+Observations & 25,690 & 24,493 & 25,690 & 24,493 & 25,690 & 24,493 \\
+Firms & 3,069 & 3,046 & 3,069 & 3,046 & 3,069 & 3,046 \\
+\addlinespace
+\multicolumn{7}{l}{\textbf{Panel C: Fixed-Window DID: 2-Year Window}} \\
+$\times$ Mandatory Rotation &  & -0.010 &  & 0.001 &  & 0.000 \\
+ &  & (0.017) &  & (0.012) &  & (0.017) \\
+$\times$ Voluntary Rotation &  & -0.005 &  & -0.003 &  & -0.004 \\
+ &  & (0.005) &  & (0.003) &  & (0.004) \\
+Pooled & -0.001 &  & 0.001 &  & -0.002 &  \\
+ & (0.004) &  & (0.002) &  & (0.003) &  \\
+Mandatory $-$ Voluntary &  & -0.005 &  & 0.004 &  & 0.004 \\
+Difference p-value &  & 0.779 &  & 0.742 &  & 0.804 \\
+Observations & 46,472 & 40,684 & 46,472 & 40,684 & 46,472 & 40,684 \\
+Firms & 5,618 & 5,267 & 5,618 & 5,267 & 5,618 & 5,267 \\
+\addlinespace
+\multicolumn{7}{l}{\textbf{Panel D: Fixed-Window DID: 3-Year Window}} \\
+$\times$ Mandatory Rotation &  & -0.010 &  & 0.000 &  & 0.000 \\
+ &  & (0.016) &  & (0.011) &  & (0.016) \\
+$\times$ Voluntary Rotation &  & -0.006 &  & -0.004 &  & -0.005 \\
+ &  & (0.005) &  & (0.003) &  & (0.004) \\
+Pooled & -0.003 &  & -0.000 &  & -0.003 &  \\
+ & (0.004) &  & (0.002) &  & (0.003) &  \\
+Mandatory $-$ Voluntary &  & -0.004 &  & 0.004 &  & 0.005 \\
+Difference p-value &  & 0.799 &  & 0.710 &  & 0.778 \\
+Observations & 48,544 & 42,605 & 48,544 & 42,605 & 48,544 & 42,605 \\
+Firms & 5,618 & 5,332 & 5,618 & 5,332 & 5,618 & 5,332 \\
+\midrule
+Controls & Yes & Yes & Yes & Yes & Yes & Yes \\
+Firm FE & Yes & Yes & Yes & Yes & Yes & Yes \\
+Year FE & Yes & Yes & Yes & Yes & Yes & Yes \\
+Audit Firm FE & No & No & No & No & No & No \\
+Sample years & Full & 2004 onward & Full & 2004 onward & Full & 2004 onward \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}\fontsize{9}{11}\selectfont
+\item \fontsize{9}{11}\selectfont \textit{Notes:} Each panel reports a firm-year regression with firm and year fixed effects; audit-firm fixed effects are not included. Standard errors clustered at the firm level are in parentheses. The pooled row uses the full observed period and reports the overall quality-dummy coefficient. Mandatory and voluntary rows use 2004 onward and report coefficients from the rotation-type specification. *** \(p<0.01\), ** \(p<0.05\), * \(p<0.10\).
+\end{tablenotes}
+\end{threeparttable}
+
+\end{minipage}
+\end{document}

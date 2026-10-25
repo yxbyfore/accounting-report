@@ -1,0 +1,50 @@
+\documentclass[10pt]{article}
+\usepackage[paperwidth=25.2cm,paperheight=45cm,margin=0.8cm]{geometry}
+\usepackage{booktabs,array,amsmath}
+\newcommand{\sym}[1]{\textsuperscript{#1}}
+\pagestyle{empty}\setlength{\parindent}{0pt}
+\begin{document}
+\begin{minipage}{23.60cm}
+\fontsize{10}{12}\selectfont
+\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.08}
+{\large\bfseries Supply-chain Exposure: Cohort DID-IV}\par\medskip
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}lccccccc@{}}
+\toprule
+ & \multicolumn{2}{c}{First stage} & \multicolumn{2}{c}{Sample} & \multicolumn{3}{c}{Second stage} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule(lr){6-8}
+Shock / sample & Big 4 & Wald F & Firms & Pairs & Any failure & Fin restatement & Violation \\
+\midrule
+\multicolumn{8}{l}{\textbf{Panel A: Full period}} \\
+\addlinespace[3pt]
+Supplier & 0.015\sym{**} & 5.76 & 5,589 & 263,390 & -1.217 & -1.193 & -0.037 \\
+ & (0.006) &  &  &  & (0.905) & (0.840) & (0.476) \\
+\addlinespace[3pt]
+Customer & -0.005 & 0.90 & 5,539 & 246,273 & 4.056 & 4.306 & 0.822 \\
+ & (0.005) &  &  &  & (5.063) & (5.139) & (1.846) \\
+\addlinespace[3pt]
+Customer or supplier & 0.004 & 0.83 & 5,507 & 222,614 & -4.523 & -4.503 & -0.167 \\
+ & (0.005) &  &  &  & (5.313) & (5.152) & (1.524) \\
+\addlinespace[3pt]
+\midrule
+\multicolumn{8}{l}{\textbf{Panel B: Through 2012}} \\
+\addlinespace[3pt]
+Supplier & 0.020\sym{**} & 3.92 & 2,412 & 74,710 & -0.783 & -0.694 & -0.137 \\
+ & (0.010) &  &  &  & (0.723) & (0.590) & (0.384) \\
+\addlinespace[3pt]
+Customer & 0.002 & 0.04 & 2,384 & 66,880 & 3.269 & -1.949 & 1.118 \\
+ & (0.011) &  &  &  & (18.205) & (10.590) & (7.384) \\
+\addlinespace[3pt]
+Customer or supplier & 0.008 & 0.99 & 2,373 & 60,842 & -0.831 & -1.543 & -0.033 \\
+ & (0.008) &  &  &  & (1.534) & (1.805) & (0.936) \\
+\addlinespace[3pt]
+\midrule
+\multicolumn{8}{l}{Controls: size, leverage, loss, ROA, Z-score, change in leverage, report lag, CFO, age, and nine missing indicators.} \\
+\multicolumn{8}{l}{Fixed effects: firm differencing; cell intercepts; differences in industry $\times$ year indicators.} \\
+\multicolumn{8}{l}{Standard errors: clustered by firm.} \\
+\bottomrule\end{tabular*}\par\medskip
+\fontsize{9}{11}\selectfont\textit{Notes:} Each row reports a separate instrument/sample specification. The first-stage column reports the exposure coefficient for current-year Big 4 appointment; the three right-hand columns report the instrumented Big 4 coefficient. All outcomes are joint indicators of failure and a non-modified audit opinion (MAO=0); Fin is the financial-restatement definition. Coefficients and standard errors use raw 0/1 units. The first stage is identical across the three outcomes within each row.
+Each cell compares cohort $g$ at $g-1$ and $g+h$, using never-exposed or not-yet-exposed firms as controls. The table reports the ratio of separately aggregated reduced-form and first-stage coefficients over $h=0,\ldots,5$. Cell weights equal cohort firm counts observed at $g-1$, normalized over identified cells. Pairs count repeated firm contributions across cells, not unique firm-years. Wald F is the squared clustered first-stage t statistic, not KP F. Ratio standard errors use the joint first-stage/reduced-form covariance across overlapping cells.
+Network relationships exclude tender sources. Supplier, customer and their union are estimated separately.
+Panel B requires all included outcome years to be no later than 2012. Standard errors are in parentheses; stars use conventional clustered inference. * $p<0.10$, ** $p<0.05$, *** $p<0.01$. Weak-instrument confidence sets for DID-IV are available in the accompanying workbook.
+\end{minipage}
+\end{document}

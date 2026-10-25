@@ -1,0 +1,82 @@
+\documentclass[10pt]{article}
+\usepackage[paperwidth=32cm,paperheight=45cm,margin=1cm]{geometry}
+\usepackage{fontspec,xeCJK}
+\setmainfont{lmroman10-regular.otf}[BoldFont=lmroman10-bold.otf,ItalicFont=lmroman10-italic.otf,BoldItalicFont=lmroman10-bolditalic.otf]
+\setCJKmainfont{SimSun}
+\usepackage{booktabs,array,threeparttable,graphicx,caption,longtable,amsmath,amssymb,hyperref,xcolor}
+\usepackage[active,tightpage]{preview}
+\PreviewEnvironment{minipage}
+\setlength\PreviewBorder{6pt}
+\newcommand{\sym}[1]{\textsuperscript{#1}}
+\captionsetup{font=normalsize,labelformat=empty,skip=6pt}
+\setlength{\parindent}{0pt}
+\begin{document}
+\begin{minipage}{19cm}\fontsize{10}{12}\selectfont\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.12}
+
+
+\centering
+\captionof{table}{Successor human capital: first matching year (part 1 of 2)}
+\begin{threeparttable}
+\begin{tabular}{p{0.36\textwidth}ccc}
+\toprule
+Trait & All: failure & All: restate & All: violate \\
+\midrule
+Doctor or above & -0.008 & 0.001 & -0.005 \\
+(clustered SE) & (0.008) & (0.004) & (0.008) \\
+N & 26262 & 26,262 & 26262 \\
+Audit-firm clusters & 209 & 209 & 209 \\
+R2 & 0.034 & 0.024 & 0.030 \\
+Master or above & -0.000 & 0.000 & 0.002 \\
+(clustered SE) & (0.004) & (0.003) & (0.003) \\
+N & 26262 & 26,262 & 26,262 \\
+Audit-firm clusters & 209 & 209 & 209 \\
+R2 & 0.034 & 0.024 & 0.030 \\
+Bachelor or above & -0.003 & -0.001 & -0.003 \\
+(clustered SE) & (0.003) & (0.002) & (0.003) \\
+N & 26262 & 26262 & 26,262 \\
+Audit-firm clusters & 209 & 209 & 209 \\
+R2 & 0.034 & 0.024 & 0.030 \\
+985 university & -0.003 & -0.001 & -0.001 \\
+(clustered SE) & (0.003) & (0.003) & (0.004) \\
+N & 25528 & 25,528 & 25,528 \\
+Audit-firm clusters & 198 & 198 & 198 \\
+R2 & 0.033 & 0.022 & 0.030 \\
+985/211 university & -0.005 & -0.002 & -0.002 \\
+(clustered SE) & (0.003) & (0.002) & (0.003) \\
+N & 25,528 & 25528 & 25,528 \\
+Audit-firm clusters & 198 & 198 & 198 \\
+R2 & 0.033 & 0.022 & 0.030 \\
+Big 4 background & 0.010 & -0.001 & 0.006 \\
+(clustered SE) & (0.007) & (0.005) & (0.007) \\
+N & 28339 & 28,339 & 28,339 \\
+Audit-firm clusters & 240 & 240 & 240 \\
+R2 & 0.034 & 0.025 & 0.030 \\
+Zero prior failure & -0.006 & -0.002 & -0.004 \\
+(clustered SE) & (0.004) & (0.004) & (0.003) \\
+N & 11,011 & 11,011 & 11,011 \\
+Audit-firm clusters & 119 & 119 & 119 \\
+R2 & 0.039 & 0.029 & 0.035 \\
+Zero prior restatement & -0.012** & -0.007* & -0.007** \\
+(clustered SE) & (0.005) & (0.004) & (0.003) \\
+N & 11,011 & 11,011 & 11,011 \\
+Audit-firm clusters & 119 & 119 & 119 \\
+R2 & 0.042 & 0.034 & 0.035 \\
+Zero prior violation & -0.006 & -0.002 & -0.005 \\
+(clustered SE) & (0.005) & (0.004) & (0.004) \\
+N & 11,011 & 11,011 & 11,011 \\
+Audit-firm clusters & 119 & 119 & 119 \\
+R2 & 0.038 & 0.026 & 0.037 \\
+Destination firm FE & Yes & Yes & Yes \\
+Assignment year FE & Yes & Yes & Yes \\
+Annual client controls & Yes & Yes & Yes \\
+Predecessor trait & Yes & Yes & Yes \\
+Entry indicator & Yes & Yes & Yes \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}\fontsize{9}{11}\selectfont
+\item \raggedright \fontsize{9}{11}\selectfont \textit{Notes:} Destination audit firm/year FE, annual client controls, predecessor trait; clustered by destination firm.
+\end{tablenotes}
+\end{threeparttable}
+
+\end{minipage}
+\end{document}

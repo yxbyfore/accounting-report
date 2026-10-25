@@ -1,0 +1,20 @@
+{
+  "stata_authorized": true,
+  "jobs_completed": 12,
+  "models_attempted": 3759,
+  "models_estimated": 3435,
+  "models_failed": 324,
+  "main_models_valid": 48,
+  "independent_python_checks": 48,
+  "main_sample_identity_checks": 48,
+  "insufficient_observation_models": 324,
+  "invalid_inference_contrasts": 365,
+  "old_files_unchanged": true,
+  "controls": "original abs_surprise_60, MB, paired n, ln_market_cap",
+  "sample_basis": "completed basic-EPS reference; no universal per-report harmonization",
+  "interpretation": "descriptive and conditional differences; original windows/specifications retained",
+  "window": "180_180",
+  "no_news_sign_filter": true,
+  "common_main_models_checked": 96,
+  "common_sample_identities_match": true
+}

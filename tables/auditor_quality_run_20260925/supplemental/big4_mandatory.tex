@@ -1,0 +1,33 @@
+\begin{table}[htbp]
+\footnotesize
+\centering
+\caption{Big4 Mandatory: Models 1--3}
+\begin{threeparttable}
+\begin{tabular}{p{0.42\textwidth}ccc}
+\toprule
+ & (1) & (2) & (3) \\
+ & Mandatory Rotations & Mandatory Rotations & Mandatory Rotations \\
+VARIABLES & any\_failure\_clean & restated\_clean & violated\_clean \\
+\midrule
+ &  &  &  \\
+grp\_big4 & 0.008 & 0.017 & -0.015 \\
+ & (0.032) & (0.019) & (0.025) \\
+grp\_alumni & -0.044 & -0.011 & -0.040 \\
+ & (0.029) & (0.009) & (0.027) \\
+Constant & -0.044 & -0.094* & -0.033 \\
+ & (0.090) & (0.051) & (0.083) \\
+ &  &  &  \\
+Observations & 10,610 & 10,610 & 10,610 \\
+R-squared & 0.571 & 0.586 & 0.573 \\
+Sample & Mandatory Rotations & Mandatory Rotations & Mandatory Rotations \\
+Firm FE & Yes & Yes & Yes \\
+Year FE & Yes & Yes & Yes \\
+P Big4 vs Alumni & 0.2094 & 0.1548 & 0.4965 \\
+F Big4 vs Alumni & 1.58 & 2.02 & 0.46 \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}\footnotesize
+\item \raggedright \textit{Notes:} Note: Split-sample TWFE regression by rotation entry type. Base group is Non-Big4 Firm with Non-Big4 Background. Standard errors clustered by firm. *** p<0.01, ** p<0.05, * p<0.1.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

@@ -1,0 +1,33 @@
+\documentclass[10pt]{article}
+\usepackage[paperwidth=21cm,paperheight=45cm,margin=1cm]{geometry}
+\usepackage{fontspec,booktabs,array,amsmath,graphicx}
+\setmainfont{lmroman10-regular.otf}[BoldFont=lmroman10-bold.otf,ItalicFont=lmroman10-italic.otf,BoldItalicFont=lmroman10-bolditalic.otf]
+\pagestyle{empty}\setlength{\parindent}{0pt}
+\newcommand{\sym}[1]{\textsuperscript{#1}}
+\begin{document}\fontsize{10}{12}\selectfont
+\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.15}
+\begin{center}\large Big 4 Client Differences on a Common Sample\end{center}
+\medskip\textbf{Panel A: Unadjusted}\par\smallskip
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lccc@{}}
+\toprule
+ & Any failure / strict & Restatement / strict & Violation \\
+ & (1) & (2) & (3) \\
+\midrule
+Reported effect & \shortstack{-0.036600\sym{***}\\(0.003701)} & \shortstack{-0.017636\sym{***}\\(0.002577)} & \shortstack{-0.025618\sym{***}\\(0.002961)} \\
+$p$ & $<0.001$ & $<0.001$ & $<0.001$ \\
+95\% CI & [-0.043854, -0.029345] & [-0.022689, -0.012584] & [-0.031424, -0.019813] \\
+Observations & 71,241 & 71,241 & 71,241 \\
+\bottomrule\end{tabular*}\par
+\medskip\textbf{Panel B: Firm and industry-year FE}\par\smallskip
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lccc@{}}
+\toprule
+ & Any failure / strict & Restatement / strict & Violation \\
+ & (1) & (2) & (3) \\
+\midrule
+Reported effect & \shortstack{-0.011847\sym{*}\\(0.006815)} & \shortstack{-0.001923\\(0.004625)} & \shortstack{-0.011182\sym{**}\\(0.005629)} \\
+$p$ & 0.082 & 0.678 & 0.047 \\
+95\% CI & [-0.025207, 0.001512] & [-0.010990, 0.007145] & [-0.022216, -0.000147] \\
+Observations & 71,241 & 71,241 & 71,241 \\
+\bottomrule\end{tabular*}\par
+\medskip\fontsize{9}{11}\selectfont\textit{Notes:} SE clustered by firm. Panel C: nine audit-failure controls and mis\_dummy. * $p<0.10$, ** $p<0.05$, *** $p<0.01$.
+\end{document}

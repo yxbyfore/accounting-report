@@ -1,0 +1,13 @@
+threshold,outcome,n,audit_date_available,appointment_decision_date_in_main_panel,restatement_disclosure_date_in_main_panel,violation_announcement_indicator_available,known_before_switch_status
+none,any_failure_clean,70471,68094,False,False,70471,UNVERIFIED_FISCAL_YEAR_ORDER_ONLY
+none,restated_clean,70471,68094,False,False,70471,UNVERIFIED_FISCAL_YEAR_ORDER_ONLY
+none,violated_clean,70471,68094,False,False,70471,UNVERIFIED_FISCAL_YEAR_ORDER_ONLY
+none,abs_da_jones,70471,68094,False,False,70471,UNVERIFIED_FISCAL_YEAR_ORDER_ONLY
+r3y3,any_failure_clean,65506,63603,False,False,65506,UNVERIFIED_FISCAL_YEAR_ORDER_ONLY
+r3y3,restated_clean,65506,63603,False,False,65506,UNVERIFIED_FISCAL_YEAR_ORDER_ONLY
+r3y3,violated_clean,65506,63603,False,False,65506,UNVERIFIED_FISCAL_YEAR_ORDER_ONLY
+r3y3,abs_da_jones,65506,63603,False,False,65506,UNVERIFIED_FISCAL_YEAR_ORDER_ONLY
+r5y5,any_failure_clean,59069,57547,False,False,59069,UNVERIFIED_FISCAL_YEAR_ORDER_ONLY
+r5y5,restated_clean,59069,57547,False,False,59069,UNVERIFIED_FISCAL_YEAR_ORDER_ONLY
+r5y5,violated_clean,59069,57547,False,False,59069,UNVERIFIED_FISCAL_YEAR_ORDER_ONLY
+r5y5,abs_da_jones,59069,57547,False,False,59069,UNVERIFIED_FISCAL_YEAR_ORDER_ONLY

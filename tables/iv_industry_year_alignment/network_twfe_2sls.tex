@@ -1,0 +1,49 @@
+\documentclass[10pt]{article}
+\usepackage[paperwidth=25.2cm,paperheight=45cm,margin=0.8cm]{geometry}
+\usepackage{booktabs,array,amsmath}
+\newcommand{\sym}[1]{\textsuperscript{#1}}
+\pagestyle{empty}\setlength{\parindent}{0pt}
+\begin{document}
+\begin{minipage}{23.60cm}
+\fontsize{10}{12}\selectfont
+\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.08}
+{\large\bfseries Supply-chain Exposure: TWFE-2SLS}\par\medskip
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}lccccccc@{}}
+\toprule
+ & \multicolumn{2}{c}{First stage} & \multicolumn{2}{c}{Sample} & \multicolumn{3}{c}{Second stage} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule(lr){6-8}
+Shock / sample & Big 4 & KP F & Firms & Firm-years & Any failure & Fin restatement & Violation \\
+\midrule
+\multicolumn{8}{l}{\textbf{Panel A: Full period}} \\
+\addlinespace[3pt]
+Supplier & 0.013\sym{**} & 4.52 & 5,625 & 63,857 & -1.620 & -1.693\sym{*} & -0.192 \\
+ & (0.006) &  &  &  & (1.043) & (0.989) & (0.524) \\
+\addlinespace[3pt]
+Customer & 0.002 & 0.09 & 5,623 & 61,979 & -2.863 & -5.204 & -0.006 \\
+ & (0.006) &  &  &  & (10.517) & (17.525) & (3.539) \\
+\addlinespace[3pt]
+Customer or supplier & 0.005 & 0.97 & 5,622 & 57,996 & -2.765 & -3.437 & -0.169 \\
+ & (0.005) &  &  &  & (3.163) & (3.665) & (1.124) \\
+\addlinespace[3pt]
+\midrule
+\multicolumn{8}{l}{\textbf{Panel B: Through 2012}} \\
+\addlinespace[3pt]
+Supplier & 0.020\sym{**} & 4.15 & 2,274 & 20,733 & -1.864\sym{*} & -1.559\sym{*} & -0.581 \\
+ & (0.010) &  &  &  & (1.069) & (0.860) & (0.502) \\
+\addlinespace[3pt]
+Customer & 0.004 & 0.11 & 2,210 & 19,843 & 1.093 & -1.457 & 1.340 \\
+ & (0.011) &  &  &  & (4.368) & (4.848) & (4.525) \\
+\addlinespace[3pt]
+Customer or supplier & 0.004 & 0.27 & 2,158 & 18,326 & -3.584 & -4.312 & -0.498 \\
+ & (0.009) &  &  &  & (7.191) & (8.439) & (1.770) \\
+\addlinespace[3pt]
+\midrule
+\multicolumn{8}{l}{Controls: size, leverage, loss, ROA, Z-score, change in leverage, report lag, CFO, age, and nine missing indicators.} \\
+\multicolumn{8}{l}{Fixed effects: firm and industry $\times$ year. Standard errors: clustered by firm.} \\
+\bottomrule\end{tabular*}\par\medskip
+\fontsize{9}{11}\selectfont\textit{Notes:} Each row reports a separate instrument/sample specification. The first-stage column reports the exposure coefficient for current-year Big 4 appointment; the three right-hand columns report the instrumented Big 4 coefficient. All outcomes are joint indicators of failure and a non-modified audit opinion (MAO=0); Fin is the financial-restatement definition. Coefficients and standard errors use raw 0/1 units. The first stage is identical across the three outcomes within each row.
+Exposed firms retain event years $-5$ through $+5$; never-exposed firms retain all eligible years. First stage, reduced form and 2SLS use the same observations. KP F is the Kleibergen--Paap statistic.
+Network relationships exclude tender sources. Supplier, customer and their union are estimated separately.
+Panel B requires all included outcome years to be no later than 2012. Standard errors are in parentheses; stars use conventional clustered inference. * $p<0.10$, ** $p<0.05$, *** $p<0.01$. Weak-instrument confidence sets for DID-IV are available in the accompanying workbook.
+\end{minipage}
+\end{document}

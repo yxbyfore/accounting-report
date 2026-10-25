@@ -1,0 +1,23 @@
+\documentclass[10pt]{article}
+\usepackage[paperwidth=21cm,paperheight=45cm,margin=1cm]{geometry}
+\usepackage{fontspec,booktabs,array,amsmath,graphicx}
+\setmainfont{lmroman10-regular.otf}[BoldFont=lmroman10-bold.otf,ItalicFont=lmroman10-italic.otf,BoldItalicFont=lmroman10-bolditalic.otf]
+\pagestyle{empty}\setlength{\parindent}{0pt}
+\newcommand{\sym}[1]{\textsuperscript{#1}}
+\begin{document}\fontsize{10}{12}\selectfont
+\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.15}
+\begin{center}\large Big 4 Auditors and Indicators of Unwarned Failure Severity\end{center}
+\medskip\textbf{Switch out of Big 4}\par\smallskip
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lcccc@{}}
+\toprule
+ & Severe Restatement & Severe Violation & Passive-Regulatory & Fraud-Related \\
+ & (1) & (2) & (3) & (4) \\
+\midrule
+Switch out of Big 4 & -0.018 & 0.021 & -- & -0.006 \\
+ & (0.013) & (0.020) &  & (0.007) \\
+Observations & 3,205 & 3,205 & 3,205 & 3,205 \\
+Treated firms & 112 & 112 & 112 & 112 \\
+Control firms & 189 & 189 & 189 & 189 \\
+\bottomrule\end{tabular*}\par
+\medskip\fontsize{9}{11}\selectfont\textit{Notes:} SE clustered by firm. Nine audit-failure controls and mis\_dummy. * $p<0.10$, ** $p<0.05$, *** $p<0.01$.
+\end{document}

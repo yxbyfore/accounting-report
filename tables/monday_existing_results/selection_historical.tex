@@ -1,0 +1,21 @@
+\documentclass[10pt]{article}
+\usepackage[paperwidth=21cm,paperheight=38cm,margin=1cm]{geometry}
+\usepackage{fontspec,booktabs,array}
+\setmainfont{lmroman10-regular.otf}[BoldFont=lmroman10-bold.otf,ItalicFont=lmroman10-italic.otf,BoldItalicFont=lmroman10-bolditalic.otf]
+\newcommand{\sym}[1]{\textsuperscript{#1}}
+\pagestyle{empty}
+\begin{document}\fontsize{10}{12}\selectfont\setlength{\parindent}{0pt}
+\noindent\textbf{Future Big4 Entry and Subsequently Revealed Historical Problems}\par\medskip
+\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.15}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lccc@{}}
+\toprule
+Y & Entry minus no entry & Firm-year N & Firm clusters \\
+\midrule
+Historical strict restatement & \shortstack{0.001718\sym{}\\(0.010701)\\$p=0.8725$} & 45494 & 4179 \\ \addlinespace
+Historical Fin restatement & \shortstack{0.005775\sym{}\\(0.018687)\\$p=0.7573$} & 45494 & 4179 \\ \addlinespace
+Historical Raw restatement & \shortstack{0.014199\sym{}\\(0.026210)\\$p=0.5880$} & 45494 & 4179 \\ \addlinespace
+Historical violation & \shortstack{-0.017165\sym{*}\\(0.010175)\\$p=0.0917$} & 45494 & 4179 \\ \addlinespace
+\bottomrule
+\end{tabular*}
+\par\medskip\fontsize{9}{11}\selectfont\textit{Notes:} SE clustered by firm. Nine audit-failure controls and mis\_dummy. * $p<0.10$, ** $p<0.05$, *** $p<0.01$.
+\end{document}

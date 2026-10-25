@@ -1,0 +1,52 @@
+\documentclass[10pt]{article}
+\usepackage[paperwidth=32cm,paperheight=45cm,margin=1cm]{geometry}
+\usepackage{fontspec,xeCJK}
+\setmainfont{lmroman10-regular.otf}[BoldFont=lmroman10-bold.otf,ItalicFont=lmroman10-italic.otf,BoldItalicFont=lmroman10-bolditalic.otf]
+\setCJKmainfont{SimSun}
+\usepackage{booktabs,array,threeparttable,graphicx,caption,longtable,amsmath,amssymb,hyperref,xcolor}
+\usepackage[active,tightpage]{preview}
+\PreviewEnvironment{minipage}
+\setlength\PreviewBorder{6pt}
+\newcommand{\sym}[1]{\textsuperscript{#1}}
+\captionsetup{font=normalsize,labelformat=empty,skip=6pt}
+\setlength{\parindent}{0pt}
+\begin{document}
+\begin{minipage}{19cm}\fontsize{10}{12}\selectfont\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.12}
+
+
+\centering
+\captionof{table}{A1 Human Capital and Audit Outcomes: Joint Specification: Columns 4--6}
+\begin{threeparttable}
+\begin{tabular}{p{0.38\textwidth}ccc}
+\toprule
+ & (4) & (5) & (6) \\
+Variables & Abs DA (Jones) & Abs DA (DD) & Abs DA (Nonlin) \\
+\midrule
+Bachelor or above & -0.002 & 0.004 & -0.001 \\
+ & (0.001) & (0.005) & (0.001) \\
+Master or above & 0.002 & 0.007 & 0.000 \\
+ & (0.001) & (0.009) & (0.001) \\
+Doctorate or above & 0.002 & -0.021 & -0.003 \\
+ & (0.005) & (0.013) & (0.002) \\
+985 or 211 university & 0.003 & -0.002 & -0.001 \\
+ & (0.002) & (0.004) & (0.001) \\
+985 university & -0.002 & -0.001 & 0.001 \\
+ & (0.002) & (0.008) & (0.001) \\
+Big 4 work background & 0.001 & 0.000 & -0.002 \\
+ & (0.002) & (0.009) & (0.001) \\
+Observations & 54,568 & 48,098 & 50,344 \\
+$R^{2}$ & 0.154 & 0.118 & 0.205 \\
+Client FE & Yes & Yes & Yes \\
+Audit firm FE & Yes & Yes & Yes \\
+Year FE & Yes & Yes & Yes \\
+Controls & Yes & Yes & Yes \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}\fontsize{9}{11}\selectfont
+\item \raggedright \fontsize{9}{11}\selectfont \textit{Notes:} Robust standard errors clustered by client firm are in parentheses. *** $p<0.01$, ** $p<0.05$, * $p<0.1$. All specifications include outcome-specific financial controls. Degree and university indicators are cumulative where included.
+All columns absorb client, audit firm, and year fixed effects.
+\end{tablenotes}
+\end{threeparttable}
+
+\end{minipage}
+\end{document}

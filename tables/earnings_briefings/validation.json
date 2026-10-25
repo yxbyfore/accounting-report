@@ -1,0 +1,37 @@
+{
+  "sources": [
+    {
+      "file": "业绩说明会问答文本分析_1.xlsx",
+      "bytes": 81060277,
+      "rows": 500000
+    },
+    {
+      "file": "业绩说明会问答文本分析_2.xlsx",
+      "bytes": 103500579,
+      "rows": 500000
+    },
+    {
+      "file": "业绩说明会问答文本分析_3.xlsx",
+      "bytes": 22689867,
+      "rows": 83440
+    }
+  ],
+  "rows": 1083440,
+  "invalid_dates": 0,
+  "missing_answer_dates": 2337,
+  "meeting_dates": 42497,
+  "matched_meeting_dates": 35758,
+  "negative_lag_meetings": 9628,
+  "lag_above365_meetings": 36,
+  "first_post_annual_events": 25586,
+  "candidate_questions": 57475,
+  "definition": "Scode+Year匹配正式年报；以答复日期而非预先提问日期识别活动日，缺失答复日期不纳入；同公司同年度同日答复去重为活动；每份年报取0至365自然日内首次活动；不按问题行数加权。",
+  "answer_calendar_year_minus_source_year": {
+    "-1": 4,
+    "0": 119641,
+    "1": 961360,
+    "2": 96,
+    "3": 1,
+    "4": 1
+  }
+}

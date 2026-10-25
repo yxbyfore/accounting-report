@@ -1,0 +1,47 @@
+\documentclass[10pt]{article}
+\usepackage[paperwidth=32cm,paperheight=45cm,margin=1cm]{geometry}
+\usepackage{fontspec,xeCJK}
+\setmainfont{lmroman10-regular.otf}[BoldFont=lmroman10-bold.otf,ItalicFont=lmroman10-italic.otf,BoldItalicFont=lmroman10-bolditalic.otf]
+\setCJKmainfont{SimSun}
+\usepackage{booktabs,array,threeparttable,graphicx,caption,longtable,amsmath,amssymb,hyperref,xcolor}
+\usepackage[active,tightpage]{preview}
+\PreviewEnvironment{minipage}
+\setlength\PreviewBorder{6pt}
+\newcommand{\sym}[1]{\textsuperscript{#1}}
+\captionsetup{font=normalsize,labelformat=empty,skip=6pt}
+\setlength{\parindent}{0pt}
+\begin{document}
+\begin{minipage}{19cm}\fontsize{10}{12}\selectfont\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.12}
+
+
+\centering
+\captionof{table}{Same-firm rotation 2SLS: successor year + 2}
+\begin{threeparttable}
+\begin{tabular}{p{0.38\textwidth}ccc}
+\toprule
+Treatment / excluded IV & Outcome & 2SLS coefficient (SE) & First-stage F / N \\
+\midrule
+Successor from release pool / z\_other\_release\_slots & Any failure & \shortstack{-0.319\\(0.330)} & F=4.469; N=1,032 \\
+Successor from release pool / z\_other\_release\_slots & Restatement & \shortstack{-0.300\\(0.249)} & F=4.469; N=1,032 \\
+Successor from release pool / z\_other\_release\_slots & Violation & \shortstack{-0.241\\(0.288)} & F=4.469; N=1,032 \\
+Successor Big 4 background / z\_big4\_release\_rate & Any failure & \shortstack{1.149\\(1.901)} & F=2.962; N=1,032 \\
+Successor Big 4 background / z\_big4\_release\_rate & Restatement & \shortstack{-0.155\\(1.287)} & F=2.962; N=1,032 \\
+Successor Big 4 background / z\_big4\_release\_rate & Violation & \shortstack{0.902\\(1.546)} & F=2.962; N=1,032 \\
+Successor zero prior failure / z\_workload\_zero\_fail & Any failure & \shortstack{-0.355\\(0.358)} & F=4.899; N=647 \\
+Successor zero prior failure / z\_workload\_zero\_fail & Restatement & \shortstack{-0.528\\(0.427)} & F=4.899; N=647 \\
+Successor zero prior failure / z\_workload\_zero\_fail & Violation & \shortstack{-0.216\\(0.309)} & F=4.899; N=647 \\
+Successor zero prior restatement / z\_workload\_zero\_rest & Any failure & \shortstack{-1.280\\(9.474)} & F=0.0289; N=653 \\
+Successor zero prior restatement / z\_workload\_zero\_rest & Restatement & \shortstack{-2.934\\(18.150)} & F=0.0289; N=653 \\
+Successor zero prior restatement / z\_workload\_zero\_rest & Violation & \shortstack{0.100\\(2.802)} & F=0.0289; N=653 \\
+Successor zero prior violation / z\_workload\_zero\_viol & Any failure & \shortstack{-0.350\\(0.332)} & F=2.536; N=647 \\
+Successor zero prior violation / z\_workload\_zero\_viol & Restatement & \shortstack{-0.352\\(0.401)} & F=2.536; N=647 \\
+Successor zero prior violation / z\_workload\_zero\_viol & Violation & \shortstack{-0.327\\(0.277)} & F=2.536; N=647 \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}\fontsize{9}{11}\selectfont
+\item \raggedright \fontsize{9}{11}\selectfont \textit{Notes:} Each treatment has three outcome rows. Standard errors cluster by audit firm. F is the excluded-instrument test from the identical second-stage sample. Audit-firm and rotation-year fixed effects and design-specific pre-assignment controls are included. Weak instruments make conventional 2SLS inference unreliable.
+\end{tablenotes}
+\end{threeparttable}
+
+\end{minipage}
+\end{document}

@@ -1,0 +1,55 @@
+\documentclass[10pt]{article}
+\usepackage[paperwidth=21cm,paperheight=45cm,margin=1cm]{geometry}
+\usepackage{fontspec,booktabs,array,amsmath,graphicx}
+\setmainfont{lmroman10-regular.otf}[BoldFont=lmroman10-bold.otf,ItalicFont=lmroman10-italic.otf,BoldItalicFont=lmroman10-bolditalic.otf]
+\pagestyle{empty}\setlength{\parindent}{0pt}
+\newcommand{\sym}[1]{\textsuperscript{#1}}
+\begin{document}\fontsize{10}{12}\selectfont
+\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.15}
+\begin{center}\large Switching DID Across Restatement Definitions\end{center}
+\medskip\textbf{Panel A: Switch into Big 4 / columns 1--4}\par\smallskip
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lcccc@{}}
+\toprule
+ & Any failure / strict & Any failure / middle & Any failure / broad & Restatement / middle \\
+ & (1) & (2) & (3) & (4) \\
+\midrule
+Reported effect & \shortstack{-0.023715\sym{**}\\(0.010943)} & \shortstack{-0.085759\sym{***}\\(0.015365)} & \shortstack{-0.095198\sym{***}\\(0.016649)} & \shortstack{-0.080805\sym{***}\\(0.014662)} \\
+$p$ & 0.030 & $<0.001$ & $<0.001$ & $<0.001$ \\
+95\% CI & [-0.045168, -0.002261] & [-0.115880, -0.055638] & [-0.127836, -0.062560] & [-0.109550, -0.052061] \\
+Observations & 64,707 & 64,707 & 64,707 & 64,707 \\
+\bottomrule\end{tabular*}\par
+\medskip\textbf{Panel A: Switch into Big 4 / columns 5--7}\par\smallskip
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lccc@{}}
+\toprule
+ & Restatement / broad & Restatement / strict & Violation \\
+ & (5) & (6) & (7) \\
+\midrule
+Reported effect & \shortstack{-0.089634\sym{***}\\(0.016130)} & \shortstack{-0.010856\\(0.007680)} & \shortstack{-0.015784\sym{*}\\(0.008471)} \\
+$p$ & $<0.001$ & 0.158 & 0.062 \\
+95\% CI & [-0.121256, -0.058011] & [-0.025912, 0.004199] & [-0.032391, 0.000823] \\
+Observations & 64,707 & 64,707 & 64,707 \\
+\bottomrule\end{tabular*}\par
+\medskip\textbf{Panel B: Switch out of Big 4 / columns 1--4}\par\smallskip
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lcccc@{}}
+\toprule
+ & Any failure / strict & Any failure / middle & Any failure / broad & Restatement / middle \\
+ & (1) & (2) & (3) & (4) \\
+\midrule
+Reported effect & \shortstack{-0.012677\\(0.025143)} & \shortstack{-0.038375\\(0.035065)} & \shortstack{-0.018369\\(0.037618)} & \shortstack{-0.050057\\(0.030808)} \\
+$p$ & 0.614 & 0.275 & 0.626 & 0.105 \\
+95\% CI & [-0.062153, 0.036799] & [-0.107374, 0.030624] & [-0.092391, 0.055654] & [-0.110681, 0.010567] \\
+Observations & 3,664 & 3,664 & 3,664 & 3,664 \\
+\bottomrule\end{tabular*}\par
+\medskip\textbf{Panel B: Switch out of Big 4 / columns 5--7}\par\smallskip
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lccc@{}}
+\toprule
+ & Restatement / broad & Restatement / strict & Violation \\
+ & (5) & (6) & (7) \\
+\midrule
+Reported effect & \shortstack{-0.028354\\(0.033586)} & \shortstack{-0.026865\sym{*}\\(0.014696)} & \shortstack{0.003945\\(0.021096)} \\
+$p$ & 0.399 & 0.069 & 0.852 \\
+95\% CI & [-0.094443, 0.037735] & [-0.055783, 0.002053] & [-0.037568, 0.045457] \\
+Observations & 3,664 & 3,664 & 3,664 \\
+\bottomrule\end{tabular*}\par
+\medskip\fontsize{9}{11}\selectfont\textit{Notes:} SE clustered by firm. Nine audit-failure controls and mis\_dummy. * $p<0.10$, ** $p<0.05$, *** $p<0.01$.
+\end{document}

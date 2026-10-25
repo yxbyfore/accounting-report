@@ -1,0 +1,30 @@
+\documentclass[10pt]{article}
+\usepackage[paperwidth=34cm,paperheight=48cm,margin=0.8cm]{geometry}
+\usepackage{booktabs,array,amsmath}
+\newcommand{\sym}[1]{\textsuperscript{#1}}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\begin{document}
+\begin{minipage}{28.80cm}
+\fontsize{10}{12}\selectfont
+\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.08}
+{\large\bfseries City Branch Entry: Adoption First Stage}\par\medskip
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}lcccccccc@{}}
+\toprule
+ & (1) & (2) & (3) & (4) & (5) & (6) & (7) & (8) \\
+Fiscal years & Full & Full & Full & Full & Through 2012 & Through 2012 & Through 2012 & Through 2012 \\
+\midrule
+Post-entry average, years 0--5 & 1.069520\sym{*} & 0.923891 & 0.921988 & 0.795431 & 3.776199\sym{***} & 3.293665\sym{**} & 4.100400\sym{***} & 3.711102\sym{**} \\
+ & (0.618777) & (0.642420) & (0.596872) & (0.617868) & (1.424824) & (1.493138) & (1.460082) & (1.535720) \\
+$p$ & 0.0840 & 0.1504 & 0.1225 & 0.1980 & 0.0081 & 0.0274 & 0.0050 & 0.0157 \\
+\midrule
+Estimator & TWFE & CSDID & TWFE & CSDID & TWFE & CSDID & TWFE & CSDID \\
+Largest client & Included & Included & Excluded & Excluded & Included & Included & Excluded & Excluded \\
+Observations & 37,364 & 42,146 & 37,131 & 41,614 & 14,199 & 18,153 & 14,114 & 18,003 \\
+Firms & 3,349 & 2,481 & 3,326 & 2,458 & 1,769 & 1,737 & 1,759 & 1,727 \\
+Pretrend joint p & 0.8395 & 0.1559 & 0.7060 & 0.1673 & 0.1364 & 0.0971 & 0.1342 & 0.1204 \\
+\bottomrule\end{tabular*}\par\medskip
+\fontsize{9}{11}\selectfont\textit{Notes:} Each column is one fitted city-adoption model. The outcome is use of any Big4. Coefficients and standard errors are in percentage points (times 100), as in the previous display. The shock is the first Big4 branch in the registered city. Largest clients are ranked by domestic audit fees in the year before opening; all ties are excluded. Original TWFE/CS-DID settings and firm clustering are retained. Their pretrend tests have different null sets.
+\par Standard errors are in parentheses. * $p<0.10$, ** $p<0.05$, *** $p<0.01$.
+\end{minipage}
+\end{document}

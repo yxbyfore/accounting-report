@@ -1,0 +1,55 @@
+\documentclass[10pt]{article}
+\usepackage[paperwidth=21cm,paperheight=45cm,margin=1cm]{geometry}
+\usepackage{fontspec,booktabs,array,amsmath,graphicx}
+\setmainfont{lmroman10-regular.otf}[BoldFont=lmroman10-bold.otf,ItalicFont=lmroman10-italic.otf,BoldItalicFont=lmroman10-bolditalic.otf]
+\pagestyle{empty}\setlength{\parindent}{0pt}
+\newcommand{\sym}[1]{\textsuperscript{#1}}
+\begin{document}\fontsize{10}{12}\selectfont
+\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.15}
+\begin{center}\large Switch-in DID Before and After Baseline Matching\end{center}
+\medskip\textbf{Panel A: Unmatched stacked comparison / columns 1--4}\par\smallskip
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lcccc@{}}
+\toprule
+ & Any failure / strict & Restatement / strict & Violation & Any failure / middle \\
+ & (1) & (2) & (3) & (4) \\
+\midrule
+Reported effect & \shortstack{-0.015871\\(0.012178)} & \shortstack{-0.008402\\(0.008537)} & \shortstack{-0.006061\\(0.010632)} & \shortstack{-0.075365\sym{***}\\(0.017890)} \\
+$p$ & 0.193 & 0.325 & 0.569 & $<0.001$ \\
+95\% CI & [-0.039746, 0.008004] & [-0.025138, 0.008334] & [-0.026905, 0.014782] & [-0.110438, -0.040292] \\
+Observations & 256,097 & 256,097 & 256,097 & 256,097 \\
+\bottomrule\end{tabular*}\par
+\medskip\textbf{Panel A: Unmatched stacked comparison / columns 5--7}\par\smallskip
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lccc@{}}
+\toprule
+ & Restatement / middle & Any failure / broad & Restatement / broad \\
+ & (5) & (6) & (7) \\
+\midrule
+Reported effect & \shortstack{-0.072981\sym{***}\\(0.016376)} & \shortstack{-0.083035\sym{***}\\(0.021690)} & \shortstack{-0.077813\sym{***}\\(0.021089)} \\
+$p$ & $<0.001$ & $<0.001$ & $<0.001$ \\
+95\% CI & [-0.105086, -0.040876] & [-0.125558, -0.040513] & [-0.119157, -0.036469] \\
+Observations & 256,097 & 256,097 & 256,097 \\
+\bottomrule\end{tabular*}\par
+\medskip\textbf{Panel B: Matched weighted DID / columns 1--4}\par\smallskip
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lcccc@{}}
+\toprule
+ & Any failure / strict & Restatement / strict & Violation & Any failure / middle \\
+ & (1) & (2) & (3) & (4) \\
+\midrule
+Reported effect & \shortstack{-0.052843\sym{**}\\(0.025559)} & \shortstack{-0.024660\\(0.015815)} & \shortstack{-0.034171\\(0.021029)} & \shortstack{-0.118493\sym{***}\\(0.037791)} \\
+$p$ & 0.040 & 0.120 & 0.106 & 0.002 \\
+95\% CI & [-0.103223, -0.002463] & [-0.055833, 0.006513] & [-0.075622, 0.007279] & [-0.192983, -0.044003] \\
+Observations & 1,194 & 1,194 & 1,194 & 1,194 \\
+\bottomrule\end{tabular*}\par
+\medskip\textbf{Panel B: Matched weighted DID / columns 5--7}\par\smallskip
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lccc@{}}
+\toprule
+ & Restatement / middle & Any failure / broad & Restatement / broad \\
+ & (5) & (6) & (7) \\
+\midrule
+Reported effect & \shortstack{-0.091052\sym{***}\\(0.031111)} & \shortstack{-0.078647\\(0.048594)} & \shortstack{-0.049996\\(0.044252)} \\
+$p$ & 0.004 & 0.107 & 0.260 \\
+95\% CI & [-0.152375, -0.029729] & [-0.174432, 0.017138] & [-0.137220, 0.037229] \\
+Observations & 1,194 & 1,194 & 1,194 \\
+\bottomrule\end{tabular*}\par
+\medskip\fontsize{9}{11}\selectfont\textit{Notes:} SE clustered by firm. Nine audit-failure controls and mis\_dummy. * $p<0.10$, ** $p<0.05$, *** $p<0.01$.
+\end{document}

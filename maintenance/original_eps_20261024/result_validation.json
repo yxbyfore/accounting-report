@@ -1,0 +1,10 @@
+{
+  "completed_jobs": 36,
+  "inference_sources": 16,
+  "updated_erc_reproduced": 27,
+  "threshold_and_quartile_paths_reproduced": true,
+  "erc_sample_checks": 54,
+  "common_sample_observations_identical": true,
+  "matched_sample_checks": 6,
+  "all_checks_passed": true
+}

@@ -23,7 +23,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
@@ -212,24 +231,20 @@ window.Quarto = {
 <nav class="toc-active" id="TOC" role="doc-toc">
 <h2 id="toc-title">该页面内容</h2>
 <ul>
-<li><a class="nav-link active" data-scroll-target="#讨论提纲" href="#讨论提纲" id="toc-讨论提纲">2026-09-28 讨论提纲</a>
+<li><a class="nav-link active" data-scroll-target="#sec-memo-current-revisions" href="#sec-memo-current-revisions" id="toc-sec-memo-current-revisions">本轮工作总览与主要修改</a></li>
+<li><a class="nav-link" data-scroll-target="#sec-meeting-20261026" href="#sec-meeting-20261026" id="toc-sec-meeting-20261026">2026-10-26 会议提纲：会议任务</a>
 <ul class="collapse">
-<li><a class="nav-link" data-scroll-target="#四大本土八大与-other-的事务所-fe-分布及匹配" href="#四大本土八大与-other-的事务所-fe-分布及匹配" id="toc-四大本土八大与-other-的事务所-fe-分布及匹配">1. 四大、本土八大与 Other 的事务所 FE 分布及匹配</a></li>
-<li><a class="nav-link" data-scroll-target="#rare-event-是否导致-akm-估计有偏" href="#rare-event-是否导致-akm-估计有偏" id="toc-rare-event-是否导致-akm-估计有偏">2. Rare event 是否导致 AKM 估计有偏？</a></li>
-<li><a class="nav-link" data-scroll-target="#更多-cutoff-与两两组合的-akm" href="#更多-cutoff-与两两组合的-akm" id="toc-更多-cutoff-与两两组合的-akm">3. 更多 cutoff 与两两组合的 AKM</a></li>
-<li><a class="nav-link" data-scroll-target="#caseload0-与第三个工具改为-caseload-1" href="#caseload0-与第三个工具改为-caseload-1" id="toc-caseload0-与第三个工具改为-caseload-1">4. Caseload=0 与第三个工具改为 caseload ≤1</a></li>
-<li><a class="nav-link" data-scroll-target="#caseload-iv加入与不加入财务控制" href="#caseload-iv加入与不加入财务控制" id="toc-caseload-iv加入与不加入财务控制">5. Caseload IV：加入与不加入财务控制</a></li>
+<li><a class="nav-link" data-scroll-target="#sec-memo-market-paths" href="#sec-memo-market-paths" id="toc-sec-memo-market-paths">1. 2012年前后的分组市场图</a></li>
+<li><a class="nav-link" data-scroll-target="#短期长期市场反应核查" href="#短期长期市场反应核查" id="toc-短期长期市场反应核查">2. 短期、长期市场反应核查</a></li>
+<li><a class="nav-link" data-scroll-target="#前后-audit-outcomes逐年趋势" href="#前后-audit-outcomes逐年趋势" id="toc-前后-audit-outcomes逐年趋势">3. 2012前后 audit outcomes、逐年趋势</a></li>
+<li><a class="nav-link" data-scroll-target="#其他变好还是四大变差" href="#其他变好还是四大变差" id="toc-其他变好还是四大变差">4. 其他变好还是四大变差</a></li>
+<li><a class="nav-link" data-scroll-target="#重述程度是否改变盈余惊喜" href="#重述程度是否改变盈余惊喜" id="toc-重述程度是否改变盈余惊喜">5. 重述程度、是否改变盈余惊喜</a></li>
+<li><a class="nav-link" data-scroll-target="#sec-briefing-cases" href="#sec-briefing-cases" id="toc-sec-briefing-cases">6. 财报公布时不知道、一周后才知道什么</a></li>
+<li><a class="nav-link" data-scroll-target="#expansion-剔除最大客户" href="#expansion-剔除最大客户" id="toc-expansion-剔除最大客户">7. Expansion 剔除最大客户</a></li>
+<li><a class="nav-link" data-scroll-target="#sec-memo-akm-sorting" href="#sec-memo-akm-sorting" id="toc-sec-memo-akm-sorting">8. AKM能否 accommodate sorting</a></li>
+<li><a class="nav-link" data-scroll-target="#分析师指标与人数" href="#分析师指标与人数" id="toc-分析师指标与人数">9. 分析师指标与人数</a></li>
 </ul></li>
-<li><a class="nav-link" data-scroll-target="#数据程序与输出记录" href="#数据程序与输出记录" id="toc-数据程序与输出记录">数据、程序与输出记录</a></li>
-<li><a class="nav-link" data-scroll-target="#归档" href="#归档" id="toc-归档">归档</a></li>
-<li><a class="nav-link" data-scroll-target="#sec-restatement-20261026" href="#sec-restatement-20261026" id="toc-sec-restatement-20261026">2026-10-26 会议：重述指标、严重程度与市场预期</a>
-<ul class="collapse">
-<li><a class="nav-link" data-scroll-target="#发生率变化先固定样本再区分定义" href="#发生率变化先固定样本再区分定义" id="toc-发生率变化先固定样本再区分定义">1. 发生率变化：先固定样本，再区分定义</a></li>
-<li><a class="nav-link" data-scroll-target="#缺失处理年份归属与年度变化" href="#缺失处理年份归属与年度变化" id="toc-缺失处理年份归属与年度变化">2. 缺失处理、年份归属与年度变化</a></li>
-<li><a class="nav-link" data-scroll-target="#严重程度既有分类与实际调整幅度分开看" href="#严重程度既有分类与实际调整幅度分开看" id="toc-严重程度既有分类与实际调整幅度分开看">3. 严重程度：既有分类与实际调整幅度分开看</a></li>
-<li><a class="nav-link" data-scroll-target="#恢复原报后多少surprise判断会改变" href="#恢复原报后多少surprise判断会改变" id="toc-恢复原报后多少surprise判断会改变">4. 恢复原报后，多少surprise判断会改变？</a></li>
-<li><a class="nav-link" data-scroll-target="#数据程序与核验记录" href="#数据程序与核验记录" id="toc-数据程序与核验记录">数据、程序与核验记录</a></li>
-</ul></li>
+<li><a class="nav-link" data-scroll-target="#参考文献" href="#参考文献" id="toc-参考文献">参考文献</a></li>
 </ul>
 </nav>
 </div>
@@ -242,166 +257,107 @@ window.Quarto = {
 <div class="quarto-title-meta">
 </div>
 </header>
-<section class="level2" id="讨论提纲">
-<h2 class="anchored" data-anchor-id="讨论提纲">2026-09-28 讨论提纲</h2>
-<p>本次汇报围绕五项更新：事务所 FE 分布与客户匹配的直观展示、稀有失败对 AKM 的含义、不同 cutoff 与双边分解、caseload 工具的口径更新，以及财务控制变量的敏感性。重点区分已有结果、测量诊断与尚待完成的识别。</p>
-<section class="level3" id="四大本土八大与-other-的事务所-fe-分布及匹配">
-<h3 class="anchored" data-anchor-id="四大本土八大与-other-的事务所-fe-分布及匹配">1. 四大、本土八大与 Other 的事务所 FE 分布及匹配</h3>
-<p>展示原有的 audit-firm FE 分布，以及 audit-firm FE 与平均 client FE 的联合散点图。散点图每个点代表一家事务所，横轴为 audit-firm FE，纵轴为客户等权平均 client FE；虚线标示 Other 组均值。先看全部 FE，再对照原程序保留显著 FE 后的图。</p>
+<section class="level2" id="sec-memo-current-revisions">
+<h2 class="anchored" data-anchor-id="sec-memo-current-revisions">本轮工作总览与主要修改</h2>
+<p>本轮围绕“四大客户的财报质量、市场认可及价格溢价分别来自审计服务、认证还是客户选择”整理已有证据，并补充数据与识别核查。最重要的修改是<a href="./23_big4_effect.html#sec-restatement-20261026">回补公告时点的实际EPS</a>：对可核实记录，将可能已被重述或违规披露后更正的数据库值恢复为首次年报公告时市场看到的数值，<strong>即使那个首次披露的数字后来被认定有误，也使用当时尚未更正的版本计算surprise</strong>；已对3,353个公司年应用核实结果，其中1,751个EPS改变、180天消息分组改变136个，并完成受影响市场分析的重跑，未核实记录仍保留原值，股本及控制变量的历史版本尚未恢复。市场端补齐了2012前后分组、共同模型与滚动图，核对了未调整价格与含分红收益的区别，并完成同样本控制变量对照；<a href="./23_big4_effect.html#sec-market-full-no-controls">当前正文采用无额外控制的事件研究</a>，ERC保留原有控制规格。最新长窗工作另补四组平均CAR及缺日核查，取消因窗口缺日删除整份公告的绘图准入规则，但未知收益缺口仍留缺失，非平衡样本绘图已完成，原CAR主回归尚未重估。分析师主报告已将共同信息检验改为<a href="./23_big4_effect.html#sec-analyst-number-audit">公告前后各180天的同券商配对</a>，重做人数项与窗口比较；供应链和分所扩张已在统一控制与行业×年份效应下完成<a href="./23_big4_effect.html#network-branch-iv-aligned">两种IV方法的28套规格、84个二阶段系数</a>，保留弱工具和估计方法间差异；<a href="./26_akm.html#sec-client-auditfirm-sorting">客户—事务所AKM</a>统一了样本、事务所身份及失败指标口径，新增组内／组间分解、四大差距、KSS和未来配置诊断，并完成Stata—Python核对，客户聚类稳健KSS推断仍待完成；<a href="./26_akm.html#sec-dynamic-risk-gfe">动态风险GFE与静态二元混合已执行</a>，并保留日期覆盖与边界识别限制。此外，客户长期发展已新增市销率、市盈率估计，按各指标自身有效样本判断，未得到估值倍数普遍上升的证据，这部分尚未完整接入主报告。整体上，分组质量趋势、重述幅度及消息换组、市场反应、说明会案例、IV与sorting已形成相互链接的工作框架，下一步集中处理短长窗的共同样本与累计口径、扩张的审计结果路径，以及风险可知时点与改聘决策的对应关系。</p>
+</section>
+<section class="level2" id="sec-meeting-20261026">
+<h2 class="anchored" data-anchor-id="sec-meeting-20261026">2026-10-26 会议提纲：会议任务</h2>
+<p>本次按上次会议留下的九个任务逐项汇报。详细图表、口径和识别诊断已融入<a href="./23_big4_effect.html">23号主报告</a>；以下提纲链接直达对应正文。</p>
+<section class="level3" id="sec-memo-market-paths">
+<h3 class="anchored" data-anchor-id="sec-memo-market-paths">1. 2012年前后的分组市场图</h3>
+<p><strong>当前采用无额外控制的事件研究，先看差距收窄来自哪一组。</strong> 以下两图均从7年滚动共同回归中提取各审计组自身的“好消息−中性消息”公告日响应，不是只画组间差，也不是各组另做回归。Y为原始log price，样本为完整[-5,+5]的好消息与中性消息公告，−1日基期；公司×财年、事件日、实际交易日期固定效应，公司×财年聚类。</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img class="img-fluid figure-img" src="figures/audit_firm_akm/tier_audit_firm_scatter_any_failure_clean_all.png" style="width:100.0%"/></p>
-<figcaption>Audit-firm FE and mean client FE: Any unwarned failure, all FEs</figcaption>
+<p><img class="img-fluid figure-img" loading="lazy" src="figures/market_information/event_study/rolling_group_response/rolling_group_binary_day0.png" style="width:100.0%"/></p>
+<figcaption>两组：四大与非四大各自的好消息−中性消息公告日响应；7年滚动共同模型，无控制，95%置信区间。</figcaption>
 </figure>
 </div>
-<p><a href="./23_big4_effect.html#sec-audit-firm-scatter">原始散点图：全部 FE 与显著 FE</a> · <a href="./23_big4_effect.html#sec-audit-firm-fe-distributions">四个结果变量的事务所 FE 分布</a></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img class="img-fluid figure-img" loading="lazy" src="figures/market_information/event_study/rolling_group_response/rolling_group_threegroup_day0.png" style="width:100.0%"/></p>
+<figcaption>三组：四大、本土八大与Other各自的好消息−中性消息公告日响应；7年滚动共同模型，无控制，95%置信区间。</figcaption>
+</figure>
+</div>
+<p>三组最早2001—2007与最晚2017—2023窗口的点估计为：四大：0.0095→0.0027；本土八大：0.0033→0.0026；Other：0.0027→0.0007。<strong>市场反应的描述性模式更接近四大响应下降较多，其他组没有普遍上升，尚不能写成其他所质量追上四大。</strong> 跨窗口客户与消息强度会变化，窗口也相互重叠；审计质量变化仍以audit outcomes等证据单独判断。</p>
+<p><a href="./23_big4_effect.html#market-positive-main">完整组内与interaction结果</a> · <a href="./23_big4_effect.html#sec-market-full-no-controls">全部无控制图表</a> · <a href="maintenance/event_study_versions_20261024/event_study_without_controls.md">完整无控制MD</a></p>
 </section>
-<section class="level3" id="rare-event-是否导致-akm-估计有偏">
-<h3 class="anchored" data-anchor-id="rare-event-是否导致-akm-估计有偏">2. Rare event 是否导致 AKM 估计有偏？</h3>
-<p><strong>稀有失败的核心问题是auditor FE 的信息量、跨样本稳定性与插件方差偏误。</strong> 无偏性仍依赖正确的条件均值、外生性及网络识别。人力资本对估计分数的解释力较低，也可能反映 FE 测量噪声。</p>
-<p>现有检查中，获得分数的当期 A1 观测有 <strong>74.84% 对应零失败训练历史，训练报告数中位数仅 12 份</strong>，比例按当期观测计权。新接任项目的前瞻 AKM 分数系数为 −0.00121（SE=0.00466，p=0.795），没有稳定预测改善。结果与信息稀疏的解释一致；少数失败对估计值的影响度仍待量化。</p>
-<p>讨论重点是保留严重失败指标，同时推进事件计数、单次事件影响度、网络精度和 leave-out 诊断。Jochmans–Weidner 讨论网络固定效应精度，Kline–Saggio–Sølvsten 讨论方差分量修正；相关文献、公式和解释已集中放在 AKM 的 rare-event 小节。</p>
-<p><a href="./26_akm.html#sec-rare-event-akm">详细讨论（4.3）</a> · <a href="./26_akm.html#sec-rare-event-akm">相关文献见本节引用</a></p>
+<section class="level3" id="短期长期市场反应核查">
+<h3 class="anchored" data-anchor-id="短期长期市场反应核查">2. 短期、长期市场反应核查</h3>
+<p>无控制短窗中，2012年前四大−Other在公告日为0.005564（p=0.0067），+5日为0.009905（p=0.0277）；四大−非四大+5日为0.008210（p=0.0548）。2012年起的短窗证据较弱，早期共同模型四大−Other仍存在事前差异（p=0.0299）。</p>
+<p>恢复原报EPS后，原有控制规格的ERC仍较高；无额外控制的长窗好消息相对中性模型中，+60日四大−非四大累计收益差为−2.03个百分点（p=0.0048）。ERC是连续盈利惊喜的斜率，长窗是累计路径差；+60日包含公告初期收益，尚不能把两者合成已识别的价格反转或信息效率机制。</p>
+<p><a href="./23_big4_effect.html#market-erc">ERC</a> · <a href="./23_big4_effect.html#sec-market-reconciliation">短长窗比较与事前检验</a> · <a href="./23_big4_effect.html#sec-market-full-no-controls">全部无控制结果</a></p>
 </section>
-<section class="level3" id="更多-cutoff-与两两组合的-akm">
-<h3 class="anchored" data-anchor-id="更多-cutoff-与两两组合的-akm">3. 更多 cutoff 与两两组合的 AKM</h3>
-<p>分别比较不设门槛、3 份／3 年和 5 份／5 年，并将客户、事务所、审计师两两组合估计。<strong>总体排序仍为 client FE 份额最大、auditor FE 其次、audit-firm FE 最小。</strong> 综合未预警失败的客户×审计师模型中，客户份额依次为 <strong>30.9%、31.4%、32.3%</strong>，审计师为 <strong>15.8%、14.3%、12.6%</strong>；事务所×审计师模型中，事务所份额为 <strong>4.4%、4.1%、3.9%</strong>，审计师为 <strong>16.4%、14.2%、12.5%</strong>。</p>
-<p>两两组合与三维基准的插件方差排序接近。该比较描述不同样本和模型下的异质性份额，个人分数的精度与方差偏误另由可靠性诊断评估。</p>
-<p><a href="./26_akm.html#full-11_akm-4">全部 cutoff 与结果变量</a> · <a href="./26_akm.html#full-11_akm-5">双边模型与三维 AKM 对照</a></p>
+<section class="level3" id="前后-audit-outcomes逐年趋势">
+<h3 class="anchored" data-anchor-id="前后-audit-outcomes逐年趋势">3. 2012前后 audit outcomes、逐年趋势</h3>
+<p>三组逐年及前后比较已完成。Fin重述三组均上升、四大上升较少；Broad中四大下降更多。原始失败记录未显示一致的其他所追赶。客户构成、监管发现与追踪期限是否解释部分差异；会计指标与收费的调整后趋势如何同市场变化对齐。</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img class="img-fluid figure-img" src="figures/meeting_20261026/audit_outcomes/restated_fin_all_opinions.png" style="width:100.0%"/></p>
+<figcaption>Fin重述逐年发生率：四大、本土八大与Other；全部审计意见样本，竖线为2012年。Fin排除明确财务不变的记录。</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img class="img-fluid figure-img" src="figures/meeting_20261026/audit_outcomes/restated_broad_all_opinions.png" style="width:100.0%"/></p>
+<figcaption>Broad重述逐年发生率：宽口径、全部审计意见样本。年度客户构成和可观察期限可以变化，两张图均为描述性比较。</figcaption>
+</figure>
+</div>
+<p><a href="./23_big4_effect.html#sec-audit-period-2012">三组逐年图与2012前后表</a> · <a href="./23_big4_effect.html#sec-accounting-yearly-trends">会计指标与收费的既有年度趋势</a></p>
 </section>
-<section class="level3" id="caseload0-与第三个工具改为-caseload-1">
-<h3 class="anchored" data-anchor-id="caseload0-与第三个工具改为-caseload-1">4. Caseload=0 与第三个工具改为 caseload ≤1</h3>
-<p>业务量描述已经考虑同一审计师—事务所服务区间内没有上市客户的年份，第三个 IV 的 share 定义已改为 <strong>同类候选 A1 中 caseload≤1 的人数占比</strong>。当前结果的总体判断与此前接近，仍未形成跨特征、跨工具一致的失败率改善。</p>
-<p><strong>描述图与 IV 候选 roster 的覆盖不同：补入的零值目前只进入描述图。</strong> 名单仍由上一年观察到上市签字的 A1 构成；在这一名单中，=1 与 ≤1 实际选择同一批人。零客户年份是否仍在该所任职并可承接项目，是下一步补池需要核实的内容。</p>
-<p><a href="./24_auditor_quality.html#sec-caseload-zero">零值口径与三类候选池工具</a></p>
-</section>
-<section class="level3" id="caseload-iv加入与不加入财务控制">
-<h3 class="anchored" data-anchor-id="caseload-iv加入与不加入财务控制">5. Caseload IV：加入与不加入财务控制</h3>
-<p>在保留目的事务所和年份 FE、其他设计控制的基础上，比较是否加入公司财务控制。<strong>324 个二阶段结果中，311 个方向相同，319 个显著性档位相同，总体判断不变。</strong> 两个主要负向结果很接近：本科及以上的占比工具对应任期综合失败由 −0.259 变为 −0.256；历史无违规的平均业务量工具对应首年重述由 −0.117 变为 −0.119。</p>
-<p>96 个规格的估计样本量发生变化，极弱第一阶段下仍有大幅系数跳动。下一步应将同样本控制比较与弱工具推断分开核验。</p>
-<p><a href="./24_auditor_quality.html#sec-caseload-controls">控制变量比较、第一阶段与解释边界</a></p>
-</section>
-</section>
-<section class="level2" id="数据程序与输出记录">
-<h2 class="anchored" data-anchor-id="数据程序与输出记录">数据、程序与输出记录</h2>
-<p>本次使用已有输出更新展示并核对数值，没有重新运行回归或 Stata。事务所 FE 分布与散点图使用 <code>results/figures/selection_matching/audit_firm_akm/</code> 中的原图；cutoff 来自 <code>pairwise_akm_report_year_sensitivity.csv</code>；财务控制比较配对 <code>caseload_matching_iv_pool_estimates_auditfirm_fe_with_financial_controls.txt</code> 与 <code>caseload_matching_iv_pool_estimates_auditfirm_fe_no_financial_controls.txt</code>。财务控制比较记录由 <code>maintenance/prepare_meeting_memo.py</code> 生成；rare-event 诊断使用已完成的 <code>audit_outcome_identification.md</code>。</p>
-</section>
-<section class="level2" id="归档">
-<h2 class="anchored" data-anchor-id="归档">归档</h2>
-<p>后续带日期的备忘录将存放于 <code>memos/</code>。</p>
-</section>
-<section class="level2" id="sec-restatement-20261026">
-<h2 class="anchored" data-anchor-id="sec-restatement-20261026">2026-10-26 会议：重述指标、严重程度与市场预期</h2>
-<p><strong>问题：核清重述指标，并描述严重程度。</strong> 本节回答发生率为何变化、缺失与年份如何处理、调整幅度多大，以及恢复市场当时看到的年报数值后，多少公司年的“超预期／不及预期”判断会变化。</p>
-<p><strong>主要发现：同一批样本的重述率随定义由 16.23% 降至 9.25%、再降至 3.52%。严格重述中已恢复或确认 1,537／2,348（65.46%） 的原报EPS；已确认 104 个公司年改变surprise分组，其中 16 个直接在“超预期”和“不及预期”之间转换。</strong> 金额、恢复覆盖和分组变化均为当前数据的描述性核查。</p>
-<section class="level3" id="发生率变化先固定样本再区分定义">
-<h3 class="anchored" data-anchor-id="发生率变化先固定样本再区分定义">1. 发生率变化：先固定样本，再区分定义</h3>
-<p>以下共同样本是市场信息账本中2001—2024年的 <strong>66,754个公司年</strong>，每个公司年一行；原有EPS与180天surprise分别可用 65,947、32,086 个。它是本次恢复核查的共同样本，表中比例不混用其他回归或事件窗样本的分母。</p>
+<section class="level3" id="其他变好还是四大变差">
+<h3 class="anchored" data-anchor-id="其他变好还是四大变差">4. 其他变好还是四大变差</h3>
+<p>客观质量与市场相对响应没有给出同一个趋同模式。Fin差距扩大，Broad中四大下降更多；市场响应还取决于消息比较、客户样本与模型约束。分清哪些是事实、哪些是机制解释。先对齐三组质量、收费与市场走势，再决定2012能否发展为核心问题。</p>
+<p>市场端沿用<a href="#sec-memo-market-paths">上文两张无控制滚动分组图</a>，与下表的质量变化分别解释。</p>
 <table class="caption-top table">
-<caption>同一研究样本内，不同重述定义对应的发生率。</caption>
+<caption>质量端：重述原始发生率，全部审计意见样本。Fin与Broad沿用上项定义；不能将客户构成与发现率的变化直接解释为审计质量变化。</caption>
+<colgroup>
+<col style="width: 15%"/>
+<col style="width: 21%"/>
+<col style="width: 21%"/>
+<col style="width: 21%"/>
+<col style="width: 21%"/>
+</colgroup>
 <thead>
 <tr class="header">
-<th>口径</th>
-<th style="text-align: right;">公司年数／共同分母（发生率）</th>
+<th>事务所组</th>
+<th style="text-align: right;">Fin：2001—2011</th>
+<th style="text-align: right;">Fin：2012—2024</th>
+<th style="text-align: right;">Broad：2001—2011</th>
+<th style="text-align: right;">Broad：2012—2024</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>宽口径重述</td>
-<td style="text-align: right;">10,837／66,754（16.23%）</td>
+<td>四大</td>
+<td style="text-align: right;">2.34%</td>
+<td style="text-align: right;">4.11%</td>
+<td style="text-align: right;">12.97%</td>
+<td style="text-align: right;">8.49%</td>
 </tr>
 <tr class="even">
-<td>排除明确财务不变的重述</td>
-<td style="text-align: right;">6,173／66,754（9.25%）</td>
+<td>本土八大</td>
+<td style="text-align: right;">5.33%</td>
+<td style="text-align: right;">9.57%</td>
+<td style="text-align: right;">15.56%</td>
+<td style="text-align: right;">15.16%</td>
 </tr>
 <tr class="odd">
-<td>严格重述（当前基准）</td>
-<td style="text-align: right;">2,348／66,754（3.52%）</td>
-</tr>
-<tr class="even">
-<td>严重重述（严格重述的子集）</td>
-<td style="text-align: right;">1,073／66,754（1.61%）</td>
+<td>Other</td>
+<td style="text-align: right;">6.13%</td>
+<td style="text-align: right;">13.44%</td>
+<td style="text-align: right;">18.71%</td>
+<td style="text-align: right;">18.60%</td>
 </tr>
 </tbody>
 </table>
-<p>三种重述口径均先排除业务分类明确的纯会计政策／估计变更，并保留明确差错、混合业务与跨库分类冲突记录。宽口径不筛财务变更或盈余方向；中间口径仅排除旧库 <code>IsFinancialDataChange=0</code>、新库 <code>CorrectionType</code> 恰为 <code>2</code> 的公告。严格口径要求旧库财务变更标记为 <code>1</code>、新库更正类型<strong>恰为</strong> <code>1</code>，且有盈余增减方向；新库 <code>1,2</code> 等多选值不进入严格口径。</p>
-<p>因此，宽口径到中间口径减少 4,664 个公司年；中间口径到严格口径再减少 3,825 个，后者同时涉及财务变更确认、多选类型和盈余方向筛选。<strong>这些发生率差异来自测量范围收窄，不能解释为财务质量改善。</strong> 严格重述也不是所有会计差错更正的全集。</p>
+<p><a href="./23_big4_effect.html#sec-audit-period-2012">质量变化</a> · <a href="./23_big4_effect.html#market-2012-story">2012市场事实与机制假说</a> · <a href="./23_big4_effect.html#sec-current-identification-questions">综合争议与下一步</a></p>
 </section>
-<section class="level3" id="缺失处理年份归属与年度变化">
-<h3 class="anchored" data-anchor-id="缺失处理年份归属与年度变化">2. 缺失处理、年份归属与年度变化</h3>
-<ul>
-<li><strong>缺失不等于没有变化。</strong> 财务变更字段缺失在中间口径中保留，在严格口径中不满足条件；盈余方向缺失也不进入严格口径。原因分类缺失在既有程序中默认归入差错类，这只是编码规则。并入公司年面板后，未匹配事件的指标记为0，含义是“数据库中没有符合该定义的可匹配记录”。</li>
-<li><strong>按被更正财年归属。</strong> 旧库用 <code>RestatementYear</code>，新库将 <code>Accper</code> 中多个年度展开，再按公司—财年去重；不按更正公告年归属，也不以公告年填补缺失财年。例如2021年公告更正2018、2019年，分别计入2018、2019年。该归属便于识别对应年报，不能用作市场获知重述的事件日期；现有指标也未额外要求更正公告必须发生在财年结束之后。</li>
-<li><strong>金额缺失与预测缺失分别处理。</strong> 旧严重程度面板把缺失影响金额填0，新库该旧金额变量也填0，因此它不适合解释“零调整”。下表的调整幅度改用已核实的逐年合并净利润前后值。没有可用预测或预测中位数为0时，surprise继续缺失，不归入中性组。</li>
-</ul>
+<section class="level3" id="重述程度是否改变盈余惊喜">
+<h3 class="anchored" data-anchor-id="重述程度是否改变盈余惊喜">5. 重述程度、是否改变盈余惊喜</h3>
+<p>严格重述已核实部分的净利润相对调整中位数4.72%；确认104／866（12.01%）改变消息分组，其中16个直接互换超预期／不及预期。原报恢复已接入正式信号并完成市场重跑，主要结果基本不变。严格重述仍有811个公司年未恢复；已确认换组率不能代表未覆盖部分。历史股本和财务控制变量版本也尚未恢复。</p>
 <table class="caption-top table">
-<caption>按被更正财年归属的发生率；早期区间按公司年合并计算。</caption>
-<thead>
-<tr class="header">
-<th>被更正财年</th>
-<th style="text-align: right;">公司年数</th>
-<th style="text-align: right;">严格重述／公司年数</th>
-<th style="text-align: right;">严重重述／公司年数</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>2001—2009</td>
-<td style="text-align: right;">12,728</td>
-<td style="text-align: right;">89／12,728（0.70%）</td>
-<td style="text-align: right;">53／12,728（0.42%）</td>
-</tr>
-<tr class="even">
-<td>2010—2014</td>
-<td style="text-align: right;">12,156</td>
-<td style="text-align: right;">235／12,156（1.93%）</td>
-<td style="text-align: right;">127／12,156（1.04%）</td>
-</tr>
-<tr class="odd">
-<td>2015—2019</td>
-<td style="text-align: right;">16,911</td>
-<td style="text-align: right;">876／16,911（5.18%）</td>
-<td style="text-align: right;">433／16,911（2.56%）</td>
-</tr>
-<tr class="even">
-<td>2020</td>
-<td style="text-align: right;">4,264</td>
-<td style="text-align: right;">245／4,264（5.75%）</td>
-<td style="text-align: right;">109／4,264（2.56%）</td>
-</tr>
-<tr class="odd">
-<td>2021</td>
-<td style="text-align: right;">4,774</td>
-<td style="text-align: right;">242／4,774（5.07%）</td>
-<td style="text-align: right;">95／4,774（1.99%）</td>
-</tr>
-<tr class="even">
-<td>2022</td>
-<td style="text-align: right;">5,147</td>
-<td style="text-align: right;">246／5,147（4.78%）</td>
-<td style="text-align: right;">99／5,147（1.92%）</td>
-</tr>
-<tr class="odd">
-<td>2023</td>
-<td style="text-align: right;">5,365</td>
-<td style="text-align: right;">238／5,365（4.44%）</td>
-<td style="text-align: right;">93／5,365（1.73%）</td>
-</tr>
-<tr class="even">
-<td>2024</td>
-<td style="text-align: right;">5,409</td>
-<td style="text-align: right;">177／5,409（3.27%）</td>
-<td style="text-align: right;">64／5,409（1.18%）</td>
-</tr>
-</tbody>
-</table>
-<p>严格重述率在2015—2020年较高，2024财年降至 3.27%。年度比较还受可观察期限和数据覆盖影响：旧重述公告源的公告期止于2021年，新库有部分记录缺失被更正财年，不能进入年度指标；新近财年也可能尚未暴露后续更正。这里报告观察到的年度差异，不将后期下降直接归因于质量改善。</p>
-</section>
-<section class="level3" id="严重程度既有分类与实际调整幅度分开看">
-<h3 class="anchored" data-anchor-id="严重程度既有分类与实际调整幅度分开看">3. 严重程度：既有分类与实际调整幅度分开看</h3>
-<p><strong>现有严重重述指标依据性质与跨年范围，不采用金额阈值。</strong> 在严格重述中，满足监管／媒体等原因分类、涉及至少两年、或舞弊／虚增虚减等文本特征之一，且不属于程序识别的准则／估计调整或统一监管口径调整，即记为严重。监管／媒体原因与文本命中是分类代理，不能逐例等同于已证实舞弊。当前严重重述为 1,073／2,348（45.70%） 的严格重述。</p>
-<table class="caption-top table">
-<caption>已核实原报的调整幅度；严格重述与其中的严重重述分别统计。</caption>
+<caption>已核实原报的调整幅度：严格重述1,537个公司年，严重重述为其中760个；相对调整以原报净利润绝对值为分母，原报利润为0时留缺失。</caption>
 <thead>
 <tr class="header">
 <th>调整量</th>
@@ -435,82 +391,8 @@ window.Quarto = {
 </tr>
 </tbody>
 </table>
-<p>严格与严重两列分别基于 <strong>1,537、760 个已核实公司年</strong>，包括确认EPS无需改变的记录；两类不是独立样本。绝对调整为“原报值−当前数据库值”的绝对值，相对调整为该利润差额除以原报净利润绝对值；原报利润为0时相对量留缺失。它衡量恢复幅度，不重定义严重重述。严格样本中，恢复后EPS上升 885 个、下降 336 个、确认不变 316 个。净利润口径为合并净利润，不能将多年度累计调整金额整额复制或平均分配给各财年。</p>
-</section>
-<section class="level3" id="恢复原报后多少surprise判断会改变">
-<h3 class="anchored" data-anchor-id="恢复原报后多少surprise判断会改变">4. 恢复原报后，多少surprise判断会改变？</h3>
-<p><strong>恢复方向是把现在的数据改回首次年报公告时市场看到的值，即使当时的数值事后被认定错误。</strong> 使用差错更正前后对比表、连通且端点匹配的更正链，以及已核实的原始年报补证；只有独立账本中 <code>endpoint_usable=True</code> 的记录计入以下影响。未核实的候选不计入恢复。</p>
-<p>EPS沿用现有“合并净利润／年末股本”定义及FAR分支的精度规则，固定股本与原180天预测中位数。这不是年报列示的“归母净利润／加权平均股数”基本EPS。surprise按下式重算，继续使用原有Rptdt预测窗口，不采用已撤销的公告前10天剔除规则：</p>
-<p><span class="math display">\[
-S_{it}=\frac{EPS_{it}-\operatorname{Median}(ForecastEPS_{it,180})}{\left|\operatorname{Median}(ForecastEPS_{it,180})\right|}.
-\]</span></p>
-<p><span class="math inline">\(S&gt;0.10\)</span>为超预期，<span class="math inline">\(S&lt;-0.10\)</span>为不及预期，其余可用值为中性。当前值与原报值使用相同预测，以下变化只反映EPS恢复。</p>
 <table class="caption-top table">
-<caption>恢复覆盖与已确认影响；每格给出其对应分母。</caption>
-<colgroup>
-<col style="width: 15%"/>
-<col style="width: 21%"/>
-<col style="width: 21%"/>
-<col style="width: 21%"/>
-<col style="width: 21%"/>
-</colgroup>
-<thead>
-<tr class="header">
-<th>范围</th>
-<th style="text-align: right;">原报已恢复或确认／该类公司年</th>
-<th style="text-align: right;">EPS改变／该类原有EPS</th>
-<th style="text-align: right;">已核实且有surprise／该类原有surprise</th>
-<th style="text-align: right;">分组改变／该类原有surprise</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>排除明确财务不变的重述</td>
-<td style="text-align: right;">2,165／6,173（35.07%）</td>
-<td style="text-align: right;">1,611／6,150（26.20%）</td>
-<td style="text-align: right;">868／2,412（35.99%）</td>
-<td style="text-align: right;">125／2,412（5.18%）</td>
-</tr>
-<tr class="even">
-<td>严格重述</td>
-<td style="text-align: right;">1,537／2,348（65.46%）</td>
-<td style="text-align: right;">1,221／2,341（52.16%）</td>
-<td style="text-align: right;">619／866（71.48%）</td>
-<td style="text-align: right;">104／866（12.01%）</td>
-</tr>
-<tr class="odd">
-<td>严重重述</td>
-<td style="text-align: right;">760／1,073（70.83%）</td>
-<td style="text-align: right;">636／1,069（59.49%）</td>
-<td style="text-align: right;">316／375（84.27%）</td>
-<td style="text-align: right;">54／375（14.40%）</td>
-</tr>
-<tr class="even">
-<td>财务违规</td>
-<td style="text-align: right;">999／3,315（30.14%）</td>
-<td style="text-align: right;">735／3,304（22.25%）</td>
-<td style="text-align: right;">453／1,131（40.05%）</td>
-<td style="text-align: right;">79／1,131（6.98%）</td>
-</tr>
-<tr class="odd">
-<td>严重财务违规</td>
-<td style="text-align: right;">949／2,935（32.33%）</td>
-<td style="text-align: right;">693／2,925（23.69%）</td>
-<td style="text-align: right;">434／981（44.24%）</td>
-<td style="text-align: right;">79／981（8.05%）</td>
-</tr>
-<tr class="even">
-<td>严格重述或违规（去重）</td>
-<td style="text-align: right;">1,905／4,773（39.91%）</td>
-<td style="text-align: right;">1,379／4,760（28.97%）</td>
-<td style="text-align: right;">842／1,706（49.36%）</td>
-<td style="text-align: right;">114／1,706（6.68%）</td>
-</tr>
-</tbody>
-</table>
-<p>重述、严重重述和违规样本存在交集，不能将各行相加。对带 <code>IfCorrect=1</code> 且原有EPS可用的严格重述，已恢复或确认 <strong>1,314／1,546（84.99%）</strong>；严重重述为 <strong>661／746（88.61%）</strong>。该标记说明存在差错更正，不等于EPS一定改变，也不能把 <code>IfCorrect=0</code> 视作已经证实的原报版本。</p>
-<table class="caption-top table">
-<caption>严格重述中已核实且原有surprise可用的公司年：当前数据库值转回首次年报值。</caption>
+<caption>当前数据库分组转回首次年报分组，严格重述中已核实且原有surprise可用的619个公司年；104个换组，其中16个直接互换好／坏消息。</caption>
 <thead>
 <tr class="header">
 <th>当前数据分组 → 原报分组</th>
@@ -551,14 +433,279 @@ S_{it}=\frac{EPS_{it}-\operatorname{Median}(ForecastEPS_{it,180})}{\left|\operat
 </tr>
 </tbody>
 </table>
-<p>严格重述的 104 个分组变化，占全部原有surprise可用严格重述的 <strong>104／866（12.01%）</strong>，占已核实且有surprise部分的 <strong>104／619（16.80%）</strong>。其中 88 个进出中性组；直接逆转为不及预期→超预期 14 个、超预期→不及预期 2 个。前一比例衡量目前已确认的影响，未覆盖记录的真实分组变化仍未知。</p>
-<p>严格重述仍有 <strong>811 个公司年未恢复</strong>，其中 671 个没有可配对的逐年合并净利润前后端点；其余涉及更正链缺口、现值端点冲突、同日多次调整、只有条件性调整金额或EPS口径不能闭合。它们保留为未核实，不能据此判断原值未被更改。财务控制变量及股本的历史版本尚未恢复。</p>
+<p><a href="./23_big4_effect.html#sec-restatement-20261026">重述口径、年份、调整幅度及全部五张表</a> · <a href="./23_big4_effect.html#sec-market-reconciliation">修复后的市场结果</a></p>
 </section>
-<section class="level3" id="数据程序与核验记录">
-<h3 class="anchored" data-anchor-id="数据程序与核验记录">数据、程序与核验记录</h3>
-<p>本节使用当前独立账本重新计算描述统计，并与既有恢复汇总逐项核对；原始数据和正式分析面板未覆盖，未运行Stata或重估回归。完整处理说明与逐公司年核查Excel位于项目的 <code>results/tables/market_information/original_eps_recovery/</code>，文件名为 <code>original_eps_processing_audit.md</code>、<code>original_eps_processing_audit.xlsx</code>。</p>
-<p>指标定义见 <code>code/python/08_audit_quality_metrics_builder.ipynb</code> 的重述及严重程度单元，恢复代码与结果见 <code>code/python/16_market_information_builder.ipynb</code> 末尾。本节表格可由会议表格生成脚本复现；该脚本只更新本节，不执行原始数据处理或回归。</p>
+<section class="level3" id="sec-briefing-cases">
+<h3 class="anchored" data-anchor-id="sec-briefing-cases">6. 财报公布时不知道、一周后才知道什么</h3>
+<p>CSMAR问答记录提供了具体案例：财报公布后，投资者追问现金流、应收账款及盈利增长，公司在说明会上解释其业务和结算原因。下列三个早期案例均为现有好消息组的非四大客户，说明会在年报公告后3—6个自然日举行。以现金流和应收账款问答为重点，将说明会日期对齐公告后的价格路径，比较有无说明会及问答内容的差异。</p>
+<section class="level4" id="三个公告后一周内的说明会案例">
+<h4 class="anchored" data-anchor-id="三个公告后一周内的说明会案例">三个公告后一周内的说明会案例</h4>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 15%"/>
+<col style="width: 15%"/>
+<col style="width: 15%"/>
+<col style="width: 15%"/>
+<col style="width: 21%"/>
+<col style="width: 15%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th>公司—财年</th>
+<th>当年审计师</th>
+<th>年报公告</th>
+<th>说明会</th>
+<th style="text-align: right;">间隔</th>
+<th>投资者疑问与公司解释</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>苏宁电器002024—2006</td>
+<td>江苏天衡，Other</td>
+<td>2007-03-10</td>
+<td>2007-03-13</td>
+<td style="text-align: right;">3日</td>
+<td>为什么经营现金流没有随收入增长？财务负责人解释新店投入、存货增长及支付供应商货款的资金占用。</td>
+</tr>
+<tr class="even">
+<td>皖通科技002331—2010</td>
+<td>天健正信，本土八大</td>
+<td>2011-02-22</td>
+<td>2011-02-25</td>
+<td style="text-align: right;">3日</td>
+<td>为什么应收账款增长较快？财务总监解释收入增长，以及项目完工后尚未到期的缺陷责任期。</td>
+</tr>
+<tr class="odd">
+<td>杭氧股份002430—2010</td>
+<td>天健，本土八大</td>
+<td>2011-04-13</td>
+<td>2011-04-19</td>
+<td style="text-align: right;">6日</td>
+<td>营业收入约30亿元，销售收现约19亿元，应收仅增加不到2亿元，差额是什么？财务负责人解释部分采用银行承兑汇票结算，该部分票据业务不进入现金流量表。</td>
+</tr>
+</tbody>
+</table>
+<p><strong>这三个例子把“财报后市场还在了解什么”具体化了：投资者已经看到收入、利润和现金流数字，但仍在追问数字之间的关系、收款安排及增长带来的资金占用；说明会提供针对这些疑问的解释。</strong> 当前surprise分别为16.52%、11.28%和12.92%，均超过主报告的10%好消息门槛，三个事件也均有完整短窗行情。</p>
+<p>以下为CSMAR原始问答重新排版的摘录表，保留提问与回答全文；图下注明原始Excel行号，便于回查。</p>
+<p><a href="figures/market_information/earnings_briefings/002024_2006_qa.png">查看原始问答／纪要：苏宁电器：公告后第3日，解释经营现金流与收入、利润不同步。CSMAR原始问答表摘录。</a></p>
+<p><a href="figures/market_information/earnings_briefings/002331_2010_qa.png">查看原始问答／纪要：皖通科技：公告后第3日，解释应收账款与项目缺陷责任期。CSMAR原始问答表摘录。</a></p>
+<p><a href="figures/market_information/earnings_briefings/002430_2010_qa.png">查看原始问答／纪要：杭氧股份：公告后第6日，解释收入、销售收现与银行承兑汇票的关系。CSMAR原始问答表摘录。</a></p>
+<p>会议日期另见<a href="https://www.suning.cn/static///snsite/index/tzzgx/dqbg/attachment/501/_attachment1335341021095.pdf">苏宁公司官网2007年报中的说明会记录</a>、<a href="https://www.p5w.net/kuaixun/201102/t3463359.htm">全景网皖通说明会当日报道</a>及<a href="https://q.stock.sohu.com/cn/002430/bw_2.shtml">杭氧说明会通知记录</a>。</p>
+<details>
+<summary>
+补充：原始会议纪要截图——东方电气与通富微电
+</summary>
+<p><strong>东方电气2010年报：公告后第1日解释应收账款。</strong> 年报于2011-03-31公告，4月1日在上海举行说明会。券商整理的纪要记录，投资者追问管理费用、所得税和应收账款；公司解释合同通常有约10%的质量保证金，期限为2年或5年，因而收入确认后仍形成应收款。<a href="https://pdf.dfcfw.com/pdf/H3_AS201202260003983676_1.pdf?1369335525000.pdf=">第一创业2011-04-06会议纪要，第4页</a>。</p>
+<p><a href="figures/market_information/earnings_briefings/dongfang_electric_20110401_minutes.png">查看原始问答／纪要：东方电气：原始会议纪要第4页Q7截图，包含公司答复及券商观点。</a></p>
+<p><strong>通富微电2023年报：公告后第6日解释增收不增利。</strong> 年报公告日为2024-04-13，4月19日举行公开网上说明会。投资者问公司是否因价格竞争和议价能力不足而增收不增利；公司拆解需求、产能利用率和汇兑损失，说明汇兑损失减少归母净利润1.90亿元，并补充两家子公司的盈利表现。<a href="https://pdf.dfcfw.com/pdf/H2_AN202404241631115347_1.PDF">公司投资者关系活动记录，第6—7页</a>。活动时间按记录首页的2024-04-19；纪要文件发布于4月24日。</p>
+<p><a href="figures/market_information/earnings_briefings/tongfu_20240419_minutes.png">查看原始问答／纪要：通富微电：原始投资者关系活动记录表第6—7页，第24问及答复的跨页截图。</a></p>
+</details>
 </section>
+<section class="level4" id="说明会通常在年报后多久">
+<h4 class="anchored" data-anchor-id="说明会通常在年报后多久">说明会通常在年报后多久？</h4>
+<p>本次读取下载的三个Excel，共1,083,440条问答。按股票代码、数据所属会计年度和实际答复日期合并为活动日，再与正式年报公告日匹配；每份年报取公告当日至365个自然日内首次被数据记录的问答活动，不按问题条数重复计数。使用答复日期，是为了将提前征集问题与实际说明会交流区分开。有效样本为25,586份年报、4,794家公司，财年覆盖2005—2024。</p>
+<p><strong>总体中位数为公告后12个自然日，四分之一在7日内、四分之三在19日内。公告后第1—7日的占24.4%，包括公告当天则为25.7%；64.0%在两周内、87.2%在30日内。</strong></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 11%"/>
+<col style="width: 15%"/>
+<col style="width: 15%"/>
+<col style="width: 11%"/>
+<col style="width: 15%"/>
+<col style="width: 15%"/>
+<col style="width: 15%"/>
+</colgroup>
+<thead>
+<tr class="header">
+<th>样本</th>
+<th style="text-align: right;">年报数</th>
+<th style="text-align: right;">间隔中位数</th>
+<th>第25—75百分位</th>
+<th style="text-align: right;">公告后第1—7日</th>
+<th style="text-align: right;">当日至第14日</th>
+<th style="text-align: right;">当日至第30日</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>全部可匹配年报</td>
+<td style="text-align: right;">25,586</td>
+<td style="text-align: right;">12日</td>
+<td>7—19日</td>
+<td style="text-align: right;">24.4%</td>
+<td style="text-align: right;">64.0%</td>
+<td style="text-align: right;">87.2%</td>
+</tr>
+<tr class="even">
+<td>2012年前财年</td>
+<td style="text-align: right;">2,921</td>
+<td style="text-align: right;">10日</td>
+<td>7—16日</td>
+<td style="text-align: right;">27.4%</td>
+<td style="text-align: right;">72.4%</td>
+<td style="text-align: right;">89.8%</td>
+</tr>
+<tr class="odd">
+<td>四大客户</td>
+<td style="text-align: right;">1,438</td>
+<td style="text-align: right;">13日</td>
+<td>6—24日</td>
+<td style="text-align: right;">24.1%</td>
+<td style="text-align: right;">55.7%</td>
+<td style="text-align: right;">80.6%</td>
+</tr>
+<tr class="even">
+<td>非四大客户</td>
+<td style="text-align: right;">24,148</td>
+<td style="text-align: right;">12日</td>
+<td>7—19日</td>
+<td style="text-align: right;">24.4%</td>
+<td style="text-align: right;">64.4%</td>
+<td style="text-align: right;">87.6%</td>
+</tr>
+<tr class="odd">
+<td>非四大、好消息组</td>
+<td style="text-align: right;">1,881</td>
+<td style="text-align: right;">11日</td>
+<td>7—17日</td>
+<td style="text-align: right;">27.5%</td>
+<td style="text-align: right;">69.3%</td>
+<td style="text-align: right;">88.7%</td>
+</tr>
+</tbody>
+</table>
+<p>数据同时包含同一会计年度的多次问答活动，因此这里衡量“年报后首次被该库记录的问答活动”的间隔。2,337条缺失答复日期的问答不纳入时间统计。42,497个公司—年度—活动日中，35,758个能按代码和年度匹配年报；其中9,628个早于对应年报、36个晚于365日，另有6,739个未匹配，均保留在活动日明细中。组间数字是时间分布描述。</p>
+<p><a href="tables/earnings_briefings/selected_questions.csv">选定问答与原始行号</a> · <a href="tables/earnings_briefings/timing_summary.csv">时间分布</a> · <a href="tables/earnings_briefings/first_meeting_after_annual.csv">每份年报首次活动</a> · <a href="tables/earnings_briefings/meeting_dates.csv">全部活动日与匹配状态</a> · <a href="tables/earnings_briefings/validation.json">核查口径</a> · <a href="./23_big4_effect.html#sec-postannouncement-information">主报告原问题</a></p>
+</section>
+</section>
+<section class="level3" id="expansion-剔除最大客户">
+<h3 class="anchored" data-anchor-id="expansion-剔除最大客户">7. Expansion 剔除最大客户</h3>
+<p>城市四套一阶段已完成；截至2012年剔除最大客户后，TWFE为+4.10、CS-DID为+3.71个百分点。省域及邻省版本已做约化式、DID-IV和批次来源核查，邻省正向失败结果存在低基期与比较地区问题。城市版尚缺审计结果约化式和第二阶段；采用效应不解决冲击选择与排除限制。先决定城市定义是否值得继续。</p>
+<figure class="latex-table memo-core-table figure" style="overflow-x:auto;">
+<a href="tables/regression_columns_20261024/result_20.png"><img alt="城市首次开所的一阶段：每列一个回归；比较全时期／截至2012年、全部客户／剔除最大客户及两种估计器。" class="figure-img" loading="lazy" src="tables/regression_columns_20261024/result_20.png" style="width:100%;height:auto;display:block;"/></a>
+<figcaption>
+城市首次开所的一阶段：每列一个回归；比较全时期／截至2012年、全部客户／剔除最大客户及两种估计器。 · <a href="tables/regression_columns_20261024/result_20.tex">TeX</a> · <a href="tables/regression_columns_20261024/result_20.pdf">PDF</a>
+</figcaption>
+</figure>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img class="img-fluid figure-img" src="figures/meeting_20261026/expansion/event_study_city_only_pre2012.png" style="width:100.0%"/></p>
+<figcaption>截至2012年的城市首次开所：剔除事前最大客户，左为TWFE、右为CS-DID；结果变量为四大采用，尚不是审计质量结果。</figcaption>
+</figure>
+</div>
+<p><a href="./23_big4_effect.html#sec-branch-expansion">城市一阶段、四套比较及省域约化式</a></p>
+<p><span id="akm能否-accommodate-sorting"></span></p>
+</section>
+<section class="level3" id="sec-memo-akm-sorting">
+<h3 class="anchored" data-anchor-id="sec-memo-akm-sorting">8. AKM能否 accommodate sorting</h3>
+<p><strong>AKM可以容纳客户与事务所之间的永久类型sorting。</strong> <span class="citation" data-cites="akm1999">Abowd 等 (<a href="#ref-akm1999" role="doc-biblioref">1999年</a>)</span> 的模型允许客户持久失败成分<span class="math inline">\(\alpha_i\)</span>与事务所稳定结果成分<span class="math inline">\(\psi_f\)</span>相关，因而长期低风险客户更常选择四大与模型相容。关键限制是剩余结果冲击与整条事务所配置路径的关系，而非要求两端永久类型独立。写成</p>
+<p><span id="eq-memo-akm-exogeneity"><span class="math display">\[
+\begin{aligned}
+Y_{it}&amp;=X_{it}'\beta+\alpha_i+\psi_{f(i,t)}+\lambda_t+\varepsilon_{it},\\
+&amp;\text{允许 }\operatorname{Cov}(\alpha_i,\psi_{f(i,t)})\ne0,\\
+\operatorname E[\varepsilon_{it}\mid
+\alpha_i,\boldsymbol\psi,\boldsymbol\lambda,\mathcal X_i,\mathcal F_i]&amp;=0,\qquad \forall t.
+\end{aligned}
+\tag{1}\]</span></span></p>
+<p>其中<span class="math inline">\(\mathcal F_i\)</span>与<span class="math inline">\(\mathcal X_i\)</span>是客户完整的事务所配置及控制变量路径；该条件蕴含<span class="math inline">\(\varepsilon_{it}\)</span>与任意过去、当前或未来的配置指示变量正交。基准AKM可以允许客户内部的误差序列相关，并按客户聚类，但这些误差仍须与配置路径正交；当前逐观测KSS另需公司年误差独立。<a href="./26_akm.html#sec-akm-exogeneity">完整方程与样本定义</a>。</p>
+<p><strong>我们的问题在于，已有选择分析发现上一期风险／审计意见与下一期留任、退出和改聘相关。</strong> 如果这只是客户永久风险或可观察特征的配置，AKM可以吸收；如果选所还取决于上一期未被吸收的风险冲击，则可能出现</p>
+<p><span id="eq-memo-akm-lagged-risk"><span class="math display">\[
+\operatorname{Cov}\!\left(\varepsilon_{i,t-1},\mathbf1\{f(i,t)=j\}\mid
+\alpha_i,\boldsymbol\psi,\boldsymbol\lambda,\mathcal X_i\right)\ne0,
+\tag{2}\]</span></span></p>
+<p>从而违反上述严格外生性。单看观测风险与改聘相关还不足以确认违反，因而需要进一步检查剩余成分与未来配置的关系。这里有两条方向：一是 <span class="citation" data-cites="blm2019">Bonhomme 等 (<a href="#ref-blm2019" role="doc-biblioref">2019年</a>)</span> 的类型与动态分布框架，<a href="./25_matching.html#sec-blm-client-firm-results">已有收费CDF分类与配对结果</a>可作为描述性起点，动态版本还需规定类型条件下的Markov结构；二是 <span class="citation" data-cites="ams2019">Abowd 等 (<a href="#ref-ams2019" role="doc-biblioref">2019年</a>)</span> 的残差诊断及结果—流动联合潜在类型模型。本轮已做<a href="./26_akm.html#sec-akm-future-assignment">剩余结果—未来配置诊断</a>和<a href="./26_akm.html#sec-akm-dynamic-support">动态序列支持检查</a>，<a href="./26_akm.html#sec-dynamic-risk-gfe">本轮已实际运行动态风险GFE与独立静态二元混合</a>。年度风险集用于条件配置，有日期的换所样本另估；完整续聘决策日和普遍恢复的财务历史原始版本仍未覆盖，不能把本轮结果称为原文完整动态BLM。</p>
+<p><strong>我又做了一些分析，我发现，组间配置与组内配置的方向不同。</strong> 按四大、本土八大与Other分解同一次全样本拟合，三套样本的失败指标均为正组间、负组内，且组内负项更大。因此，四大客户具有较低的持久失败成分，与总体客户—事务所插件相关为负可以同时成立。综合失败总体相关在不筛选、33、55样本中分别为−0.0322、−0.0445、−0.0574；这是新增探索性分析，Abs DA的组间方向不同，单独解释。<a href="./26_akm.html#sec-akm-exploratory-sorting">完整分解与分梯队估计</a>。</p>
+<div class="quarto-float quarto-figure quarto-figure-center anchored" id="fig-memo-akm-within-between">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-memo-akm-within-between-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img class="img-fluid figure-img" src="figures/client_auditfirm_sorting/within_between_covariance.png" style="width:100.0%"/>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-memo-akm-within-between-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+图 1: 同一次全样本AKM拟合的组内、组间及总体协方差；三个失败指标呈正组间、负组内，Abs DA的组间项为负。
+</figcaption>
+</figure>
+</div>
+<p><strong>KSS校正后，负相关的绝对量级减小，点估计方向保持为负。</strong> 按 <span class="citation" data-cites="kss2020">Kline 等 (<a href="#ref-kss2020" role="doc-biblioref">2020年</a>)</span> 的逐观测leave-out方法，同时校正客户方差、事务所方差及协方差后，综合失败相关在三套样本中分别变为−0.0020、−0.0177、−0.0315。因而校正影响量级，没有改变这三套点估计的符号；不筛选样本已接近0。当前结果依赖公司年误差独立，尚无客户聚类稳健完整置信区间，符号一致不等于统计上确认了负sorting。KSS解决估计噪声，时变风险导致的内生换所沿前述两条方向另行处理。<a href="./26_akm.html#sec-akm-kss">KSS完整结果</a>。</p>
+<div class="quarto-float quarto-figure quarto-figure-center anchored" id="fig-memo-akm-kss">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-memo-akm-kss-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img class="img-fluid figure-img" src="figures/client_auditfirm_sorting/kss_observation_leaveout.png" style="width:100.0%"/>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-memo-akm-kss-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+图 2: 综合失败的KSS校正：客户方差、事务所方差与协方差；量级减弱，三套样本的协方差点估计仍为负。
+</figcaption>
+</figure>
+</div>
+<p><strong>四大观察优势同时对应客户与事务所的稳定成分。</strong> 不筛选样本中，四大相对非四大的未预警综合失败率低3.687个百分点，客户、事务所和年份成分分别贡献−5.148、−2.064和−0.074个百分点，控制变量成分贡献+3.599个百分点，抵消部分差距。各项来自同一个估计样本，体现当前加性模型中的稳定构成；将事务所成分进一步解释为因果服务作用，仍依赖前述外生性与加性条件。<a href="./26_akm.html#sec-akm-big4-gap">全部四大差距</a>。</p>
+<div class="quarto-float quarto-figure quarto-figure-center anchored" id="fig-memo-akm-gap">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-memo-akm-gap-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img class="img-fluid figure-img" src="figures/client_auditfirm_sorting/big4_gap_components.png" style="width:100.0%"/>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-memo-akm-gap-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+图 3: 四大减非四大的未预警综合失败差距及其稳定成分；单位为百分点，各项加总为观察差距。
+</figcaption>
+</figure>
+</div>
+<p><strong>现有检查交代了估计支持，也提示动态选择需要继续核对。</strong> 48个基准／分梯队模型与24个未来配置模型已经Stata—Python逐行核对，网络、关键客户删除和50次重复抽样结果见<a href="./26_akm.html#sec-akm-network-sensitivity">26号报告</a>。综合失败两年期不筛选样本的未来配置联合检验，六项Holm校正后<span class="math inline">\(p=0.047\)</span>，扩至全部24项后为0.182，且未在33和55中重复出现。9,218次年度换所中5,800次有变更日期候选；需要核准具体事件与决策时已知风险，再设定动态模型。</p>
+<!-- dynamic-risk-memo:start -->
+<p><strong>新执行结果。</strong> 我又推进了历史分组加连续风险的动态状态模型，以及独立的两类型Bernoulli混合基准。<a href="./26_akm.html#sec-dynamic-risk-gfe">完整模型、主要图和执行诊断</a>已接入26号报告。不筛选、33、55的年度主样本分别为24,428、23,516、22,212个客户年；三套样本各进行500次客户整段重抽样。日期缺失使我们首先解释年度配置的条件关联，而非完整决策结构。</p>
+<p>时间外选择没有支持增加客户组数，主规格选中一组；2—4组的分类构成和交互结果保留为探索，并列出部分四大单元的零事件。因此当前最稳妥的进展是把“何时的可见风险与选所相关”估清楚，尚不能声称稳定识别了多个永久风险类型。<a href="./26_akm.html#sec-dynamic-risk-standardization">同风险比较</a>中，不筛选样本四大与Other的标准化联合失败概率分别为0.99%和5.13%，只针对共同支持参考人群；服务解释还要求状态充分与当前创新条件。</p>
+<p><a href="./26_akm.html#sec-static-binary-mixture">静态二元混合</a>能够改善两期结果分布拟合，但存在边界路径权重／结果概率。已交付路径权重、软后验、留任者构成和500次稳定性重抽样；局部Jacobian满秩不能把边界解升级为稳健类型识别。<a href="./26_akm.html#sec-dynamic-risk-simulations">六类模拟</a>专门区分纯构成、条件结果差异及私人选择，帮助限定结果能回答的问题。这两条新路线都没有自动消除未观察私人信息导致的内生性。 <!-- dynamic-risk-memo:end --></p>
+<p><a href="./26_akm.html#sec-client-auditfirm-sorting">26号：当前客户—事务所完整结果</a> · <a href="./25_matching.html#sec-blm-client-firm-results">BLM已有分类与配对结果</a> · <a href="./26_akm.html#sec-akm-future-assignment">AMS思路的本项目诊断</a> · <a href="./23_big4_effect.html#客户选择与审计意见四大如何形成较低风险的客户组合">主报告已有选择证据</a></p>
+</section>
+<section class="level3" id="分析师指标与人数">
+<h3 class="anchored" data-anchor-id="分析师指标与人数">9. 分析师指标与人数</h3>
+<p>公式含人数项，代数拆分中显式人数项对应约17.2%的原始组间差异；已有门槛和FE比较未形成稳定四大优势。券商构成、前后均预测的选择和无限窗口间隔尚未闭合；一致性与准确性分别解释。</p>
+<figure class="latex-table memo-core-table figure" style="overflow-x:auto;">
+<a href="tables/regression_columns_20261024/result_01.png"><img alt="分析师信息指标：每列一个回归，比较无控制、三项和四项控制；Δρ衡量共同信息权重变化。" class="figure-img" loading="lazy" src="tables/regression_columns_20261024/result_01.png" style="width:100%;height:auto;display:block;"/></a>
+<figcaption>
+分析师信息指标：每列一个回归，比较无控制、三项和四项控制；Δρ衡量共同信息权重变化。 · <a href="tables/regression_columns_20261024/result_01.tex">TeX</a> · <a href="tables/regression_columns_20261024/result_01.pdf">PDF</a>
+</figcaption>
+</figure>
+<table class="caption-top table">
+<caption>固定预测均值、方差及有效样本的代数拆分，显式人数项对应约17.2%的原始差异，不是人数的因果贡献。</caption>
+<thead>
+<tr class="header">
+<th>Δρ的四大−非四大均值差分解</th>
+<th style="text-align: right;">数值</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>原始组间差异</td>
+<td style="text-align: right;">0.025003</td>
+</tr>
+<tr class="even">
+<td>显式1/n项对应部分</td>
+<td style="text-align: right;">0.004299</td>
+</tr>
+<tr class="odd">
+<td>其余部分</td>
+<td style="text-align: right;">0.020704</td>
+</tr>
+</tbody>
+</table>
+<p><a href="./23_big4_effect.html#sec-analyst-number-audit">人数构造、已完成诊断与剩余问题</a></p>
+</section>
+</section>
+<section class="level2" id="参考文献">
+<h2 class="anchored" data-anchor-id="参考文献">参考文献</h2>
+<div class="references csl-bib-body hanging-indent" id="refs" role="list">
+<div class="csl-entry" id="ref-akm1999" role="listitem">
+Abowd, John M., Francis Kramarz, 和 David N. Margolis. 1999年. <span>《High Wage Workers and High Wage Firms》</span>. <em>Econometrica</em> 67 (2): 251～333. <a href="https://doi.org/10.1111/1468-0262.00020">https://doi.org/10.1111/1468-0262.00020</a>.
+</div>
+<div class="csl-entry" id="ref-ams2019" role="listitem">
+Abowd, John M., Kevin L. McKinney, 和 Ian M. Schmutte. 2019年. <span>《Modeling Endogenous Mobility in Earnings Determination》</span>. <em>Journal of Business &amp; Economic Statistics</em> 37 (3): 405～18. <a href="https://doi.org/10.1080/07350015.2017.1356727">https://doi.org/10.1080/07350015.2017.1356727</a>.
+</div>
+<div class="csl-entry" id="ref-blm2019" role="listitem">
+Bonhomme, Stéphane, Thibaut Lamadon, 和 Elena Manresa. 2019年. <span>《A Distributional Framework for Matched Employer Employee Data》</span>. <em>Econometrica</em> 87 (3): 699～739. <a href="https://doi.org/10.3982/ECTA15722">https://doi.org/10.3982/ECTA15722</a>.
+</div>
+<div class="csl-entry" id="ref-kss2020" role="listitem">
+Kline, Patrick, Raffaele Saggio, 和 Mikkel Sølvsten. 2020年. <span>《Leave-Out Estimation of Variance Components》</span>. <em>Econometrica</em> 88 (5): 1859～98. <a href="https://doi.org/10.3982/ECTA16410">https://doi.org/10.3982/ECTA16410</a>.
+</div>
+</div>
 </section>
 <p><a href="sources/31_biweekly_memo.qmd">下载本页 QMD 源文件</a></p></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -962,5 +1109,5 @@ S_{it}=\frac{EPS_{it}-\operatorname{Median}(ForecastEPS_{it,180})}{\left|\operat
   });
   </script>
 </div> <!-- /content -->
-<script src="report-toc.js" defer></script>
+<script defer="" src="report-toc.js"></script>
 </body></html>

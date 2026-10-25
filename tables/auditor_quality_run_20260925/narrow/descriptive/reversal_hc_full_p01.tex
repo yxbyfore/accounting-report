@@ -1,0 +1,42 @@
+\documentclass[10pt]{article}
+\usepackage[paperwidth=32cm,paperheight=45cm,margin=1cm]{geometry}
+\usepackage{fontspec,xeCJK}
+\setmainfont{lmroman10-regular.otf}[BoldFont=lmroman10-bold.otf,ItalicFont=lmroman10-italic.otf,BoldItalicFont=lmroman10-bolditalic.otf]
+\setCJKmainfont{SimSun}
+\usepackage{booktabs,array,threeparttable,graphicx,caption,longtable,amsmath,amssymb,hyperref,xcolor}
+\usepackage[active,tightpage]{preview}
+\PreviewEnvironment{minipage}
+\setlength\PreviewBorder{6pt}
+\newcommand{\sym}[1]{\textsuperscript{#1}}
+\captionsetup{font=normalsize,labelformat=empty,skip=6pt}
+\setlength{\parindent}{0pt}
+\begin{document}
+\begin{minipage}{19cm}\fontsize{10}{12}\selectfont\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.12}
+
+
+\centering
+\captionof{table}{Reversal duration: human capital (part 1 of 2)}
+\begin{threeparttable}
+\begin{tabular}{p{0.36\textwidth}ccc}
+\toprule
+Quality measure & Transition & Firms changing & Firms reversing \\
+\midrule
+a1\_edu\_bachelor\_up & Upgrade (0->1) & 2,460 & 1,332 \\
+a1\_edu\_bachelor\_up & Downgrade (1->0) & 2,512 & 1,924 \\
+a1\_edu\_master\_up & Upgrade (0->1) & 2,129 & 1,679 \\
+a1\_edu\_master\_up & Downgrade (1->0) & 2,315 & 1,048 \\
+a1\_school\_985\_211 & Upgrade (0->1) & 3,276 & 2,347 \\
+a1\_school\_985\_211 & Downgrade (1->0) & 3,285 & 1,986 \\
+a1\_school\_985 & Upgrade (0->1) & 2,316 & 1,678 \\
+a1\_school\_985 & Downgrade (1->0) & 2,272 & 1,047 \\
+a1\_has\_big4\_bg & Upgrade (0->1) & 1,068 & 748 \\
+a1\_has\_big4\_bg & Downgrade (1->0) & 1,050 & 327 \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}\fontsize{9}{11}\selectfont
+\item \raggedright \fontsize{9}{11}\selectfont \textit{Notes:} Right-censored firms without an observed reversal remain in the denominator.
+\end{tablenotes}
+\end{threeparttable}
+
+\end{minipage}
+\end{document}

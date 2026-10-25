@@ -1,0 +1,39 @@
+\documentclass[10pt]{article}
+\usepackage[paperwidth=32cm,paperheight=45cm,margin=1cm]{geometry}
+\usepackage{fontspec,xeCJK}
+\setmainfont{lmroman10-regular.otf}[BoldFont=lmroman10-bold.otf,ItalicFont=lmroman10-italic.otf,BoldItalicFont=lmroman10-bolditalic.otf]
+\setCJKmainfont{SimSun}
+\usepackage{booktabs,array,threeparttable,graphicx,caption,longtable,amsmath,amssymb,hyperref,xcolor}
+\usepackage[active,tightpage]{preview}
+\PreviewEnvironment{minipage}
+\setlength\PreviewBorder{6pt}
+\newcommand{\sym}[1]{\textsuperscript{#1}}
+\captionsetup{font=normalsize,labelformat=empty,skip=6pt}
+\setlength{\parindent}{0pt}
+\begin{document}
+\begin{minipage}{19cm}\fontsize{10}{12}\selectfont\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.12}
+
+
+\centering
+\captionof{table}{Other-client release composition, first stage: successor year + 0}
+\begin{threeparttable}
+\begin{tabular}{p{0.38\textwidth}ccc}
+\toprule
+Successor attribute & Instrument coefficient (SE) & Excluded-IV F & Observations \\
+\midrule
+Education level & \shortstack{-0.462\\(0.965)} & 0.230 & 1,402 \\
+Bachelor or above & \shortstack{-1.744\\(1.082)} & 2.600 & 1,402 \\
+Master or above & \shortstack{1.495\\(1.776)} & 0.709 & 1,402 \\
+985 school & \shortstack{-0.441\\(1.597)} & 0.0764 & 1,396 \\
+985 or 211 school & \shortstack{-0.658\\(1.577)} & 0.174 & 1,396 \\
+Big 4 background & \shortstack{0.204\\(0.297)} & 0.473 & 1,424 \\
+Prior CPA quality & \shortstack{4.177\\(2.574)} & 2.633 & 962 \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}\fontsize{9}{11}\selectfont
+\item \raggedright \fontsize{9}{11}\selectfont \textit{Notes:} The three audit-failure outcomes have identical first-stage estimates within each horizon; one copy is shown. Audit-firm and rotation-year fixed effects; firm controls supplied as lagged panel values; standard errors clustered by audit firm.
+\end{tablenotes}
+\end{threeparttable}
+
+\end{minipage}
+\end{document}

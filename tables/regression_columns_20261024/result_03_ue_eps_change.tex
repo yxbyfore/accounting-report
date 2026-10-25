@@ -1,0 +1,32 @@
+\documentclass[10pt]{article}
+\usepackage[paperwidth=34cm,paperheight=48cm,margin=0.8cm]{geometry}
+\usepackage{booktabs,array,amsmath}
+\newcommand{\sym}[1]{\textsuperscript{#1}}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\begin{document}
+\begin{minipage}{23.60cm}
+\fontsize{10}{12}\selectfont
+\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.08}
+{\large\bfseries EY-Dahua: EPS-Change News}\par\medskip
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}lcccccc@{}}
+\toprule
+ & (1) & (2) & (3) & (4) & (5) & (6) \\
+CAR window & [-1,+1] & [-1,+1] & [-2,+2] & [-2,+2] & [-3,+3] & [-3,+3] \\
+Estimator & DID & IV & DID & IV & DID & IV \\
+\midrule
+DID $\times$ news & 0.270816 & -- & 0.168834 & -- & -0.161977 & -- \\
+ & (0.218080) &  & (0.290554) &  & (0.369920) &  \\
+$p$ & 0.2146 &  & 0.5613 &  & 0.6616 &  \\
+Big4 $\times$ news (IV) & -- & 2.439143 & -- & 1.355150 & -- & -1.792685 \\
+ &  & (2.820327) &  & (2.703313) &  & (3.766746) \\
+$p$ &  & 0.3873 &  & 0.6163 &  & 0.6342 \\
+\midrule
+Observations & 8094 & 8094 & 7977 & 7977 & 7867 & 7867 \\
+KP first-stage F & -- & 0.91 & -- & 0.91 & -- & 0.91 \\
+Firm / year FE & Yes & Yes & Yes & Yes & Yes & Yes \\
+\bottomrule\end{tabular*}\par\medskip
+\fontsize{9}{11}\selectfont\textit{Notes:} Selected interaction estimates from the current report. Each DID and IV estimate is a distinct regression. News definitions, controls and firm clustering are unchanged. KP F refers to the joint endogenous-regressor system; it is not an audit-outcome first stage.
+\par Standard errors are in parentheses. * $p<0.10$, ** $p<0.05$, *** $p<0.01$.
+\end{minipage}
+\end{document}

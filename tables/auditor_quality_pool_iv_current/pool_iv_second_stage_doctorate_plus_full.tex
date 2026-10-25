@@ -1,0 +1,49 @@
+\documentclass[10pt]{article}
+\usepackage[paperwidth=32cm,paperheight=45cm,margin=1cm]{geometry}
+\usepackage{fontspec,xeCJK}
+\setmainfont{lmroman10-regular.otf}[BoldFont=lmroman10-bold.otf,ItalicFont=lmroman10-italic.otf,BoldItalicFont=lmroman10-bolditalic.otf]
+\setCJKmainfont{SimSun}
+\usepackage{booktabs,array,threeparttable,graphicx,caption,longtable,amsmath,amssymb,hyperref,xcolor}
+\usepackage[active,tightpage]{preview}
+\PreviewEnvironment{minipage}
+\setlength\PreviewBorder{6pt}
+\newcommand{\sym}[1]{\textsuperscript{#1}}
+\captionsetup{font=normalsize,labelformat=empty,skip=6pt}
+\setlength{\parindent}{0pt}
+\begin{document}
+\begin{minipage}{19cm}\fontsize{10}{12}\selectfont\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.12}
+
+
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\centering
+\captionof{table}{Pool IV: Doctorate Degree+}
+\begin{threeparttable}
+\begin{tabular}{p{0.30\textwidth}cccc}
+\toprule
+Instrument & First-stage F & Any failure & Restatement & Violation \\
+\midrule
+\multicolumn{5}{l}{\textbf{All matches: Successor year}} \\
+Pool rate & F=3.48 & \shortstack{0.195\\(0.358)} & \shortstack{0.337\\(0.262)} & \shortstack{0.002\\(0.264)} \\
+Mean caseload & F=0.36 & \shortstack{1.641\\(2.532)} & \shortstack{0.554\\(1.126)} & \shortstack{1.000\\(2.298)} \\
+Caseload at most 1 share & F=0.13 & \shortstack{-2.068\\(6.285)} & \shortstack{-0.605\\(3.361)} & \shortstack{-0.890\\(2.176)} \\
+\multicolumn{5}{l}{\textbf{All matches: Successor tenure}} \\
+Pool rate & F=3.48 & \shortstack{0.466\\(0.504)} & \shortstack{0.280\\(0.292)} & \shortstack{0.268\\(0.329)} \\
+Mean caseload & F=0.36 & \shortstack{1.765\\(3.223)} & \shortstack{0.634\\(1.887)} & \shortstack{-0.373\\(1.713)} \\
+Caseload at most 1 share & F=0.13 & \shortstack{-0.085\\(3.289)} & \shortstack{-0.082\\(3.286)} & \shortstack{2.738\\(9.413)} \\
+\multicolumn{5}{l}{\textbf{Predecessor A1 exactly five years: Successor year}} \\
+Pool rate & F=0.17 & \shortstack{10.226\\(26.014)} & \shortstack{11.707\\(28.850)} & \shortstack{1.335\\(8.363)} \\
+Mean caseload & F=1.75 & \shortstack{-0.644\\(1.301)} & \shortstack{-0.864\\(1.423)} & \shortstack{-0.094\\(1.146)} \\
+Caseload at most 1 share & F=1.53 & \shortstack{-1.343\\(1.854)} & \shortstack{-0.595\\(1.120)} & \shortstack{-0.560\\(1.058)} \\
+\multicolumn{5}{l}{\textbf{Predecessor A1 exactly five years: Successor tenure}} \\
+Pool rate & F=0.17 & \shortstack{3.881\\(18.408)} & \shortstack{10.438\\(27.096)} & \shortstack{-4.030\\(15.425)} \\
+Mean caseload & F=1.75 & \shortstack{-0.736\\(1.564)} & \shortstack{-0.715\\(1.242)} & \shortstack{-0.630\\(1.405)} \\
+Caseload at most 1 share & F=1.53 & \shortstack{-0.830\\(1.716)} & \shortstack{-0.663\\(1.204)} & \shortstack{-0.300\\(1.156)} \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}\fontsize{9}{11}\selectfont
+\item \raggedright \fontsize{9}{11}\selectfont \textit{Notes:} Destination audit-firm and assignment-year fixed effects; financial controls included. Standard errors clustered by destination audit firm. All matches retain observed years; five-year predecessor sample starts in 2004. Each outcome cell reports the 2SLS coefficient and its clustered standard error.
+\end{tablenotes}
+\end{threeparttable}
+
+\end{minipage}
+\end{document}

@@ -1,0 +1,28 @@
+\documentclass[10pt]{article}
+\usepackage[paperwidth=32cm,paperheight=45cm,margin=1cm]{geometry}
+\usepackage{fontspec,xeCJK}
+\setmainfont{lmroman10-regular.otf}[BoldFont=lmroman10-bold.otf,ItalicFont=lmroman10-italic.otf,BoldItalicFont=lmroman10-bolditalic.otf]
+\setCJKmainfont{SimSun}
+\usepackage{booktabs,array,threeparttable,graphicx,caption,longtable,amsmath,amssymb,hyperref,xcolor}
+\usepackage[active,tightpage]{preview}
+\PreviewEnvironment{minipage}
+\setlength\PreviewBorder{6pt}
+\newcommand{\sym}[1]{\textsuperscript{#1}}
+\captionsetup{font=normalsize,labelformat=empty,skip=6pt}
+\setlength{\parindent}{0pt}
+\begin{document}
+\begin{minipage}{19cm}\fontsize{10}{12}\selectfont\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.12}
+
+\centering
+\begin{tabular}{>{\raggedright\arraybackslash}p{2.70cm}>{\raggedright\arraybackslash}p{2.70cm}>{\raggedright\arraybackslash}p{2.70cm}>{\raggedright\arraybackslash}p{2.70cm}>{\raggedright\arraybackslash}p{2.70cm}>{\raggedright\arraybackslash}p{2.70cm}}
+\toprule
+Sample & Outcome & Treated firms: <2010 & Treated firms: >=2010 & Joint-test p: <2010 & Joint-test p: >=2010 \\
+\midrule
+Full sample & Domestic Big 4 & 61 & 100 & 0.1824 & 0.4849 \\
+Full sample & Domestic Local 8 & 61 & 100 & 0.3544 & 0.4357 \\
+Excluding finance and real estate & Domestic Big 4 & 50 & 74 & 0.1774 & 0.1636 \\
+Excluding finance and real estate & Domestic Local 8 & 50 & 74 & 0.1818 & 0.6584 \\
+\bottomrule\end{tabular}
+
+\end{minipage}
+\end{document}

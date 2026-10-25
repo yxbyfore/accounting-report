@@ -1,0 +1,33 @@
+\documentclass[10pt]{article}
+\usepackage[paperwidth=21cm,paperheight=45cm,margin=1cm]{geometry}
+\usepackage{fontspec,booktabs,array,amsmath,graphicx}
+\setmainfont{lmroman10-regular.otf}[BoldFont=lmroman10-bold.otf,ItalicFont=lmroman10-italic.otf,BoldItalicFont=lmroman10-bolditalic.otf]
+\pagestyle{empty}\setlength{\parindent}{0pt}
+\newcommand{\sym}[1]{\textsuperscript{#1}}
+\begin{document}\fontsize{10}{12}\selectfont
+\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.15}
+\begin{center}\large Audit Opinions and Next-Year Big 4 Client Transitions\end{center}
+\medskip\textbf{Panel A: Current Big 4 clients (next-year exit)}\par\smallskip
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lcccc@{}}
+\toprule
+ & MAO & GC & \shortstack{Violation\\announcement} & Unwarned any failure \\
+ & (1) & (2) & (3) & (4) \\
+\midrule
+Reported effect & \shortstack{0.303994\sym{***}\\(0.073482)} & \shortstack{0.206190\sym{**}\\(0.101383)} & \shortstack{0.029190\\(0.066330)} & \shortstack{0.051188\\(0.051175)} \\
+$p$ & $<0.001$ & 0.042 & 0.660 & 0.318 \\
+95\% CI & [0.159633, 0.448355] & [0.007015, 0.405365] & [-0.101122, 0.159502] & [-0.049349, 0.151725] \\
+Observations & 3,877 & 3,877 & 3,877 & 3,877 \\
+\bottomrule\end{tabular*}\par
+\medskip\textbf{Panel B: Current non-Big-4 clients (next-year entry)}\par\smallskip
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lcccc@{}}
+\toprule
+ & MAO & GC & \shortstack{Violation\\announcement} & Unwarned any failure \\
+ & (1) & (2) & (3) & (4) \\
+\midrule
+Reported effect & \shortstack{-0.002486\sym{**}\\(0.001206)} & \shortstack{0.001187\\(0.001955)} & \shortstack{-0.002129\\(0.001461)} & \shortstack{0.000426\\(0.001273)} \\
+$p$ & 0.039 & 0.544 & 0.145 & 0.738 \\
+95\% CI & [-0.004850, -0.000122] & [-0.002647, 0.005020] & [-0.004993, 0.000735] & [-0.002069, 0.002921] \\
+Observations & 60,917 & 60,917 & 60,917 & 60,917 \\
+\bottomrule\end{tabular*}\par
+\medskip\fontsize{9}{11}\selectfont\textit{Notes:} SE clustered by firm. Nine audit-failure controls and mis\_dummy. * $p<0.10$, ** $p<0.05$, *** $p<0.01$.
+\end{document}

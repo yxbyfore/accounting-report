@@ -1,0 +1,30 @@
+{
+  "events": 71584,
+  "ledger_rows": 66754,
+  "confirmed": 3353,
+  "eps_changed": 1751,
+  "protected_columns": 29,
+  "exact_ledger_match": true,
+  "idempotent": true,
+  "unresolved_unchanged": true,
+  "analyst_tplus1_accuracy": "unchanged: recovery uses consolidated-profit/share EPS, not the basic EPS target in accuracy measures",
+  "stata_run": true,
+  "windows": [
+    {
+      "window": 60,
+      "events": 71584,
+      "old_available": 17265,
+      "new_available": 17265,
+      "group_changed": 92
+    },
+    {
+      "window": 180,
+      "events": 71584,
+      "old_available": 32086,
+      "new_available": 32086,
+      "group_changed": 136
+    }
+  ],
+  "stata_tasks_completed": 36,
+  "stata_results_validated": true
+}

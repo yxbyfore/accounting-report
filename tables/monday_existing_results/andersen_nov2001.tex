@@ -1,0 +1,20 @@
+\documentclass[10pt]{article}
+\usepackage[paperwidth=21cm,paperheight=38cm,margin=1cm]{geometry}
+\usepackage{fontspec,booktabs,array}
+\setmainfont{lmroman10-regular.otf}[BoldFont=lmroman10-bold.otf,ItalicFont=lmroman10-italic.otf,BoldItalicFont=lmroman10-bolditalic.otf]
+\newcommand{\sym}[1]{\textsuperscript{#1}}
+\pagestyle{empty}
+\begin{document}\fontsize{10}{12}\selectfont\setlength{\parindent}{0pt}
+\noindent\textbf{Enron Restatement News: November 9, 12 and 13, 2001}\par\medskip
+\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.15}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lcccc@{}}
+\toprule
+Andersen definition & \shortstack{Andersen\\clients} & Total N & \shortstack{Andersen minus\\Other Non-Big4} & \shortstack{Andersen minus\\Big4} \\
+\midrule
+Domestic or overseas & 29 & 1085 & \shortstack{0.012418\sym{*}\\(0.007499)\\$p=0.0980$} & \shortstack{0.016459\sym{*}\\(0.009345)\\$p=0.0785$} \\ \addlinespace
+Domestic field & 22 & 1078 & \shortstack{0.013402\sym{**}\\(0.006472)\\$p=0.0386$} & \shortstack{0.017488\sym{**}\\(0.008574)\\$p=0.0416$} \\ \addlinespace
+Overseas field & 19 & 1075 & \shortstack{0.008615\sym{}\\(0.009499)\\$p=0.3647$} & \shortstack{0.012834\sym{}\\(0.011042)\\$p=0.2454$} \\ \addlinespace
+\bottomrule
+\end{tabular*}
+\par\medskip\fontsize{9}{11}\selectfont\textit{Notes:} HC1 robust SE. Nine audit-failure controls and mis\_dummy. * $p<0.10$, ** $p<0.05$, *** $p<0.01$.
+\end{document}

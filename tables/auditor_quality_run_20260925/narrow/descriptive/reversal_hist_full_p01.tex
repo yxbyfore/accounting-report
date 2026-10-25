@@ -1,0 +1,44 @@
+\documentclass[10pt]{article}
+\usepackage[paperwidth=32cm,paperheight=45cm,margin=1cm]{geometry}
+\usepackage{fontspec,xeCJK}
+\setmainfont{lmroman10-regular.otf}[BoldFont=lmroman10-bold.otf,ItalicFont=lmroman10-italic.otf,BoldItalicFont=lmroman10-bolditalic.otf]
+\setCJKmainfont{SimSun}
+\usepackage{booktabs,array,threeparttable,graphicx,caption,longtable,amsmath,amssymb,hyperref,xcolor}
+\usepackage[active,tightpage]{preview}
+\PreviewEnvironment{minipage}
+\setlength\PreviewBorder{6pt}
+\newcommand{\sym}[1]{\textsuperscript{#1}}
+\captionsetup{font=normalsize,labelformat=empty,skip=6pt}
+\setlength{\parindent}{0pt}
+\begin{document}
+\begin{minipage}{19cm}\fontsize{10}{12}\selectfont\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.12}
+
+
+\centering
+\captionof{table}{Reversal duration: historical performance (part 1 of 2)}
+\begin{threeparttable}
+\begin{tabular}{p{0.36\textwidth}ccc}
+\toprule
+Quality measure & Transition & Firms changing & Firms reversing \\
+\midrule
+hist\_any\_clean & Upgrade (0->1) & 1,916 & 973 \\
+hist\_any\_clean & Downgrade (1->0) & 2,607 & 1,105 \\
+hist\_any\_bad & Upgrade (0->1) & 2,607 & 1,105 \\
+hist\_any\_bad & Downgrade (1->0) & 1,916 & 973 \\
+hist\_rest\_clean & Upgrade (0->1) & 1,396 & 508 \\
+hist\_rest\_clean & Downgrade (1->0) & 2,083 & 864 \\
+hist\_rest\_bad & Upgrade (0->1) & 2,083 & 864 \\
+hist\_rest\_bad & Downgrade (1->0) & 1,396 & 508 \\
+hist\_viol\_clean & Upgrade (0->1) & 1,833 & 830 \\
+hist\_viol\_clean & Downgrade (1->0) & 2,367 & 1,090 \\
+hist\_viol\_bad & Upgrade (0->1) & 2,367 & 1,090 \\
+hist\_viol\_bad & Downgrade (1->0) & 1,833 & 830 \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}\fontsize{9}{11}\selectfont
+\item \raggedright \fontsize{9}{11}\selectfont \textit{Notes:} Right-censored firms without an observed reversal remain in the denominator.
+\end{tablenotes}
+\end{threeparttable}
+
+\end{minipage}
+\end{document}

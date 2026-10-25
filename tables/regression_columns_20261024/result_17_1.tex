@@ -1,0 +1,31 @@
+\documentclass[10pt]{article}
+\usepackage[paperwidth=34cm,paperheight=48cm,margin=0.8cm]{geometry}
+\usepackage{booktabs,array,amsmath}
+\newcommand{\sym}[1]{\textsuperscript{#1}}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\begin{document}
+\begin{minipage}{28.80cm}
+\fontsize{10}{12}\selectfont
+\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.08}
+{\large\bfseries Forecast Revisions: Full Sample, Ranks (1/2)}\par\medskip
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}lcccccccc@{}}
+\toprule
+ & (1) & (2) & (3) & (4) & (5) & (6) & (7) & (8) \\
+Dependent variable & Revision & Revision & Revision & Revision & Abs. revision & Abs. revision & Abs. revision & Abs. revision \\
+Specification & No controls & Common, no X & 3 controls & 4 controls & No controls & Common, no X & 3 controls & 4 controls \\
+\midrule
+Big4 & 0.022705\sym{***} & 0.015243\sym{**} & 0.017334\sym{**} & 0.014196\sym{*} & -0.005414 & 0.014529 & 0.002134 & 0.001709 \\
+ & (0.006451) & (0.007328) & (0.007410) & (0.007624) & (0.011156) & (0.012450) & (0.011916) & (0.012148) \\
+$p$ & 0.0004 & 0.0376 & 0.0194 & 0.0627 & 0.6275 & 0.2433 & 0.8579 & 0.8881 \\
+\midrule
+Observations & 22,427 & 13,719 & 13,719 & 13,719 & 22,427 & 13,719 & 13,719 & 13,719 \\
+Firm clusters & 3,702 & 3,216 & 3,216 & 3,216 & 3,702 & 3,216 & 3,216 & 3,216 \\
+Firm / year FE & No & No & No & No & No & No & No & No \\
+Market capitalization control & No & No & No & Yes & No & No & No & Yes \\
+R-squared & 0.0007 & 0.0003 & 0.0025 & 0.0028 & 0.0000 & 0.0003 & 0.0399 & 0.0399 \\
+\bottomrule\end{tabular*}\par\medskip
+\fontsize{9}{11}\selectfont\textit{Notes:} Each column is a separate outcome/specification regression. Sample: full market. Scale: rank. Three controls are absolute earnings surprise, market-to-book, and paired forecast count; four controls add log market capitalization. Common, no X uses the complete-control sample without controls. Original samples, rank definitions and firm clustering are retained.
+\par Standard errors are in parentheses. * $p<0.10$, ** $p<0.05$, *** $p<0.01$.
+\end{minipage}
+\end{document}
