@@ -259,7 +259,7 @@ window.Quarto = {
 </header>
 <section class="level2" id="sec-memo-current-revisions">
 <h2 class="anchored" data-anchor-id="sec-memo-current-revisions">本轮工作总览与主要修改</h2>
-<p>本轮围绕“四大客户的财报质量、市场认可及价格溢价分别来自审计服务、认证还是客户选择”整合已有证据。数据上完成了<a href="./23_big4_effect.html#sec-restatement-20261026">公告时点实际EPS回补</a>：对已核实的3,353个公司年应用首次年报公告时市场看到的数值，其中1,751个EPS改变、180天消息分组改变136个，相关市场分析已重跑。<strong>即使首次披露的数字后来被认定有误，也使用当时尚未更正的版本计算surprise。</strong> 市场端补齐了2012前后分组、共同模型和滚动图，完成未调整价格与含分红收益的口径核查、同样本控制变量对照、四组平均CAR及非平衡样本绘图；<a href="./23_big4_effect.html#sec-market-full-no-controls">当前正文采用无额外控制的事件研究</a>，ERC保留原有控制规格，另已完成−60至+60日的36套回归与24张图。分析师主报告已采用<a href="./23_big4_effect.html#sec-analyst-number-audit">公告前后各180天的同券商配对</a>，并重做人数项与窗口比较。供应链与分所扩张完成<a href="./23_big4_effect.html#network-branch-iv-aligned">统一控制与行业×年份效应下的28套规格、84个二阶段系数</a>。<a href="./26_akm.html#sec-client-auditfirm-sorting">客户—事务所AKM</a>统一了样本、事务所身份及失败指标口径，完成组内／组间分解、四大差距、逐观测KSS、未来配置诊断和Stata—Python核对；<a href="./26_akm.html#sec-dynamic-risk-gfe">动态风险GFE与静态二元混合</a>已执行，并完成客户重抽样和六类模拟。客户长期发展新增市销率、市盈率估计，按各指标自身有效样本，估值倍数未呈现普遍上升。分组质量趋势、重述幅度与消息换组、说明会案例及时间分布均已整理为图表和对应材料。</p>
+<p>本轮围绕“四大客户的财报质量、市场认可及价格溢价分别来自审计服务、认证还是客户选择”整合已有证据。数据上完成了<a href="./23_big4_effect.html#sec-restatement-20261026">公告时点实际EPS回补</a>：对已核实的3,353个公司年应用首次年报公告时市场看到的数值，其中1,751个EPS改变、180天消息分组改变136个，相关市场分析已重跑。<strong>即使首次披露的数字后来被认定有误，也使用当时尚未更正的版本计算surprise。</strong> 市场端补齐了2012前后分组、共同模型和滚动图，完成未调整价格与含分红收益的口径核查、同样本控制变量对照、四组平均CAR及非平衡样本绘图；<a href="./23_big4_effect.html#sec-market-full-no-controls">当前正文采用无额外控制的事件研究</a>，ERC保留原有控制规格，另已完成−60至+60日的36套回归与24张图。分析师主报告已采用<a href="./23_big4_effect.html#sec-analyst-number-audit">公告前后各180天的同券商配对</a>，并重做人数项与窗口比较。供应链与分所扩张完成<a href="./23_big4_effect.html#network-branch-iv-aligned">统一控制与行业×年份效应下的28套规格、84个二阶段系数</a>。<a href="./26_akm.html#sec-client-auditfirm-sorting">客户—事务所AKM</a>统一了样本、事务所身份及失败指标口径，完成组内／组间分解、四大差距、逐观测KSS、未来配置诊断和Stata—Python核对。BLM拓展仍在进行中，目前尚未估计出可靠结果。客户长期发展新增市销率、市盈率估计，按各指标自身有效样本，估值倍数未呈现普遍上升。分组质量趋势、重述幅度与消息换组、说明会案例及时间分布均已整理为图表和对应材料。</p>
 </section>
 <section class="level2" id="sec-meeting-20261026">
 <h2 class="anchored" data-anchor-id="sec-meeting-20261026">2026-10-26 会议提纲：会议任务</h2>
@@ -614,7 +614,7 @@ Y_{it}&amp;=X_{it}'\beta+\alpha_i+\psi_{f(i,t)}+\lambda_t+\varepsilon_{it},\\
 \operatorname{Cov}\!\left(\varepsilon_{i,t-1},\mathbf1\{f(i,t)=j\}\mid
 \alpha_i,\boldsymbol\psi,\boldsymbol\lambda,\mathcal X_i\right)\ne0,
 \tag{2}\]</span></span></p>
-<p>上述配置与剩余风险冲击的关系已纳入本轮核查。围绕 <span class="citation" data-cites="blm2019">Bonhomme 等 (<a href="#ref-blm2019" role="doc-biblioref">2019年</a>)</span> 的类型与配对框架和 <span class="citation" data-cites="ams2019">Abowd 等 (<a href="#ref-ams2019" role="doc-biblioref">2019年</a>)</span> 的剩余结果—流动思路，本轮已完成<a href="./25_matching.html#sec-blm-client-firm-results">收费CDF分类与配对结果</a>、<a href="./26_akm.html#sec-akm-future-assignment">剩余结果—未来配置诊断</a>和<a href="./26_akm.html#sec-akm-dynamic-support">动态序列支持检查</a>，并实际运行<a href="./26_akm.html#sec-dynamic-risk-gfe">本项目的动态风险GFE与独立静态二元混合</a>；年度风险集与有日期的换所样本分别报告。</p>
+<p>上述配置与剩余风险冲击的关系已纳入本轮核查。围绕 <span class="citation" data-cites="ams2019">Abowd 等 (<a href="#ref-ams2019" role="doc-biblioref">2019年</a>)</span> 的剩余结果—流动思路，本轮已完成<a href="./26_akm.html#sec-akm-future-assignment">剩余结果—未来配置诊断</a>和<a href="./26_akm.html#sec-akm-dynamic-support">动态序列支持检查</a>。</p>
 <p><strong>我又做了一些分析，我发现，组间配置与组内配置的方向不同。</strong> 按四大、本土八大与Other分解同一次全样本拟合，三套样本的失败指标均为正组间、负组内，且组内负项更大。因此，四大客户具有较低的持久失败成分，与总体客户—事务所插件相关为负可以同时成立。综合失败总体相关在不筛选、33、55样本中分别为−0.0322、−0.0445、−0.0574；这是新增探索性分析，Abs DA的组间方向不同，单独解释。<a href="./26_akm.html#sec-akm-exploratory-sorting">完整分解与分梯队估计</a>。</p>
 <div class="quarto-float quarto-figure quarto-figure-center anchored" id="fig-memo-akm-within-between">
 <figure class="quarto-float quarto-float-fig figure">
@@ -650,10 +650,8 @@ Y_{it}&amp;=X_{it}'\beta+\alpha_i+\psi_{f(i,t)}+\lambda_t+\varepsilon_{it},\\
 </div>
 <p><strong>基准、网络与未来配置诊断已完成跨语言核对。</strong> 48个基准／分梯队模型与24个未来配置模型已经Stata—Python逐行核对，网络、关键客户删除和50次重复抽样结果见<a href="./26_akm.html#sec-akm-network-sensitivity">26号报告</a>。综合失败两年期不筛选样本的未来配置联合检验，六项Holm校正后<span class="math inline">\(p=0.047\)</span>，扩至全部24项后为0.182，且未在33和55中重复出现。9,218次年度换所中已匹配5,800次变更日期候选，日期覆盖结果已整理。</p>
 <!-- dynamic-risk-memo:start -->
-<p><strong>新执行结果。</strong> 我又推进了历史分组加连续风险的动态状态模型，以及独立的两类型Bernoulli混合基准。<a href="./26_akm.html#sec-dynamic-risk-gfe">完整模型、主要图和执行诊断</a>已接入26号报告。不筛选、33、55的年度主样本分别为24,428、23,516、22,212个客户年；三套样本各进行500次客户整段重抽样。该分支报告年度配置的条件关联。</p>
-<p>时间外选择没有支持增加客户组数，主规格选中一组；2—4组的分类构成和交互结果保留为探索，并列出部分四大单元的零事件。本轮据此报告主规格的风险状态结果，并单列多组探索。<a href="./26_akm.html#sec-dynamic-risk-standardization">同风险比较</a>中，不筛选样本四大与Other的标准化联合失败概率分别为0.99%和5.13%，只针对共同支持参考人群；服务解释还要求状态充分与当前创新条件。</p>
-<p><a href="./26_akm.html#sec-static-binary-mixture">静态二元混合</a>能够改善两期结果分布拟合，但存在边界路径权重／结果概率。已交付路径权重、软后验、留任者构成和500次稳定性重抽样；局部Jacobian满秩不能把边界解升级为稳健类型识别。<a href="./26_akm.html#sec-dynamic-risk-simulations">六类模拟</a>专门区分纯构成、条件结果差异及私人选择，帮助限定结果能回答的问题。这两条新路线都没有自动消除未观察私人信息导致的内生性。 <!-- dynamic-risk-memo:end --></p>
-<p><a href="./26_akm.html#sec-client-auditfirm-sorting">26号：当前客户—事务所完整结果</a> · <a href="./25_matching.html#sec-blm-client-firm-results">BLM已有分类与配对结果</a> · <a href="./26_akm.html#sec-akm-future-assignment">AMS思路的本项目诊断</a> · <a href="./23_big4_effect.html#客户选择与审计意见四大如何形成较低风险的客户组合">主报告已有选择证据</a></p>
+<p><strong>BLM进展。</strong> AKM的BLM拓展（<span class="citation" data-cites="blm2019">Bonhomme 等 (<a href="#ref-blm2019" role="doc-biblioref">2019年</a>)</span>）仍在进行中，目前尚未估计出可靠结果。 <!-- dynamic-risk-memo:end --></p>
+<p><a href="./26_akm.html#sec-client-auditfirm-sorting">26号：当前客户—事务所完整结果</a> · <a href="./26_akm.html#sec-akm-future-assignment">AMS思路的本项目诊断</a> · <a href="./23_big4_effect.html#客户选择与审计意见四大如何形成较低风险的客户组合">主报告已有选择证据</a></p>
 </section>
 <section class="level3" id="分析师指标与人数">
 <h3 class="anchored" data-anchor-id="分析师指标与人数">9. 分析师指标与人数</h3>
