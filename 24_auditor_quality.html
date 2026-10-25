@@ -294,7 +294,7 @@ window.Quarto = {
 事务所平台效应与个人四大从业背景的分离估计 · <a href="tables/auditor_quality_run_20260925/supplemental/big4_level.tex">TeX</a> · <a href="tables/auditor_quality_run_20260925/supplemental/big4_level_full_p01.pdf">PDF</a>
 </figcaption>
 </figure>
-<p><a href="#settings-05_auditor_quality">全部结果变量与设定</a> · <a href="#full-05_auditor_quality-2">第一部分：个人特征 Dummy 回归</a> · <a href="#full-05_auditor_quality-3">第二部分：Rotation DID</a> · <a href="#full-05_auditor_quality-4">第三部分：Caseload IV</a></p>
+<p><a href="#settings-05_auditor_quality">全部结果变量与设定</a> <a href="#full-05_auditor_quality-2">第一部分：个人特征 Dummy 回归</a> <a href="#full-05_auditor_quality-3">第二部分：Rotation DID</a> <a href="#full-05_auditor_quality-4">第三部分：Caseload IV</a></p>
 <p><span id="full-05_auditor_quality-1"></span></p>
 <p><span id="settings-05_auditor_quality"></span></p>
 <p><strong>变量定义与样本处理。</strong> 财务控制组包括公司规模（<code>size</code>）、杠杆（<code>lev</code>）、亏损（<code>loss</code>）、<code>roa</code>、<code>zscore</code>、杠杆变动（<code>chg_lev</code>）、报告时滞（<code>report_lag</code>）、经营现金流（<code>cfo</code>）、公司年龄（<code>age</code>）及其缺失指示 dummy。各设定按相应章节要求控制客户公司 FE、事务所 FE 及年份 FE。</p>
@@ -1221,7 +1221,7 @@ Y_{it}={}&amp;\sum_{r\in\{0,M,V\}}\left(\beta_{Br}B_{it}S_{it}^{r}+\beta_{Ar}A_{
 </section>
 <section class="level2" id="数据与估计程序记录">
 <h2 class="anchored" data-anchor-id="数据与估计程序记录">数据与估计程序记录</h2>
-<p><strong>估计程序与脚本（存档）：</strong> - 轮换 DID：<a href="maintenance/source_code/code/stata/30_partner_humancapital/33_absorbing_transition_staggered_did.do">33_absorbing_transition_staggered_did.do</a> · <a href="maintenance/source_code/code/stata/30_partner_humancapital/34_absorbing_transition_window2y_did.do">34_absorbing_transition_window2y_did.do</a> · <a href="maintenance/source_code/code/stata/30_partner_humancapital/32_transition_reversal_duration_stats.do">32_transition_reversal_duration_stats.do</a> - 匹配 OLS 与候选供给 IV：<a href="maintenance/source_code/code/stata/30_partner_humancapital/36_matching_humancapital_ols.do">36_matching_humancapital_ols.do</a> · <a href="maintenance/source_code/code/stata/30_partner_humancapital/37_caseload_matching_iv_pool.do">37_caseload_matching_iv_pool.do</a> · <a href="maintenance/source_code/code/stata/30_partner_humancapital/38_caseload_matching_iv_akm.do">38_caseload_matching_iv_akm.do</a> - 背景验证与执业历史：<a href="maintenance/source_code/code/stata/30_partner_humancapital/40_background_validation.do">40_background_validation.do</a> · <a href="maintenance/source_code/code/stata/30_partner_humancapital/41_clean_history_prediction.do">41_clean_history_prediction.do</a> · <a href="maintenance/source_code/code/stata/30_partner_humancapital/39_rotation_big4_spillover_did.do">39_rotation_big4_spillover_did.do</a> · <a href="maintenance/source_code/code/stata/30_partner_humancapital/lib/quality_validation_helpers.do">quality_validation_helpers.do</a></p>
+<p><strong>估计程序与脚本（存档）：</strong> - 轮换 DID：   - 匹配 OLS 与候选供给 IV：   - 背景验证与执业历史：   </p>
 <p>本章展示的表格由相应 Python 转换脚本直接读取最新导出的回归结果构建，核心结果表的 TeX 编译入口为 <code>tables/core_result/core_results_exhibits.tex</code>。</p>
 <p><strong>财务控制敏感性核对。</strong> 使用 <code>results/tables/partner_humancapital/caseload_matching_iv_pool/</code> 下有／无财务控制的两个 TXT 输出；按 Excluded IV、Trait、Sample、Outcome 配对。完整配对记录见 <code>maintenance/memo_controls_comparison.json</code>，复核脚本为 <code>maintenance/prepare_meeting_memo.py</code>。</p>
 </section>

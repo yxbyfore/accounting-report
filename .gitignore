@@ -1,0 +1,24 @@
+
+# Research sources stay local/private.
+sources/
+**/source_code/
+**/code/
+**/source/
+*.[aA][dD][oO]
+*.[bB][aA][tT]
+*.[cC][mM][dD]
+*.[dD][oO]
+*.[iI][pP][yY][nN][bB]
+*.[jJ][lL]
+*.[lL][oO][gG]
+*.[mM]
+*.[mM][aA][tT][aA]
+*.[pP][sS]1
+*.[pP][yY]
+*.[pP][yY][cC]
+*.[pP][yY][oO]
+*.[qQ][mM][dD]
+*.[rR]
+*.[rR][mM][dD]
+*.[sS][aA][sS]
+*.[sS][hH]
