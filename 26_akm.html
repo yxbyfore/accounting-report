@@ -299,7 +299,7 @@ window.Quarto = {
 <p><strong>AKM允许永久客户类型与事务所类型相关；当前新增探索发现，失败指标呈现正组间、负组内，KSS校正后总体点估计仍为负。</strong> 本节集中展示原始事务所ID、统一结果与控制口径下的客户—事务所分析。A1身份仅用于共同底样本及33／55资格门槛，不作为本模型的第三个固定效应。后文原有个人审计师及三方分析保留其各自规格。<a href="./31_biweekly_memo.html#sec-memo-akm-sorting">返回memo的研究问题</a>。</p>
 <section class="level3" id="sec-akm-exogeneity">
 <h3 class="anchored" data-anchor-id="sec-akm-exogeneity">AKM允许哪些相关，限制哪些相关？</h3>
-<p><span class="citation" data-cites="akm1999">Abowd 等 (<a href="#ref-akm1999" role="doc-biblioref">1999年</a>)</span> 的加性框架允许两端永久效应相关。本研究估计</p>
+<p><span class="citation" data-cites="akm1999">Abowd 等 (<a href="#ref-akm1999" role="doc-biblioref">1999</a>)</span> 的加性框架允许两端永久效应相关。本研究估计</p>
 <p><span id="eq-client-auditfirm-akm"><span class="math display">\[
 Y_{it}=X_{it}'\beta+\alpha_i+\psi_{f(i,t)}+\lambda_t+\varepsilon_{it},
 \qquad \text{允许 }\operatorname{Cov}(\alpha_i,\psi_{f(i,t)})\ne0.
@@ -316,7 +316,7 @@ Y_{it}=X_{it}'\beta+\alpha_i+\psi_{f(i,t)}+\lambda_t+\varepsilon_{it},
 \alpha_i,\boldsymbol\psi,\boldsymbol\lambda,\mathcal X_i\right)=0,
 \qquad \forall t,s,j.
 \tag{3}\]</span></span></p>
-<p>因此，长期低风险客户更常选择四大可以与AKM相容；模型限制的是<strong>未被吸收的结果冲击与配置路径的关系</strong>。基准回归可以允许同一客户不同年份的误差相关，并按客户聚类；即<span class="math inline">\(\operatorname{Cov}(\varepsilon_{it},\varepsilon_{is})\)</span>可以非零，但这些冲击仍须满足上式的配置正交条件。当前逐观测KSS另有公司年误差独立的要求，见<a href="#sec-akm-kss">噪声校正</a>。外生流动与残差诊断的关系参见 <span class="citation" data-cites="ams2019">Abowd 等 (<a href="#ref-ams2019" role="doc-biblioref">2019年</a>)</span>。</p>
+<p>因此，长期低风险客户更常选择四大可以与AKM相容；模型限制的是<strong>未被吸收的结果冲击与配置路径的关系</strong>。基准回归可以允许同一客户不同年份的误差相关，并按客户聚类；即<span class="math inline">\(\operatorname{Cov}(\varepsilon_{it},\varepsilon_{is})\)</span>可以非零，但这些冲击仍须满足上式的配置正交条件。当前逐观测KSS另有公司年误差独立的要求，见<a href="#sec-akm-kss">噪声校正</a>。外生流动与残差诊断的关系参见 <span class="citation" data-cites="ams2019">Abowd 等 (<a href="#ref-ams2019" role="doc-biblioref">2019</a>)</span>。</p>
 <p><strong>本项目的具体问题是上一期风险与下一期选所相关。</strong> <a href="./23_big4_effect.html#客户选择与审计意见四大如何形成较低风险的客户组合">已有客户选择、意见与退出分析</a>表明，风险和审计意见与后续客户进出存在关联。需要区分风险中已由<span class="math inline">\(X\)</span>及永久效应吸收的部分与剩余冲击：如果上一期未吸收的风险冲击参与下一期改聘决策，可能出现</p>
 <p><span id="eq-akm-lagged-risk-selection"><span class="math display">\[
 \operatorname{Cov}\!\left(\varepsilon_{i,t-1},\mathbf1\{f(i,t)=j\}\mid
@@ -717,7 +717,7 @@ Y_{it}=X_{it}'\beta+\alpha_i+\psi_{f(i,t)}+\lambda_t+\varepsilon_{it},
 </section>
 <section class="level3" id="sec-akm-kss">
 <h3 class="anchored" data-anchor-id="sec-akm-kss">KSS：量级减弱，点估计方向保持为负</h3>
-<p><span class="citation" data-cites="kss2020">Kline 等 (<a href="#ref-kss2020" role="doc-biblioref">2020年</a>)</span> 的leave-out方法针对固定效应二次型的估计偏误。本轮同时校正客户方差、事务所方差与协方差；综合失败相关在不筛选、33、55样本中分别由−0.0322、−0.0445、−0.0574变为−0.0020、−0.0177、−0.0315。<strong>校正明显减弱负相关的绝对量级，三套样本的点估计符号均保持为负。</strong> 不筛选样本已接近0；因尚无完整客户聚类稳健置信区间，符号一致不等于统计上确认了负sorting。<a href="tables/client_auditfirm_sorting/kss_observation_leaveout.csv">三个二次型的完整结果</a>。</p>
+<p><span class="citation" data-cites="kss2020">Kline 等 (<a href="#ref-kss2020" role="doc-biblioref">2020</a>)</span> 的leave-out方法针对固定效应二次型的估计偏误。本轮同时校正客户方差、事务所方差与协方差；综合失败相关在不筛选、33、55样本中分别由−0.0322、−0.0445、−0.0574变为−0.0020、−0.0177、−0.0315。<strong>校正明显减弱负相关的绝对量级，三套样本的点估计符号均保持为负。</strong> 不筛选样本已接近0；因尚无完整客户聚类稳健置信区间，符号一致不等于统计上确认了负sorting。<a href="tables/client_auditfirm_sorting/kss_observation_leaveout.csv">三个二次型的完整结果</a>。</p>
 <div class="quarto-float quarto-figure quarto-figure-center anchored" id="fig-akm-kss">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-akm-kss-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -732,8 +732,8 @@ Y_{it}=X_{it}'\beta+\alpha_i+\psi_{f(i,t)}+\lambda_t+\varepsilon_{it},
 </section>
 <section class="level3" id="sec-akm-endogenous-mobility">
 <h3 class="anchored" data-anchor-id="sec-akm-endogenous-mobility">上一期风险与下一期选所：两条拓展方向</h3>
-<p><strong>BLM方向：在类型模型中允许非加性及规定形式的动态选择。</strong> <span class="citation" data-cites="blm2019">Bonhomme 等 (<a href="#ref-blm2019" role="doc-biblioref">2019年</a>)</span> 的静态与动态框架区分加性限制和流动限制；动态版本在类型条件下采用Markov结构，使当前结果可以影响后续移动与目的地。<a class="footnote-ref" href="#fn1" id="fnref1" role="doc-noteref"><sup>1</sup></a> 前期<a href="./25_matching.html#sec-blm-client-firm-results">收费CDF分类及配对结果</a>属于描述性分类与类型交互探索，主体按收费分布聚类，再按样本内失败率定向。本轮已另行估计<a href="#sec-dynamic-risk-gfe">动态风险GFE和独立两类型Bernoulli混合</a>，区分可见状态配置与静态潜在类型基准；并未将任一分支称为原文完整动态转移结构。<a href="#sec-akm-dynamic-support">前期序列支持诊断</a>继续保留作历史支持对照。</p>
-<p><strong>AMS方向：先检验剩余成分能否预测未来配置，再建立结果与流动的联合模型。</strong> <span class="citation" data-cites="ams2019">Abowd 等 (<a href="#ref-ams2019" role="doc-biblioref">2019年</a>)</span> 从AKM残差构造外生流动诊断，并使用客户、机构与匹配的潜在类型描述结果和流动。本项目先采用这一思路，将未来换所和未来四大身份同时加入当前结果方程，在同一诊断样本中重新吸收全部基准FE和controls，按客户聚类。该检验的配置变量为观察到的梯队，不用同一结果估计的事务所FE进行目的地排序；它是本项目适配的诊断，尚未拟合AMS的Bayesian类型模型。</p>
+<p><strong>BLM方向：在类型模型中允许非加性及规定形式的动态选择。</strong> <span class="citation" data-cites="blm2019">Bonhomme 等 (<a href="#ref-blm2019" role="doc-biblioref">2019</a>)</span> 的静态与动态框架区分加性限制和流动限制；动态版本在类型条件下采用Markov结构，使当前结果可以影响后续移动与目的地。<a class="footnote-ref" href="#fn1" id="fnref1" role="doc-noteref"><sup>1</sup></a> 前期<a href="./25_matching.html#sec-blm-client-firm-results">收费CDF分类及配对结果</a>属于描述性分类与类型交互探索，主体按收费分布聚类，再按样本内失败率定向。本轮已另行估计<a href="#sec-dynamic-risk-gfe">动态风险GFE和独立两类型Bernoulli混合</a>，区分可见状态配置与静态潜在类型基准；并未将任一分支称为原文完整动态转移结构。<a href="#sec-akm-dynamic-support">前期序列支持诊断</a>继续保留作历史支持对照。</p>
+<p><strong>AMS方向：先检验剩余成分能否预测未来配置，再建立结果与流动的联合模型。</strong> <span class="citation" data-cites="ams2019">Abowd 等 (<a href="#ref-ams2019" role="doc-biblioref">2019</a>)</span> 从AKM残差构造外生流动诊断，并使用客户、机构与匹配的潜在类型描述结果和流动。本项目先采用这一思路，将未来换所和未来四大身份同时加入当前结果方程，在同一诊断样本中重新吸收全部基准FE和controls，按客户聚类。该检验的配置变量为观察到的梯队，不用同一结果估计的事务所FE进行目的地排序；它是本项目适配的诊断，尚未拟合AMS的Bayesian类型模型。</p>
 </section>
 <section class="level3" id="sec-akm-future-assignment">
 <h3 class="anchored" data-anchor-id="sec-akm-future-assignment">剩余结果—未来配置诊断</h3>
@@ -955,7 +955,7 @@ Y_{it}=\alpha_i+\psi_{f(i,t)}+\lambda_t+X_{it}'\beta
 </section>
 <section class="level2" id="sec-dynamic-risk-gfe">
 <h2 class="anchored" data-anchor-id="sec-dynamic-risk-gfe">风险驱动配置：动态风险GFE与静态二元混合的实际估计</h2>
-<p><strong>本轮已经运行动态风险分步模型、静态二类型二元混合、真实数据敏感性、模拟恢复与客户重抽样，并用Stata独立核对主方程。</strong> 两条路线分别报告。这里的动态风险GFE借鉴 <span class="citation" data-cites="gfe2022">Bonhomme 等 (<a href="#ref-gfe2022" role="doc-biblioref">2022年</a>)</span> 的历史分组思路，以可见状态描述当期配置；静态混合借鉴 <span class="citation" data-cites="blm2019">Bonhomme 等 (<a href="#ref-blm2019" role="doc-biblioref">2019年</a>)</span> 的类型及配对分布思路。二者均不等同于已完成原文的全部动态结构估计。</p>
+<p><strong>本轮已经运行动态风险分步模型、静态二类型二元混合、真实数据敏感性、模拟恢复与客户重抽样，并用Stata独立核对主方程。</strong> 两条路线分别报告。这里的动态风险GFE借鉴 <span class="citation" data-cites="gfe2022">Bonhomme 等 (<a href="#ref-gfe2022" role="doc-biblioref">2022</a>)</span> 的历史分组思路，以可见状态描述当期配置；静态混合借鉴 <span class="citation" data-cites="blm2019">Bonhomme 等 (<a href="#ref-blm2019" role="doc-biblioref">2019</a>)</span> 的类型及配对分布思路。二者均不等同于已完成原文的全部动态结构估计。</p>
 <section class="level3" id="sec-dynamic-risk-timing">
 <h3 class="anchored" data-anchor-id="sec-dynamic-risk-timing">时间、样本与结果的实际覆盖</h3>
 <p>保留原始客户与事务所身份，并严格沿用不筛选／33／55的A1累计报告数与不同年份资格。分类只用进入估计前的3年／5年连续财务历史；共同分类中心只用2012年前已公开的历史训练。正式结果覆盖2012—2021财年，2012—2017用于拟合选择，2018—2019用于组数验证，2020—2021保留作时间外测试。主结果是原有重述／违规定义与“签署后3年内合格披露”的交集，再乘以MAO=0；签署日起3年尚未观察完整的记录不进入估计。MAO=1保留为0。重复披露逐条核对，查找签署后的首次合格披露；不能用签署前的一次披露阻断后续事件。原始无限发现窗标签另估作对照。</p>
@@ -1827,19 +1827,19 @@ E[\widehat{\theta}\mid Z]=\theta.
 <h2 class="anchored" data-anchor-id="参考文献">参考文献</h2>
 <div class="references csl-bib-body hanging-indent" id="refs" role="list">
 <div class="csl-entry" id="ref-akm1999" role="listitem">
-Abowd, John M., Francis Kramarz, 和 David N. Margolis. 1999年. <span>《High Wage Workers and High Wage Firms》</span>. <em>Econometrica</em> 67 (2): 251～333. <a href="https://doi.org/10.1111/1468-0262.00020">https://doi.org/10.1111/1468-0262.00020</a>.
+Abowd, John M., Francis Kramarz, 和 David N. Margolis. 1999. <span>《High Wage Workers and High Wage Firms》</span>. <em>Econometrica</em> 67 (2): 251～333. <a href="https://doi.org/10.1111/1468-0262.00020">https://doi.org/10.1111/1468-0262.00020</a>.
 </div>
 <div class="csl-entry" id="ref-ams2019" role="listitem">
-Abowd, John M., Kevin L. McKinney, 和 Ian M. Schmutte. 2019年. <span>《Modeling Endogenous Mobility in Earnings Determination》</span>. <em>Journal of Business &amp; Economic Statistics</em> 37 (3): 405～18. <a href="https://doi.org/10.1080/07350015.2017.1356727">https://doi.org/10.1080/07350015.2017.1356727</a>.
+Abowd, John M., Kevin L. McKinney, 和 Ian M. Schmutte. 2019. <span>《Modeling Endogenous Mobility in Earnings Determination》</span>. <em>Journal of Business &amp; Economic Statistics</em> 37 (3): 405～18. <a href="https://doi.org/10.1080/07350015.2017.1356727">https://doi.org/10.1080/07350015.2017.1356727</a>.
 </div>
 <div class="csl-entry" id="ref-blm2019" role="listitem">
-Bonhomme, Stéphane, Thibaut Lamadon, 和 Elena Manresa. 2019年. <span>《A Distributional Framework for Matched Employer Employee Data》</span>. <em>Econometrica</em> 87 (3): 699～739. <a href="https://doi.org/10.3982/ECTA15722">https://doi.org/10.3982/ECTA15722</a>.
+Bonhomme, Stéphane, Thibaut Lamadon, 和 Elena Manresa. 2019. <span>《A Distributional Framework for Matched Employer Employee Data》</span>. <em>Econometrica</em> 87 (3): 699～739. <a href="https://doi.org/10.3982/ECTA15722">https://doi.org/10.3982/ECTA15722</a>.
 </div>
 <div class="csl-entry" id="ref-gfe2022" role="listitem">
-Bonhomme, Stéphane, Thibaut Lamadon, 和 Elena Manresa. 2022年. <span>《Discretizing Unobserved Heterogeneity》</span>. <em>Econometrica</em> 90 (2): 625～43. <a href="https://doi.org/10.3982/ECTA15238">https://doi.org/10.3982/ECTA15238</a>.
+Bonhomme, Stéphane, Thibaut Lamadon, 和 Elena Manresa. 2022. <span>《Discretizing Unobserved Heterogeneity》</span>. <em>Econometrica</em> 90 (2): 625～43. <a href="https://doi.org/10.3982/ECTA15238">https://doi.org/10.3982/ECTA15238</a>.
 </div>
 <div class="csl-entry" id="ref-kss2020" role="listitem">
-Kline, Patrick, Raffaele Saggio, 和 Mikkel Sølvsten. 2020年. <span>《Leave-Out Estimation of Variance Components》</span>. <em>Econometrica</em> 88 (5): 1859～98. <a href="https://doi.org/10.3982/ECTA16410">https://doi.org/10.3982/ECTA16410</a>.
+Kline, Patrick, Raffaele Saggio, 和 Mikkel Sølvsten. 2020. <span>《Leave-Out Estimation of Variance Components》</span>. <em>Econometrica</em> 88 (5): 1859～98. <a href="https://doi.org/10.3982/ECTA16410">https://doi.org/10.3982/ECTA16410</a>.
 </div>
 </div>
 </section>
