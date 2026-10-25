@@ -663,22 +663,7 @@ window.Quarto = {
 </section>
 <section class="level3" id="sec-memo-akm-sorting">
 <h3 class="anchored" data-anchor-id="sec-memo-akm-sorting">8. AKM能否 accommodate sorting</h3>
-<p><strong>AKM可以容纳客户与事务所之间的永久类型sorting。</strong> <span class="citation" data-cites="akm1999">Abowd 等 (<a href="#ref-akm1999" role="doc-biblioref">1999</a>)</span> 的模型允许客户持久失败成分<span class="math inline">\(\alpha_i\)</span>与事务所稳定结果成分<span class="math inline">\(\psi_f\)</span>相关，因而长期低风险客户更常选择四大与模型相容。关键限制是剩余结果冲击与整条事务所配置路径的关系，而非要求两端永久类型独立。写成</p>
-<p><span id="eq-memo-akm-exogeneity"><span class="math display">\[
-\begin{aligned}
-Y_{it}&amp;=X_{it}'\beta+\alpha_i+\psi_{f(i,t)}+\lambda_t+\varepsilon_{it},\\
-&amp;\text{允许 }\operatorname{Cov}(\alpha_i,\psi_{f(i,t)})\ne0,\\
-\operatorname E[\varepsilon_{it}\mid
-\alpha_i,\boldsymbol\psi,\boldsymbol\lambda,\mathcal X_i,\mathcal F_i]&amp;=0,\qquad \forall t.
-\end{aligned}
-\tag{1}\]</span></span></p>
-<p>其中<span class="math inline">\(\mathcal F_i\)</span>与<span class="math inline">\(\mathcal X_i\)</span>是客户完整的事务所配置及控制变量路径；该条件蕴含<span class="math inline">\(\varepsilon_{it}\)</span>与任意过去、当前或未来的配置指示变量正交。基准AKM可以允许客户内部的误差序列相关，并按客户聚类，但这些误差仍须与配置路径正交；当前逐观测KSS另需公司年误差独立。<a href="./26_akm.html#sec-akm-exogeneity">完整方程与样本定义</a>。</p>
-<p><strong>我们的问题在于，已有选择分析发现上一期风险／审计意见与下一期留任、退出和改聘相关。</strong> 如果这只是客户永久风险或可观察特征的配置，AKM可以吸收；如果选所还取决于上一期未被吸收的风险冲击，则可能出现</p>
-<p><span id="eq-memo-akm-lagged-risk"><span class="math display">\[
-\operatorname{Cov}\!\left(\varepsilon_{i,t-1},\mathbf1\{f(i,t)=j\}\mid
-\alpha_i,\boldsymbol\psi,\boldsymbol\lambda,\mathcal X_i\right)\ne0,
-\tag{2}\]</span></span></p>
-<p>上述配置与剩余风险冲击的关系已纳入本轮核查。围绕 <span class="citation" data-cites="ams2019">Abowd 等 (<a href="#ref-ams2019" role="doc-biblioref">2019</a>)</span> 的剩余结果—流动思路，本轮已完成<a href="./26_akm.html#sec-akm-future-assignment">剩余结果—未来配置诊断</a>和<a href="./26_akm.html#sec-akm-dynamic-support">动态序列支持检查</a>。</p>
+<p><strong>AKM可以容纳客户长期风险与事务所稳定成分之间的sorting。</strong> <span class="citation" data-cites="akm1999">Abowd 等 (<a href="#ref-akm1999" role="doc-biblioref">1999</a>)</span> 框架下进一步的识别问题是：控制客户特征、客户固定效应和年份固定效应后，当期剩余风险是否仍影响下一期选所；如果存在这种反馈，换所前后的剩余风险变化就可能混入事务所效应的估计。<a href="./23_big4_effect.html#客户选择与审计意见四大如何形成较低风险的客户组合">Big4 effect的客户进出回归</a>已经发现，MAO对应四大客户次年退出概率高30.40个百分点（<span class="math inline">\(p&lt;0.001\)</span>）、非四大客户次年进入四大的概率低0.249个百分点（<span class="math inline">\(p=0.039\)</span>），GC对应四大退出概率高20.62个百分点（<span class="math inline">\(p=0.042\)</span>）；这些已观察风险信号的结果提供动态选择的研究动机，未吸收部分另由<a href="./26_akm.html#sec-akm-future-assignment">剩余结果—未来配置诊断</a>考察。因此继续推进 <span class="citation" data-cites="blm2019">Bonhomme 等 (<a href="#ref-blm2019" role="doc-biblioref">2019</a>)</span> 的动态框架，允许当前结果影响后续流动，并在潜在类型、一阶Markov与转移支持条件下联合描述审计结果和事务所配置。完整动态BLM仍在进行中，目前尚未估计出可靠结果。<a href="./26_akm.html#sec-akm-exogeneity">两种相关、完整外生性条件</a>与<a href="./26_akm.html#sec-akm-endogenous-mobility">动态BLM模型及识别</a>见正文。</p>
 <p><strong>我又做了一些分析，我发现，组间配置与组内配置的方向不同。</strong> 按四大、本土八大与Other分解同一次全样本拟合，三套样本的失败指标均为正组间、负组内，且组内负项更大。因此，四大客户具有较低的持久失败成分，与总体客户—事务所插件相关为负可以同时成立。综合失败总体相关在不筛选、33、55样本中分别为−0.0322、−0.0445、−0.0574；这是新增探索性分析，Abs DA的组间方向不同，单独解释。<a href="./26_akm.html#sec-akm-exploratory-sorting">完整分解与分梯队估计</a>。</p>
 <div class="quarto-float quarto-figure quarto-figure-center anchored" id="fig-memo-akm-within-between">
 <figure class="quarto-float quarto-float-fig figure">
@@ -713,8 +698,6 @@ Y_{it}&amp;=X_{it}'\beta+\alpha_i+\psi_{f(i,t)}+\lambda_t+\varepsilon_{it},\\
 </figure>
 </div>
 <p><strong>基准、网络与未来配置诊断已完成跨语言核对。</strong> 48个基准／分梯队模型与24个未来配置模型已经Stata—Python逐行核对，网络、关键客户删除和50次重复抽样结果见<a href="./26_akm.html#sec-akm-network-sensitivity">26号报告</a>。综合失败两年期不筛选样本的未来配置联合检验，六项Holm校正后<span class="math inline">\(p=0.047\)</span>，扩至全部24项后为0.182，且未在33和55中重复出现。9,218次年度换所中已匹配5,800次变更日期候选，日期覆盖结果已整理。</p>
-<!-- dynamic-risk-memo:start -->
-<p><strong>BLM进展。</strong> AKM的BLM拓展（<span class="citation" data-cites="blm2019">Bonhomme 等 (<a href="#ref-blm2019" role="doc-biblioref">2019</a>)</span>）仍在进行中，目前尚未估计出可靠结果。 <!-- dynamic-risk-memo:end --></p>
 <p><a href="./26_akm.html#sec-client-auditfirm-sorting">26号：当前客户—事务所完整结果</a> · <a href="./26_akm.html#sec-akm-future-assignment">AMS思路的本项目诊断</a> · <a href="./23_big4_effect.html#客户选择与审计意见四大如何形成较低风险的客户组合">主报告已有选择证据</a></p>
 </section>
 <section class="level3" id="分析师指标与人数">
@@ -757,9 +740,6 @@ Y_{it}&amp;=X_{it}'\beta+\alpha_i+\psi_{f(i,t)}+\lambda_t+\varepsilon_{it},\\
 <div class="references csl-bib-body hanging-indent" id="refs" role="list">
 <div class="csl-entry" id="ref-akm1999" role="listitem">
 Abowd, John M., Francis Kramarz, 和 David N. Margolis. 1999. <span>《High Wage Workers and High Wage Firms》</span>. <em>Econometrica</em> 67 (2): 251～333. <a href="https://doi.org/10.1111/1468-0262.00020">https://doi.org/10.1111/1468-0262.00020</a>.
-</div>
-<div class="csl-entry" id="ref-ams2019" role="listitem">
-Abowd, John M., Kevin L. McKinney, 和 Ian M. Schmutte. 2019. <span>《Modeling Endogenous Mobility in Earnings Determination》</span>. <em>Journal of Business &amp; Economic Statistics</em> 37 (3): 405～18. <a href="https://doi.org/10.1080/07350015.2017.1356727">https://doi.org/10.1080/07350015.2017.1356727</a>.
 </div>
 <div class="csl-entry" id="ref-blm2019" role="listitem">
 Bonhomme, Stéphane, Thibaut Lamadon, 和 Elena Manresa. 2019. <span>《A Distributional Framework for Matched Employer Employee Data》</span>. <em>Econometrica</em> 87 (3): 699～739. <a href="https://doi.org/10.3982/ECTA15722">https://doi.org/10.3982/ECTA15722</a>.
