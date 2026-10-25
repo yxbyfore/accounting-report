@@ -4851,126 +4851,7 @@ Risk_{it\text{或}t+1}=\text{firm FE}+\text{industry × year FE}
 <h3 class="anchored" data-anchor-id="client-selection-main">4.1 可观察选择：客户是否原本就更好？</h3>
 <section id="当前控制变量与匹配变量" class="level4">
 <h4 class="anchored" data-anchor-id="当前控制变量与匹配变量">当前控制变量与匹配变量</h4>
-<p>审计失败基准使用九项控制；年度 PSM 另保留五项选择模型作为比较。换所 PSM 用进入前一年的九项特征预测四大选择，结果方程使用当年九项控制。盈余质量采用七项结果特定控制，匹配名单仍来自九项失败风险模型。</p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 12%">
-<col style="width: 12%">
-<col style="width: 12%">
-<col style="width: 20%">
-<col style="width: 20%">
-<col style="width: 20%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>变量</th>
-<th>代码名称</th>
-<th>当前构造／含义</th>
-<th style="text-align: center;">审计失败九项</th>
-<th style="text-align: center;">年度 PSM 五项</th>
-<th style="text-align: center;">盈余质量七项</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>公司规模</td>
-<td><code>size</code></td>
-<td>总资产自然对数</td>
-<td style="text-align: center;">✓</td>
-<td style="text-align: center;">✓</td>
-<td style="text-align: center;">✓</td>
-</tr>
-<tr class="even">
-<td>杠杆率</td>
-<td><code>lev</code></td>
-<td>数据源资产负债率</td>
-<td style="text-align: center;">✓</td>
-<td style="text-align: center;">✓</td>
-<td style="text-align: center;">✓</td>
-</tr>
-<tr class="odd">
-<td>亏损</td>
-<td><code>loss</code></td>
-<td>净利润小于零的指示变量</td>
-<td style="text-align: center;">✓</td>
-<td style="text-align: center;">✓</td>
-<td style="text-align: center;">✓</td>
-</tr>
-<tr class="even">
-<td>资产收益率</td>
-<td><code>roa</code></td>
-<td>数据源资产收益率 A</td>
-<td style="text-align: center;">✓</td>
-<td style="text-align: center;">✓</td>
-<td style="text-align: center;">—</td>
-</tr>
-<tr class="odd">
-<td>破产风险</td>
-<td><code>zscore</code></td>
-<td>数据源 Z 值</td>
-<td style="text-align: center;">✓</td>
-<td style="text-align: center;">✓</td>
-<td style="text-align: center;">—</td>
-</tr>
-<tr class="even">
-<td>杠杆变动</td>
-<td><code>chg_lev</code></td>
-<td>当年与上一年杠杆率之差</td>
-<td style="text-align: center;">✓</td>
-<td style="text-align: center;">—</td>
-<td style="text-align: center;">—</td>
-</tr>
-<tr class="odd">
-<td>报告时滞</td>
-<td><code>report_lag</code></td>
-<td>年报公布日减财年截止日，天数</td>
-<td style="text-align: center;">✓</td>
-<td style="text-align: center;">—</td>
-<td style="text-align: center;">—</td>
-</tr>
-<tr class="even">
-<td>经营现金流</td>
-<td><code>cfo</code></td>
-<td>经营活动现金流净额／总资产</td>
-<td style="text-align: center;">✓</td>
-<td style="text-align: center;">—</td>
-<td style="text-align: center;">✓</td>
-</tr>
-<tr class="odd">
-<td>上市年限</td>
-<td><code>age</code></td>
-<td>ln（财年−首次上市年份＋1）</td>
-<td style="text-align: center;">✓</td>
-<td style="text-align: center;">—</td>
-<td style="text-align: center;">—</td>
-</tr>
-<tr class="even">
-<td>收入增长</td>
-<td><code>growth</code></td>
-<td>主营业务收入较上年增长率</td>
-<td style="text-align: center;">—</td>
-<td style="text-align: center;">—</td>
-<td style="text-align: center;">✓</td>
-</tr>
-<tr class="odd">
-<td>市净率</td>
-<td><code>mtb</code></td>
-<td>股价／每股净资产</td>
-<td style="text-align: center;">—</td>
-<td style="text-align: center;">—</td>
-<td style="text-align: center;">✓</td>
-</tr>
-<tr class="even">
-<td>应计</td>
-<td><code>accruals</code></td>
-<td>（净利润−经营活动现金流净额）／总资产；构建代码中现金流缺失以零代入该分子</td>
-<td style="text-align: center;">—</td>
-<td style="text-align: center;">—</td>
-<td style="text-align: center;">✓</td>
-</tr>
-</tbody>
-</table>
-<p>九项及七项控制配有各自的mis_dummy。数值按年份中位数插补，年份内无法插补时以全样本中位数补充；mis_dummy保留原始缺失信息。行业和年份在选择模型中作为类别变量进入。</p>
+<p>各模块的控制变量汇总如下。九项基准控制列在第一行，其余模块按自身结果与匹配设定调整。</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 50%">
@@ -4978,45 +4859,62 @@ Risk_{it\text{或}t+1}=\text{firm FE}+\text{industry × year FE}
 </colgroup>
 <thead>
 <tr class="header">
-<th>其他模块</th>
-<th>当前使用的控制口径</th>
+<th>分析模块</th>
+<th>控制变量</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>意见回归基准</td>
-<td>九项失败控制，另加融资 <code>financing</code>、滞后 GC <code>l1_gc</code> 及其<code>mis_dummy</code>；统一机制表各 Panel 按实际设定单列</td>
+<td>审计失败基准（九项）</td>
+<td>公司规模、杠杆率、亏损、资产收益率、破产风险、杠杆变动、报告时滞、经营现金流、上市年限</td>
+</tr>
+<tr class="even">
+<td>年度倾向得分匹配（五项）</td>
+<td>公司规模、杠杆率、亏损、资产收益率、破产风险</td>
+</tr>
+<tr class="odd">
+<td>换所倾向得分匹配</td>
+<td>用进入前一年的九项基准特征匹配；结果方程控制当年九项特征</td>
+</tr>
+<tr class="even">
+<td>盈余质量（七项）</td>
+<td>公司规模、杠杆率、亏损、经营现金流、收入增长、市净率、应计；匹配名单沿用九项失败风险模型</td>
+</tr>
+<tr class="odd">
+<td>审计意见</td>
+<td>九项基准控制，另加融资、上期持续经营审计意见；机制表各部分按实际设定列示</td>
 </tr>
 <tr class="even">
 <td>审计收费</td>
-<td><code>size</code>、<code>lev</code>、<code>loss</code>、<code>roa</code> 及<code>mis_dummy</code></td>
+<td>公司规模、杠杆率、亏损、资产收益率</td>
 </tr>
 <tr class="odd">
 <td>公司估值</td>
-<td>九项失败控制，另加 <code>growth</code> 及<code>mis_dummy</code></td>
+<td>九项基准控制，另加收入增长</td>
 </tr>
 <tr class="even">
 <td>财务状况作为结果</td>
-<td>九项失败控制，删除结果变量本身及其<code>mis_dummy</code>；收入增长不在原九项中</td>
+<td>九项基准控制中剔除结果变量本身；收入增长不在九项基准控制中</td>
 </tr>
 <tr class="odd">
 <td>事前风险路径匹配</td>
-<td>九项事前特征，加前三年 ROA／杠杆／亏损路径、公告历史、覆盖年数及<code>mis_dummy</code></td>
+<td>九项事前特征，另加前三年资产收益率、杠杆率与亏损路径，以及公告历史、覆盖年数</td>
 </tr>
 <tr class="even">
-<td>年度 ERC、PEAD</td>
-<td>完整规格加入 <code>ln_market_cap</code>、<code>mb_current</code>、<code>ln_forecast_n</code> 三项主项；不与盈利意外交互；递进规格分别为无 FE／控制、仅公司与财年 FE、FE＋控制</td>
+<td>年度盈余响应、公告后收益漂移</td>
+<td>市值对数、市净率、预测数量对数；仅加入主项，不与盈利意外交互</td>
 </tr>
 <tr class="odd">
 <td>分析师信息与预测修正</td>
-<td>最新展示无FE、公司聚类；三项为 <code>abs_surprise_60</code>、<code>mb_current</code>、配对券商数 <code>n</code>，四项另加 <code>ln_market_cap</code>；共同样本无控制列单列</td>
+<td>盈利意外绝对值、市净率、配对券商数；四项规格另加市值对数，共同样本的无控制列单列</td>
 </tr>
 <tr class="even">
 <td>门槛市场事件研究</td>
-<td>保留既定事件、交易日和事件时间 FE；具体表中明确列示是否加入额外控制</td>
+<td>保留既定事件、交易日和事件时间固定效应，额外控制按各结果表列示</td>
 </tr>
 </tbody>
 </table>
+<p>各模块沿用相应的缺失值指示变量；财务状况作为结果时，也剔除该结果变量的缺失值指示变量。数值按年份中位数插补，年份内无法插补时以全样本中位数补充。行业和年份在选择模型中作为类别变量进入。年度盈余响应与公告后收益漂移依次比较无固定效应及控制、仅公司与财年固定效应、固定效应加控制；分析师信息与预测修正当前展示不含固定效应，按公司聚类。</p>
 </section>
 <section id="共同样本嵌套控制共同样本下的三列递进比较" class="level4">
 <h4 class="anchored" data-anchor-id="共同样本嵌套控制共同样本下的三列递进比较">共同样本嵌套控制：共同样本下的三列递进比较</h4>
