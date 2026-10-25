@@ -263,8 +263,25 @@ div.csl-indent {
 <h3 class="anchored" data-anchor-id="sec-memo-market-paths">1. 2012年前后的分组市场图</h3>
 <p>先看四大、本土八大与Other各自的消息响应，再检验组间差异。两段时期分别为2001—2011和2012—2024财年，2012年归入后期。好消息为surprise&gt;10%，中性为−10%至10%，不含坏消息；实际EPS沿用已核实的原报修复口径，未核实记录保留数据库值。</p>
 <p>短窗为公告前后[−5,+5]个市场交易日，以−1日为基期，Y为原始收盘价log。保留完整11日价格窗口，吸收公司×财年、事件日和实际交易日期固定效应，按公司×财年聚类，无额外控制。</p>
+<section id="年滚动公告日响应" class="level4">
+<h4 class="anchored" data-anchor-id="年滚动公告日响应">1.1 7年滚动公告日响应</h4>
+<p>以下两图均从7年滚动共同回归中提取各审计组自身的“好消息−中性消息”公告日响应，不是只画组间差，也不是各组另做回归。Y为原始log price，样本为完整[-5,+5]的好消息与中性消息公告，−1日基期；公司×财年、事件日、实际交易日期固定效应，公司×财年聚类。</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/market_information/event_study/rolling_group_response/rolling_group_binary_day0.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>两组：四大与非四大各自的好消息−中性消息公告日响应；7年滚动共同模型，无控制，95%置信区间。</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/market_information/event_study/rolling_group_response/rolling_group_threegroup_day0.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>三组：四大、本土八大与Other各自的好消息−中性消息公告日响应；7年滚动共同模型，无控制，95%置信区间。</figcaption>
+</figure>
+</div>
+<p>三组最早2001—2007与最晚2017—2023窗口的点估计为：四大：0.010→0.003；本土八大：0.003→0.003；Other：0.003→0.001。<strong>滚动点估计显示四大响应下降较多，其他组没有普遍上升。</strong> 这些结果描述跨窗口的市场响应变化，客观质量的逐年比较见下文。</p>
+</section>
 <section id="三组分别估计各组如何响应好消息" class="level4">
-<h4 class="anchored" data-anchor-id="三组分别估计各组如何响应好消息">1.1 三组分别估计：各组如何响应好消息？</h4>
+<h4 class="anchored" data-anchor-id="三组分别估计各组如何响应好消息">1.2 三组分别估计：各组如何响应好消息？</h4>
 <p>每个审计组单独回归，曲线表示该组“好消息−中性消息”相对−1日的价格响应。纵轴为log价格系数，0.01约为1个对数百分点，区间为逐点95%置信区间。</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -280,7 +297,7 @@ div.csl-indent {
 </div>
 </section>
 <section id="共同interaction三组的响应是否不同" class="level4">
-<h4 class="anchored" data-anchor-id="共同interaction三组的响应是否不同">1.2 共同interaction：三组的响应是否不同？</h4>
+<h4 class="anchored" data-anchor-id="共同interaction三组的响应是否不同">1.3 共同interaction：三组的响应是否不同？</h4>
 <p>共同回归直接检验“四大−Other”和“本土八大−Other”的好消息响应差。沿用中性消息各审计组共享相对事件路径的受限规格，差值区间使用同一模型的完整协方差；它不同于将上面分别回归的曲线直接相减。</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -295,25 +312,6 @@ div.csl-indent {
 </figure>
 </div>
 <p>2012年前，四大相对Other的公告日及+5日响应较强；2012年起证据较弱。早期部分共同模型存在事前差异，因此同时展示公告前系数。<a href="./23_big4_effect.html#market-positive-main">短窗完整结果与事前检验</a>。</p>
-<details>
-<summary>
-补充：7年滚动公告日响应
-</summary>
-<p>以下两图均从7年滚动共同回归中提取各审计组自身的“好消息−中性消息”公告日响应，不是只画组间差，也不是各组另做回归。Y为原始log price，样本为完整[-5,+5]的好消息与中性消息公告，−1日基期；公司×财年、事件日、实际交易日期固定效应，公司×财年聚类。</p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="figures/market_information/event_study/rolling_group_response/rolling_group_binary_day0.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
-<figcaption>两组：四大与非四大各自的好消息−中性消息公告日响应；7年滚动共同模型，无控制，95%置信区间。</figcaption>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="figures/market_information/event_study/rolling_group_response/rolling_group_threegroup_day0.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
-<figcaption>三组：四大、本土八大与Other各自的好消息−中性消息公告日响应；7年滚动共同模型，无控制，95%置信区间。</figcaption>
-</figure>
-</div>
-<p>三组最早2001—2007与最晚2017—2023窗口的点估计为：四大：0.010→0.003；本土八大：0.003→0.003；Other：0.003→0.001。<strong>滚动点估计显示四大响应下降较多，其他组没有普遍上升。</strong> 这些结果描述跨窗口的市场响应变化，客观质量的逐年比较见下文。</p>
-</details>
 </section>
 </section>
 <section id="短期长期市场反应核查" class="level3">
