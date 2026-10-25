@@ -392,10 +392,12 @@ C_{i,-60}=0,\qquad C_{ik}=\sum_{j=-59}^{k}\left(r^{TR}_{ij}-r_{m,t(i,j)}\right),
 <p><strong>为什么做这项规模检验？</strong> <a href="https://doi.org/10.1016/j.jfineco.2019.03.008">Jianan Liu、Robert F. Stambaugh与Yu Yuan（2019），《Size and value in China》</a>，发表于 <em>Journal of Financial Economics</em> 134(1):48–69。论文指出，中国最小30%的股票包含较高的潜在壳价值，收益与盈利意外的联系较弱、与IPO活动的联系较强，因此在构造因子时剔除最小30%（见<a href="https://rodneywhitecenter.wharton.upenn.edu/wp-content/uploads/2019/04/01-18-Stambaugh.Published.BlumePrize.pdf">作者接收稿第2页及第5.1节</a>）。若四大与非四大客户的规模分布不同，全市场调整后的收益差可能同时反映规模及壳价值暴露。为检查这一竞争解释，这里改用公司所在市值十分组的收益作基准，并剔除公告年最小三组。检索词：<code>Liu Stambaugh Yuan 2019 Size and value in China</code>。</p>
 <p><strong>本次口径。</strong> 按自然年首个可用流通市值划分十组，按公告交易年份保留第4—10组，不将剩余公司重新分组；窗口跨年时按交易日当年所属组取基准。组内基准使用前一市场交易日流通市值加权的含分红总收益。令<span class="math inline">\(g(i,t)\)</span>为当年组别，<span class="math inline">\(\mathcal V_{g,t}\)</span>为基准中具有有效收益及前一市场交易日正流通市值的股票集合：</p>
 <p><span class="math display">\[
-r^{size}_{g,t}=\frac{\sum_{j\in\mathcal V_{g,t}}MV^{float}_{j,t-1}r^{TR}_{jt}}
-{\sum_{j\in\mathcal V_{g,t}}MV^{float}_{j,t-1}},\qquad
-C^{size}_{i,-60}=0,\quad
+\begin{aligned}
+r^{size}_{g,t}&amp;=\frac{\sum_{j\in\mathcal V_{g,t}}MV^{float}_{j,t-1}r^{TR}_{jt}}
+{\sum_{j\in\mathcal V_{g,t}}MV^{float}_{j,t-1}},\\
+C^{size}_{i,-60}&amp;=0,\qquad
 C^{size}_{ik}=\sum_{s=-59}^{k}\left[r^{TR}_{i,s}-r^{size}_{g(i,t(i,s)),t(i,s)}\right].
+\end{aligned}
 \]</span></p>
 <p>原队列20,408份公告，剔除最小三组3,024份，另按确认排除两份在窗口内缺少当年组别的公告（000831的2012财年、601375的2016财年），最终保留17,382份。四条线各自的公告数、公司数在−60至+60的每个日期均固定；缺日个股收益记0、仍扣组收益。图为等公告权重的实际均值，无固定效应调整；好消息实线、中性虚线，仅画路径。分期按财年，纵轴为CAR百分点。</p>
 <p>本次同时更换基准与筛选样本，用于检查原路径的规模敏感性；尚未分别识别两项调整的贡献。论文按月总市值构造CH-3，本次沿用年度流通市值十分组，不构造CH-3因子。</p>
