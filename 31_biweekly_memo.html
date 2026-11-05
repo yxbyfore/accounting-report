@@ -224,6 +224,7 @@ window.Quarto = {
    
   <ul>
   <li><a href="#sec-next-meeting" id="toc-sec-next-meeting" class="nav-link active" data-scroll-target="#sec-next-meeting">本次准备讨论的问题</a></li>
+  <li><a href="#memo-unmatched-baseline" id="toc-memo-unmatched-baseline" class="nav-link" data-scroll-target="#memo-unmatched-baseline">完整样本的基准对照：ERC与短窗响应为何变弱</a></li>
   <li><a href="#memo-ever-big4-three" id="toc-memo-ever-big4-three" class="nav-link" data-scroll-target="#memo-ever-big4-three">本次新增结果：曾用四大公司池的消息响应</a></li>
   <li><a href="#memo-ever-big4-three-es" id="toc-memo-ever-big4-three-es" class="nav-link" data-scroll-target="#memo-ever-big4-three-es">同公司池ES口径对照：2012前后的消息响应</a></li>
   <li><a href="#sec-memo-erc-interactions" id="toc-sec-memo-erc-interactions" class="nav-link" data-scroll-target="#sec-memo-erc-interactions">1. ERC：公司匹配与客户特征交互</a></li>
@@ -266,8 +267,93 @@ window.Quarto = {
 
 <section id="sec-next-meeting" class="level2">
 <h2 class="anchored" data-anchor-id="sec-next-meeting">本次准备讨论的问题</h2>
-<p>本轮围绕三个问题组织汇报：客户特征调整后，四大的盈利消息响应是否仍有差异；公告附近的响应与长期价格路径如何衔接；2012年前后的审计收费怎样变化。距离指标沿既有任务推进。新增的短窗结果已选定用于本次展示，见下节；其余设计议题保留待讨论。</p>
+<p>本轮围绕三个问题组织汇报：客户特征调整后，四大的盈利消息响应是否仍有差异；公告附近的响应与长期价格路径如何衔接；2012年前后的审计收费怎样变化。距离指标沿既有任务推进。先展示完整未匹配样本对控制交互与分组时间FE的敏感性，再展示后续选定公司池的短窗及匹配ERC结果；不同人群与历史口径分别解释。</p>
 <p>另补充一项已完成的检验：2009年本土化政策正式发布附近，四大客户是否出现负向价格反应，结果见第5节。机构持仓结构的组间比较见第7节，盈利信号后的持仓与债务变化见第8节。</p>
+</section>
+<section id="memo-unmatched-baseline" class="level2">
+<h2 class="anchored" data-anchor-id="memo-unmatched-baseline">完整样本的基准对照：ERC与短窗响应为何变弱</h2>
+<p><strong>完整未匹配样本尚未稳定支持四大有更强的公告期响应。</strong> ERC在加入公司特征×UE后明显变弱；好消息event study允许两组各有事件日基准路径后，早期原有的正向四大增量也不显著。先看这一基准，再看后面的匹配及曾用四大公司池结果。</p>
+<p>本节复用11月3日冻结结果：严格公告前1—180天已发布预测、每券商最新预测再取中位数，保留已有原报EPS恢复及原始尾部；不匹配，不作市值top70或N≥4筛选，不限制曾用四大公司或2012年前上市，不剔除重大重组。完整样本仍要求对应价格、预测和控制有效；ERC与日度事件研究各用自身合格样本。各时期内固定模型比较成员，分期重新处理FE单例。</p>
+<p><strong>传统ERC。</strong> 两版都保留Big4×UE；第二版增加市值、MB、覆盖的UE交互：</p>
+<p><span class="math display">\[
+CAR^w_{it}=\alpha_i+\lambda_t+\delta B_{it}+\beta U_{it}
++\theta B_{it}U_{it}+\gamma'X^c_{it}
++q\,\eta'(U_{it}X^c_{it})+\varepsilon_{it},\quad q\in\{0,1\}.
+\]</span></p>
+<p><span class="math inline">\(U=(EPS-F)/P_{pre}\)</span>；<span class="math inline">\(X^c\)</span>为中心化市值对数、MB和<span class="math inline">\(1/N\)</span>。公司、财年FE及公司聚类保持一致。关注<span class="math inline">\(\theta\)</span>，即四大减非四大的ERC斜率差。</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="tables/unmatched_market_baseline/erc_all.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption>全期完整未匹配ERC：三个CAR窗口×仅主项／全部控制交互；每列一个回归，括号为SE</figcaption>
+</figure>
+</div>
+<p><a href="tables/unmatched_market_baseline/erc_all.pdf">PDF</a> · <a href="tables/unmatched_market_baseline/erc_all.tex">TeX</a></p>
+<p>全期29,677次公告、4,185家公司。仅主项版三窗四大增量均为正且5%显著；全交互版依次为0.049、0.106、0.070，p值0.305、0.085、0.271，只有[−2,+2]达到10%。2012年前两版三窗均不显著；2012年起仅主项版三窗5%显著、全交互版均不显著。点估计也下降，不能只解释为自由度损失。</p>
+<details>
+<summary>
+展开2012前后ERC对照表
+</summary>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="tables/unmatched_market_baseline/erc_before2012.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption>2012年前完整未匹配ERC：仅主项与全部控制交互</figcaption>
+</figure>
+</div>
+<p><a href="tables/unmatched_market_baseline/erc_before2012.pdf">PDF</a> · <a href="tables/unmatched_market_baseline/erc_before2012.tex">TeX</a></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="tables/unmatched_market_baseline/erc_after2012.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption>2012年起完整未匹配ERC：仅主项与全部控制交互</figcaption>
+</figure>
+</div>
+<p><a href="tables/unmatched_market_baseline/erc_after2012.pdf">PDF</a> · <a href="tables/unmatched_market_baseline/erc_after2012.tex">TeX</a></p>
+</details>
+<p><strong>短窗event study。</strong> 设<span class="math inline">\(G=1(ES&gt;10\%)\)</span>，<span class="math inline">\(ES=(EPS-F)/|F|\)</span>；中性为±10%，排除ES&lt;−10%。统一估计：</p>
+<p><span class="math display">\[
+\ln P_{e\tau}=\alpha_e+T_m(B_e,\tau,d)
++\sum_{k\ne-1}[\beta_{mk}G_e+\theta_{mk}B_eG_e]1(\tau=k)+\varepsilon_{e\tau}.
+\]</span></p>
+<p>窗口[−5,+5]、−1基期，报告事件FE及报告聚类；无财务或连续ES controls。A为共同事件日＋共同交易日FE；B将事件日FE按审计组区分；C将交易日FE按组区分；D两者都按组区分。<span class="math inline">\(\theta_{mk}\)</span>直接比较两组各自“好消息减中性消息”的增量，第0日系数是相对价格响应，非CAR[−1,0]。</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="tables/unmatched_market_baseline/short_before2012.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption>2012年前完整未匹配短窗：A—D同样本，分组事件日FE的变化</figcaption>
+</figure>
+</div>
+<p><a href="tables/unmatched_market_baseline/short_before2012.pdf">PDF</a> · <a href="tables/unmatched_market_baseline/short_before2012.tex">TeX</a></p>
+<p>2012年前四模型同用4,485次公告、49,267条日度观测。第0日四大增量在A／C为0.475／0.408个百分点（p=0.0136／0.0394）；B／D降至0.194／0.221（p=0.424／0.368）。全期D及2012年起D也未检出清楚的四大增量。两组自身可以对好消息上涨，直接增量差仍可能不显著。</p>
+<details>
+<summary>
+展开全期和2012年起的短窗四FE对照表
+</summary>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="tables/unmatched_market_baseline/short_all.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption>全期完整未匹配短窗：A—D同样本</figcaption>
+</figure>
+</div>
+<p><a href="tables/unmatched_market_baseline/short_all.pdf">PDF</a> · <a href="tables/unmatched_market_baseline/short_all.tex">TeX</a></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="tables/unmatched_market_baseline/short_after2012.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption>2012年起完整未匹配短窗：A—D同样本</figcaption>
+</figure>
+</div>
+<p><a href="tables/unmatched_market_baseline/short_after2012.pdf">PDF</a> · <a href="tables/unmatched_market_baseline/short_after2012.tex">TeX</a></p>
+</details>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/market_information/unmatched_baseline/before2012_d_gap.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption>2012年前D模型：四大减非四大的好消息响应增量差</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/market_information/unmatched_baseline/all_d_gap.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption>全期D模型：四大减非四大的好消息响应增量差</figcaption>
+</figure>
+</div>
+<p><a href="./23_big4_effect.html#market-unmatched-baseline">完整样本正文：三个时期ERC、四FE对照及两组路径</a>。后续的匹配和曾用四大公司池属于不同人群或历史输入，不能代替这里的完整样本结果，也不能据分期显著性判断正式前后差异。当前应面对的问题是：四大身份带来的额外响应与客户特征、信息环境及中性基准路径尚未清楚分离。</p>
 </section>
 <section id="memo-ever-big4-three" class="level2">
 <h2 class="anchored" data-anchor-id="memo-ever-big4-three">本次新增结果：曾用四大公司池的消息响应</h2>
