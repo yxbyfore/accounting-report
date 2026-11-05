@@ -1,0 +1,33 @@
+\documentclass[10pt]{article}
+\usepackage[paperwidth=24cm,paperheight=30cm,margin=1cm]{geometry}
+\usepackage{fontspec,booktabs,array}
+\setmainfont{lmroman10-regular.otf}[BoldFont=lmroman10-bold.otf,ItalicFont=lmroman10-italic.otf]
+\newcommand{\sym}[1]{\textsuperscript{#1}}
+\pagestyle{empty}
+\begin{document}\fontsize{10}{12}\selectfont
+\noindent\textbf{ERC: One-to-one company matching}\par\medskip
+\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.15}
+\noindent\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lcccccc@{}}
+\toprule
+ & (1) & (2) & (3) & (4) & (5) & (6) \\
+CAR window & [-1,+1] & [-2,+2] & [-3,+3] & [-1,+1] & [-2,+2] & [-3,+3] \\
+UE interactions with controls & No & No & No & Yes & Yes & Yes \\
+\midrule
+Non-Big4 ERC & 0.042\sym{} & 0.039\sym{} & 0.036\sym{} & 0.093\sym{**} & 0.108\sym{*} & 0.159\sym{***} \\
+ & (0.040) & (0.042) & (0.048) & (0.037) & (0.056) & (0.058) \\
+Big4 minus Non-Big4 ERC & 0.100\sym{} & 0.212\sym{***} & 0.169\sym{**} & 0.059\sym{} & 0.170\sym{**} & 0.098\sym{} \\
+ & (0.062) & (0.073) & (0.073) & (0.060) & (0.068) & (0.074) \\
+Big4 ERC & 0.142\sym{***} & 0.252\sym{***} & 0.205\sym{***} & 0.152\sym{***} & 0.278\sym{***} & 0.257\sym{***} \\
+ & (0.048) & (0.060) & (0.056) & (0.053) & (0.088) & (0.089) \\
+p-value: ERC difference & 0.1074 & 0.0037 & 0.0199 & 0.3249 & 0.0127 & 0.1864 \\
+Observations & 7296 & 7296 & 7296 & 7296 & 7296 & 7296 \\
+Firm clusters & 814 & 814 & 814 & 814 & 814 & 814 \\
+Big4 observations & 1965 & 1965 & 1965 & 1965 & 1965 & 1965 \\
+Firm / fiscal-year FE & Yes & Yes & Yes & Yes & Yes & Yes \\
+Size, MB, 1/N main effects & Yes & Yes & Yes & Yes & Yes & Yes \\
+Big4 main effect & Yes & Yes & Yes & Yes & Yes & Yes \\
+Clustering & Firm & Firm & Firm & Firm & Firm & Firm \\
+\bottomrule
+\end{tabular*}
+\par\medskip\fontsize{9}{11}\selectfont\noindent\textit{Notes:} Frozen estimates, November 1, 2026. FY 2001--2024. UE equals actual EPS minus strict pre-announcement 180-day median forecast, divided by pre-announcement price. Controls: log market capitalization, MB and inverse analyst coverage, centered at the estimation-sample means. Columns 4--6 add all three controls interacted with UE. Each column is one regression; Big4 ERC is the sum of UE and Big4-by-UE coefficients, evaluated at mean controls. Firm-clustered standard errors in parentheses. * p<0.10, ** p<0.05, *** p<0.01. No winsorization; historical restructuring exclusions retained. Company-pool selection uses full-period characteristics; annual auditor status determines Big4. Each eligible announcement receives unit weight.
+\end{document}

@@ -1,0 +1,38 @@
+\documentclass[10pt]{article}
+\usepackage[paperwidth=32cm,paperheight=45cm,margin=1cm]{geometry}
+\usepackage{fontspec,booktabs,array,graphicx,caption,amsmath}
+\setmainfont{lmroman10-regular.otf}[BoldFont=lmroman10-bold.otf,ItalicFont=lmroman10-italic.otf]
+\usepackage[active,tightpage]{preview}
+\PreviewEnvironment{minipage}\setlength\PreviewBorder{6pt}
+\captionsetup{font=normalsize,labelformat=empty,skip=6pt}
+\newcommand{\sym}[1]{\textsuperscript{#1}}
+\begin{document}
+\begin{minipage}{19cm}\fontsize{10}{12}\selectfont\centering
+\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.15}
+\captionof{table}{Big4 and Earnings Persistence: All Available Annual Announcements}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lcccc@{}}\toprule
+ & (1) & (2) & (3) & (4) \\
+Dependent variable & $ROA_{t+1}$ & $ROA_{t+2}$ & $ES_{t+1}$ & $ES_{t+2}$ \\
+\midrule
+Big4 ($\beta$) & -0.006\sym{*} & -0.004\sym{} & 0.033\sym{} & 0.007\sym{} \\
+ & (0.003) & (0.003) & (0.081) & (0.071) \\
+Current outcome: non-Big4 slope ($\rho$) & 0.391\sym{***} & 0.260\sym{***} & 0.011\sym{} & 0.005\sym{} \\
+ & (0.049) & (0.044) & (0.013) & (0.007) \\
+Big4 $\times$ current outcome ($\kappa$) & 0.164\sym{***} & 0.161\sym{***} & 0.086\sym{} & -0.025\sym{} \\
+ & (0.047) & (0.052) & (0.060) & (0.059) \\
+Big4 total slope ($\rho+\kappa$) & 0.554\sym{***} & 0.421\sym{***} & 0.097\sym{} & -0.020\sym{} \\
+ & (0.041) & (0.048) & (0.060) & (0.059) \\
+\addlinespace
+Industry $\times$ baseline fiscal-year FE & Yes & Yes & Yes & Yes \\
+Current CFO; lagged size, leverage, sales growth & Yes & Yes & Yes & Yes \\
+Current ES as additional control & Yes & Yes & --- & --- \\
+Firm-clustered standard errors & Yes & Yes & Yes & Yes \\
+Observations & 24,508 & 22,291 & 19,138 & 16,197 \\
+Firms / firm clusters & 4,108 & 3,731 & 3,426 & 3,006 \\
+$R^2$ & 0.234 & 0.151 & 0.048 & 0.045 \\
+\bottomrule\end{tabular*}
+\par\medskip\raggedright\fontsize{9}{11}\selectfont
+\textit{Notes:} Each column estimates $Z_{i,t+h}=\alpha_{j,t}+\beta Big4_{it}+\rho Z_{it}+\kappa(Big4_{it}\times Z_{it})+X_{it}'\gamma+\varepsilon_{i,t+h}$, where $Z$ is ROA or 180-day earnings surprise (ES). All usable annual announcements include good, neutral and bad news, with no stock-price screen or three-year follow-up requirement. Baseline fiscal years are 2001--2024; exact fiscal-year leads and complete model variables determine each column's sample. ROA models retain current ES as a control, so current analyst forecasts are required; ES models also require future forecasts. Controls are current CFO and lagged log assets, leverage and sales growth; ROA columns additionally control for current ES. Big4 status is measured at baseline. No winsorization or period interaction. Parentheses contain firm-clustered standard errors; stars use unrounded $p$-values. * $p<0.10$, ** $p<0.05$, *** $p<0.01$. Total Big4 slopes are linear combinations, not additional regressions.
+
+\end{minipage}
+\end{document}
