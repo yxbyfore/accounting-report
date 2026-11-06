@@ -5424,6 +5424,90 @@ Y^m_{it}
 <p><a href="maintenance/memo_20261026_reorganization/evidence/city_branch_entry_results.xlsx">城市四套结果Excel</a> · <a href="maintenance/memo_20261026_reorganization/evidence/city_post_event_summary.csv">城市平均变化与检验</a> · <a href="maintenance/memo_20261026_reorganization/evidence/reduced_form_comparison.xlsx">省域约化式Excel</a> · <a href="maintenance/memo_20261026_reorganization/evidence/reduced_form_comparison.csv">省域逐期与汇总数据</a>。本次只读取已有Stata输出，未重新估计。</p>
 </section>
 </section>
+<section id="sec-distance-iv" class="level4">
+<h4 class="anchored" data-anchor-id="sec-distance-iv">最近四大距离：一阶段、2SLS与识别诊断</h4>
+<p><strong>距离探索已执行，现有证据尚未形成可信的主IV。</strong> 描述梯度较清楚，但公司内部一阶段强度有限；三个审计结果的18个常规2SLS均未达10%，且估计方向随距离形式变化。下面保留全部阈值、品牌距离与审计结果，连同未解决的提前关联一起解释。</p>
+<section id="距离构造和估计对象" class="level5">
+<h5 class="anchored" data-anchor-id="距离构造和估计对象">距离构造和估计对象</h5>
+<p>网点包括82家分所和4家总所，按校正开所年份进入当年可用集合；沿用“开业后持续可用、位置不变”的构造假设。使用企业年度注册位置和网点坐标计算Haversine球面直线距离。位置缺口按已有企业内前向填充、再补齐开头处理；坐标系未明示时的GCJ02推断及近似转换、历史迁址与网点关闭信息仍有测量限制。年度距离同时反映企业位置变化与网点扩张。</p>
+<p>先计算每个品牌当年最近距离 <span class="math inline">\(d_{bit}\)</span>，再跨四品牌计算 <span class="math inline">\(\min_b d_{bit}\)</span>、算术均值和 <span class="math inline">\(\max_b d_{bit}\)</span>。max是四个品牌最近距离的最大值；mean/max要求四品牌均有有效距离。六个排除工具分别为min/100、ln(1+min)、mean/100、ln(1+mean)、max/100、ln(1+max)，每列仅使用一个工具。对数取汇总后的距离，单位公里。</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/distance_iv/distance_adoption_smooth.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption>50个等样本量距离组与核平滑：这是未控制客户特征的描述关联。</figcaption>
+</figure>
+</div>
+<p>一阶段与二阶段分别为：</p>
+<p><span class="math display">\[D_{it}=\alpha_i^D+\lambda_t^D+\pi Z_{it}+X_{it}'\gamma+v_{it},\]</span></p>
+<p><span class="math display">\[Y_{it}^m=\alpha_i^m+\lambda_t^m+\beta_m D_{it}+X_{it}'\theta_m+\varepsilon_{it}^m,\qquad D_{it}\text{以单个}Z_{it}\text{工具化}.\]</span></p>
+<p><span class="math inline">\(D\)</span>为当年聘用任一家四大的0/1状态。<span class="math inline">\(Y^m\)</span>分别为未预警重述、违规和任一审计失败，均沿用失败事件与MAO=0联合的冻结口径。<span class="math inline">\(X\)</span>包含规模、杠杆、亏损、ROA、Z-score、杠杆变化、报告滞后、经营现金流、年龄，以及九项各自的缺失标记，共18列。吸收公司与年份固定效应，按公司聚类；常规2SLS使用small选项的t推断。每列一工具、一内生变量，恰好识别，没有过度识别检验。这里没有套用省域事件窗口、g−6资格或行业×年固定效应。</p>
+</section>
+<section id="一阶段近距离dummy与品牌汇总指标" class="level5">
+<h5 class="anchored" data-anchor-id="一阶段近距离dummy与品牌汇总指标">一阶段：近距离dummy与品牌汇总指标</h5>
+<p>第一表的六列分别使用最近距离/100、其对数及5/10/20/50公里内dummy，方程同上；共同样本为1992—2024年71,449个公司年度、5,621家公司。四个dummy均为正但不显著，排除变量F均小于1。</p>
+<figure class="latex-table figure" style="overflow-x:auto;">
+<a href="tables/distance_iv/distance_first_stage.png"><img src="tables/distance_iv/distance_first_stage.png" style="width:1050px;max-width:none;height:auto;display:block;" loading="lazy" alt="最近距离与四个阈值的一阶段" class="figure-img"></a>
+<figcaption>
+最近距离与四个阈值的一阶段 · <a href="tables/distance_iv/distance_first_stage.tex">TeX</a> · <a href="tables/distance_iv/distance_first_stage.pdf">PDF</a>
+</figcaption>
+</figure>
+<p>第二表在四品牌完整的共同样本估计：1993—2024年71,405个公司年度、5,621家公司。比前表少44个1992年记录，来自四品牌可用性要求。除log(min)外五列一阶段为负且显著，F为2.583—6.903。显著相关性与工具强度分别判断；现有F及后面的宽区间提示弱识别风险。</p>
+<figure class="latex-table figure" style="overflow-x:auto;">
+<a href="tables/distance_iv/brand_distance_first_stage.png"><img src="tables/distance_iv/brand_distance_first_stage.png" style="width:1050px;max-width:none;height:auto;display:block;" loading="lazy" alt="四品牌最近距离min、mean、max及其对数的一阶段" class="figure-img"></a>
+<figcaption>
+四品牌最近距离min、mean、max及其对数的一阶段 · <a href="tables/distance_iv/brand_distance_first_stage.tex">TeX</a> · <a href="tables/distance_iv/brand_distance_first_stage.pdf">PDF</a>
+</figcaption>
+</figure>
+</section>
+<section id="三个审计结果全部18个2sls" class="level5">
+<h5 class="anchored" data-anchor-id="三个审计结果全部18个2sls">三个审计结果：全部18个2SLS</h5>
+<p>以下每表六列分别对应六个单独工具，使用同一个71,405公司年度的共同样本。系数与括号内标准误均为百分点，表示当年四大身份从0变为1对应的线性IV差异；18个常规系数p值全部大于0.10。方向和幅度对函数形式敏感，区间较宽。</p>
+<figure class="latex-table figure" style="overflow-x:auto;">
+<a href="tables/distance_iv/2sls_restated_clean.png"><img src="tables/distance_iv/2sls_restated_clean.png" style="width:1050px;max-width:none;height:auto;display:block;" loading="lazy" alt="未预警重述：六个独立2SLS" class="figure-img"></a>
+<figcaption>
+未预警重述：六个独立2SLS · <a href="tables/distance_iv/2sls_restated_clean.tex">TeX</a> · <a href="tables/distance_iv/2sls_restated_clean.pdf">PDF</a>
+</figcaption>
+</figure>
+<figure class="latex-table figure" style="overflow-x:auto;">
+<a href="tables/distance_iv/2sls_violated_clean.png"><img src="tables/distance_iv/2sls_violated_clean.png" style="width:1050px;max-width:none;height:auto;display:block;" loading="lazy" alt="未预警违规：六个独立2SLS" class="figure-img"></a>
+<figcaption>
+未预警违规：六个独立2SLS · <a href="tables/distance_iv/2sls_violated_clean.tex">TeX</a> · <a href="tables/distance_iv/2sls_violated_clean.pdf">PDF</a>
+</figcaption>
+</figure>
+<figure class="latex-table figure" style="overflow-x:auto;">
+<a href="tables/distance_iv/2sls_any_failure_clean.png"><img src="tables/distance_iv/2sls_any_failure_clean.png" style="width:1050px;max-width:none;height:auto;display:block;" loading="lazy" alt="任一未预警审计失败：六个独立2SLS" class="figure-img"></a>
+<figcaption>
+任一未预警审计失败：六个独立2SLS · <a href="tables/distance_iv/2sls_any_failure_clean.tex">TeX</a> · <a href="tables/distance_iv/2sls_any_failure_clean.pdf">PDF</a>
+</figcaption>
+</figure>
+<p>常规p来自系数除以公司聚类SE的t检验，自由度5620；最接近10%的为综合失败log(max)，p=0.106443。AR行在零效应假设下对约化式排除工具做公司聚类检验，当前只保存零效应检验，未反演完整AR置信集。重述min/100的AR p=0.046879，综合失败log(max)为0.020828，在5%拒绝，但对应2SLS符号分别为正、负；重述log(max)为0.050048，略高于5%。AR可处理弱相关性下的零效应检验，其解释仍以工具有效为条件，不能据此验证排除限制。</p>
+<p><a href="tables/distance_iv/brand_distance_first_stage.xlsx">一阶段Excel</a> · <a href="tables/distance_iv/distance_first_stage.xlsx">连续距离与dummy Excel</a> · <a href="tables/distance_iv/brand_distance_2sls.xlsx">18列2SLS Excel</a> · <a href="tables/distance_iv/brand_distance_2sls_details.xlsx">全部精度及诊断</a>。表格直接复用已有Stata导出的TeX，排版未重估。</p>
+</section>
+<section id="开所提前关联距离控制与g6资格的探索" class="level5">
+<h5 class="anchored" data-anchor-id="开所提前关联距离控制与g6资格的探索">开所提前关联：距离控制与g−6资格的探索</h5>
+<p>省域事件路径与上述年度距离TWFE是两套规格。省域设计逐批次、逐期限比较 <span class="math inline">\(g-1\)</span> 与 <span class="math inline">\(g+h\)</span>，对照为该比较期末仍未受冲击的企业，<span class="math inline">\(h=-5,\ldots,5\)</span>，以−1为基期。两期方程为：</p>
+<p><span class="math display">\[\Delta_{g,h}D_i=a_{g,h}+\pi_{g,h}T_i^g+\Delta_{g,h}X_i'\gamma_{g,h}+F_i^{g,h\prime}\eta_{g,h}+U_i^{g,h\prime}\theta_{g,h}+e_i^{g,h}.\]</span></p>
+<p><span class="math inline">\(T_i^g\)</span>为该批次处理身份；<span class="math inline">\(F\)</span>是期末行业dummy与负基期行业dummy的列空间，对应两期行业×年效应，公司不变项通过差分消除；<span class="math inline">\(X\)</span>为上列18项控制，<span class="math inline">\(U\)</span>分别为空、距离/100的两期变化或log距离的两期变化。按基期处理企业数量加权汇总各批次，合并公司影响函数后按基期省聚类。每个期限有自己的配对支持，不能用单一N代表整条路径。</p>
+<p>原全期保留客户版的提前项联合p为本省0.000464、本省及邻省0.026325。控制当期距离后，邻省p变为0.368785，但本省仍为0.000421；未在两渠道和全部版本稳定解决提前关联。当期距离本身可能是开所作用渠道，因此控制后的变化也不能直接解释为识别改善。</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/distance_iv/current_full_all_clients.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption>原控制与当期距离控制的全期、保留客户路径；红色及橙色另含基期距离十分组，属于已放弃的历史诊断规格。</figcaption>
+</figure>
+</div>
+<p>图中红色及橙色曲线在上述<span class="math inline">\(U\)</span>内另加入基期距离十分组dummy，各批次与期限独立拟合其系数。这两条曲线仅保留历史诊断；组内比较支持不足放大了部分提前系数，已停止将十分组用于后续设计。</p>
+<p>固定g−6非四大资格要求处理与对照在同一个日历基年有记录且未聘用四大，窗口内仍允许采用和退出。原控制下，邻省提前p从无限制0.026325、仅g−6可观察0.169119、再到g−6非四大0.383909，显示历史覆盖筛选解释了部分变化。本省三个规格提前p仍为0.000009、0.006878、0.000065；邻省截至2012年、保留客户、当期距离版仍为0.042193。固定资格没有带来稳定改进。</p>
+<p>g−6全期保留客户版，h=0的本省样本为5,353个批次内两期配对、1,025家公司、29省、14批；邻省为777个配对、392家公司、23省、6批。配对数可能重复计入同一公司，不能当作唯一公司年度数。</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/distance_iv/eligibility_comparison_full_all_clients.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption>无限制、仅g−6可观察与g−6非四大资格的路径比较。</figcaption>
+</figure>
+</div>
+<p>其他已执行尝试包括年度距离一阶差分和仅由新开网点造成的距离缩短动态。前者线性与log均不显著；后者提前五项联合p=0.012758，未形成预期的正向采用响应。固定位置累计剂量和距离十分组方案已放弃；LP-DiD仅讨论、未执行，未列为已完成模型。</p>
+<p><strong>阶段判断。</strong> 提前采用关联、较弱一阶段及二阶段敏感性已有直接结果依据。选址、企业迁址、当地经济与审计市场时变因素，以及竞争和问题发现等直接渠道仍待独立论证。距离测量改进也无法自动消除这些排除限制问题。因此将距离结果保留为完整识别探索，暂不采用为主因果IV；常规不显著也不足以判断四大没有作用。</p>
+</section>
+</section>
 </section>
 <section id="ey-dahua-causal" class="level3">
 <h3 class="anchored" data-anchor-id="ey-dahua-causal">3.6 补充识别：安永—大华转入四大</h3>

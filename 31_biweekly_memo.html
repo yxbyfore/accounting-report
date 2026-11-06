@@ -230,7 +230,7 @@ window.Quarto = {
   <li><a href="#sec-memo-erc-interactions" id="toc-sec-memo-erc-interactions" class="nav-link" data-scroll-target="#sec-memo-erc-interactions">1. ERC：公司匹配与客户特征交互</a></li>
   <li><a href="#sec-memo-market-long-window" id="toc-sec-memo-market-long-window" class="nav-link" data-scroll-target="#sec-memo-market-long-window">2. 市场反应：公告前1年至后3年的长窗口</a></li>
   <li><a href="#sec-memo-audit-fee-2012" id="toc-sec-memo-audit-fee-2012" class="nav-link" data-scroll-target="#sec-memo-audit-fee-2012">3. 审计费用2012前后的变化</a></li>
-  <li><a href="#sec-memo-distance" id="toc-sec-memo-distance" class="nav-link" data-scroll-target="#sec-memo-distance">4. Distance：沿已有距离任务接续</a></li>
+  <li><a href="#sec-memo-distance" id="toc-sec-memo-distance" class="nav-link" data-scroll-target="#sec-memo-distance">4. Distance：探索已完成，尚未形成可信IV</a></li>
   <li><a href="#sec-memo-localization-2009" id="toc-sec-memo-localization-2009" class="nav-link" data-scroll-target="#sec-memo-localization-2009">5. 2009年本土化政策发布与四大客户股价</a></li>
   <li><a href="#sec-memo-good-news-verification" id="toc-sec-memo-good-news-verification" class="nav-link" data-scroll-target="#sec-memo-good-news-verification">6. 好消息的事后验证与盈利持续性</a></li>
   <li><a href="#sec-memo-holdings-structure" id="toc-sec-memo-holdings-structure" class="nav-link" data-scroll-target="#sec-memo-holdings-structure">7. 四大与非四大客户的前十大股东结构</a>
@@ -267,7 +267,7 @@ window.Quarto = {
 
 <section id="sec-next-meeting" class="level2">
 <h2 class="anchored" data-anchor-id="sec-next-meeting">本次准备讨论的问题</h2>
-<p>本轮围绕三个问题组织汇报：客户特征调整后，四大的盈利消息响应是否仍有差异；公告附近的响应与长期价格路径如何衔接；2012年前后的审计收费怎样变化。距离指标沿既有任务推进。先展示完整未匹配样本对控制交互与分组时间FE的敏感性，再展示后续选定公司池的短窗及匹配ERC结果；不同人群与历史口径分别解释。</p>
+<p>本轮先讨论客户特征调整后，四大的短窗口盈利消息响应是否仍有差异，再汇报2012年前后的审计收费、距离IV探索，以及盈利信号后的持仓与债务变化。长期价格drift已停止推进，历史结果仅保留为补充。先展示完整未匹配样本对控制交互与分组时间FE的敏感性，再展示后续选定公司池的短窗及匹配ERC结果；不同人群与历史口径分别解释。距离已完成主要探索，工具强度与提前关联仍限制因果解释。</p>
 <p>另补充一项已完成的检验：2009年本土化政策正式发布附近，四大客户是否出现负向价格反应，结果见第5节。机构持仓结构的组间比较见第7节，盈利信号后的持仓与债务变化见第8节。</p>
 </section>
 <section id="memo-unmatched-baseline" class="level2">
@@ -496,9 +496,32 @@ CAR_{it}^{w}=\alpha_i+\lambda_t+\delta B_{it}+\beta UE_{it}+\theta(B_{it}\times 
 <p><a href="tables/domestic_fee_2012/fee_break_tests.tex">LaTeX表格</a> · <a href="tables/domestic_fee_2012/fee_break_tests.pdf">PDF表格</a></p>
 </section>
 <section id="sec-memo-distance" class="level2">
-<h2 class="anchored" data-anchor-id="sec-memo-distance">4. Distance：沿已有距离任务接续</h2>
-<p>企业当年到任一家四大最近在营分所的距离沿既有工作继续核对。讨论重点是位置与历史营业信息的可用性，以及距离在模型中承担什么角色。此项保留原任务入口，不重复建立另一套距离研究。</p>
-<p><a href="./23_big4_effect.html#network-branch-iv-aligned">供应链与分所扩张的现有识别</a></p>
+<h2 class="anchored" data-anchor-id="sec-memo-distance">4. Distance：探索已完成，尚未形成可信IV</h2>
+<p>最近四大距离已完成构造，并执行连续距离、四个近距离阈值、四品牌汇总距离的一阶段，以及六种距离工具对三个审计结果的18个2SLS。<strong>现有结果适合完整汇报识别探索；工具强度和开所前采用关联仍限制因果解释。</strong></p>
+<p>描述上，距离较近的企业采用四大的比例较高。控制公司与年份固定效应后，四品牌最近距离的最小值、均值、最大值及其对数六列中，五个一阶段显著为负，但排除变量F仅2.58—6.90；四个距离阈值dummy均不显著。这里的mean/max是四个“品牌最近距离”的均值/最大值。</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/distance_iv/distance_adoption_smooth.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption>企业距离与四大采用：50个等样本量距离组及核平滑描述，未加入回归控制。</figcaption>
+</figure>
+</div>
+<p>一阶段为 <span class="math inline">\(D_{it}=\alpha_i+\lambda_t+\pi Z_{it}+X_{it}'\gamma+v_{it}\)</span>；二阶段为 <span class="math inline">\(Y_{it}=\alpha_i+\lambda_t+\beta D_{it}+X_{it}'\theta+\varepsilon_{it}\)</span>，每列分别用单个距离指标 <span class="math inline">\(Z\)</span> 工具化当年四大身份 <span class="math inline">\(D\)</span>。<span class="math inline">\(X\)</span> 为规模、杠杆、亏损、ROA、Z-score、杠杆变化、报告滞后、经营现金流和年龄及各自缺失标记；公司与年份固定效应，公司聚类。</p>
+<figure class="latex-table figure" style="overflow-x:auto;">
+<a href="tables/distance_iv/brand_distance_first_stage.png"><img src="tables/distance_iv/brand_distance_first_stage.png" style="width:1050px;max-width:none;height:auto;display:block;" loading="lazy" alt="六种品牌距离的一阶段；系数及括号内SE为百分点" class="figure-img"></a>
+<figcaption>
+六种品牌距离的一阶段；系数及括号内SE为百分点 · <a href="tables/distance_iv/brand_distance_first_stage.tex">TeX</a> · <a href="tables/distance_iv/brand_distance_first_stage.pdf">PDF</a>
+</figcaption>
+</figure>
+<p>18个2SLS的常规系数检验均未达到10%，方向和幅度随工具形式变化。下表保留综合失败结果，重述和违规的完整六列表见<a href="./23_big4_effect.html#sec-distance-iv">正文</a>。共同样本为1993—2024年71,405个公司年度、5,621家公司；三个Y均沿用失败事件与MAO=0联合的未预警口径。</p>
+<figure class="latex-table figure" style="overflow-x:auto;">
+<a href="tables/distance_iv/2sls_any_failure_clean.png"><img src="tables/distance_iv/2sls_any_failure_clean.png" style="width:1050px;max-width:none;height:auto;display:block;" loading="lazy" alt="距离IV与任一未预警审计失败：六个独立2SLS" class="figure-img"></a>
+<figcaption>
+距离IV与任一未预警审计失败：六个独立2SLS · <a href="tables/distance_iv/2sls_any_failure_clean.tex">TeX</a> · <a href="tables/distance_iv/2sls_any_failure_clean.pdf">PDF</a>
+</figcaption>
+</figure>
+<p>AR型零效应检验有两列在5%拒绝：重述的min/100公里（p=0.046879）与综合失败的log(max)（p=0.020828），对应2SLS符号分别为正、负。AR的解释仍以工具有效为前提；它不检验选址的排除限制。重述log(max)的AR p=0.050048，略高于5%。</p>
+<p>本省／本省及邻省开所的提前关联，也未被距离控制或固定g−6非四大资格稳定解决；邻省部分提前项变弱同时伴随历史覆盖筛选。分所选址、企业迁址和当地审计市场变化仍可能同时影响距离、四大采用与审计结果。<strong>这条线本轮可以按探索结果阶段收尾；目前未采用为主因果IV。</strong></p>
+<p><a href="./23_big4_effect.html#sec-distance-iv">完整距离研究：变量、全部表格与提前趋势诊断</a> · <a href="tables/distance_iv/brand_distance_2sls.xlsx">18列结果Excel</a> · <a href="tables/distance_iv/brand_distance_2sls_details.xlsx">完整精度及检验</a></p>
 </section>
 <section id="sec-memo-localization-2009" class="level2">
 <h2 class="anchored" data-anchor-id="sec-memo-localization-2009">5. 2009年本土化政策发布与四大客户股价</h2>
