@@ -1,0 +1,35 @@
+\documentclass[10pt]{article}
+\usepackage[paperwidth=34cm,paperheight=45cm,margin=1cm]{geometry}
+\usepackage{fontspec,booktabs,array,caption,amsmath}
+\setmainfont{Palatino Linotype}
+\usepackage[active,tightpage]{preview}
+\PreviewEnvironment{minipage}\setlength\PreviewBorder{6pt}
+\captionsetup{font=normalsize,labelformat=empty,skip=7pt}
+\newcommand{\sym}[1]{\textsuperscript{#1}}
+\begin{document}
+\begin{minipage}{24cm}\fontsize{10.5}{13}\selectfont\centering
+\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.12}
+\captionof{table}{Controlled Debt Structure: Second Half-Year Endpoint}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lcccccc@{}}\toprule
+ & \shortstack{Long loan share\\ES} & \shortstack{Long loan share\\ROA} & \shortstack{Short loans / assets\\ES} & \shortstack{Short loans / assets\\ROA} & \shortstack{Long loans / assets\\ES} & \shortstack{Long loans / assets\\ROA} \\
+\midrule
+Signal slope & -0.081 & -0.260 & 0.002 & -0.093 & -0.004 & 0.023 \\
+ & (0.134) & (1.020) & (0.021) & (0.162) & (0.041) & (0.192) \\
+Signal $\times$ Big4 & -0.106 & -1.579 & -0.047 & 0.208 & -0.200 & -0.380 \\
+ & (1.622) & (1.631) & (0.296) & (0.261) & (0.325) & (0.281) \\
+Big4 total signal slope & -0.186 & -1.839 & -0.045 & 0.115 & -0.203 & -0.358 \\
+ & (1.631) & (1.547) & (0.291) & (0.233) & (0.324) & (0.220) \\
+\addlinespace
+Firm FE & Yes & Yes & Yes & Yes & Yes & Yes \\
+Industry-year-SOE FE & Yes & Yes & Yes & Yes & Yes & Yes \\
+Endpoint-quarter FE & Yes & Yes & Yes & Yes & Yes & Yes \\
+Pre-news controls & Yes & Yes & Yes & Yes & Yes & Yes \\
+Initial outcome & Yes & Yes & Yes & Yes & Yes & Yes \\
+Asset tangibility & Yes & Yes & Yes & Yes & Yes & Yes \\
+Observations & 229 & 229 & 418 & 418 & 235 & 235 \\
+Firms / clusters & 90 & 90 & 150 & 150 & 91 & 91 \\
+\bottomrule\end{tabular*}
+\par\medskip\raggedright\fontsize{9}{11}\selectfont
+\textit{Notes:} Nonfinancial A-shares, 2013--2023. Hh: hth post-announcement June/December endpoint; base: nearest strictly pre-announcement half-year end. Cumulative Y changes are in pp. Separate ES (per 10 pp) and current ROA (per 1 pp) models. Prior financial and analyst controls are listed in the text. Endpoint-quarter FE are nested in industry-year-SOE FE in retained samples. Equal event weights; firm-clustered SE in parentheses. Complete cases and common support; no imputation or winsorization. * $p<0.10$, ** $p<0.05$, *** $p<0.01$, using unrounded $p$-values. Debt samples additionally require positive short borrowing and assets at baseline; asset tangibility is added. Missing bonds are not filled with zero.
+\end{minipage}
+\end{document}

@@ -1,0 +1,23 @@
+\documentclass[10pt]{article}
+\usepackage[paperwidth=34cm,paperheight=45cm,margin=1cm]{geometry}
+\usepackage{fontspec,booktabs,array,caption,amsmath}
+\setmainfont{Palatino Linotype}
+\usepackage[active,tightpage]{preview}
+\PreviewEnvironment{minipage}\setlength\PreviewBorder{6pt}
+\captionsetup{font=normalsize,labelformat=empty,skip=7pt}
+\newcommand{\sym}[1]{\textsuperscript{#1}}
+\begin{document}
+\begin{minipage}{20.5cm}\fontsize{10.5}{13}\selectfont\centering
+\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.12}
+\captionof{table}{Visible Institutional Holdings: Good versus Neutral News}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lcccc@{}}\toprule
+ & \shortstack{Big4\\Neutral} & \shortstack{Big4\\Good} & \shortstack{Non-Big4\\Neutral} & \shortstack{Non-Big4\\Good} \\
+\midrule
+Mean ownership change (pp) & -0.073 & -0.059 & -0.035 & -0.085 \\
+95\% cluster-bootstrap CI & [-0.176, 0.033] & [-0.120, -0.004] & [-0.054, -0.016] & [-0.129, -0.046] \\
+Events & 1,206 & 540 & 9,203 & 3,138 \\
+\bottomrule\end{tabular*}
+\par\medskip\raggedright\fontsize{9}{11}\selectfont
+\textit{Notes:} The good-minus-neutral difference for Big4 minus non-Big4 is 0.065 pp (95\% CI [-0.051, 0.181]). Four-category visible top-ten stakes: social security, Huijin, CSF and foreign institutions. Good: ES $>10\%$; neutral: ES in $[-10\%,10\%]$. Includes financial firms. Nearest quarter-end strictly before to first quarter-end strictly after announcement. Equal event weights; 1,000 firm-cluster bootstrap draws. Unconfirmed-holder accounts excluded. Descriptive means, not controlled regression coefficients.
+\end{minipage}
+\end{document}

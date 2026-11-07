@@ -1,0 +1,33 @@
+\documentclass[10pt]{article}
+\usepackage[paperwidth=34cm,paperheight=45cm,margin=1cm]{geometry}
+\usepackage{fontspec,booktabs,array,caption,amsmath}
+\setmainfont{Palatino Linotype}
+\usepackage[active,tightpage]{preview}
+\PreviewEnvironment{minipage}\setlength\PreviewBorder{6pt}
+\captionsetup{font=normalsize,labelformat=empty,skip=7pt}
+\newcommand{\sym}[1]{\textsuperscript{#1}}
+\begin{document}
+\begin{minipage}{24cm}\fontsize{10.5}{13}\selectfont\centering
+\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.12}
+\captionof{table}{Simple Debt Baselines: Fiscal-Year $t+1$ End}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lcccccc@{}}\toprule
+ & \shortstack{Long loan share\\M1} & \shortstack{Long loan share\\M2} & \shortstack{Short loans / assets\\M1} & \shortstack{Short loans / assets\\M2} & \shortstack{Long loans / assets\\M1} & \shortstack{Long loans / assets\\M2} \\
+\midrule
+Signal slope & 0.010 & 0.010 & 0.000 & 0.001 & 0.004\sym{**} & 0.004\sym{**} \\
+ & (0.008) & (0.008) & (0.003) & (0.003) & (0.002) & (0.002) \\
+Signal $\times$ Big4 & --- & -0.017 & --- & -0.002 & --- & -0.004 \\
+ &  & (0.027) &  & (0.011) &  & (0.007) \\
+Big4 total signal slope & --- & -0.007 & --- & -0.002 & --- & 0.000 \\
+ &  & (0.026) &  & (0.011) &  & (0.006) \\
+\addlinespace
+Fiscal-year FE & Yes & Yes & Yes & Yes & Yes & Yes \\
+Financial controls & No & No & No & No & No & No \\
+Firm FE & No & No & No & No & No & No \\
+Firm-clustered SE & Yes & Yes & Yes & Yes & Yes & Yes \\
+Observations & 8,575 & 8,575 & 12,803 & 12,803 & 9,735 & 9,735 \\
+Firms / clusters & 2,670 & 2,670 & 3,590 & 3,590 & 2,996 & 2,996 \\
+\bottomrule\end{tabular*}
+\par\medskip\raggedright\fontsize{9}{11}\selectfont
+\textit{Notes:} Nonfinancial firms, fiscal years 2013--2023. Outcome: 100 times the change from the latest pre-announcement quarter-end to fiscal year $t+h$ end. M1: change on ES and fiscal-year FE; M2 adds Big4 and ES $\times$ Big4. ES is scaled per 10 pp. The signal slope is pooled in M1 and non-Big4 in M2. Total Big4 slopes are linear combinations. Parentheses: firm-clustered SE. No financial controls or winsorization. Stars use stored unrounded $p$-values: * $p<0.10$, ** $p<0.05$, *** $p<0.01$.
+\end{minipage}
+\end{document}

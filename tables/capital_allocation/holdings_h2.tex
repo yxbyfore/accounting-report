@@ -1,0 +1,35 @@
+\documentclass[10pt]{article}
+\usepackage[paperwidth=34cm,paperheight=45cm,margin=1cm]{geometry}
+\usepackage{fontspec,booktabs,array,caption,amsmath}
+\setmainfont{Palatino Linotype}
+\usepackage[active,tightpage]{preview}
+\PreviewEnvironment{minipage}\setlength\PreviewBorder{6pt}
+\captionsetup{font=normalsize,labelformat=empty,skip=7pt}
+\newcommand{\sym}[1]{\textsuperscript{#1}}
+\begin{document}
+\begin{minipage}{21cm}\fontsize{10.5}{13}\selectfont\centering
+\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.12}
+\captionof{table}{Controlled Holdings Responses: Second Half-Year Endpoint}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lcccc@{}}\toprule
+ & \shortstack{Four-category total\\ES} & \shortstack{Four-category total\\ROA} & \shortstack{Investment funds\\ES} & \shortstack{Investment funds\\ROA} \\
+\midrule
+Signal slope & -0.003 & 0.004 & 0.004 & -0.012 \\
+ & (0.006) & (0.019) & (0.005) & (0.017) \\
+Signal $\times$ Big4 & 0.018 & 0.203\sym{**} & -0.009 & 0.047 \\
+ & (0.012) & (0.091) & (0.010) & (0.041) \\
+Big4 total signal slope & 0.015 & 0.206\sym{**} & -0.005 & 0.036 \\
+ & (0.012) & (0.093) & (0.009) & (0.040) \\
+\addlinespace
+Firm FE & Yes & Yes & Yes & Yes \\
+Industry-year-SOE FE & Yes & Yes & Yes & Yes \\
+Endpoint-quarter FE & Yes & Yes & Yes & Yes \\
+Pre-news controls & Yes & Yes & Yes & Yes \\
+Initial outcome & Yes & Yes & Yes & Yes \\
+Asset tangibility & No & No & No & No \\
+Observations & 2,096 & 2,096 & 2,096 & 2,096 \\
+Firms / clusters & 619 & 619 & 619 & 619 \\
+\bottomrule\end{tabular*}
+\par\medskip\raggedright\fontsize{9}{11}\selectfont
+\textit{Notes:} Nonfinancial A-shares, 2013--2023. Hh: hth post-announcement June/December endpoint; base: nearest strictly pre-announcement half-year end. Cumulative Y changes are in pp. Separate ES (per 10 pp) and current ROA (per 1 pp) models. Prior financial and analyst controls are listed in the text. Endpoint-quarter FE are nested in industry-year-SOE FE in retained samples. Equal event weights; firm-clustered SE in parentheses. Complete cases and common support; no imputation or winsorization. * $p<0.10$, ** $p<0.05$, *** $p<0.01$, using unrounded $p$-values. Ownership is visible top-ten stake; securities investment funds are identified separately. Four-category total excludes the additional fund category.
+\end{minipage}
+\end{document}

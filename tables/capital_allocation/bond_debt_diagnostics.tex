@@ -1,0 +1,33 @@
+\documentclass[10pt]{article}
+\usepackage[paperwidth=34cm,paperheight=45cm,margin=1cm]{geometry}
+\usepackage{fontspec,booktabs,array,caption,amsmath}
+\setmainfont{Palatino Linotype}
+\usepackage[active,tightpage]{preview}
+\PreviewEnvironment{minipage}\setlength\PreviewBorder{6pt}
+\captionsetup{font=normalsize,labelformat=empty,skip=7pt}
+\newcommand{\sym}[1]{\textsuperscript{#1}}
+\begin{document}
+\begin{minipage}{22cm}\fontsize{10.5}{13}\selectfont\centering
+\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.12}
+\captionof{table}{Including Bonds: Selected Small-Sample Diagnostics}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lccc@{}}\toprule
+ & \shortstack{Long debt share\\ROA, H2} & \shortstack{Net long additions\\ROA, H2} & \shortstack{Net long additions\\ROA, H5} \\
+\midrule
+Signal slope & -6.465\sym{***} & 3.322\sym{***} & 2.814 \\
+ & (1.196) & (0.107) & (2.399) \\
+Signal $\times$ Big4 & 13.722\sym{***} & -1.855\sym{***} & -3.871\sym{***} \\
+ & (2.434) & (0.075) & (1.217) \\
+Big4 total signal slope & 7.257\sym{***} & 1.467\sym{***} & -1.057 \\
+ & (1.260) & (0.102) & (2.386) \\
+Firm / cell / endpoint FE & Yes & Yes & Yes \\
+Pre-news controls and tangibility & Yes & Yes & Yes \\
+Initial ratio & Yes & Yes & Yes \\
+Observations & 40 & 40 & 57 \\
+Firms / clusters & 18 & 18 & 19 \\
+Residual degrees of freedom & 5 & 4 & 21 \\
+Status & Small-sample & Small-sample & Small-sample \\
+\bottomrule\end{tabular*}
+\par\medskip\raggedright\fontsize{9}{11}\selectfont
+\textit{Notes:} Nonfinancial A-shares, 2013--2023. Hh: hth post-announcement June/December endpoint; base: nearest strictly pre-announcement half-year end. Cumulative Y changes are in pp. Separate ES (per 10 pp) and current ROA (per 1 pp) models. Prior financial and analyst controls are listed in the text. Endpoint-quarter FE are nested in industry-year-SOE FE in retained samples. Equal event weights; firm-clustered SE in parentheses. Complete cases and common support; no imputation or winsorization. * $p<0.10$, ** $p<0.05$, *** $p<0.01$, using unrounded $p$-values. Long debt equals long loans plus bonds. Net additions are cumulative balance changes divided by fixed baseline assets. These columns are diagnostics; These are the three ROA interactions with $p<0.05$ among the 24 small-sample designs. H4/H6 have fewer than 30 events and were not estimated. See the complete workbook for all designs.
+\end{minipage}
+\end{document}
