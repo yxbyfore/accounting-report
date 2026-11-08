@@ -233,6 +233,16 @@ window.Quarto = {
   <ul class="collapse">
   <li><a href="#memo-four-fe-paths" id="toc-memo-four-fe-paths" class="nav-link" data-scroll-target="#memo-four-fe-paths">2012年前后：四种固定效应的方程与组间差值</a></li>
   </ul></li>
+  <li><a href="#memo-ue-bins-periods" id="toc-memo-ue-bins-periods" class="nav-link" data-scroll-target="#memo-ue-bins-periods">UE消息分档：构成差异与同档市场响应</a>
+  <ul class="collapse">
+  <li><a href="#memo-ue-bins-periods-shares" id="toc-memo-ue-bins-periods-shares" class="nav-link" data-scroll-target="#memo-ue-bins-periods-shares">固定九组的公告占比</a></li>
+  <li><a href="#memo-ue-bins-periods-absolute-all" id="toc-memo-ue-bins-periods-absolute-all" class="nav-link" data-scroll-target="#memo-ue-bins-periods-absolute-all">固定绝对九组｜全期（2001—2024）</a></li>
+  <li><a href="#memo-ue-bins-periods-absolute-before2012" id="toc-memo-ue-bins-periods-absolute-before2012" class="nav-link" data-scroll-target="#memo-ue-bins-periods-absolute-before2012">固定绝对九组｜2012年前（2001—2011）</a></li>
+  <li><a href="#memo-ue-bins-periods-absolute-after2012" id="toc-memo-ue-bins-periods-absolute-after2012" class="nav-link" data-scroll-target="#memo-ue-bins-periods-absolute-after2012">固定绝对九组｜2012年起（2012—2024）</a></li>
+  <li><a href="#memo-ue-bins-periods-annual-all" id="toc-memo-ue-bins-periods-annual-all" class="nav-link" data-scroll-target="#memo-ue-bins-periods-annual-all">年度共同十分位｜全期（2001—2024）</a></li>
+  <li><a href="#memo-ue-bins-periods-annual-before2012" id="toc-memo-ue-bins-periods-annual-before2012" class="nav-link" data-scroll-target="#memo-ue-bins-periods-annual-before2012">年度共同十分位｜2012年前（2001—2011）</a></li>
+  <li><a href="#memo-ue-bins-periods-annual-after2012" id="toc-memo-ue-bins-periods-annual-after2012" class="nav-link" data-scroll-target="#memo-ue-bins-periods-annual-after2012">年度共同十分位｜2012年起（2012—2024）</a></li>
+  </ul></li>
   <li><a href="#memo-rolling-abcd" id="toc-memo-rolling-abcd" class="nav-link" data-scroll-target="#memo-rolling-abcd">三年滚动A—D：公司池、预期口径与FE的对照</a>
   <ul class="collapse">
   <li><a href="#rolling-memo-full-ue" id="toc-rolling-memo-full-ue" class="nav-link" data-scroll-target="#rolling-memo-full-ue">UE：消息门槛±0.10%</a></li>
@@ -319,42 +329,48 @@ UE_{it}=\frac{EPS_{it}-F_{it}}{P_{pre,it}}.
 <td><a href="#memo-four-fe-paths">四模型前后对照</a></td>
 </tr>
 <tr class="odd">
+<td>UE消息构成与分档响应</td>
+<td>固定绝对九组与年度共同十分位，分别比较全期及2012前后</td>
+<td>四大正向UE占比较高；固定幅度下仅早期最小正档有一致额外响应，未见普遍好消息溢价</td>
+<td><a href="#memo-ue-bins-periods">消息构成与分档比较</a></td>
+</tr>
+<tr class="even">
 <td>三年滚动A—D与三套公司池</td>
 <td>三套公司池、UE／ES分类；同一窗口内固定样本比较四种时间FE</td>
 <td>共同／分组事件时间路径显著影响额外响应判断；窗口重叠与客户构成限制因果解释</td>
 <td><a href="#memo-rolling-abcd">滚动对照与三池入口</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>早上市曾用四大公司池</td>
 <td>UE／ES好、中、坏消息的分期D模型及历年审计构成</td>
 <td>UE与ES的组间结论存在差异；选定公司池和客户构成影响解释</td>
 <td><a href="#memo-ever-big4-three">UE</a> · <a href="#memo-ever-big4-three-es">ES</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>旧公司匹配ERC</td>
 <td>1∶1与全邻居两种匹配，分别比较三个CAR窗口</td>
 <td>全交互后支持集中在中间窗口；全期信息选池及旧重组排除口径单列说明</td>
 <td><a href="#sec-memo-erc-interactions">匹配ERC</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>审计费用</td>
 <td>原始费用、全样本／留任／换所年度溢价及断点检验</td>
 <td>区分名义费用、相对溢价和正式断点检验；不只依据曲线判断2012突变</td>
 <td><a href="#sec-memo-audit-fee-2012">收费</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Distance／IV</td>
 <td>距离与四大采用的一阶段、审计结果2SLS及提前趋势</td>
 <td>一阶段强度及排除限制仍有问题，暂未形成可信主IV</td>
 <td><a href="#sec-memo-distance">距离探索</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>本土化政策与财报事后质量</td>
 <td>2009年政策事件、好消息后三年财报问题与盈利持续性</td>
 <td>政策三日相对少涨；四大好消息事后问题较少，ROA持续性较强，ES持续性不显著</td>
 <td><a href="#sec-memo-localization-2009">政策</a> · <a href="#sec-memo-good-news-verification">事后验证</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>机构持仓与借贷</td>
 <td>股东结构、简单债务基准、持仓响应及借贷数量／期限</td>
 <td>持仓仅有局部正向差异，债务没有一致期限改善；含债券结果受小样本限制</td>
@@ -385,9 +401,9 @@ UE_{it}=\frac{EPS_{it}-F_{it}}{P_{pre,it}}.
 <td>18个四大ERC增量均为负且未达10%；不能把该池的分组消息响应写成连续ERC也支持四大优势</td>
 </tr>
 <tr class="even">
-<td>UE分布、尾部与分档响应</td>
-<td>已做直方图、原始CDF及共同分组阴影，另有年度十分位、固定绝对分组／共同十分位响应与支持数</td>
-<td>分档、参考组及同幅度比较需要区分；少数档位的点态星号还受多重比较和早期小单元限制。分布图的缩尾展示没有改变原回归UE</td>
+<td>UE分布与同档可比性</td>
+<td>原始分布、CDF及同一UE档内的消息幅度和企业特征</td>
+<td>分档响应与九组占比见上方；同档内部仍可能有幅度及客户差异，企业匹配需另行核对</td>
 </tr>
 <tr class="odd">
 <td>正负UE的ERC与控制交互</td>
@@ -653,6 +669,732 @@ CAR^w_{it}=\alpha_i+\lambda_t+\delta B_{it}+\beta U_{it}
 </div>
 </details>
 <p><a href="./23_big4_effect.html#market-unmatched-baseline">完整样本正文：三个时期ERC、四FE对照及两组路径</a>。后续的匹配和曾用四大公司池属于不同人群或历史输入，不能代替这里的完整样本结果，也不能据分期显著性判断正式前后差异。当前应面对的问题是：四大身份带来的额外响应与客户特征、信息环境及中性基准路径尚未清楚分离。</p>
+</section>
+</section>
+</section>
+<section id="memo-ue-bins-periods" class="level2">
+<h2 class="anchored" data-anchor-id="memo-ue-bins-periods">UE消息分档：构成差异与同档市场响应</h2>
+<p><strong>问题与样本。</strong> 将好消息进一步按UE幅度分档，比较相近盈利消息对应的四大与非四大市场响应。样本为全部合格预测公告，不限上市时间或曾用四大；严格公告前180天预测，保留原始UE及负消息，不缩尾、不排重组、不匹配，按财报所属年度的实际审计师分组。每期A—D使用同一实际公告—交易日成员；前后两期不要求为同一批公司。这是消息分档比较，企业特征与同档内部的消息幅度仍可能不同。</p>
+<p><strong>两种分档。</strong> 固定绝对九组使用UE切点±0.001、±0.0025、±0.005、±0.01，即±0.10%、±0.25%、±0.50%、±1.00%。G5为<span class="math inline">\([-0.001,0.001]\)</span>近零参考，模型中记为<span class="math inline">\(c=0\)</span>；正向G6—G9依次为<span class="math inline">\((0.10\%,0.25\%]\)</span>、<span class="math inline">\((0.25\%,0.50\%]\)</span>、<span class="math inline">\((0.50\%,1.00\%]\)</span>及<span class="math inline">\(&gt;1.00\%\)</span>。负切点相等值归较高档，正切点相等值归较低档，近零两端均包含。</p>
+<p>年度共同十分位先在每年将两审计组合在一起排序，沿用共同十分位，再将<span class="math inline">\(|UE|\le0.001\)</span>的公告单列为近零参考，保留其余1—10档。不同年份的同一档不代表相同绝对幅度；两个审计组共用分位界限。</p>
+<p><strong>回归与读图。</strong> <span class="math inline">\(e\)</span>为年报公告，<span class="math inline">\(\tau\)</span>为相对交易日，<span class="math inline">\(d(e,\tau)\)</span>为实际日期，<span class="math inline">\(B_e\)</span>为年度四大身份，<span class="math inline">\(C_e\)</span>为消息档，<span class="math inline">\(K=\{-5,-4,-3,-2,0,1,2,3,4,5\}\)</span>。因变量为日度收盘价的对数，窗口<span class="math inline">\([-5,+5]\)</span>、第−1日为基期；各方法、时期及模型分别估计，均含公告事件固定效应，标准误按公告事件聚类，无财务控制或连续UE幅度控制。图示第0日响应乘100及95%区间，近似百分点，不是累计CAR。</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>时期</th>
+<th style="text-align: right;">公告数／聚类数</th>
+<th style="text-align: right;">日度观测N</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2001—2024</td>
+<td style="text-align: right;">30,098</td>
+<td style="text-align: right;">330,930</td>
+</tr>
+<tr class="even">
+<td>2001—2011</td>
+<td style="text-align: right;">6,237</td>
+<td style="text-align: right;">68,532</td>
+</tr>
+<tr class="odd">
+<td>2012—2024</td>
+<td style="text-align: right;">23,861</td>
+<td style="text-align: right;">262,398</td>
+</tr>
+</tbody>
+</table>
+<p>A／C约束两组共用近零消息的事件时间路径；B／D允许各组相对自身近零路径。直接组差为<span class="math inline">\(\theta_{1c0}-\theta_{0c0}\)</span>，使用同一回归的协方差计算；一组显著不代表组差显著。</p>
+<section id="memo-ue-bins-periods-shares" class="level3">
+<h3 class="anchored" data-anchor-id="memo-ue-bins-periods-shares">固定九组的公告占比</h3>
+<p><strong>消息构成。</strong> 两期四大财报都更多落在正向UE档，较大正向档尤其明显。UE&gt;0.10%的比例在早期为四大48.46%、非四大37.15%，后期为42.80%、25.95%；两组均下降，非四大下降更多。全期UE&gt;1%的占比分别为16.06%和7.43%。因此，粗分好／中／坏消息之后，组内仍可能包含幅度构成差异。</p>
+<p>每张图的分母分别为该时期、该审计组的公告总数，每种颜色九档合计100%；纵轴是报告占比。G5灰虚线标示近零参考。全期四大／非四大为3,251／26,847份，早期681／5,556份，后期2,570／21,291份。图描述消息分布，不含市场响应或显著性检验。</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/market_information/ue_bins_periods/shares/all_shares_1a35de51.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>全期（2001—2024）：固定UE九组的组内公告占比；四大maroon、非四大gray，各自合计100%</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/market_information/ue_bins_periods/shares/before2012_shares_e59dbf57.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>2012年前（2001—2011）：固定UE九组的组内公告占比；四大maroon、非四大gray，各自合计100%</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/market_information/ue_bins_periods/shares/after2012_shares_12f91b94.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>2012年起（2012—2024）：固定UE九组的组内公告占比；四大maroon、非四大gray，各自合计100%</figcaption>
+</figure>
+</div>
+<p><a href="tables/ue_bins_periods/shares.xlsx">各档计数与占比工作簿</a> · <a href="tables/ue_bins_periods/shares.csv">占比CSV</a></p>
+<p><strong>固定绝对幅度下的响应。</strong> 全期及2012年起，四个正向档在A—D的直接组差均未达5%。早期只有G6（UE在0.10%至0.25%）的正向差在四模型均达5%，p值依次为0.016353、0.030768、0.032414、0.020147；D模型差值为0.950个百分点（SE=0.409）。其余正向档组差未达5%；后期G6为负且不显著。D后期负向G1、G3的直接差逐点p约0.0385、0.0212。局部差异没有形成普遍的四大好消息溢价，逐点检验未作多重比较校正。</p>
+<p><strong>年度共同十分位下的响应。</strong> 2012年起，B／D的各档组差联合检验达到5%，表示部分档位存在整体差异，方向需要逐档读图；它不等于四大得到更多正向奖励。年度分位的档位含义随年份变化，不能直接与固定绝对档位混用。</p>
+<p><strong>第0日所有非参考档的直接组差联合为零：p值。</strong></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 15%">
+<col style="width: 21%">
+<col style="width: 21%">
+<col style="width: 21%">
+<col style="width: 21%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>分档方法／时期</th>
+<th style="text-align: right;">A</th>
+<th style="text-align: right;">B</th>
+<th style="text-align: right;">C</th>
+<th style="text-align: right;">D</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>固定绝对九组／全期（2001—2024）</td>
+<td style="text-align: right;">0.335205</td>
+<td style="text-align: right;">0.346401</td>
+<td style="text-align: right;">0.435934</td>
+<td style="text-align: right;">0.394416</td>
+</tr>
+<tr class="even">
+<td>固定绝对九组／2012年前（2001—2011）</td>
+<td style="text-align: right;">0.111578</td>
+<td style="text-align: right;">0.417711</td>
+<td style="text-align: right;">0.437045</td>
+<td style="text-align: right;">0.468837</td>
+</tr>
+<tr class="odd">
+<td>固定绝对九组／2012年起（2012—2024）</td>
+<td style="text-align: right;">0.682237</td>
+<td style="text-align: right;">0.406713</td>
+<td style="text-align: right;">0.673153</td>
+<td style="text-align: right;">0.432461</td>
+</tr>
+<tr class="even">
+<td>年度共同十分位／全期（2001—2024）</td>
+<td style="text-align: right;">0.165094</td>
+<td style="text-align: right;">0.125010</td>
+<td style="text-align: right;">0.071745</td>
+<td style="text-align: right;">0.053642</td>
+</tr>
+<tr class="odd">
+<td>年度共同十分位／2012年前（2001—2011）</td>
+<td style="text-align: right;">0.071708</td>
+<td style="text-align: right;">0.225395</td>
+<td style="text-align: right;">0.195642</td>
+<td style="text-align: right;">0.188638</td>
+</tr>
+<tr class="even">
+<td>年度共同十分位／2012年起（2012—2024）</td>
+<td style="text-align: right;">0.092548</td>
+<td style="text-align: right;">0.038899</td>
+<td style="text-align: right;">0.060804</td>
+<td style="text-align: right;">0.029345</td>
+</tr>
+</tbody>
+</table>
+<p>年度十分位的早期事前组差联合检验四模型均p&lt;0.001；固定九组早期A／B／C／D分别为0.057572／0.206092／0.060643／0.232241，5%未拒绝仍不能证明平行趋势。以上为分期估计，本节没有正式2012前后系数差检验。</p>
+<p><a href="tables/ue_bins_periods/results.xlsx">分档响应完整结果工作簿：六组A—D并列表、各档系数、联合检验及支持数</a></p>
+<p><strong>各时期完整图。</strong> 两种方法分别列出全期、2012年前和2012年起的四模型；每个模型先给出方程，再独立展示两组响应与直接组差。</p>
+<details>
+<summary>
+固定绝对九组｜全期（2001—2024）：A—D模型与组间差
+</summary>
+</details></section>
+<section id="memo-ue-bins-periods-absolute-all" class="level3">
+<h3 class="anchored" data-anchor-id="memo-ue-bins-periods-absolute-all">固定绝对九组｜全期（2001—2024）</h3>
+<section id="memo-ue-bins-periods-absolute-all-a" class="level4">
+<h4 class="anchored" data-anchor-id="memo-ue-bins-periods-absolute-all-a">A｜共同事件时间FE＋共同交易日FE</h4>
+<p><span class="math display">\[
+\begin{aligned}
+\ln P_{e\tau}&amp;=\alpha_e+\lambda^{A}_{\tau}+\mu^{A}_{d(e,\tau)}\\
+&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{A}_{gck}\,1(B_e=g,C_e=c,\tau=k)\\
+&amp;+\varepsilon^{A}_{e\tau}.
+\end{aligned}
+\]</span></p>
+<p><strong>基准：</strong> 共同近零事件时间路径约束下的响应。</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/market_information/ue_bins_periods/absolute/all/A_responses_390cc99a.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>固定绝对九组；全期（2001—2024）；A；四大与非四大的分档响应。共同近零事件时间路径约束下的响应；第0日相对−1，系数×100，报告聚类95%区间</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/market_information/ue_bins_periods/absolute/all/A_gap_b0f1cf46.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>固定绝对九组；全期（2001—2024）；A；四大减非四大的直接响应差。共同近零事件时间路径约束下的响应；第0日相对−1，系数×100，报告聚类95%区间</figcaption>
+</figure>
+</div>
+</section>
+<section id="memo-ue-bins-periods-absolute-all-b" class="level4">
+<h4 class="anchored" data-anchor-id="memo-ue-bins-periods-absolute-all-b">B｜审计组×事件时间FE＋共同交易日FE</h4>
+<p><span class="math display">\[
+\begin{aligned}
+\ln P_{e\tau}&amp;=\alpha_e+\lambda^{B}_{B_e,\tau}+\mu^{B}_{d(e,\tau)}\\
+&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{B}_{gck}\,1(B_e=g,C_e=c,\tau=k)\\
+&amp;+\varepsilon^{B}_{e\tau}.
+\end{aligned}
+\]</span></p>
+<p><strong>基准：</strong> 各审计组相对自身近零消息的响应。</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/market_information/ue_bins_periods/absolute/all/B_responses_805a2989.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>固定绝对九组；全期（2001—2024）；B；四大与非四大的分档响应。各审计组相对自身近零消息的响应；第0日相对−1，系数×100，报告聚类95%区间</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/market_information/ue_bins_periods/absolute/all/B_gap_7a3f0676.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>固定绝对九组；全期（2001—2024）；B；四大减非四大的直接响应差。各审计组相对自身近零消息的响应；第0日相对−1，系数×100，报告聚类95%区间</figcaption>
+</figure>
+</div>
+</section>
+<section id="memo-ue-bins-periods-absolute-all-c" class="level4">
+<h4 class="anchored" data-anchor-id="memo-ue-bins-periods-absolute-all-c">C｜共同事件时间FE＋审计组×交易日FE</h4>
+<p><span class="math display">\[
+\begin{aligned}
+\ln P_{e\tau}&amp;=\alpha_e+\lambda^{C}_{\tau}+\mu^{C}_{B_e,d(e,\tau)}\\
+&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{C}_{gck}\,1(B_e=g,C_e=c,\tau=k)\\
+&amp;+\varepsilon^{C}_{e\tau}.
+\end{aligned}
+\]</span></p>
+<p><strong>基准：</strong> 共同近零事件时间路径约束下的响应。</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/market_information/ue_bins_periods/absolute/all/C_responses_550a4073.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>固定绝对九组；全期（2001—2024）；C；四大与非四大的分档响应。共同近零事件时间路径约束下的响应；第0日相对−1，系数×100，报告聚类95%区间</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/market_information/ue_bins_periods/absolute/all/C_gap_226fcd28.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>固定绝对九组；全期（2001—2024）；C；四大减非四大的直接响应差。共同近零事件时间路径约束下的响应；第0日相对−1，系数×100，报告聚类95%区间</figcaption>
+</figure>
+</div>
+</section>
+<section id="memo-ue-bins-periods-absolute-all-d" class="level4">
+<h4 class="anchored" data-anchor-id="memo-ue-bins-periods-absolute-all-d">D｜审计组×事件时间FE＋审计组×交易日FE</h4>
+<p><span class="math display">\[
+\begin{aligned}
+\ln P_{e\tau}&amp;=\alpha_e+\lambda^{D}_{B_e,\tau}+\mu^{D}_{B_e,d(e,\tau)}\\
+&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{D}_{gck}\,1(B_e=g,C_e=c,\tau=k)\\
+&amp;+\varepsilon^{D}_{e\tau}.
+\end{aligned}
+\]</span></p>
+<p><strong>基准：</strong> 各审计组相对自身近零消息的响应。</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/market_information/ue_bins_periods/absolute/all/D_responses_9f5355d4.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>固定绝对九组；全期（2001—2024）；D；四大与非四大的分档响应。各审计组相对自身近零消息的响应；第0日相对−1，系数×100，报告聚类95%区间</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/market_information/ue_bins_periods/absolute/all/D_gap_7388f49e.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>固定绝对九组；全期（2001—2024）；D；四大减非四大的直接响应差。各审计组相对自身近零消息的响应；第0日相对−1，系数×100，报告聚类95%区间</figcaption>
+</figure>
+</div>
+
+<details open="">
+<summary>
+固定绝对九组｜2012年前（2001—2011）：A—D模型与组间差
+</summary>
+</details></section>
+</section>
+<section id="memo-ue-bins-periods-absolute-before2012" class="level3">
+<h3 class="anchored" data-anchor-id="memo-ue-bins-periods-absolute-before2012">固定绝对九组｜2012年前（2001—2011）</h3>
+<section id="memo-ue-bins-periods-absolute-before2012-a" class="level4">
+<h4 class="anchored" data-anchor-id="memo-ue-bins-periods-absolute-before2012-a">A｜共同事件时间FE＋共同交易日FE</h4>
+<p><span class="math display">\[
+\begin{aligned}
+\ln P_{e\tau}&amp;=\alpha_e+\lambda^{A}_{\tau}+\mu^{A}_{d(e,\tau)}\\
+&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{A}_{gck}\,1(B_e=g,C_e=c,\tau=k)\\
+&amp;+\varepsilon^{A}_{e\tau}.
+\end{aligned}
+\]</span></p>
+<p><strong>基准：</strong> 共同近零事件时间路径约束下的响应。</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/market_information/ue_bins_periods/absolute/before2012/A_responses_6f39525e.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>固定绝对九组；2012年前（2001—2011）；A；四大与非四大的分档响应。共同近零事件时间路径约束下的响应；第0日相对−1，系数×100，报告聚类95%区间</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/market_information/ue_bins_periods/absolute/before2012/A_gap_c496e9af.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>固定绝对九组；2012年前（2001—2011）；A；四大减非四大的直接响应差。共同近零事件时间路径约束下的响应；第0日相对−1，系数×100，报告聚类95%区间</figcaption>
+</figure>
+</div>
+</section>
+<section id="memo-ue-bins-periods-absolute-before2012-b" class="level4">
+<h4 class="anchored" data-anchor-id="memo-ue-bins-periods-absolute-before2012-b">B｜审计组×事件时间FE＋共同交易日FE</h4>
+<p><span class="math display">\[
+\begin{aligned}
+\ln P_{e\tau}&amp;=\alpha_e+\lambda^{B}_{B_e,\tau}+\mu^{B}_{d(e,\tau)}\\
+&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{B}_{gck}\,1(B_e=g,C_e=c,\tau=k)\\
+&amp;+\varepsilon^{B}_{e\tau}.
+\end{aligned}
+\]</span></p>
+<p><strong>基准：</strong> 各审计组相对自身近零消息的响应。</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/market_information/ue_bins_periods/absolute/before2012/B_responses_1278a747.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>固定绝对九组；2012年前（2001—2011）；B；四大与非四大的分档响应。各审计组相对自身近零消息的响应；第0日相对−1，系数×100，报告聚类95%区间</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/market_information/ue_bins_periods/absolute/before2012/B_gap_e65c1d45.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>固定绝对九组；2012年前（2001—2011）；B；四大减非四大的直接响应差。各审计组相对自身近零消息的响应；第0日相对−1，系数×100，报告聚类95%区间</figcaption>
+</figure>
+</div>
+</section>
+<section id="memo-ue-bins-periods-absolute-before2012-c" class="level4">
+<h4 class="anchored" data-anchor-id="memo-ue-bins-periods-absolute-before2012-c">C｜共同事件时间FE＋审计组×交易日FE</h4>
+<p><span class="math display">\[
+\begin{aligned}
+\ln P_{e\tau}&amp;=\alpha_e+\lambda^{C}_{\tau}+\mu^{C}_{B_e,d(e,\tau)}\\
+&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{C}_{gck}\,1(B_e=g,C_e=c,\tau=k)\\
+&amp;+\varepsilon^{C}_{e\tau}.
+\end{aligned}
+\]</span></p>
+<p><strong>基准：</strong> 共同近零事件时间路径约束下的响应。</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/market_information/ue_bins_periods/absolute/before2012/C_responses_ae2a80ca.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>固定绝对九组；2012年前（2001—2011）；C；四大与非四大的分档响应。共同近零事件时间路径约束下的响应；第0日相对−1，系数×100，报告聚类95%区间</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/market_information/ue_bins_periods/absolute/before2012/C_gap_737bba3a.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>固定绝对九组；2012年前（2001—2011）；C；四大减非四大的直接响应差。共同近零事件时间路径约束下的响应；第0日相对−1，系数×100，报告聚类95%区间</figcaption>
+</figure>
+</div>
+</section>
+<section id="memo-ue-bins-periods-absolute-before2012-d" class="level4">
+<h4 class="anchored" data-anchor-id="memo-ue-bins-periods-absolute-before2012-d">D｜审计组×事件时间FE＋审计组×交易日FE</h4>
+<p><span class="math display">\[
+\begin{aligned}
+\ln P_{e\tau}&amp;=\alpha_e+\lambda^{D}_{B_e,\tau}+\mu^{D}_{B_e,d(e,\tau)}\\
+&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{D}_{gck}\,1(B_e=g,C_e=c,\tau=k)\\
+&amp;+\varepsilon^{D}_{e\tau}.
+\end{aligned}
+\]</span></p>
+<p><strong>基准：</strong> 各审计组相对自身近零消息的响应。</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/market_information/ue_bins_periods/absolute/before2012/D_responses_da6e66ad.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>固定绝对九组；2012年前（2001—2011）；D；四大与非四大的分档响应。各审计组相对自身近零消息的响应；第0日相对−1，系数×100，报告聚类95%区间</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/market_information/ue_bins_periods/absolute/before2012/D_gap_348615b4.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>固定绝对九组；2012年前（2001—2011）；D；四大减非四大的直接响应差。各审计组相对自身近零消息的响应；第0日相对−1，系数×100，报告聚类95%区间</figcaption>
+</figure>
+</div>
+
+<details>
+<summary>
+固定绝对九组｜2012年起（2012—2024）：A—D模型与组间差
+</summary>
+</details></section>
+</section>
+<section id="memo-ue-bins-periods-absolute-after2012" class="level3">
+<h3 class="anchored" data-anchor-id="memo-ue-bins-periods-absolute-after2012">固定绝对九组｜2012年起（2012—2024）</h3>
+<section id="memo-ue-bins-periods-absolute-after2012-a" class="level4">
+<h4 class="anchored" data-anchor-id="memo-ue-bins-periods-absolute-after2012-a">A｜共同事件时间FE＋共同交易日FE</h4>
+<p><span class="math display">\[
+\begin{aligned}
+\ln P_{e\tau}&amp;=\alpha_e+\lambda^{A}_{\tau}+\mu^{A}_{d(e,\tau)}\\
+&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{A}_{gck}\,1(B_e=g,C_e=c,\tau=k)\\
+&amp;+\varepsilon^{A}_{e\tau}.
+\end{aligned}
+\]</span></p>
+<p><strong>基准：</strong> 共同近零事件时间路径约束下的响应。</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/market_information/ue_bins_periods/absolute/after2012/A_responses_5f3bd860.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>固定绝对九组；2012年起（2012—2024）；A；四大与非四大的分档响应。共同近零事件时间路径约束下的响应；第0日相对−1，系数×100，报告聚类95%区间</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/market_information/ue_bins_periods/absolute/after2012/A_gap_8cceefca.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>固定绝对九组；2012年起（2012—2024）；A；四大减非四大的直接响应差。共同近零事件时间路径约束下的响应；第0日相对−1，系数×100，报告聚类95%区间</figcaption>
+</figure>
+</div>
+</section>
+<section id="memo-ue-bins-periods-absolute-after2012-b" class="level4">
+<h4 class="anchored" data-anchor-id="memo-ue-bins-periods-absolute-after2012-b">B｜审计组×事件时间FE＋共同交易日FE</h4>
+<p><span class="math display">\[
+\begin{aligned}
+\ln P_{e\tau}&amp;=\alpha_e+\lambda^{B}_{B_e,\tau}+\mu^{B}_{d(e,\tau)}\\
+&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{B}_{gck}\,1(B_e=g,C_e=c,\tau=k)\\
+&amp;+\varepsilon^{B}_{e\tau}.
+\end{aligned}
+\]</span></p>
+<p><strong>基准：</strong> 各审计组相对自身近零消息的响应。</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/market_information/ue_bins_periods/absolute/after2012/B_responses_b77b0323.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>固定绝对九组；2012年起（2012—2024）；B；四大与非四大的分档响应。各审计组相对自身近零消息的响应；第0日相对−1，系数×100，报告聚类95%区间</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/market_information/ue_bins_periods/absolute/after2012/B_gap_aac3d3a2.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>固定绝对九组；2012年起（2012—2024）；B；四大减非四大的直接响应差。各审计组相对自身近零消息的响应；第0日相对−1，系数×100，报告聚类95%区间</figcaption>
+</figure>
+</div>
+</section>
+<section id="memo-ue-bins-periods-absolute-after2012-c" class="level4">
+<h4 class="anchored" data-anchor-id="memo-ue-bins-periods-absolute-after2012-c">C｜共同事件时间FE＋审计组×交易日FE</h4>
+<p><span class="math display">\[
+\begin{aligned}
+\ln P_{e\tau}&amp;=\alpha_e+\lambda^{C}_{\tau}+\mu^{C}_{B_e,d(e,\tau)}\\
+&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{C}_{gck}\,1(B_e=g,C_e=c,\tau=k)\\
+&amp;+\varepsilon^{C}_{e\tau}.
+\end{aligned}
+\]</span></p>
+<p><strong>基准：</strong> 共同近零事件时间路径约束下的响应。</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/market_information/ue_bins_periods/absolute/after2012/C_responses_e1f6312a.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>固定绝对九组；2012年起（2012—2024）；C；四大与非四大的分档响应。共同近零事件时间路径约束下的响应；第0日相对−1，系数×100，报告聚类95%区间</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/market_information/ue_bins_periods/absolute/after2012/C_gap_914e9ab9.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>固定绝对九组；2012年起（2012—2024）；C；四大减非四大的直接响应差。共同近零事件时间路径约束下的响应；第0日相对−1，系数×100，报告聚类95%区间</figcaption>
+</figure>
+</div>
+</section>
+<section id="memo-ue-bins-periods-absolute-after2012-d" class="level4">
+<h4 class="anchored" data-anchor-id="memo-ue-bins-periods-absolute-after2012-d">D｜审计组×事件时间FE＋审计组×交易日FE</h4>
+<p><span class="math display">\[
+\begin{aligned}
+\ln P_{e\tau}&amp;=\alpha_e+\lambda^{D}_{B_e,\tau}+\mu^{D}_{B_e,d(e,\tau)}\\
+&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{D}_{gck}\,1(B_e=g,C_e=c,\tau=k)\\
+&amp;+\varepsilon^{D}_{e\tau}.
+\end{aligned}
+\]</span></p>
+<p><strong>基准：</strong> 各审计组相对自身近零消息的响应。</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/market_information/ue_bins_periods/absolute/after2012/D_responses_b22c5e8d.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>固定绝对九组；2012年起（2012—2024）；D；四大与非四大的分档响应。各审计组相对自身近零消息的响应；第0日相对−1，系数×100，报告聚类95%区间</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/market_information/ue_bins_periods/absolute/after2012/D_gap_2ca30b17.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>固定绝对九组；2012年起（2012—2024）；D；四大减非四大的直接响应差。各审计组相对自身近零消息的响应；第0日相对−1，系数×100，报告聚类95%区间</figcaption>
+</figure>
+</div>
+
+<details>
+<summary>
+年度共同十分位｜全期（2001—2024）：A—D模型与组间差
+</summary>
+</details></section>
+</section>
+<section id="memo-ue-bins-periods-annual-all" class="level3">
+<h3 class="anchored" data-anchor-id="memo-ue-bins-periods-annual-all">年度共同十分位｜全期（2001—2024）</h3>
+<section id="memo-ue-bins-periods-annual-all-a" class="level4">
+<h4 class="anchored" data-anchor-id="memo-ue-bins-periods-annual-all-a">A｜共同事件时间FE＋共同交易日FE</h4>
+<p><span class="math display">\[
+\begin{aligned}
+\ln P_{e\tau}&amp;=\alpha_e+\lambda^{A}_{\tau}+\mu^{A}_{d(e,\tau)}\\
+&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{A}_{gck}\,1(B_e=g,C_e=c,\tau=k)\\
+&amp;+\varepsilon^{A}_{e\tau}.
+\end{aligned}
+\]</span></p>
+<p><strong>基准：</strong> 共同近零事件时间路径约束下的响应。</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/market_information/ue_bins_periods/annual/all/A_responses_3d784f46.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>年度共同十分位；全期（2001—2024）；A；四大与非四大的分档响应。共同近零事件时间路径约束下的响应；第0日相对−1，系数×100，报告聚类95%区间</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/market_information/ue_bins_periods/annual/all/A_gap_8c9202c1.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>年度共同十分位；全期（2001—2024）；A；四大减非四大的直接响应差。共同近零事件时间路径约束下的响应；第0日相对−1，系数×100，报告聚类95%区间</figcaption>
+</figure>
+</div>
+</section>
+<section id="memo-ue-bins-periods-annual-all-b" class="level4">
+<h4 class="anchored" data-anchor-id="memo-ue-bins-periods-annual-all-b">B｜审计组×事件时间FE＋共同交易日FE</h4>
+<p><span class="math display">\[
+\begin{aligned}
+\ln P_{e\tau}&amp;=\alpha_e+\lambda^{B}_{B_e,\tau}+\mu^{B}_{d(e,\tau)}\\
+&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{B}_{gck}\,1(B_e=g,C_e=c,\tau=k)\\
+&amp;+\varepsilon^{B}_{e\tau}.
+\end{aligned}
+\]</span></p>
+<p><strong>基准：</strong> 各审计组相对自身近零消息的响应。</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/market_information/ue_bins_periods/annual/all/B_responses_9da8166c.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>年度共同十分位；全期（2001—2024）；B；四大与非四大的分档响应。各审计组相对自身近零消息的响应；第0日相对−1，系数×100，报告聚类95%区间</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/market_information/ue_bins_periods/annual/all/B_gap_5df88bbf.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>年度共同十分位；全期（2001—2024）；B；四大减非四大的直接响应差。各审计组相对自身近零消息的响应；第0日相对−1，系数×100，报告聚类95%区间</figcaption>
+</figure>
+</div>
+</section>
+<section id="memo-ue-bins-periods-annual-all-c" class="level4">
+<h4 class="anchored" data-anchor-id="memo-ue-bins-periods-annual-all-c">C｜共同事件时间FE＋审计组×交易日FE</h4>
+<p><span class="math display">\[
+\begin{aligned}
+\ln P_{e\tau}&amp;=\alpha_e+\lambda^{C}_{\tau}+\mu^{C}_{B_e,d(e,\tau)}\\
+&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{C}_{gck}\,1(B_e=g,C_e=c,\tau=k)\\
+&amp;+\varepsilon^{C}_{e\tau}.
+\end{aligned}
+\]</span></p>
+<p><strong>基准：</strong> 共同近零事件时间路径约束下的响应。</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/market_information/ue_bins_periods/annual/all/C_responses_d734e658.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>年度共同十分位；全期（2001—2024）；C；四大与非四大的分档响应。共同近零事件时间路径约束下的响应；第0日相对−1，系数×100，报告聚类95%区间</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/market_information/ue_bins_periods/annual/all/C_gap_97347b8d.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>年度共同十分位；全期（2001—2024）；C；四大减非四大的直接响应差。共同近零事件时间路径约束下的响应；第0日相对−1，系数×100，报告聚类95%区间</figcaption>
+</figure>
+</div>
+</section>
+<section id="memo-ue-bins-periods-annual-all-d" class="level4">
+<h4 class="anchored" data-anchor-id="memo-ue-bins-periods-annual-all-d">D｜审计组×事件时间FE＋审计组×交易日FE</h4>
+<p><span class="math display">\[
+\begin{aligned}
+\ln P_{e\tau}&amp;=\alpha_e+\lambda^{D}_{B_e,\tau}+\mu^{D}_{B_e,d(e,\tau)}\\
+&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{D}_{gck}\,1(B_e=g,C_e=c,\tau=k)\\
+&amp;+\varepsilon^{D}_{e\tau}.
+\end{aligned}
+\]</span></p>
+<p><strong>基准：</strong> 各审计组相对自身近零消息的响应。</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/market_information/ue_bins_periods/annual/all/D_responses_99a036da.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>年度共同十分位；全期（2001—2024）；D；四大与非四大的分档响应。各审计组相对自身近零消息的响应；第0日相对−1，系数×100，报告聚类95%区间</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/market_information/ue_bins_periods/annual/all/D_gap_f585f500.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>年度共同十分位；全期（2001—2024）；D；四大减非四大的直接响应差。各审计组相对自身近零消息的响应；第0日相对−1，系数×100，报告聚类95%区间</figcaption>
+</figure>
+</div>
+
+<details>
+<summary>
+年度共同十分位｜2012年前（2001—2011）：A—D模型与组间差
+</summary>
+</details></section>
+</section>
+<section id="memo-ue-bins-periods-annual-before2012" class="level3">
+<h3 class="anchored" data-anchor-id="memo-ue-bins-periods-annual-before2012">年度共同十分位｜2012年前（2001—2011）</h3>
+<section id="memo-ue-bins-periods-annual-before2012-a" class="level4">
+<h4 class="anchored" data-anchor-id="memo-ue-bins-periods-annual-before2012-a">A｜共同事件时间FE＋共同交易日FE</h4>
+<p><span class="math display">\[
+\begin{aligned}
+\ln P_{e\tau}&amp;=\alpha_e+\lambda^{A}_{\tau}+\mu^{A}_{d(e,\tau)}\\
+&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{A}_{gck}\,1(B_e=g,C_e=c,\tau=k)\\
+&amp;+\varepsilon^{A}_{e\tau}.
+\end{aligned}
+\]</span></p>
+<p><strong>基准：</strong> 共同近零事件时间路径约束下的响应。</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/market_information/ue_bins_periods/annual/before2012/A_responses_72fd059d.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>年度共同十分位；2012年前（2001—2011）；A；四大与非四大的分档响应。共同近零事件时间路径约束下的响应；第0日相对−1，系数×100，报告聚类95%区间</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/market_information/ue_bins_periods/annual/before2012/A_gap_37c43014.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>年度共同十分位；2012年前（2001—2011）；A；四大减非四大的直接响应差。共同近零事件时间路径约束下的响应；第0日相对−1，系数×100，报告聚类95%区间</figcaption>
+</figure>
+</div>
+</section>
+<section id="memo-ue-bins-periods-annual-before2012-b" class="level4">
+<h4 class="anchored" data-anchor-id="memo-ue-bins-periods-annual-before2012-b">B｜审计组×事件时间FE＋共同交易日FE</h4>
+<p><span class="math display">\[
+\begin{aligned}
+\ln P_{e\tau}&amp;=\alpha_e+\lambda^{B}_{B_e,\tau}+\mu^{B}_{d(e,\tau)}\\
+&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{B}_{gck}\,1(B_e=g,C_e=c,\tau=k)\\
+&amp;+\varepsilon^{B}_{e\tau}.
+\end{aligned}
+\]</span></p>
+<p><strong>基准：</strong> 各审计组相对自身近零消息的响应。</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/market_information/ue_bins_periods/annual/before2012/B_responses_d920b2f8.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>年度共同十分位；2012年前（2001—2011）；B；四大与非四大的分档响应。各审计组相对自身近零消息的响应；第0日相对−1，系数×100，报告聚类95%区间</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/market_information/ue_bins_periods/annual/before2012/B_gap_0fc54c2d.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>年度共同十分位；2012年前（2001—2011）；B；四大减非四大的直接响应差。各审计组相对自身近零消息的响应；第0日相对−1，系数×100，报告聚类95%区间</figcaption>
+</figure>
+</div>
+</section>
+<section id="memo-ue-bins-periods-annual-before2012-c" class="level4">
+<h4 class="anchored" data-anchor-id="memo-ue-bins-periods-annual-before2012-c">C｜共同事件时间FE＋审计组×交易日FE</h4>
+<p><span class="math display">\[
+\begin{aligned}
+\ln P_{e\tau}&amp;=\alpha_e+\lambda^{C}_{\tau}+\mu^{C}_{B_e,d(e,\tau)}\\
+&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{C}_{gck}\,1(B_e=g,C_e=c,\tau=k)\\
+&amp;+\varepsilon^{C}_{e\tau}.
+\end{aligned}
+\]</span></p>
+<p><strong>基准：</strong> 共同近零事件时间路径约束下的响应。</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/market_information/ue_bins_periods/annual/before2012/C_responses_e853655d.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>年度共同十分位；2012年前（2001—2011）；C；四大与非四大的分档响应。共同近零事件时间路径约束下的响应；第0日相对−1，系数×100，报告聚类95%区间</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/market_information/ue_bins_periods/annual/before2012/C_gap_11ad8bc2.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>年度共同十分位；2012年前（2001—2011）；C；四大减非四大的直接响应差。共同近零事件时间路径约束下的响应；第0日相对−1，系数×100，报告聚类95%区间</figcaption>
+</figure>
+</div>
+</section>
+<section id="memo-ue-bins-periods-annual-before2012-d" class="level4">
+<h4 class="anchored" data-anchor-id="memo-ue-bins-periods-annual-before2012-d">D｜审计组×事件时间FE＋审计组×交易日FE</h4>
+<p><span class="math display">\[
+\begin{aligned}
+\ln P_{e\tau}&amp;=\alpha_e+\lambda^{D}_{B_e,\tau}+\mu^{D}_{B_e,d(e,\tau)}\\
+&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{D}_{gck}\,1(B_e=g,C_e=c,\tau=k)\\
+&amp;+\varepsilon^{D}_{e\tau}.
+\end{aligned}
+\]</span></p>
+<p><strong>基准：</strong> 各审计组相对自身近零消息的响应。</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/market_information/ue_bins_periods/annual/before2012/D_responses_dbb46c7f.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>年度共同十分位；2012年前（2001—2011）；D；四大与非四大的分档响应。各审计组相对自身近零消息的响应；第0日相对−1，系数×100，报告聚类95%区间</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/market_information/ue_bins_periods/annual/before2012/D_gap_0ba5c9a4.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>年度共同十分位；2012年前（2001—2011）；D；四大减非四大的直接响应差。各审计组相对自身近零消息的响应；第0日相对−1，系数×100，报告聚类95%区间</figcaption>
+</figure>
+</div>
+
+<details>
+<summary>
+年度共同十分位｜2012年起（2012—2024）：A—D模型与组间差
+</summary>
+</details></section>
+</section>
+<section id="memo-ue-bins-periods-annual-after2012" class="level3">
+<h3 class="anchored" data-anchor-id="memo-ue-bins-periods-annual-after2012">年度共同十分位｜2012年起（2012—2024）</h3>
+<section id="memo-ue-bins-periods-annual-after2012-a" class="level4">
+<h4 class="anchored" data-anchor-id="memo-ue-bins-periods-annual-after2012-a">A｜共同事件时间FE＋共同交易日FE</h4>
+<p><span class="math display">\[
+\begin{aligned}
+\ln P_{e\tau}&amp;=\alpha_e+\lambda^{A}_{\tau}+\mu^{A}_{d(e,\tau)}\\
+&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{A}_{gck}\,1(B_e=g,C_e=c,\tau=k)\\
+&amp;+\varepsilon^{A}_{e\tau}.
+\end{aligned}
+\]</span></p>
+<p><strong>基准：</strong> 共同近零事件时间路径约束下的响应。</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/market_information/ue_bins_periods/annual/after2012/A_responses_e7c85596.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>年度共同十分位；2012年起（2012—2024）；A；四大与非四大的分档响应。共同近零事件时间路径约束下的响应；第0日相对−1，系数×100，报告聚类95%区间</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/market_information/ue_bins_periods/annual/after2012/A_gap_2d875155.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>年度共同十分位；2012年起（2012—2024）；A；四大减非四大的直接响应差。共同近零事件时间路径约束下的响应；第0日相对−1，系数×100，报告聚类95%区间</figcaption>
+</figure>
+</div>
+</section>
+<section id="memo-ue-bins-periods-annual-after2012-b" class="level4">
+<h4 class="anchored" data-anchor-id="memo-ue-bins-periods-annual-after2012-b">B｜审计组×事件时间FE＋共同交易日FE</h4>
+<p><span class="math display">\[
+\begin{aligned}
+\ln P_{e\tau}&amp;=\alpha_e+\lambda^{B}_{B_e,\tau}+\mu^{B}_{d(e,\tau)}\\
+&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{B}_{gck}\,1(B_e=g,C_e=c,\tau=k)\\
+&amp;+\varepsilon^{B}_{e\tau}.
+\end{aligned}
+\]</span></p>
+<p><strong>基准：</strong> 各审计组相对自身近零消息的响应。</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/market_information/ue_bins_periods/annual/after2012/B_responses_aa0a1fd9.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>年度共同十分位；2012年起（2012—2024）；B；四大与非四大的分档响应。各审计组相对自身近零消息的响应；第0日相对−1，系数×100，报告聚类95%区间</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/market_information/ue_bins_periods/annual/after2012/B_gap_0394dc2e.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>年度共同十分位；2012年起（2012—2024）；B；四大减非四大的直接响应差。各审计组相对自身近零消息的响应；第0日相对−1，系数×100，报告聚类95%区间</figcaption>
+</figure>
+</div>
+</section>
+<section id="memo-ue-bins-periods-annual-after2012-c" class="level4">
+<h4 class="anchored" data-anchor-id="memo-ue-bins-periods-annual-after2012-c">C｜共同事件时间FE＋审计组×交易日FE</h4>
+<p><span class="math display">\[
+\begin{aligned}
+\ln P_{e\tau}&amp;=\alpha_e+\lambda^{C}_{\tau}+\mu^{C}_{B_e,d(e,\tau)}\\
+&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{C}_{gck}\,1(B_e=g,C_e=c,\tau=k)\\
+&amp;+\varepsilon^{C}_{e\tau}.
+\end{aligned}
+\]</span></p>
+<p><strong>基准：</strong> 共同近零事件时间路径约束下的响应。</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/market_information/ue_bins_periods/annual/after2012/C_responses_990609c7.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>年度共同十分位；2012年起（2012—2024）；C；四大与非四大的分档响应。共同近零事件时间路径约束下的响应；第0日相对−1，系数×100，报告聚类95%区间</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/market_information/ue_bins_periods/annual/after2012/C_gap_9de47306.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>年度共同十分位；2012年起（2012—2024）；C；四大减非四大的直接响应差。共同近零事件时间路径约束下的响应；第0日相对−1，系数×100，报告聚类95%区间</figcaption>
+</figure>
+</div>
+</section>
+<section id="memo-ue-bins-periods-annual-after2012-d" class="level4">
+<h4 class="anchored" data-anchor-id="memo-ue-bins-periods-annual-after2012-d">D｜审计组×事件时间FE＋审计组×交易日FE</h4>
+<p><span class="math display">\[
+\begin{aligned}
+\ln P_{e\tau}&amp;=\alpha_e+\lambda^{D}_{B_e,\tau}+\mu^{D}_{B_e,d(e,\tau)}\\
+&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{D}_{gck}\,1(B_e=g,C_e=c,\tau=k)\\
+&amp;+\varepsilon^{D}_{e\tau}.
+\end{aligned}
+\]</span></p>
+<p><strong>基准：</strong> 各审计组相对自身近零消息的响应。</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/market_information/ue_bins_periods/annual/after2012/D_responses_929e4eff.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>年度共同十分位；2012年起（2012—2024）；D；四大与非四大的分档响应。各审计组相对自身近零消息的响应；第0日相对−1，系数×100，报告聚类95%区间</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/market_information/ue_bins_periods/annual/after2012/D_gap_878be3b0.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>年度共同十分位；2012年起（2012—2024）；D；四大减非四大的直接响应差。各审计组相对自身近零消息的响应；第0日相对−1，系数×100，报告聚类95%区间</figcaption>
+</figure>
+</div>
+
 </section>
 </section>
 </section>
