@@ -233,6 +233,11 @@ window.Quarto = {
   <ul class="collapse">
   <li><a href="#memo-four-fe-paths" id="toc-memo-four-fe-paths" class="nav-link" data-scroll-target="#memo-four-fe-paths">2012年前后：四种固定效应的方程与组间差值</a></li>
   </ul></li>
+  <li><a href="#memo-rolling-abcd" id="toc-memo-rolling-abcd" class="nav-link" data-scroll-target="#memo-rolling-abcd">三年滚动A—D：公司池、预期口径与FE的对照</a>
+  <ul class="collapse">
+  <li><a href="#rolling-memo-full-ue" id="toc-rolling-memo-full-ue" class="nav-link" data-scroll-target="#rolling-memo-full-ue">UE：消息门槛±0.10%</a></li>
+  <li><a href="#rolling-memo-full-es" id="toc-rolling-memo-full-es" class="nav-link" data-scroll-target="#rolling-memo-full-es">ES：消息门槛±10%</a></li>
+  </ul></li>
   <li><a href="#memo-ever-big4-three" id="toc-memo-ever-big4-three" class="nav-link" data-scroll-target="#memo-ever-big4-three">本次新增结果：曾用四大公司池的消息响应</a></li>
   <li><a href="#memo-ever-big4-three-es" id="toc-memo-ever-big4-three-es" class="nav-link" data-scroll-target="#memo-ever-big4-three-es">同公司池ES口径对照：2012前后的消息响应</a></li>
   <li><a href="#sec-memo-erc-interactions" id="toc-sec-memo-erc-interactions" class="nav-link" data-scroll-target="#sec-memo-erc-interactions">1. ERC：公司匹配与客户特征交互</a></li>
@@ -308,36 +313,42 @@ window.Quarto = {
 <td><a href="#memo-four-fe-paths">四模型前后对照</a></td>
 </tr>
 <tr class="odd">
+<td>三年滚动A—D与三套公司池</td>
+<td>已补齐528组模型记录、96图：396个ABC新增，132个D复用；逐格固定原D样本</td>
+<td>共同／分组事件时间路径显著影响额外响应判断；窗口重叠与客户构成限制因果解释</td>
+<td><a href="#memo-rolling-abcd">滚动对照与三池入口</a></td>
+</tr>
+<tr class="even">
 <td>早上市曾用四大公司池</td>
 <td>新增UE／ES好、中、坏消息分期D模型，并展示公司池历年审计构成</td>
 <td>UE与ES的组间结论存在差异；选定公司池和客户构成影响解释</td>
 <td><a href="#memo-ever-big4-three">UE</a> · <a href="#memo-ever-big4-three-es">ES</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>旧公司匹配ERC</td>
 <td>将1∶1与全邻居两种匹配的三个CAR窗口完整入表</td>
 <td>全交互后支持集中在中间窗口；全期信息选池及旧重组排除口径单列说明</td>
 <td><a href="#sec-memo-erc-interactions">匹配ERC</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>审计费用</td>
 <td>原始费用、全样本／留任／换所年度溢价及断点检验进入会议页</td>
 <td>区分名义费用、相对溢价和正式断点检验；不只依据曲线判断2012突变</td>
 <td><a href="#sec-memo-audit-fee-2012">收费</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Distance／IV</td>
 <td>将既有距离构造、一阶段、18个2SLS与提前趋势诊断完整汇报</td>
 <td>一阶段强度及排除限制仍有问题；探索结果保留，暂未形成可信主IV</td>
 <td><a href="#sec-memo-distance">距离探索</a></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>本土化政策与财报事后质量</td>
 <td>补入2009年政策事件检验、好消息后三年质量表及全样本持续性表</td>
 <td>政策三日相对少涨；四大好消息事后问题较少，ROA持续性较强，ES持续性不显著</td>
 <td><a href="#sec-memo-localization-2009">政策</a> · <a href="#sec-memo-good-news-verification">事后验证</a></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>机构持仓与借贷</td>
 <td>六张历史结构图，以及简单债务、持仓、借贷数量／期限三部分基准；8张表、6张路径图</td>
 <td>持仓仅有局部正向差异，债务没有一致期限改善；零结果、反向结果和小样本诊断一起展示</td>
@@ -365,31 +376,26 @@ window.Quarto = {
 </thead>
 <tbody>
 <tr class="odd">
-<td>三套公司池的三年滚动短窗</td>
-<td>曾用四大且早上市、仅早上市、全部合格公司三套；各含UE／ES、22个中心年，共132个已估计模型与24张图</td>
-<td>用于区分走势与比较对象变化；部分后期差值随纳入新客户而变化。窗口重叠，逐窗显著性不等于2012断点或声誉机制成立</td>
-</tr>
-<tr class="even">
 <td>同一早上市曾用四大池的连续ERC</td>
 <td>三个时期×三个CAR窗口×主项／全交互，共18个已估计模型；与当前已展示的该池UE／ES分组图配套</td>
 <td>18个四大ERC增量均为负且未达10%；不能把该池的分组消息响应写成连续ERC也支持四大优势</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>UE分布、尾部与分档响应</td>
 <td>已做直方图、原始CDF及共同分组阴影，另有年度十分位、固定绝对分组／共同十分位响应与支持数</td>
 <td>分档、参考组及同幅度比较需要区分；少数档位的点态星号还受多重比较和早期小单元限制。分布图的缩尾展示没有改变原回归UE</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>正负UE的ERC与控制交互</td>
 <td>已有分段ERC、主项／交互对照及两侧差异检验；不同历史输入分别留存</td>
 <td>部分信号集中在负UE侧，加交互后减弱；一侧显著不能代替正负两侧差异检验，旧样本结果需标注版本</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>阈值、聚类及路径限制敏感性</td>
 <td>已有不同消息门槛、公告／公司聚类、共同／分组时间路径的检验与支持检查</td>
 <td>当前主图采用固定10%消息口径与公告聚类；其余用于补充敏感性，不能把多种样本和规格混成同一基准</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>早期预测覆盖与替代数据／方法</td>
 <td>已核对逐年合格报告数、早期四大中性组支持，并讨论预测数据库和不依赖分析师的预期基准</td>
 <td>早期覆盖与参考组较薄；缺覆盖、预测准确性和消息提前披露分别判断。替代预测数据尚未取得，新模型预测尚未构造或估计</td>
@@ -646,6 +652,336 @@ CAR^w_{it}=\alpha_i+\lambda_t+\delta B_{it}+\beta U_{it}
 </section>
 </section>
 </section>
+<section id="memo-rolling-abcd" class="level2">
+<h2 class="anchored" data-anchor-id="memo-rolling-abcd">三年滚动A—D：公司池、预期口径与FE的对照</h2>
+<p><strong>本批规模与比较单位。</strong> 三套公司池×UE／ES×22个三年窗口×四模型，共528组估计，其中396个A／B／C为本次新增，132个D直接复用。共有96张独立图；每张图是22个窗口的第0日系数路径，不是96个单独回归。每个中心年<span class="math inline">\(w=2002,\ldots,2023\)</span>使用财年<span class="math inline">\([w-1,w+1]\)</span>，例如中心2010对应2009—2011，中心2012对应2011—2013。</p>
+<p><strong>消息与样本。</strong> <span class="math inline">\(UE=(EPS-F)/P_{pre}\)</span>，以±0.001划分好／中／坏消息；<span class="math inline">\(ES=(EPS-F)/|F|\)</span>，门槛为±0.10。保留两端消息，等于门槛归中间组；F=0不能定义ES。沿用严格公告前180天预测、不剔除重组、不匹配、报告财年实际审计身份及原始尾部。对每个“公司池×消息口径×中心年”，A／B／C逐行固定原D的实际公告—交易日样本；不同窗口、不同公司池不取统一交集。“曾用四大”依据2001—2024年完整审计历史定义；早上市／曾用四大属于描述性选池，含全期身份信息，不构成外生处理。</p>
+<p><strong>共同估计设定。</strong> Y为公告附近<span class="math inline">\([-5,+5]\)</span>交易日的原始收盘价log，第−1日为基期。<span class="math inline">\(e\)</span>为公告、<span class="math inline">\(\tau\)</span>为相对事件日、<span class="math inline">\(d(e,\tau)\)</span>为真实交易日期，<span class="math inline">\(B_e\)</span>为当年四大身份；<span class="math inline">\(C_e\in\{b,n,g\}\)</span>为坏／中／好消息，<span class="math inline">\(K=\{-5,-4,-3,-2,0,1,2,3,4,5\}\)</span>。每个窗口、消息口径与模型分别回归，均有公告事件FE，按公告事件聚类；无财务controls或连续surprise幅度控制。</p>
+<p>方程中<span class="math inline">\(\beta_{sk,w}^m\)</span>与<span class="math inline">\(\beta_{sk,w}^m+\delta_{sk,w}^m\)</span>分别对应两组模型响应，直接组间差为<span class="math inline">\(\delta_{sk,w}^m\)</span>。图只提取<span class="math inline">\(k=0\)</span>并乘100，展示点估计及报告聚类95%区间，完整动态估计保留在结果包。<strong>A／C将两组的中间消息事件时间路径约束为共同路径；B／D允许分组路径，才对应不受此限制的各组“消息减自身中间组”响应。</strong> A→B、C→D改变事件时间FE；A→C、B→D改变真实交易日FE。</p>
+<p><strong>完整样本的主要对照。</strong> UE好消息的四大正向组差在A有7个中心年达到5%，B／D均仅中心2010达到5%，C为中心2011—2013；A／C中心2023为负。ES好消息中，A有4个、C有2个中心年正向达到5%，B没有5%差值，D仅中心2019为负；ES坏消息的A／C没有5%组差，B在中心2019、2020为负，D在2018—2020为负。因此，共同事件时间路径限制、消息尺度和客户构成都影响额外响应的判断。</p>
+<p>这些是重叠三年窗口的逐点推断，未作多重比较校正；窗口间显著性变化不等于正式前后系数差，也不能直接归因于2012制度或声誉变化。早期预测覆盖和中性参考组支持较薄。跨公司池比较改变了客户构成，不能等同于同样本只改变FE；四模型的严格同样本要求只在每个既定池、口径和窗口内成立。</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>公司池</th>
+<th>完整UE／ES四模型入口</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>全部合格公司：不限上市日期、不限曾用四大</td>
+<td><a href="./23_big4_effect.html#rolling-body-full-ue">正文UE</a> · <a href="./23_big4_effect.html#rolling-body-full-es">正文ES</a></td>
+</tr>
+<tr class="even">
+<td>早上市公司：2012年前上市、不限曾用四大</td>
+<td><a href="./23_big4_effect.html#rolling-body-listed-ue">正文UE</a> · <a href="./23_big4_effect.html#rolling-body-listed-es">正文ES</a></td>
+</tr>
+<tr class="odd">
+<td>早上市曾用四大池：2012年前上市且全期至少一年四大</td>
+<td><a href="./23_big4_effect.html#rolling-body-ever_big4-ue">正文UE</a> · <a href="./23_big4_effect.html#rolling-body-ever_big4-es">正文ES</a></td>
+</tr>
+</tbody>
+</table>
+<p>会议页以下完整展示全部合格公司UE／ES的32张图；另两公司池的64张图由上表直达正文，均保留全部模型与消息类别。</p>
+<details open="">
+<summary>
+UE：消息门槛±0.10%：A—D方程及16张图
+</summary>
+<section id="rolling-memo-full-ue" class="level3">
+<h3 class="anchored" data-anchor-id="rolling-memo-full-ue">UE：消息门槛±0.10%</h3>
+<p>22个窗口的实际公告聚类数为305—7,258；日度N为3,322—79,825。逐窗N、聚类与系数检验见<a href="tables/rolling_abcd/full_ue_results.xlsx">本池完整工作簿</a>。</p>
+<section id="rolling-memo-full-ue-a" class="level4">
+<h4 class="anchored" data-anchor-id="rolling-memo-full-ue-a">A｜共同事件时间FE＋共同交易日FE</h4>
+<p><span class="math display">\[
+\begin{aligned}
+\ln P_{e\tau}&amp;=\alpha_{e,w}+\lambda^A_{\tau,w}+\mu^A_{d(e,\tau),w}\\
+&amp;\quad+\sum_{s\in\{b,g\}}\sum_{k\in K}\left[\beta^{A}_{sk,w}+\delta^{A}_{sk,w}B_e\right]\\
+&amp;\qquad\times1(C_e=s)1(\tau=k)+\varepsilon^{A}_{e\tau,w}.
+\end{aligned}
+\]</span></p>
+<p><strong>本模型的基准：</strong> 共同中间消息事件时间路径约束下的模型响应。</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/market_information/rolling_abcd/full/ue/A/c3_groups.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>全部合格公司：不限上市日期、不限曾用四大；UE；A；好消息：四大与非四大的模型响应。共同中间消息事件时间路径约束下的模型响应；第0日相对−1，系数×100及95%区间。</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/market_information/rolling_abcd/full/ue/A/c3_gap.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>全部合格公司：不限上市日期、不限曾用四大；UE；A；好消息：四大减非四大的直接响应差。共同中间消息事件时间路径约束下的模型响应；第0日相对−1，系数×100及95%区间。</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/market_information/rolling_abcd/full/ue/A/c1_groups.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>全部合格公司：不限上市日期、不限曾用四大；UE；A；坏消息：四大与非四大的模型响应。共同中间消息事件时间路径约束下的模型响应；第0日相对−1，系数×100及95%区间。</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/market_information/rolling_abcd/full/ue/A/c1_gap.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>全部合格公司：不限上市日期、不限曾用四大；UE；A；坏消息：四大减非四大的直接响应差。共同中间消息事件时间路径约束下的模型响应；第0日相对−1，系数×100及95%区间。</figcaption>
+</figure>
+</div>
+</section>
+<section id="rolling-memo-full-ue-b" class="level4">
+<h4 class="anchored" data-anchor-id="rolling-memo-full-ue-b">B｜审计组×事件时间FE＋共同交易日FE</h4>
+<p><span class="math display">\[
+\begin{aligned}
+\ln P_{e\tau}&amp;=\alpha_{e,w}+\lambda^B_{B_e,\tau,w}+\mu^B_{d(e,\tau),w}\\
+&amp;\quad+\sum_{s\in\{b,g\}}\sum_{k\in K}\left[\beta^{B}_{sk,w}+\delta^{B}_{sk,w}B_e\right]\\
+&amp;\qquad\times1(C_e=s)1(\tau=k)+\varepsilon^{B}_{e\tau,w}.
+\end{aligned}
+\]</span></p>
+<p><strong>本模型的基准：</strong> 相对各组自身中间消息的响应。</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/market_information/rolling_abcd/full/ue/B/c3_groups.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>全部合格公司：不限上市日期、不限曾用四大；UE；B；好消息：四大与非四大的模型响应。相对各组自身中间消息的响应；第0日相对−1，系数×100及95%区间。</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/market_information/rolling_abcd/full/ue/B/c3_gap.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>全部合格公司：不限上市日期、不限曾用四大；UE；B；好消息：四大减非四大的直接响应差。相对各组自身中间消息的响应；第0日相对−1，系数×100及95%区间。</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/market_information/rolling_abcd/full/ue/B/c1_groups.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>全部合格公司：不限上市日期、不限曾用四大；UE；B；坏消息：四大与非四大的模型响应。相对各组自身中间消息的响应；第0日相对−1，系数×100及95%区间。</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/market_information/rolling_abcd/full/ue/B/c1_gap.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>全部合格公司：不限上市日期、不限曾用四大；UE；B；坏消息：四大减非四大的直接响应差。相对各组自身中间消息的响应；第0日相对−1，系数×100及95%区间。</figcaption>
+</figure>
+</div>
+</section>
+<section id="rolling-memo-full-ue-c" class="level4">
+<h4 class="anchored" data-anchor-id="rolling-memo-full-ue-c">C｜共同事件时间FE＋审计组×交易日FE</h4>
+<p><span class="math display">\[
+\begin{aligned}
+\ln P_{e\tau}&amp;=\alpha_{e,w}+\lambda^C_{\tau,w}+\mu^C_{B_e,d(e,\tau),w}\\
+&amp;\quad+\sum_{s\in\{b,g\}}\sum_{k\in K}\left[\beta^{C}_{sk,w}+\delta^{C}_{sk,w}B_e\right]\\
+&amp;\qquad\times1(C_e=s)1(\tau=k)+\varepsilon^{C}_{e\tau,w}.
+\end{aligned}
+\]</span></p>
+<p><strong>本模型的基准：</strong> 共同中间消息事件时间路径约束下的模型响应。</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/market_information/rolling_abcd/full/ue/C/c3_groups.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>全部合格公司：不限上市日期、不限曾用四大；UE；C；好消息：四大与非四大的模型响应。共同中间消息事件时间路径约束下的模型响应；第0日相对−1，系数×100及95%区间。</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/market_information/rolling_abcd/full/ue/C/c3_gap.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>全部合格公司：不限上市日期、不限曾用四大；UE；C；好消息：四大减非四大的直接响应差。共同中间消息事件时间路径约束下的模型响应；第0日相对−1，系数×100及95%区间。</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/market_information/rolling_abcd/full/ue/C/c1_groups.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>全部合格公司：不限上市日期、不限曾用四大；UE；C；坏消息：四大与非四大的模型响应。共同中间消息事件时间路径约束下的模型响应；第0日相对−1，系数×100及95%区间。</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/market_information/rolling_abcd/full/ue/C/c1_gap.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>全部合格公司：不限上市日期、不限曾用四大；UE；C；坏消息：四大减非四大的直接响应差。共同中间消息事件时间路径约束下的模型响应；第0日相对−1，系数×100及95%区间。</figcaption>
+</figure>
+</div>
+</section>
+<section id="rolling-memo-full-ue-d" class="level4">
+<h4 class="anchored" data-anchor-id="rolling-memo-full-ue-d">D｜审计组×事件时间FE＋审计组×交易日FE</h4>
+<p><span class="math display">\[
+\begin{aligned}
+\ln P_{e\tau}&amp;=\alpha_{e,w}+\lambda^D_{B_e,\tau,w}+\mu^D_{B_e,d(e,\tau),w}\\
+&amp;\quad+\sum_{s\in\{b,g\}}\sum_{k\in K}\left[\beta^{D}_{sk,w}+\delta^{D}_{sk,w}B_e\right]\\
+&amp;\qquad\times1(C_e=s)1(\tau=k)+\varepsilon^{D}_{e\tau,w}.
+\end{aligned}
+\]</span></p>
+<p><strong>本模型的基准：</strong> 相对各组自身中间消息的响应。</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/market_information/rolling_abcd/full/ue/D/c3_groups.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>全部合格公司：不限上市日期、不限曾用四大；UE；D；好消息：四大与非四大的模型响应。相对各组自身中间消息的响应；第0日相对−1，系数×100及95%区间。</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/market_information/rolling_abcd/full/ue/D/c3_gap.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>全部合格公司：不限上市日期、不限曾用四大；UE；D；好消息：四大减非四大的直接响应差。相对各组自身中间消息的响应；第0日相对−1，系数×100及95%区间。</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/market_information/rolling_abcd/full/ue/D/c1_groups.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>全部合格公司：不限上市日期、不限曾用四大；UE；D；坏消息：四大与非四大的模型响应。相对各组自身中间消息的响应；第0日相对−1，系数×100及95%区间。</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/market_information/rolling_abcd/full/ue/D/c1_gap.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>全部合格公司：不限上市日期、不限曾用四大；UE；D；坏消息：四大减非四大的直接响应差。相对各组自身中间消息的响应；第0日相对−1，系数×100及95%区间。</figcaption>
+</figure>
+</div>
+</section></section></details>
+<details>
+<summary>
+ES：消息门槛±10%：A—D方程及16张图
+</summary>
+</details></section>
+
+<section id="rolling-memo-full-es" class="level3">
+<h3 class="anchored" data-anchor-id="rolling-memo-full-es">ES：消息门槛±10%</h3>
+<p>22个窗口的实际公告聚类数为305—7,252；日度N为3,322—79,759。逐窗N、聚类与系数检验见<a href="tables/rolling_abcd/full_es_results.xlsx">本池完整工作簿</a>。</p>
+<section id="rolling-memo-full-es-a" class="level4">
+<h4 class="anchored" data-anchor-id="rolling-memo-full-es-a">A｜共同事件时间FE＋共同交易日FE</h4>
+<p><span class="math display">\[
+\begin{aligned}
+\ln P_{e\tau}&amp;=\alpha_{e,w}+\lambda^A_{\tau,w}+\mu^A_{d(e,\tau),w}\\
+&amp;\quad+\sum_{s\in\{b,g\}}\sum_{k\in K}\left[\beta^{A}_{sk,w}+\delta^{A}_{sk,w}B_e\right]\\
+&amp;\qquad\times1(C_e=s)1(\tau=k)+\varepsilon^{A}_{e\tau,w}.
+\end{aligned}
+\]</span></p>
+<p><strong>本模型的基准：</strong> 共同中间消息事件时间路径约束下的模型响应。</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/market_information/rolling_abcd/full/es/A/c3_groups.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>全部合格公司：不限上市日期、不限曾用四大；ES；A；好消息：四大与非四大的模型响应。共同中间消息事件时间路径约束下的模型响应；第0日相对−1，系数×100及95%区间。</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/market_information/rolling_abcd/full/es/A/c3_gap.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>全部合格公司：不限上市日期、不限曾用四大；ES；A；好消息：四大减非四大的直接响应差。共同中间消息事件时间路径约束下的模型响应；第0日相对−1，系数×100及95%区间。</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/market_information/rolling_abcd/full/es/A/c1_groups.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>全部合格公司：不限上市日期、不限曾用四大；ES；A；坏消息：四大与非四大的模型响应。共同中间消息事件时间路径约束下的模型响应；第0日相对−1，系数×100及95%区间。</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/market_information/rolling_abcd/full/es/A/c1_gap.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>全部合格公司：不限上市日期、不限曾用四大；ES；A；坏消息：四大减非四大的直接响应差。共同中间消息事件时间路径约束下的模型响应；第0日相对−1，系数×100及95%区间。</figcaption>
+</figure>
+</div>
+</section>
+<section id="rolling-memo-full-es-b" class="level4">
+<h4 class="anchored" data-anchor-id="rolling-memo-full-es-b">B｜审计组×事件时间FE＋共同交易日FE</h4>
+<p><span class="math display">\[
+\begin{aligned}
+\ln P_{e\tau}&amp;=\alpha_{e,w}+\lambda^B_{B_e,\tau,w}+\mu^B_{d(e,\tau),w}\\
+&amp;\quad+\sum_{s\in\{b,g\}}\sum_{k\in K}\left[\beta^{B}_{sk,w}+\delta^{B}_{sk,w}B_e\right]\\
+&amp;\qquad\times1(C_e=s)1(\tau=k)+\varepsilon^{B}_{e\tau,w}.
+\end{aligned}
+\]</span></p>
+<p><strong>本模型的基准：</strong> 相对各组自身中间消息的响应。</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/market_information/rolling_abcd/full/es/B/c3_groups.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>全部合格公司：不限上市日期、不限曾用四大；ES；B；好消息：四大与非四大的模型响应。相对各组自身中间消息的响应；第0日相对−1，系数×100及95%区间。</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/market_information/rolling_abcd/full/es/B/c3_gap.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>全部合格公司：不限上市日期、不限曾用四大；ES；B；好消息：四大减非四大的直接响应差。相对各组自身中间消息的响应；第0日相对−1，系数×100及95%区间。</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/market_information/rolling_abcd/full/es/B/c1_groups.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>全部合格公司：不限上市日期、不限曾用四大；ES；B；坏消息：四大与非四大的模型响应。相对各组自身中间消息的响应；第0日相对−1，系数×100及95%区间。</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/market_information/rolling_abcd/full/es/B/c1_gap.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>全部合格公司：不限上市日期、不限曾用四大；ES；B；坏消息：四大减非四大的直接响应差。相对各组自身中间消息的响应；第0日相对−1，系数×100及95%区间。</figcaption>
+</figure>
+</div>
+</section>
+<section id="rolling-memo-full-es-c" class="level4">
+<h4 class="anchored" data-anchor-id="rolling-memo-full-es-c">C｜共同事件时间FE＋审计组×交易日FE</h4>
+<p><span class="math display">\[
+\begin{aligned}
+\ln P_{e\tau}&amp;=\alpha_{e,w}+\lambda^C_{\tau,w}+\mu^C_{B_e,d(e,\tau),w}\\
+&amp;\quad+\sum_{s\in\{b,g\}}\sum_{k\in K}\left[\beta^{C}_{sk,w}+\delta^{C}_{sk,w}B_e\right]\\
+&amp;\qquad\times1(C_e=s)1(\tau=k)+\varepsilon^{C}_{e\tau,w}.
+\end{aligned}
+\]</span></p>
+<p><strong>本模型的基准：</strong> 共同中间消息事件时间路径约束下的模型响应。</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/market_information/rolling_abcd/full/es/C/c3_groups.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>全部合格公司：不限上市日期、不限曾用四大；ES；C；好消息：四大与非四大的模型响应。共同中间消息事件时间路径约束下的模型响应；第0日相对−1，系数×100及95%区间。</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/market_information/rolling_abcd/full/es/C/c3_gap.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>全部合格公司：不限上市日期、不限曾用四大；ES；C；好消息：四大减非四大的直接响应差。共同中间消息事件时间路径约束下的模型响应；第0日相对−1，系数×100及95%区间。</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/market_information/rolling_abcd/full/es/C/c1_groups.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>全部合格公司：不限上市日期、不限曾用四大；ES；C；坏消息：四大与非四大的模型响应。共同中间消息事件时间路径约束下的模型响应；第0日相对−1，系数×100及95%区间。</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/market_information/rolling_abcd/full/es/C/c1_gap.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>全部合格公司：不限上市日期、不限曾用四大；ES；C；坏消息：四大减非四大的直接响应差。共同中间消息事件时间路径约束下的模型响应；第0日相对−1，系数×100及95%区间。</figcaption>
+</figure>
+</div>
+</section>
+<section id="rolling-memo-full-es-d" class="level4">
+<h4 class="anchored" data-anchor-id="rolling-memo-full-es-d">D｜审计组×事件时间FE＋审计组×交易日FE</h4>
+<p><span class="math display">\[
+\begin{aligned}
+\ln P_{e\tau}&amp;=\alpha_{e,w}+\lambda^D_{B_e,\tau,w}+\mu^D_{B_e,d(e,\tau),w}\\
+&amp;\quad+\sum_{s\in\{b,g\}}\sum_{k\in K}\left[\beta^{D}_{sk,w}+\delta^{D}_{sk,w}B_e\right]\\
+&amp;\qquad\times1(C_e=s)1(\tau=k)+\varepsilon^{D}_{e\tau,w}.
+\end{aligned}
+\]</span></p>
+<p><strong>本模型的基准：</strong> 相对各组自身中间消息的响应。</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/market_information/rolling_abcd/full/es/D/c3_groups.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>全部合格公司：不限上市日期、不限曾用四大；ES；D；好消息：四大与非四大的模型响应。相对各组自身中间消息的响应；第0日相对−1，系数×100及95%区间。</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/market_information/rolling_abcd/full/es/D/c3_gap.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>全部合格公司：不限上市日期、不限曾用四大；ES；D；好消息：四大减非四大的直接响应差。相对各组自身中间消息的响应；第0日相对−1，系数×100及95%区间。</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/market_information/rolling_abcd/full/es/D/c1_groups.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>全部合格公司：不限上市日期、不限曾用四大；ES；D；坏消息：四大与非四大的模型响应。相对各组自身中间消息的响应；第0日相对−1，系数×100及95%区间。</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/market_information/rolling_abcd/full/es/D/c1_gap.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>全部合格公司：不限上市日期、不限曾用四大；ES；D；坏消息：四大减非四大的直接响应差。相对各组自身中间消息的响应；第0日相对−1，系数×100及95%区间。</figcaption>
+</figure>
+</div>
+
+</section>
+</section>
+
 <section id="memo-ever-big4-three" class="level2">
 <h2 class="anchored" data-anchor-id="memo-ever-big4-three">本次新增结果：曾用四大公司池的消息响应</h2>
 <p>本次采用固定UE三组和D模型展示2012前后的短窗差异。当前选定结果如下；早期正向差达到10%水平，后期好／坏消息差均显著为负。</p>
