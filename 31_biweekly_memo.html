@@ -253,6 +253,7 @@ window.Quarto = {
   <ul class="collapse">
   <li><a href="#sec-memo-market-long-window" id="toc-sec-memo-market-long-window" class="nav-link" data-scroll-target="#sec-memo-market-long-window">历史补充：长窗口股价路径</a></li>
   </ul></li>
+  <li><a href="#memo-short-window-pe" id="toc-memo-short-window-pe" class="nav-link" data-scroll-target="#memo-short-window-pe">7．短期股价反应与市盈率</a></li>
   </ul>
 </nav>
     </div>
@@ -313,6 +314,10 @@ window.Quarto = {
 <td><a href="#sec-memo-localization-2009">6．本土化政策事件</a></td>
 <td>四大客户在两个三日窗口相对少涨</td>
 </tr>
+<tr class="odd">
+<td><a href="#memo-short-window-pe">7．短期股价反应与市盈率</a></td>
+<td>公告期P/E由股价反应与盈利分母更新共同决定</td>
+</tr>
 </tbody>
 </table>
 </section>
@@ -339,11 +344,11 @@ CAR^w_{it}=\alpha_i+\lambda_t+\delta B_{it}+\beta U_{it}
 <p><span class="math inline">\(UE\)</span>的系数<span class="math inline">\(\beta\)</span>是非四大的ERC，<span class="math inline">\(UE\times Big4\)</span>的系数<span class="math inline">\(\theta\)</span>是四大额外ERC；四大总斜率为<span class="math inline">\(\beta+\theta\)</span>。表中的“两组ERC相等”检验为<span class="math inline">\(H_0:\beta=\beta+\theta\)</span>，等价于<span class="math inline">\(H_0:\theta=0\)</span>，p值沿用交互项的冻结检验。该行比较同一模型中的两组ERC。</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="tables/unmatched_market_baseline/erc_all_variables.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<p><img src="tables/memo_three_decimals/erc_all_variables.png" class="img-fluid figure-img" style="width:100.0%"></p>
 <figcaption>完整未匹配ERC：前三列仅控制主项，后三列加入控制变量×UE；变量系数、括号SE与两组ERC相等检验</figcaption>
 </figure>
 </div>
-<p><a href="tables/unmatched_market_baseline/erc_all_variables.pdf">PDF</a> · <a href="tables/unmatched_market_baseline/erc_all_variables.tex">TeX</a></p>
+<p><a href="tables/memo_three_decimals/erc_all_variables.pdf">PDF</a> · <a href="tables/memo_three_decimals/erc_all_variables.tex">TeX</a></p>
 <p>全期29,677次公告、4,185家公司。仅主项版三窗四大增量均为正且5%显著；全交互版依次为0.049、0.106、0.070，p值0.305、0.085、0.271，只有[−2,+2]达到10%。2012年前两版三窗均不显著；2012年起仅主项版三窗5%显著、全交互版均不显著。点估计也下降，不能只解释为自由度损失。</p>
 <details>
 <summary>
@@ -351,18 +356,18 @@ CAR^w_{it}=\alpha_i+\lambda_t+\delta B_{it}+\beta U_{it}
 </summary>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="tables/unmatched_market_baseline/erc_before2012_variables.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<p><img src="tables/memo_three_decimals/erc_before2012_variables.png" class="img-fluid figure-img" style="width:100.0%"></p>
 <figcaption>2012年前ERC：仅主项与加入控制变量×UE；实际变量系数及两组ERC相等检验</figcaption>
 </figure>
 </div>
-<p><a href="tables/unmatched_market_baseline/erc_before2012_variables.pdf">PDF</a> · <a href="tables/unmatched_market_baseline/erc_before2012_variables.tex">TeX</a></p>
+<p><a href="tables/memo_three_decimals/erc_before2012_variables.pdf">PDF</a> · <a href="tables/memo_three_decimals/erc_before2012_variables.tex">TeX</a></p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="tables/unmatched_market_baseline/erc_after2012_variables.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<p><img src="tables/memo_three_decimals/erc_after2012_variables.png" class="img-fluid figure-img" style="width:100.0%"></p>
 <figcaption>2012年起ERC：仅主项与加入控制变量×UE；实际变量系数及两组ERC相等检验</figcaption>
 </figure>
 </div>
-<p><a href="tables/unmatched_market_baseline/erc_after2012_variables.pdf">PDF</a> · <a href="tables/unmatched_market_baseline/erc_after2012_variables.tex">TeX</a></p>
+<p><a href="tables/memo_three_decimals/erc_after2012_variables.pdf">PDF</a> · <a href="tables/memo_three_decimals/erc_after2012_variables.tex">TeX</a></p>
 </details>
 </section>
 <section id="好消息相对中性消息短窗响应" class="level3">
@@ -1773,18 +1778,18 @@ CAR_{it}^{w}=\alpha_i+\lambda_t+\delta B_{it}+\beta UE_{it}+\theta(B_{it}\times 
 <p><span class="math inline">\(X\)</span>为市值对数、MB和严格180天预测覆盖的<span class="math inline">\(1/N\)</span>，在实际样本均值处中心化；方括号仅在全交互版加入。两版均有公司和财年FE，按公司聚类，同一公司池各列使用相同样本。核心系数<span class="math inline">\(\theta\)</span>是四大−非四大的ERC斜率差。</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="tables/memo_palatino/erc_firm_cap05_three_windows.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<p><img src="tables/memo_three_decimals/erc_firm_cap05_three_windows.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
 <figcaption>1∶1公司匹配：三个CAR窗口及两种控制设定。前3列仅控制主项，后3列加入controls×UE。公司／财年FE，公司聚类。</figcaption>
 </figure>
 </div>
-<p><a href="tables/memo_palatino/erc_firm_cap05_three_windows.tex">TeX</a> · <a href="tables/memo_palatino/erc_firm_cap05_three_windows.pdf">PDF</a></p>
+<p><a href="tables/memo_three_decimals/erc_firm_cap05_three_windows.tex">TeX</a> · <a href="tables/memo_three_decimals/erc_firm_cap05_three_windows.pdf">PDF</a></p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="tables/memo_palatino/erc_firm_radius05_three_windows.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<p><img src="tables/memo_three_decimals/erc_firm_radius05_three_windows.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
 <figcaption>距离0.5内全部邻居：三个CAR窗口及两种控制设定。前3列仅控制主项，后3列加入controls×UE。公司／财年FE，公司聚类。</figcaption>
 </figure>
 </div>
-<p><a href="tables/memo_palatino/erc_firm_radius05_three_windows.tex">TeX</a> · <a href="tables/memo_palatino/erc_firm_radius05_three_windows.pdf">PDF</a></p>
+<p><a href="tables/memo_three_decimals/erc_firm_radius05_three_windows.tex">TeX</a> · <a href="tables/memo_three_decimals/erc_firm_radius05_three_windows.pdf">PDF</a></p>
 <p><strong>三个窗口的完整比较。</strong> 1∶1匹配仅主项版的Big4×UE依次为0.100、0.212、0.169（p=0.1074、0.0037、0.0199）；加入全部交互后为0.059、0.170、0.098（p=0.3249、0.0127、0.1864）。全邻居池仅主项版依次为0.105、0.188、0.139（p=0.0710、0.0088、0.0617）；全交互版为0.029、0.122、0.066（p=0.5873、0.0921、0.3714）。因此，全交互后两种匹配均只有[−2,+2]达到10%，其中1∶1达到5%。这些结果是全期估计，不是2012前后差值检验，也不能概括为所有窗口均支持四大优势。</p>
 <p><a href="./23_big4_effect.html#market-erc-company-matching">Big4 effect章节：匹配ERC及其他历史结果</a></p>
 </section>
@@ -1868,11 +1873,11 @@ CAR_{it}^{w}=\alpha_i+\lambda_t+\delta B_{it}+\beta UE_{it}+\theta(B_{it}\times 
 表&nbsp;1: 好消息公告后三年内的财务重述、盈余调整与财务违规
 </figcaption>
 <div aria-describedby="tbl-memo-good-news-quality-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="tables/memo_palatino/good_news_reporting_quality.png" class="img-fluid figure-img" style="width:100.0%">
+<img src="tables/memo_three_decimals/good_news_reporting_quality.png" class="img-fluid figure-img" style="width:100.0%">
 </div>
 </figure>
 </div>
-<p><a href="tables/memo_palatino/good_news_reporting_quality.tex">LaTeX表格</a> · <a href="tables/memo_palatino/good_news_reporting_quality.pdf">PDF表格</a></p>
+<p><a href="tables/memo_three_decimals/good_news_reporting_quality.tex">LaTeX表格</a> · <a href="tables/memo_three_decimals/good_news_reporting_quality.pdf">PDF表格</a></p>
 <p><strong>全样本盈利持续性。</strong> ROA与ES回归均使用所有可用年报公告，包含好、中、坏消息，不限制股价是否完整，也不沿用上述好消息队列的三年追踪限制。分别估计：</p>
 <p><span class="math display">\[
 Z_{i,t+h}=\alpha_{j,t}+\beta Big4_{it}+\rho Z_{it}
@@ -2279,8 +2284,8 @@ M2:\quad \Delta Y_{ith}&amp;=\delta_t+\beta_hES10_{it}+\gamma_hBig4_{it}
 <p><img src="figures/domestic_fee_2012/annual_premium_all_en.png" class="img-fluid" style="width:100.0%" alt="全样本年度四大收费溢价"></p>
 <p><img src="figures/domestic_fee_2012/annual_premium_retained_en.png" class="img-fluid" style="width:100.0%" alt="留任客户年度四大收费溢价"></p>
 <p><img src="figures/domestic_fee_2012/annual_premium_switch_en.png" class="img-fluid" style="width:100.0%" alt="换所客户年度四大收费溢价"></p>
-<p><img src="tables/memo_palatino/fee_break_tests.png" class="img-fluid" style="width:100.0%" alt="2008与2012收费溢价断点检验"></p>
-<p><a href="tables/memo_palatino/fee_break_tests.tex">LaTeX表格</a> · <a href="tables/memo_palatino/fee_break_tests.pdf">PDF表格</a></p>
+<p><img src="tables/memo_three_decimals/fee_break_tests.png" class="img-fluid" style="width:100.0%" alt="2008与2012收费溢价断点检验"></p>
+<p><a href="tables/memo_three_decimals/fee_break_tests.tex">LaTeX表格</a> · <a href="tables/memo_three_decimals/fee_break_tests.pdf">PDF表格</a></p>
 </details>
 <p><strong>本项讨论。</strong> 收费结果分别用于说明名义费用变化、相对溢价与正式断点；会议确定哪项比较最适合与市场响应和客户构成结果对照。</p>
 </section>
@@ -2341,11 +2346,11 @@ CAR_{i,w}=\alpha_w+\beta_w Big4_{i,2008}
 表&nbsp;3: 2009年本土化政策发布附近的四大客户收益及相对非四大差异
 </figcaption>
 <div aria-describedby="tbl-memo-localization-2009-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="tables/memo_palatino/localization_policy_2009.png" class="img-fluid figure-img" style="width:100.0%">
+<img src="tables/memo_three_decimals/localization_policy_2009.png" class="img-fluid figure-img" style="width:100.0%">
 </div>
 </figure>
 </div>
-<p><a href="tables/memo_palatino/localization_policy_2009.tex">LaTeX表格</a> · <a href="tables/memo_palatino/localization_policy_2009.pdf">PDF表格</a></p>
+<p><a href="tables/memo_three_decimals/localization_policy_2009.tex">LaTeX表格</a> · <a href="tables/memo_three_decimals/localization_policy_2009.pdf">PDF表格</a></p>
 <p>当天四大客户原始收益均值为0.038%，行业控制后的相对差异为−0.222个百分点（<span class="math inline">\(p=0.3506\)</span>）。前后三日和发布日起三日的相对差异分别为−1.020（<span class="math inline">\(p=0.0029\)</span>）和−0.765个百分点（<span class="math inline">\(p=0.0199\)</span>）。四大客户自身的平均异常收益在三个窗口内均不显著，三日原始收益均值分别为6.350%和2.367%；因此，这组结果表现为相对少涨。两个三日窗口有重叠。</p>
 <p>这次政策同时涉及本土化、本土大所扶持及信息安全等内容，<a href="https://epaper.stcn.com/paper/zqsb/page/1/2009-06-13/A019/5671244823864895.pdf">6月公开征求意见稿</a>也已提及本土化要求。当前结果反映正式政策发布附近的组间价格差异，尚未分离四大声誉、本土所扶持与其他同期消息的作用；共同事件下，横截面稳健标准误也不能消除相关冲击。</p>
 </details>
@@ -2353,9 +2358,13 @@ CAR_{i,w}=\alpha_w+\beta_w Big4_{i,2008}
 <section id="sec-memo-market-long-window" class="level3">
 <h3 class="anchored" data-anchor-id="sec-memo-market-long-window">历史补充：长窗口股价路径</h3>
 <p>长期股价drift已停止推进，历史材料供查阅。<a href="./23_big4_effect.html#超预期财报正向消息的股价反应">短窗市场反应</a> · <a href="./23_big4_effect.html#market-long-window">历史长窗路径</a></p>
-
-
 </section>
+</section>
+<section id="memo-short-window-pe" class="level2">
+<h2 class="anchored" data-anchor-id="memo-short-window-pe">7．短期股价反应与市盈率</h2>
+<p>在盈利分母相同的情况下，更高的短期股价回报会推高市盈率（Price-to-Earnings Ratio, P/E）。财报公告同时带来股价反应和盈利分母更新，因此P/E的净变化取决于两者的相对幅度。两期盈利均为正且股数口径可比时，<span class="math inline">\(PE_{后}/PE_{前}=(P_{后}/P_{前})\times(EPS_{旧}/EPS_{新})\)</span>：盈利增幅超过股价涨幅，P/E就会下降；窗口内固定EPS，P/E变化则与股价变化成比例。我们此前在公告前后<span class="math inline">\([-5,+5]\)</span>交易日做过描述，公告前使用上一份已公布年报EPS，公告日切换为本次EPS，P/E中位路径在公告日下移，体现了盈利分母更新的影响。因此，短期盈利消息的定价继续用股价或累计异常收益（Cumulative Abnormal Return, CAR）衡量；P/E用于单独讨论盈利变化与估值倍数的关系，年度换所P/E DID则回答跨期估值变化的问题。</p>
+
+
 </section>
 
 </main> <!-- /main -->

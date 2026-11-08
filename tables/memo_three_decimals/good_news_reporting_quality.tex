@@ -1,0 +1,32 @@
+\documentclass[10pt]{article}
+\usepackage[paperwidth=32cm,paperheight=45cm,margin=1cm]{geometry}
+\usepackage{fontspec,booktabs,array,graphicx,caption,amsmath}
+\setmainfont{Palatino Linotype}
+\usepackage[active,tightpage]{preview}
+\PreviewEnvironment{minipage}\setlength\PreviewBorder{6pt}
+\captionsetup{font=normalsize,labelformat=empty,skip=6pt}
+\newcommand{\sym}[1]{\textsuperscript{#1}}
+\begin{document}
+\begin{minipage}{19cm}\fontsize{10}{12}\selectfont\centering
+\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.15}
+\captionof{table}{Good News and Subsequent Financial Reporting Problems}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lccccc@{}}\toprule
+ & Financial & Earnings & Downward & Financial & Restatement \\
+ & restatement & adjustment & earnings & violation & or violation \\
+\midrule
+Big4 ($N=659$) & 9 (1.370\%) & 3 (0.460\%) & 1 (0.150\%) & 1 (0.150\%) & 10 (1.520\%) \\
+Local 8 ($N=2,489$) & 127 (5.100\%) & 52 (2.090\%) & 36 (1.450\%) & 41 (1.650\%) & 154 (6.190\%) \\
+Other ($N=1,623$) & 105 (6.470\%) & 42 (2.590\%) & 30 (1.850\%) & 29 (1.790\%) & 127 (7.830\%) \\
+Non-Big4 ($N=4,112$) & 232 (5.640\%) & 94 (2.290\%) & 66 (1.610\%) & 70 (1.700\%) & 281 (6.830\%) \\
+\bottomrule\end{tabular*}
+\par\medskip
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lcc@{}}\toprule
+Incomplete amount / direction information & Big4 & Non-Big4 \\ \midrule
+Declared earnings change, amount unavailable & 2 & 15 \\
+At least one restatement with unknown earnings direction & 6 & 143 \\
+\bottomrule\end{tabular*}
+\par\medskip\raggedright\fontsize{9}{11}\selectfont
+\textit{Notes:} Counts and percentages of firm-year annual announcements. Baseline good news is original-information $ES>0.10$; fiscal years 2001--2021; three-year follow-up after the annual announcement. The inherited good-news cohort requires complete returns over $[-5,+5]$ (4,771 announcements). Problems must concern the baseline fiscal year. The first three outcomes narrow from financial restatement to earnings adjustment to downward earnings adjustment. Annual consolidated-profit amounts take priority; explicit single-year declarations supplement missing amounts. Financial violations are separate; the last column is their deduplicated union with financial restatements. Non-Big4 combines Local 8 and Other. Missing amount or unknown direction is reported separately, not coded as no adjustment; categories may overlap across notices for the same firm-year. No recorded problem is not a verified absence of error. These are unadjusted descriptive comparisons.
+
+\end{minipage}
+\end{document}

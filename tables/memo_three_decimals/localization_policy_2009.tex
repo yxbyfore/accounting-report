@@ -1,0 +1,31 @@
+\documentclass[10pt]{article}
+\usepackage[paperwidth=21cm,paperheight=38cm,margin=1cm]{geometry}
+\usepackage{fontspec,booktabs,array}
+\setmainfont{Palatino Linotype}
+\newcommand{\sym}[1]{\textsuperscript{#1}}
+\pagestyle{empty}
+\begin{document}\fontsize{10}{12}\selectfont\setlength{\parindent}{0pt}
+\noindent\textbf{2009 Localization Policy: Big4 Client Returns}\par\medskip
+\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.15}
+\noindent\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lccc@{}}
+\toprule
+ & (1) & (2) & (3) \\
+Event window & [0,0] & [-1,+1] & [0,+2] \\
+Trading dates (October 2009) & 12 & 9, 12, 13 & 12, 13, 14 \\
+\midrule
+\multicolumn{4}{l}{\textit{Panel A. Big4 client mean returns (percent)}} \\
+Raw return & 0.038 & 6.350 & 2.367 \\
+Market-adjusted return & 0.182 & -0.021 & 0.080 \\ \addlinespace
+\multicolumn{4}{l}{\textit{Panel B. Big4 minus non-Big4 (percentage points)}} \\
+Big4 client & -0.222\sym{} & -1.020\sym{***} & -0.765\sym{**} \\
+ & (0.238) & (0.342) & (0.328) \\
+\textit{p}-value & 0.351 & 0.003 & 0.020 \\ \addlinespace
+Industry fixed effects & Yes & Yes & Yes \\
+Additional controls & None & None & None \\
+Observations & 1,514 & 1,487 & 1,499 \\
+Big4 clients & 108 & 106 & 108 \\
+Non-Big4 clients & 1,406 & 1,381 & 1,391 \\
+\bottomrule
+\end{tabular*}
+\par\medskip\fontsize{9}{11}\selectfont\textit{Notes:} Event date: October 12, 2009. A-share clients are classified using fiscal-year 2008 auditors. Returns are equally weighted sums of daily returns; market-adjusted returns subtract the corresponding daily market return. Each column uses firms with complete window returns. Panel B reports the Big4 coefficient from a regression of market-adjusted returns on Big4 and industry fixed effects; the baseline is non-Big4 clients. HC1 robust standard errors are in parentheses; no clustering or winsorization. The three-day windows overlap. * \ensuremath{p<0.10} , ** \ensuremath{p<0.05} , *** \ensuremath{p<0.01} .
+\end{document}
