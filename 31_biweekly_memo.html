@@ -225,8 +225,8 @@ window.Quarto = {
   <ul>
   <li><a href="#sec-memo-current-revisions" id="toc-sec-memo-current-revisions" class="nav-link active" data-scroll-target="#sec-memo-current-revisions">本周工作总览与主要修改</a>
   <ul class="collapse">
-  <li><a href="#已在当前报告展示" id="toc-已在当前报告展示" class="nav-link" data-scroll-target="#已在当前报告展示">已在当前报告展示</a></li>
-  <li><a href="#sec-memo-weekly-pending" id="toc-sec-memo-weekly-pending" class="nav-link" data-scroll-target="#sec-memo-weekly-pending">已做、尚未在报告中完整展开</a></li>
+  <li><a href="#主要结果" id="toc-主要结果" class="nav-link" data-scroll-target="#主要结果">主要结果</a></li>
+  <li><a href="#sec-memo-weekly-pending" id="toc-sec-memo-weekly-pending" class="nav-link" data-scroll-target="#sec-memo-weekly-pending">补充结果与待讨论问题</a></li>
   </ul></li>
   <li><a href="#sec-next-meeting" id="toc-sec-next-meeting" class="nav-link" data-scroll-target="#sec-next-meeting">本次准备讨论的问题</a></li>
   <li><a href="#memo-unmatched-baseline" id="toc-memo-unmatched-baseline" class="nav-link" data-scroll-target="#memo-unmatched-baseline">完整样本的基准对照：ERC与短窗响应为何变弱</a>
@@ -287,80 +287,84 @@ window.Quarto = {
 
 <section id="sec-memo-current-revisions" class="level2">
 <h2 class="anchored" data-anchor-id="sec-memo-current-revisions">本周工作总览与主要修改</h2>
-<p><strong>核对范围：2026年11月2—8日，截至11月8日。</strong> 本周的主线是：检验四大额外市场响应对客户特征、比较样本和时间固定效应的敏感性，并把收费、财报事后质量、距离识别探索及资金配置结果整理成可汇报材料。下表区分“已有估计本周入报告”与“本周新估计”；执行完成、报告展示和识别成立分别判断。</p>
-<section id="已在当前报告展示" class="level3">
-<h3 class="anchored" data-anchor-id="已在当前报告展示">已在当前报告展示</h3>
+<p><strong>盈利惊喜的两种口径。</strong> 设<span class="math inline">\(EPS_{it}\)</span>为实际每股收益，<span class="math inline">\(F_{it}\)</span>为公告前1—180天内各券商最新预测的中位数，<span class="math inline">\(P_{pre,it}\)</span>为公告前股价：</p>
+<p><span class="math display">\[
+ES_{it}=\frac{EPS_{it}-F_{it}}{|F_{it}|},
+\qquad
+UE_{it}=\frac{EPS_{it}-F_{it}}{P_{pre,it}}.
+\]</span></p>
+<p>两者使用相同的实际盈利与预期之差。ES以预测盈利的绝对值标准化，表示超预期相对于预测盈利的幅度；UE以公告前股价标准化，表示超预期盈利相对于股价的大小。<span class="math inline">\(F=0\)</span>时ES无法定义，预测接近零时ES容易出现极端值。分组分析中，ES以±10%、UE以±0.001划分坏消息、中性消息和好消息；中性组包含两端边界。两种门槛对应不同的经济尺度，分组成员可能不同。</p>
+<section id="主要结果" class="level3">
+<h3 class="anchored" data-anchor-id="主要结果">主要结果</h3>
 <table class="caption-top table">
 <thead>
 <tr class="header">
 <th>主题</th>
-<th>本周完成或整理了什么</th>
-<th>当前可讲的结果／讨论重点</th>
+<th>比较内容</th>
+<th>主要发现／讨论重点</th>
 <th>入口</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>完整未匹配样本ERC</td>
-<td>补齐三个窗口、三个时期的控制主项／controls×UE对照表</td>
+<td>三个CAR窗口、三个时期，比较控制主项与controls×UE</td>
 <td>加入交互后，尚无跨窗口稳定的四大额外ERC优势</td>
 <td><a href="#memo-unmatched-baseline">基准对照</a></td>
 </tr>
 <tr class="even">
 <td>短窗四种时间FE</td>
-<td>补齐A—D方程、固定效应子标题及2012年前后差值图，保留组内路径</td>
+<td>A—D模型下2012年前后的组内响应与直接组间差</td>
 <td>早期额外响应对是否允许分组事件时间路径敏感；组内上涨与组间差分别判断</td>
 <td><a href="#memo-four-fe-paths">四模型前后对照</a></td>
 </tr>
 <tr class="odd">
 <td>三年滚动A—D与三套公司池</td>
-<td>已补齐528组模型记录、96图：396个ABC新增，132个D复用；逐格固定原D样本</td>
+<td>三套公司池、UE／ES分类；同一窗口内固定样本比较四种时间FE</td>
 <td>共同／分组事件时间路径显著影响额外响应判断；窗口重叠与客户构成限制因果解释</td>
 <td><a href="#memo-rolling-abcd">滚动对照与三池入口</a></td>
 </tr>
 <tr class="even">
 <td>早上市曾用四大公司池</td>
-<td>新增UE／ES好、中、坏消息分期D模型，并展示公司池历年审计构成</td>
+<td>UE／ES好、中、坏消息的分期D模型及历年审计构成</td>
 <td>UE与ES的组间结论存在差异；选定公司池和客户构成影响解释</td>
 <td><a href="#memo-ever-big4-three">UE</a> · <a href="#memo-ever-big4-three-es">ES</a></td>
 </tr>
 <tr class="odd">
 <td>旧公司匹配ERC</td>
-<td>将1∶1与全邻居两种匹配的三个CAR窗口完整入表</td>
+<td>1∶1与全邻居两种匹配，分别比较三个CAR窗口</td>
 <td>全交互后支持集中在中间窗口；全期信息选池及旧重组排除口径单列说明</td>
 <td><a href="#sec-memo-erc-interactions">匹配ERC</a></td>
 </tr>
 <tr class="even">
 <td>审计费用</td>
-<td>原始费用、全样本／留任／换所年度溢价及断点检验进入会议页</td>
+<td>原始费用、全样本／留任／换所年度溢价及断点检验</td>
 <td>区分名义费用、相对溢价和正式断点检验；不只依据曲线判断2012突变</td>
 <td><a href="#sec-memo-audit-fee-2012">收费</a></td>
 </tr>
 <tr class="odd">
 <td>Distance／IV</td>
-<td>将既有距离构造、一阶段、18个2SLS与提前趋势诊断完整汇报</td>
-<td>一阶段强度及排除限制仍有问题；探索结果保留，暂未形成可信主IV</td>
+<td>距离与四大采用的一阶段、审计结果2SLS及提前趋势</td>
+<td>一阶段强度及排除限制仍有问题，暂未形成可信主IV</td>
 <td><a href="#sec-memo-distance">距离探索</a></td>
 </tr>
 <tr class="even">
 <td>本土化政策与财报事后质量</td>
-<td>补入2009年政策事件检验、好消息后三年质量表及全样本持续性表</td>
+<td>2009年政策事件、好消息后三年财报问题与盈利持续性</td>
 <td>政策三日相对少涨；四大好消息事后问题较少，ROA持续性较强，ES持续性不显著</td>
 <td><a href="#sec-memo-localization-2009">政策</a> · <a href="#sec-memo-good-news-verification">事后验证</a></td>
 </tr>
 <tr class="odd">
 <td>机构持仓与借贷</td>
-<td>六张历史结构图，以及简单债务、持仓、借贷数量／期限三部分基准；8张表、6张路径图</td>
-<td>持仓仅有局部正向差异，债务没有一致期限改善；零结果、反向结果和小样本诊断一起展示</td>
+<td>股东结构、简单债务基准、持仓响应及借贷数量／期限</td>
+<td>持仓仅有局部正向差异，债务没有一致期限改善；含债券结果受小样本限制</td>
 <td><a href="#sec-memo-holdings-structure">结构描述</a> · <a href="#sec-memo-capital-allocation">三部分结果</a></td>
 </tr>
 </tbody>
 </table>
-<p>费用、事后质量及距离中部分估计早于本周，本周新增的是核对、制表和报告整合。长期股价drift按此前决定停止推进，已有材料仅作历史补充。</p>
 </section>
 <section id="sec-memo-weekly-pending" class="level3">
-<h3 class="anchored" data-anchor-id="sec-memo-weekly-pending">已做、尚未在报告中完整展开</h3>
-<p>下面这些工作已有本地结果或核查记录，本轮先补入总览。<strong>列入此表表示成果已定位，完整图表尚待接入；不等于已经成为正式主结果。</strong></p>
+<h3 class="anchored" data-anchor-id="sec-memo-weekly-pending">补充结果与待讨论问题</h3>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 33%">
@@ -369,9 +373,9 @@ window.Quarto = {
 </colgroup>
 <thead>
 <tr class="header">
-<th>待展开内容</th>
-<th>已完成到哪里</th>
-<th>目前发现／接入时要保留的口径</th>
+<th>主题</th>
+<th>比较内容</th>
+<th>主要发现与待讨论问题</th>
 </tr>
 </thead>
 <tbody>
