@@ -326,22 +326,37 @@ window.Quarto = {
 <p>完整样本中，ERC加入企业特征与UE的交互后，四大额外斜率明显减弱；短窗允许两组各有事件时间基准路径后，早期正向组差也缩小。先固定比较对象，看清模型变化带来的影响。</p>
 <p><strong>盈利惊喜的两种口径。</strong> 设<span class="math inline">\(EPS_{it}\)</span>为实际每股收益，<span class="math inline">\(F_{it}\)</span>为公告前1—180天内各券商最新预测的中位数，<span class="math inline">\(P_{pre,it}\)</span>为公告前股价：</p>
 <p><span class="math display">\[
-ES_{it}=\frac{EPS_{it}-F_{it}}{|F_{it}|},
-\qquad
+ES_{it}=\frac{EPS_{it}-F_{it}}{|F_{it}|}
+\]</span></p>
+<p><span class="math display">\[
 UE_{it}=\frac{EPS_{it}-F_{it}}{P_{pre,it}}.
 \]</span></p>
-<p>两者使用相同的实际盈利与预期之差。ES以预测盈利的绝对值标准化，表示超预期相对于预测盈利的幅度；UE以公告前股价标准化，表示超预期盈利相对于股价的大小。<span class="math inline">\(F=0\)</span>时ES无法定义，预测接近零时ES容易出现极端值。分组分析中，ES以±10%、UE以±0.001划分坏消息、中性消息和好消息；中性组包含两端边界。两种门槛对应不同的经济尺度，分组成员可能不同。</p>
+<p>两者使用相同的实际盈利与预期之差。ES以预测盈利的绝对值标准化，表示超预期相对于预测盈利的幅度；UE以公告前股价标准化，表示超预期盈利相对于股价的大小。F=0时ES无法定义，预测接近零时ES容易出现极端值。分组分析中，ES以±10%、UE以±0.001划分坏消息、中性消息和好消息；中性组包含两端边界。两种门槛对应不同的经济尺度，分组成员可能不同。</p>
 <p>样本采用严格公告前1—180天已发布预测、每券商最新预测再取中位数，保留已有原报EPS恢复及原始尾部；不匹配，不作市值top70或N≥4筛选，不限制曾用四大公司或2012年前上市，不剔除重大重组。完整样本仍要求对应价格、预测和控制有效；ERC与日度事件研究各用自身合格样本。各时期内固定模型比较成员，分期重新处理FE单例。</p>
 <section id="memo-unmatched-baseline" class="level3">
 <h3 class="anchored" data-anchor-id="memo-unmatched-baseline">1.1 连续盈利消息：ERC</h3>
 <p>两版都保留Big4×UE；第二版增加市值、MB、覆盖的UE交互：</p>
 <p><span class="math display">\[
-CAR^w_{it}=\alpha_i+\lambda_t+\delta B_{it}+\beta U_{it}
-+\theta B_{it}U_{it}+\gamma'X^c_{it}
-+q\,\eta'(U_{it}X^c_{it})+\varepsilon_{it},\quad q\in\{0,1\}.
+\begin{aligned}
+CAR^w_{it}={}&amp;\alpha_i+\lambda_t+\delta B_{it}+\beta U_{it}
++\theta B_{it}U_{it}\\
+&amp;+\gamma'X^c_{it}+q\,\eta'(U_{it}X^c_{it})
++\varepsilon_{it},\quad q\in\{0,1\}.
+\end{aligned}
 \]</span></p>
-<p><span class="math inline">\(U=(EPS-F)/P_{pre}\)</span>；<span class="math inline">\(X^c\)</span>为中心化市值对数、MB和<span class="math inline">\(1/N\)</span>。公司、财年FE及公司聚类保持一致。关注<span class="math inline">\(\theta\)</span>，即四大减非四大的ERC斜率差。</p>
-<p><span class="math inline">\(UE\)</span>的系数<span class="math inline">\(\beta\)</span>是非四大的ERC，<span class="math inline">\(UE\times Big4\)</span>的系数<span class="math inline">\(\theta\)</span>是四大额外ERC；四大总斜率为<span class="math inline">\(\beta+\theta\)</span>。表中的“两组ERC相等”检验为<span class="math inline">\(H_0:\beta=\beta+\theta\)</span>，等价于<span class="math inline">\(H_0:\theta=0\)</span>，p值沿用交互项的冻结检验。该行比较同一模型中的两组ERC。</p>
+<p><span class="math display">\[
+U=(EPS-F)/P_{pre}
+\]</span></p>
+<p><span class="math inline">\(X^c\)</span>为中心化市值对数、MB和1/N。公司、财年FE及公司聚类保持一致。关注<span class="math inline">\(\theta\)</span>，即四大减非四大的ERC斜率差。</p>
+<p><span class="math inline">\(UE\)</span>的系数<span class="math inline">\(\beta\)</span>是非四大的ERC，交互项UE×Big4的系数<span class="math inline">\(\theta\)</span>是四大额外ERC。四大总斜率为：</p>
+<p><span class="math display">\[
+\beta+\theta
+\]</span></p>
+<p>表中的“两组ERC相等”检验为：</p>
+<p><span class="math display">\[
+H_0:\beta=\beta+\theta\quad\Longleftrightarrow\quad\theta=0
+\]</span></p>
+<p>p值沿用交互项的冻结检验，该行比较同一模型中的两组ERC。</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="tables/memo_three_decimals/erc_all_variables.png" class="img-fluid figure-img" style="width:100.0%"></p>
@@ -373,7 +388,14 @@ CAR^w_{it}=\alpha_i+\lambda_t+\delta B_{it}+\beta U_{it}
 <section id="好消息相对中性消息短窗响应" class="level3">
 <h3 class="anchored" data-anchor-id="好消息相对中性消息短窗响应">1.2 好消息相对中性消息：短窗响应</h3>
 <p>系数对照表：<a href="#memo-short-table-before2012">2012年前</a> · <a href="#memo-short-table-all">全期</a> · <a href="#memo-short-table-after2012">2012年起</a>。下方逐模型展示方程和前后路径图。</p>
-<p>设<span class="math inline">\(G=1(ES&gt;10\%)\)</span>，<span class="math inline">\(ES=(EPS-F)/|F|\)</span>；中性为±10%，排除ES&lt;−10%。统一估计：</p>
+<p>好消息指标和盈利惊喜定义为：</p>
+<p><span class="math display">\[
+G=1(ES&gt;10\%)
+\]</span></p>
+<p><span class="math display">\[
+ES=(EPS-F)/|F|
+\]</span></p>
+<p>中性为±10%，排除ES&lt;−10%。统一估计：</p>
 <p><span class="math display">\[
 \ln P_{e\tau}=\alpha_e+T_m(B_e,\tau,d)
 +\sum_{k\ne-1}[\beta_{mk}G_e+\theta_{mk}B_eG_e]1(\tau=k)+\varepsilon_{e\tau}.
@@ -407,8 +429,28 @@ CAR^w_{it}=\alpha_i+\lambda_t+\delta B_{it}+\beta U_{it}
 <section id="memo-four-fe-paths" class="level3">
 <h3 class="anchored" data-anchor-id="memo-four-fe-paths">2012年前后：四种固定效应的方程与组间差值</h3>
 <p>下面围绕“四大减非四大的好消息响应增量差”，按固定效应区别列出四个模型，每个模型在方程下连续展示2012年前与2012年起的差值路径。</p>
-<p><strong>共同口径。</strong> <span class="math inline">\(e\)</span>为年报公告，<span class="math inline">\(\tau\)</span>为相对事件交易日，<span class="math inline">\(d(e,\tau)\)</span>为实际交易日期；<span class="math inline">\(B_e=1\)</span>为当年四大客户，<span class="math inline">\(G_e=1(ES&gt;10\%)\)</span>。中性消息为<span class="math inline">\(|ES|\leq10\%\)</span>，排除ES&lt;−10%；<span class="math inline">\(K=\{-5,-4,-3,-2,0,1,2,3,4,5\}\)</span>，第−1日归零。各模型和时期分别估计，均有公告事件FE <span class="math inline">\(\alpha_e\)</span>，按公告事件聚类，无额外财务控制或连续ES幅度控制。2012年前四模型同用4,485次公告、49,267条日度观测、1,693家公司；2012年起同用15,830次公告、174,046条日度观测、4,108家公司。两时期成员可以不同。</p>
-<p>方程中的<span class="math inline">\(\beta^m_{0k}\)</span>、<span class="math inline">\(\beta^m_{1k}\)</span>分别是非四大、四大“好消息减自身中性消息”的响应。图展示直接差值<span class="math inline">\((\beta^m_{1k}-\beta^m_{0k})\times100\)</span>及95%区间；两组自身路径保留在各模型下方的展开区。A→B、C→D放开两组事件时间基准路径；A→C、B→D放开两组实际交易日冲击。各期差值与显著性不能代替正式前后系数差检验。</p>
+<p><strong>共同口径。</strong> <span class="math inline">\(e\)</span>为年报公告，<span class="math inline">\(\tau\)</span>为相对事件交易日，<span class="math inline">\(d(e,\tau)\)</span>为实际交易日期；</p>
+<p><span class="math display">\[
+B_e=1
+\]</span></p>
+<p>为当年四大客户，</p>
+<p><span class="math display">\[
+G_e=1(ES&gt;10\%)
+\]</span></p>
+<p>中性消息为</p>
+<p><span class="math display">\[
+|ES|\leq10\%
+\]</span></p>
+<p>排除ES&lt;−10%；</p>
+<p><span class="math display">\[
+K=\{-5,-4,-3,-2,0,1,2,3,4,5\}
+\]</span></p>
+<p>第−1日归零。各模型和时期分别估计，均有公告事件FE <span class="math inline">\(\alpha_e\)</span>，按公告事件聚类，无额外财务控制或连续ES幅度控制。2012年前四模型同用4,485次公告、49,267条日度观测、1,693家公司；2012年起同用15,830次公告、174,046条日度观测、4,108家公司。两时期成员可以不同。</p>
+<p>方程中的<span class="math inline">\(\beta^m_{0k}\)</span>、<span class="math inline">\(\beta^m_{1k}\)</span>分别是非四大、四大“好消息减自身中性消息”的响应。图展示直接差值</p>
+<p><span class="math display">\[
+(\beta^m_{1k}-\beta^m_{0k})\times100
+\]</span></p>
+<p>及95%区间；两组自身路径保留在各模型下方的展开区。A→B、C→D放开两组事件时间基准路径；A→C、B→D放开两组实际交易日冲击。各期差值与显著性不能代替正式前后系数差检验。</p>
 <section id="memo-four-fe-a" class="level4">
 <h4 class="anchored" data-anchor-id="memo-four-fe-a">A｜共同事件时间FE＋共同交易日FE</h4>
 <p><span class="math display">\[
@@ -686,9 +728,17 @@ CAR^w_{it}=\alpha_i+\lambda_t+\delta B_{it}+\beta U_{it}
 样本、分档界限与共同回归设定
 </summary>
 <p><strong>问题与样本。</strong> 将好消息进一步按UE幅度分档，比较相近盈利消息对应的四大与非四大市场响应。样本为全部合格预测公告，不限上市时间或曾用四大；严格公告前180天预测，保留原始UE及负消息，不缩尾、不排重组、不匹配，按财报所属年度的实际审计师分组。每期A—D使用同一实际公告—交易日成员；前后两期不要求为同一批公司。这是消息分档比较，企业特征与同档内部的消息幅度仍可能不同。</p>
-<p><strong>两种分档。</strong> 固定绝对九组使用UE切点±0.001、±0.0025、±0.005、±0.01，即±0.10%、±0.25%、±0.50%、±1.00%。G5为<span class="math inline">\([-0.001,0.001]\)</span>近零参考，模型中记为<span class="math inline">\(c=0\)</span>；正向G6—G9依次为<span class="math inline">\((0.10\%,0.25\%]\)</span>、<span class="math inline">\((0.25\%,0.50\%]\)</span>、<span class="math inline">\((0.50\%,1.00\%]\)</span>及<span class="math inline">\(&gt;1.00\%\)</span>。负切点相等值归较高档，正切点相等值归较低档，近零两端均包含。</p>
-<p>年度共同十分位先在每年将两审计组合在一起排序，沿用共同十分位，再将<span class="math inline">\(|UE|\le0.001\)</span>的公告单列为近零参考，保留其余1—10档。不同年份的同一档不代表相同绝对幅度；两个审计组共用分位界限。</p>
-<p><strong>回归与读图。</strong> <span class="math inline">\(e\)</span>为年报公告，<span class="math inline">\(\tau\)</span>为相对交易日，<span class="math inline">\(d(e,\tau)\)</span>为实际日期，<span class="math inline">\(B_e\)</span>为年度四大身份，<span class="math inline">\(C_e\)</span>为消息档，<span class="math inline">\(K=\{-5,-4,-3,-2,0,1,2,3,4,5\}\)</span>。因变量为日度收盘价的对数，窗口<span class="math inline">\([-5,+5]\)</span>、第−1日为基期；各方法、时期及模型分别估计，均含公告事件固定效应，标准误按公告事件聚类，无财务控制或连续UE幅度控制。图示第0日响应乘100及95%区间，近似百分点，不是累计CAR。</p>
+<p><strong>两种分档。</strong> 固定绝对九组使用UE切点±0.001、±0.0025、±0.005、±0.01，即±0.10%、±0.25%、±0.50%、±1.00%。G5为[−0.001,0.001]近零参考，模型中记为参考档编码为0；正向G6—G9依次为(0.10%,0.25%]、(0.25%,0.50%]、(0.50%,1.00%]及大于1.00%。负切点相等值归较高档，正切点相等值归较低档，近零两端均包含。</p>
+<p>年度共同十分位先在每年将两审计组合在一起排序，沿用共同十分位，再将</p>
+<p><span class="math display">\[
+|UE|\le0.001
+\]</span></p>
+<p>的公告单列为近零参考，保留其余1—10档。不同年份的同一档不代表相同绝对幅度；两个审计组共用分位界限。</p>
+<p><strong>回归与读图。</strong> <span class="math inline">\(e\)</span>为年报公告，<span class="math inline">\(\tau\)</span>为相对交易日，<span class="math inline">\(d(e,\tau)\)</span>为实际日期，<span class="math inline">\(B_e\)</span>为年度四大身份，<span class="math inline">\(C_e\)</span>为消息档，</p>
+<p><span class="math display">\[
+K=\{-5,-4,-3,-2,0,1,2,3,4,5\}
+\]</span></p>
+<p>因变量为日度收盘价的对数，窗口[−5,+5]、第−1日为基期；各方法、时期及模型分别估计，均含公告事件固定效应，标准误按公告事件聚类，无财务控制或连续UE幅度控制。图示第0日响应乘100及95%区间，近似百分点，不是累计CAR。</p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -715,7 +765,11 @@ CAR^w_{it}=\alpha_i+\lambda_t+\delta B_{it}+\beta U_{it}
 </tr>
 </tbody>
 </table>
-<p>A／C约束两组共用近零消息的事件时间路径；B／D允许各组相对自身近零路径。直接组差为<span class="math inline">\(\theta_{1c0}-\theta_{0c0}\)</span>，使用同一回归的协方差计算；一组显著不代表组差显著。</p>
+<p>A／C约束两组共用近零消息的事件时间路径；B／D允许各组相对自身近零路径。直接组差为</p>
+<p><span class="math display">\[
+\theta_{1c0}-\theta_{0c0}
+\]</span></p>
+<p>使用同一回归的协方差计算；一组显著不代表组差显著。</p>
 </details>
 <details>
 <summary>
@@ -1346,13 +1400,33 @@ CAR^w_{it}=\alpha_i+\lambda_t+\delta B_{it}+\beta U_{it}
 </figure>
 </div>
 <p>每个公司年计一次，各年以当年有审计记录的入池公司为分母，使用全部8,190条公司年记录，不限于具有有效预测的回归公告。2001、2011、2012和2024年的有效公司数分别为199、341、343和336。尚未上市、退市或缺记录的年份不计作其他事务所；图展示年度构成，不能直接据此确定单家公司的转入或转出去向。</p>
-<p><strong>比较对象与模型。</strong> 只保留2012年前上市、2001—2024年至少一年使用四大的公司，按公告当年的实际审计师区分四大与非四大；不要求每家公司在两期都有合格公告。采用公告前严格180天预测中位数，<span class="math inline">\(UE=(EPS-F)/P_{pre}\)</span>；坏消息为<span class="math inline">\(UE&lt;-0.001\)</span>，中间组为<span class="math inline">\(UE\in[-0.001,0.001]\)</span>，好消息为<span class="math inline">\(UE&gt;0.001\)</span>。不剔除重组、不匹配。以公告前1日为基期，在[−5,+5]交易日窗口内分别估计2001—2011和2012—2024财年的D模型：</p>
+<p><strong>比较对象与模型。</strong> 只保留2012年前上市、2001—2024年至少一年使用四大的公司，按公告当年的实际审计师区分四大与非四大；不要求每家公司在两期都有合格公告。采用公告前严格180天预测中位数，</p>
+<p><span class="math display">\[
+UE=(EPS-F)/P_{pre}
+\]</span></p>
+<p>坏消息为</p>
+<p><span class="math display">\[
+UE&lt;-0.001
+\]</span></p>
+<p>中间组为</p>
+<p><span class="math display">\[
+UE\in[-0.001,0.001]
+\]</span></p>
+<p>好消息为</p>
+<p><span class="math display">\[
+UE&gt;0.001
+\]</span></p>
+<p>不剔除重组、不匹配。以公告前1日为基期，在[−5,+5]交易日窗口内分别估计2001—2011和2012—2024财年的D模型：</p>
 <p><span class="math display">\[
 \ln P_{e\tau}=\alpha_e+\lambda_{B_e,\tau}+\mu_{B_e,t}
 +\sum_{c\in\{bad,good\}}\sum_{k\ne-1}
 [\beta_{ck}(1-B_e)+\gamma_{ck}B_e]1(C_e=c)1(\tau=k)+\varepsilon_{e\tau}.
 \]</span></p>
-<p><span class="math inline">\(B_e\)</span>为当年四大身份。吸收报告事件FE、审计组×相对事件日FE、审计组×实际交易日FE，允许两组各有中间消息基准路径和交易日冲击。标准误按报告（公司年）聚类，无其他财务控制或连续UE幅度控制。非四大、四大的组内增量分别为<span class="math inline">\(\beta_{ck}\)</span>、<span class="math inline">\(\gamma_{ck}\)</span>，直接组间差为<span class="math inline">\(\gamma_{ck}-\beta_{ck}\)</span>。下述数值为第0日相对−1日的对数价格响应乘100，近似百分点。</p>
+<p><span class="math inline">\(B_e\)</span>为当年四大身份。吸收报告事件FE、审计组×相对事件日FE、审计组×实际交易日FE，允许两组各有中间消息基准路径和交易日冲击。标准误按报告（公司年）聚类，无其他财务控制或连续UE幅度控制。非四大、四大的组内增量分别为<span class="math inline">\(\beta_{ck}\)</span>、<span class="math inline">\(\gamma_{ck}\)</span>，直接组间差为</p>
+<p><span class="math display">\[
+\gamma_{ck}-\beta_{ck}
+\]</span></p>
+<p>下述数值为第0日相对−1日的对数价格响应乘100，近似百分点。</p>
 <p><strong>结果。</strong> 2012年前，四大好消息相对自身中间组的响应为0.915（SE=0.279，p=0.0010），非四大为0.042（SE=0.349，p=0.9052）；四大额外增量为0.874（SE=0.446，p=0.0504），达到10%水平。2012年起，四大好消息增量为0.169（SE=0.213，p=0.4265），非四大为0.931（SE=0.260，p=0.0004）；直接差值为−0.762（SE=0.336，p=0.0235）。</p>
 <p>坏消息方面，早期四大、非四大相对自身中间组的响应分别为0.148（SE=0.318）和−0.306（SE=0.347），差值0.454（SE=0.471，p=0.3352）。后期分别为−0.662（SE=0.220，p=0.0026）和0.293（SE=0.255，p=0.2504），差值−0.956（SE=0.337，p=0.0046）。这个公司池中，早期呈现较强的四大好消息奖励，后期呈现较弱的好消息奖励及较负的坏消息响应。</p>
 <div class="quarto-figure quarto-figure-center">
@@ -1385,14 +1459,34 @@ CAR^w_{it}=\alpha_i+\lambda_t+\delta B_{it}+\beta U_{it}
 <section id="memo-ever-big4-three-es" class="level4">
 <h4 class="anchored" data-anchor-id="memo-ever-big4-three-es">ES分类：同公司池的分期响应</h4>
 <p><strong>将消息分类改为ES±10%后，早期四大的好消息奖励仍显著；后期四大的好消息奖励不显著、坏消息惩罚显著。</strong> 直接比较四大与非四大时，后期好消息增量的差值显著为负；早期好消息差值及后期坏消息差值均不显著，证据弱于上面的UE分类结果。</p>
-<p>保持上文公司池：2012年前上市、2001—2024至少一年使用四大，按公告所属财年的实际审计师分组；不要求公司两期都用四大。严格公告前180天预测、不剔除重组、不匹配。改用<span class="math inline">\(ES=(EPS-F)/|F|\)</span>，好消息为<span class="math inline">\(ES&gt;0.10\)</span>，中间组为<span class="math inline">\(ES\in[-0.10,0.10]\)</span>，坏消息为<span class="math inline">\(ES&lt;-0.10\)</span>。后期2份报告的预测中位数<span class="math inline">\(F=0\)</span>，无法定义ES而退出。</p>
+<p>保持上文公司池：2012年前上市、2001—2024至少一年使用四大，按公告所属财年的实际审计师分组；不要求公司两期都用四大。严格公告前180天预测、不剔除重组、不匹配。改用</p>
+<p><span class="math display">\[
+ES=(EPS-F)/|F|
+\]</span></p>
+<p>好消息为</p>
+<p><span class="math display">\[
+ES&gt;0.10
+\]</span></p>
+<p>中间组为</p>
+<p><span class="math display">\[
+ES\in[-0.10,0.10]
+\]</span></p>
+<p>坏消息为</p>
+<p><span class="math display">\[
+ES&lt;-0.10
+\]</span></p>
+<p>后期2份报告的预测中位数F=0，无法定义ES而退出。</p>
 <p>两期分别估计同一D模型，好消息与坏消息在一个回归中联合估计：</p>
 <p><span class="math display">\[
 \ln P_{e\tau}=\alpha_e+\lambda_{B_e,\tau}+\mu_{B_e,t}
 +\sum_{c\in\{\mathrm{good,bad}\}}\sum_{k\ne-1}
 [\beta_{ck}+\delta_{ck}B_e]1(C_e=c)1(\tau=k)+\varepsilon_{e\tau}.
 \]</span></p>
-<p>报告事件FE、审计组×相对事件日FE、审计组×真实交易日FE均保留；标准误按报告（公司年）聚类，无财务controls或连续ES幅度控制。非四大相对自身中间组的反应为<span class="math inline">\(\beta\)</span>，四大为<span class="math inline">\(\beta+\delta\)</span>，组间差为<span class="math inline">\(\delta\)</span>。窗口为[−5,+5]，第−1日为基期；第0日系数是相对价格响应，不是CAR[−1,0]。以下系数及标准误均乘100。</p>
+<p>报告事件FE、审计组×相对事件日FE、审计组×真实交易日FE均保留；标准误按报告（公司年）聚类，无财务controls或连续ES幅度控制。非四大相对自身中间组的反应为<span class="math inline">\(\beta\)</span>，四大为</p>
+<p><span class="math display">\[
+\beta+\delta
+\]</span></p>
+<p>组间差为<span class="math inline">\(\delta\)</span>。窗口为[−5,+5]，第−1日为基期；第0日系数是相对价格响应，不是CAR[−1,0]。以下系数及标准误均乘100。</p>
 <p><strong>好消息。</strong> 2001—2011年，四大为0.537（SE=0.228，p=0.0185），非四大为−0.004（SE=0.297，p=0.9903），差值0.540（SE=0.374，p=0.1492）。2012—2024年，四大为0.183（SE=0.167，p=0.2721），非四大为0.776（SE=0.227，p=0.0006），差值−0.593（SE=0.281，p=0.0353）。后期四大的好消息增量低于非四大。</p>
 <p><strong>坏消息。</strong> 早期四大为−0.382（SE=0.296，p=0.1970），非四大为−0.316（SE=0.302，p=0.2972），差值−0.066（SE=0.423，p=0.8756）。后期四大为−0.536（SE=0.183，p=0.0035），非四大为−0.100（SE=0.216，p=0.6448），差值−0.436（SE=0.284，p=0.1238）。四大自身的坏消息惩罚显著，但尚不能确认惩罚强于非四大。</p>
 <div class="quarto-figure quarto-figure-center">
@@ -1429,10 +1523,34 @@ CAR^w_{it}=\alpha_i+\lambda_t+\delta B_{it}+\beta U_{it}
 </summary>
 <section id="memo-rolling-abcd" class="level5">
 <h5 class="anchored" data-anchor-id="memo-rolling-abcd">三年滚动：公司池、消息尺度与时间FE的对照</h5>
-<p><strong>窗口定义。</strong> 每个中心年<span class="math inline">\(w=2002,\ldots,2023\)</span>使用财年<span class="math inline">\([w-1,w+1]\)</span>，例如中心2010对应2009—2011，中心2012对应2011—2013。</p>
-<p><strong>消息与样本。</strong> <span class="math inline">\(UE=(EPS-F)/P_{pre}\)</span>，以±0.001划分好／中／坏消息；<span class="math inline">\(ES=(EPS-F)/|F|\)</span>，门槛为±0.10。保留两端消息，等于门槛归中间组；F=0不能定义ES。沿用严格公告前180天预测、不剔除重组、不匹配、报告财年实际审计身份及原始尾部。对每个“公司池×消息口径×中心年”，A／B／C逐行固定原D的实际公告—交易日样本；不同窗口、不同公司池不取统一交集。“曾用四大”依据2001—2024年完整审计历史定义；早上市／曾用四大属于描述性选池，含全期身份信息，不构成外生处理。</p>
-<p><strong>共同估计设定。</strong> Y为公告附近<span class="math inline">\([-5,+5]\)</span>交易日的原始收盘价log，第−1日为基期。<span class="math inline">\(e\)</span>为公告、<span class="math inline">\(\tau\)</span>为相对事件日、<span class="math inline">\(d(e,\tau)\)</span>为真实交易日期，<span class="math inline">\(B_e\)</span>为当年四大身份；<span class="math inline">\(C_e\in\{b,n,g\}\)</span>为坏／中／好消息，<span class="math inline">\(K=\{-5,-4,-3,-2,0,1,2,3,4,5\}\)</span>。每个窗口、消息口径与模型分别回归，均有公告事件FE，按公告事件聚类；无财务controls或连续surprise幅度控制。</p>
-<p>方程中<span class="math inline">\(\beta_{sk,w}^m\)</span>与<span class="math inline">\(\beta_{sk,w}^m+\delta_{sk,w}^m\)</span>分别对应两组模型响应，直接组间差为<span class="math inline">\(\delta_{sk,w}^m\)</span>。图只提取<span class="math inline">\(k=0\)</span>并乘100，展示点估计及报告聚类95%区间，完整动态估计保留在结果包。<strong>A／C将两组的中间消息事件时间路径约束为共同路径；B／D允许分组路径，才对应不受此限制的各组“消息减自身中间组”响应。</strong> A→B、C→D改变事件时间FE；A→C、B→D改变真实交易日FE。</p>
+<p><strong>窗口定义。</strong> 中心年<span class="math inline">\(w\)</span>从2002到2023，对应财年区间为：</p>
+<p><span class="math display">\[
+[w-1,w+1]
+\]</span></p>
+<p>例如中心2010对应2009—2011，中心2012对应2011—2013。</p>
+<p><strong>消息与样本。</strong></p>
+<p><span class="math display">\[
+UE=(EPS-F)/P_{pre}
+\]</span></p>
+<p>以±0.001划分好／中／坏消息；</p>
+<p><span class="math display">\[
+ES=(EPS-F)/|F|
+\]</span></p>
+<p>门槛为±0.10。保留两端消息，等于门槛归中间组；F=0不能定义ES。沿用严格公告前180天预测、不剔除重组、不匹配、报告财年实际审计身份及原始尾部。对每个“公司池×消息口径×中心年”，A／B／C逐行固定原D的实际公告—交易日样本；不同窗口、不同公司池不取统一交集。“曾用四大”依据2001—2024年完整审计历史定义；早上市／曾用四大属于描述性选池，含全期身份信息，不构成外生处理。</p>
+<p><strong>共同估计设定。</strong> Y为公告附近[−5,+5]交易日的原始收盘价log，第−1日为基期。<span class="math inline">\(e\)</span>为公告、<span class="math inline">\(\tau\)</span>为相对事件日、<span class="math inline">\(d(e,\tau)\)</span>为真实交易日期，<span class="math inline">\(B_e\)</span>为当年四大身份；</p>
+<p><span class="math display">\[
+C_e\in\{b,n,g\}
+\]</span></p>
+<p>为坏／中／好消息，</p>
+<p><span class="math display">\[
+K=\{-5,-4,-3,-2,0,1,2,3,4,5\}
+\]</span></p>
+<p>每个窗口、消息口径与模型分别回归，均有公告事件FE，按公告事件聚类；无财务controls或连续surprise幅度控制。</p>
+<p>方程中<span class="math inline">\(\beta_{sk,w}^m\)</span>与</p>
+<p><span class="math display">\[
+\beta_{sk,w}^m+\delta_{sk,w}^m
+\]</span></p>
+<p>分别对应两组模型响应，直接组间差为<span class="math inline">\(\delta_{sk,w}^m\)</span>。图只提取第0日并乘100，展示点估计及报告聚类95%区间，完整动态估计保留在结果包。<strong>A／C将两组的中间消息事件时间路径约束为共同路径；B／D允许分组路径，才对应不受此限制的各组“消息减自身中间组”响应。</strong> A→B、C→D改变事件时间FE；A→C、B→D改变真实交易日FE。</p>
 <p><strong>完整样本的主要对照。</strong> UE好消息的四大正向组差在A有7个中心年达到5%，B／D均仅中心2010达到5%，C为中心2011—2013；A／C中心2023为负。ES好消息中，A有4个、C有2个中心年正向达到5%，B没有5%差值，D仅中心2019为负；ES坏消息的A／C没有5%组差，B在中心2019、2020为负，D在2018—2020为负。因此，共同事件时间路径限制、消息尺度和客户构成都影响额外响应的判断。</p>
 <p>这些是重叠三年窗口的逐点推断，未作多重比较校正；窗口间显著性变化不等于正式前后系数差，也不能直接归因于2012制度或声誉变化。早期预测覆盖和中性参考组支持较薄。跨公司池比较改变了客户构成，不能等同于同样本只改变FE；四模型的严格同样本要求只在每个既定池、口径和窗口内成立。</p>
 <table class="caption-top table">
@@ -1770,12 +1888,16 @@ d_{ij}=\sqrt{\frac12\left[\left(\frac{\overline{Size}_i-\overline{Size}_j}{s_{Si
 \]</span></p>
 <p>距离上限固定为0.5。1∶1方案在同一行业内作不放回配对，优先保留可配对公司，再最小化总距离，最终407对、814家公司。全邻居方案保留每家参照公司距离0.5以内的全部候选，同时保留至少有一个邻居的参照公司，最终431家曾用四大公司和2,888家其他公司，共3,319家。公司入池后去重，每份合格年度公告等权；匹配连接次数不作为回归权重。每年仍按实际四大身份分组，不能将“曾用四大”永久作为处理身份。</p>
 <p><strong>平衡与选择。</strong> 1∶1池的公司平均资产规模和SOE的标准化均值差分别为0.062、0.002；全邻居池分别为0.761、0.642。全邻居保留更多样本，但距离约束并不保证两个公司池的总体分布平衡。这些是选池特征的平衡指标，不代表最终按年度四大身份划分的所有控制变量都已平衡。全期均值和全期曾用四大身份包含未来信息，属于描述性选池，不能解释为仅使用公告前信息的因果匹配。</p>
-<p><strong>估计口径。</strong> 本处保留2026年11月1日的冻结结果，不重新匹配或估计。严格公告前180天、每家券商取窗口内最新预测，再取预测中位数<span class="math inline">\(F\)</span>；<span class="math inline">\(UE=(EPS-F)/P_{pre}\)</span>。使用原EPS、市场调整CAR、不缩尾。沿用冻结批次当时的重组排除：对完成重组年份<span class="math inline">\(c\)</span>，剔除披露自然年为<span class="math inline">\(c-1\)</span>或<span class="math inline">\(c\)</span>的报告；这早于后续按报告财年修正的口径。此旧公司池没有新增“2012年前上市”的限制。它与当前“2012年前上市、全期曾用四大且不剔除重组”的公司池不同。</p>
+<p><strong>估计口径。</strong> 本处保留2026年11月1日的冻结结果，不重新匹配或估计。严格公告前180天、每家券商取窗口内最新预测，再取预测中位数<span class="math inline">\(F\)</span>；</p>
+<p><span class="math display">\[
+UE=(EPS-F)/P_{pre}
+\]</span></p>
+<p>使用原EPS、市场调整CAR、不缩尾。沿用冻结批次当时的重组排除：对完成重组年份<span class="math inline">\(c\)</span>，剔除披露自然年为c−1或<span class="math inline">\(c\)</span>的报告；这早于后续按报告财年修正的口径。此旧公司池没有新增“2012年前上市”的限制。它与当前“2012年前上市、全期曾用四大且不剔除重组”的公司池不同。</p>
 <p>三个窗口分别估计：</p>
 <p><span class="math display">\[
 CAR_{it}^{w}=\alpha_i+\lambda_t+\delta B_{it}+\beta UE_{it}+\theta(B_{it}\times UE_{it})+\gamma'X^c_{it}+[\eta'(UE_{it}\times X^c_{it})]+\varepsilon_{it}.
 \]</span></p>
-<p><span class="math inline">\(X\)</span>为市值对数、MB和严格180天预测覆盖的<span class="math inline">\(1/N\)</span>，在实际样本均值处中心化；方括号仅在全交互版加入。两版均有公司和财年FE，按公司聚类，同一公司池各列使用相同样本。核心系数<span class="math inline">\(\theta\)</span>是四大−非四大的ERC斜率差。</p>
+<p><span class="math inline">\(X\)</span>为市值对数、MB和严格180天预测覆盖的1/N，在实际样本均值处中心化；方括号仅在全交互版加入。两版均有公司和财年FE，按公司聚类，同一公司池各列使用相同样本。核心系数<span class="math inline">\(\theta\)</span>是四大−非四大的ERC斜率差。</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="tables/memo_three_decimals/erc_firm_cap05_three_windows.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
@@ -1866,7 +1988,11 @@ CAR_{it}^{w}=\alpha_i+\lambda_t+\delta B_{it}+\beta UE_{it}+\theta(B_{it}\times 
 <section id="sec-memo-good-news-verification" class="level3">
 <h3 class="anchored" data-anchor-id="sec-memo-good-news-verification">3.1 财报事后质量与盈利持续性</h3>
 <p>四大客户的好消息更少在事后三年内出现财务重述或财务违规；在所有可用年报样本中，四大客户当前盈利也更能延续至未来一至两年。这两部分结果为“四大的好消息更可信”提供事后基本面依据，分别对应财报问题暴露和盈利水平延续。</p>
-<p><strong>好消息之后的财报问题。</strong> 原报盈利惊喜 <span class="math inline">\(ES=surprise_{180}&gt;0.10\)</span> 的4,771个年报公告中，四大659个，非四大4,112个。公告后三年内、涉及起始财年的财务重述率分别为1.37%和5.64%；盈余向下调整率分别为0.15%和1.61%；财务重述或财务违规的合并比例分别为1.52%和6.83%。表中依次区分财务重述、涉及盈余调整、盈余向下调整，并保留缺金额和方向未知的记录。这些比例是未经控制的组间描述。</p>
+<p><strong>好消息之后的财报问题。</strong> 原报盈利惊喜的好消息条件为：</p>
+<p><span class="math display">\[
+ES=surprise_{180}&gt;0.10
+\]</span></p>
+<p>满足该条件的4,771个年报公告中，四大659个，非四大4,112个。公告后三年内、涉及起始财年的财务重述率分别为1.37%和5.64%；盈余向下调整率分别为0.15%和1.61%；财务重述或财务违规的合并比例分别为1.52%和6.83%。表中依次区分财务重述、涉及盈余调整、盈余向下调整，并保留缺金额和方向未知的记录。这些比例是未经控制的组间描述。</p>
 <div id="tbl-memo-good-news-quality" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-memo-good-news-quality-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -1884,7 +2010,11 @@ Z_{i,t+h}=\alpha_{j,t}+\beta Big4_{it}+\rho Z_{it}
 +\kappa\bigl(Big4_{it}\times Z_{it}\bigr)+X_{it}'\gamma+\varepsilon_{i,t+h},
 \qquad Z\in\{ROA,ES\},\quad h=1,2.
 \]</span></p>
-<p><span class="math inline">\(\rho\)</span>是非四大的持续性斜率，<span class="math inline">\(\rho+\kappa\)</span>是四大的持续性斜率，<span class="math inline">\(\kappa\)</span>直接检验四大是否更加持续；<span class="math inline">\(\beta\)</span>是当前<span class="math inline">\(Z=0\)</span>时的水平差异。固定效应为行业×起始财年，标准误按公司聚类。控制当期CFO、滞后一期的对数资产规模、杠杆和营收增长；ROA回归额外控制当期ES。因此，ROA仍需当期预测，ES还需未来预测，各列N由相应变量完整性及固定效应单例剔除决定。各变量不缩尾，不加入2012前后交互。</p>
+<p><span class="math inline">\(\rho\)</span>是非四大的持续性斜率，</p>
+<p><span class="math display">\[
+\rho+\kappa
+\]</span></p>
+<p>是四大的持续性斜率，<span class="math inline">\(\kappa\)</span>直接检验四大是否更加持续；<span class="math inline">\(\beta\)</span>是当前Z取0时的水平差异。固定效应为行业×起始财年，标准误按公司聚类。控制当期CFO、滞后一期的对数资产规模、杠杆和营收增长；ROA回归额外控制当期ES。因此，ROA仍需当期预测，ES还需未来预测，各列N由相应变量完整性及固定效应单例剔除决定。各变量不缩尾，不加入2012前后交互。</p>
 <div id="tbl-memo-full-persistence" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-memo-full-persistence-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -1896,7 +2026,7 @@ Z_{i,t+h}=\alpha_{j,t}+\beta Big4_{it}+\rho Z_{it}
 </figure>
 </div>
 <p><a href="tables/memo_palatino/full_sample_persistence.tex">LaTeX表格</a> · <a href="tables/memo_palatino/full_sample_persistence.pdf">PDF表格</a></p>
-<p>ROA一年期的非四大斜率为0.391，四大为0.554，差异为0.164（标准误0.047，<span class="math inline">\(p=0.00054\)</span>，<span class="math inline">\(N=24,508\)</span>）；两年期分别为0.260和0.421，差异为0.161（标准误0.052，<span class="math inline">\(p=0.00193\)</span>，<span class="math inline">\(N=22,291\)</span>）。两期均支持四大客户盈利持续性更强。这里的“更加一致”指当前盈利更能延续到未来。连续ES的额外持续性在两期均不显著，说明ROA的支持尚未扩展为连续超预期的支持。</p>
+<p>ROA一年期的非四大斜率为0.391，四大为0.554，差异为0.164（标准误0.047，p=0.00054，N=24,508）；两年期分别为0.260和0.421，差异为0.161（标准误0.052，p=0.00193，N=22,291）。两期均支持四大客户盈利持续性更强。这里的“更加一致”指当前盈利更能延续到未来。连续ES的额外持续性在两期均不显著，说明ROA的支持尚未扩展为连续超预期的支持。</p>
 <p><strong>口径与解释。</strong> 重述／违规表沿用已冻结的原报好消息样本（2001—2021财年，要求公告附近11个交易日行情完整），持续性表使用全样本，两部分并非同一队列。ROA使用当前数据库同版本财务值，ES沿用原报恢复及公告前预测口径。预测公开时点与已识别的预测目标年度补丁仍待处理，可能影响ES、好消息归类以及含ES控制的ROA回归。现有结果支持客户组之间的事后质量差异，四大审计的因果作用仍需单独识别。</p>
 <p><strong>本项讨论。</strong> 事后财报质量与ROA持续性为基本面提供支持。会议讨论这两类证据怎样与市场响应衔接，以及是否需要在可比客户和一致财报队列中进一步比较。</p>
 </section>
@@ -2004,7 +2134,11 @@ Z_{i,t+h}=\alpha_{j,t}+\beta Big4_{it}+\rho Z_{it}
 +\beta_hS_{it}+\gamma_hBig4_{it}+\theta_h(S_{it}\times Big4_{it})
 +X_{it}'\delta_h+\rho_hY_{i0}+\varepsilon_{ith}.
 \]</span></p>
-<p><span class="math inline">\(S\)</span>分别为ES／0.1或本次年报财年ROA／0.01，不同时放入。<span class="math inline">\(\theta_h\)</span>检验四大相对非四大的信号斜率差，四大总斜率为<span class="math inline">\(\beta_h+\theta_h\)</span>。完整控制和样本条件统一列于本节末尾。下表固定展示H2，完整H1—H6路径随后展示。</p>
+<p><span class="math inline">\(S\)</span>分别为ES／0.1或本次年报财年ROA／0.01，不同时放入。<span class="math inline">\(\theta_h\)</span>检验四大相对非四大的信号斜率差，四大总斜率为</p>
+<p><span class="math display">\[
+\beta_h+\theta_h
+\]</span></p>
+<p>完整控制和样本条件统一列于本节末尾。下表固定展示H2，完整H1—H6路径随后展示。</p>
 <figure id="tbl-memo-capital-holdings-h2" class="latex-table figure" style="overflow-x:auto;">
 <a href="tables/capital_allocation/holdings_h2.png"><img src="tables/capital_allocation/holdings_h2.png" style="width:100%;max-width:100%;height:auto;display:block;" loading="lazy" alt="半年控制版H2：四类合计与证券投资基金分别使用ES和ROA" class="figure-img"></a>
 <figcaption>
@@ -2012,7 +2146,7 @@ Z_{i,t+h}=\alpha_{j,t}+\beta Big4_{it}+\rho Z_{it}
 </figcaption>
 </figure>
 <p><a href="tables/capital_allocation/holdings_h2.tex">LaTeX表格</a> · <a href="tables/capital_allocation/holdings_h2.pdf">PDF表格</a></p>
-<p>H2的合计ROA交互为+0.203（标准误0.091，<span class="math inline">\(p=0.026\)</span>），四大总斜率也显著为正。完整路径中，合计ES交互只有H4达到5%，且四大总斜率不显著；ROA交互只有H2达到5%。证券投资基金的交互在六期均未达到5%，ROA H3只有10%的弱正差异。新增的年中终点未形成合计持仓持续增加的路径。</p>
+<p>H2的合计ROA交互为+0.203（标准误0.091，p=0.026），四大总斜率也显著为正。完整路径中，合计ES交互只有H4达到5%，且四大总斜率不显著；ROA交互只有H2达到5%。证券投资基金的交互在六期均未达到5%，ROA H3只有10%的弱正差异。新增的年中终点未形成合计持仓持续增加的路径。</p>
 <div id="fig-memo-capital-holdings" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-memo-capital-holdings-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -2042,7 +2176,11 @@ Z_{i,t+h}=\alpha_{j,t}+\beta Big4_{it}+\rho Z_{it}
 <p>现有基准分别考察长期借款占比、短借／资产、长借／资产及余额净新增。简单版和控制版使用不同样本、基准日期与固定效应，分别解读。</p>
 <section id="sec-memo-capital-simple" class="level4">
 <h4 class="anchored" data-anchor-id="sec-memo-capital-simple">简单债务基准：ES与后续债务变化</h4>
-<p>先在非金融企业中并列观察三个结果：长期借款占短长借款合计、短期借款／资产、长期借款／资产。财年<span class="math inline">\(t\)</span>的年报通常在<span class="math inline">\(t+1\)</span>年公告，基准取公告前最近季末，终点取<span class="math inline">\(t+1\)</span>、<span class="math inline">\(t+2\)</span>、<span class="math inline">\(t+3\)</span>年末；<span class="math inline">\(\Delta Y\)</span>为比率变化乘100，单位为百分点。ES沿用公告前180天预测对应的连续盈余惊喜，<span class="math inline">\(ES10=ES/0.1\)</span>，系数对应ES提高10个百分点。</p>
+<p>先在非金融企业中并列观察三个结果：长期借款占短长借款合计、短期借款／资产、长期借款／资产。财年<span class="math inline">\(t\)</span>的年报通常在t+1年公告，基准取公告前最近季末，终点取t+1、t+2、t+3年末；<span class="math inline">\(\Delta Y\)</span>为比率变化乘100，单位为百分点。ES沿用公告前180天预测对应的连续盈余惊喜，</p>
+<p><span class="math display">\[
+ES10=ES/0.1
+\]</span></p>
+<p>系数对应ES提高10个百分点。</p>
 <p>已有两种简单规格：</p>
 <p><span class="math display">\[
 \begin{aligned}
@@ -2051,7 +2189,11 @@ M2:\quad \Delta Y_{ith}&amp;=\delta_t+\beta_hES10_{it}+\gamma_hBig4_{it}
 +\theta_h(ES10_{it}\times Big4_{it})+\varepsilon_{ith}.
 \end{aligned}
 \]</span></p>
-<p>两者只控制盈余财年固定效应，标准误按公司聚类，没有财务控制或公司固定效应。M1的ES斜率为合并样本相关性；M2的<span class="math inline">\(\beta_h\)</span>是非四大斜率，<span class="math inline">\(\theta_h\)</span>是四大减非四大的差异，四大总斜率为<span class="math inline">\(\beta_h+\theta_h\)</span>。三个结果各按自身可用数据估计；每个Y的M1、M2使用相同事件数。</p>
+<p>两者只控制盈余财年固定效应，标准误按公司聚类，没有财务控制或公司固定效应。M1的ES斜率为合并样本相关性；M2的<span class="math inline">\(\beta_h\)</span>是非四大斜率，<span class="math inline">\(\theta_h\)</span>是四大减非四大的差异，四大总斜率为</p>
+<p><span class="math display">\[
+\beta_h+\theta_h
+\]</span></p>
+<p>三个结果各按自身可用数据估计；每个Y的M1、M2使用相同事件数。</p>
 <figure id="tbl-memo-capital-simple-h1" class="latex-table figure" style="overflow-x:auto;">
 <a href="tables/capital_allocation/simple_debt_h1.png"><img src="tables/capital_allocation/simple_debt_h1.png" style="width:100%;max-width:100%;height:auto;display:block;" loading="lazy" alt="简单债务基准：公告前季末到第一个年末，三个Y分别估计M1与M2" class="figure-img"></a>
 <figcaption>
@@ -2059,7 +2201,7 @@ M2:\quad \Delta Y_{ith}&amp;=\delta_t+\beta_hES10_{it}+\gamma_hBig4_{it}
 </figcaption>
 </figure>
 <p><a href="tables/capital_allocation/simple_debt_h1.tex">LaTeX表格</a> · <a href="tables/capital_allocation/simple_debt_h1.pdf">PDF表格</a></p>
-<p>第一个年末，ES与长借／资产正相关，M1系数为0.004（标准误0.002，<span class="math inline">\(p=0.029\)</span>）；三个Y的ES×四大均不显著。后续两个年末，合并样本的ES与长期借款占比也正相关；四大的额外差异在第二个年末为负（−0.114，标准误0.050，<span class="math inline">\(p=0.022\)</span>），其余两期不显著。因此，简单基准显示部分盈利信号与债务变化相关，但尚未形成四大客户额外改善的图景。</p>
+<p>第一个年末，ES与长借／资产正相关，M1系数为0.004（标准误0.002，p=0.029）；三个Y的ES×四大均不显著。后续两个年末，合并样本的ES与长期借款占比也正相关；四大的额外差异在第二个年末为负（−0.114，标准误0.050，p=0.022），其余两期不显著。因此，简单基准显示部分盈利信号与债务变化相关，但尚未形成四大客户额外改善的图景。</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -2100,7 +2242,7 @@ M2:\quad \Delta Y_{ith}&amp;=\delta_t+\beta_hES10_{it}+\gamma_hBig4_{it}
 </figcaption>
 </figure>
 <p><a href="tables/capital_allocation/debt_structure_h2.tex">LaTeX表格</a> · <a href="tables/capital_allocation/debt_structure_h2.pdf">PDF表格</a></p>
-<p>H2的三个结构指标交互均不显著。完整半年路径中，48个常规债务设计只有短借／资产的ES交互在H3达到5%：+0.399（标准误0.170，<span class="math inline">\(p=0.020\)</span>，619个事件、211家公司），四大总斜率为+0.403（标准误0.163，<span class="math inline">\(p=0.014\)</span>）。这表示短借占比相对增加，与“好消息推动四大客户从短债转向长债”的预测相反；其他常规交互未达到5%。比率也受资产分母变化影响，不能单凭这一项判断融资条件变差。</p>
+<p>H2的三个结构指标交互均不显著。完整半年路径中，48个常规债务设计只有短借／资产的ES交互在H3达到5%：+0.399（标准误0.170，p=0.020，619个事件、211家公司），四大总斜率为+0.403（标准误0.163，p=0.014）。这表示短借占比相对增加，与“好消息推动四大客户从短债转向长债”的预测相反；其他常规交互未达到5%。比率也受资产分母变化影响，不能单凭这一项判断融资条件变差。</p>
 <div id="fig-memo-capital-debt" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-memo-capital-debt-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -2111,7 +2253,11 @@ M2:\quad \Delta Y_{ith}&amp;=\delta_t+\beta_hES10_{it}+\gamma_hBig4_{it}
 </figcaption>
 </figure>
 </div>
-<p><strong>数量面板。</strong> 另看短借累计净新增／基准资产，即<span class="math inline">\(100\times(S_{end}-S_0)/A_0\)</span>。它衡量余额累计净变化，与借款现金流或逐笔新增贷款不同。H2的ES交互为−0.012（标准误0.372），ROA为+0.154（标准误0.342），均不显著；六期均无5%显著交互。</p>
+<p><strong>数量面板。</strong> 另看短借累计净新增／基准资产，即</p>
+<p><span class="math display">\[
+100\times(S_{end}-S_0)/A_0
+\]</span></p>
+<p>它衡量余额累计净变化，与借款现金流或逐笔新增贷款不同。H2的ES交互为−0.012（标准误0.372），ROA为+0.154（标准误0.342），均不显著；六期均无5%显著交互。</p>
 <figure id="tbl-memo-capital-short-additions" class="latex-table figure" style="overflow-x:auto;">
 <a href="tables/capital_allocation/short_debt_additions_h2.png"><img src="tables/capital_allocation/short_debt_additions_h2.png" style="width:100%;max-width:100%;height:auto;display:block;" loading="lazy" alt="短借累计净新增：半年控制版H2，ES与ROA分别估计" class="figure-img"></a>
 <figcaption>
@@ -2304,7 +2450,15 @@ M2:\quad \Delta Y_{ith}&amp;=\delta_t+\beta_hES10_{it}+\gamma_hBig4_{it}
 <figcaption>企业距离与四大采用：50个等样本量距离组及核平滑描述，未加入回归控制。</figcaption>
 </figure>
 </div>
-<p>一阶段为 <span class="math inline">\(D_{it}=\alpha_i+\lambda_t+\pi Z_{it}+X_{it}'\gamma+v_{it}\)</span>；二阶段为 <span class="math inline">\(Y_{it}=\alpha_i+\lambda_t+\beta D_{it}+X_{it}'\theta+\varepsilon_{it}\)</span>，每列分别用单个距离指标 <span class="math inline">\(Z\)</span> 工具化当年四大身份 <span class="math inline">\(D\)</span>。<span class="math inline">\(X\)</span> 为规模、杠杆、亏损、ROA、Z-score、杠杆变化、报告滞后、经营现金流和年龄及各自缺失标记；公司与年份固定效应，公司聚类。</p>
+<p><strong>一阶段。</strong></p>
+<p><span class="math display">\[
+D_{it}=\alpha_i+\lambda_t+\pi Z_{it}+X_{it}'\gamma+v_{it}
+\]</span></p>
+<p><strong>二阶段。</strong></p>
+<p><span class="math display">\[
+Y_{it}=\alpha_i+\lambda_t+\beta D_{it}+X_{it}'\theta+\varepsilon_{it}
+\]</span></p>
+<p>每列分别用单个距离指标<span class="math inline">\(Z\)</span>工具化当年四大身份<span class="math inline">\(D\)</span>。<span class="math inline">\(X\)</span>为规模、杠杆、亏损、ROA、Z-score、杠杆变化、报告滞后、经营现金流和年龄及各自缺失标记；公司与年份固定效应，公司聚类。</p>
 <figure class="latex-table figure" style="overflow-x:auto;">
 <a href="tables/memo_palatino/brand_distance_first_stage.png"><img src="tables/memo_palatino/brand_distance_first_stage.png" style="width:100%;max-width:100%;height:auto;display:block;" loading="lazy" alt="六种品牌距离的一阶段；系数及括号内SE为百分点" class="figure-img"></a>
 <figcaption>
@@ -2351,7 +2505,7 @@ CAR_{i,w}=\alpha_w+\beta_w Big4_{i,2008}
 </figure>
 </div>
 <p><a href="tables/memo_three_decimals/localization_policy_2009.tex">LaTeX表格</a> · <a href="tables/memo_three_decimals/localization_policy_2009.pdf">PDF表格</a></p>
-<p>当天四大客户原始收益均值为0.038%，行业控制后的相对差异为−0.222个百分点（<span class="math inline">\(p=0.3506\)</span>）。前后三日和发布日起三日的相对差异分别为−1.020（<span class="math inline">\(p=0.0029\)</span>）和−0.765个百分点（<span class="math inline">\(p=0.0199\)</span>）。四大客户自身的平均异常收益在三个窗口内均不显著，三日原始收益均值分别为6.350%和2.367%；因此，这组结果表现为相对少涨。两个三日窗口有重叠。</p>
+<p>当天四大客户原始收益均值为0.038%，行业控制后的相对差异为−0.222个百分点（p=0.3506）。前后三日和发布日起三日的相对差异分别为−1.020（p=0.0029）和−0.765个百分点（p=0.0199）。四大客户自身的平均异常收益在三个窗口内均不显著，三日原始收益均值分别为6.350%和2.367%；因此，这组结果表现为相对少涨。两个三日窗口有重叠。</p>
 <p>这次政策同时涉及本土化、本土大所扶持及信息安全等内容，<a href="https://epaper.stcn.com/paper/zqsb/page/1/2009-06-13/A019/5671244823864895.pdf">6月公开征求意见稿</a>也已提及本土化要求。当前结果反映正式政策发布附近的组间价格差异，尚未分离四大声誉、本土所扶持与其他同期消息的作用；共同事件下，横截面稳健标准误也不能消除相关冲击。</p>
 </details>
 <p><strong>本项讨论。</strong> 这次政策同时涉及本土化、本土所扶持及信息安全，讨论该事件比较能够支持的研究问题及其与其他证据的关系。</p>
@@ -2362,7 +2516,12 @@ CAR_{i,w}=\alpha_w+\beta_w Big4_{i,2008}
 </section>
 <section id="memo-short-window-pe" class="level2">
 <h2 class="anchored" data-anchor-id="memo-short-window-pe">7．短期股价反应与市盈率</h2>
-<p>在盈利分母相同的情况下，更高的短期股价回报会推高市盈率（Price-to-Earnings Ratio, P/E）。财报公告同时带来股价反应和盈利分母更新，因此P/E的净变化取决于两者的相对幅度。两期盈利均为正且股数口径可比时，<span class="math inline">\(PE_{后}/PE_{前}=(P_{后}/P_{前})\times(EPS_{旧}/EPS_{新})\)</span>：盈利增幅超过股价涨幅，P/E就会下降；窗口内固定EPS，P/E变化则与股价变化成比例。我们此前在公告前后<span class="math inline">\([-5,+5]\)</span>交易日做过描述，公告前使用上一份已公布年报EPS，公告日切换为本次EPS，P/E中位路径在公告日下移，体现了盈利分母更新的影响。因此，短期盈利消息的定价继续用股价或累计异常收益（Cumulative Abnormal Return, CAR）衡量；P/E用于单独讨论盈利变化与估值倍数的关系，年度换所P/E DID则回答跨期估值变化的问题。</p>
+<p>在盈利分母相同的情况下，更高的短期股价回报会推高市盈率（Price-to-Earnings Ratio, P/E）。财报公告同时带来股价反应和盈利分母更新，因此P/E的净变化取决于两者的相对幅度。两期盈利均为正且股数口径可比时：</p>
+<p><span class="math display">\[
+\frac{PE_{后}}{PE_{前}}=\frac{P_{后}}{P_{前}}\times\frac{EPS_{旧}}{EPS_{新}}
+\]</span></p>
+<p>盈利增幅超过股价涨幅，P/E就会下降；窗口内固定EPS，P/E变化则与股价变化成比例。</p>
+<p>我们此前在公告前后[−5,+5]交易日做过描述，公告前使用上一份已公布年报EPS，公告日切换为本次EPS，P/E中位路径在公告日下移，体现了盈利分母更新的影响。因此，短期盈利消息的定价继续用股价或累计异常收益（Cumulative Abnormal Return, CAR）衡量；P/E用于单独讨论盈利变化与估值倍数的关系，年度换所P/E DID则回答跨期估值变化的问题。</p>
 <div id="fig-memo-short-window-pe" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-memo-short-window-pe-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
