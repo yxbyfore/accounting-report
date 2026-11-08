@@ -404,6 +404,36 @@ ES=(EPS-F)/|F|
 <p><strong>早期四大的额外股价响应依赖于怎样设定两组的基准走势。</strong> 2012年前，在要求两组共用中性消息事件路径的A、C模型中，四大对好消息的额外响应分别为0.475和0.408个百分点，均在5%水平显著。允许两组各有自己的基准路径后，这一差异缩小至0.194和0.221个百分点，均不显著。四个模型使用相同的4,485次公告，因此变化来自模型约束，而非更换样本。全期和2012年起的D模型也没有发现显著的四大额外响应。</p>
 <p><strong>A—D模型方程与2012前后路径图</strong></p>
 <p><a href="#memo-four-fe-a">模型A</a> · <a href="#memo-four-fe-b">模型B</a> · <a href="#memo-four-fe-c">模型C</a> · <a href="#memo-four-fe-d">模型D</a></p>
+<p><strong>四种模型的区别。</strong> 四个模型都比较好消息相对中性消息的股价响应，并控制每次公告本身的差异。GoodNews表示ES超过10%的公告；Event time是相对公告日，Trading date是实际交易日期。各模型的消息项相同，区别在于是否允许四大和非四大分别具有事件时间走势及交易日冲击。</p>
+<p><strong>A：共同事件时间FE＋共同交易日FE</strong></p>
+<p><span class="math display">\[
+\begin{aligned}
+\ln P_{e\tau}&amp;=\text{Announcement FE}+\text{Event time FE}\\ &amp;\quad+\text{Trading date FE}\\
+&amp;\quad+\sum_{k\in K}\left[\beta^{A}_{0k}(1-Big4_e)+\beta^{A}_{1k}Big4_e\right]GoodNews_e\,1(\tau=k)+\varepsilon^{A}_{e\tau}.
+\end{aligned}
+\]</span></p>
+<p><strong>B：分组事件时间FE＋共同交易日FE</strong></p>
+<p><span class="math display">\[
+\begin{aligned}
+\ln P_{e\tau}&amp;=\text{Announcement FE}+\text{Big4 group × Event time FE}\\ &amp;\quad+\text{Trading date FE}\\
+&amp;\quad+\sum_{k\in K}\left[\beta^{B}_{0k}(1-Big4_e)+\beta^{B}_{1k}Big4_e\right]GoodNews_e\,1(\tau=k)+\varepsilon^{B}_{e\tau}.
+\end{aligned}
+\]</span></p>
+<p><strong>C：共同事件时间FE＋分组交易日FE</strong></p>
+<p><span class="math display">\[
+\begin{aligned}
+\ln P_{e\tau}&amp;=\text{Announcement FE}+\text{Event time FE}\\ &amp;\quad+\text{Big4 group × Trading date FE}\\
+&amp;\quad+\sum_{k\in K}\left[\beta^{C}_{0k}(1-Big4_e)+\beta^{C}_{1k}Big4_e\right]GoodNews_e\,1(\tau=k)+\varepsilon^{C}_{e\tau}.
+\end{aligned}
+\]</span></p>
+<p><strong>D：分组事件时间FE＋分组交易日FE</strong></p>
+<p><span class="math display">\[
+\begin{aligned}
+\ln P_{e\tau}&amp;=\text{Announcement FE}+\text{Big4 group × Event time FE}\\ &amp;\quad+\text{Big4 group × Trading date FE}\\
+&amp;\quad+\sum_{k\in K}\left[\beta^{D}_{0k}(1-Big4_e)+\beta^{D}_{1k}Big4_e\right]GoodNews_e\,1(\tau=k)+\varepsilon^{D}_{e\tau}.
+\end{aligned}
+\]</span></p>
+<p><strong>为什么重点比较A与B、C与D？</strong> 我们希望识别的是：面对好消息，四大客户相对自身中性消息的额外股价响应，是否高于非四大客户的相应响应。B、D加入 <span class="math inline">\(\text{Big4 group}\times\text{Event time FE}\)</span>，允许两组在公告附近各有自己的基准走势。若四大的额外好消息响应在B、D中仍然存在，就说明这一结果能够在控制两组基准走势差异后保留；若加入这项控制后明显缩小，则原先的正向组差可能部分来自两组基准路径的差异。现有完整样本中，早期正向组差在B、D中缩小且不再显著，因此，这项比较仍是需要解决的问题，尚不能认定四大的额外响应独立于分组基准走势。</p>
 </section>
 <section id="memo-four-fe-paths" class="level3">
 <h3 class="anchored" data-anchor-id="memo-four-fe-paths">2012年前后：四种固定效应的方程与组间差值</h3>
