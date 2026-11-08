@@ -2292,7 +2292,7 @@ M2:\quad \Delta Y_{ith}&amp;=\delta_t+\beta_hES10_{it}+\gamma_hBig4_{it}
 <section id="sec-memo-distance" class="level2">
 <h2 class="anchored" data-anchor-id="sec-memo-distance">5．Distance：距离、采用与审计结果</h2>
 <p>距离与四大采用存在关联，一阶段工具强度较弱，开所前的关联也影响识别解释。</p>
-<details>
+<details open="">
 <summary>
 距离构造、一阶段、2SLS及提前趋势完整结果
 </summary>
@@ -2327,7 +2327,7 @@ M2:\quad \Delta Y_{ith}&amp;=\delta_t+\beta_hES10_{it}+\gamma_hBig4_{it}
 <section id="sec-memo-localization-2009" class="level2">
 <h2 class="anchored" data-anchor-id="sec-memo-localization-2009">6．本土化政策发布与四大客户股价</h2>
 <p>2009年10月12日政策发布当天，四大客户没有显著下跌；两个三日窗口内，相对非四大客户分别少涨约1.02和0.77个百分点。</p>
-<details>
+<details open="">
 <summary>
 政策背景、模型与完整结果
 </summary>
@@ -2363,6 +2363,16 @@ CAR_{i,w}=\alpha_w+\beta_w Big4_{i,2008}
 <section id="memo-short-window-pe" class="level2">
 <h2 class="anchored" data-anchor-id="memo-short-window-pe">7．短期股价反应与市盈率</h2>
 <p>在盈利分母相同的情况下，更高的短期股价回报会推高市盈率（Price-to-Earnings Ratio, P/E）。财报公告同时带来股价反应和盈利分母更新，因此P/E的净变化取决于两者的相对幅度。两期盈利均为正且股数口径可比时，<span class="math inline">\(PE_{后}/PE_{前}=(P_{后}/P_{前})\times(EPS_{旧}/EPS_{新})\)</span>：盈利增幅超过股价涨幅，P/E就会下降；窗口内固定EPS，P/E变化则与股价变化成比例。我们此前在公告前后<span class="math inline">\([-5,+5]\)</span>交易日做过描述，公告前使用上一份已公布年报EPS，公告日切换为本次EPS，P/E中位路径在公告日下移，体现了盈利分母更新的影响。因此，短期盈利消息的定价继续用股价或累计异常收益（Cumulative Abnormal Return, CAR）衡量；P/E用于单独讨论盈利变化与估值倍数的关系，年度换所P/E DID则回答跨期估值变化的问题。</p>
+<div id="fig-memo-short-window-pe" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-memo-short-window-pe-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/market_information/pe_price_alignment/annual_eps_update_median_paths.png" class="img-fluid figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-memo-short-window-pe-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+图&nbsp;14: 年报公告短窗中的股价与P/E中位路径：相对−1日的对数变化×100。蓝线为股价，橙线为公告日更新盈利分母的P/E；17,595份公告，两期EPS均为正、上一份年报已在窗口前公布且短窗价格完整。
+</figcaption>
+</figure>
+</div>
 
 
 </section>
