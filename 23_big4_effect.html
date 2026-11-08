@@ -2209,7 +2209,7 @@ Audit Failures by Auditor Group and Denominator · <a href="tables/big4_evidence
 <p><strong>恢复方向是把现在的数据改回首次年报公告时市场看到的值，即使当时的数值事后被认定错误。</strong> 使用差错更正前后对比表、连通且端点匹配的更正链，以及已核实的原始年报补证；只有独立账本中 <code>endpoint_usable=True</code> 的记录计入以下影响。未核实的候选不计入恢复。</p>
 <p>EPS沿用现有“合并净利润／年末股本”定义及FAR分支的精度规则，固定股本与原180天预测中位数。这不是年报列示的“归母净利润／加权平均股数”基本EPS。surprise按下式重算，继续使用原有Rptdt预测窗口，不采用已撤销的公告前10天剔除规则：</p>
 <p><span class="math display">\[
-ES_{it}=\frac{EPES_{it}-\operatorname{Median}(ForecastEPS_{it,180})}{\left|\operatorname{Median}(ForecastEPS_{it,180})\right|}.
+ES_{it}=\frac{EPS_{it}-\operatorname{Median}(ForecastEPS_{it,180})}{\left|\operatorname{Median}(ForecastEPS_{it,180})\right|}.
 \]</span></p>
 <p><span class="math inline">\(ES&gt;0.10\)</span>为超预期，<span class="math inline">\(ES&lt;-0.10\)</span>为不及预期，其余可用值为中性。当前值与原报值使用相同预测，以下变化只反映EPS恢复。</p>
 <table class="caption-top table">

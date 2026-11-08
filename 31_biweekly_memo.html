@@ -236,8 +236,8 @@ window.Quarto = {
   <li><a href="#memo-ue-bins-periods-shares" id="toc-memo-ue-bins-periods-shares" class="nav-link" data-scroll-target="#memo-ue-bins-periods-shares">2.1 消息构成：固定九组的公告占比</a></li>
   <li><a href="#同幅度消息固定绝对档与年度共同十分位" id="toc-同幅度消息固定绝对档与年度共同十分位" class="nav-link" data-scroll-target="#同幅度消息固定绝对档与年度共同十分位">2.2 同幅度消息：固定绝对档与年度共同十分位</a></li>
   <li><a href="#企业构成曾用四大公司池" id="toc-企业构成曾用四大公司池" class="nav-link" data-scroll-target="#企业构成曾用四大公司池">2.3 企业构成：曾用四大公司池</a></li>
-  <li><a href="#sec-memo-erc-interactions" id="toc-sec-memo-erc-interactions" class="nav-link" data-scroll-target="#sec-memo-erc-interactions">2.4 企业匹配：一对一与全邻居的ERC结果</a></li>
-  <li><a href="#memo-matching-discussion" id="toc-memo-matching-discussion" class="nav-link" data-scroll-target="#memo-matching-discussion">本节讨论：怎样匹配，怎样比较方法？</a></li>
+  <li><a href="#sec-memo-erc-interactions" id="toc-sec-memo-erc-interactions" class="nav-link" data-scroll-target="#sec-memo-erc-interactions">2.4 已做的匹配：方法、可比性与市场响应</a></li>
+  <li><a href="#memo-matching-discussion" id="toc-memo-matching-discussion" class="nav-link" data-scroll-target="#memo-matching-discussion">2.5 会议讨论：下一步采用哪种匹配？</a></li>
   </ul></li>
   <li><a href="#memo-fundamentals-capital" id="toc-memo-fundamentals-capital" class="nav-link" data-scroll-target="#memo-fundamentals-capital">3．财报信息是否对应后续基本面与资金变化？</a>
   <ul class="collapse">
@@ -248,10 +248,7 @@ window.Quarto = {
   </ul></li>
   <li><a href="#sec-memo-audit-fee-2012" id="toc-sec-memo-audit-fee-2012" class="nav-link" data-scroll-target="#sec-memo-audit-fee-2012">4．审计费用2012前后的变化</a></li>
   <li><a href="#sec-memo-distance" id="toc-sec-memo-distance" class="nav-link" data-scroll-target="#sec-memo-distance">5．Distance IV：距离、采用与审计结果</a></li>
-  <li><a href="#sec-memo-localization-2009" id="toc-sec-memo-localization-2009" class="nav-link" data-scroll-target="#sec-memo-localization-2009">6．本土化政策发布与四大客户股价</a>
-  <ul class="collapse">
-  <li><a href="#sec-memo-market-long-window" id="toc-sec-memo-market-long-window" class="nav-link" data-scroll-target="#sec-memo-market-long-window">历史补充：长窗口股价路径</a></li>
-  </ul></li>
+  <li><a href="#sec-memo-localization-2009" id="toc-sec-memo-localization-2009" class="nav-link" data-scroll-target="#sec-memo-localization-2009">6．本土化政策发布与四大客户股价</a></li>
   <li><a href="#memo-short-window-pe" id="toc-memo-short-window-pe" class="nav-link" data-scroll-target="#memo-short-window-pe">7．短期股价反应与市盈率</a></li>
   </ul>
 </nav>
@@ -324,12 +321,12 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="memo-market-baseline">1．观察到的市场反应差异</h2>
 <p>我们使用的full sample中，ERC加入企业特征与UE的交互后，四大额外斜率明显减弱；短窗允许两组各有事件时间基准路径（也就是 <span class="math inline">\(\text{Big4 group}\times\text{Event time FE}\)</span>）后，早期正向组差也缩小。</p>
 <p>盈余惊喜有两种口径，之前我们的event study一直使用的是ES，也就是超预期的幅度。文献中两种都使用，两种衡量的区别在于分母。</p>
-<p><strong>盈利惊喜的两种口径。</strong> 设<span class="math inline">\(EPSignal_{it}\)</span>为实际每股收益，<span class="math inline">\(F_{it}\)</span>为公告前1—180天内各券商最新预测的中位数，<span class="math inline">\(P_{pre,it}\)</span>为公告前股价：</p>
+<p><strong>盈利惊喜的两种口径。</strong> 设<span class="math inline">\(EPS_{it}\)</span>为实际每股收益，<span class="math inline">\(F_{it}\)</span>为公告前1—180天内各券商最新预测的中位数，<span class="math inline">\(P_{pre,it}\)</span>为公告前股价：</p>
 <p><span class="math display">\[
-ESignal_{it}=\frac{EPSignal_{it}-F_{it}}{|F_{it}|}
+ES_{it}=\frac{EPS_{it}-F_{it}}{|F_{it}|}
 \]</span></p>
 <p><span class="math display">\[
-UE_{it}=\frac{EPSignal_{it}-F_{it}}{P_{pre,it}}.
+UE_{it}=\frac{EPS_{it}-F_{it}}{P_{pre,it}}.
 \]</span></p>
 <p>两者使用相同的分子，也就是实际盈利与预期之差。ES以预测盈利的绝对值标准化，表示超预期相对于预测盈利的幅度；UE以公告前股价标准化，表示超预期盈利相对于股价的大小。F=0时ES无法定义，预测接近零时ES容易出现极端值。分组分析中，ES以±10%、UE以±0.001划分坏消息、中性消息和好消息；中性组包含两端边界。两种门槛对应不同的经济尺度，分组成员可能不同。</p>
 <p>样本采用公告前1—180天内发布的预测、每券商只选取最新一次预测，一致预期是满足上述条件预测的中位数，保留已有EPS恢复（恢复到重述或者违规改动前的当时市场看到的eps）。</p>
@@ -432,12 +429,11 @@ ES=(EPS-F)/|F|
 &amp;\quad+\sum_{k\in K}\left[\beta^{D}_{0k}(1-Big4_e)+\beta^{D}_{1k}Big4_e\right]GoodNews_e\,1(\tau=k)+\varepsilon^{D}_{e\tau}.
 \end{aligned}
 \]</span></p>
-<p><strong>为什么重点比较A与B、C与D？</strong> 我们希望识别的是：面对好消息，四大客户相对自身中性消息的额外股价响应，是否高于非四大客户的相应响应。B、D加入 <span class="math inline">\(\text{Big4 group}\times\text{Event time FE}\)</span>，允许两组在公告附近各有自己的基准走势。若四大的额外好消息响应在B、D中仍然存在，就说明这一结果能够在控制两组基准走势差异后保留；若加入这项控制后明显缩小，则原先的正向组差可能部分来自两组基准路径的差异。现有完整样本中，早期正向组差在B、D中缩小且不再显著，因此，这项比较仍是需要解决的问题，尚不能认定四大的额外响应独立于分组基准走势。</p>
+<p><strong>A与B、C与D的比较检验同一个问题：四大的额外好消息响应，能否在控制两组各自的基准事件时间走势后保留？</strong> 当前完整样本中，早期正向组差在B、D中缩小且不再显著，说明原有结果对这一设定敏感。</p>
 </section>
 <section id="memo-four-fe-paths" class="level3">
 <h3 class="anchored" data-anchor-id="memo-four-fe-paths">2012年前后：四种固定效应的方程与组间差值</h3>
-<p>下面围绕“四大减非四大的好消息响应增量差”，按固定效应区别列出四个模型，每个模型在方程下连续展示2012年前与2012年起的差值路径。</p>
-<p><strong>共同口径。</strong> <span class="math inline">\(e\)</span>为年报公告，<span class="math inline">\(\tau\)</span>为相对事件交易日，<span class="math inline">\(d(e,\tau)\)</span>为实际交易日期；</p>
+<p><strong>共同口径。</strong> <span class="math inline">\(e\)</span>为财报公告，<span class="math inline">\(\tau\)</span>为相对公告交易日，<span class="math inline">\(d(e,\tau)\)</span>为实际交易日期；</p>
 <p><span class="math display">\[
 Big4_e=1
 \]</span></p>
@@ -746,7 +742,6 @@ K=\{-5,-4,-3,-2,0,1,2,3,4,5\}
 \]</span></p>
 <p>使用同一回归的协方差计算；一组显著不代表组差显著。</p>
 <p><strong>两种分档方法的三期A—D完整图与模型方程</strong></p>
-<p><strong>各时期完整图。</strong> 两种方法分别列出全期、2012年前和2012年起的四模型；每个模型先给出方程，再独立展示两组响应与直接组差。</p>
 <p><strong>固定绝对九组｜全期（2001—2024）：A—D模型与组间差</strong></p>
 <section id="memo-ue-bins-periods-absolute-all" class="level4">
 <h4 class="anchored" data-anchor-id="memo-ue-bins-periods-absolute-all">固定绝对九组｜全期（2001—2024）</h4>
@@ -759,7 +754,6 @@ K=\{-5,-4,-3,-2,0,1,2,3,4,5\}
 &amp;+\varepsilon^{A}_{e\tau}.
 \end{aligned}
 \]</span></p>
-<p><strong>基准：</strong> 共同近零事件时间路径约束下的响应。</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="figures/market_information/ue_bins_periods/absolute/all/A_responses_390cc99a.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
@@ -782,7 +776,6 @@ K=\{-5,-4,-3,-2,0,1,2,3,4,5\}
 &amp;+\varepsilon^{B}_{e\tau}.
 \end{aligned}
 \]</span></p>
-<p><strong>基准：</strong> 各审计组相对自身近零消息的响应。</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="figures/market_information/ue_bins_periods/absolute/all/B_responses_805a2989.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
@@ -805,7 +798,6 @@ K=\{-5,-4,-3,-2,0,1,2,3,4,5\}
 &amp;+\varepsilon^{C}_{e\tau}.
 \end{aligned}
 \]</span></p>
-<p><strong>基准：</strong> 共同近零事件时间路径约束下的响应。</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="figures/market_information/ue_bins_periods/absolute/all/C_responses_550a4073.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
@@ -828,7 +820,6 @@ K=\{-5,-4,-3,-2,0,1,2,3,4,5\}
 &amp;+\varepsilon^{D}_{e\tau}.
 \end{aligned}
 \]</span></p>
-<p><strong>基准：</strong> 各审计组相对自身近零消息的响应。</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="figures/market_information/ue_bins_periods/absolute/all/D_responses_9f5355d4.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
@@ -855,7 +846,6 @@ K=\{-5,-4,-3,-2,0,1,2,3,4,5\}
 &amp;+\varepsilon^{A}_{e\tau}.
 \end{aligned}
 \]</span></p>
-<p><strong>基准：</strong> 共同近零事件时间路径约束下的响应。</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="figures/market_information/ue_bins_periods/absolute/before2012/A_responses_6f39525e.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
@@ -878,7 +868,6 @@ K=\{-5,-4,-3,-2,0,1,2,3,4,5\}
 &amp;+\varepsilon^{B}_{e\tau}.
 \end{aligned}
 \]</span></p>
-<p><strong>基准：</strong> 各审计组相对自身近零消息的响应。</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="figures/market_information/ue_bins_periods/absolute/before2012/B_responses_1278a747.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
@@ -901,7 +890,6 @@ K=\{-5,-4,-3,-2,0,1,2,3,4,5\}
 &amp;+\varepsilon^{C}_{e\tau}.
 \end{aligned}
 \]</span></p>
-<p><strong>基准：</strong> 共同近零事件时间路径约束下的响应。</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="figures/market_information/ue_bins_periods/absolute/before2012/C_responses_ae2a80ca.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
@@ -924,7 +912,6 @@ K=\{-5,-4,-3,-2,0,1,2,3,4,5\}
 &amp;+\varepsilon^{D}_{e\tau}.
 \end{aligned}
 \]</span></p>
-<p><strong>基准：</strong> 各审计组相对自身近零消息的响应。</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="figures/market_information/ue_bins_periods/absolute/before2012/D_responses_da6e66ad.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
@@ -951,7 +938,6 @@ K=\{-5,-4,-3,-2,0,1,2,3,4,5\}
 &amp;+\varepsilon^{A}_{e\tau}.
 \end{aligned}
 \]</span></p>
-<p><strong>基准：</strong> 共同近零事件时间路径约束下的响应。</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="figures/market_information/ue_bins_periods/absolute/after2012/A_responses_5f3bd860.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
@@ -974,7 +960,6 @@ K=\{-5,-4,-3,-2,0,1,2,3,4,5\}
 &amp;+\varepsilon^{B}_{e\tau}.
 \end{aligned}
 \]</span></p>
-<p><strong>基准：</strong> 各审计组相对自身近零消息的响应。</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="figures/market_information/ue_bins_periods/absolute/after2012/B_responses_b77b0323.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
@@ -997,7 +982,6 @@ K=\{-5,-4,-3,-2,0,1,2,3,4,5\}
 &amp;+\varepsilon^{C}_{e\tau}.
 \end{aligned}
 \]</span></p>
-<p><strong>基准：</strong> 共同近零事件时间路径约束下的响应。</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="figures/market_information/ue_bins_periods/absolute/after2012/C_responses_e1f6312a.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
@@ -1020,7 +1004,6 @@ K=\{-5,-4,-3,-2,0,1,2,3,4,5\}
 &amp;+\varepsilon^{D}_{e\tau}.
 \end{aligned}
 \]</span></p>
-<p><strong>基准：</strong> 各审计组相对自身近零消息的响应。</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="figures/market_information/ue_bins_periods/absolute/after2012/D_responses_b22c5e8d.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
@@ -1051,7 +1034,6 @@ K=\{-5,-4,-3,-2,0,1,2,3,4,5\}
 &amp;+\varepsilon^{A}_{e\tau}.
 \end{aligned}
 \]</span></p>
-<p><strong>基准：</strong> 共同近零事件时间路径约束下的响应。</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="figures/market_information/ue_bins_periods/annual/all/A_responses_3d784f46.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
@@ -1074,7 +1056,6 @@ K=\{-5,-4,-3,-2,0,1,2,3,4,5\}
 &amp;+\varepsilon^{B}_{e\tau}.
 \end{aligned}
 \]</span></p>
-<p><strong>基准：</strong> 各审计组相对自身近零消息的响应。</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="figures/market_information/ue_bins_periods/annual/all/B_responses_9da8166c.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
@@ -1097,7 +1078,6 @@ K=\{-5,-4,-3,-2,0,1,2,3,4,5\}
 &amp;+\varepsilon^{C}_{e\tau}.
 \end{aligned}
 \]</span></p>
-<p><strong>基准：</strong> 共同近零事件时间路径约束下的响应。</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="figures/market_information/ue_bins_periods/annual/all/C_responses_d734e658.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
@@ -1120,7 +1100,6 @@ K=\{-5,-4,-3,-2,0,1,2,3,4,5\}
 &amp;+\varepsilon^{D}_{e\tau}.
 \end{aligned}
 \]</span></p>
-<p><strong>基准：</strong> 各审计组相对自身近零消息的响应。</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="figures/market_information/ue_bins_periods/annual/all/D_responses_99a036da.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
@@ -1147,7 +1126,6 @@ K=\{-5,-4,-3,-2,0,1,2,3,4,5\}
 &amp;+\varepsilon^{A}_{e\tau}.
 \end{aligned}
 \]</span></p>
-<p><strong>基准：</strong> 共同近零事件时间路径约束下的响应。</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="figures/market_information/ue_bins_periods/annual/before2012/A_responses_72fd059d.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
@@ -1170,7 +1148,6 @@ K=\{-5,-4,-3,-2,0,1,2,3,4,5\}
 &amp;+\varepsilon^{B}_{e\tau}.
 \end{aligned}
 \]</span></p>
-<p><strong>基准：</strong> 各审计组相对自身近零消息的响应。</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="figures/market_information/ue_bins_periods/annual/before2012/B_responses_d920b2f8.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
@@ -1193,7 +1170,6 @@ K=\{-5,-4,-3,-2,0,1,2,3,4,5\}
 &amp;+\varepsilon^{C}_{e\tau}.
 \end{aligned}
 \]</span></p>
-<p><strong>基准：</strong> 共同近零事件时间路径约束下的响应。</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="figures/market_information/ue_bins_periods/annual/before2012/C_responses_e853655d.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
@@ -1216,7 +1192,6 @@ K=\{-5,-4,-3,-2,0,1,2,3,4,5\}
 &amp;+\varepsilon^{D}_{e\tau}.
 \end{aligned}
 \]</span></p>
-<p><strong>基准：</strong> 各审计组相对自身近零消息的响应。</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="figures/market_information/ue_bins_periods/annual/before2012/D_responses_dbb46c7f.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
@@ -1243,7 +1218,6 @@ K=\{-5,-4,-3,-2,0,1,2,3,4,5\}
 &amp;+\varepsilon^{A}_{e\tau}.
 \end{aligned}
 \]</span></p>
-<p><strong>基准：</strong> 共同近零事件时间路径约束下的响应。</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="figures/market_information/ue_bins_periods/annual/after2012/A_responses_e7c85596.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
@@ -1266,7 +1240,6 @@ K=\{-5,-4,-3,-2,0,1,2,3,4,5\}
 &amp;+\varepsilon^{B}_{e\tau}.
 \end{aligned}
 \]</span></p>
-<p><strong>基准：</strong> 各审计组相对自身近零消息的响应。</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="figures/market_information/ue_bins_periods/annual/after2012/B_responses_aa0a1fd9.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
@@ -1289,7 +1262,6 @@ K=\{-5,-4,-3,-2,0,1,2,3,4,5\}
 &amp;+\varepsilon^{C}_{e\tau}.
 \end{aligned}
 \]</span></p>
-<p><strong>基准：</strong> 共同近零事件时间路径约束下的响应。</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="figures/market_information/ue_bins_periods/annual/after2012/C_responses_990609c7.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
@@ -1312,7 +1284,6 @@ K=\{-5,-4,-3,-2,0,1,2,3,4,5\}
 &amp;+\varepsilon^{D}_{e\tau}.
 \end{aligned}
 \]</span></p>
-<p><strong>基准：</strong> 各审计组相对自身近零消息的响应。</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="figures/market_information/ue_bins_periods/annual/after2012/D_responses_929e4eff.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
@@ -1347,7 +1318,6 @@ K=\{-5,-4,-3,-2,0,1,2,3,4,5\}
 <p><strong>公司池历年构成及UE／ES三组完整结果</strong></p>
 <section id="memo-ever-big4-three" class="level4">
 <h4 class="anchored" data-anchor-id="memo-ever-big4-three">UE分类：曾用四大公司池的分期响应</h4>
-<p>本次采用固定UE三组和D模型展示2012前后的短窗差异。当前选定结果如下；早期正向差达到10%水平，后期好／坏消息差均显著为负。</p>
 <p><strong>公司池的审计师构成。</strong> 固定这363家曾用四大的公司，追溯1992—2024年的完整审计历史。四大客户占比由2001年的20.1%升至2011年的43.1%，2012年为42.9%，2024年为56.3%；其他事务所占比由2001年的47.2%降至2024年的14.3%。2011至2012年，四大占比基本不变。</p>
 <div id="fig-memo-ever-big4-client-shares" class="quarto-float quarto-figure quarto-figure-center anchored" loading="lazy">
 <figure class="quarto-float quarto-float-fig figure">
@@ -1461,8 +1431,7 @@ ES&lt;-0.10
 <figcaption>ES±10%，2012年起坏消息：两组各自相对中间组。D模型，报告聚类95%置信区间；对数价格响应×100。</figcaption>
 </figure>
 </div>
-<p><strong>样本与比较范围。</strong> ES口径在早期和后期分别保留1,389和2,906份公告。两组事前路径的差异未在5%水平显著，早期非四大自身的事前变化则达到5%水平。前后时期的公司和公告构成可能变化，当前结果仍是分期比较，尚未正式检验前后响应差是否发生变化。</p>
-<p>ES和UE均呈现后期四大好消息奖励较弱、坏消息惩罚显著的组内现象。组间结论存在口径差异：ES下早期好消息优势、后期坏消息额外惩罚均未达到10%，后期好消息差值仍达到5%。这组证据描述消息响应的不对称，不能直接解释为四大造成负面价值效应或声誉变化。</p>
+<p>ES口径比UE口径在后期少2份公告，其余比较设定相同。前后时期的响应差异尚未经过正式系数差检验。</p>
 <p><a href="./23_big4_effect.html#market-ever-big4-three-es">Big4 effect章节：ES完整结果与组间差值图</a></p>
 <p><strong>三套公司池的滚动结果：UE／ES与A—D对照</strong></p>
 <section id="memo-rolling-abcd" class="level5">
@@ -1495,8 +1464,8 @@ K=\{-5,-4,-3,-2,0,1,2,3,4,5\}
 \beta_{sk,w}^m+\delta_{sk,w}^m
 \]</span></p>
 <p>分别对应两组模型响应，直接组间差为<span class="math inline">\(\delta_{sk,w}^m\)</span>。图只提取第0日并乘100，展示点估计及报告聚类95%区间，完整动态估计保留在结果包。<strong>A／C将两组的中间消息事件时间路径约束为共同路径；B／D允许分组路径，才对应不受此限制的各组“消息减自身中间组”响应。</strong> A→B、C→D改变事件时间FE；A→C、B→D改变真实交易日FE。</p>
-<p><strong>完整样本的主要对照。</strong> UE好消息的四大正向组差在A有7个中心年达到5%，B／D均仅中心2010达到5%，C为中心2011—2013；A／C中心2023为负。ES好消息中，A有4个、C有2个中心年正向达到5%，B没有5%差值，D仅中心2019为负；ES坏消息的A／C没有5%组差，B在中心2019、2020为负，D在2018—2020为负。因此，共同事件时间路径限制、消息尺度和客户构成都影响额外响应的判断。</p>
-<p>这些是重叠三年窗口的逐点推断，未作多重比较校正；窗口间显著性变化不等于正式前后系数差，也不能直接归因于2012制度或声誉变化。早期预测覆盖和中性参考组支持较薄。跨公司池比较改变了客户构成，不能等同于同样本只改变FE；四模型的严格同样本要求只在每个既定池、口径和窗口内成立。</p>
+<p><strong>三年滚动结果也显示，四大优势对基准走势设定敏感。</strong> UE口径下，A模型在多个早期窗口出现正向差异，B、D仅在中心年2010的窗口达到5%显著水平。ES口径下，B没有5%水平的好消息组差，D仅在中心年2019出现负向差异。允许两组各有基准事件路径后，正向四大差异明显减少。</p>
+<p>三年窗口相互重叠，显著性未作多重比较校正。每个既定公司池、消息口径和窗口内，A—D使用相同样本；跨公司池或时期的结果还受到样本构成变化影响。</p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -1519,7 +1488,6 @@ K=\{-5,-4,-3,-2,0,1,2,3,4,5\}
 </tr>
 </tbody>
 </table>
-<p>会议页以下完整展示全部合格公司UE／ES的32张图；另两公司池的64张图由上表直达正文，均保留全部模型与消息类别。</p>
 <p><strong>UE：消息门槛±0.10%：A—D方程及16张图</strong></p>
 </section>
 </section>
@@ -1535,7 +1503,6 @@ K=\{-5,-4,-3,-2,0,1,2,3,4,5\}
 &amp;\qquad\times1(NewsGroup_e=s)1(\tau=k)+\varepsilon^{A}_{e\tau,w}.
 \end{aligned}
 \]</span></p>
-<p><strong>本模型的基准：</strong> 共同中间消息事件时间路径约束下的模型响应。</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="figures/market_information/rolling_abcd/full/ue/A/c3_gap.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
@@ -1575,7 +1542,6 @@ K=\{-5,-4,-3,-2,0,1,2,3,4,5\}
 &amp;\qquad\times1(NewsGroup_e=s)1(\tau=k)+\varepsilon^{B}_{e\tau,w}.
 \end{aligned}
 \]</span></p>
-<p><strong>本模型的基准：</strong> 相对各组自身中间消息的响应。</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="figures/market_information/rolling_abcd/full/ue/B/c3_gap.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
@@ -1615,7 +1581,6 @@ K=\{-5,-4,-3,-2,0,1,2,3,4,5\}
 &amp;\qquad\times1(NewsGroup_e=s)1(\tau=k)+\varepsilon^{C}_{e\tau,w}.
 \end{aligned}
 \]</span></p>
-<p><strong>本模型的基准：</strong> 共同中间消息事件时间路径约束下的模型响应。</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="figures/market_information/rolling_abcd/full/ue/C/c3_gap.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
@@ -1655,7 +1620,6 @@ K=\{-5,-4,-3,-2,0,1,2,3,4,5\}
 &amp;\qquad\times1(NewsGroup_e=s)1(\tau=k)+\varepsilon^{D}_{e\tau,w}.
 \end{aligned}
 \]</span></p>
-<p><strong>本模型的基准：</strong> 相对各组自身中间消息的响应。</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="figures/market_information/rolling_abcd/full/ue/D/c3_gap.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
@@ -1700,7 +1664,6 @@ K=\{-5,-4,-3,-2,0,1,2,3,4,5\}
 &amp;\qquad\times1(NewsGroup_e=s)1(\tau=k)+\varepsilon^{A}_{e\tau,w}.
 \end{aligned}
 \]</span></p>
-<p><strong>本模型的基准：</strong> 共同中间消息事件时间路径约束下的模型响应。</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="figures/market_information/rolling_abcd/full/es/A/c3_gap.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
@@ -1740,7 +1703,6 @@ K=\{-5,-4,-3,-2,0,1,2,3,4,5\}
 &amp;\qquad\times1(NewsGroup_e=s)1(\tau=k)+\varepsilon^{B}_{e\tau,w}.
 \end{aligned}
 \]</span></p>
-<p><strong>本模型的基准：</strong> 相对各组自身中间消息的响应。</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="figures/market_information/rolling_abcd/full/es/B/c3_gap.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
@@ -1780,7 +1742,6 @@ K=\{-5,-4,-3,-2,0,1,2,3,4,5\}
 &amp;\qquad\times1(NewsGroup_e=s)1(\tau=k)+\varepsilon^{C}_{e\tau,w}.
 \end{aligned}
 \]</span></p>
-<p><strong>本模型的基准：</strong> 共同中间消息事件时间路径约束下的模型响应。</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="figures/market_information/rolling_abcd/full/es/C/c3_gap.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
@@ -1820,7 +1781,6 @@ K=\{-5,-4,-3,-2,0,1,2,3,4,5\}
 &amp;\qquad\times1(NewsGroup_e=s)1(\tau=k)+\varepsilon^{D}_{e\tau,w}.
 \end{aligned}
 \]</span></p>
-<p><strong>本模型的基准：</strong> 相对各组自身中间消息的响应。</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="figures/market_information/rolling_abcd/full/es/D/c3_gap.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
@@ -1854,7 +1814,10 @@ K=\{-5,-4,-3,-2,0,1,2,3,4,5\}
 </section>
 </section>
 <section id="sec-memo-erc-interactions" class="level3">
-<h3 class="anchored" data-anchor-id="sec-memo-erc-interactions">2.4 企业匹配：一对一与全邻居的ERC结果</h3>
+<h3 class="anchored" data-anchor-id="sec-memo-erc-interactions">2.4 已做的匹配：方法、可比性与市场响应</h3>
+<p>已有结果包括企业一对一和全邻居匹配、九种公告匹配方法诊断、其中三种方法的ERC回归，以及当前公告PS与P90的ERC和短窗比较。下面按比较层次展示，最后讨论下一步采用哪种方案。</p>
+<section id="企业匹配一对一与全邻居" class="level4">
+<h4 class="anchored" data-anchor-id="企业匹配一对一与全邻居">企业匹配：一对一与全邻居</h4>
 <p><strong>企业匹配后，四大更强的盈利响应只出现在部分窗口。</strong> 在公告前后两天的五日窗口内，允许不同客户特征对应不同盈利响应后，一对一匹配的四大额外ERC为0.170，在5%水平显著；保留距离内全部邻居时为0.122，仅在10%水平显著。公告前后一天和三天的窗口均没有显著差异。因此，匹配结果提供了局部支持，但还没有形成对窗口选择稳定的结论。</p>
 <p><strong>匹配过程。</strong> 在2001—2024年完整审计历史中，将至少一年使用四大的公司作为参照，其他公司作为候选对照。先保留预测、EPS、公告前价格、三个CAR窗口及控制变量有效、公司特征完整、至少有两份合格公告的公司。公司行业取全期完整行业代码的众数；若并列，按代码排序确定。只有行业代码相同的公司可以配对。</p>
 <p>匹配使用两个特征：全期平均对数资产规模、全期平均SOE状态。SOE均值反映可观测年份中的国有状态比例。分别以两类候选公司的组内方差均值开平方作为尺度，计算两个标准化特征差异的均方根距离：</p>
@@ -1863,7 +1826,7 @@ d_{ij}=\sqrt{\frac12\left[\left(\frac{\overline{Size}_i-\overline{Size}_j}{s_{Si
 \]</span></p>
 <p>距离上限固定为0.5。1∶1方案在同一行业内作不放回配对，优先保留可配对公司，再最小化总距离，最终407对、814家公司。全邻居方案保留每家参照公司距离0.5以内的全部候选，同时保留至少有一个邻居的参照公司，最终431家曾用四大公司和2,888家其他公司，共3,319家。公司入池后去重，每份合格年度公告等权；匹配连接次数不作为回归权重。每年仍按实际四大身份分组，不能将“曾用四大”永久作为处理身份。</p>
 <p><strong>一对一匹配使公司规模和国有属性更接近，但保留更多邻居会重新拉大差异。</strong> 一对一公司池的两项标准化差异均接近零；全邻居公司池虽然更大，两项差异仍分别达到0.761和0.642。可见，“每家公司至少有一个相近邻居”并不保证最后两组公司的整体构成相近。现有配对使用全期平均特征和曾用四大身份，包含未来信息，其作用是筛选比较公司，尚不能解释为公告前信息下的因果匹配。</p>
-<p><strong>估计口径。</strong> 本处保留2026年11月1日的冻结结果，不重新匹配或估计。严格公告前180天、每家券商取窗口内最新预测，再取预测中位数<span class="math inline">\(F\)</span>；</p>
+<p><strong>样本口径。</strong> 使用公告前180天内每家券商的最新预测，再取中位数<span class="math inline">\(F\)</span>；</p>
 <p><span class="math display">\[
 UE=(EPS-F)/P_{pre}
 \]</span></p>
@@ -1887,14 +1850,292 @@ CAR_{it}^{w}=\text{Firm FE}+\text{Fiscal year FE}+\delta Big4_{it}+\beta UE_{it}
 </figure>
 </div>
 <p><a href="tables/memo_three_decimals/erc_firm_radius05_three_windows.tex">TeX</a> · <a href="tables/memo_three_decimals/erc_firm_radius05_three_windows.pdf">PDF</a></p>
-<p><strong>模型变化说明，客户特征仍是解释盈利响应的重要因素。</strong> 只控制客户特征的水平时，多个窗口出现正向四大差异；进一步允许规模、估值和覆盖度影响盈利响应后，两种匹配方法都只在五日窗口保留显著结果，其中一对一匹配达到5%，全邻居达到10%。下一步应检验比较组是否充分可比，以及五日窗口的结果是否稳定，而非把某一种匹配的显著结果直接视为普遍的四大优势。</p>
 <p><a href="./23_big4_effect.html#market-erc-company-matching">Big4 effect章节：匹配ERC及其他历史结果</a></p>
 </section>
+<section id="memo-matching-nine-methods" class="level4">
+<h4 class="anchored" data-anchor-id="memo-matching-nine-methods">公告匹配：九种方法实际比较了什么？</h4>
+<p><strong>公告匹配把比较对象缩小到同一年、同一宽行业、财务状况与分析师预期相近的财报。</strong> 八项变量为年末市值对数（Log Market Capitalization）、上一财年资产规模（Firm Size）、杠杆率（Leverage）、资产收益率（ROA）、经营现金流／资产（CFO/Assets）、预测每股收益／公告前股价（Expected EPS/Price）、分析师覆盖倒数（1/N）及预测距公告天数（Forecast Age）。实际盈利惊喜UE没有进入匹配。</p>
+<p>九种方法使用同一候选集合：直接八维距离上限0.5和1的一对一匹配；倾向得分最近邻1个、加0.2卡尺的最近邻1个和最多3个；加0.2卡尺的不放回最优一对一；概率宽度0.05的得分分层；得分带宽0.1和0.2。得分卡尺与带宽以logit得分标准差计量，和直接八维距离、概率分层宽度分别定义。</p>
+<p><strong>匹配时看起来平衡，不保证进入公司固定效应回归后仍平衡。</strong> 公司只有一次入样公告时会被删除；最近邻方案因此失去较多对照。例如，加0.2卡尺的最近邻1个方案，最大标准化均值差从0.030升至0.251；带宽0.2方案为0.034降至0.019，得分分层为0.054降至0.041。标准化均值差越接近零，两组在这些特征上的平均水平越接近。</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/memo_matching/20261101_matching_methods_balance_heatmap.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>九种公告匹配的特征平衡：比较各变量及固定效应筛选前后</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/memo_matching/20261101_matching_methods_tradeoff.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>九种方法的样本保留、平衡与有效对照样本量</figcaption>
+</figure>
+</div>
+<p><strong>三种方法的ERC比较：五日窗口的正向结果只在带宽方案达到10%。</strong> 在当时剔除重组的口径下，带宽0.2、得分分层、直接距离1均已估计三个CAR窗口及两种控制设定。加入全部控制变量与UE的交互后，五日窗口的四大额外斜率分别为0.147、0.122、0.027；仅第一项在10%水平显著，其余窗口也没有显著优势。带宽与分层保留了更多可用于公司固定效应的对照信息，但尚未得到跨方法、跨窗口稳定的四大额外响应。</p>
+<p>这批ERC沿用当时按重组披露自然年剔除的规则；下文使用后来确认的不剔除重组口径。两批分别展示，避免将样本规则变化误读为匹配方法的影响。</p>
+</section>
+<section id="memo-matching-current" class="level4">
+<h4 class="anchored" data-anchor-id="memo-matching-current">当前公告匹配与P90：配对更近，结果是否更稳定？</h4>
+<p><strong>公告PS匹配显著改善了整体特征平衡，但单份公告的预测时效仍可能差很多。</strong> 当前PS带宽0.2方案在全期ERC实际样本中的最大标准化均值差为0.019；原始配对中，四大公告与其加权对照的预测年龄差中位数仍为34.94天。综合得分接近，可以同时伴随某一项变量相距较远。</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/memo_matching/20261108_matching_design_diagnostics_smd_event_all.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>公告PS匹配：全期ERC实际样本的八项特征平衡</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/memo_matching/20261108_matching_design_diagnostics_pair_event_forecast_age.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>四大公告与加权对照的预测年龄：整体平衡之外的局部差距</figcaption>
+</figure>
+</div>
+<p><strong>P90方案进一步删除每项变量差距过大的配对。</strong> 八项绝对差距都需低于原配对分布各自的加权90分位数，再对保留的邻居重新分配权重。它保留1,922份四大公告，原方案为2,140份。逐对差距缩小，但在回归筛选前，全期最大标准化均值差从0.034升至0.080；早期则从0.152降至0.100。早期中间消息组的预测年龄仍相差约19天。因此，限制局部距离与改善整组平衡需要同时检查。</p>
+<p><strong>ERC：原PS的五日窗口优势，在P90下减弱且不再显著。</strong> 当前不剔除重组的全期样本中，加入控制交互后，原PS在三个窗口的四大额外斜率分别为0.085、0.151、0.099，只有五日窗口在5%水平显著；P90对应为0.068、0.092、−0.021，均不显著。以五日窗口为例，UE增加相当于公告前股价的1%，原PS估计四大额外CAR增加约0.151个百分点，P90约为0.092个百分点。P90既降低了点估计，也减少了样本：有效公告由18,121份降至15,721份。</p>
+<p>原PS的分期ERC中，2012年前三个窗口均不显著；2012年起三个窗口均为正，五日窗口在1%水平、另两个窗口在10%水平显著。P90目前只估计了全期ERC，尚不能据此判断它改变了哪一时期的斜率。</p>
+</section>
+<section id="memo-matching-event-results" class="level4">
+<h4 class="anchored" data-anchor-id="memo-matching-event-results">短窗：未匹配、公告PS与P90的直接对照</h4>
+<p>三套样本均使用UE的±0.10%门槛及D模型，以中间消息为基准，按公告聚类。匹配版本将同一公告的权重用于各交易日，比较四大与非四大各自“好消息减中间消息”的响应差：</p>
+<p><span class="math display">\[
+\begin{aligned}
+\ln P_{e\tau}={}&amp;\text{Announcement FE}+\text{Big4 group}\times\text{Event time FE}\\
+&amp;+\text{Big4 group}\times\text{Trading date FE}\\
+&amp;+\sum_{s\in\{\text{bad},\text{good}\}}\sum_{k\ne-1}
+[\beta_{sk}+\delta_{sk}Big4_e]\,1(NewsGroup_e=s)1(\tau=k)+\varepsilon_{e\tau}.
+\end{aligned}
+\]</span></p>
+<p><strong>早期好消息的四大优势点估计一直为正，但精度随匹配变化。</strong> 公告日相对前一日，2012年前未匹配、原PS与P90的好消息增量差分别为0.642、0.743和1.068个百分点，依次为5%显著、不显著、10%显著。原PS并没有把早期点估计压到零；匹配后标准误增大，是显著性下降的重要部分。全期及2012年起，三套样本的好消息组差均不显著。</p>
+<p>P90早期非四大的好消息路径在公告前第−5、−4日已经偏离中间消息路径，且早期中间组的预测年龄仍不平衡。会议需要同时看公告前路径和匹配质量，判断这1.068个百分点能否解释为可比消息下的四大额外定价。</p>
+<p><strong>未匹配：2012年前与2012年起</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/memo_matching/20261108_matching_event_comparison_unmatched_pre_good_gap.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>未匹配，2012年前：好消息响应的四大减非四大增量差</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/memo_matching/20261108_matching_event_comparison_unmatched_post_good_gap.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>未匹配，2012年起：好消息响应的四大减非四大增量差</figcaption>
+</figure>
+</div>
+<p><strong>公告PS带宽0.2：2012年前与2012年起</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/memo_matching/20261108_matching_event_comparison_original_pre_good_gap.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>公告PS带宽0.2，2012年前：好消息响应的四大减非四大增量差</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/memo_matching/20261108_matching_event_comparison_original_post_good_gap.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>公告PS带宽0.2，2012年起：好消息响应的四大减非四大增量差</figcaption>
+</figure>
+</div>
+<p><strong>PS＋P90限制：2012年前与2012年起</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/memo_matching/20261108_matching_event_comparison_p90_pre_good_gap.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>PS＋P90限制，2012年前：好消息响应的四大减非四大增量差</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/memo_matching/20261108_matching_event_comparison_p90_post_good_gap.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>PS＋P90限制，2012年起：好消息响应的四大减非四大增量差</figcaption>
+</figure>
+</div>
+<details>
+<summary>
+三套样本的全期、坏消息及两组自身响应完整图
+</summary>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/memo_matching/20261108_matching_event_comparison_original_all_bad_gap.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>original_all_bad_gap</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/memo_matching/20261108_matching_event_comparison_original_all_bad_responses.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>original_all_bad_responses</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/memo_matching/20261108_matching_event_comparison_original_all_good_gap.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>original_all_good_gap</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/memo_matching/20261108_matching_event_comparison_original_all_good_responses.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>original_all_good_responses</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/memo_matching/20261108_matching_event_comparison_original_post_bad_gap.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>original_post_bad_gap</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/memo_matching/20261108_matching_event_comparison_original_post_bad_responses.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>original_post_bad_responses</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/memo_matching/20261108_matching_event_comparison_original_post_good_responses.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>original_post_good_responses</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/memo_matching/20261108_matching_event_comparison_original_pre_bad_gap.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>original_pre_bad_gap</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/memo_matching/20261108_matching_event_comparison_original_pre_bad_responses.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>original_pre_bad_responses</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/memo_matching/20261108_matching_event_comparison_original_pre_good_responses.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>original_pre_good_responses</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/memo_matching/20261108_matching_event_comparison_p90_all_bad_gap.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>p90_all_bad_gap</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/memo_matching/20261108_matching_event_comparison_p90_all_bad_responses.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>p90_all_bad_responses</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/memo_matching/20261108_matching_event_comparison_p90_all_good_gap.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>p90_all_good_gap</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/memo_matching/20261108_matching_event_comparison_p90_all_good_responses.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>p90_all_good_responses</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/memo_matching/20261108_matching_event_comparison_p90_post_bad_gap.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>p90_post_bad_gap</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/memo_matching/20261108_matching_event_comparison_p90_post_bad_responses.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>p90_post_bad_responses</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/memo_matching/20261108_matching_event_comparison_p90_post_good_responses.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>p90_post_good_responses</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/memo_matching/20261108_matching_event_comparison_p90_pre_bad_gap.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>p90_pre_bad_gap</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/memo_matching/20261108_matching_event_comparison_p90_pre_bad_responses.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>p90_pre_bad_responses</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/memo_matching/20261108_matching_event_comparison_p90_pre_good_responses.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>p90_pre_good_responses</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/memo_matching/20261108_matching_event_comparison_unmatched_all_bad_gap.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>unmatched_all_bad_gap</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/memo_matching/20261108_matching_event_comparison_unmatched_all_bad_responses.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>unmatched_all_bad_responses</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/memo_matching/20261108_matching_event_comparison_unmatched_all_good_gap.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>unmatched_all_good_gap</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/memo_matching/20261108_matching_event_comparison_unmatched_all_good_responses.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>unmatched_all_good_responses</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/memo_matching/20261108_matching_event_comparison_unmatched_post_bad_gap.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>unmatched_post_bad_gap</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/memo_matching/20261108_matching_event_comparison_unmatched_post_bad_responses.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>unmatched_post_bad_responses</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/memo_matching/20261108_matching_event_comparison_unmatched_post_good_responses.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>unmatched_post_good_responses</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/memo_matching/20261108_matching_event_comparison_unmatched_pre_bad_gap.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>unmatched_pre_bad_gap</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/memo_matching/20261108_matching_event_comparison_unmatched_pre_bad_responses.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>unmatched_pre_bad_responses</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/memo_matching/20261108_matching_event_comparison_unmatched_pre_good_responses.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>unmatched_pre_good_responses</figcaption>
+</figure>
+</div>
+</details>
+<p>完整结果：<a href="tables/memo_matching/20261101_matching_methods.xlsx">九种方法诊断</a> · <a href="tables/memo_matching/20261101_matching_erc.xlsx">三种方法ERC</a> · <a href="tables/memo_matching/20261108_announcement_matching_short.xlsx">当前公告PS：ERC与短窗</a> · <a href="tables/memo_matching/20261108_matching_p90_erc.xlsx">P90全期ERC</a> · <a href="tables/memo_matching/20261108_matching_event_comparison.xlsx">三套样本短窗</a>。</p>
+</section>
+</section>
 <section id="memo-matching-discussion" class="level3">
-<h3 class="anchored" data-anchor-id="memo-matching-discussion">本节讨论：怎样匹配，怎样比较方法？</h3>
-<p><strong>比较对象与单位。</strong> 企业匹配强调公司特征，公告匹配强调某次财报的信息环境和消息幅度。需要决定两者怎样衔接，以及event study与ERC共同遵循哪些控制组选择原则。</p>
-<p><strong>变量与时点。</strong> 企业规模（Firm Size）、国有属性（State Ownership）、杠杆率（Leverage）、资产收益率（Return on Assets, ROA）等财务特征，与分析师覆盖（Analyst Coverage）、预测分歧（Forecast Dispersion）和盈利惊喜幅度（Earnings Surprise）分别怎样用于匹配；统一公告前信息、全期特征和本次消息的使用范围。</p>
-<p><strong>方法与评价。</strong> 比较一对一、距离内全部邻居和倾向得分匹配时，先统一预测版本、候选样本和模型，再看平衡、样本损失、权重与有效样本量。选定匹配样本后，单独比较控制交互和时间固定效应的影响。</p>
+<h3 class="anchored" data-anchor-id="memo-matching-discussion">2.5 会议讨论：下一步采用哪种匹配？</h3>
+<p><strong>先确定要比较哪批四大公告。</strong> 九种方法在各自保留的样本上有不同的平衡表现；固定共同的1,414份四大公告后，方法之间的优势也会变化。应先决定共同支持和样本保留规则，再比较方法。</p>
+<p><strong>重点比较公告带宽、得分分层和直接距离限制。</strong> 带宽与分层保留更多公司固定效应所需的对照支持；直接距离和逐变量上限让“相近”更容易解释。现有P90没有全面改善平衡，会议需决定哪些变量必须设实质上可接受的差距，例如预测年龄允许相差多少天，以及是否对规模和覆盖另设限制。</p>
+<p><strong>按实际回归样本和消息子组评价匹配。</strong> 检查好、中、坏消息各组的特征与UE幅度分布、公告前路径、样本流失和权重集中。ERC与分组短窗共用比较对象选择原则，分别核对各自有效样本；最终方案依据可比性选择，收益显著性作为研究结果报告。</p>
 <details>
 <summary>
 匹配设计的七项具体讨论
@@ -1959,7 +2200,6 @@ CAR_{it}^{w}=\text{Firm FE}+\text{Fiscal year FE}+\delta Big4_{it}+\beta UE_{it}
 </section>
 <section id="memo-fundamentals-capital" class="level2">
 <h2 class="anchored" data-anchor-id="memo-fundamentals-capital">3．财报信息是否对应后续基本面与资金变化？</h2>
-<p>先看好消息后的财报问题和盈利持续性，再看机构持仓、借贷数量与期限变化。各部分分别列出结果和需要讨论的研究选择。</p>
 <section id="sec-memo-good-news-verification" class="level3">
 <h3 class="anchored" data-anchor-id="sec-memo-good-news-verification">3.1 财报事后质量与盈利持续性</h3>
 <p>四大客户的好消息更少在事后三年内出现财务重述或财务违规；在所有可用年报样本中，四大客户当前盈利也更能延续至未来一至两年。这两部分结果为“四大的好消息更可信”提供事后基本面依据，分别对应财报问题暴露和盈利水平延续。</p>
@@ -2013,14 +2253,13 @@ Z_{i,t+h}=\text{Industry × Fiscal year FE}+\beta Big4_{it}+\rho Z_{it}
 </summary>
 <section id="sec-memo-funding-background" class="level4">
 <h4 class="anchored" data-anchor-id="sec-memo-funding-background">背景：先区分资金来源和持有期限</h4>
-<p><strong>不同机构的持股不能直接合并理解为“长期资金”。</strong> 社保、汇金、证金、公募基金等资金的目标和交易方式不同，因此分别观察。香港中央结算记录的是名义持有人，也单独列出。数据来自前十大股东，能看到大额持仓；判断某笔资金是否长期留在公司，还需要跟踪其持续持有情况。</p>
+<p>社保、汇金、证金和基金分别观察；香港中央结算是名义持有人，单独列出。数据仅覆盖前十大股东，识别长期资金还需要跟踪持续持有情况。</p>
 </section>
 <section id="现有结构描述" class="level4">
 <h4 class="anchored" data-anchor-id="现有结构描述">现有结构描述</h4>
 <p><strong>四大客户中汇金和香港中央结算的持股占比更高，基金持股却没有更高。</strong> 以2024年末为例，汇金在四大与非四大客户中的市值加权持股占比分别为7.717%和0.099%，香港中央结算名义持股分别为11.648%和2.504%；证券投资基金及基金资管则分别为1.504%和2.147%。四大客户中的大型金融企业会影响这些比例，因此，这组图说明股东构成不同，尚不能据此认定四大更受所有机构欢迎。</p>
 <p><strong>两种图的分母不同。</strong> 十二类完整版以各组公司总市值为分母，展示各类股东的持股占比。九类版排除未知、其他机构／企业和自然人后，将剩余持股重新加总为100%，展示这些类别之间的构成。九类版中某类占比上升，也可能只是其他类别占比下降，不能直接读作这类机构增持了公司股票。</p>
-<p>持股比例来自前十大股东，按季末公司总市值加权；未知为前十大之外的股份。样本包含金融业，四大身份按同财年年度审计类别匹配。全市场2003Q2—2025Q3，四大与非四大2003Q2—2024Q4；2013Q2以前按半年、以后按季度连接实际观测。2008Q1仅1家公司、2013Q1全市场市值覆盖约34%，两期以窄柱单列。2024Q4四大与非四大有效匹配365和4,996家公司。</p>
-<p>这组图反映客户构成与可见大股东结构。大型金融企业的市值及持股结构会影响组间差异；描述结果本身尚未控制公司规模、行业和所有制，也不直接检验机构对盈利好消息的反应。它为后续持仓变化分析提供背景。</p>
+<p>持股比例来自前十大股东，按季末公司总市值加权，样本包含金融业。2024年末四大与非四大分别覆盖365和4,996家公司；“未知”为前十大股东之外的股份。早期数据稀疏的时点在图中单列。</p>
 </section>
 <section id="全市场" class="level4">
 <h4 class="anchored" data-anchor-id="全市场">全市场</h4>
@@ -2092,7 +2331,7 @@ Z_{i,t+h}=\text{Industry × Fiscal year FE}+\beta Big4_{it}+\rho Z_{it}
 </div>
 </section></details>
 <p><span id="sec-memo-capital-holdings-results"></span></p>
-<p><strong>原始对比。</strong> 先比较公告前最近季末到公告后首个季末的持仓变化，好消息为ES&gt;10%，中性消息为ES在±10%内。四类合计为社保、中央汇金、证金和外资。原始对比包含金融业、公司事件等权，排除两端未确认持有人账户后共有14,087个事件。下表列出四组均值及按公司聚类bootstrap的95%区间，属于未经控制的描述。</p>
+<p><strong>公告前后比较。</strong> 观察公告前最近季末至公告后首个季末，社保、汇金、证金和外资的合计持股比例变化。好消息为ES&gt;10%，中性消息为ES在±10%内。样本含金融业，共14,087次公告，尚未控制企业特征。</p>
 <figure id="tbl-memo-capital-holdings-raw" class="latex-table figure" style="overflow-x:auto;">
 <a href="tables/capital_allocation/holdings_raw.png"><img src="tables/capital_allocation/holdings_raw.png" style="width:100%;max-width:100%;height:auto;display:block;" loading="lazy" alt="好消息和中性消息之后的四类合计持仓变化：四组原始均值及公司聚类区间" class="figure-img"></a>
 <figcaption>
@@ -2107,11 +2346,10 @@ Z_{i,t+h}=\text{Industry × Fiscal year FE}+\beta Big4_{it}+\rho Z_{it}
 +\beta_hSignal_{it}+\gamma_hBig4_{it}+\theta_h(Signal_{it}\times Big4_{it})
 +X_{it}'\delta_h+\rho_hY_{i0}+\varepsilon_{ith}.
 \]</span></p>
-<p><span class="math inline">\(S\)</span>分别为ES／0.1或本次年报财年ROA／0.01，不同时放入。<span class="math inline">\(\theta_h\)</span>检验四大相对非四大的信号斜率差，四大总斜率为</p>
+<p><span class="math inline">\(Signal\)</span>分别为ES／0.1或本次年报财年ROA／0.01，不同时放入。<span class="math inline">\(\theta_h\)</span>检验四大相对非四大的信号斜率差，四大总斜率为</p>
 <p><span class="math display">\[
 \beta_h+\theta_h
 \]</span></p>
-<p>完整控制和样本条件统一列于本节末尾。下表固定展示H2，完整H1—H6路径随后展示。</p>
 <figure id="tbl-memo-capital-holdings-h2" class="latex-table figure" style="overflow-x:auto;">
 <a href="tables/capital_allocation/holdings_h2.png"><img src="tables/capital_allocation/holdings_h2.png" style="width:100%;max-width:100%;height:auto;display:block;" loading="lazy" alt="半年控制版H2：四类合计与证券投资基金分别使用ES和ROA" class="figure-img"></a>
 <figcaption>
@@ -2140,7 +2378,7 @@ Z_{i,t+h}=\text{Industry × Fiscal year FE}+\beta Big4_{it}+\rho Z_{it}
 </figcaption>
 </figure>
 </div>
-<p><strong>分别看机构类别，正向差异也集中在少数时点。</strong> 汇金在部分时点对超预期盈利或ROA的反应、外资在第四个半年末对超预期盈利的反应，出现5%水平的四大额外优势；社保、证金、证券公司、保险、银行和券商集合理财没有5%水平的显著差异。由于各期样本不同，且只观察前十大股东中的持仓，这些结果尚不能说明全部机构交易或长期资金流入发生了系统性变化。</p>
+<p>分机构看，汇金和外资仅在个别时点出现5%水平的正向四大差异；社保、证金、证券公司、保险、银行和券商集合理财均未发现5%水平的显著差异。</p>
 <p><strong>本项讨论。</strong> 长期资金准备用哪类机构衡量，研究重点是持仓水平、持续持有还是公告后的净增持？前十大股东中可见的基金持仓与完整基金组合怎样对应，现有半年窗口是否适合回答这个问题？</p>
 </section>
 </section>
@@ -2166,7 +2404,6 @@ M2:\quad \Delta Y_{ith}&amp;=\text{Fiscal year FE}+\beta_hES10_{it}+\gamma_hBig4
 <p><span class="math display">\[
 \beta_h+\theta_h
 \]</span></p>
-<p>三个结果各按自身可用数据估计；每个Y的M1、M2使用相同事件数。</p>
 <figure id="tbl-memo-capital-simple-h1" class="latex-table figure" style="overflow-x:auto;">
 <a href="tables/capital_allocation/simple_debt_h1.png"><img src="tables/capital_allocation/simple_debt_h1.png" style="width:100%;max-width:100%;height:auto;display:block;" loading="lazy" alt="简单债务基准：公告前季末到第一个年末，三个Y分别估计M1与M2" class="figure-img"></a>
 <figcaption>
@@ -2238,7 +2475,6 @@ M2:\quad \Delta Y_{ith}&amp;=\text{Fiscal year FE}+\beta_hES10_{it}+\gamma_hBig4
 </figcaption>
 </figure>
 <p><a href="tables/capital_allocation/short_debt_additions_h2.tex">LaTeX表格</a> · <a href="tables/capital_allocation/short_debt_additions_h2.pdf">PDF表格</a></p>
-<p>现有资料中尚无相同半年口径、相同样本的无控制净新增回归。本页将已有结构简单基准与控制后的数量结果分别报告，不把它们当作逐步加控制的同一回归。</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
@@ -2296,7 +2532,7 @@ M2:\quad \Delta Y_{ith}&amp;=\text{Fiscal year FE}+\beta_hES10_{it}+\gamma_hBig4
 </div>
 <div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>含债券长期债务定义为长期借款加应付债券；其长期占比、占资产比例及累计净新增均保留。24个可估设计属于小样本，另12个H4／H6设计不足30个事件未估计。H2仅40个事件、18家公司，剩余残差自由度4—5；H5为57个事件、19家公司。下面列出24个小样本设计中ROA交互达到5%的三列，用于展示方向和样本限制；全部设计在完整结果文件中保留。</p>
+<p>计入应付债券后的样本很小：第二个半年末仅40次公告、18家公司，第五个半年末57次公告、19家公司。结果方向不一致，暂不足以判断融资期限是否改善。</p>
 <figure id="tbl-memo-capital-bond-diagnostics" class="latex-table figure" style="overflow-x:auto;">
 <a href="tables/capital_allocation/bond_debt_diagnostics.png"><img src="tables/capital_allocation/bond_debt_diagnostics.png" style="width:100%;max-width:100%;height:auto;display:block;" loading="lazy" alt="含债券小样本诊断：长债占比H2、长债累计净新增H2和H5的ROA结果" class="figure-img"></a>
 <figcaption>
@@ -2304,7 +2540,6 @@ M2:\quad \Delta Y_{ith}&amp;=\text{Fiscal year FE}+\beta_hES10_{it}+\gamma_hBig4
 </figcaption>
 </figure>
 <p><a href="tables/capital_allocation/bond_debt_diagnostics.tex">LaTeX表格</a> · <a href="tables/capital_allocation/bond_debt_diagnostics.pdf">PDF表格</a></p>
-<p><strong>把债券计入长期债务后，结果方向仍不一致。</strong> 部分比较显示四大差异为正，部分为负；第五个半年末也不能确认四大客户自身的长期债务净增加随ROA提高。结合很小的样本，当前结果尚不能说明好消息改善了四大客户的融资期限。</p>
 </div>
 </div>
 </div>
@@ -2322,7 +2557,7 @@ M2:\quad \Delta Y_{ith}&amp;=\text{Fiscal year FE}+\beta_hES10_{it}+\gamma_hBig4
 <div class="callout-body-container callout-body">
 <p>半年回归控制前一期财年的对数资产规模、ROA、经营现金流／资产、现金／资产、杠杆、销售增长、市场账面比，以及公告前分析师人数log(1+n)、预测EPS标准差／前期正股价。每列控制对应初始持仓或债务比率，长短债净新增分别控制初始含债券长债／资产、短借／资产；债务另控制固定资产／资产。</p>
 <p>样本为非金融A股，至少两家分析师预测，前期年报已在本次公告前披露，前期所有制和行业直接可观测。持仓两端要求有效前十、10条记录且无未确认账户；债务基准期短借和资产为正。完整值后按行业×盈余财年×前期所有制的双组支持、规模交集、公司至少两个事件及双组闭包筛选。事件等权、公司聚类；原始缺失保留，不缩尾，未将债券缺失填零。无法拆分的一年内到期非流动负债合计未混入短债。</p>
-<p>固定效应包括公司、行业×盈余财年×前期所有制及行业×终点季度；本轮最终样本中，终点季度FE被原组FE包含。ES与ROA分别估计，相同Y／终点成员相同，各期及各Y的样本可以不同。204个半年设计中192个已估计、12个不足30未估计；逐期显著性未调整多重比较。H2／H4／H6与原年度对应102列的最终事件、Y和基准完全复现，半年版补充H1／H3／H5。</p>
+<p>固定效应包括公司、行业×盈余财年×前期所有制及行业×终点季度，后者在当前样本中被前一组吸收。ES和ROA分别估计；同一指标、同一终点使用相同样本，不同时点和指标的样本可以不同。逐期检验未作多重比较校正。</p>
 <p>简单版和控制版同时改变了样本、基准日期和固定效应，并非同样本逐步加控制。例如第一个年末长期借款占比的简单版有8,575个事件，半年控制版H2只有229个。原始持仓对比含金融、只比较好／中性消息，半年回归则使用非金融样本和连续信号，包括坏消息。因此不能把两版差异完全归因于财务控制。</p>
 <p><a href="tables/capital_allocation/all_semiannual_estimates.xlsx">全部204个半年设计结果</a> · <a href="tables/capital_allocation/all_simple_debt_estimates.csv">全部36列简单债务结果</a></p>
 </div>
@@ -2377,8 +2612,6 @@ M2:\quad \Delta Y_{ith}&amp;=\text{Fiscal year FE}+\beta_hES10_{it}+\gamma_hBig4
 </tr>
 </tbody>
 </table>
-<p>已有投融资事件数据覆盖2013—2023财年41,650次年报公告，公告后四个完整季度共166,600条事件—季度记录；这些是基础数据行数，各指标有效样本另计。金额空白保持缺失，现金流按已确认规则由年初累计转为单季，并处理更正记录和差分异常。持仓历史结构图包含金融业，后续投融资比较应明确金融与非金融的样本边界。</p>
-<p><strong>已有原始描述例子。</strong> 在非金融、年度ROA较高的四大客户中，好消息与中性消息组公告后四季借款流入的中位数分别为基准资产的7.73%和14.02%，可用事件为76和256；购建长期资产支出的中位数分别为4.29%和5.29%，可用事件为127和424。好消息按ES&gt;10%、中性按ES在±10%内划分，ROA高低按各财年好／中性消息样本的中位数划分，金额除以公告披露财年的总资产。这一例子展示数据与分组差异，现有原始描述没有形成“好消息后融资与投资一致增加”的图景；各指标缺失和组内客户构成也不同。</p>
 </div>
 </div>
 </div>
@@ -2430,7 +2663,7 @@ Big4_{it}=\text{Firm FE}+\text{Year FE}+\pi Z_{it}+X_{it}'\gamma+v_{it}
 <p><span class="math display">\[
 Y_{it}=\text{Firm FE}+\text{Year FE}+\beta Big4_{it}+X_{it}'\theta+\varepsilon_{it}
 \]</span></p>
-<p>每列分别用单个距离指标<span class="math inline">\(Z\)</span>工具化当年四大身份<span class="math inline">\(D\)</span>。<span class="math inline">\(X\)</span>为规模、杠杆、亏损、ROA、Z-score、杠杆变化、报告滞后、经营现金流和年龄及各自缺失标记；公司与年份固定效应，公司聚类。</p>
+<p>每列分别用单个距离指标<span class="math inline">\(Z\)</span>工具化当年四大身份<span class="math inline">\(Big4\)</span>。<span class="math inline">\(X\)</span>为规模、杠杆、亏损、ROA、Z-score、杠杆变化、报告滞后、经营现金流和年龄及各自缺失标记；公司与年份固定效应，公司聚类。</p>
 <figure class="latex-table figure" style="overflow-x:auto;">
 <a href="tables/memo_palatino/brand_distance_first_stage.png"><img src="tables/memo_palatino/brand_distance_first_stage.png" style="width:100%;max-width:100%;height:auto;display:block;" loading="lazy" alt="六种品牌距离的一阶段；系数及括号内SE为百分点" class="figure-img"></a>
 <figcaption>
@@ -2444,19 +2677,18 @@ Y_{it}=\text{Firm FE}+\text{Year FE}+\beta Big4_{it}+X_{it}'\theta+\varepsilon_{
 距离IV与任一未预警审计失败：六个独立2SLS · <a href="tables/memo_palatino/2sls_any_failure_clean.tex">TeX</a> · <a href="tables/memo_palatino/2sls_any_failure_clean.pdf">PDF</a>
 </figcaption>
 </figure>
-<p><strong>考虑工具较弱的检验也没有给出一致方向。</strong> 对弱工具更稳健的AR检验有两项在5%水平显著，但对应估计一正一负；另一项重述检验未达到5%。这些检验仍要求距离只通过四大采用影响结果，无法排除办公室选址与企业特征共同变化的问题。</p>
-<p>本省／本省及邻省开所的提前关联，也未被距离控制或固定g−6非四大资格稳定解决；邻省部分提前项变弱同时伴随历史覆盖筛选。分所选址、企业迁址和当地审计市场变化仍可能同时影响距离、四大采用与审计结果。<strong>这条线本轮可以按探索结果阶段收尾；目前未采用为主因果IV。</strong></p>
+<p>弱工具稳健的AR检验也没有给出一致方向，不能解决办公室选址与企业特征共同变化的问题。</p>
+<p>开所之前已经存在的采用变化，在控制距离及调整比较组后仍未稳定消除。距离工具较弱，办公室选址也可能与客户需求共同变化，因此本轮保留为识别探索，暂不作为主要因果证据。</p>
 <p><a href="./23_big4_effect.html#sec-distance-iv">完整距离研究：变量、全部表格与提前趋势诊断</a> · <a href="tables/distance_iv/brand_distance_2sls.xlsx">18列结果Excel</a> · <a href="tables/distance_iv/brand_distance_2sls_details.xlsx">完整精度及检验</a></p>
 </details>
 </section>
 <section id="sec-memo-localization-2009" class="level2">
 <h2 class="anchored" data-anchor-id="sec-memo-localization-2009">6．本土化政策发布与四大客户股价</h2>
-<p>2009年10月12日政策发布当天，四大客户没有显著下跌；两个三日窗口内，相对非四大客户分别少涨约1.02和0.77个百分点。</p>
+<p>2009年10月12日本土化政策发布后，四大客户在两个三日窗口内相对非四大分别少涨约1.02和0.77个百分点。</p>
 <details open="">
 <summary>
 政策背景、模型与完整结果
 </summary>
-<p>2009年10月12日政策正式发布当天，四大客户没有显著下跌；在两个三日窗口内，四大客户相对非四大客户分别少涨约1.02和0.77个百分点。</p>
 <p>事件对应《国务院办公厅转发财政部关于加快发展我国注册会计师行业若干意见的通知》（国办发〔2009〕56号），其中提出加快现有中外合作会计师事务所本土化进程。文件落款为10月3日，<a href="https://kjs.mof.gov.cn/zhengcefabu/200910/t20091012_216311.htm">财政部通知网页</a>和<a href="https://www.cicpa.org.cn/ztzl1/zthf/56gb/56wjfb/">中注协发布目录</a>均登记10月12日公开；<a href="https://finance.sina.com.cn/oldnews/2009-10-12.html">新浪当天新闻索引</a>在上午10:31已有通知条目。以10月12日为事件日，分别考察当天、前一至后一交易日，以及发布日起三个交易日。</p>
 <p>沿用安达信检验框架，固定2008财年四大客户身份，对每个窗口分别估计：</p>
 <p><span class="math display">\[
@@ -2479,10 +2711,6 @@ CAR_{i,w}=\alpha_w+\beta_w Big4_{i,2008}
 <p><strong>政策发布当天没有显著组间差异，随后三日四大客户相对少涨。</strong> 控制行业差异后，前一至后一交易日的三日窗口中，四大客户比非四大少涨1.020个百分点，在1%水平显著；从发布日起算的三个交易日少涨0.765个百分点，在5%水平显著。四大客户这两个窗口的原始收益均值仍为正，因此结果反映其相对表现较弱，而非政策发布后股价普遍下跌。两个窗口有重叠，应视为同一事件的不同观察范围。</p>
 <p>这次政策同时涉及本土化、本土大所扶持及信息安全等内容，<a href="https://epaper.stcn.com/paper/zqsb/page/1/2009-06-13/A019/5671244823864895.pdf">6月公开征求意见稿</a>也已提及本土化要求。当前结果反映正式政策发布附近的组间价格差异，尚未分离四大声誉、本土所扶持与其他同期消息的作用；共同事件下，横截面稳健标准误也不能消除相关冲击。</p>
 </details>
-<section id="sec-memo-market-long-window" class="level3">
-<h3 class="anchored" data-anchor-id="sec-memo-market-long-window">历史补充：长窗口股价路径</h3>
-<p>长期股价drift已停止推进，历史材料供查阅。<a href="./23_big4_effect.html#超预期财报正向消息的股价反应">短窗市场反应</a> · <a href="./23_big4_effect.html#market-long-window">历史长窗路径</a></p>
-</section>
 </section>
 <section id="memo-short-window-pe" class="level2">
 <h2 class="anchored" data-anchor-id="memo-short-window-pe">7．短期股价反应与市盈率</h2>
