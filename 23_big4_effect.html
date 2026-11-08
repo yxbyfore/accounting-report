@@ -2713,30 +2713,6 @@ CAR^w_{it}=\alpha_i+\lambda_t+\delta B_{it}+\beta U_{it}
 </figure>
 </div>
 <p><a href="tables/unmatched_market_baseline/short_before2012.pdf">PDF</a> · <a href="tables/unmatched_market_baseline/short_before2012.tex">TeX</a></p>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="figures/market_information/unmatched_baseline/before2012_a_groups.png" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption>2012年前A模型：共同事件日与交易日FE下两组自身响应</figcaption>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="figures/market_information/unmatched_baseline/before2012_a_gap.png" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption>2012年前A模型：四大减非四大的直接差</figcaption>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="figures/market_information/unmatched_baseline/before2012_d_groups.png" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption>2012年前D模型：分组事件日与交易日FE下两组自身响应</figcaption>
-</figure>
-</div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="figures/market_information/unmatched_baseline/before2012_d_gap.png" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption>2012年前D模型：四大减非四大的直接差</figcaption>
-</figure>
-</div>
 <p><strong>2012年起。</strong> 四模型第0日四大增量均未达到10%；D模型第0、1、2、5日及0—5日联合检验也没有提供额外正向响应证据。早期某一模型显著、后期不显著，不等于前后差异显著。</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -2745,19 +2721,165 @@ CAR^w_{it}=\alpha_i+\lambda_t+\delta B_{it}+\beta U_{it}
 </figure>
 </div>
 <p><a href="tables/unmatched_market_baseline/short_after2012.pdf">PDF</a> · <a href="tables/unmatched_market_baseline/short_after2012.tex">TeX</a></p>
+<section id="body-four-fe-paths" class="level4">
+<h4 class="anchored" data-anchor-id="body-four-fe-paths">2012年前后：四种固定效应的方程与组间差值</h4>
+<p>下面围绕“四大减非四大的好消息响应增量差”，按固定效应区别列出四个模型，每个模型在方程下连续展示2012年前与2012年起的差值路径。</p>
+<p><strong>共同口径。</strong> <span class="math inline">\(e\)</span>为年报公告，<span class="math inline">\(\tau\)</span>为相对事件交易日，<span class="math inline">\(d(e,\tau)\)</span>为实际交易日期；<span class="math inline">\(B_e=1\)</span>为当年四大客户，<span class="math inline">\(G_e=1(ES&gt;10\%)\)</span>。中性消息为<span class="math inline">\(|ES|\leq10\%\)</span>，排除ES&lt;−10%；<span class="math inline">\(K=\{-5,-4,-3,-2,0,1,2,3,4,5\}\)</span>，第−1日归零。各模型和时期分别估计，均有公告事件FE <span class="math inline">\(\alpha_e\)</span>，按公告事件聚类，无额外财务控制或连续ES幅度控制。2012年前四模型同用4,485次公告、49,267条日度观测、1,693家公司；2012年起同用15,830次公告、174,046条日度观测、4,108家公司。两时期成员可以不同。</p>
+<p>方程中的<span class="math inline">\(\beta^m_{0k}\)</span>、<span class="math inline">\(\beta^m_{1k}\)</span>分别是非四大、四大“好消息减自身中性消息”的响应。图展示直接差值<span class="math inline">\((\beta^m_{1k}-\beta^m_{0k})\times100\)</span>及95%区间；两组自身路径保留在各模型下方的展开区。A→B、C→D放开两组事件时间基准路径；A→C、B→D放开两组实际交易日冲击。各期差值与显著性不能代替正式前后系数差检验。</p>
+<section id="body-four-fe-a" class="level5">
+<h5 class="anchored" data-anchor-id="body-four-fe-a">A｜共同事件时间FE＋共同交易日FE</h5>
+<p><span class="math display">\[
+\begin{aligned}
+\ln P_{e\tau}&amp;=\alpha_e+\lambda_{\tau}+\mu_{d(e,\tau)}\\
+&amp;\quad+\sum_{k\in K}\left[\beta^{A}_{0k}(1-B_e)+\beta^{A}_{1k}B_e\right]G_e\,1(\tau=k)+\varepsilon^{A}_{e\tau}.
+\end{aligned}
+\]</span></p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="figures/market_information/unmatched_baseline/after2012_d_groups.png" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption>2012年起D模型：两组各自的好消息减中性消息响应</figcaption>
+<p><img src="figures/market_information/unmatched_baseline/before2012_a_gap.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>2012年前（2001—2011），A模型：四大减非四大的好消息响应增量差</figcaption>
 </figure>
 </div>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="figures/market_information/unmatched_baseline/after2012_d_gap.png" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption>2012年起D模型：四大减非四大的直接增量差</figcaption>
+<p><img src="figures/market_information/unmatched_baseline/after2012_a_gap.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>2012年起（2012—2024），A模型：四大减非四大的好消息响应增量差</figcaption>
 </figure>
 </div>
+<details>
+<summary>
+展开A模型：两时期四大和非四大各自的响应
+</summary>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/market_information/unmatched_baseline/before2012_a_groups.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>2012年前，A模型：两组好消息相对自身中性消息的路径</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/market_information/unmatched_baseline/after2012_a_groups.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>2012年起，A模型：两组好消息相对自身中性消息的路径</figcaption>
+</figure>
+</div>
+</details>
+</section>
+<section id="body-four-fe-b" class="level5">
+<h5 class="anchored" data-anchor-id="body-four-fe-b">B｜审计组×事件时间FE＋共同交易日FE</h5>
+<p><span class="math display">\[
+\begin{aligned}
+\ln P_{e\tau}&amp;=\alpha_e+\lambda_{B_e,\tau}+\mu_{d(e,\tau)}\\
+&amp;\quad+\sum_{k\in K}\left[\beta^{B}_{0k}(1-B_e)+\beta^{B}_{1k}B_e\right]G_e\,1(\tau=k)+\varepsilon^{B}_{e\tau}.
+\end{aligned}
+\]</span></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/market_information/unmatched_baseline/before2012_b_gap.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>2012年前（2001—2011），B模型：四大减非四大的好消息响应增量差</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/market_information/unmatched_baseline/after2012_b_gap.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>2012年起（2012—2024），B模型：四大减非四大的好消息响应增量差</figcaption>
+</figure>
+</div>
+<details>
+<summary>
+展开B模型：两时期四大和非四大各自的响应
+</summary>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/market_information/unmatched_baseline/before2012_b_groups.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>2012年前，B模型：两组好消息相对自身中性消息的路径</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/market_information/unmatched_baseline/after2012_b_groups.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>2012年起，B模型：两组好消息相对自身中性消息的路径</figcaption>
+</figure>
+</div>
+</details>
+</section>
+<section id="body-four-fe-c" class="level5">
+<h5 class="anchored" data-anchor-id="body-four-fe-c">C｜共同事件时间FE＋审计组×交易日FE</h5>
+<p><span class="math display">\[
+\begin{aligned}
+\ln P_{e\tau}&amp;=\alpha_e+\lambda_{\tau}+\mu_{B_e,d(e,\tau)}\\
+&amp;\quad+\sum_{k\in K}\left[\beta^{C}_{0k}(1-B_e)+\beta^{C}_{1k}B_e\right]G_e\,1(\tau=k)+\varepsilon^{C}_{e\tau}.
+\end{aligned}
+\]</span></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/market_information/unmatched_baseline/before2012_c_gap.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>2012年前（2001—2011），C模型：四大减非四大的好消息响应增量差</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/market_information/unmatched_baseline/after2012_c_gap.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>2012年起（2012—2024），C模型：四大减非四大的好消息响应增量差</figcaption>
+</figure>
+</div>
+<details>
+<summary>
+展开C模型：两时期四大和非四大各自的响应
+</summary>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/market_information/unmatched_baseline/before2012_c_groups.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>2012年前，C模型：两组好消息相对自身中性消息的路径</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/market_information/unmatched_baseline/after2012_c_groups.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>2012年起，C模型：两组好消息相对自身中性消息的路径</figcaption>
+</figure>
+</div>
+</details>
+</section>
+<section id="body-four-fe-d" class="level5">
+<h5 class="anchored" data-anchor-id="body-four-fe-d">D｜审计组×事件时间FE＋审计组×交易日FE</h5>
+<p><span class="math display">\[
+\begin{aligned}
+\ln P_{e\tau}&amp;=\alpha_e+\lambda_{B_e,\tau}+\mu_{B_e,d(e,\tau)}\\
+&amp;\quad+\sum_{k\in K}\left[\beta^{D}_{0k}(1-B_e)+\beta^{D}_{1k}B_e\right]G_e\,1(\tau=k)+\varepsilon^{D}_{e\tau}.
+\end{aligned}
+\]</span></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/market_information/unmatched_baseline/before2012_d_gap.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>2012年前（2001—2011），D模型：四大减非四大的好消息响应增量差</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/market_information/unmatched_baseline/after2012_d_gap.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>2012年起（2012—2024），D模型：四大减非四大的好消息响应增量差</figcaption>
+</figure>
+</div>
+<details>
+<summary>
+展开D模型：两时期四大和非四大各自的响应
+</summary>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/market_information/unmatched_baseline/before2012_d_groups.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>2012年前，D模型：两组好消息相对自身中性消息的路径</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/market_information/unmatched_baseline/after2012_d_groups.png" class="img-fluid figure-img" style="width:100.0%" loading="lazy"></p>
+<figcaption>2012年起，D模型：两组好消息相对自身中性消息的路径</figcaption>
+</figure>
+</div>
+</details>
 <p><strong>与后续筛选结果的关系。</strong> 本节是完整合格、未匹配样本的基准对照。后面的<a href="#market-ever-big4-three">早上市曾四大公司池UE结果</a>、<a href="#market-ever-big4-three-es">ES分类对照</a>和<a href="#market-erc-company-matching">旧公司匹配ERC</a>改变了人群或历史输入版本，不能替代本节对模型敏感性的判断。尤其是公司池、消息定义、预测版本、重组处理及固定效应同时变化时，不能把结果差异全部归因于matching或某一个交互项。当前证据尚未稳定分离四大身份、客户构成与信息环境的作用。</p>
+</section>
+</section>
 </section>
 <section id="market-ever-big4-three" class="level3">
 <h3 class="anchored" data-anchor-id="market-ever-big4-three">早上市、曾用四大公司池：好消息奖励与坏消息惩罚</h3>
