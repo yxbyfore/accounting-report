@@ -1,0 +1,41 @@
+\documentclass[10pt]{article}
+\usepackage[paperwidth=26cm,paperheight=24cm,margin=1cm]{geometry}
+\usepackage{fontspec,booktabs,array}
+\setmainfont{Palatino Linotype}
+\newcommand{\sym}[1]{\textsuperscript{#1}}
+\pagestyle{empty}\begin{document}
+\noindent\textbf{Unmatched ERC: 2012--2024}\par\medskip
+\setlength{\tabcolsep}{4pt}\renewcommand{\arraystretch}{1.12}
+\noindent\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lcccccc@{}}\toprule
+ & \multicolumn{3}{c}{Control main effects only} & \multicolumn{3}{c}{Add controls \(\times UE\)} \\
+\cmidrule(lr){2-4}\cmidrule(lr){5-7}
+ & (1) & (2) & (3) & (4) & (5) & (6) \\
+CAR window & [-1,+1] & [-2,+2] & [-3,+3] & [-1,+1] & [-2,+2] & [-3,+3] \\\midrule
+\(UE\) & 0.038\sym{} & 0.054\sym{} & 0.065\sym{} & 0.089\sym{***} & 0.120\sym{***} & 0.139\sym{***} \\
+ & (0.028) & (0.034) & (0.043) & (0.025) & (0.030) & (0.037) \\
+\(UE\times Big4\) & 0.098\sym{**} & 0.150\sym{**} & 0.130\sym{**} & 0.011\sym{} & 0.060\sym{} & 0.039\sym{} \\
+ & (0.050) & (0.061) & (0.064) & (0.054) & (0.069) & (0.071) \\
+\(Big4\) & -0.001\sym{} & -0.000\sym{} & 0.001\sym{} & -0.001\sym{} & -0.000\sym{} & 0.001\sym{} \\
+ & (0.003) & (0.004) & (0.004) & (0.003) & (0.004) & (0.004) \\
+\(\ln MV^c\) & -0.006939\sym{***} & -0.011063\sym{***} & -0.015405\sym{***} & -0.007013\sym{***} & -0.011234\sym{***} & -0.015709\sym{***} \\
+ & (0.001136) & (0.001389) & (0.001578) & (0.001144) & (0.001406) & (0.001586) \\
+\(MB^c\) & 0.000043\sym{***} & 0.000080\sym{***} & 0.000106\sym{***} & 0.000102\sym{} & 0.000184\sym{**} & 0.000272\sym{***} \\
+ & (0.000010) & (0.000018) & (0.000022) & (0.000069) & (0.000084) & (0.000099) \\
+\((1/N)^c\) & -0.006010\sym{***} & -0.009470\sym{***} & -0.011396\sym{***} & -0.006556\sym{***} & -0.010234\sym{***} & -0.011953\sym{***} \\
+ & (0.001581) & (0.001863) & (0.002101) & (0.001580) & (0.001866) & (0.002104) \\
+\(UE\times\ln MV^c\) & --- & --- & --- & 0.067\sym{***} & 0.065\sym{**} & 0.074\sym{**} \\
+ &  &  &  & (0.024) & (0.029) & (0.036) \\
+\(UE\times MB^c\) & --- & --- & --- & 0.006\sym{} & 0.011\sym{} & 0.017\sym{*} \\
+ &  &  &  & (0.007) & (0.008) & (0.010) \\
+\(UE\times(1/N)^c\) & --- & --- & --- & -0.119\sym{**} & -0.175\sym{**} & -0.124\sym{} \\
+ &  &  &  & (0.054) & (0.071) & (0.078) \\
+\midrule
+Equal ERC: p-value & 0.048969 & 0.013827 & 0.042158 & 0.832269 & 0.382508 & 0.582199 \\
+Observations & 23249 & 23249 & 23249 & 23249 & 23249 & 23249 \\
+Companies / clusters & 3957 & 3957 & 3957 & 3957 & 3957 & 3957 \\
+Big4 announcements & 2540 & 2540 & 2540 & 2540 & 2540 & 2540 \\
+Company FE & Yes & Yes & Yes & Yes & Yes & Yes \\
+Fiscal-year FE & Yes & Yes & Yes & Yes & Yes & Yes \\
+Company-clustered SE & Yes & Yes & Yes & Yes & Yes & Yes \\
+\bottomrule\end{tabular*}\par\medskip
+\noindent\footnotesize Each column is one regression. All six columns use the same sample within the period. Parentheses contain company-clustered standard errors. \(MV\) is market capitalization, \(MB\) is market-to-book, and \(N\) is strict-180-day analyst coverage; superscript \(c\) denotes mean centering. Control main effects use six decimals to show small coefficients; other coefficients use three. Equal ERC tests \(H_0:\beta=\beta+\theta\), equivalently \(\theta=0\), where \(\beta=b_{UE}\) and \(\theta=b_{UE\times Big4}\). Its p-value is the frozen two-sided test of the interaction coefficient. It does not compare the two specifications. Strict pre-announcement forecasts; original EPS restoration and tails; no matching, size cutoff, ever-Big4 restriction, restructuring exclusion, or winsorization. Stars use unrounded p-values: *** p<0.01, ** p<0.05, * p<0.10. Frozen estimates: November 3, 2026.\end{document}

@@ -1,0 +1,42 @@
+\documentclass[10pt]{article}
+\usepackage[paperwidth=21cm,paperheight=38cm,margin=1cm]{geometry}
+\usepackage{fontspec,booktabs,array}
+\setmainfont{Palatino Linotype}
+\newcommand{\sym}[1]{\textsuperscript{#1}}
+\pagestyle{empty}
+\begin{document}\fontsize{10}{12}\selectfont\setlength{\parindent}{0pt}
+\noindent\textbf{Audit Fee Premium: Breaks in 2008 and 2012}\par\medskip
+\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.15}
+\noindent\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lcc@{}}
+\toprule
+ & (1) & (2) \\
+Dependent variable & \multicolumn{2}{c}{\(\ln(1+\mathrm{Domestic\ audit\ fee})\)} \\
+Break specification & 2012 only & 2008 and 2012 \\
+\midrule
+Big4 & 0.667\sym{***} & 0.906\sym{***} \\
+ & (0.053) & (0.122) \\
+\(\mathrm{Big4}\times(t-2012)\) & 0.057\sym{***} & 0.087\sym{***} \\
+ & (0.008) & (0.015) \\
+\(\mathrm{Big4}\times\mathrm{Post}_{2008}\) & --- & 0.001\sym{} \\
+ &  & (0.055) \\
+\(\mathrm{Big4}\times(t-2008)\times\mathrm{Post}_{2008}\) & --- & -0.101\sym{***} \\
+ &  & (0.025) \\
+\(\mathrm{Big4}\times\mathrm{Post}_{2012}\) & -0.189\sym{***} & -0.024\sym{} \\
+ & (0.037) & (0.035) \\
+\(\mathrm{Big4}\times(t-2012)\times\mathrm{Post}_{2012}\) & -0.081\sym{***} & -0.010\sym{} \\
+ & (0.009) & (0.017) \\
+\addlinespace
+Firm fixed effects & Yes & Yes \\
+Year fixed effects & Yes & Yes \\
+Size, leverage, loss, ROA & Yes & Yes \\
+Original missing indicators & Yes & Yes \\
+Observations & 62,764 & 62,764 \\
+Firms / firm clusters & 5,559 & 5,559 \\
+Within \(R^2\) & 0.2849 & 0.2854 \\
+\midrule
+2012 level + slope joint test: \(p\) & \(<0.0001\) & 0.7728 \\
+2008 level + slope joint test: \(p\) & --- & 0.0001 \\
+\bottomrule
+\end{tabular*}
+\par\medskip\fontsize{9}{11}\selectfont\textit{Notes:} Fiscal years 2000--2024; domestic audit fees in CNY. Each column is one regression with firm and year fixed effects. Firm-clustered standard errors are in parentheses. Post indicators include the named year. Four controls and their original missing indicators are supplied; the four indicators coincide, so one is retained and three are omitted for collinearity. In column (2), the Big4 main term is the pre-2008 trend extrapolated to 2012, not the total premium in 2012. Joint tests are firm-clustered Wald tests of the level and slope changes. * \(p<0.10\), ** \(p<0.05\), *** \(p<0.01\).
+\end{document}

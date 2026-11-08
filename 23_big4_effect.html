@@ -2625,29 +2625,30 @@ CAR^w_{it}=\alpha_i+\lambda_t+\delta B_{it}+\beta U_{it}
 \]</span></p>
 <p>两版均保留Big4×UE、三项控制主项、公司和财年固定效应，按公司聚类；<span class="math inline">\(q=1\)</span>额外允许公司特征影响UE响应斜率。非四大的ERC为<span class="math inline">\(\beta\)</span>，四大为<span class="math inline">\(\beta+\theta\)</span>，直接组差为<span class="math inline">\(\theta\)</span>。表中每列一个回归，括号为标准误，星号按未取整p值。</p>
 <p><strong>全期。</strong> 仅控制主项时，三个窗口的四大ERC增量依次为0.111、0.160、0.129，均达到5%；加入全部控制×UE后为0.049、0.106、0.070，对应p值0.305、0.085、0.271。差异同时表现为点估计下降和精度变化，不能全部归于自由度增加；也不能把中间窗口的10%证据概括为所有窗口显著。</p>
+<p><span class="math inline">\(UE\)</span>的系数<span class="math inline">\(\beta\)</span>是非四大的ERC，<span class="math inline">\(UE\times Big4\)</span>的系数<span class="math inline">\(\theta\)</span>是四大额外ERC；四大总斜率为<span class="math inline">\(\beta+\theta\)</span>。表中的“两组ERC相等”检验为<span class="math inline">\(H_0:\beta=\beta+\theta\)</span>，等价于<span class="math inline">\(H_0:\theta=0\)</span>，p值沿用交互项的冻结检验。该行比较同一模型中的两组ERC。</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="tables/unmatched_market_baseline/erc_all.png" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption>完整未匹配样本ERC：全期；前三列仅控制主项，后三列加入全部控制×UE</figcaption>
+<p><img src="tables/unmatched_market_baseline/erc_all_variables.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption>全期ERC：前三列仅控制主项，后三列加入控制变量×UE；实际变量系数及两组ERC相等检验</figcaption>
 </figure>
 </div>
-<p><a href="tables/unmatched_market_baseline/erc_all.pdf">PDF</a> · <a href="tables/unmatched_market_baseline/erc_all.tex">TeX</a></p>
+<p><a href="tables/unmatched_market_baseline/erc_all_variables.pdf">PDF</a> · <a href="tables/unmatched_market_baseline/erc_all_variables.tex">TeX</a></p>
 <p><strong>2012年前。</strong> 三个窗口在仅主项和全交互版均未达到10%；全交互点估计转为负。这一时期的连续ERC没有复现下面部分离散好消息短窗模型中的早期正向差异，两种消息定义与估计对象分别解释。</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="tables/unmatched_market_baseline/erc_before2012.png" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption>完整未匹配样本ERC：2001—2011财年</figcaption>
+<p><img src="tables/unmatched_market_baseline/erc_before2012_variables.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption>2012年前ERC：实际变量系数及两组ERC相等检验</figcaption>
 </figure>
 </div>
-<p><a href="tables/unmatched_market_baseline/erc_before2012.pdf">PDF</a> · <a href="tables/unmatched_market_baseline/erc_before2012.tex">TeX</a></p>
+<p><a href="tables/unmatched_market_baseline/erc_before2012_variables.pdf">PDF</a> · <a href="tables/unmatched_market_baseline/erc_before2012_variables.tex">TeX</a></p>
 <p><strong>2012年起。</strong> 仅主项版三窗四大增量均达到5%；加入控制×UE后均未达到10%。上述分期不是四大增量前后变化的正式差值检验。</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><img src="tables/unmatched_market_baseline/erc_after2012.png" class="img-fluid figure-img" style="width:100.0%"></p>
-<figcaption>完整未匹配样本ERC：2012—2024财年</figcaption>
+<p><img src="tables/unmatched_market_baseline/erc_after2012_variables.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption>2012年起ERC：实际变量系数及两组ERC相等检验</figcaption>
 </figure>
 </div>
-<p><a href="tables/unmatched_market_baseline/erc_after2012.pdf">PDF</a> · <a href="tables/unmatched_market_baseline/erc_after2012.tex">TeX</a></p>
+<p><a href="tables/unmatched_market_baseline/erc_after2012_variables.pdf">PDF</a> · <a href="tables/unmatched_market_baseline/erc_after2012_variables.tex">TeX</a></p>
 <p><strong>短窗：允许不同审计组有不同基准事件路径。</strong> 令<span class="math inline">\(G_e=1(ES_e&gt;0.10)\)</span>，其中<span class="math inline">\(ES=(EPS-F)/|F|\)</span>；中性消息为<span class="math inline">\([-0.10,0.10]\)</span>，本检验排除<span class="math inline">\(ES&lt;-0.10\)</span>。对事件<span class="math inline">\(e\)</span>、相对交易日<span class="math inline">\(\tau\)</span>及真实交易日期<span class="math inline">\(d\)</span>，在<span class="math inline">\([-5,+5]\)</span>窗、<span class="math inline">\(-1\)</span>基期估计：</p>
 <p><span class="math display">\[
 \ln P_{e\tau}=\alpha_e+T_m(B_e,\tau,d)

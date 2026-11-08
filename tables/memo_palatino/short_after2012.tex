@@ -1,0 +1,33 @@
+\documentclass[10pt]{article}
+\usepackage[paperwidth=24cm,paperheight=21cm,margin=1cm]{geometry}
+\usepackage{fontspec,booktabs,array}
+\setmainfont{Palatino Linotype}
+\newcommand{\sym}[1]{\textsuperscript{#1}}\pagestyle{empty}\begin{document}
+\noindent\textbf{Unmatched short-window response: 2012--2024}\par\medskip
+\setlength{\tabcolsep}{3pt}\renewcommand{\arraystretch}{1.1}
+\noindent\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}lcccc@{}}\toprule
+ & (1) & (2) & (3) & (4) \\
+Time FE model & A & B & C & D \\\midrule
+Non-Big4: day 0 & 0.194\sym{***} & 0.207\sym{***} & 0.193\sym{***} & 0.206\sym{***} \\
+ & (0.072) & (0.074) & (0.072) & (0.074) \\
+Big4: day 0 & 0.278\sym{**} & 0.186\sym{} & 0.231\sym{*} & 0.131\sym{} \\
+ & (0.134) & (0.159) & (0.134) & (0.156) \\
+Big4 minus Non-Big4: day 0 & 0.083\sym{} & -0.021\sym{} & 0.038\sym{} & -0.074\sym{} \\
+ & (0.144) & (0.175) & (0.145) & (0.173) \\
+Big4 minus Non-Big4: day +1 & 0.033\sym{} & -0.096\sym{} & -0.001\sym{} & -0.156\sym{} \\
+ & (0.194) & (0.230) & (0.199) & (0.228) \\
+Big4 minus Non-Big4: day +2 & 0.067\sym{} & -0.008\sym{} & 0.027\sym{} & -0.152\sym{} \\
+ & (0.230) & (0.271) & (0.239) & (0.266) \\
+Big4 minus Non-Big4: day +5 & -0.029\sym{} & -0.132\sym{} & -0.094\sym{} & -0.307\sym{} \\
+ & (0.283) & (0.337) & (0.321) & (0.332) \\
+Group-gap joint p: days -5 to -2 & 0.541 & 0.973 & 0.793 & 0.955 \\
+Group-gap joint p: days 0 to +5 & 0.947 & 0.956 & 0.751 & 0.950 \\
+Daily observations & 174046 & 174046 & 174046 & 174046 \\
+Announcements / clusters & 15830 & 15830 & 15830 & 15830 \\
+Companies & 4108 & 4108 & 4108 & 4108 \\
+Announcement FE & Yes & Yes & Yes & Yes \\
+Group-specific event-day FE & No & Yes & No & Yes \\
+Group-specific calendar-date FE & No & No & Yes & Yes \\
+Financial / continuous ES controls & No & No & No & No \\
+\bottomrule\end{tabular*}\par\medskip
+\noindent\footnotesize Coefficients and announcement-clustered standard errors are multiplied by 100. Outcome: log price, relative to day -1; not CAR[-1,0]. Good: ES > 10\%; neutral: -10\% to +10\%; ES < -10\% excluded. Models use identical daily observations within each period. No matching, ever-Big4 pool restriction, restructuring exclusion, or winsorization. Stars: *** p<0.01, ** p<0.05, * p<0.10; based on unrounded p-values. Frozen estimates from November 3, 2026.\end{document}
