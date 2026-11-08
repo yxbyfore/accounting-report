@@ -312,8 +312,8 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="sec-akm-three-way">总体框架：客户、事务所与审计师</h2>
 <p>先保留三维AKM作为整体参照，将客户公司（firm）、审计事务所（audit firm）与签字审计师（auditor）的稳定成分放在同一模型中：</p>
 <p><span class="math display">\[
-Y_{it}=\alpha_i+\psi_{J_{it}}+\theta_{A_{it}}
-+\phi_t+X_{it}'\gamma+\varepsilon_{it}.
+Y_{it}=\mathrm{FirmFE}_i+\mathrm{AuditFirmFE}_{J_{it}}+\text{Signing auditor FE}
++\text{Year FE}+X_{it}'\gamma+\varepsilon_{it}.
 \]</span></p>
 <p><span class="math inline">\(i\)</span>是客户公司，<span class="math inline">\(J_{it}\)</span>是事务所，<span class="math inline">\(A_{it}\)</span>是稳定身份A1审计师。原有33资格三维基准中，未预警综合失败的客户、事务所和审计师插件方差份额分别为31.4%、2.9%、15.0%。这些是样本内估计成分的方差份额，不能据此比较三者的因果重要性。</p>
 <div class="quarto-figure quarto-figure-center">
@@ -422,13 +422,13 @@ Y_{it}=\alpha_i+\psi_{J_{it}}+\theta_{A_{it}}
 <h2 class="anchored" data-anchor-id="sec-akm-exogeneity">1. AKM怎样容纳sorting？</h2>
 <p><span class="citation" data-cites="akm1999">Abowd 等 (<a href="#ref-akm1999" role="doc-biblioref">1999</a>)</span> 的加性框架在本项目中写为</p>
 <p><span id="eq-client-auditfirm-akm"><span class="math display">\[
-Y_{it}=X_{it}'\beta+\alpha_i+\psi_{J_{it}}+\phi_t+\varepsilon_{it}.
+Y_{it}=X_{it}'\beta+\mathrm{FirmFE}_i+\mathrm{AuditFirmFE}_{J_{it}}+\text{Year FE}+\varepsilon_{it}.
 \tag{1}\]</span></span></p>
-<p><span class="math inline">\(i\)</span>是上市公司客户，<span class="math inline">\(J_{it}\)</span>是当前真实事务所ID，<span class="math inline">\(\alpha_i\)</span>为客户持久失败成分，<span class="math inline">\(\psi_j\)</span>为事务所稳定失败成分，<span class="math inline">\(\phi_t\)</span>为年份效应。两个成分均按“失败”方向解释：数值较高表示模型中的失败成分较高，不直接称作审计质量排名。</p>
-<p>模型允许<span class="math inline">\(\operatorname{Cov}(\alpha_i,\psi_{J_{it}})\ne0\)</span>，因此长期风险较低的客户更常进入某些事务所，属于AKM可以描述的sorting。识别要求的另一件事是：控制这些稳定成分及协变量后，剩余冲击与完整配置路径正交。令<span class="math inline">\(\mathcal F_i=(J_{i1},\ldots,J_{iT_i})\)</span>，则</p>
+<p><span class="math inline">\(i\)</span>是上市公司客户，<span class="math inline">\(J_{it}\)</span>是当前真实事务所ID，<span class="math inline">\(\mathrm{FirmFE}_i\)</span>为客户持久失败成分，<span class="math inline">\(\mathrm{AuditFirmFE}_j\)</span>为事务所稳定失败成分，<span class="math inline">\(\text{Year FE}\)</span>为年份效应。两个成分均按“失败”方向解释：数值较高表示模型中的失败成分较高，不直接称作审计质量排名。</p>
+<p>模型允许<span class="math inline">\(\operatorname{Cov}(\mathrm{FirmFE}_i,\mathrm{AuditFirmFE}_{J_{it}})\ne0\)</span>，因此长期风险较低的客户更常进入某些事务所，属于AKM可以描述的sorting。识别要求的另一件事是：控制这些稳定成分及协变量后，剩余冲击与完整配置路径正交。令<span class="math inline">\(\mathcal F_i=(J_{i1},\ldots,J_{iT_i})\)</span>，则</p>
 <p><span id="eq-akm-strict-exogeneity"><span class="math display">\[
-\operatorname E[\varepsilon_{it}\mid\alpha_i,\boldsymbol\psi,
-\boldsymbol\phi,\mathbf X_i,\mathcal F_i]=0,\qquad\forall t.
+\operatorname E[\varepsilon_{it}\mid\mathrm{FirmFE}_i,\boldsymbol{\mathrm{AuditFirmFE}},
+\boldsymbol{YearFE},\mathbf X_i,\mathcal F_i]=0,\qquad\forall t.
 \tag{2}\]</span></span></p>
 <p>如果尚未吸收的风险冲击影响之后换所，<span class="math inline">\(\varepsilon_{it}\)</span>与未来配置便可能相关。<strong>永久类型sorting、固定效应估计噪声、误差跨期相关、剩余风险影响未来配置，是四个不同对象。</strong> 下文分别检查，不以某一项检验代替其他条件。</p>
 <section id="sec-akm-current-specification" class="level3">
@@ -504,10 +504,10 @@ Y_{it}=X_{it}'\beta+\alpha_i+\psi_{J_{it}}+\phi_t+\varepsilon_{it}.
 <h3 class="anchored" data-anchor-id="sec-akm-exploratory-sorting">为什么四大客户较低风险，可以与总体负相关同时出现？</h3>
 <p>我又做了一些分析，我发现，<strong>事务所梯队之间与梯队内部的配置方向不同</strong>。按当年四大、本土八大和Other，对同一次pooled AKM的两个估计FE分解：</p>
 <p><span id="eq-akm-within-between"><span class="math display">\[
-\operatorname{Cov}(\widehat\alpha,\widehat\psi)
-=\underbrace{\sum_g p_g\operatorname{Cov}(\widehat\alpha,\widehat\psi\mid G=g)}_{\text{梯队内}}
-+\underbrace{\operatorname{Cov}\!\left(\operatorname E[\widehat\alpha\mid G],
-\operatorname E[\widehat\psi\mid G]\right)}_{\text{梯队间}}.
+\operatorname{Cov}(\widehat{\mathrm{FirmFE}},\widehat{\mathrm{AuditFirmFE}})
+=\underbrace{\sum_g p_g\operatorname{Cov}(\widehat{\mathrm{FirmFE}},\widehat{\mathrm{AuditFirmFE}}\mid G=g)}_{\text{梯队内}}
++\underbrace{\operatorname{Cov}\!\left(\operatorname E[\widehat{\mathrm{FirmFE}}\mid G],
+\operatorname E[\widehat{\mathrm{AuditFirmFE}}\mid G]\right)}_{\text{梯队间}}.
 \tag{3}\]</span></span></p>
 <p>三个失败指标在三套样本中均为正组间、负组内。正组间项表示较低的平均客户失败成分与较低的平均事务所失败成分在梯队之间相配；梯队内部的负项更大，使总体插件协方差为负。相关系数本身不能按这个公式相加。</p>
 </section>
@@ -544,31 +544,31 @@ Y=Z\beta+\varepsilon,\qquad
 <h3 class="anchored" data-anchor-id="limited-mobility为什么fe方差容易偏大sorting容易偏负">limited mobility：为什么FE方差容易偏大、sorting容易偏负？</h3>
 <p>假设两家事务所A、B之间只有<span class="math inline">\(m\)</span>个客户从A换到B。省略已控制的协变量后，差分消去客户FE：</p>
 <p><span class="math display">\[
-\Delta Y_i=(\psi_B-\psi_A)+\Delta\varepsilon_i,
+\Delta Y_i=(\mathrm{AuditFirmFE}_B-\mathrm{AuditFirmFE}_A)+\Delta\varepsilon_i,
 \]</span></p>
 <p><span class="math display">\[
-\widehat{\psi_B-\psi_A}
-=(\psi_B-\psi_A)+\frac1m\sum_{i=1}^{m}\Delta\varepsilon_i.
+\widehat{\mathrm{AuditFirmFE}_B-\mathrm{AuditFirmFE}_A}
+=(\mathrm{AuditFirmFE}_B-\mathrm{AuditFirmFE}_A)+\frac1m\sum_{i=1}^{m}\Delta\varepsilon_i.
 \]</span></p>
 <p>若这些换所客户的差分冲击相互独立、方差均为<span class="math inline">\(v\)</span>，则</p>
 <p><span class="math display">\[
-\operatorname{Var}\!\left(\widehat{\psi_B-\psi_A}\right)=\frac vm.
+\operatorname{Var}\!\left(\widehat{\mathrm{AuditFirmFE}_B-\mathrm{AuditFirmFE}_A}\right)=\frac vm.
 \]</span></p>
 <p><strong>跨所连接越少，相对FE越依赖少数客户的偶然结果。</strong> 即使两所各有很多不换所客户，也未必能弥补缺少跨所连接的问题。limited mobility本身不要求FE系数有方向性的偏误；它首先增加估计噪声，噪声再进入方差和协方差。</p>
-<p>写作<span class="math inline">\(\widehat\alpha=\alpha+e_\alpha\)</span>、<span class="math inline">\(\widehat\psi=\psi+e_\psi\)</span>，其中<span class="math inline">\(e_\alpha,e_\psi\)</span>为映射到公司年记录上的FE估计误差。在给定网络、估计误差条件均值为0时，以公司年权重计算的插件矩满足</p>
+<p>写作<span class="math inline">\(\widehat{\mathrm{FirmFE}}=\mathrm{FirmFE}+e_{\mathrm{FirmFE}}\)</span>、<span class="math inline">\(\widehat{\mathrm{AuditFirmFE}}=\mathrm{AuditFirmFE}+e_{\mathrm{AuditFirmFE}}\)</span>，其中<span class="math inline">\(e_{\mathrm{FirmFE}},e_{\mathrm{AuditFirmFE}}\)</span>为映射到公司年记录上的FE估计误差。在给定网络、估计误差条件均值为0时，以公司年权重计算的插件矩满足</p>
 <p><span class="math display">\[
-\mathrm E[\widehat V_\psi\mid Z]
-=V_\psi+\mathrm E[V(e_\psi)\mid Z]\geq V_\psi,
+\mathrm E[\widehat V_{\mathrm{AuditFirmFE}}\mid Z]
+=V_{\mathrm{AuditFirmFE}}+\mathrm E[V(e_{\mathrm{AuditFirmFE}})\mid Z]\geq V_{\mathrm{AuditFirmFE}},
 \]</span></p>
 <p><span class="math display">\[
-\mathrm E[\widehat C_{\alpha,\psi}\mid Z]
-=C_{\alpha,\psi}+\mathrm E[C(e_\alpha,e_\psi)\mid Z].
+\mathrm E[\widehat C_{\mathrm{FirmFE},\mathrm{AuditFirmFE}}\mid Z]
+=C_{\mathrm{FirmFE},\mathrm{AuditFirmFE}}+\mathrm E[C(e_{\mathrm{FirmFE}},e_{\mathrm{AuditFirmFE}})\mid Z].
 \]</span></p>
 <p>客户FE方差也有相同的向上噪声项。协方差方向则取决于两端估计误差怎样共同变化：同一条结果拆给客户与事务所时，事务所成分偶然估高，客户成分便可能估低，以维持拟合。在最简单的误差分配例子中，</p>
 <p><span class="math display">\[
-e_\alpha=-e_\psi
+e_{\mathrm{FirmFE}}=-e_{\mathrm{AuditFirmFE}}
 \quad\Longrightarrow\quad
-C(e_\alpha,e_\psi)=-V(e_\psi)&lt;0.
+C(e_{\mathrm{FirmFE}},e_{\mathrm{AuditFirmFE}})=-V(e_{\mathrm{AuditFirmFE}})&lt;0.
 \]</span></p>
 <p>这说明limited mobility bias为何可能压低正sorting，甚至产生负sorting。上述等式是直观例子；实际网络包含控制变量与不同连接结构，特别是组内、组间分项，必须分别计算噪声偏误，不能预设每一项都向下偏。</p>
 </section>
@@ -579,7 +579,7 @@ C(e_\alpha,e_\psi)=-V(e_\psi)&lt;0.
 \mathrm E[\widehat\theta_{\mathrm{PI}}\mid Z]-\theta
 =\operatorname{tr}\!\left(A\operatorname{Var}(\widehat\beta\mid Z)\right).
 \]</span></p>
-<p><span class="citation" data-cites="kss2020">Kline 等 (<a href="#ref-kss2020" role="doc-biblioref">2020</a>)</span> 的leave-out方法估计并扣除这一噪声项。令<span class="math inline">\(L=(Z'Z)^{-1}Z'\)</span>、<span class="math inline">\(B=L'AL\)</span>，逐观测纠偏为</p>
+<p><span class="citation" data-cites="kss2020">Kline 等 (<a href="#ref-kss2020" role="doc-biblioref">2020</a>)</span> 的leave-out方法估计并扣除这一噪声项。令<span class="math inline">\(L=(Z'Z)^{-1}Z'\)</span>、<span class="math inline">\(Big4=L'AL\)</span>，逐观测纠偏为</p>
 <p><span class="math display">\[
 \widehat\theta_{\mathrm{KSS}}
 =\widehat\theta_{\mathrm{PI}}-\sum_k B_{kk}\widehat\sigma_k^2,
@@ -720,10 +720,10 @@ C(e_\alpha,e_\psi)=-V(e_\psi)&lt;0.
 <section id="sec-akm-selection-bias" class="level3">
 <h3 class="anchored" data-anchor-id="sec-akm-selection-bias">短期风险选择为什么可能低估组间正向sorting？</h3>
 <p><strong>若高风险冲击促使客户退出四大、低风险冲击使客户更容易进入四大，且这些冲击随后向正常水平回归，两种流动都会把四大降低失败率的优势估得偏小；在客户FE组间差距给定时，也会压低组间正向sorting。</strong> 上表中的MAO与次年退出正相关、与次年进入负相关，为风险相关的配置提供了证据。下面明确推导偏误方向所需的额外条件：选择反映的是尚未被控制变量及客户FE吸收的短期风险，而且它在换所后部分消退。</p>
-<p><strong>第一步：用两期、两类事务所说明风险如何进入换所估计。</strong> 令<span class="math inline">\(B_{it}=\mathbf1\{\text{使用四大}\}\)</span>，将已控制的年份和可观察特征省略，写为</p>
+<p><strong>第一步：用两期、两类事务所说明风险如何进入换所估计。</strong> 令<span class="math inline">\(Big4_{it}=\mathbf1\{\text{使用四大}\}\)</span>，将已控制的年份和可观察特征省略，写为</p>
 <p><span id="eq-akm-selection-level"><span class="math display">\[
-Y_{it}=\alpha_i+\delta B_{it}+\varepsilon_{it},\qquad
-\delta=\psi_{\mathrm{Big4}}-\psi_{\mathrm{NonBig4}}&lt;0.
+Y_{it}=\mathrm{FirmFE}_i+\delta Big4_{it}+\varepsilon_{it},\qquad
+\delta=\mathrm{AuditFirmFE}_{\mathrm{Big4}}-\mathrm{AuditFirmFE}_{\mathrm{NonBig4}}&lt;0.
 \tag{4}\]</span></span></p>
 <p><span class="math inline">\(Y\)</span>按失败方向定义，故<span class="math inline">\(\delta&lt;0\)</span>表示四大降低失败概率。这里是对条件失败概率的线性表示；下文的<span class="math inline">\(\pm s\)</span>表示换所者在换所前的平均剩余风险冲击，并非每个二元结果都等于某个固定数。设</p>
 <p><span id="eq-akm-selection-persistence"><span class="math display">\[
@@ -733,7 +733,7 @@ Y_{it}=\alpha_i+\delta B_{it}+\varepsilon_{it},\qquad
 \tag{5}\]</span></span></p>
 <p>其中<span class="math inline">\(D_i\)</span>表示进入或退出方向。<span class="math inline">\(\rho\)</span>是短期冲击下一年保留的比例；最后一个条件要求两类换所者没有额外、方向不同的新冲击。两期差分消去客户长期成分：</p>
 <p><span class="math display">\[
-\Delta Y_i=\delta\Delta B_i+\Delta\varepsilon_i.
+\Delta Y_i=\delta\Delta Big4_i+\Delta\varepsilon_i.
 \]</span></p>
 <table class="caption-top table">
 <colgroup>
@@ -792,23 +792,23 @@ Y_{it}=\alpha_i+\delta B_{it}+\varepsilon_{it},\qquad
 <p>进入四大本应降低失败概率，但进入前异常低的风险随后回升，抵消部分改善。两个方向因此产生同向偏误：<span class="math inline">\(\delta\)</span>向上偏，四大的失败率优势被估得偏小。只有当风险回归超过服务变化时，才会出现“退出后失败下降”或“进入后失败上升”；得到上述偏误方向并不要求实际变化一定反号。</p>
 <p><strong>第四步：事务所FE差距被压缩，如何传递到组间sorting？</strong> 在四大与非四大的两组例子中，沿用公司年权重，令四大占比为<span class="math inline">\(p\)</span>，客户与事务所成分的组间均值差分别为</p>
 <p><span class="math display">\[
-\Delta\alpha=\mathrm E[\alpha_i\mid B=1]-\mathrm E[\alpha_i\mid B=0],\qquad
-\Delta\psi=\mathrm E[\psi_{J_{it}}\mid B=1]-\mathrm E[\psi_{J_{it}}\mid B=0].
+\Delta\mathrm{FirmFE}=\mathrm E[\mathrm{FirmFE}_i\mid Big4=1]-\mathrm E[\mathrm{FirmFE}_i\mid Big4=0],\qquad
+\Delta\mathrm{AuditFirmFE}=\mathrm E[\mathrm{AuditFirmFE}_{J_{it}}\mid Big4=1]-\mathrm E[\mathrm{AuditFirmFE}_{J_{it}}\mid Big4=0].
 \]</span></p>
 <p>组间协方差为</p>
 <p><span id="eq-akm-selection-between"><span class="math display">\[
-C_{\mathrm{between}}=p(1-p)\Delta\alpha\,\Delta\psi.
+C_{\mathrm{between}}=p(1-p)\Delta\mathrm{FirmFE}\,\Delta\mathrm{AuditFirmFE}.
 \tag{8}\]</span></span></p>
-<p>当四大客户的长期失败成分较低（<span class="math inline">\(\Delta\alpha&lt;0\)</span>），四大的事务所失败成分也较低（<span class="math inline">\(\Delta\psi&lt;0\)</span>）时，两者乘积为正，这就是组间正向sorting。若前述流动选择使事务所差距向上偏<span class="math inline">\(b&gt;0\)</span>，即<span class="math inline">\(\widehat{\Delta\psi}=\Delta\psi+b\)</span>，在客户FE均值差与权重给定时，</p>
+<p>当四大客户的长期失败成分较低（<span class="math inline">\(\Delta\mathrm{FirmFE}&lt;0\)</span>），四大的事务所失败成分也较低（<span class="math inline">\(\Delta\mathrm{AuditFirmFE}&lt;0\)</span>）时，两者乘积为正，这就是组间正向sorting。若前述流动选择使事务所差距向上偏<span class="math inline">\(b&gt;0\)</span>，即<span class="math inline">\(\widehat{\Delta\mathrm{AuditFirmFE}}=\Delta\mathrm{AuditFirmFE}+b\)</span>，在客户FE均值差与权重给定时，</p>
 <p><span id="eq-akm-selection-between-bias"><span class="math display">\[
 \widehat C_{\mathrm{between}}-C_{\mathrm{between}}
-=p(1-p)\Delta\alpha\,b&lt;0.
+=p(1-p)\Delta\mathrm{FirmFE}\,b&lt;0.
 \tag{9}\]</span></span></p>
 <p>因此，<strong>这条机制会使组间正向sorting被低估</strong>：四大服务低长期风险客户的配置仍在，但估计出的事务所优势被短期风险均值回归压小，使两端均值差的乘积偏小。FE绝对水平依赖归一化，这里的方向指四大相对非四大的FE差距。</p>
 <p>上述方向是条件推导。若客户FE差距本身也有估计偏误<span class="math inline">\(a\)</span>，则总变化为</p>
 <p><span class="math display">\[
 \widehat C_{\mathrm{between}}-C_{\mathrm{between}}
-=p(1-p)\bigl(\Delta\alpha\,b+\Delta\psi\,a+ab\bigr),
+=p(1-p)\bigl(\Delta\mathrm{FirmFE}\,b+\Delta\mathrm{AuditFirmFE}\,a+ab\bigr),
 \]</span></p>
 <p>其符号还取决于<span class="math inline">\(a\)</span>。本节实际按四大、本土八大和Other三组分解；两组例子说明四大边界上的一个向下偏误渠道，三组总体的净偏误还需考虑所有组对的均值差和估计权重。上表识别的是风险信号与后续配置的关联；将其解释为此处的向下偏误，还需要确认信号中有未吸收的暂时冲击及换所后的风险回归。KSS校正FE估计噪声，风险相关的内生换所则由下一节的联合模型进一步刻画。</p>
 </section>

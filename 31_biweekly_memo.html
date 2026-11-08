@@ -325,12 +325,12 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="memo-market-baseline">1．观察到的市场反应差异</h2>
 <p>我们使用的full sample中，ERC加入企业特征与UE的交互后，四大额外斜率明显减弱；短窗允许两组各有事件时间基准路径（也就是不同的group * event time FE）后，早期正向组差也缩小。</p>
 <p>盈余惊喜有两种口径，之前我们的event study一直使用的是ES，也就是超预期的幅度。文献中两种都使用，两种衡量的区别在于分母。</p>
-<p><strong>盈利惊喜的两种口径。</strong> 设<span class="math inline">\(EPS_{it}\)</span>为实际每股收益，<span class="math inline">\(F_{it}\)</span>为公告前1—180天内各券商最新预测的中位数，<span class="math inline">\(P_{pre,it}\)</span>为公告前股价：</p>
+<p><strong>盈利惊喜的两种口径。</strong> 设<span class="math inline">\(EPSignal_{it}\)</span>为实际每股收益，<span class="math inline">\(F_{it}\)</span>为公告前1—180天内各券商最新预测的中位数，<span class="math inline">\(P_{pre,it}\)</span>为公告前股价：</p>
 <p><span class="math display">\[
-ES_{it}=\frac{EPS_{it}-F_{it}}{|F_{it}|}
+ESignal_{it}=\frac{EPSignal_{it}-F_{it}}{|F_{it}|}
 \]</span></p>
 <p><span class="math display">\[
-UE_{it}=\frac{EPS_{it}-F_{it}}{P_{pre,it}}.
+UE_{it}=\frac{EPSignal_{it}-F_{it}}{P_{pre,it}}.
 \]</span></p>
 <p>两者使用相同的分子，也就是实际盈利与预期之差。ES以预测盈利的绝对值标准化，表示超预期相对于预测盈利的幅度；UE以公告前股价标准化，表示超预期盈利相对于股价的大小。F=0时ES无法定义，预测接近零时ES容易出现极端值。分组分析中，ES以±10%、UE以±0.001划分坏消息、中性消息和好消息；中性组包含两端边界。两种门槛对应不同的经济尺度，分组成员可能不同。</p>
 <p>样本采用公告前1—180天内发布的预测、每券商只选取最新一次预测，一致预期是满足上述条件预测的中位数，保留已有EPS恢复（恢复到重述或者违规改动前的当时市场看到的eps）。</p>
@@ -339,14 +339,14 @@ UE_{it}=\frac{EPS_{it}-F_{it}}{P_{pre,it}}.
 <p>两版都保留Big4×UE；第二版增加市值、MB、覆盖的UE交互：</p>
 <p><span class="math display">\[
 \begin{aligned}
-CAR^w_{it}={}&amp;\alpha_i+\lambda_t+\delta B_{it}+\beta U_{it}
-+\theta B_{it}U_{it}\\
-&amp;+\gamma'X^c_{it}+q\,\eta'(U_{it}X^c_{it})
+CAR^w_{it}={}&amp;\text{Firm FE}+\text{Fiscal year FE}+\delta Big4_{it}+\beta UE_{it}
++\theta Big4_{it}UE_{it}\\
+&amp;+\gamma'X^c_{it}+q\,\eta'(UE_{it}X^c_{it})
 +\varepsilon_{it},\quad q\in\{0,1\}.
 \end{aligned}
 \]</span></p>
 <p><span class="math display">\[
-U=(EPS-F)/P_{pre}
+UE=(EPS-F)/P_{pre}
 \]</span></p>
 <p><span class="math inline">\(X^c\)</span>为中心化市值对数、MB和1/N。公司、财年FE。具体来说，控制变量包括企业市值的自然对数、市值账面比（Market-to-Book，MB，按股价除以每股净资产计算）以及分析师预测覆盖度的倒数（1/N，其中N为公告前180天内满足筛选条件的预测券商数量，数值越大表示覆盖越少）；三个变量均减去实际回归样本中的各自均值进行中心化，加入控制交互的模型进一步纳入它们与未预期盈余（UE）的交互项，以允许规模、估值和预测覆盖程度不同的企业具有不同的盈利响应斜率。我们关注的变量是<span class="math inline">\(\theta\)</span>，即四大减非四大的ERC斜率差。</p>
 <p><span class="math inline">\(UE\)</span>的系数<span class="math inline">\(\beta\)</span>是非四大的ERC，交互项UE×Big4的系数<span class="math inline">\(\theta\)</span>是四大额外ERC。四大总斜率为：</p>
@@ -388,18 +388,17 @@ H_0:\beta=\beta+\theta\quad\Longleftrightarrow\quad\theta=0
 </section>
 <section id="好消息相对中性消息短窗响应" class="level3">
 <h3 class="anchored" data-anchor-id="好消息相对中性消息短窗响应">1.2 好消息相对中性消息：短窗响应</h3>
-<p>下方先展示A—D模型方程与2012前后路径图，系数对照表收在图后的折叠区。</p>
 <p>好消息指标和盈利惊喜定义为：</p>
 <p><span class="math display">\[
-G=1(ES&gt;10\%)
+GoodNews=1(ES&gt;10\%)
 \]</span></p>
 <p><span class="math display">\[
 ES=(EPS-F)/|F|
 \]</span></p>
 <p>中性为±10%，排除ES&lt;−10%。统一估计：</p>
 <p><span class="math display">\[
-\ln P_{e\tau}=\alpha_e+T_m(B_e,\tau,d)
-+\sum_{k\ne-1}[\beta_{mk}G_e+\theta_{mk}B_eG_e]1(\tau=k)+\varepsilon_{e\tau}.
+\ln P_{e\tau}=\text{Announcement FE}+\underbrace{\text{Event time FE}+\text{Trading date FE}}_{\text{A: common; B: group event time; C: group date; D: both grouped}}
++\sum_{k\ne-1}[\beta_{mk}GoodNews_e+\theta_{mk}Big4_e GoodNews_e]1(\tau=k)+\varepsilon_{e\tau}.
 \]</span></p>
 <p>窗口[−5,+5]、−1基期，报告事件FE及报告聚类；无财务或连续ES controls。A为共同事件日＋共同交易日FE；B将事件日FE按审计组区分；C将交易日FE按组区分；D两者都按组区分。<span class="math inline">\(\theta_{mk}\)</span>直接比较两组各自“好消息减中性消息”的增量，第0日系数是相对价格响应，非CAR[−1,0]。</p>
 <p><strong>早期四大的额外股价响应依赖于怎样设定两组的基准走势。</strong> 2012年前，在要求两组共用中性消息事件路径的A、C模型中，四大对好消息的额外响应分别为0.475和0.408个百分点，均在5%水平显著。允许两组各有自己的基准路径后，这一差异缩小至0.194和0.221个百分点，均不显著。四个模型使用相同的4,485次公告，因此变化来自模型约束，而非更换样本。全期和2012年起的D模型也没有发现显著的四大额外响应。</p>
@@ -411,11 +410,11 @@ ES=(EPS-F)/|F|
 <p>下面围绕“四大减非四大的好消息响应增量差”，按固定效应区别列出四个模型，每个模型在方程下连续展示2012年前与2012年起的差值路径。</p>
 <p><strong>共同口径。</strong> <span class="math inline">\(e\)</span>为年报公告，<span class="math inline">\(\tau\)</span>为相对事件交易日，<span class="math inline">\(d(e,\tau)\)</span>为实际交易日期；</p>
 <p><span class="math display">\[
-B_e=1
+Big4_e=1
 \]</span></p>
 <p>为当年四大客户，</p>
 <p><span class="math display">\[
-G_e=1(ES&gt;10\%)
+GoodNews_e=1(ES&gt;10\%)
 \]</span></p>
 <p>中性消息为</p>
 <p><span class="math display">\[
@@ -425,7 +424,7 @@ G_e=1(ES&gt;10\%)
 <p><span class="math display">\[
 K=\{-5,-4,-3,-2,0,1,2,3,4,5\}
 \]</span></p>
-<p>第−1日归零。各模型和时期分别估计，均有公告事件FE <span class="math inline">\(\alpha_e\)</span>，按公告事件聚类，无额外财务控制或连续ES幅度控制。2012年前四模型同用4,485次公告、49,267条日度观测、1,693家公司；2012年起同用15,830次公告、174,046条日度观测、4,108家公司。两时期成员可以不同。</p>
+<p>第−1日归零。各模型和时期分别估计，均有公告事件FE <span class="math inline">\(\text{Announcement FE}\)</span>，按公告事件聚类，无额外财务控制或连续ES幅度控制。2012年前四模型同用4,485次公告、49,267条日度观测、1,693家公司；2012年起同用15,830次公告、174,046条日度观测、4,108家公司。两时期成员可以不同。</p>
 <p>方程中的<span class="math inline">\(\beta^m_{0k}\)</span>、<span class="math inline">\(\beta^m_{1k}\)</span>分别是非四大、四大“好消息减自身中性消息”的响应。图展示直接差值</p>
 <p><span class="math display">\[
 (\beta^m_{1k}-\beta^m_{0k})\times100
@@ -435,8 +434,8 @@ K=\{-5,-4,-3,-2,0,1,2,3,4,5\}
 <h4 class="anchored" data-anchor-id="memo-four-fe-a">A｜共同事件时间FE＋共同交易日FE</h4>
 <p><span class="math display">\[
 \begin{aligned}
-\ln P_{e\tau}&amp;=\alpha_e+\lambda_{\tau}+\mu_{d(e,\tau)}\\
-&amp;\quad+\sum_{k\in K}\left[\beta^{A}_{0k}(1-B_e)+\beta^{A}_{1k}B_e\right]G_e\,1(\tau=k)+\varepsilon^{A}_{e\tau}.
+\ln P_{e\tau}&amp;=\text{Announcement FE}+\text{Event time FE}+\text{Trading date FE}\\
+&amp;\quad+\sum_{k\in K}\left[\beta^{A}_{0k}(1-Big4_e)+\beta^{A}_{1k}Big4_e\right]GoodNews_e\,1(\tau=k)+\varepsilon^{A}_{e\tau}.
 \end{aligned}
 \]</span></p>
 <div class="quarto-figure quarto-figure-center">
@@ -473,8 +472,8 @@ K=\{-5,-4,-3,-2,0,1,2,3,4,5\}
 <h4 class="anchored" data-anchor-id="memo-four-fe-b">B｜审计组×事件时间FE＋共同交易日FE</h4>
 <p><span class="math display">\[
 \begin{aligned}
-\ln P_{e\tau}&amp;=\alpha_e+\lambda_{B_e,\tau}+\mu_{d(e,\tau)}\\
-&amp;\quad+\sum_{k\in K}\left[\beta^{B}_{0k}(1-B_e)+\beta^{B}_{1k}B_e\right]G_e\,1(\tau=k)+\varepsilon^{B}_{e\tau}.
+\ln P_{e\tau}&amp;=\text{Announcement FE}+\text{Big4 group × Event time FE}+\text{Trading date FE}\\
+&amp;\quad+\sum_{k\in K}\left[\beta^{B}_{0k}(1-Big4_e)+\beta^{B}_{1k}Big4_e\right]GoodNews_e\,1(\tau=k)+\varepsilon^{B}_{e\tau}.
 \end{aligned}
 \]</span></p>
 <div class="quarto-figure quarto-figure-center">
@@ -511,8 +510,8 @@ K=\{-5,-4,-3,-2,0,1,2,3,4,5\}
 <h4 class="anchored" data-anchor-id="memo-four-fe-c">C｜共同事件时间FE＋审计组×交易日FE</h4>
 <p><span class="math display">\[
 \begin{aligned}
-\ln P_{e\tau}&amp;=\alpha_e+\lambda_{\tau}+\mu_{B_e,d(e,\tau)}\\
-&amp;\quad+\sum_{k\in K}\left[\beta^{C}_{0k}(1-B_e)+\beta^{C}_{1k}B_e\right]G_e\,1(\tau=k)+\varepsilon^{C}_{e\tau}.
+\ln P_{e\tau}&amp;=\text{Announcement FE}+\text{Event time FE}+\text{Big4 group × Trading date FE}\\
+&amp;\quad+\sum_{k\in K}\left[\beta^{C}_{0k}(1-Big4_e)+\beta^{C}_{1k}Big4_e\right]GoodNews_e\,1(\tau=k)+\varepsilon^{C}_{e\tau}.
 \end{aligned}
 \]</span></p>
 <div class="quarto-figure quarto-figure-center">
@@ -549,8 +548,8 @@ K=\{-5,-4,-3,-2,0,1,2,3,4,5\}
 <h4 class="anchored" data-anchor-id="memo-four-fe-d">D｜审计组×事件时间FE＋审计组×交易日FE</h4>
 <p><span class="math display">\[
 \begin{aligned}
-\ln P_{e\tau}&amp;=\alpha_e+\lambda_{B_e,\tau}+\mu_{B_e,d(e,\tau)}\\
-&amp;\quad+\sum_{k\in K}\left[\beta^{D}_{0k}(1-B_e)+\beta^{D}_{1k}B_e\right]G_e\,1(\tau=k)+\varepsilon^{D}_{e\tau}.
+\ln P_{e\tau}&amp;=\text{Announcement FE}+\text{Big4 group × Event time FE}+\text{Big4 group × Trading date FE}\\
+&amp;\quad+\sum_{k\in K}\left[\beta^{D}_{0k}(1-Big4_e)+\beta^{D}_{1k}Big4_e\right]GoodNews_e\,1(\tau=k)+\varepsilon^{D}_{e\tau}.
 \end{aligned}
 \]</span></p>
 <div class="quarto-figure quarto-figure-center">
@@ -686,7 +685,7 @@ K=\{-5,-4,-3,-2,0,1,2,3,4,5\}
 |UE|\le0.001
 \]</span></p>
 <p>的公告单列为近零参考，保留其余1—10档。不同年份的同一档不代表相同绝对幅度；两个审计组共用分位界限。</p>
-<p><strong>回归与读图。</strong> <span class="math inline">\(e\)</span>为年报公告，<span class="math inline">\(\tau\)</span>为相对交易日，<span class="math inline">\(d(e,\tau)\)</span>为实际日期，<span class="math inline">\(B_e\)</span>为年度四大身份，<span class="math inline">\(C_e\)</span>为消息档，</p>
+<p><strong>回归与读图。</strong> <span class="math inline">\(e\)</span>为年报公告，<span class="math inline">\(\tau\)</span>为相对交易日，<span class="math inline">\(d(e,\tau)\)</span>为实际日期，<span class="math inline">\(Big4_e\)</span>为年度四大身份，<span class="math inline">\(NewsGroup_e\)</span>为消息档，</p>
 <p><span class="math display">\[
 K=\{-5,-4,-3,-2,0,1,2,3,4,5\}
 \]</span></p>
@@ -731,8 +730,8 @@ K=\{-5,-4,-3,-2,0,1,2,3,4,5\}
 <h5 class="anchored" data-anchor-id="memo-ue-bins-periods-absolute-all-a">A｜共同事件时间FE＋共同交易日FE</h5>
 <p><span class="math display">\[
 \begin{aligned}
-\ln P_{e\tau}&amp;=\alpha_e+\lambda^{A}_{\tau}+\mu^{A}_{d(e,\tau)}\\
-&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{A}_{gck}\,1(B_e=g,C_e=c,\tau=k)\\
+\ln P_{e\tau}&amp;=\text{Announcement FE}+\text{Event time FE}+\text{Trading date FE}\\
+&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{A}_{gck}\,1(Big4_e=g,NewsGroup_e=c,\tau=k)\\
 &amp;+\varepsilon^{A}_{e\tau}.
 \end{aligned}
 \]</span></p>
@@ -754,8 +753,8 @@ K=\{-5,-4,-3,-2,0,1,2,3,4,5\}
 <h5 class="anchored" data-anchor-id="memo-ue-bins-periods-absolute-all-b">B｜审计组×事件时间FE＋共同交易日FE</h5>
 <p><span class="math display">\[
 \begin{aligned}
-\ln P_{e\tau}&amp;=\alpha_e+\lambda^{B}_{B_e,\tau}+\mu^{B}_{d(e,\tau)}\\
-&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{B}_{gck}\,1(B_e=g,C_e=c,\tau=k)\\
+\ln P_{e\tau}&amp;=\text{Announcement FE}+\text{Big4 group × Event time FE}+\text{Trading date FE}\\
+&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{B}_{gck}\,1(Big4_e=g,NewsGroup_e=c,\tau=k)\\
 &amp;+\varepsilon^{B}_{e\tau}.
 \end{aligned}
 \]</span></p>
@@ -777,8 +776,8 @@ K=\{-5,-4,-3,-2,0,1,2,3,4,5\}
 <h5 class="anchored" data-anchor-id="memo-ue-bins-periods-absolute-all-c">C｜共同事件时间FE＋审计组×交易日FE</h5>
 <p><span class="math display">\[
 \begin{aligned}
-\ln P_{e\tau}&amp;=\alpha_e+\lambda^{C}_{\tau}+\mu^{C}_{B_e,d(e,\tau)}\\
-&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{C}_{gck}\,1(B_e=g,C_e=c,\tau=k)\\
+\ln P_{e\tau}&amp;=\text{Announcement FE}+\text{Event time FE}+\text{Big4 group × Trading date FE}\\
+&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{C}_{gck}\,1(Big4_e=g,NewsGroup_e=c,\tau=k)\\
 &amp;+\varepsilon^{C}_{e\tau}.
 \end{aligned}
 \]</span></p>
@@ -800,8 +799,8 @@ K=\{-5,-4,-3,-2,0,1,2,3,4,5\}
 <h5 class="anchored" data-anchor-id="memo-ue-bins-periods-absolute-all-d">D｜审计组×事件时间FE＋审计组×交易日FE</h5>
 <p><span class="math display">\[
 \begin{aligned}
-\ln P_{e\tau}&amp;=\alpha_e+\lambda^{D}_{B_e,\tau}+\mu^{D}_{B_e,d(e,\tau)}\\
-&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{D}_{gck}\,1(B_e=g,C_e=c,\tau=k)\\
+\ln P_{e\tau}&amp;=\text{Announcement FE}+\text{Big4 group × Event time FE}+\text{Big4 group × Trading date FE}\\
+&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{D}_{gck}\,1(Big4_e=g,NewsGroup_e=c,\tau=k)\\
 &amp;+\varepsilon^{D}_{e\tau}.
 \end{aligned}
 \]</span></p>
@@ -827,8 +826,8 @@ K=\{-5,-4,-3,-2,0,1,2,3,4,5\}
 <h5 class="anchored" data-anchor-id="memo-ue-bins-periods-absolute-before2012-a">A｜共同事件时间FE＋共同交易日FE</h5>
 <p><span class="math display">\[
 \begin{aligned}
-\ln P_{e\tau}&amp;=\alpha_e+\lambda^{A}_{\tau}+\mu^{A}_{d(e,\tau)}\\
-&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{A}_{gck}\,1(B_e=g,C_e=c,\tau=k)\\
+\ln P_{e\tau}&amp;=\text{Announcement FE}+\text{Event time FE}+\text{Trading date FE}\\
+&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{A}_{gck}\,1(Big4_e=g,NewsGroup_e=c,\tau=k)\\
 &amp;+\varepsilon^{A}_{e\tau}.
 \end{aligned}
 \]</span></p>
@@ -850,8 +849,8 @@ K=\{-5,-4,-3,-2,0,1,2,3,4,5\}
 <h5 class="anchored" data-anchor-id="memo-ue-bins-periods-absolute-before2012-b">B｜审计组×事件时间FE＋共同交易日FE</h5>
 <p><span class="math display">\[
 \begin{aligned}
-\ln P_{e\tau}&amp;=\alpha_e+\lambda^{B}_{B_e,\tau}+\mu^{B}_{d(e,\tau)}\\
-&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{B}_{gck}\,1(B_e=g,C_e=c,\tau=k)\\
+\ln P_{e\tau}&amp;=\text{Announcement FE}+\text{Big4 group × Event time FE}+\text{Trading date FE}\\
+&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{B}_{gck}\,1(Big4_e=g,NewsGroup_e=c,\tau=k)\\
 &amp;+\varepsilon^{B}_{e\tau}.
 \end{aligned}
 \]</span></p>
@@ -873,8 +872,8 @@ K=\{-5,-4,-3,-2,0,1,2,3,4,5\}
 <h5 class="anchored" data-anchor-id="memo-ue-bins-periods-absolute-before2012-c">C｜共同事件时间FE＋审计组×交易日FE</h5>
 <p><span class="math display">\[
 \begin{aligned}
-\ln P_{e\tau}&amp;=\alpha_e+\lambda^{C}_{\tau}+\mu^{C}_{B_e,d(e,\tau)}\\
-&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{C}_{gck}\,1(B_e=g,C_e=c,\tau=k)\\
+\ln P_{e\tau}&amp;=\text{Announcement FE}+\text{Event time FE}+\text{Big4 group × Trading date FE}\\
+&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{C}_{gck}\,1(Big4_e=g,NewsGroup_e=c,\tau=k)\\
 &amp;+\varepsilon^{C}_{e\tau}.
 \end{aligned}
 \]</span></p>
@@ -896,8 +895,8 @@ K=\{-5,-4,-3,-2,0,1,2,3,4,5\}
 <h5 class="anchored" data-anchor-id="memo-ue-bins-periods-absolute-before2012-d">D｜审计组×事件时间FE＋审计组×交易日FE</h5>
 <p><span class="math display">\[
 \begin{aligned}
-\ln P_{e\tau}&amp;=\alpha_e+\lambda^{D}_{B_e,\tau}+\mu^{D}_{B_e,d(e,\tau)}\\
-&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{D}_{gck}\,1(B_e=g,C_e=c,\tau=k)\\
+\ln P_{e\tau}&amp;=\text{Announcement FE}+\text{Big4 group × Event time FE}+\text{Big4 group × Trading date FE}\\
+&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{D}_{gck}\,1(Big4_e=g,NewsGroup_e=c,\tau=k)\\
 &amp;+\varepsilon^{D}_{e\tau}.
 \end{aligned}
 \]</span></p>
@@ -923,8 +922,8 @@ K=\{-5,-4,-3,-2,0,1,2,3,4,5\}
 <h5 class="anchored" data-anchor-id="memo-ue-bins-periods-absolute-after2012-a">A｜共同事件时间FE＋共同交易日FE</h5>
 <p><span class="math display">\[
 \begin{aligned}
-\ln P_{e\tau}&amp;=\alpha_e+\lambda^{A}_{\tau}+\mu^{A}_{d(e,\tau)}\\
-&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{A}_{gck}\,1(B_e=g,C_e=c,\tau=k)\\
+\ln P_{e\tau}&amp;=\text{Announcement FE}+\text{Event time FE}+\text{Trading date FE}\\
+&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{A}_{gck}\,1(Big4_e=g,NewsGroup_e=c,\tau=k)\\
 &amp;+\varepsilon^{A}_{e\tau}.
 \end{aligned}
 \]</span></p>
@@ -946,8 +945,8 @@ K=\{-5,-4,-3,-2,0,1,2,3,4,5\}
 <h5 class="anchored" data-anchor-id="memo-ue-bins-periods-absolute-after2012-b">B｜审计组×事件时间FE＋共同交易日FE</h5>
 <p><span class="math display">\[
 \begin{aligned}
-\ln P_{e\tau}&amp;=\alpha_e+\lambda^{B}_{B_e,\tau}+\mu^{B}_{d(e,\tau)}\\
-&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{B}_{gck}\,1(B_e=g,C_e=c,\tau=k)\\
+\ln P_{e\tau}&amp;=\text{Announcement FE}+\text{Big4 group × Event time FE}+\text{Trading date FE}\\
+&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{B}_{gck}\,1(Big4_e=g,NewsGroup_e=c,\tau=k)\\
 &amp;+\varepsilon^{B}_{e\tau}.
 \end{aligned}
 \]</span></p>
@@ -969,8 +968,8 @@ K=\{-5,-4,-3,-2,0,1,2,3,4,5\}
 <h5 class="anchored" data-anchor-id="memo-ue-bins-periods-absolute-after2012-c">C｜共同事件时间FE＋审计组×交易日FE</h5>
 <p><span class="math display">\[
 \begin{aligned}
-\ln P_{e\tau}&amp;=\alpha_e+\lambda^{C}_{\tau}+\mu^{C}_{B_e,d(e,\tau)}\\
-&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{C}_{gck}\,1(B_e=g,C_e=c,\tau=k)\\
+\ln P_{e\tau}&amp;=\text{Announcement FE}+\text{Event time FE}+\text{Big4 group × Trading date FE}\\
+&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{C}_{gck}\,1(Big4_e=g,NewsGroup_e=c,\tau=k)\\
 &amp;+\varepsilon^{C}_{e\tau}.
 \end{aligned}
 \]</span></p>
@@ -992,8 +991,8 @@ K=\{-5,-4,-3,-2,0,1,2,3,4,5\}
 <h5 class="anchored" data-anchor-id="memo-ue-bins-periods-absolute-after2012-d">D｜审计组×事件时间FE＋审计组×交易日FE</h5>
 <p><span class="math display">\[
 \begin{aligned}
-\ln P_{e\tau}&amp;=\alpha_e+\lambda^{D}_{B_e,\tau}+\mu^{D}_{B_e,d(e,\tau)}\\
-&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{D}_{gck}\,1(B_e=g,C_e=c,\tau=k)\\
+\ln P_{e\tau}&amp;=\text{Announcement FE}+\text{Big4 group × Event time FE}+\text{Big4 group × Trading date FE}\\
+&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{D}_{gck}\,1(Big4_e=g,NewsGroup_e=c,\tau=k)\\
 &amp;+\varepsilon^{D}_{e\tau}.
 \end{aligned}
 \]</span></p>
@@ -1023,8 +1022,8 @@ K=\{-5,-4,-3,-2,0,1,2,3,4,5\}
 <h5 class="anchored" data-anchor-id="memo-ue-bins-periods-annual-all-a">A｜共同事件时间FE＋共同交易日FE</h5>
 <p><span class="math display">\[
 \begin{aligned}
-\ln P_{e\tau}&amp;=\alpha_e+\lambda^{A}_{\tau}+\mu^{A}_{d(e,\tau)}\\
-&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{A}_{gck}\,1(B_e=g,C_e=c,\tau=k)\\
+\ln P_{e\tau}&amp;=\text{Announcement FE}+\text{Event time FE}+\text{Trading date FE}\\
+&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{A}_{gck}\,1(Big4_e=g,NewsGroup_e=c,\tau=k)\\
 &amp;+\varepsilon^{A}_{e\tau}.
 \end{aligned}
 \]</span></p>
@@ -1046,8 +1045,8 @@ K=\{-5,-4,-3,-2,0,1,2,3,4,5\}
 <h5 class="anchored" data-anchor-id="memo-ue-bins-periods-annual-all-b">B｜审计组×事件时间FE＋共同交易日FE</h5>
 <p><span class="math display">\[
 \begin{aligned}
-\ln P_{e\tau}&amp;=\alpha_e+\lambda^{B}_{B_e,\tau}+\mu^{B}_{d(e,\tau)}\\
-&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{B}_{gck}\,1(B_e=g,C_e=c,\tau=k)\\
+\ln P_{e\tau}&amp;=\text{Announcement FE}+\text{Big4 group × Event time FE}+\text{Trading date FE}\\
+&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{B}_{gck}\,1(Big4_e=g,NewsGroup_e=c,\tau=k)\\
 &amp;+\varepsilon^{B}_{e\tau}.
 \end{aligned}
 \]</span></p>
@@ -1069,8 +1068,8 @@ K=\{-5,-4,-3,-2,0,1,2,3,4,5\}
 <h5 class="anchored" data-anchor-id="memo-ue-bins-periods-annual-all-c">C｜共同事件时间FE＋审计组×交易日FE</h5>
 <p><span class="math display">\[
 \begin{aligned}
-\ln P_{e\tau}&amp;=\alpha_e+\lambda^{C}_{\tau}+\mu^{C}_{B_e,d(e,\tau)}\\
-&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{C}_{gck}\,1(B_e=g,C_e=c,\tau=k)\\
+\ln P_{e\tau}&amp;=\text{Announcement FE}+\text{Event time FE}+\text{Big4 group × Trading date FE}\\
+&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{C}_{gck}\,1(Big4_e=g,NewsGroup_e=c,\tau=k)\\
 &amp;+\varepsilon^{C}_{e\tau}.
 \end{aligned}
 \]</span></p>
@@ -1092,8 +1091,8 @@ K=\{-5,-4,-3,-2,0,1,2,3,4,5\}
 <h5 class="anchored" data-anchor-id="memo-ue-bins-periods-annual-all-d">D｜审计组×事件时间FE＋审计组×交易日FE</h5>
 <p><span class="math display">\[
 \begin{aligned}
-\ln P_{e\tau}&amp;=\alpha_e+\lambda^{D}_{B_e,\tau}+\mu^{D}_{B_e,d(e,\tau)}\\
-&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{D}_{gck}\,1(B_e=g,C_e=c,\tau=k)\\
+\ln P_{e\tau}&amp;=\text{Announcement FE}+\text{Big4 group × Event time FE}+\text{Big4 group × Trading date FE}\\
+&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{D}_{gck}\,1(Big4_e=g,NewsGroup_e=c,\tau=k)\\
 &amp;+\varepsilon^{D}_{e\tau}.
 \end{aligned}
 \]</span></p>
@@ -1119,8 +1118,8 @@ K=\{-5,-4,-3,-2,0,1,2,3,4,5\}
 <h5 class="anchored" data-anchor-id="memo-ue-bins-periods-annual-before2012-a">A｜共同事件时间FE＋共同交易日FE</h5>
 <p><span class="math display">\[
 \begin{aligned}
-\ln P_{e\tau}&amp;=\alpha_e+\lambda^{A}_{\tau}+\mu^{A}_{d(e,\tau)}\\
-&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{A}_{gck}\,1(B_e=g,C_e=c,\tau=k)\\
+\ln P_{e\tau}&amp;=\text{Announcement FE}+\text{Event time FE}+\text{Trading date FE}\\
+&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{A}_{gck}\,1(Big4_e=g,NewsGroup_e=c,\tau=k)\\
 &amp;+\varepsilon^{A}_{e\tau}.
 \end{aligned}
 \]</span></p>
@@ -1142,8 +1141,8 @@ K=\{-5,-4,-3,-2,0,1,2,3,4,5\}
 <h5 class="anchored" data-anchor-id="memo-ue-bins-periods-annual-before2012-b">B｜审计组×事件时间FE＋共同交易日FE</h5>
 <p><span class="math display">\[
 \begin{aligned}
-\ln P_{e\tau}&amp;=\alpha_e+\lambda^{B}_{B_e,\tau}+\mu^{B}_{d(e,\tau)}\\
-&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{B}_{gck}\,1(B_e=g,C_e=c,\tau=k)\\
+\ln P_{e\tau}&amp;=\text{Announcement FE}+\text{Big4 group × Event time FE}+\text{Trading date FE}\\
+&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{B}_{gck}\,1(Big4_e=g,NewsGroup_e=c,\tau=k)\\
 &amp;+\varepsilon^{B}_{e\tau}.
 \end{aligned}
 \]</span></p>
@@ -1165,8 +1164,8 @@ K=\{-5,-4,-3,-2,0,1,2,3,4,5\}
 <h5 class="anchored" data-anchor-id="memo-ue-bins-periods-annual-before2012-c">C｜共同事件时间FE＋审计组×交易日FE</h5>
 <p><span class="math display">\[
 \begin{aligned}
-\ln P_{e\tau}&amp;=\alpha_e+\lambda^{C}_{\tau}+\mu^{C}_{B_e,d(e,\tau)}\\
-&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{C}_{gck}\,1(B_e=g,C_e=c,\tau=k)\\
+\ln P_{e\tau}&amp;=\text{Announcement FE}+\text{Event time FE}+\text{Big4 group × Trading date FE}\\
+&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{C}_{gck}\,1(Big4_e=g,NewsGroup_e=c,\tau=k)\\
 &amp;+\varepsilon^{C}_{e\tau}.
 \end{aligned}
 \]</span></p>
@@ -1188,8 +1187,8 @@ K=\{-5,-4,-3,-2,0,1,2,3,4,5\}
 <h5 class="anchored" data-anchor-id="memo-ue-bins-periods-annual-before2012-d">D｜审计组×事件时间FE＋审计组×交易日FE</h5>
 <p><span class="math display">\[
 \begin{aligned}
-\ln P_{e\tau}&amp;=\alpha_e+\lambda^{D}_{B_e,\tau}+\mu^{D}_{B_e,d(e,\tau)}\\
-&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{D}_{gck}\,1(B_e=g,C_e=c,\tau=k)\\
+\ln P_{e\tau}&amp;=\text{Announcement FE}+\text{Big4 group × Event time FE}+\text{Big4 group × Trading date FE}\\
+&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{D}_{gck}\,1(Big4_e=g,NewsGroup_e=c,\tau=k)\\
 &amp;+\varepsilon^{D}_{e\tau}.
 \end{aligned}
 \]</span></p>
@@ -1215,8 +1214,8 @@ K=\{-5,-4,-3,-2,0,1,2,3,4,5\}
 <h5 class="anchored" data-anchor-id="memo-ue-bins-periods-annual-after2012-a">A｜共同事件时间FE＋共同交易日FE</h5>
 <p><span class="math display">\[
 \begin{aligned}
-\ln P_{e\tau}&amp;=\alpha_e+\lambda^{A}_{\tau}+\mu^{A}_{d(e,\tau)}\\
-&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{A}_{gck}\,1(B_e=g,C_e=c,\tau=k)\\
+\ln P_{e\tau}&amp;=\text{Announcement FE}+\text{Event time FE}+\text{Trading date FE}\\
+&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{A}_{gck}\,1(Big4_e=g,NewsGroup_e=c,\tau=k)\\
 &amp;+\varepsilon^{A}_{e\tau}.
 \end{aligned}
 \]</span></p>
@@ -1238,8 +1237,8 @@ K=\{-5,-4,-3,-2,0,1,2,3,4,5\}
 <h5 class="anchored" data-anchor-id="memo-ue-bins-periods-annual-after2012-b">B｜审计组×事件时间FE＋共同交易日FE</h5>
 <p><span class="math display">\[
 \begin{aligned}
-\ln P_{e\tau}&amp;=\alpha_e+\lambda^{B}_{B_e,\tau}+\mu^{B}_{d(e,\tau)}\\
-&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{B}_{gck}\,1(B_e=g,C_e=c,\tau=k)\\
+\ln P_{e\tau}&amp;=\text{Announcement FE}+\text{Big4 group × Event time FE}+\text{Trading date FE}\\
+&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{B}_{gck}\,1(Big4_e=g,NewsGroup_e=c,\tau=k)\\
 &amp;+\varepsilon^{B}_{e\tau}.
 \end{aligned}
 \]</span></p>
@@ -1261,8 +1260,8 @@ K=\{-5,-4,-3,-2,0,1,2,3,4,5\}
 <h5 class="anchored" data-anchor-id="memo-ue-bins-periods-annual-after2012-c">C｜共同事件时间FE＋审计组×交易日FE</h5>
 <p><span class="math display">\[
 \begin{aligned}
-\ln P_{e\tau}&amp;=\alpha_e+\lambda^{C}_{\tau}+\mu^{C}_{B_e,d(e,\tau)}\\
-&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{C}_{gck}\,1(B_e=g,C_e=c,\tau=k)\\
+\ln P_{e\tau}&amp;=\text{Announcement FE}+\text{Event time FE}+\text{Big4 group × Trading date FE}\\
+&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{C}_{gck}\,1(Big4_e=g,NewsGroup_e=c,\tau=k)\\
 &amp;+\varepsilon^{C}_{e\tau}.
 \end{aligned}
 \]</span></p>
@@ -1284,8 +1283,8 @@ K=\{-5,-4,-3,-2,0,1,2,3,4,5\}
 <h5 class="anchored" data-anchor-id="memo-ue-bins-periods-annual-after2012-d">D｜审计组×事件时间FE＋审计组×交易日FE</h5>
 <p><span class="math display">\[
 \begin{aligned}
-\ln P_{e\tau}&amp;=\alpha_e+\lambda^{D}_{B_e,\tau}+\mu^{D}_{B_e,d(e,\tau)}\\
-&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{D}_{gck}\,1(B_e=g,C_e=c,\tau=k)\\
+\ln P_{e\tau}&amp;=\text{Announcement FE}+\text{Big4 group × Event time FE}+\text{Big4 group × Trading date FE}\\
+&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{D}_{gck}\,1(Big4_e=g,NewsGroup_e=c,\tau=k)\\
 &amp;+\varepsilon^{D}_{e\tau}.
 \end{aligned}
 \]</span></p>
@@ -1355,11 +1354,11 @@ UE&gt;0.001
 \]</span></p>
 <p>不剔除重组、不匹配。以公告前1日为基期，在[−5,+5]交易日窗口内分别估计2001—2011和2012—2024财年的D模型：</p>
 <p><span class="math display">\[
-\ln P_{e\tau}=\alpha_e+\lambda_{B_e,\tau}+\mu_{B_e,t}
+\ln P_{e\tau}=\text{Announcement FE}+\text{Big4 group × Event time FE}+\text{Big4 group × Trading date FE}
 +\sum_{c\in\{bad,good\}}\sum_{k\ne-1}
-[\beta_{ck}(1-B_e)+\gamma_{ck}B_e]1(C_e=c)1(\tau=k)+\varepsilon_{e\tau}.
+[\beta_{ck}(1-Big4_e)+\gamma_{ck}Big4_e]1(NewsGroup_e=c)1(\tau=k)+\varepsilon_{e\tau}.
 \]</span></p>
-<p><span class="math inline">\(B_e\)</span>为当年四大身份。吸收报告事件FE、审计组×相对事件日FE、审计组×实际交易日FE，允许两组各有中间消息基准路径和交易日冲击。标准误按报告（公司年）聚类，无其他财务控制或连续UE幅度控制。非四大、四大的组内增量分别为<span class="math inline">\(\beta_{ck}\)</span>、<span class="math inline">\(\gamma_{ck}\)</span>，直接组间差为</p>
+<p><span class="math inline">\(Big4_e\)</span>为当年四大身份。吸收报告事件FE、审计组×相对事件日FE、审计组×实际交易日FE，允许两组各有中间消息基准路径和交易日冲击。标准误按报告（公司年）聚类，无其他财务控制或连续UE幅度控制。非四大、四大的组内增量分别为<span class="math inline">\(\beta_{ck}\)</span>、<span class="math inline">\(\gamma_{ck}\)</span>，直接组间差为</p>
 <p><span class="math display">\[
 \gamma_{ck}-\beta_{ck}
 \]</span></p>
@@ -1403,9 +1402,9 @@ ES&lt;-0.10
 <p>后期2份报告的预测中位数F=0，无法定义ES而退出。</p>
 <p>两期分别估计同一D模型，好消息与坏消息在一个回归中联合估计：</p>
 <p><span class="math display">\[
-\ln P_{e\tau}=\alpha_e+\lambda_{B_e,\tau}+\mu_{B_e,t}
+\ln P_{e\tau}=\text{Announcement FE}+\text{Big4 group × Event time FE}+\text{Big4 group × Trading date FE}
 +\sum_{c\in\{\mathrm{good,bad}\}}\sum_{k\ne-1}
-[\beta_{ck}+\delta_{ck}B_e]1(C_e=c)1(\tau=k)+\varepsilon_{e\tau}.
+[\beta_{ck}+\delta_{ck}Big4_e]1(NewsGroup_e=c)1(\tau=k)+\varepsilon_{e\tau}.
 \]</span></p>
 <p>报告事件FE、审计组×相对事件日FE、审计组×真实交易日FE均保留；标准误按报告（公司年）聚类，无财务controls或连续ES幅度控制。非四大相对自身中间组的反应为<span class="math inline">\(\beta\)</span>，四大为</p>
 <p><span class="math display">\[
@@ -1458,9 +1457,9 @@ UE=(EPS-F)/P_{pre}
 ES=(EPS-F)/|F|
 \]</span></p>
 <p>门槛为±0.10。保留两端消息，等于门槛归中间组；F=0不能定义ES。沿用严格公告前180天预测、不剔除重组、不匹配、报告财年实际审计身份及原始尾部。对每个“公司池×消息口径×中心年”，A／B／C逐行固定原D的实际公告—交易日样本；不同窗口、不同公司池不取统一交集。“曾用四大”依据2001—2024年完整审计历史定义；早上市／曾用四大属于描述性选池，含全期身份信息，不构成外生处理。</p>
-<p><strong>共同估计设定。</strong> Y为公告附近[−5,+5]交易日的原始收盘价log，第−1日为基期。<span class="math inline">\(e\)</span>为公告、<span class="math inline">\(\tau\)</span>为相对事件日、<span class="math inline">\(d(e,\tau)\)</span>为真实交易日期，<span class="math inline">\(B_e\)</span>为当年四大身份；</p>
+<p><strong>共同估计设定。</strong> Y为公告附近[−5,+5]交易日的原始收盘价log，第−1日为基期。<span class="math inline">\(e\)</span>为公告、<span class="math inline">\(\tau\)</span>为相对事件日、<span class="math inline">\(d(e,\tau)\)</span>为真实交易日期，<span class="math inline">\(Big4_e\)</span>为当年四大身份；</p>
 <p><span class="math display">\[
-C_e\in\{b,n,g\}
+NewsGroup_e\in\{b,n,g\}
 \]</span></p>
 <p>为坏／中／好消息，</p>
 <p><span class="math display">\[
@@ -1507,9 +1506,9 @@ K=\{-5,-4,-3,-2,0,1,2,3,4,5\}
 <h5 class="anchored" data-anchor-id="rolling-memo-full-ue-a">A｜共同事件时间FE＋共同交易日FE</h5>
 <p><span class="math display">\[
 \begin{aligned}
-\ln P_{e\tau}&amp;=\alpha_{e,w}+\lambda^A_{\tau,w}+\mu^A_{d(e,\tau),w}\\
-&amp;\quad+\sum_{s\in\{b,g\}}\sum_{k\in K}\left[\beta^{A}_{sk,w}+\delta^{A}_{sk,w}B_e\right]\\
-&amp;\qquad\times1(C_e=s)1(\tau=k)+\varepsilon^{A}_{e\tau,w}.
+\ln P_{e\tau}&amp;=\text{Announcement FE}+\text{Event time FE}+\text{Trading date FE}\\
+&amp;\quad+\sum_{s\in\{b,g\}}\sum_{k\in K}\left[\beta^{A}_{sk,w}+\delta^{A}_{sk,w}Big4_e\right]\\
+&amp;\qquad\times1(NewsGroup_e=s)1(\tau=k)+\varepsilon^{A}_{e\tau,w}.
 \end{aligned}
 \]</span></p>
 <p><strong>本模型的基准：</strong> 共同中间消息事件时间路径约束下的模型响应。</p>
@@ -1542,9 +1541,9 @@ K=\{-5,-4,-3,-2,0,1,2,3,4,5\}
 <h5 class="anchored" data-anchor-id="rolling-memo-full-ue-b">B｜审计组×事件时间FE＋共同交易日FE</h5>
 <p><span class="math display">\[
 \begin{aligned}
-\ln P_{e\tau}&amp;=\alpha_{e,w}+\lambda^B_{B_e,\tau,w}+\mu^B_{d(e,\tau),w}\\
-&amp;\quad+\sum_{s\in\{b,g\}}\sum_{k\in K}\left[\beta^{B}_{sk,w}+\delta^{B}_{sk,w}B_e\right]\\
-&amp;\qquad\times1(C_e=s)1(\tau=k)+\varepsilon^{B}_{e\tau,w}.
+\ln P_{e\tau}&amp;=\text{Announcement FE}+\text{Big4 group × Event time FE}+\text{Trading date FE}\\
+&amp;\quad+\sum_{s\in\{b,g\}}\sum_{k\in K}\left[\beta^{B}_{sk,w}+\delta^{B}_{sk,w}Big4_e\right]\\
+&amp;\qquad\times1(NewsGroup_e=s)1(\tau=k)+\varepsilon^{B}_{e\tau,w}.
 \end{aligned}
 \]</span></p>
 <p><strong>本模型的基准：</strong> 相对各组自身中间消息的响应。</p>
@@ -1577,9 +1576,9 @@ K=\{-5,-4,-3,-2,0,1,2,3,4,5\}
 <h5 class="anchored" data-anchor-id="rolling-memo-full-ue-c">C｜共同事件时间FE＋审计组×交易日FE</h5>
 <p><span class="math display">\[
 \begin{aligned}
-\ln P_{e\tau}&amp;=\alpha_{e,w}+\lambda^C_{\tau,w}+\mu^C_{B_e,d(e,\tau),w}\\
-&amp;\quad+\sum_{s\in\{b,g\}}\sum_{k\in K}\left[\beta^{C}_{sk,w}+\delta^{C}_{sk,w}B_e\right]\\
-&amp;\qquad\times1(C_e=s)1(\tau=k)+\varepsilon^{C}_{e\tau,w}.
+\ln P_{e\tau}&amp;=\text{Announcement FE}+\text{Event time FE}+\text{Big4 group × Trading date FE}\\
+&amp;\quad+\sum_{s\in\{b,g\}}\sum_{k\in K}\left[\beta^{C}_{sk,w}+\delta^{C}_{sk,w}Big4_e\right]\\
+&amp;\qquad\times1(NewsGroup_e=s)1(\tau=k)+\varepsilon^{C}_{e\tau,w}.
 \end{aligned}
 \]</span></p>
 <p><strong>本模型的基准：</strong> 共同中间消息事件时间路径约束下的模型响应。</p>
@@ -1612,9 +1611,9 @@ K=\{-5,-4,-3,-2,0,1,2,3,4,5\}
 <h5 class="anchored" data-anchor-id="rolling-memo-full-ue-d">D｜审计组×事件时间FE＋审计组×交易日FE</h5>
 <p><span class="math display">\[
 \begin{aligned}
-\ln P_{e\tau}&amp;=\alpha_{e,w}+\lambda^D_{B_e,\tau,w}+\mu^D_{B_e,d(e,\tau),w}\\
-&amp;\quad+\sum_{s\in\{b,g\}}\sum_{k\in K}\left[\beta^{D}_{sk,w}+\delta^{D}_{sk,w}B_e\right]\\
-&amp;\qquad\times1(C_e=s)1(\tau=k)+\varepsilon^{D}_{e\tau,w}.
+\ln P_{e\tau}&amp;=\text{Announcement FE}+\text{Big4 group × Event time FE}+\text{Big4 group × Trading date FE}\\
+&amp;\quad+\sum_{s\in\{b,g\}}\sum_{k\in K}\left[\beta^{D}_{sk,w}+\delta^{D}_{sk,w}Big4_e\right]\\
+&amp;\qquad\times1(NewsGroup_e=s)1(\tau=k)+\varepsilon^{D}_{e\tau,w}.
 \end{aligned}
 \]</span></p>
 <p><strong>本模型的基准：</strong> 相对各组自身中间消息的响应。</p>
@@ -1652,9 +1651,9 @@ K=\{-5,-4,-3,-2,0,1,2,3,4,5\}
 <h5 class="anchored" data-anchor-id="rolling-memo-full-es-a">A｜共同事件时间FE＋共同交易日FE</h5>
 <p><span class="math display">\[
 \begin{aligned}
-\ln P_{e\tau}&amp;=\alpha_{e,w}+\lambda^A_{\tau,w}+\mu^A_{d(e,\tau),w}\\
-&amp;\quad+\sum_{s\in\{b,g\}}\sum_{k\in K}\left[\beta^{A}_{sk,w}+\delta^{A}_{sk,w}B_e\right]\\
-&amp;\qquad\times1(C_e=s)1(\tau=k)+\varepsilon^{A}_{e\tau,w}.
+\ln P_{e\tau}&amp;=\text{Announcement FE}+\text{Event time FE}+\text{Trading date FE}\\
+&amp;\quad+\sum_{s\in\{b,g\}}\sum_{k\in K}\left[\beta^{A}_{sk,w}+\delta^{A}_{sk,w}Big4_e\right]\\
+&amp;\qquad\times1(NewsGroup_e=s)1(\tau=k)+\varepsilon^{A}_{e\tau,w}.
 \end{aligned}
 \]</span></p>
 <p><strong>本模型的基准：</strong> 共同中间消息事件时间路径约束下的模型响应。</p>
@@ -1687,9 +1686,9 @@ K=\{-5,-4,-3,-2,0,1,2,3,4,5\}
 <h5 class="anchored" data-anchor-id="rolling-memo-full-es-b">B｜审计组×事件时间FE＋共同交易日FE</h5>
 <p><span class="math display">\[
 \begin{aligned}
-\ln P_{e\tau}&amp;=\alpha_{e,w}+\lambda^B_{B_e,\tau,w}+\mu^B_{d(e,\tau),w}\\
-&amp;\quad+\sum_{s\in\{b,g\}}\sum_{k\in K}\left[\beta^{B}_{sk,w}+\delta^{B}_{sk,w}B_e\right]\\
-&amp;\qquad\times1(C_e=s)1(\tau=k)+\varepsilon^{B}_{e\tau,w}.
+\ln P_{e\tau}&amp;=\text{Announcement FE}+\text{Big4 group × Event time FE}+\text{Trading date FE}\\
+&amp;\quad+\sum_{s\in\{b,g\}}\sum_{k\in K}\left[\beta^{B}_{sk,w}+\delta^{B}_{sk,w}Big4_e\right]\\
+&amp;\qquad\times1(NewsGroup_e=s)1(\tau=k)+\varepsilon^{B}_{e\tau,w}.
 \end{aligned}
 \]</span></p>
 <p><strong>本模型的基准：</strong> 相对各组自身中间消息的响应。</p>
@@ -1722,9 +1721,9 @@ K=\{-5,-4,-3,-2,0,1,2,3,4,5\}
 <h5 class="anchored" data-anchor-id="rolling-memo-full-es-c">C｜共同事件时间FE＋审计组×交易日FE</h5>
 <p><span class="math display">\[
 \begin{aligned}
-\ln P_{e\tau}&amp;=\alpha_{e,w}+\lambda^C_{\tau,w}+\mu^C_{B_e,d(e,\tau),w}\\
-&amp;\quad+\sum_{s\in\{b,g\}}\sum_{k\in K}\left[\beta^{C}_{sk,w}+\delta^{C}_{sk,w}B_e\right]\\
-&amp;\qquad\times1(C_e=s)1(\tau=k)+\varepsilon^{C}_{e\tau,w}.
+\ln P_{e\tau}&amp;=\text{Announcement FE}+\text{Event time FE}+\text{Big4 group × Trading date FE}\\
+&amp;\quad+\sum_{s\in\{b,g\}}\sum_{k\in K}\left[\beta^{C}_{sk,w}+\delta^{C}_{sk,w}Big4_e\right]\\
+&amp;\qquad\times1(NewsGroup_e=s)1(\tau=k)+\varepsilon^{C}_{e\tau,w}.
 \end{aligned}
 \]</span></p>
 <p><strong>本模型的基准：</strong> 共同中间消息事件时间路径约束下的模型响应。</p>
@@ -1757,9 +1756,9 @@ K=\{-5,-4,-3,-2,0,1,2,3,4,5\}
 <h5 class="anchored" data-anchor-id="rolling-memo-full-es-d">D｜审计组×事件时间FE＋审计组×交易日FE</h5>
 <p><span class="math display">\[
 \begin{aligned}
-\ln P_{e\tau}&amp;=\alpha_{e,w}+\lambda^D_{B_e,\tau,w}+\mu^D_{B_e,d(e,\tau),w}\\
-&amp;\quad+\sum_{s\in\{b,g\}}\sum_{k\in K}\left[\beta^{D}_{sk,w}+\delta^{D}_{sk,w}B_e\right]\\
-&amp;\qquad\times1(C_e=s)1(\tau=k)+\varepsilon^{D}_{e\tau,w}.
+\ln P_{e\tau}&amp;=\text{Announcement FE}+\text{Big4 group × Event time FE}+\text{Big4 group × Trading date FE}\\
+&amp;\quad+\sum_{s\in\{b,g\}}\sum_{k\in K}\left[\beta^{D}_{sk,w}+\delta^{D}_{sk,w}Big4_e\right]\\
+&amp;\qquad\times1(NewsGroup_e=s)1(\tau=k)+\varepsilon^{D}_{e\tau,w}.
 \end{aligned}
 \]</span></p>
 <p><strong>本模型的基准：</strong> 相对各组自身中间消息的响应。</p>
@@ -1807,7 +1806,7 @@ UE=(EPS-F)/P_{pre}
 <p>使用原EPS、市场调整CAR、不缩尾。沿用冻结批次当时的重组排除：对完成重组年份<span class="math inline">\(c\)</span>，剔除披露自然年为c−1或<span class="math inline">\(c\)</span>的报告；这早于后续按报告财年修正的口径。此旧公司池没有新增“2012年前上市”的限制。它与当前“2012年前上市、全期曾用四大且不剔除重组”的公司池不同。</p>
 <p>三个窗口分别估计：</p>
 <p><span class="math display">\[
-CAR_{it}^{w}=\alpha_i+\lambda_t+\delta B_{it}+\beta UE_{it}+\theta(B_{it}\times UE_{it})+\gamma'X^c_{it}+[\eta'(UE_{it}\times X^c_{it})]+\varepsilon_{it}.
+CAR_{it}^{w}=\text{Firm FE}+\text{Fiscal year FE}+\delta Big4_{it}+\beta UE_{it}+\theta(Big4_{it}\times UE_{it})+\gamma'X^c_{it}+[\eta'(UE_{it}\times X^c_{it})]+\varepsilon_{it}.
 \]</span></p>
 <p><span class="math inline">\(X\)</span>为市值对数、MB和严格180天预测覆盖的1/N，在实际样本均值处中心化；方括号仅在全交互版加入。两版均有公司和财年FE，按公司聚类，同一公司池各列使用相同样本。核心系数<span class="math inline">\(\theta\)</span>是四大−非四大的ERC斜率差。</p>
 <div class="quarto-figure quarto-figure-center">
@@ -1918,7 +1917,7 @@ ES=surprise_{180}&gt;0.10
 <p><a href="tables/memo_three_decimals/good_news_reporting_quality.tex">LaTeX表格</a> · <a href="tables/memo_three_decimals/good_news_reporting_quality.pdf">PDF表格</a></p>
 <p><strong>全样本盈利持续性。</strong> ROA与ES回归均使用所有可用年报公告，包含好、中、坏消息，不限制股价是否完整，也不沿用上述好消息队列的三年追踪限制。分别估计：</p>
 <p><span class="math display">\[
-Z_{i,t+h}=\alpha_{j,t}+\beta Big4_{it}+\rho Z_{it}
+Z_{i,t+h}=\text{Industry × Fiscal year FE}+\beta Big4_{it}+\rho Z_{it}
 +\kappa\bigl(Big4_{it}\times Z_{it}\bigr)+X_{it}'\gamma+\varepsilon_{i,t+h},
 \qquad Z\in\{ROA,ES\},\quad h=1,2.
 \]</span></p>
@@ -2041,8 +2040,8 @@ Z_{i,t+h}=\alpha_{j,t}+\beta Big4_{it}+\rho Z_{it}
 <p><strong>最简单的公告前后比较没有发现显著的四大优势。</strong> 四大和非四大的好消息、中性消息四组，平均机构持股比例都下降了。比较“好消息相对中性消息”的变化，四大比非四大高0.065个百分点，但差异未在5%水平显著。这是略偏正向的相对表现，并不表示四大客户实际获得了净增持。</p>
 <p><strong>进一步问：超预期幅度更大或盈利能力更强时，四大客户能否获得更多机构持股？</strong> 我们分别使用ES和ROA，观察社保、汇金、证金、外资的合计持股，以及证券投资基金持股。每次公告都以公告前最近一个半年末为起点，跟踪之后六个半年末，比较持股比例相对起点的累计变化。例如2021年4月公告，以2020年末为起点，第二个观察时点是2021年末。回归模型为：</p>
 <p><span class="math display">\[
-\Delta Y_{ith}=\alpha_i+\lambda_{j,t,SOE_{i,t-1}}+\tau_{j,q(\mathrm{end}_{ith})}
-+\beta_hS_{it}+\gamma_hBig4_{it}+\theta_h(S_{it}\times Big4_{it})
+\Delta Y_{ith}=\text{Firm FE}+\text{Industry × Fiscal year × Prior ownership FE}+\text{Industry × End-quarter FE}
++\beta_hSignal_{it}+\gamma_hBig4_{it}+\theta_h(Signal_{it}\times Big4_{it})
 +X_{it}'\delta_h+\rho_hY_{i0}+\varepsilon_{ith}.
 \]</span></p>
 <p><span class="math inline">\(S\)</span>分别为ES／0.1或本次年报财年ROA／0.01，不同时放入。<span class="math inline">\(\theta_h\)</span>检验四大相对非四大的信号斜率差，四大总斜率为</p>
@@ -2095,8 +2094,8 @@ ES10=ES/0.1
 <p>已有两种简单规格：</p>
 <p><span class="math display">\[
 \begin{aligned}
-M1:\quad \Delta Y_{ith}&amp;=\delta_t+b_hES10_{it}+\varepsilon_{ith},\\
-M2:\quad \Delta Y_{ith}&amp;=\delta_t+\beta_hES10_{it}+\gamma_hBig4_{it}
+M1:\quad \Delta Y_{ith}&amp;=\text{Fiscal year FE}+b_hES10_{it}+\varepsilon_{ith},\\
+M2:\quad \Delta Y_{ith}&amp;=\text{Fiscal year FE}+\beta_hES10_{it}+\gamma_hBig4_{it}
 +\theta_h(ES10_{it}\times Big4_{it})+\varepsilon_{ith}.
 \end{aligned}
 \]</span></p>
@@ -2363,11 +2362,11 @@ M2:\quad \Delta Y_{ith}&amp;=\delta_t+\beta_hES10_{it}+\gamma_hBig4_{it}
 </div>
 <p><strong>一阶段。</strong></p>
 <p><span class="math display">\[
-D_{it}=\alpha_i+\lambda_t+\pi Z_{it}+X_{it}'\gamma+v_{it}
+Big4_{it}=\text{Firm FE}+\text{Year FE}+\pi Z_{it}+X_{it}'\gamma+v_{it}
 \]</span></p>
 <p><strong>二阶段。</strong></p>
 <p><span class="math display">\[
-Y_{it}=\alpha_i+\lambda_t+\beta D_{it}+X_{it}'\theta+\varepsilon_{it}
+Y_{it}=\text{Firm FE}+\text{Year FE}+\beta Big4_{it}+X_{it}'\theta+\varepsilon_{it}
 \]</span></p>
 <p>每列分别用单个距离指标<span class="math inline">\(Z\)</span>工具化当年四大身份<span class="math inline">\(D\)</span>。<span class="math inline">\(X\)</span>为规模、杠杆、亏损、ROA、Z-score、杠杆变化、报告滞后、经营现金流和年龄及各自缺失标记；公司与年份固定效应，公司聚类。</p>
 <figure class="latex-table figure" style="overflow-x:auto;">
@@ -2401,7 +2400,7 @@ Y_{it}=\alpha_i+\lambda_t+\beta D_{it}+X_{it}'\theta+\varepsilon_{it}
 <p>沿用安达信检验框架，固定2008财年四大客户身份，对每个窗口分别估计：</p>
 <p><span class="math display">\[
 CAR_{i,w}=\alpha_w+\beta_w Big4_{i,2008}
-+\gamma_{\mathrm{行业}(i),w}+\varepsilon_{i,w},
++\text{Industry FE}+\varepsilon_{i,w},
 \qquad CAR_{i,w}=\sum_{t\in w}(r_{it}-r_{mt}).
 \]</span></p>
 <p><span class="math inline">\(r_{it}\)</span>为公司日收益率，<span class="math inline">\(r_{mt}\)</span>为对应市场日收益率；单日窗口的<span class="math inline">\(CAR\)</span>即当天异常收益。<span class="math inline">\(Big4_{i,2008}\)</span>表示公司2008财年由四大审计，比较组为非四大客户。样本为现有审计面板中的A股公司，各窗口保留行情完整的公司，公司等权、不缩尾。回归控制行业固定效应，无额外控制变量，采用HC1稳健标准误、不聚类。表中收益以百分比、组间系数以百分点表示。</p>

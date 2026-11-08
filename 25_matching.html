@@ -302,7 +302,7 @@ R_t^{\,s}=\frac{\#\{\text{eligible type-}s\text{ links retained in }t+1\}}
 <p><a href="#full-10_matching-1">累计匹配全部六项统计</a> · <a href="#full-10_matching-6">配对稳定性完整分析</a> · <a href="#full-10_matching-4">匹配模型与识别诊断</a></p>
 <p><span id="full-10_matching-1"></span></p>
 <p><span id="settings-10_matching"></span></p>
-<p><strong>统计与回归设定。</strong> 第 1 节累计配对和第 6 节保留率为描述统计，不适用回归控制、FE 或标准误；其主体、分母和缺失处理分别列示。当前 <code>44_triadic_sorting_blm.do</code> 的热图实际吸收“配对类型”和“年份”两个 FE；方程中的 <span class="math inline">\(\eta_{kl}+\lambda_t\)</span> 与命令一致。代码控制 <code>size</code>、<code>roa</code>、<code>lev</code>，按客户聚类。历史图与当前脚本的版本一致性、估计年份和 N 尚待核验，因此仍按旧版描述诊断展示。五年滚动秩回归没有额外控制或 FE，使用 OLS 常规标准误；它不是严格的 Spearman 统计量。AKM 有限流动诊断的样本门槛、归一化和各图有效 N 须与对应输出继续核对。</p>
+<p><strong>统计与回归设定。</strong> 第 1 节累计配对和第 6 节保留率为描述统计，不适用回归控制、FE 或标准误；其主体、分母和缺失处理分别列示。当前 <code>44_triadic_sorting_blm.do</code> 的热图实际吸收“配对类型”和“年份”两个 FE；方程中的 <span class="math inline">\(\text{Client type × Audit firm type FE}+\text{Year FE}\)</span> 与命令一致。代码控制 <code>size</code>、<code>roa</code>、<code>lev</code>，按客户聚类。历史图与当前脚本的版本一致性、估计年份和 N 尚待核验，因此仍按旧版描述诊断展示。五年滚动秩回归没有额外控制或 FE，使用 OLS 常规标准误；它不是严格的 Spearman 统计量。AKM 有限流动诊断的样本门槛、归一化和各图有效 N 须与对应输出继续核对。</p>
 </section>
 <section id="本页结论与证据边界" class="level2">
 <h2 class="anchored" data-anchor-id="本页结论与证据边界">1. 本页结论与证据边界</h2>
@@ -341,7 +341,7 @@ R_t^{\,s}=\frac{\#\{\text{eligible type-}s\text{ links retained in }t+1\}}
 <p>传统 AKM 式两向固定效应把结果写作可加形式：</p>
 <p><strong>回归／统计设定。</strong> 解释排序与识别的差异，不把样本内 AKM 排序当成外生质量处理。 <a href="#settings-10_matching">变量与回归设定</a>。</p>
 <p><span class="math display">\[
-Y_{ift}=X_{it}'\gamma+\alpha_i+\psi_f+\lambda_t+\varepsilon_{ift},
+Y_{ift}=X_{it}'\gamma+\text{Firm FE}+\text{Audit firm FE}+\text{Year FE}+\varepsilon_{ift},
 \]</span></p>
 <p>其中 <span class="math inline">\(i\)</span> 是客户、<span class="math inline">\(f\)</span> 是事务所、<span class="math inline">\(t\)</span> 是年度，<span class="math inline">\(X_{it}\)</span> 为客户控制变量。若将事务所替换为签字审计师 <span class="math inline">\(a\)</span>，可估计客户—审计师或事务所—审计师的双边版本。这类模型要求异质性以固定效应的线性可加方式进入；“某类客户与某类事务所”的额外配对项需要扩展模型刻画。</p>
 <p>审计师、事务所之间的流动又相对稀少。有限流动会削弱固定效应和其相关系数的精确度，所以负的或正的 AKM 相关系数本身不能直接被解释为负向或正向排序。下文据此检查估计对网络连接和样本覆盖的敏感性。</p>
@@ -383,10 +383,10 @@ Y_{ift}=X_{it}'\gamma+\alpha_i+\psi_f+\lambda_t+\varepsilon_{ift},
 <p>对客户类型 <span class="math inline">\(k\)</span>、事务所类型 <span class="math inline">\(l\)</span> 与 CPA 类型 <span class="math inline">\(m\)</span>，正式的分组匹配模型希望识别配对项：</p>
 <p><strong>回归／统计设定。</strong> 热图方程采用配对类型 FE 加年份 FE；当前代码控制 size、roa、lev，公司聚类。旧图有效 N、年份与代码版本待核验，原有“配对×年份”表述已注明核对差异。 <a href="#settings-10_matching">变量与回归设定</a>。</p>
 <p><span class="math display">\[
-Y_{ifat}=X_{it}'\gamma+\lambda_t+\eta_{kl}+u_{ifat},\qquad
-Y_{ifat}=X_{it}'\gamma+\lambda_t+\eta_{km}+u_{ifat}.
+Y_{ifat}=X_{it}'\gamma+\text{Year FE}+\text{Client type × Audit firm type FE}+u_{ifat},\qquad
+Y_{ifat}=X_{it}'\gamma+\text{Year FE}+\text{Client type × Auditor type FE}+u_{ifat}.
 \]</span></p>
-<p><span class="math inline">\(\eta_{kl}\)</span> 与 <span class="math inline">\(\eta_{km}\)</span> 是类型配对后的条件均值差异；用于描述配对类型与结果之间的关联。回归分别吸收配对类型和年度固定效应，控制变量为规模、ROA 和杠杆，标准误按客户聚类。下一轮正式运行需要把三方共同模型、分组形成窗口和交叉验证规则固定下来。</p>
+<p><span class="math inline">\(\text{Client type × Audit firm type FE}\)</span> 与 <span class="math inline">\(\text{Client type × Auditor type FE}\)</span> 是类型配对后的条件均值差异；用于描述配对类型与结果之间的关联。回归分别吸收配对类型和年度固定效应，控制变量为规模、ROA 和杠杆，标准误按客户聚类。下一轮正式运行需要把三方共同模型、分组形成窗口和交叉验证规则固定下来。</p>
 <p><strong>启发式口径</strong></p>
 <p><img src="figures/sorting/blm_heatmap_client_firm_heuristic.png" class="img-fluid" style="width:100.0%" data-fig-cap="启发式客户 × 事务所配对图：颜色是控制客户财务变量和年度后的配对固定效应，不是质量处理效应。" alt="启发式客户与事务所类型配对的条件固定效应热图。"></p>
 <p><img src="figures/sorting/blm_heatmap_client_cpa_heuristic.png" class="img-fluid" style="width:100.0%" data-fig-cap="启发式客户 × CPA 配对图：同样只作条件关联展示。" alt="启发式客户与 CPA 类型配对的条件固定效应热图。"></p>

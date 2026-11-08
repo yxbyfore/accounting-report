@@ -296,9 +296,9 @@ window.Quarto = {
 <p><strong>样本与设定。</strong> 观测为公司—年，TWFE 吸收公司和年份固定效应、按公司聚类，未加额外财务控制；基期为事件前一年，区间为 95%。B/H 输入处理公司分别为 91、161；外资图实际控制人与控股股东分别为 303、340；分所本省及邻省口径为 868（校对后事件年输入计数）。以上均为输入计数，逐回归实际年份和有效处理数待核验。外资关系合并两端尾部，跨境上市与分所 TWFE 剔除处理公司窗口外观测；H 股、控股股东及本省分所口径的部分处理前系数偏离零。</p>
 <p><strong>基准事件研究设定（Event Study Specification）：</strong></p>
 <p><span class="math display">\[
-Y_{it} = \sum_{k \in \mathcal{K}, \, k \ne -1} \beta_k \mathbf{1}\{t - T_i = k\} + \alpha_i + \lambda_t + \varepsilon_{it}.
+Y_{it} = \sum_{k \in \mathcal{K}, \, k \ne -1} \beta_k \mathbf{1}\{t - T_i = k\} + \text{Firm FE} + \text{Year FE} + \varepsilon_{it}.
 \]</span></p>
-<p>其中 <span class="math inline">\(T_i\)</span> 为公司 <span class="math inline">\(i\)</span> 首次发生特定事件（B/H 股上市、首次出现外资控制关系、四大分所进入本省或邻省）的年份；<span class="math inline">\(Y_{it}\)</span> 为公司 <span class="math inline">\(i\)</span> 在第 <span class="math inline">\(t\)</span> 年聘任目标事务所的指示变量，主线关注境内四大（<span class="math inline">\(Big4_{it}\)</span>），并以本土八大（<span class="math inline">\(Local8_{it}\)</span>）作为替代品参照；<span class="math inline">\(\alpha_i\)</span> 为公司固定效应，<span class="math inline">\(\lambda_t\)</span> 为年份固定效应。</p>
+<p>其中 <span class="math inline">\(T_i\)</span> 为公司 <span class="math inline">\(i\)</span> 首次发生特定事件（B/H 股上市、首次出现外资控制关系、四大分所进入本省或邻省）的年份；<span class="math inline">\(Y_{it}\)</span> 为公司 <span class="math inline">\(i\)</span> 在第 <span class="math inline">\(t\)</span> 年聘任目标事务所的指示变量，主线关注境内四大（<span class="math inline">\(Big4_{it}\)</span>），并以本土八大（<span class="math inline">\(Local8_{it}\)</span>）作为替代品参照；<span class="math inline">\(\text{Firm FE}\)</span> 为公司固定效应，<span class="math inline">\(\text{Year FE}\)</span> 为年份固定效应。</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="figures/market_entry/bh_listing_twfe.png" class="img-fluid figure-img" style="width:100.0%"></p>
@@ -328,12 +328,12 @@ Y_{it} = \sum_{k \in \mathcal{K}, \, k \ne -1} \beta_k \mathbf{1}\{t - T_i = k\}
 <p>核心被解释变量为公司 <span class="math inline">\(i\)</span> 在年份 <span class="math inline">\(t\)</span> 是否聘用境内四大事务所（<span class="math inline">\(Big4_{it} \in \{0, 1\}\)</span>）。为识别审计师选择是否存在对本土优质事务所的替代效应，我们同时构建是否聘用本土八大事务所的指示变量（<span class="math inline">\(Local8_{it} \in \{0, 1\}\)</span>）。</p>
 <p>基准静态模型设定为多期双向固定效应模型：</p>
 <p><span class="math display">\[
-Y_{it} = \beta D_{it} + \alpha_i + \lambda_t + \varepsilon_{it},
+Y_{it} = \beta D_{it} + \text{Firm FE} + \text{Year FE} + \varepsilon_{it},
 \]</span></p>
 <p>其中 <span class="math inline">\(D_{it}\)</span> 表示企业是否已发生对应的上市、控制权或分所进入事件，<span class="math inline">\(\beta\)</span> 捕捉事件后同一企业聘用目标事务所概率的平均位移。</p>
 <p>为刻画动态调整路径并检验平行趋势（parallel trends），我们估计相对事件年份 <span class="math inline">\(k\)</span> 的动态事件研究方程：</p>
 <p><span class="math display">\[
-Y_{it} = \sum_{k \ne -1} \beta_k \mathbf{1}\{t - T_i = k\} + \alpha_i + \lambda_t + \varepsilon_{it}.
+Y_{it} = \sum_{k \ne -1} \beta_k \mathbf{1}\{t - T_i = k\} + \text{Firm FE} + \text{Year FE} + \varepsilon_{it}.
 \]</span></p>
 <p>以事件发生前一年（<span class="math inline">\(k = -1\)</span>）作为基期。图示中展示估计系数及其 95% 置信区间。处理前系数（<span class="math inline">\(k &lt; -1\)</span>）用于检验处理前趋势（pre-trends）是否平稳；处理后系数（<span class="math inline">\(k \ge 0\)</span>）刻画采用效应的持续性与动态演变。基准回归吸收公司与年份固定效应，不加入可能受国际化事件影响的时变财务控制变量。</p>
 <p><span id="full-02_adoption-2"></span></p>
@@ -408,7 +408,7 @@ H 股上市队列的处理公司数与处理前联合检验 · <a href="tables/a
 <h3 class="anchored" data-anchor-id="wto-入世冲击与四大采用">4.2 WTO 入世冲击与四大采用</h3>
 <p>中国于 2001 年 12 月加入世界贸易组织（WTO），构成全国范围内的制度性开放冲击。我们采用 1998—2010 年非平衡面板，以 2001 年为基期，构建外向型地理暴露的交互模型：</p>
 <p><span class="math display">\[
-Big4_{it} = \alpha_i + \lambda_t + \sum_{s=1998, \, s \ne 2001}^{2010} \beta_s Treat_i \times \mathbf{1}\{t=s\} + \varepsilon_{it}.
+Big4_{it} = \text{Firm FE} + \text{Year FE} + \sum_{s=1998, \, s \ne 2001}^{2010} \beta_s Treat_i \times \mathbf{1}\{t=s\} + \varepsilon_{it}.
 \]</span></p>
 <p>其中 <span class="math inline">\(Treat_i\)</span> 基于上市公司注册地划分：沿海组包括辽宁、河北、天津、山东、江苏、上海、浙江、福建、广东、广西、海南。<span class="math inline">\(\beta_s\)</span> 衡量沿海暴露组相对于内陆企业在各年份四大聘用率的相对差距变化。</p>
 <figure class="latex-table figure">

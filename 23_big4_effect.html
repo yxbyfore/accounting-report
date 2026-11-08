@@ -382,7 +382,7 @@ window.Quarto = {
 <p>四大客户的严格综合失败率为2.26%，低于本土八大的6.47%及Other的7.84%。但应计及真实盈余管理指标没有一致优势，质量差异主要体现在实际失败指标。四大收费存在明显溢价，客户市值也更高，服务改善与客户构成在后续设计中分别考察。</p>
 <p>首先比较四大、本土八大和其他事务所的失败率及财报质量；收费与市值结果见<a href="#big4-fee-facts">1.2节</a>。财报质量差异采用四大dummy回归；表中分别使用行业×年份FE及firm FE＋year FE，费用取<span class="math inline">\(\log(1+AuditFee)\)</span>，市值取log。</p>
 <p><span class="math display">\[
-Y_{it}=\text{firm FE}+\text{year FE}+\beta Big4_{it}+\gamma^{\prime}X_{it}+\varepsilon_{it}.
+Y_{it}=\text{Firm FE}+\text{Year FE}+\beta Big4_{it}+\gamma^{\prime}X_{it}+\varepsilon_{it}.
 \]</span></p>
 <figure class="latex-table figure" style="overflow-x:auto;">
 <img src="tables/big4_evidence/audit_failure_probabilities.png" style="width:499px;max-width:none;height:auto;display:block;" loading="lazy" alt="audit_failure_probabilities" class="figure-img">
@@ -445,7 +445,7 @@ Y_{it}=\text{firm FE}+\text{year FE}+\beta Big4_{it}+\gamma^{\prime}X_{it}+\vare
 <p>以下精选图保留历史仅控制主项的ERC版本。<a href="#market-unmatched-baseline">完整未匹配基准</a>表明，加入客户特征×UE后，当前结果尚未形成跨窗口稳定的四大优势。历史原报EPS修复版中，三个公告窗口的ERC差值分别为0.116073（SE=0.044493，p=0.0091）、0.160490（SE=0.056745，p=0.0047）和0.132594（SE=0.058719，p=0.0240）。按照<a href="https://bpb-us-e2.wpmucdn.com/sites.uci.edu/dist/e/360/files/2012/08/Perceived-Auditor-Quality-and-the-Earnings-Response-Coefficient.pdf">Teoh、Wong（1993）</a>的审计与ERC解释，这一结果与投资者赋予四大客户盈利信息更高的感知可信度一致。</p>
 <p>UE为实际EPS减公告前180天预测中位数，再除以公告前一交易日股价；Y为各公告窗口的市场调整CAR。表报告Big4×UE，即四大−非四大的斜率差。</p>
 <p><span class="math display">\[
-CAR_{it}=\text{firm FE}+\text{year FE}+\delta Big4_{it}+\beta UE_{it}+\theta(Big4_{it}\times UE_{it})+\gamma^{\prime}X_{it}+\varepsilon_{it}.
+CAR_{it}=\text{Firm FE}+\text{Year FE}+\delta Big4_{it}+\beta UE_{it}+\theta(Big4_{it}\times UE_{it})+\gamma^{\prime}X_{it}+\varepsilon_{it}.
 \]</span></p>
 <figure class="latex-table figure" style="overflow-x:auto;">
 <img src="tables/regression_columns_20261024/result_00.png?v=20261025_3dp" style="max-width:none;height:auto;display:block;" loading="lazy" alt="result_00" width="702" class="figure-img">
@@ -470,7 +470,7 @@ CAR_{it}=\text{firm FE}+\text{year FE}+\delta Big4_{it}+\beta UE_{it}+\theta(Big
 <p>未来四大客户在进入前已有规模、亏损及风险差异。当前四大客户获得MAO后次年退出概率显著较高，非四大客户获得MAO后次年进入概率较低。这些结果支持客户构成与风险调整参与形成四大客户组合，退出发起方需要结合变更公告核查。</p>
 <p>第一张表比较未来进入者与始终非四大客户的事前特征；第二张表考察当前客户收到意见或风险公告后的次年退出／进入。两项比较分别刻画事前构成与后续组合调整。</p>
 <p><span class="math display">\[
-NextBig4_{it}=\text{firm FE}+\text{industry}\times\text{year FE}+\beta Signal_{it}+\gamma^{\prime}X_{it}+\varepsilon_{it}.
+NextBig4_{it}=\text{Firm FE}+\text{industry}\times\text{Year FE}+\beta Signal_{it}+\gamma^{\prime}X_{it}+\varepsilon_{it}.
 \]</span></p>
 <figure class="latex-table figure" style="overflow-x:auto;">
 <img src="tables/big4_evidence/pre_entry_characteristics.png" style="width:540px;max-width:none;height:auto;display:block;" loading="lazy" alt="pre_entry_characteristics" class="figure-img">
@@ -492,7 +492,7 @@ NextBig4_{it}=\text{firm FE}+\text{industry}\times\text{year FE}+\beta Signal_{i
 <p>换入四大后，Fin重述在未匹配DID和匹配DID中均下降。扩展至[−4,+4]的加权PSM-DID中，Fin及Broad（Raw）未预警重述概率分别下降10.04个百分点（p&lt;0.001）和8.29个百分点（p=0.044）；事前系数联合检验p值为0.938和0.619，未发现显著事前趋势。Fin的逐期下降更连贯，是审计服务部分最清楚的动态证据。</p>
 <p>Y为各定义下的重述、违规及未预警综合失败dummy。换入与始终非四大比较，换出与始终四大比较；匹配DID使用既有事前客户特征与匹配权重。普通DID使用firm FE与行业×年份FE；下式为匹配后的stacked DID。</p>
 <p><span class="math display">\[
-Y_{ict}=\text{cohort}\times\text{firm FE}+\text{cohort}\times\text{industry}\times\text{year FE}+\tau(Treated_{ic}\times Post_{ct})+\gamma^{\prime}X_{it}+\varepsilon_{ict}.
+Y_{ict}=\text{cohort}\times\text{Firm FE}+\text{cohort}\times\text{industry}\times\text{Year FE}+\tau(Treated_{ic}\times Post_{ct})+\gamma^{\prime}X_{it}+\varepsilon_{ict}.
 \]</span></p>
 <figure class="latex-table figure" style="overflow-x:auto;">
 <img src="tables/big4_regression_columns/switching_failure_definitions.png?v=20261025_3dp" style="width:703px;max-width:none;height:auto;display:block;" loading="lazy" alt="switching_failure_definitions" class="figure-img">
@@ -510,7 +510,7 @@ Y_{ict}=\text{cohort}\times\text{firm FE}+\text{cohort}\times\text{industry}\tim
 <p>基准加权PSM-DID的Fin未预警重述概率下降9.11个百分点（p=0.004），Strict综合失败也显著下降；Broad重述系数为负但不显著。匹配后Fin改善仍保留，是这一窗口最清楚的质量结果。</p>
 <p>动态回归将上式中的平均处理项替换为换所相对年份交互项，以换所前一年为基准：</p>
 <p><span class="math display">\[
-Y_{ict}=\text{cohort}\times\text{firm FE}+\text{cohort}\times\text{industry}\times\text{year FE}+\sum_{k=-4,\,k\ne-1}^{4}\tau_k\bigl(Treated_{ic}\times\mathbf{1}\{t-c=k\}\bigr)+\gamma^{\prime}X_{it}+\varepsilon_{ict}.
+Y_{ict}=\text{cohort}\times\text{Firm FE}+\text{cohort}\times\text{industry}\times\text{Year FE}+\sum_{k=-4,\,k\ne-1}^{4}\tau_k\bigl(Treated_{ic}\times\mathbf{1}\{t-c=k\}\bigr)+\gamma^{\prime}X_{it}+\varepsilon_{ict}.
 \]</span></p>
 <p>下列两张既有图均采用[−4,+4]窗口，上排为Fin，下排为Broad（Raw），左列为未预警综合失败，右列为未预警重述。未匹配与匹配回归分别使用各自样本；加权匹配回归包含1,763条堆叠观测、125家处理公司和107家对照公司，标准误按公司聚类。</p>
 <figure class="figure">
@@ -533,7 +533,7 @@ Y_{ict}=\text{cohort}\times\text{firm FE}+\text{cohort}\times\text{industry}\tim
 <p>其他盈余质量指标没有一致平均改善；收费则随身份明显变化，换入四大后log费用上升、换出后下降。费用结果说明四大服务存在价格溢价，但质量改善的证据仍主要来自重述。</p>
 <p>分别以异常应计／REM的绝对值、<span class="math inline">\(\log(1+AuditFee)\)</span>及市值log为Y，比较换入和换出四大后的变化；控制项按各类结果设置。</p>
 <p><span class="math display">\[
-Y_{it}=\text{firm FE}+\text{industry}\times\text{year FE}+\tau DID_{it}+\gamma^{\prime}X_{it}+\varepsilon_{it}.
+Y_{it}=\text{Firm FE}+\text{industry}\times\text{Year FE}+\tau DID_{it}+\gamma^{\prime}X_{it}+\varepsilon_{it}.
 \]</span></p>
 <figure class="latex-table figure" style="overflow-x:auto;">
 <img src="tables/big4_regression_columns/13_earnings_quality_full_p02.png?v=20261025_3dp" style="width:703px;max-width:none;height:auto;display:block;" alt="Big 4 Auditors and Earnings Quality" loading="lazy" class="figure-img">
@@ -555,7 +555,7 @@ Big 4 Auditors, Audit Fees, and Market Value · <a href="tables/big4_regression_
 <p>Fin实际重述概率下降8.01个百分点（p=0.015），并非只有未预警重述下降；MAO总体变化不显著。这表明主要结果包含实际失败减少，不能仅由审计意见改变解释。</p>
 <p>同一匹配DID比较实际失败及未预警、已预警分量，检验下降是否仅来自审计意见变化。</p>
 <p><span class="math display">\[
-Y_{ict}=\text{firm}\times\text{cohort FE}+\text{cohort}\times\text{industry}\times\text{year FE}+\tau(G_{ic}\times Post_{ct})+\gamma'X_{it}+\varepsilon_{ict}.
+Y_{ict}=\text{firm}\times\text{Cohort FE}+\text{cohort}\times\text{industry}\times\text{Year FE}+\tau(G_{ic}\times Post_{ct})+\gamma'X_{it}+\varepsilon_{ict}.
 \]</span></p>
 <p><span class="math inline">\(G\)</span>为进入四大的处理组，<span class="math inline">\(Post\)</span>从进入财年取1，九项控制及mis_dummy、公司聚类，窗口为[−4,+4]。</p>
 <figure class="latex-table figure" style="overflow-x:auto;">
@@ -571,7 +571,7 @@ Y_{ict}=\text{firm}\times\text{cohort FE}+\text{cohort}\times\text{industry}\tim
 <p>允许客户换入后再次退出四大，Fin与Raw重述的下降仍显著，说明结果并非完全由事后持续留任的样本要求驱动。</p>
 <p>沿用换入DID，允许进入四大后再次退出，比较留任限制是否驱动结果。</p>
 <p><span class="math display">\[
-Y_{ict}=\text{firm}\times\text{cohort FE}+\text{cohort}\times\text{industry}\times\text{year FE}+\tau(G_{ic}\times Post_{ct})+\gamma'X_{it}+\varepsilon_{ict}.
+Y_{ict}=\text{firm}\times\text{Cohort FE}+\text{cohort}\times\text{industry}\times\text{Year FE}+\tau(G_{ic}\times Post_{ct})+\gamma'X_{it}+\varepsilon_{ict}.
 \]</span></p>
 <p><span class="math inline">\(G\)</span>为进入四大的处理组，<span class="math inline">\(Post\)</span>从进入财年取1，九项控制及mis_dummy、公司聚类，窗口为[−4,+4]。</p>
 <figure class="latex-table figure" style="overflow-x:auto;">
@@ -587,7 +587,7 @@ Y_{ict}=\text{firm}\times\text{cohort FE}+\text{cohort}\times\text{industry}\tim
 <p>这一检验基于换入四大之前已经能观察到的财务状况和风险历史匹配。原来的PSM主要比较换入前一年的客户特征；这里再比较此前三年的财务表现，以及进入前已经公告的重述和违规记录，为进入四大的公司寻找此前状况相近的非四大对照。未来才披露的违规或重述不用于匹配。</p>
 <p>下表只保留原匹配与新增匹配都包含的公司年度，用各自的匹配权重估计DID，比较两种做法在共同样本中的结果。</p>
 <p><span class="math display">\[
-Y_{ict}=\text{firm}\times\text{cohort FE}+\text{cohort}\times\text{industry}\times\text{year FE}+\tau(G_{ic}\times Post_{ct})+\gamma'X_{it}+\varepsilon_{ict}.
+Y_{ict}=\text{firm}\times\text{Cohort FE}+\text{cohort}\times\text{industry}\times\text{Year FE}+\tau(G_{ic}\times Post_{ct})+\gamma'X_{it}+\varepsilon_{ict}.
 \]</span></p>
 <p><span class="math inline">\(G\)</span>为进入四大的处理组，<span class="math inline">\(Post\)</span>从进入财年取1，九项控制及mis_dummy、公司聚类，窗口为[−4,+4]。</p>
 <figure class="latex-table figure" style="overflow-x:auto;">
@@ -603,7 +603,7 @@ Y_{ict}=\text{firm}\times\text{cohort FE}+\text{cohort}\times\text{industry}\tim
 <p>供应商冲击对四大采用的第一阶段有统计支持，但KP F为4.515；并集组KP F为0.970。这些第一阶段强度限制了2SLS的精度和因果解释。</p>
 <p>供应链冲击用于预测四大采用，再估计四大对审计失败dummy的作用。</p>
 <p><span class="math display">\[
-Big4_{it}=\text{firm FE}+\text{industry}\times\text{year FE}+\pi Z_{it}+\eta^{\prime}X_{it}+u_{it},\qquad Y_{it}=\text{firm FE}+\text{industry}\times\text{year FE}+\beta\widehat{Big4}_{it}+\gamma^{\prime}X_{it}+\varepsilon_{it}.
+Big4_{it}=\text{Firm FE}+\text{industry}\times\text{Year FE}+\pi Z_{it}+\eta^{\prime}X_{it}+u_{it},\qquad Y_{it}=\text{Firm FE}+\text{industry}\times\text{Year FE}+\beta\widehat{Big4}_{it}+\gamma^{\prime}X_{it}+\varepsilon_{it}.
 \]</span></p>
 <figure class="latex-table figure" style="overflow-x:auto;">
 <img src="tables/big4_regression_columns/supplychain_reduced_form_iv_p01.png?v=20261025_3dp" style="width:703px;max-width:none;height:auto;display:block;" loading="lazy" alt="supplychain_reduced_form_iv_p01" class="figure-img">
@@ -618,7 +618,7 @@ Big4_{it}=\text{firm FE}+\text{industry}\times\text{year FE}+\pi Z_{it}+\eta^{\p
 <p>收购提供了区别于主动换所的身份变化，但可用处理客户有限，现有结果未显示稳定的全面财报质量改善。它补充了准实验检验，主要质量证据仍来自换所DID与PSM-DID。</p>
 <p>固定2001财年大华客户，按2002财年转入构造处理；表中同时列第一阶段、DID与IV。</p>
 <p><span class="math display">\[
-Big4_{it}=\text{firm FE}+\text{industry}\times\text{year FE}+\pi Z_{it}+\eta^{\prime}X_{it}+u_{it},\qquad Y_{it}=\text{firm FE}+\text{industry}\times\text{year FE}+\beta\widehat{Big4}_{it}+\gamma^{\prime}X_{it}+\varepsilon_{it}.
+Big4_{it}=\text{Firm FE}+\text{industry}\times\text{Year FE}+\pi Z_{it}+\eta^{\prime}X_{it}+u_{it},\qquad Y_{it}=\text{Firm FE}+\text{industry}\times\text{Year FE}+\beta\widehat{Big4}_{it}+\gamma^{\prime}X_{it}+\varepsilon_{it}.
 \]</span></p>
 <figure class="latex-table figure" style="overflow-x:auto;">
 <img src="tables/ey_dahua_causal/ey_dahua_audit_outcomes.png?v=20261025_3dp" style="width:668px;max-width:none;height:auto;display:block;" loading="lazy" alt="ey_dahua_audit_outcomes" class="figure-img">
@@ -633,7 +633,7 @@ Big4_{it}=\text{firm FE}+\text{industry}\times\text{year FE}+\pi Z_{it}+\eta^{\p
 <p>保持人员—客户关系后，全部批次的主要失败结果不显著，且处理客户支持较少。现有结果尚未形成独立于人员与客户关系的全面四大平台改善证据。</p>
 <p>固定既有人员—客户关系，在同一关系转入四大后比较审计结果。</p>
 <p><span class="math display">\[
-Y_{rct}=\text{relationship}\times\text{cohort FE}+\text{cohort}\times\text{industry}\times\text{year FE}+\tau(Treated_{rc}\times Post_{ct})+\gamma^{\prime}X_{it}+\varepsilon_{rct}.
+Y_{rct}=\text{relationship}\times\text{Cohort FE}+\text{cohort}\times\text{industry}\times\text{Year FE}+\tau(Treated_{rc}\times Post_{ct})+\gamma^{\prime}X_{it}+\varepsilon_{rct}.
 \]</span></p>
 <figure class="latex-table figure" style="overflow-x:auto;">
 <img src="tables/monday_existing_results/same_partner_did.png?v=20261025_3dp" style="width:703px;max-width:none;height:auto;display:block;" loading="lazy" alt="same_partner_did" class="figure-img">
@@ -648,7 +648,7 @@ Y_{rct}=\text{relationship}\times\text{cohort FE}+\text{cohort}\times\text{indus
 <p>匹配后，三个CAR窗口的Big4×UE分别为0.144427、0.199523和0.190738，均p&lt;0.001。调整可观察客户特征后，四大客户仍具有更高的盈利反应系数，与市场赋予其盈利信息更高的感知可信度一致。</p>
 <p>在可估计ERC的共同候选样本匹配四大与非四大客户，保留匹配权重后估计Big4×UE。</p>
 <p><span class="math display">\[
-CAR_{it}=\text{firm FE}+\text{year FE}+\delta Big4_{it}+\beta UE_{it}+\theta(Big4_{it}\times UE_{it})+\gamma'X_{it}+\varepsilon_{it}.
+CAR_{it}=\text{Firm FE}+\text{Year FE}+\delta Big4_{it}+\beta UE_{it}+\theta(Big4_{it}\times UE_{it})+\gamma'X_{it}+\varepsilon_{it}.
 \]</span></p>
 <p>以匹配权重估计，X为市值、MB及预测覆盖，按公司聚类。最终样本4,552条事件、774家公司；三个窗口共用样本。</p>
 <figure class="latex-table figure" style="overflow-x:auto;">
@@ -664,7 +664,7 @@ CAR_{it}=\text{firm FE}+\text{year FE}+\delta Big4_{it}+\beta UE_{it}+\theta(Big
 <p>三个客户定义均未获得显著负向组间CAR，因此中国样本中的这次声誉事件尚未提供明确的市场认证因果证据。</p>
 <p>Y为2002年1月11、14、15日三日市场调整CAR；分别比较安达信与Other Non-Big4、Big4。</p>
 <p><span class="math display">\[
-CAR_i=\text{industry FE}+\delta_A Andersen_i+\delta_B Big4_i+\varepsilon_i.
+CAR_i=\text{Industry FE}+\delta_A Andersen_i+\delta_B Big4_i+\varepsilon_i.
 \]</span></p>
 <figure class="latex-table figure" style="overflow-x:auto;">
 <img src="tables/monday_existing_results/andersen_jan2002.png?v=20261025_3dp" style="width:703px;max-width:none;height:auto;display:block;" loading="lazy" alt="andersen_jan2002" class="figure-img">
@@ -679,7 +679,7 @@ CAR_i=\text{industry FE}+\delta_A Andersen_i+\delta_B Big4_i+\varepsilon_i.
 <p>转入四大后的市场消息斜率未形成稳健改善证据，交互工具也较弱。市场部分较明确的发现是ERC及匹配后的ERC优势；收购事件的认证效应仍待识别。</p>
 <p>检验转入后的消息反应斜率变化，分别使用分析师盈利意外和EPS变化代理。</p>
 <p><span class="math display">\[
-CAR_{it}=\text{firm FE}+\text{year FE}+\tau(Treated_i\times Post_t\times News_{it})+\text{lower-order terms}+\gamma^{\prime}X_{it}+\varepsilon_{it}.
+CAR_{it}=\text{Firm FE}+\text{Year FE}+\tau(Treated_i\times Post_t\times News_{it})+\text{lower-order terms}+\gamma^{\prime}X_{it}+\varepsilon_{it}.
 \]</span></p>
 <figure class="latex-table figure" style="overflow-x:auto;">
 <img src="tables/regression_columns_20261024/result_03_ue_price.png?v=20261025_3dp" style="max-width:none;height:auto;display:block;" loading="lazy" alt="result_03_ue_price" width="914" class="figure-img">
@@ -1509,7 +1509,7 @@ Jiang, Wang and Wang (2019)｜中文逐篇说明、原文定位
 <p>收购使客户进入大所不完全出于主动择所，因此比常规换所更强；但被收购所本身、人员保留、客户是否继续委托仍可能选择。原文约96%受影响客户转入大所。收购IV的解释还依赖并购仅经审计师身份影响结果，以及同期其他变化得到控制。</p>
 <p><strong>同一论文的市场设计：质量 DID、盈余 ERC、收购公告 CAR 分开。</strong></p>
 <p>Online Appendix A6 PanelC，<strong>Online p.9 / PDF页55</strong>：</p>
-<p>[ CAR_{it}=a+b_1S_{it}+b_2Treat_i+b_3S_{it}Treat_i+ b_4BigN_{it}+b_5S_{it}BigN_{it}+YearFE_t+S_{it},YearFE_t+e_{it}. ]</p>
+<p>[ CAR_{it}=a+b_1ES_{it}+b_2Treat_i+b_3ES_{it}Treat_i+ b_4BigN_{it}+b_5ES_{it}BigN_{it}+YearFE_t+ES_{it},YearFE_t+e_{it}. ]</p>
 <p>CAR为年度盈余公告中心三日[-1,+1]单因子市场模型异常收益之和；alpha/beta用250日、截至公告前10日估计。S=(实际EPS−预期EPS)/财年末股价；预期EPS引用Hou等(2012)模型方法，<strong>不是I/B/E/S一致预测</strong>。所读接受稿未展开该引用方法的完整EPS预测方程、滚动估计和样本处理，不能替它补造；不新扩展Hou文章任务。稿中未明确给市场收益数据库/指数产品和这一面板最低估计日数；不能凭美国研究惯例自动填成CRSP等权。</p>
 <p>Treat定义处理公司；BigN=处理且post，因此b5衡量处理组相对对照的<strong>消息斜率</strong>在收购后是否变。ERC式明确含年度FE及S×年度FE，<strong>未列公司FE</strong>；不要套用主质量DID的公司FE。A6该面板没有明确写SE的聚类口径；主表和其他附录明确公司聚类，但本稿不据此填补此面板未写细节。</p>
 <p>BigN收购ERC N=8,749；b5=−.026，t=−1.33，不显著。非BigN M&amp;A对照类检验N=8,336，S×NonBigN M&amp;A=.008，t=.30。稿p.26将ERC和隐含资本成本列为感知类指标，未发现显著改善。它支持“主报表质量改善未必同时在感知指标中检出”，不是所有四大客户的ERC都无差异，也不是已证明市场不在乎审计。</p>
@@ -2209,9 +2209,9 @@ Audit Failures by Auditor Group and Denominator · <a href="tables/big4_evidence
 <p><strong>恢复方向是把现在的数据改回首次年报公告时市场看到的值，即使当时的数值事后被认定错误。</strong> 使用差错更正前后对比表、连通且端点匹配的更正链，以及已核实的原始年报补证；只有独立账本中 <code>endpoint_usable=True</code> 的记录计入以下影响。未核实的候选不计入恢复。</p>
 <p>EPS沿用现有“合并净利润／年末股本”定义及FAR分支的精度规则，固定股本与原180天预测中位数。这不是年报列示的“归母净利润／加权平均股数”基本EPS。surprise按下式重算，继续使用原有Rptdt预测窗口，不采用已撤销的公告前10天剔除规则：</p>
 <p><span class="math display">\[
-S_{it}=\frac{EPS_{it}-\operatorname{Median}(ForecastEPS_{it,180})}{\left|\operatorname{Median}(ForecastEPS_{it,180})\right|}.
+ES_{it}=\frac{EPES_{it}-\operatorname{Median}(ForecastEPS_{it,180})}{\left|\operatorname{Median}(ForecastEPS_{it,180})\right|}.
 \]</span></p>
-<p><span class="math inline">\(S&gt;0.10\)</span>为超预期，<span class="math inline">\(S&lt;-0.10\)</span>为不及预期，其余可用值为中性。当前值与原报值使用相同预测，以下变化只反映EPS恢复。</p>
+<p><span class="math inline">\(ES&gt;0.10\)</span>为超预期，<span class="math inline">\(ES&lt;-0.10\)</span>为不及预期，其余可用值为中性。当前值与原报值使用相同预测，以下变化只反映EPS恢复。</p>
 <table class="caption-top table">
 <caption>恢复覆盖与已确认影响；每格给出其对应分母。</caption>
 <colgroup>
@@ -2489,7 +2489,7 @@ S_{it}=\frac{EPS_{it}-\operatorname{Median}(ForecastEPS_{it,180})}{\left|\operat
 <h5 class="anchored" data-anchor-id="sec-accounting-yearly-trends">市场质量的宏观趋势</h5>
 <p>为考察全市场审计质量的长期演进，模型采用三基线检验：</p>
 <p><span class="math display">\[
-Y^m_{it} = \text{firm FE} + \sum_{\tau \ne 2000} \eta^m_{\tau, s} \mathbf{1}\{t=\tau\} + \mathbf{X}_{it}'\gamma_m + \varepsilon^m_{it}.
+Y^m_{it} = \text{Firm FE} + \sum_{\tau \ne 2000} \eta^m_{\tau, s} \mathbf{1}\{t=\tau\} + \mathbf{X}_{it}'\gamma_m + \varepsilon^m_{it}.
 \]</span></p>
 <p>以 2000 年为基期，吸收公司固定效应并按公司聚类。三条基线分别对应：(1) 全部非平衡活跃公司；(2) 长期存续基线（2000—2024 年观测不少于 22 年）；(3) 本地五年连续基线（<span class="math inline">\([t-2, t+2]\)</span> 窗口连续观测）。</p>
 <p><strong>审计失败趋势</strong></p>
@@ -2572,7 +2572,7 @@ Table 2: Other Outcomes by Audit-Firm Group · <a href="tables/big4_effect_latex
 
 <p><strong>类别回归方程。</strong> 客户、年份与事务所类型的比较为</p>
 <p><span class="math display">\[
-Y_{it}=\text{firm FE}+\text{year FE}+\beta_4 Big4_{it}+\beta_8 Local8_{it}+\varepsilon_{it}.
+Y_{it}=\text{Firm FE}+\text{Year FE}+\beta_4 Big4_{it}+\beta_8 Local8_{it}+\varepsilon_{it}.
 \]</span></p>
 <p>Other为基准，<span class="math inline">\(\beta_4\)</span>和<span class="math inline">\(\beta_8\)</span>分别为四大与本土八大的调整后差异；标准误按公司聚类。</p>
 </section>
@@ -2581,9 +2581,9 @@ Y_{it}=\text{firm FE}+\text{year FE}+\beta_4 Big4_{it}+\beta_8 Local8_{it}+\vare
 <h4 class="anchored" data-anchor-id="其他财报质量代理差异并不一致">其他财报质量代理：差异并不一致</h4>
 <p><strong>盈余质量方程。</strong></p>
 <p><span class="math display">\[
-Y_{it}=FE+\beta Big4_{it}+\gamma'X^{EQ}_{it}+\varepsilon_{it}.
+Y_{it}=\underbrace{\text{Industry × Year FE}}_{\text{Alternative: Firm FE + Year FE}}+\beta Big4_{it}+\gamma'X^{EQ}_{it}+\varepsilon_{it}.
 \]</span></p>
-<p><span class="math inline">\(FE\)</span>分别取行业×年份FE，或firm FE与year FE；<span class="math inline">\(X^{EQ}\)</span>为规模、杠杆、亏损、CFO、收入增长、MB及应计和相应mis_dummy。<span class="math inline">\(\beta\)</span>为四大−非四大的调整后指标差异。</p>
+<p><span class="math inline">\(\underbrace{\text{Industry × Year FE}}_{\text{Alternative: Firm FE + Year FE}}\)</span>分别取行业×年份FE，或firm FE与year FE；<span class="math inline">\(X^{EQ}\)</span>为规模、杠杆、亏损、CFO、收入增长、MB及应计和相应mis_dummy。<span class="math inline">\(\beta\)</span>为四大−非四大的调整后指标差异。</p>
 <p>盈余质量比较以Jones异常应计、Dechow–Dichev（DD）异常应计、非线性异常应计及真实盈余管理（REM）的绝对值为Y。异常应计是实际应计与模型预测正常应计之间的残差，REM指标衡量经营现金流、生产及费用相对正常水平的偏离；绝对值越大表示偏离越大。四项指标使用各自非缺失样本，行业×年份FE规格的N依次为56,900、50,300、52,664、52,507，公司及年份FE规格为57,507、50,781、53,164、53,042。控制七项盈余质量特征及mis_dummy，标准误按公司聚类。</p>
 <figure class="latex-table figure" style="overflow-x:auto;">
 <img src="tables/big4_regression_columns/13_earnings_quality_full_p01.png" style="width:703px;max-width:none;height:auto;display:block;" alt="其他盈余质量指标的四大条件差异" loading="lazy" class="figure-img">
@@ -2597,7 +2597,7 @@ Y_{it}=FE+\beta Big4_{it}+\gamma'X^{EQ}_{it}+\varepsilon_{it}.
 <h3 class="anchored" data-anchor-id="big4-fee-facts">1.2 价格事实：四大收费更高</h3>
 <p>收费的Y为<span class="math inline">\(\log(1+AuditFee)\)</span>，保留非缺失且非负的境内审计费用；费用增加额为相邻财年审计费之差，Y取<span class="math inline">\(\log(1+FeeIncrease)\)</span>，只保留增加额大于−1的有效记录。市值比较的Y为市场价值自然对数。费用控制规模、杠杆、亏损、ROA及mis_dummy，市值控制九项客户特征、收入增长及相应缺失标记。收费类别方程为</p>
 <p><span id="eq-big4-fee-level"><span class="math display">\[
-\ln Fee_{it}=a+bBig4_{it}+X^{fee\prime}_{it}\gamma+FE+e_{it},
+\ln Fee_{it}=a+bBig4_{it}+X^{fee\prime}_{it}\gamma+\underbrace{\text{Industry × Year FE}}_{\text{Alternative: Firm FE + Year FE}}+e_{it},
 \quad X^{fee}_{it}=(size,lev,loss,roa,\text{mis\_dummy}).
 \tag{2}\]</span></span></p>
 <p>表中分别报告行业×年份FE及公司、年份FE规格，标准误按公司聚类。log费用两套规格分别使用62,707及63,513个公司年度，log市值使用63,921及64,828个公司年度。原始四大平均收费约为本土八大的3.7倍，客户规模也更大；调整后的log费用系数衡量可比特征下的收费差异。</p>
@@ -2617,11 +2617,11 @@ Y_{it}=FE+\beta Big4_{it}+\gamma'X^{EQ}_{it}+\varepsilon_{it}.
 <p><strong>完整未匹配样本尚未提供跨窗口、跨时间固定效应设定稳定的四大额外市场响应。</strong> 传统ERC加入客户特征与UE的交互后，全期三个窗口只有CAR[−2,+2]达到10%水平；短窗允许四大与非四大拥有各自的事件日基准路径后，早期原有的正向增量缩小且不显著。以下先展示这一基准，再与后面的公司匹配和早上市、曾用四大公司池结果对照。</p>
 <p><strong>比较范围。</strong> 本节使用2026年11月3日已冻结的严格公告前180天预测版本。预测按发布日期在公告前1—180天筛选，每家券商保留窗口内最新预测，再取EPS中位数；使用公告当时EPS恢复版本及原始尾部，不新增缩尾、极端值删除或重大重组排除。不作matching，不作年度市值top70或N≥4筛选，也不限制为2012年前上市、曾经使用四大的公司；四大身份按报告所属财年的实际审计师确定。“完整样本”指满足相应价格、预测和控制变量要求的全部合格公告，并非所有上市公司年报。已有EPS／股本口径待核记录仍保留。</p>
 <p>ERC和日度事件研究各用自身合格样本；各时期重新处理固定效应单例，分期N之和不必等于全期N。ERC的三CAR窗口、两种控制设定在各时期使用相同成员；短窗A—D也在各时期固定同一批日度成员。下述模型变化因此与对应格点的样本变化分开。</p>
-<p><strong>ERC：控制水平与控制响应斜率。</strong> 令 <span class="math inline">\(B\)</span> 为当期四大身份，<span class="math inline">\(U=(EPS-F)/P_{pre}\)</span>，<span class="math inline">\(X^c\)</span>为样本内中心化的市值对数、MB及分析师覆盖<span class="math inline">\(1/N\)</span>。三个窗口 <span class="math inline">\(w\in\{[-1,+1],[-2,+2],[-3,+3]\}\)</span> 分别估计：</p>
+<p><strong>ERC：控制水平与控制响应斜率。</strong> 令 <span class="math inline">\(B\)</span> 为当期四大身份，<span class="math inline">\(UE=(EPS-F)/P_{pre}\)</span>，<span class="math inline">\(X^c\)</span>为样本内中心化的市值对数、MB及分析师覆盖<span class="math inline">\(1/N\)</span>。三个窗口 <span class="math inline">\(w\in\{[-1,+1],[-2,+2],[-3,+3]\}\)</span> 分别估计：</p>
 <p><span class="math display">\[
-CAR^w_{it}=\alpha_i+\lambda_t+\delta B_{it}+\beta U_{it}
-+\theta(B_{it}U_{it})+\gamma'X^c_{it}
-+q\,\eta'(U_{it}X^c_{it})+\varepsilon_{it},\qquad q\in\{0,1\}.
+CAR^w_{it}=\text{Firm FE}+\text{Fiscal year FE}+\delta Big4_{it}+\beta UE_{it}
++\theta(Big4_{it}UE_{it})+\gamma'X^c_{it}
++q\,\eta'(UE_{it}X^c_{it})+\varepsilon_{it},\qquad q\in\{0,1\}.
 \]</span></p>
 <p>两版均保留Big4×UE、三项控制主项、公司和财年固定效应，按公司聚类；<span class="math inline">\(q=1\)</span>额外允许公司特征影响UE响应斜率。非四大的ERC为<span class="math inline">\(\beta\)</span>，四大为<span class="math inline">\(\beta+\theta\)</span>，直接组差为<span class="math inline">\(\theta\)</span>。表中每列一个回归，括号为标准误，星号按未取整p值。</p>
 <p><strong>全期。</strong> 仅控制主项时，三个窗口的四大ERC增量依次为0.111、0.160、0.129，均达到5%；加入全部控制×UE后为0.049、0.106、0.070，对应p值0.305、0.085、0.271。差异同时表现为点估计下降和精度变化，不能全部归于自由度增加；也不能把中间窗口的10%证据概括为所有窗口显著。</p>
@@ -2649,10 +2649,10 @@ CAR^w_{it}=\alpha_i+\lambda_t+\delta B_{it}+\beta U_{it}
 </figure>
 </div>
 <p><a href="tables/memo_three_decimals/erc_after2012_variables.pdf">PDF</a> · <a href="tables/memo_three_decimals/erc_after2012_variables.tex">TeX</a></p>
-<p><strong>短窗：允许不同审计组有不同基准事件路径。</strong> 令<span class="math inline">\(G_e=1(ES_e&gt;0.10)\)</span>，其中<span class="math inline">\(ES=(EPS-F)/|F|\)</span>；中性消息为<span class="math inline">\([-0.10,0.10]\)</span>，本检验排除<span class="math inline">\(ES&lt;-0.10\)</span>。对事件<span class="math inline">\(e\)</span>、相对交易日<span class="math inline">\(\tau\)</span>及真实交易日期<span class="math inline">\(d\)</span>，在<span class="math inline">\([-5,+5]\)</span>窗、<span class="math inline">\(-1\)</span>基期估计：</p>
+<p><strong>短窗：允许不同审计组有不同基准事件路径。</strong> 令<span class="math inline">\(GoodNews_e=1(ES_e&gt;0.10)\)</span>，其中<span class="math inline">\(ES=(EPS-F)/|F|\)</span>；中性消息为<span class="math inline">\([-0.10,0.10]\)</span>，本检验排除<span class="math inline">\(ES&lt;-0.10\)</span>。对事件<span class="math inline">\(e\)</span>、相对交易日<span class="math inline">\(\tau\)</span>及真实交易日期<span class="math inline">\(d\)</span>，在<span class="math inline">\([-5,+5]\)</span>窗、<span class="math inline">\(-1\)</span>基期估计：</p>
 <p><span class="math display">\[
-\ln P_{e\tau}=\alpha_e+T_m(B_e,\tau,d)
-+\sum_{k\ne-1}[\beta_{mk}G_e+\theta_{mk}B_eG_e]1(\tau=k)
+\ln P_{e\tau}=\text{Announcement FE}+\underbrace{\text{Event time FE}+\text{Trading date FE}}_{\text{A: common; B: group event time; C: group date; D: both grouped}}
++\sum_{k\ne-1}[\beta_{mk}GoodNews_e+\theta_{mk}Big4_e GoodNews_e]1(\tau=k)
 +\varepsilon_{e\tau}.
 \]</span></p>
 <p>每个<span class="math inline">\(m\)</span>单独估计。四模型均有报告事件FE，按报告（公司年事件）聚类，无额外财务控制或连续ES幅度控制：</p>
@@ -2727,14 +2727,14 @@ CAR^w_{it}=\alpha_i+\lambda_t+\delta B_{it}+\beta U_{it}
 <section id="body-four-fe-paths" class="level4">
 <h4 class="anchored" data-anchor-id="body-four-fe-paths">2012年前后：四种固定效应的方程与组间差值</h4>
 <p>下面围绕“四大减非四大的好消息响应增量差”，按固定效应区别列出四个模型，每个模型在方程下连续展示2012年前与2012年起的差值路径。</p>
-<p><strong>共同口径。</strong> <span class="math inline">\(e\)</span>为年报公告，<span class="math inline">\(\tau\)</span>为相对事件交易日，<span class="math inline">\(d(e,\tau)\)</span>为实际交易日期；<span class="math inline">\(B_e=1\)</span>为当年四大客户，<span class="math inline">\(G_e=1(ES&gt;10\%)\)</span>。中性消息为<span class="math inline">\(|ES|\leq10\%\)</span>，排除ES&lt;−10%；<span class="math inline">\(K=\{-5,-4,-3,-2,0,1,2,3,4,5\}\)</span>，第−1日归零。各模型和时期分别估计，均有公告事件FE <span class="math inline">\(\alpha_e\)</span>，按公告事件聚类，无额外财务控制或连续ES幅度控制。2012年前四模型同用4,485次公告、49,267条日度观测、1,693家公司；2012年起同用15,830次公告、174,046条日度观测、4,108家公司。两时期成员可以不同。</p>
+<p><strong>共同口径。</strong> <span class="math inline">\(e\)</span>为年报公告，<span class="math inline">\(\tau\)</span>为相对事件交易日，<span class="math inline">\(d(e,\tau)\)</span>为实际交易日期；<span class="math inline">\(Big4_e=1\)</span>为当年四大客户，<span class="math inline">\(GoodNews_e=1(ES&gt;10\%)\)</span>。中性消息为<span class="math inline">\(|ES|\leq10\%\)</span>，排除ES&lt;−10%；<span class="math inline">\(K=\{-5,-4,-3,-2,0,1,2,3,4,5\}\)</span>，第−1日归零。各模型和时期分别估计，均有公告事件FE <span class="math inline">\(\text{Announcement FE}\)</span>，按公告事件聚类，无额外财务控制或连续ES幅度控制。2012年前四模型同用4,485次公告、49,267条日度观测、1,693家公司；2012年起同用15,830次公告、174,046条日度观测、4,108家公司。两时期成员可以不同。</p>
 <p>方程中的<span class="math inline">\(\beta^m_{0k}\)</span>、<span class="math inline">\(\beta^m_{1k}\)</span>分别是非四大、四大“好消息减自身中性消息”的响应。图展示直接差值<span class="math inline">\((\beta^m_{1k}-\beta^m_{0k})\times100\)</span>及95%区间；两组自身路径保留在各模型下方的展开区。A→B、C→D放开两组事件时间基准路径；A→C、B→D放开两组实际交易日冲击。各期差值与显著性不能代替正式前后系数差检验。</p>
 <section id="body-four-fe-a" class="level5">
 <h5 class="anchored" data-anchor-id="body-four-fe-a">A｜共同事件时间FE＋共同交易日FE</h5>
 <p><span class="math display">\[
 \begin{aligned}
-\ln P_{e\tau}&amp;=\alpha_e+\lambda_{\tau}+\mu_{d(e,\tau)}\\
-&amp;\quad+\sum_{k\in K}\left[\beta^{A}_{0k}(1-B_e)+\beta^{A}_{1k}B_e\right]G_e\,1(\tau=k)+\varepsilon^{A}_{e\tau}.
+\ln P_{e\tau}&amp;=\text{Announcement FE}+\text{Event time FE}+\text{Trading date FE}\\
+&amp;\quad+\sum_{k\in K}\left[\beta^{A}_{0k}(1-Big4_e)+\beta^{A}_{1k}Big4_e\right]GoodNews_e\,1(\tau=k)+\varepsilon^{A}_{e\tau}.
 \end{aligned}
 \]</span></p>
 <div class="quarto-figure quarto-figure-center">
@@ -2771,8 +2771,8 @@ CAR^w_{it}=\alpha_i+\lambda_t+\delta B_{it}+\beta U_{it}
 <h5 class="anchored" data-anchor-id="body-four-fe-b">B｜审计组×事件时间FE＋共同交易日FE</h5>
 <p><span class="math display">\[
 \begin{aligned}
-\ln P_{e\tau}&amp;=\alpha_e+\lambda_{B_e,\tau}+\mu_{d(e,\tau)}\\
-&amp;\quad+\sum_{k\in K}\left[\beta^{B}_{0k}(1-B_e)+\beta^{B}_{1k}B_e\right]G_e\,1(\tau=k)+\varepsilon^{B}_{e\tau}.
+\ln P_{e\tau}&amp;=\text{Announcement FE}+\text{Big4 group × Event time FE}+\text{Trading date FE}\\
+&amp;\quad+\sum_{k\in K}\left[\beta^{B}_{0k}(1-Big4_e)+\beta^{B}_{1k}Big4_e\right]GoodNews_e\,1(\tau=k)+\varepsilon^{B}_{e\tau}.
 \end{aligned}
 \]</span></p>
 <div class="quarto-figure quarto-figure-center">
@@ -2809,8 +2809,8 @@ CAR^w_{it}=\alpha_i+\lambda_t+\delta B_{it}+\beta U_{it}
 <h5 class="anchored" data-anchor-id="body-four-fe-c">C｜共同事件时间FE＋审计组×交易日FE</h5>
 <p><span class="math display">\[
 \begin{aligned}
-\ln P_{e\tau}&amp;=\alpha_e+\lambda_{\tau}+\mu_{B_e,d(e,\tau)}\\
-&amp;\quad+\sum_{k\in K}\left[\beta^{C}_{0k}(1-B_e)+\beta^{C}_{1k}B_e\right]G_e\,1(\tau=k)+\varepsilon^{C}_{e\tau}.
+\ln P_{e\tau}&amp;=\text{Announcement FE}+\text{Event time FE}+\text{Big4 group × Trading date FE}\\
+&amp;\quad+\sum_{k\in K}\left[\beta^{C}_{0k}(1-Big4_e)+\beta^{C}_{1k}Big4_e\right]GoodNews_e\,1(\tau=k)+\varepsilon^{C}_{e\tau}.
 \end{aligned}
 \]</span></p>
 <div class="quarto-figure quarto-figure-center">
@@ -2847,8 +2847,8 @@ CAR^w_{it}=\alpha_i+\lambda_t+\delta B_{it}+\beta U_{it}
 <h5 class="anchored" data-anchor-id="body-four-fe-d">D｜审计组×事件时间FE＋审计组×交易日FE</h5>
 <p><span class="math display">\[
 \begin{aligned}
-\ln P_{e\tau}&amp;=\alpha_e+\lambda_{B_e,\tau}+\mu_{B_e,d(e,\tau)}\\
-&amp;\quad+\sum_{k\in K}\left[\beta^{D}_{0k}(1-B_e)+\beta^{D}_{1k}B_e\right]G_e\,1(\tau=k)+\varepsilon^{D}_{e\tau}.
+\ln P_{e\tau}&amp;=\text{Announcement FE}+\text{Big4 group × Event time FE}+\text{Big4 group × Trading date FE}\\
+&amp;\quad+\sum_{k\in K}\left[\beta^{D}_{0k}(1-Big4_e)+\beta^{D}_{1k}Big4_e\right]GoodNews_e\,1(\tau=k)+\varepsilon^{D}_{e\tau}.
 \end{aligned}
 \]</span></p>
 <div class="quarto-figure quarto-figure-center">
@@ -2889,7 +2889,7 @@ CAR^w_{it}=\alpha_i+\lambda_t+\delta B_{it}+\beta U_{it}
 <p><strong>问题与样本。</strong> 将好消息进一步按UE幅度分档，比较相近盈利消息对应的四大与非四大市场响应。样本为全部合格预测公告，不限上市时间或曾用四大；严格公告前180天预测，保留原始UE及负消息，不缩尾、不排重组、不匹配，按财报所属年度的实际审计师分组。每期A—D使用同一实际公告—交易日成员；前后两期不要求为同一批公司。这是消息分档比较，企业特征与同档内部的消息幅度仍可能不同。</p>
 <p><strong>两种分档。</strong> 固定绝对九组使用UE切点±0.001、±0.0025、±0.005、±0.01，即±0.10%、±0.25%、±0.50%、±1.00%。G5为<span class="math inline">\([-0.001,0.001]\)</span>近零参考，模型中记为<span class="math inline">\(c=0\)</span>；正向G6—G9依次为<span class="math inline">\((0.10\%,0.25\%]\)</span>、<span class="math inline">\((0.25\%,0.50\%]\)</span>、<span class="math inline">\((0.50\%,1.00\%]\)</span>及<span class="math inline">\(&gt;1.00\%\)</span>。负切点相等值归较高档，正切点相等值归较低档，近零两端均包含。</p>
 <p>年度共同十分位先在每年将两审计组合在一起排序，沿用共同十分位，再将<span class="math inline">\(|UE|\le0.001\)</span>的公告单列为近零参考，保留其余1—10档。不同年份的同一档不代表相同绝对幅度；两个审计组共用分位界限。</p>
-<p><strong>回归与读图。</strong> <span class="math inline">\(e\)</span>为年报公告，<span class="math inline">\(\tau\)</span>为相对交易日，<span class="math inline">\(d(e,\tau)\)</span>为实际日期，<span class="math inline">\(B_e\)</span>为年度四大身份，<span class="math inline">\(C_e\)</span>为消息档，<span class="math inline">\(K=\{-5,-4,-3,-2,0,1,2,3,4,5\}\)</span>。因变量为日度收盘价的对数，窗口<span class="math inline">\([-5,+5]\)</span>、第−1日为基期；各方法、时期及模型分别估计，均含公告事件固定效应，标准误按公告事件聚类，无财务控制或连续UE幅度控制。图示第0日响应乘100及95%区间，近似百分点，不是累计CAR。</p>
+<p><strong>回归与读图。</strong> <span class="math inline">\(e\)</span>为年报公告，<span class="math inline">\(\tau\)</span>为相对交易日，<span class="math inline">\(d(e,\tau)\)</span>为实际日期，<span class="math inline">\(Big4_e\)</span>为年度四大身份，<span class="math inline">\(NewsGroup_e\)</span>为消息档，<span class="math inline">\(K=\{-5,-4,-3,-2,0,1,2,3,4,5\}\)</span>。因变量为日度收盘价的对数，窗口<span class="math inline">\([-5,+5]\)</span>、第−1日为基期；各方法、时期及模型分别估计，均含公告事件固定效应，标准误按公告事件聚类，无财务控制或连续UE幅度控制。图示第0日响应乘100及95%区间，近似百分点，不是累计CAR。</p>
 <table class="caption-top table">
 <thead>
 <tr class="header">
@@ -3019,8 +3019,8 @@ CAR^w_{it}=\alpha_i+\lambda_t+\delta B_{it}+\beta U_{it}
 <h5 class="anchored" data-anchor-id="market-ue-bins-periods-absolute-all-a">A｜共同事件时间FE＋共同交易日FE</h5>
 <p><span class="math display">\[
 \begin{aligned}
-\ln P_{e\tau}&amp;=\alpha_e+\lambda^{A}_{\tau}+\mu^{A}_{d(e,\tau)}\\
-&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{A}_{gck}\,1(B_e=g,C_e=c,\tau=k)\\
+\ln P_{e\tau}&amp;=\text{Announcement FE}+\text{Event time FE}+\text{Trading date FE}\\
+&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{A}_{gck}\,1(Big4_e=g,NewsGroup_e=c,\tau=k)\\
 &amp;+\varepsilon^{A}_{e\tau}.
 \end{aligned}
 \]</span></p>
@@ -3042,8 +3042,8 @@ CAR^w_{it}=\alpha_i+\lambda_t+\delta B_{it}+\beta U_{it}
 <h5 class="anchored" data-anchor-id="market-ue-bins-periods-absolute-all-b">B｜审计组×事件时间FE＋共同交易日FE</h5>
 <p><span class="math display">\[
 \begin{aligned}
-\ln P_{e\tau}&amp;=\alpha_e+\lambda^{B}_{B_e,\tau}+\mu^{B}_{d(e,\tau)}\\
-&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{B}_{gck}\,1(B_e=g,C_e=c,\tau=k)\\
+\ln P_{e\tau}&amp;=\text{Announcement FE}+\text{Big4 group × Event time FE}+\text{Trading date FE}\\
+&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{B}_{gck}\,1(Big4_e=g,NewsGroup_e=c,\tau=k)\\
 &amp;+\varepsilon^{B}_{e\tau}.
 \end{aligned}
 \]</span></p>
@@ -3065,8 +3065,8 @@ CAR^w_{it}=\alpha_i+\lambda_t+\delta B_{it}+\beta U_{it}
 <h5 class="anchored" data-anchor-id="market-ue-bins-periods-absolute-all-c">C｜共同事件时间FE＋审计组×交易日FE</h5>
 <p><span class="math display">\[
 \begin{aligned}
-\ln P_{e\tau}&amp;=\alpha_e+\lambda^{C}_{\tau}+\mu^{C}_{B_e,d(e,\tau)}\\
-&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{C}_{gck}\,1(B_e=g,C_e=c,\tau=k)\\
+\ln P_{e\tau}&amp;=\text{Announcement FE}+\text{Event time FE}+\text{Big4 group × Trading date FE}\\
+&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{C}_{gck}\,1(Big4_e=g,NewsGroup_e=c,\tau=k)\\
 &amp;+\varepsilon^{C}_{e\tau}.
 \end{aligned}
 \]</span></p>
@@ -3088,8 +3088,8 @@ CAR^w_{it}=\alpha_i+\lambda_t+\delta B_{it}+\beta U_{it}
 <h5 class="anchored" data-anchor-id="market-ue-bins-periods-absolute-all-d">D｜审计组×事件时间FE＋审计组×交易日FE</h5>
 <p><span class="math display">\[
 \begin{aligned}
-\ln P_{e\tau}&amp;=\alpha_e+\lambda^{D}_{B_e,\tau}+\mu^{D}_{B_e,d(e,\tau)}\\
-&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{D}_{gck}\,1(B_e=g,C_e=c,\tau=k)\\
+\ln P_{e\tau}&amp;=\text{Announcement FE}+\text{Big4 group × Event time FE}+\text{Big4 group × Trading date FE}\\
+&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{D}_{gck}\,1(Big4_e=g,NewsGroup_e=c,\tau=k)\\
 &amp;+\varepsilon^{D}_{e\tau}.
 \end{aligned}
 \]</span></p>
@@ -3119,8 +3119,8 @@ CAR^w_{it}=\alpha_i+\lambda_t+\delta B_{it}+\beta U_{it}
 <h5 class="anchored" data-anchor-id="market-ue-bins-periods-absolute-before2012-a">A｜共同事件时间FE＋共同交易日FE</h5>
 <p><span class="math display">\[
 \begin{aligned}
-\ln P_{e\tau}&amp;=\alpha_e+\lambda^{A}_{\tau}+\mu^{A}_{d(e,\tau)}\\
-&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{A}_{gck}\,1(B_e=g,C_e=c,\tau=k)\\
+\ln P_{e\tau}&amp;=\text{Announcement FE}+\text{Event time FE}+\text{Trading date FE}\\
+&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{A}_{gck}\,1(Big4_e=g,NewsGroup_e=c,\tau=k)\\
 &amp;+\varepsilon^{A}_{e\tau}.
 \end{aligned}
 \]</span></p>
@@ -3142,8 +3142,8 @@ CAR^w_{it}=\alpha_i+\lambda_t+\delta B_{it}+\beta U_{it}
 <h5 class="anchored" data-anchor-id="market-ue-bins-periods-absolute-before2012-b">B｜审计组×事件时间FE＋共同交易日FE</h5>
 <p><span class="math display">\[
 \begin{aligned}
-\ln P_{e\tau}&amp;=\alpha_e+\lambda^{B}_{B_e,\tau}+\mu^{B}_{d(e,\tau)}\\
-&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{B}_{gck}\,1(B_e=g,C_e=c,\tau=k)\\
+\ln P_{e\tau}&amp;=\text{Announcement FE}+\text{Big4 group × Event time FE}+\text{Trading date FE}\\
+&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{B}_{gck}\,1(Big4_e=g,NewsGroup_e=c,\tau=k)\\
 &amp;+\varepsilon^{B}_{e\tau}.
 \end{aligned}
 \]</span></p>
@@ -3165,8 +3165,8 @@ CAR^w_{it}=\alpha_i+\lambda_t+\delta B_{it}+\beta U_{it}
 <h5 class="anchored" data-anchor-id="market-ue-bins-periods-absolute-before2012-c">C｜共同事件时间FE＋审计组×交易日FE</h5>
 <p><span class="math display">\[
 \begin{aligned}
-\ln P_{e\tau}&amp;=\alpha_e+\lambda^{C}_{\tau}+\mu^{C}_{B_e,d(e,\tau)}\\
-&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{C}_{gck}\,1(B_e=g,C_e=c,\tau=k)\\
+\ln P_{e\tau}&amp;=\text{Announcement FE}+\text{Event time FE}+\text{Big4 group × Trading date FE}\\
+&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{C}_{gck}\,1(Big4_e=g,NewsGroup_e=c,\tau=k)\\
 &amp;+\varepsilon^{C}_{e\tau}.
 \end{aligned}
 \]</span></p>
@@ -3188,8 +3188,8 @@ CAR^w_{it}=\alpha_i+\lambda_t+\delta B_{it}+\beta U_{it}
 <h5 class="anchored" data-anchor-id="market-ue-bins-periods-absolute-before2012-d">D｜审计组×事件时间FE＋审计组×交易日FE</h5>
 <p><span class="math display">\[
 \begin{aligned}
-\ln P_{e\tau}&amp;=\alpha_e+\lambda^{D}_{B_e,\tau}+\mu^{D}_{B_e,d(e,\tau)}\\
-&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{D}_{gck}\,1(B_e=g,C_e=c,\tau=k)\\
+\ln P_{e\tau}&amp;=\text{Announcement FE}+\text{Big4 group × Event time FE}+\text{Big4 group × Trading date FE}\\
+&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{D}_{gck}\,1(Big4_e=g,NewsGroup_e=c,\tau=k)\\
 &amp;+\varepsilon^{D}_{e\tau}.
 \end{aligned}
 \]</span></p>
@@ -3219,8 +3219,8 @@ CAR^w_{it}=\alpha_i+\lambda_t+\delta B_{it}+\beta U_{it}
 <h5 class="anchored" data-anchor-id="market-ue-bins-periods-absolute-after2012-a">A｜共同事件时间FE＋共同交易日FE</h5>
 <p><span class="math display">\[
 \begin{aligned}
-\ln P_{e\tau}&amp;=\alpha_e+\lambda^{A}_{\tau}+\mu^{A}_{d(e,\tau)}\\
-&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{A}_{gck}\,1(B_e=g,C_e=c,\tau=k)\\
+\ln P_{e\tau}&amp;=\text{Announcement FE}+\text{Event time FE}+\text{Trading date FE}\\
+&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{A}_{gck}\,1(Big4_e=g,NewsGroup_e=c,\tau=k)\\
 &amp;+\varepsilon^{A}_{e\tau}.
 \end{aligned}
 \]</span></p>
@@ -3242,8 +3242,8 @@ CAR^w_{it}=\alpha_i+\lambda_t+\delta B_{it}+\beta U_{it}
 <h5 class="anchored" data-anchor-id="market-ue-bins-periods-absolute-after2012-b">B｜审计组×事件时间FE＋共同交易日FE</h5>
 <p><span class="math display">\[
 \begin{aligned}
-\ln P_{e\tau}&amp;=\alpha_e+\lambda^{B}_{B_e,\tau}+\mu^{B}_{d(e,\tau)}\\
-&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{B}_{gck}\,1(B_e=g,C_e=c,\tau=k)\\
+\ln P_{e\tau}&amp;=\text{Announcement FE}+\text{Big4 group × Event time FE}+\text{Trading date FE}\\
+&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{B}_{gck}\,1(Big4_e=g,NewsGroup_e=c,\tau=k)\\
 &amp;+\varepsilon^{B}_{e\tau}.
 \end{aligned}
 \]</span></p>
@@ -3265,8 +3265,8 @@ CAR^w_{it}=\alpha_i+\lambda_t+\delta B_{it}+\beta U_{it}
 <h5 class="anchored" data-anchor-id="market-ue-bins-periods-absolute-after2012-c">C｜共同事件时间FE＋审计组×交易日FE</h5>
 <p><span class="math display">\[
 \begin{aligned}
-\ln P_{e\tau}&amp;=\alpha_e+\lambda^{C}_{\tau}+\mu^{C}_{B_e,d(e,\tau)}\\
-&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{C}_{gck}\,1(B_e=g,C_e=c,\tau=k)\\
+\ln P_{e\tau}&amp;=\text{Announcement FE}+\text{Event time FE}+\text{Big4 group × Trading date FE}\\
+&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{C}_{gck}\,1(Big4_e=g,NewsGroup_e=c,\tau=k)\\
 &amp;+\varepsilon^{C}_{e\tau}.
 \end{aligned}
 \]</span></p>
@@ -3288,8 +3288,8 @@ CAR^w_{it}=\alpha_i+\lambda_t+\delta B_{it}+\beta U_{it}
 <h5 class="anchored" data-anchor-id="market-ue-bins-periods-absolute-after2012-d">D｜审计组×事件时间FE＋审计组×交易日FE</h5>
 <p><span class="math display">\[
 \begin{aligned}
-\ln P_{e\tau}&amp;=\alpha_e+\lambda^{D}_{B_e,\tau}+\mu^{D}_{B_e,d(e,\tau)}\\
-&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{D}_{gck}\,1(B_e=g,C_e=c,\tau=k)\\
+\ln P_{e\tau}&amp;=\text{Announcement FE}+\text{Big4 group × Event time FE}+\text{Big4 group × Trading date FE}\\
+&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{D}_{gck}\,1(Big4_e=g,NewsGroup_e=c,\tau=k)\\
 &amp;+\varepsilon^{D}_{e\tau}.
 \end{aligned}
 \]</span></p>
@@ -3319,8 +3319,8 @@ CAR^w_{it}=\alpha_i+\lambda_t+\delta B_{it}+\beta U_{it}
 <h5 class="anchored" data-anchor-id="market-ue-bins-periods-annual-all-a">A｜共同事件时间FE＋共同交易日FE</h5>
 <p><span class="math display">\[
 \begin{aligned}
-\ln P_{e\tau}&amp;=\alpha_e+\lambda^{A}_{\tau}+\mu^{A}_{d(e,\tau)}\\
-&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{A}_{gck}\,1(B_e=g,C_e=c,\tau=k)\\
+\ln P_{e\tau}&amp;=\text{Announcement FE}+\text{Event time FE}+\text{Trading date FE}\\
+&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{A}_{gck}\,1(Big4_e=g,NewsGroup_e=c,\tau=k)\\
 &amp;+\varepsilon^{A}_{e\tau}.
 \end{aligned}
 \]</span></p>
@@ -3342,8 +3342,8 @@ CAR^w_{it}=\alpha_i+\lambda_t+\delta B_{it}+\beta U_{it}
 <h5 class="anchored" data-anchor-id="market-ue-bins-periods-annual-all-b">B｜审计组×事件时间FE＋共同交易日FE</h5>
 <p><span class="math display">\[
 \begin{aligned}
-\ln P_{e\tau}&amp;=\alpha_e+\lambda^{B}_{B_e,\tau}+\mu^{B}_{d(e,\tau)}\\
-&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{B}_{gck}\,1(B_e=g,C_e=c,\tau=k)\\
+\ln P_{e\tau}&amp;=\text{Announcement FE}+\text{Big4 group × Event time FE}+\text{Trading date FE}\\
+&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{B}_{gck}\,1(Big4_e=g,NewsGroup_e=c,\tau=k)\\
 &amp;+\varepsilon^{B}_{e\tau}.
 \end{aligned}
 \]</span></p>
@@ -3365,8 +3365,8 @@ CAR^w_{it}=\alpha_i+\lambda_t+\delta B_{it}+\beta U_{it}
 <h5 class="anchored" data-anchor-id="market-ue-bins-periods-annual-all-c">C｜共同事件时间FE＋审计组×交易日FE</h5>
 <p><span class="math display">\[
 \begin{aligned}
-\ln P_{e\tau}&amp;=\alpha_e+\lambda^{C}_{\tau}+\mu^{C}_{B_e,d(e,\tau)}\\
-&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{C}_{gck}\,1(B_e=g,C_e=c,\tau=k)\\
+\ln P_{e\tau}&amp;=\text{Announcement FE}+\text{Event time FE}+\text{Big4 group × Trading date FE}\\
+&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{C}_{gck}\,1(Big4_e=g,NewsGroup_e=c,\tau=k)\\
 &amp;+\varepsilon^{C}_{e\tau}.
 \end{aligned}
 \]</span></p>
@@ -3388,8 +3388,8 @@ CAR^w_{it}=\alpha_i+\lambda_t+\delta B_{it}+\beta U_{it}
 <h5 class="anchored" data-anchor-id="market-ue-bins-periods-annual-all-d">D｜审计组×事件时间FE＋审计组×交易日FE</h5>
 <p><span class="math display">\[
 \begin{aligned}
-\ln P_{e\tau}&amp;=\alpha_e+\lambda^{D}_{B_e,\tau}+\mu^{D}_{B_e,d(e,\tau)}\\
-&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{D}_{gck}\,1(B_e=g,C_e=c,\tau=k)\\
+\ln P_{e\tau}&amp;=\text{Announcement FE}+\text{Big4 group × Event time FE}+\text{Big4 group × Trading date FE}\\
+&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{D}_{gck}\,1(Big4_e=g,NewsGroup_e=c,\tau=k)\\
 &amp;+\varepsilon^{D}_{e\tau}.
 \end{aligned}
 \]</span></p>
@@ -3419,8 +3419,8 @@ CAR^w_{it}=\alpha_i+\lambda_t+\delta B_{it}+\beta U_{it}
 <h5 class="anchored" data-anchor-id="market-ue-bins-periods-annual-before2012-a">A｜共同事件时间FE＋共同交易日FE</h5>
 <p><span class="math display">\[
 \begin{aligned}
-\ln P_{e\tau}&amp;=\alpha_e+\lambda^{A}_{\tau}+\mu^{A}_{d(e,\tau)}\\
-&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{A}_{gck}\,1(B_e=g,C_e=c,\tau=k)\\
+\ln P_{e\tau}&amp;=\text{Announcement FE}+\text{Event time FE}+\text{Trading date FE}\\
+&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{A}_{gck}\,1(Big4_e=g,NewsGroup_e=c,\tau=k)\\
 &amp;+\varepsilon^{A}_{e\tau}.
 \end{aligned}
 \]</span></p>
@@ -3442,8 +3442,8 @@ CAR^w_{it}=\alpha_i+\lambda_t+\delta B_{it}+\beta U_{it}
 <h5 class="anchored" data-anchor-id="market-ue-bins-periods-annual-before2012-b">B｜审计组×事件时间FE＋共同交易日FE</h5>
 <p><span class="math display">\[
 \begin{aligned}
-\ln P_{e\tau}&amp;=\alpha_e+\lambda^{B}_{B_e,\tau}+\mu^{B}_{d(e,\tau)}\\
-&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{B}_{gck}\,1(B_e=g,C_e=c,\tau=k)\\
+\ln P_{e\tau}&amp;=\text{Announcement FE}+\text{Big4 group × Event time FE}+\text{Trading date FE}\\
+&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{B}_{gck}\,1(Big4_e=g,NewsGroup_e=c,\tau=k)\\
 &amp;+\varepsilon^{B}_{e\tau}.
 \end{aligned}
 \]</span></p>
@@ -3465,8 +3465,8 @@ CAR^w_{it}=\alpha_i+\lambda_t+\delta B_{it}+\beta U_{it}
 <h5 class="anchored" data-anchor-id="market-ue-bins-periods-annual-before2012-c">C｜共同事件时间FE＋审计组×交易日FE</h5>
 <p><span class="math display">\[
 \begin{aligned}
-\ln P_{e\tau}&amp;=\alpha_e+\lambda^{C}_{\tau}+\mu^{C}_{B_e,d(e,\tau)}\\
-&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{C}_{gck}\,1(B_e=g,C_e=c,\tau=k)\\
+\ln P_{e\tau}&amp;=\text{Announcement FE}+\text{Event time FE}+\text{Big4 group × Trading date FE}\\
+&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{C}_{gck}\,1(Big4_e=g,NewsGroup_e=c,\tau=k)\\
 &amp;+\varepsilon^{C}_{e\tau}.
 \end{aligned}
 \]</span></p>
@@ -3488,8 +3488,8 @@ CAR^w_{it}=\alpha_i+\lambda_t+\delta B_{it}+\beta U_{it}
 <h5 class="anchored" data-anchor-id="market-ue-bins-periods-annual-before2012-d">D｜审计组×事件时间FE＋审计组×交易日FE</h5>
 <p><span class="math display">\[
 \begin{aligned}
-\ln P_{e\tau}&amp;=\alpha_e+\lambda^{D}_{B_e,\tau}+\mu^{D}_{B_e,d(e,\tau)}\\
-&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{D}_{gck}\,1(B_e=g,C_e=c,\tau=k)\\
+\ln P_{e\tau}&amp;=\text{Announcement FE}+\text{Big4 group × Event time FE}+\text{Big4 group × Trading date FE}\\
+&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{D}_{gck}\,1(Big4_e=g,NewsGroup_e=c,\tau=k)\\
 &amp;+\varepsilon^{D}_{e\tau}.
 \end{aligned}
 \]</span></p>
@@ -3519,8 +3519,8 @@ CAR^w_{it}=\alpha_i+\lambda_t+\delta B_{it}+\beta U_{it}
 <h5 class="anchored" data-anchor-id="market-ue-bins-periods-annual-after2012-a">A｜共同事件时间FE＋共同交易日FE</h5>
 <p><span class="math display">\[
 \begin{aligned}
-\ln P_{e\tau}&amp;=\alpha_e+\lambda^{A}_{\tau}+\mu^{A}_{d(e,\tau)}\\
-&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{A}_{gck}\,1(B_e=g,C_e=c,\tau=k)\\
+\ln P_{e\tau}&amp;=\text{Announcement FE}+\text{Event time FE}+\text{Trading date FE}\\
+&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{A}_{gck}\,1(Big4_e=g,NewsGroup_e=c,\tau=k)\\
 &amp;+\varepsilon^{A}_{e\tau}.
 \end{aligned}
 \]</span></p>
@@ -3542,8 +3542,8 @@ CAR^w_{it}=\alpha_i+\lambda_t+\delta B_{it}+\beta U_{it}
 <h5 class="anchored" data-anchor-id="market-ue-bins-periods-annual-after2012-b">B｜审计组×事件时间FE＋共同交易日FE</h5>
 <p><span class="math display">\[
 \begin{aligned}
-\ln P_{e\tau}&amp;=\alpha_e+\lambda^{B}_{B_e,\tau}+\mu^{B}_{d(e,\tau)}\\
-&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{B}_{gck}\,1(B_e=g,C_e=c,\tau=k)\\
+\ln P_{e\tau}&amp;=\text{Announcement FE}+\text{Big4 group × Event time FE}+\text{Trading date FE}\\
+&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{B}_{gck}\,1(Big4_e=g,NewsGroup_e=c,\tau=k)\\
 &amp;+\varepsilon^{B}_{e\tau}.
 \end{aligned}
 \]</span></p>
@@ -3565,8 +3565,8 @@ CAR^w_{it}=\alpha_i+\lambda_t+\delta B_{it}+\beta U_{it}
 <h5 class="anchored" data-anchor-id="market-ue-bins-periods-annual-after2012-c">C｜共同事件时间FE＋审计组×交易日FE</h5>
 <p><span class="math display">\[
 \begin{aligned}
-\ln P_{e\tau}&amp;=\alpha_e+\lambda^{C}_{\tau}+\mu^{C}_{B_e,d(e,\tau)}\\
-&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{C}_{gck}\,1(B_e=g,C_e=c,\tau=k)\\
+\ln P_{e\tau}&amp;=\text{Announcement FE}+\text{Event time FE}+\text{Big4 group × Trading date FE}\\
+&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{C}_{gck}\,1(Big4_e=g,NewsGroup_e=c,\tau=k)\\
 &amp;+\varepsilon^{C}_{e\tau}.
 \end{aligned}
 \]</span></p>
@@ -3588,8 +3588,8 @@ CAR^w_{it}=\alpha_i+\lambda_t+\delta B_{it}+\beta U_{it}
 <h5 class="anchored" data-anchor-id="market-ue-bins-periods-annual-after2012-d">D｜审计组×事件时间FE＋审计组×交易日FE</h5>
 <p><span class="math display">\[
 \begin{aligned}
-\ln P_{e\tau}&amp;=\alpha_e+\lambda^{D}_{B_e,\tau}+\mu^{D}_{B_e,d(e,\tau)}\\
-&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{D}_{gck}\,1(B_e=g,C_e=c,\tau=k)\\
+\ln P_{e\tau}&amp;=\text{Announcement FE}+\text{Big4 group × Event time FE}+\text{Big4 group × Trading date FE}\\
+&amp;+\sum_{g\in\{0,1\}}\sum_{c\ne0}\sum_{k\in K}\theta^{D}_{gck}\,1(Big4_e=g,NewsGroup_e=c,\tau=k)\\
 &amp;+\varepsilon^{D}_{e\tau}.
 \end{aligned}
 \]</span></p>
@@ -3614,7 +3614,7 @@ CAR^w_{it}=\alpha_i+\lambda_t+\delta B_{it}+\beta U_{it}
 <h3 class="anchored" data-anchor-id="market-rolling-abcd">三年滚动A—D：固定各窗口D样本的模型与公司池对照</h3>
 <p><strong>本批规模与比较单位。</strong> 三套公司池×UE／ES×22个三年窗口×四模型，共528组估计，其中396个A／B／C为本次新增，132个D直接复用。共有96张独立图；每张图是22个窗口的第0日系数路径，不是96个单独回归。每个中心年<span class="math inline">\(w=2002,\ldots,2023\)</span>使用财年<span class="math inline">\([w-1,w+1]\)</span>，例如中心2010对应2009—2011，中心2012对应2011—2013。</p>
 <p><strong>消息与样本。</strong> <span class="math inline">\(UE=(EPS-F)/P_{pre}\)</span>，以±0.001划分好／中／坏消息；<span class="math inline">\(ES=(EPS-F)/|F|\)</span>，门槛为±0.10。保留两端消息，等于门槛归中间组；F=0不能定义ES。沿用严格公告前180天预测、不剔除重组、不匹配、报告财年实际审计身份及原始尾部。对每个“公司池×消息口径×中心年”，A／B／C逐行固定原D的实际公告—交易日样本；不同窗口、不同公司池不取统一交集。“曾用四大”依据2001—2024年完整审计历史定义；早上市／曾用四大属于描述性选池，含全期身份信息，不构成外生处理。</p>
-<p><strong>共同估计设定。</strong> Y为公告附近<span class="math inline">\([-5,+5]\)</span>交易日的原始收盘价log，第−1日为基期。<span class="math inline">\(e\)</span>为公告、<span class="math inline">\(\tau\)</span>为相对事件日、<span class="math inline">\(d(e,\tau)\)</span>为真实交易日期，<span class="math inline">\(B_e\)</span>为当年四大身份；<span class="math inline">\(C_e\in\{b,n,g\}\)</span>为坏／中／好消息，<span class="math inline">\(K=\{-5,-4,-3,-2,0,1,2,3,4,5\}\)</span>。每个窗口、消息口径与模型分别回归，均有公告事件FE，按公告事件聚类；无财务controls或连续surprise幅度控制。</p>
+<p><strong>共同估计设定。</strong> Y为公告附近<span class="math inline">\([-5,+5]\)</span>交易日的原始收盘价log，第−1日为基期。<span class="math inline">\(e\)</span>为公告、<span class="math inline">\(\tau\)</span>为相对事件日、<span class="math inline">\(d(e,\tau)\)</span>为真实交易日期，<span class="math inline">\(Big4_e\)</span>为当年四大身份；<span class="math inline">\(NewsGroup_e\in\{b,n,g\}\)</span>为坏／中／好消息，<span class="math inline">\(K=\{-5,-4,-3,-2,0,1,2,3,4,5\}\)</span>。每个窗口、消息口径与模型分别回归，均有公告事件FE，按公告事件聚类；无财务controls或连续surprise幅度控制。</p>
 <p>方程中<span class="math inline">\(\beta_{sk,w}^m\)</span>与<span class="math inline">\(\beta_{sk,w}^m+\delta_{sk,w}^m\)</span>分别对应两组模型响应，直接组间差为<span class="math inline">\(\delta_{sk,w}^m\)</span>。图只提取<span class="math inline">\(k=0\)</span>并乘100，展示点估计及报告聚类95%区间，完整动态估计保留在结果包。<strong>A／C将两组的中间消息事件时间路径约束为共同路径；B／D允许分组路径，才对应不受此限制的各组“消息减自身中间组”响应。</strong> A→B、C→D改变事件时间FE；A→C、B→D改变真实交易日FE。</p>
 <p><strong>完整样本的主要对照。</strong> UE好消息的四大正向组差在A有7个中心年达到5%，B／D均仅中心2010达到5%，C为中心2011—2013；A／C中心2023为负。ES好消息中，A有4个、C有2个中心年正向达到5%，B没有5%差值，D仅中心2019为负；ES坏消息的A／C没有5%组差，B在中心2019、2020为负，D在2018—2020为负。因此，共同事件时间路径限制、消息尺度和客户构成都影响额外响应的判断。</p>
 <p>这些是重叠三年窗口的逐点推断，未作多重比较校正；窗口间显著性变化不等于正式前后系数差，也不能直接归因于2012制度或声誉变化。早期预测覆盖和中性参考组支持较薄。跨公司池比较改变了客户构成，不能等同于同样本只改变FE；四模型的严格同样本要求只在每个既定池、口径和窗口内成立。</p>
@@ -3658,9 +3658,9 @@ UE：消息门槛±0.10%：A—D方程及16张图
 <h6 class="anchored" data-anchor-id="rolling-body-full-ue-a">A｜共同事件时间FE＋共同交易日FE</h6>
 <p><span class="math display">\[
 \begin{aligned}
-\ln P_{e\tau}&amp;=\alpha_{e,w}+\lambda^A_{\tau,w}+\mu^A_{d(e,\tau),w}\\
-&amp;\quad+\sum_{s\in\{b,g\}}\sum_{k\in K}\left[\beta^{A}_{sk,w}+\delta^{A}_{sk,w}B_e\right]\\
-&amp;\qquad\times1(C_e=s)1(\tau=k)+\varepsilon^{A}_{e\tau,w}.
+\ln P_{e\tau}&amp;=\text{Announcement FE}+\text{Event time FE}+\text{Trading date FE}\\
+&amp;\quad+\sum_{s\in\{b,g\}}\sum_{k\in K}\left[\beta^{A}_{sk,w}+\delta^{A}_{sk,w}Big4_e\right]\\
+&amp;\qquad\times1(NewsGroup_e=s)1(\tau=k)+\varepsilon^{A}_{e\tau,w}.
 \end{aligned}
 \]</span></p>
 <p><strong>本模型的基准：</strong> 共同中间消息事件时间路径约束下的模型响应。</p>
@@ -3693,9 +3693,9 @@ UE：消息门槛±0.10%：A—D方程及16张图
 <h6 class="anchored" data-anchor-id="rolling-body-full-ue-b">B｜审计组×事件时间FE＋共同交易日FE</h6>
 <p><span class="math display">\[
 \begin{aligned}
-\ln P_{e\tau}&amp;=\alpha_{e,w}+\lambda^B_{B_e,\tau,w}+\mu^B_{d(e,\tau),w}\\
-&amp;\quad+\sum_{s\in\{b,g\}}\sum_{k\in K}\left[\beta^{B}_{sk,w}+\delta^{B}_{sk,w}B_e\right]\\
-&amp;\qquad\times1(C_e=s)1(\tau=k)+\varepsilon^{B}_{e\tau,w}.
+\ln P_{e\tau}&amp;=\text{Announcement FE}+\text{Big4 group × Event time FE}+\text{Trading date FE}\\
+&amp;\quad+\sum_{s\in\{b,g\}}\sum_{k\in K}\left[\beta^{B}_{sk,w}+\delta^{B}_{sk,w}Big4_e\right]\\
+&amp;\qquad\times1(NewsGroup_e=s)1(\tau=k)+\varepsilon^{B}_{e\tau,w}.
 \end{aligned}
 \]</span></p>
 <p><strong>本模型的基准：</strong> 相对各组自身中间消息的响应。</p>
@@ -3728,9 +3728,9 @@ UE：消息门槛±0.10%：A—D方程及16张图
 <h6 class="anchored" data-anchor-id="rolling-body-full-ue-c">C｜共同事件时间FE＋审计组×交易日FE</h6>
 <p><span class="math display">\[
 \begin{aligned}
-\ln P_{e\tau}&amp;=\alpha_{e,w}+\lambda^C_{\tau,w}+\mu^C_{B_e,d(e,\tau),w}\\
-&amp;\quad+\sum_{s\in\{b,g\}}\sum_{k\in K}\left[\beta^{C}_{sk,w}+\delta^{C}_{sk,w}B_e\right]\\
-&amp;\qquad\times1(C_e=s)1(\tau=k)+\varepsilon^{C}_{e\tau,w}.
+\ln P_{e\tau}&amp;=\text{Announcement FE}+\text{Event time FE}+\text{Big4 group × Trading date FE}\\
+&amp;\quad+\sum_{s\in\{b,g\}}\sum_{k\in K}\left[\beta^{C}_{sk,w}+\delta^{C}_{sk,w}Big4_e\right]\\
+&amp;\qquad\times1(NewsGroup_e=s)1(\tau=k)+\varepsilon^{C}_{e\tau,w}.
 \end{aligned}
 \]</span></p>
 <p><strong>本模型的基准：</strong> 共同中间消息事件时间路径约束下的模型响应。</p>
@@ -3763,9 +3763,9 @@ UE：消息门槛±0.10%：A—D方程及16张图
 <h6 class="anchored" data-anchor-id="rolling-body-full-ue-d">D｜审计组×事件时间FE＋审计组×交易日FE</h6>
 <p><span class="math display">\[
 \begin{aligned}
-\ln P_{e\tau}&amp;=\alpha_{e,w}+\lambda^D_{B_e,\tau,w}+\mu^D_{B_e,d(e,\tau),w}\\
-&amp;\quad+\sum_{s\in\{b,g\}}\sum_{k\in K}\left[\beta^{D}_{sk,w}+\delta^{D}_{sk,w}B_e\right]\\
-&amp;\qquad\times1(C_e=s)1(\tau=k)+\varepsilon^{D}_{e\tau,w}.
+\ln P_{e\tau}&amp;=\text{Announcement FE}+\text{Big4 group × Event time FE}+\text{Big4 group × Trading date FE}\\
+&amp;\quad+\sum_{s\in\{b,g\}}\sum_{k\in K}\left[\beta^{D}_{sk,w}+\delta^{D}_{sk,w}Big4_e\right]\\
+&amp;\qquad\times1(NewsGroup_e=s)1(\tau=k)+\varepsilon^{D}_{e\tau,w}.
 \end{aligned}
 \]</span></p>
 <p><strong>本模型的基准：</strong> 相对各组自身中间消息的响应。</p>
@@ -3807,9 +3807,9 @@ ES：消息门槛±10%：A—D方程及16张图
 <h6 class="anchored" data-anchor-id="rolling-body-full-es-a">A｜共同事件时间FE＋共同交易日FE</h6>
 <p><span class="math display">\[
 \begin{aligned}
-\ln P_{e\tau}&amp;=\alpha_{e,w}+\lambda^A_{\tau,w}+\mu^A_{d(e,\tau),w}\\
-&amp;\quad+\sum_{s\in\{b,g\}}\sum_{k\in K}\left[\beta^{A}_{sk,w}+\delta^{A}_{sk,w}B_e\right]\\
-&amp;\qquad\times1(C_e=s)1(\tau=k)+\varepsilon^{A}_{e\tau,w}.
+\ln P_{e\tau}&amp;=\text{Announcement FE}+\text{Event time FE}+\text{Trading date FE}\\
+&amp;\quad+\sum_{s\in\{b,g\}}\sum_{k\in K}\left[\beta^{A}_{sk,w}+\delta^{A}_{sk,w}Big4_e\right]\\
+&amp;\qquad\times1(NewsGroup_e=s)1(\tau=k)+\varepsilon^{A}_{e\tau,w}.
 \end{aligned}
 \]</span></p>
 <p><strong>本模型的基准：</strong> 共同中间消息事件时间路径约束下的模型响应。</p>
@@ -3842,9 +3842,9 @@ ES：消息门槛±10%：A—D方程及16张图
 <h6 class="anchored" data-anchor-id="rolling-body-full-es-b">B｜审计组×事件时间FE＋共同交易日FE</h6>
 <p><span class="math display">\[
 \begin{aligned}
-\ln P_{e\tau}&amp;=\alpha_{e,w}+\lambda^B_{B_e,\tau,w}+\mu^B_{d(e,\tau),w}\\
-&amp;\quad+\sum_{s\in\{b,g\}}\sum_{k\in K}\left[\beta^{B}_{sk,w}+\delta^{B}_{sk,w}B_e\right]\\
-&amp;\qquad\times1(C_e=s)1(\tau=k)+\varepsilon^{B}_{e\tau,w}.
+\ln P_{e\tau}&amp;=\text{Announcement FE}+\text{Big4 group × Event time FE}+\text{Trading date FE}\\
+&amp;\quad+\sum_{s\in\{b,g\}}\sum_{k\in K}\left[\beta^{B}_{sk,w}+\delta^{B}_{sk,w}Big4_e\right]\\
+&amp;\qquad\times1(NewsGroup_e=s)1(\tau=k)+\varepsilon^{B}_{e\tau,w}.
 \end{aligned}
 \]</span></p>
 <p><strong>本模型的基准：</strong> 相对各组自身中间消息的响应。</p>
@@ -3877,9 +3877,9 @@ ES：消息门槛±10%：A—D方程及16张图
 <h6 class="anchored" data-anchor-id="rolling-body-full-es-c">C｜共同事件时间FE＋审计组×交易日FE</h6>
 <p><span class="math display">\[
 \begin{aligned}
-\ln P_{e\tau}&amp;=\alpha_{e,w}+\lambda^C_{\tau,w}+\mu^C_{B_e,d(e,\tau),w}\\
-&amp;\quad+\sum_{s\in\{b,g\}}\sum_{k\in K}\left[\beta^{C}_{sk,w}+\delta^{C}_{sk,w}B_e\right]\\
-&amp;\qquad\times1(C_e=s)1(\tau=k)+\varepsilon^{C}_{e\tau,w}.
+\ln P_{e\tau}&amp;=\text{Announcement FE}+\text{Event time FE}+\text{Big4 group × Trading date FE}\\
+&amp;\quad+\sum_{s\in\{b,g\}}\sum_{k\in K}\left[\beta^{C}_{sk,w}+\delta^{C}_{sk,w}Big4_e\right]\\
+&amp;\qquad\times1(NewsGroup_e=s)1(\tau=k)+\varepsilon^{C}_{e\tau,w}.
 \end{aligned}
 \]</span></p>
 <p><strong>本模型的基准：</strong> 共同中间消息事件时间路径约束下的模型响应。</p>
@@ -3912,9 +3912,9 @@ ES：消息门槛±10%：A—D方程及16张图
 <h6 class="anchored" data-anchor-id="rolling-body-full-es-d">D｜审计组×事件时间FE＋审计组×交易日FE</h6>
 <p><span class="math display">\[
 \begin{aligned}
-\ln P_{e\tau}&amp;=\alpha_{e,w}+\lambda^D_{B_e,\tau,w}+\mu^D_{B_e,d(e,\tau),w}\\
-&amp;\quad+\sum_{s\in\{b,g\}}\sum_{k\in K}\left[\beta^{D}_{sk,w}+\delta^{D}_{sk,w}B_e\right]\\
-&amp;\qquad\times1(C_e=s)1(\tau=k)+\varepsilon^{D}_{e\tau,w}.
+\ln P_{e\tau}&amp;=\text{Announcement FE}+\text{Big4 group × Event time FE}+\text{Big4 group × Trading date FE}\\
+&amp;\quad+\sum_{s\in\{b,g\}}\sum_{k\in K}\left[\beta^{D}_{sk,w}+\delta^{D}_{sk,w}Big4_e\right]\\
+&amp;\qquad\times1(NewsGroup_e=s)1(\tau=k)+\varepsilon^{D}_{e\tau,w}.
 \end{aligned}
 \]</span></p>
 <p><strong>本模型的基准：</strong> 相对各组自身中间消息的响应。</p>
@@ -3959,9 +3959,9 @@ UE：消息门槛±0.10%：A—D方程及16张图
 <h6 class="anchored" data-anchor-id="rolling-body-listed-ue-a">A｜共同事件时间FE＋共同交易日FE</h6>
 <p><span class="math display">\[
 \begin{aligned}
-\ln P_{e\tau}&amp;=\alpha_{e,w}+\lambda^A_{\tau,w}+\mu^A_{d(e,\tau),w}\\
-&amp;\quad+\sum_{s\in\{b,g\}}\sum_{k\in K}\left[\beta^{A}_{sk,w}+\delta^{A}_{sk,w}B_e\right]\\
-&amp;\qquad\times1(C_e=s)1(\tau=k)+\varepsilon^{A}_{e\tau,w}.
+\ln P_{e\tau}&amp;=\text{Announcement FE}+\text{Event time FE}+\text{Trading date FE}\\
+&amp;\quad+\sum_{s\in\{b,g\}}\sum_{k\in K}\left[\beta^{A}_{sk,w}+\delta^{A}_{sk,w}Big4_e\right]\\
+&amp;\qquad\times1(NewsGroup_e=s)1(\tau=k)+\varepsilon^{A}_{e\tau,w}.
 \end{aligned}
 \]</span></p>
 <p><strong>本模型的基准：</strong> 共同中间消息事件时间路径约束下的模型响应。</p>
@@ -3994,9 +3994,9 @@ UE：消息门槛±0.10%：A—D方程及16张图
 <h6 class="anchored" data-anchor-id="rolling-body-listed-ue-b">B｜审计组×事件时间FE＋共同交易日FE</h6>
 <p><span class="math display">\[
 \begin{aligned}
-\ln P_{e\tau}&amp;=\alpha_{e,w}+\lambda^B_{B_e,\tau,w}+\mu^B_{d(e,\tau),w}\\
-&amp;\quad+\sum_{s\in\{b,g\}}\sum_{k\in K}\left[\beta^{B}_{sk,w}+\delta^{B}_{sk,w}B_e\right]\\
-&amp;\qquad\times1(C_e=s)1(\tau=k)+\varepsilon^{B}_{e\tau,w}.
+\ln P_{e\tau}&amp;=\text{Announcement FE}+\text{Big4 group × Event time FE}+\text{Trading date FE}\\
+&amp;\quad+\sum_{s\in\{b,g\}}\sum_{k\in K}\left[\beta^{B}_{sk,w}+\delta^{B}_{sk,w}Big4_e\right]\\
+&amp;\qquad\times1(NewsGroup_e=s)1(\tau=k)+\varepsilon^{B}_{e\tau,w}.
 \end{aligned}
 \]</span></p>
 <p><strong>本模型的基准：</strong> 相对各组自身中间消息的响应。</p>
@@ -4029,9 +4029,9 @@ UE：消息门槛±0.10%：A—D方程及16张图
 <h6 class="anchored" data-anchor-id="rolling-body-listed-ue-c">C｜共同事件时间FE＋审计组×交易日FE</h6>
 <p><span class="math display">\[
 \begin{aligned}
-\ln P_{e\tau}&amp;=\alpha_{e,w}+\lambda^C_{\tau,w}+\mu^C_{B_e,d(e,\tau),w}\\
-&amp;\quad+\sum_{s\in\{b,g\}}\sum_{k\in K}\left[\beta^{C}_{sk,w}+\delta^{C}_{sk,w}B_e\right]\\
-&amp;\qquad\times1(C_e=s)1(\tau=k)+\varepsilon^{C}_{e\tau,w}.
+\ln P_{e\tau}&amp;=\text{Announcement FE}+\text{Event time FE}+\text{Big4 group × Trading date FE}\\
+&amp;\quad+\sum_{s\in\{b,g\}}\sum_{k\in K}\left[\beta^{C}_{sk,w}+\delta^{C}_{sk,w}Big4_e\right]\\
+&amp;\qquad\times1(NewsGroup_e=s)1(\tau=k)+\varepsilon^{C}_{e\tau,w}.
 \end{aligned}
 \]</span></p>
 <p><strong>本模型的基准：</strong> 共同中间消息事件时间路径约束下的模型响应。</p>
@@ -4064,9 +4064,9 @@ UE：消息门槛±0.10%：A—D方程及16张图
 <h6 class="anchored" data-anchor-id="rolling-body-listed-ue-d">D｜审计组×事件时间FE＋审计组×交易日FE</h6>
 <p><span class="math display">\[
 \begin{aligned}
-\ln P_{e\tau}&amp;=\alpha_{e,w}+\lambda^D_{B_e,\tau,w}+\mu^D_{B_e,d(e,\tau),w}\\
-&amp;\quad+\sum_{s\in\{b,g\}}\sum_{k\in K}\left[\beta^{D}_{sk,w}+\delta^{D}_{sk,w}B_e\right]\\
-&amp;\qquad\times1(C_e=s)1(\tau=k)+\varepsilon^{D}_{e\tau,w}.
+\ln P_{e\tau}&amp;=\text{Announcement FE}+\text{Big4 group × Event time FE}+\text{Big4 group × Trading date FE}\\
+&amp;\quad+\sum_{s\in\{b,g\}}\sum_{k\in K}\left[\beta^{D}_{sk,w}+\delta^{D}_{sk,w}Big4_e\right]\\
+&amp;\qquad\times1(NewsGroup_e=s)1(\tau=k)+\varepsilon^{D}_{e\tau,w}.
 \end{aligned}
 \]</span></p>
 <p><strong>本模型的基准：</strong> 相对各组自身中间消息的响应。</p>
@@ -4108,9 +4108,9 @@ ES：消息门槛±10%：A—D方程及16张图
 <h6 class="anchored" data-anchor-id="rolling-body-listed-es-a">A｜共同事件时间FE＋共同交易日FE</h6>
 <p><span class="math display">\[
 \begin{aligned}
-\ln P_{e\tau}&amp;=\alpha_{e,w}+\lambda^A_{\tau,w}+\mu^A_{d(e,\tau),w}\\
-&amp;\quad+\sum_{s\in\{b,g\}}\sum_{k\in K}\left[\beta^{A}_{sk,w}+\delta^{A}_{sk,w}B_e\right]\\
-&amp;\qquad\times1(C_e=s)1(\tau=k)+\varepsilon^{A}_{e\tau,w}.
+\ln P_{e\tau}&amp;=\text{Announcement FE}+\text{Event time FE}+\text{Trading date FE}\\
+&amp;\quad+\sum_{s\in\{b,g\}}\sum_{k\in K}\left[\beta^{A}_{sk,w}+\delta^{A}_{sk,w}Big4_e\right]\\
+&amp;\qquad\times1(NewsGroup_e=s)1(\tau=k)+\varepsilon^{A}_{e\tau,w}.
 \end{aligned}
 \]</span></p>
 <p><strong>本模型的基准：</strong> 共同中间消息事件时间路径约束下的模型响应。</p>
@@ -4143,9 +4143,9 @@ ES：消息门槛±10%：A—D方程及16张图
 <h6 class="anchored" data-anchor-id="rolling-body-listed-es-b">B｜审计组×事件时间FE＋共同交易日FE</h6>
 <p><span class="math display">\[
 \begin{aligned}
-\ln P_{e\tau}&amp;=\alpha_{e,w}+\lambda^B_{B_e,\tau,w}+\mu^B_{d(e,\tau),w}\\
-&amp;\quad+\sum_{s\in\{b,g\}}\sum_{k\in K}\left[\beta^{B}_{sk,w}+\delta^{B}_{sk,w}B_e\right]\\
-&amp;\qquad\times1(C_e=s)1(\tau=k)+\varepsilon^{B}_{e\tau,w}.
+\ln P_{e\tau}&amp;=\text{Announcement FE}+\text{Big4 group × Event time FE}+\text{Trading date FE}\\
+&amp;\quad+\sum_{s\in\{b,g\}}\sum_{k\in K}\left[\beta^{B}_{sk,w}+\delta^{B}_{sk,w}Big4_e\right]\\
+&amp;\qquad\times1(NewsGroup_e=s)1(\tau=k)+\varepsilon^{B}_{e\tau,w}.
 \end{aligned}
 \]</span></p>
 <p><strong>本模型的基准：</strong> 相对各组自身中间消息的响应。</p>
@@ -4178,9 +4178,9 @@ ES：消息门槛±10%：A—D方程及16张图
 <h6 class="anchored" data-anchor-id="rolling-body-listed-es-c">C｜共同事件时间FE＋审计组×交易日FE</h6>
 <p><span class="math display">\[
 \begin{aligned}
-\ln P_{e\tau}&amp;=\alpha_{e,w}+\lambda^C_{\tau,w}+\mu^C_{B_e,d(e,\tau),w}\\
-&amp;\quad+\sum_{s\in\{b,g\}}\sum_{k\in K}\left[\beta^{C}_{sk,w}+\delta^{C}_{sk,w}B_e\right]\\
-&amp;\qquad\times1(C_e=s)1(\tau=k)+\varepsilon^{C}_{e\tau,w}.
+\ln P_{e\tau}&amp;=\text{Announcement FE}+\text{Event time FE}+\text{Big4 group × Trading date FE}\\
+&amp;\quad+\sum_{s\in\{b,g\}}\sum_{k\in K}\left[\beta^{C}_{sk,w}+\delta^{C}_{sk,w}Big4_e\right]\\
+&amp;\qquad\times1(NewsGroup_e=s)1(\tau=k)+\varepsilon^{C}_{e\tau,w}.
 \end{aligned}
 \]</span></p>
 <p><strong>本模型的基准：</strong> 共同中间消息事件时间路径约束下的模型响应。</p>
@@ -4213,9 +4213,9 @@ ES：消息门槛±10%：A—D方程及16张图
 <h6 class="anchored" data-anchor-id="rolling-body-listed-es-d">D｜审计组×事件时间FE＋审计组×交易日FE</h6>
 <p><span class="math display">\[
 \begin{aligned}
-\ln P_{e\tau}&amp;=\alpha_{e,w}+\lambda^D_{B_e,\tau,w}+\mu^D_{B_e,d(e,\tau),w}\\
-&amp;\quad+\sum_{s\in\{b,g\}}\sum_{k\in K}\left[\beta^{D}_{sk,w}+\delta^{D}_{sk,w}B_e\right]\\
-&amp;\qquad\times1(C_e=s)1(\tau=k)+\varepsilon^{D}_{e\tau,w}.
+\ln P_{e\tau}&amp;=\text{Announcement FE}+\text{Big4 group × Event time FE}+\text{Big4 group × Trading date FE}\\
+&amp;\quad+\sum_{s\in\{b,g\}}\sum_{k\in K}\left[\beta^{D}_{sk,w}+\delta^{D}_{sk,w}Big4_e\right]\\
+&amp;\qquad\times1(NewsGroup_e=s)1(\tau=k)+\varepsilon^{D}_{e\tau,w}.
 \end{aligned}
 \]</span></p>
 <p><strong>本模型的基准：</strong> 相对各组自身中间消息的响应。</p>
@@ -4260,9 +4260,9 @@ UE：消息门槛±0.10%：A—D方程及16张图
 <h6 class="anchored" data-anchor-id="rolling-body-ever_big4-ue-a">A｜共同事件时间FE＋共同交易日FE</h6>
 <p><span class="math display">\[
 \begin{aligned}
-\ln P_{e\tau}&amp;=\alpha_{e,w}+\lambda^A_{\tau,w}+\mu^A_{d(e,\tau),w}\\
-&amp;\quad+\sum_{s\in\{b,g\}}\sum_{k\in K}\left[\beta^{A}_{sk,w}+\delta^{A}_{sk,w}B_e\right]\\
-&amp;\qquad\times1(C_e=s)1(\tau=k)+\varepsilon^{A}_{e\tau,w}.
+\ln P_{e\tau}&amp;=\text{Announcement FE}+\text{Event time FE}+\text{Trading date FE}\\
+&amp;\quad+\sum_{s\in\{b,g\}}\sum_{k\in K}\left[\beta^{A}_{sk,w}+\delta^{A}_{sk,w}Big4_e\right]\\
+&amp;\qquad\times1(NewsGroup_e=s)1(\tau=k)+\varepsilon^{A}_{e\tau,w}.
 \end{aligned}
 \]</span></p>
 <p><strong>本模型的基准：</strong> 共同中间消息事件时间路径约束下的模型响应。</p>
@@ -4295,9 +4295,9 @@ UE：消息门槛±0.10%：A—D方程及16张图
 <h6 class="anchored" data-anchor-id="rolling-body-ever_big4-ue-b">B｜审计组×事件时间FE＋共同交易日FE</h6>
 <p><span class="math display">\[
 \begin{aligned}
-\ln P_{e\tau}&amp;=\alpha_{e,w}+\lambda^B_{B_e,\tau,w}+\mu^B_{d(e,\tau),w}\\
-&amp;\quad+\sum_{s\in\{b,g\}}\sum_{k\in K}\left[\beta^{B}_{sk,w}+\delta^{B}_{sk,w}B_e\right]\\
-&amp;\qquad\times1(C_e=s)1(\tau=k)+\varepsilon^{B}_{e\tau,w}.
+\ln P_{e\tau}&amp;=\text{Announcement FE}+\text{Big4 group × Event time FE}+\text{Trading date FE}\\
+&amp;\quad+\sum_{s\in\{b,g\}}\sum_{k\in K}\left[\beta^{B}_{sk,w}+\delta^{B}_{sk,w}Big4_e\right]\\
+&amp;\qquad\times1(NewsGroup_e=s)1(\tau=k)+\varepsilon^{B}_{e\tau,w}.
 \end{aligned}
 \]</span></p>
 <p><strong>本模型的基准：</strong> 相对各组自身中间消息的响应。</p>
@@ -4330,9 +4330,9 @@ UE：消息门槛±0.10%：A—D方程及16张图
 <h6 class="anchored" data-anchor-id="rolling-body-ever_big4-ue-c">C｜共同事件时间FE＋审计组×交易日FE</h6>
 <p><span class="math display">\[
 \begin{aligned}
-\ln P_{e\tau}&amp;=\alpha_{e,w}+\lambda^C_{\tau,w}+\mu^C_{B_e,d(e,\tau),w}\\
-&amp;\quad+\sum_{s\in\{b,g\}}\sum_{k\in K}\left[\beta^{C}_{sk,w}+\delta^{C}_{sk,w}B_e\right]\\
-&amp;\qquad\times1(C_e=s)1(\tau=k)+\varepsilon^{C}_{e\tau,w}.
+\ln P_{e\tau}&amp;=\text{Announcement FE}+\text{Event time FE}+\text{Big4 group × Trading date FE}\\
+&amp;\quad+\sum_{s\in\{b,g\}}\sum_{k\in K}\left[\beta^{C}_{sk,w}+\delta^{C}_{sk,w}Big4_e\right]\\
+&amp;\qquad\times1(NewsGroup_e=s)1(\tau=k)+\varepsilon^{C}_{e\tau,w}.
 \end{aligned}
 \]</span></p>
 <p><strong>本模型的基准：</strong> 共同中间消息事件时间路径约束下的模型响应。</p>
@@ -4365,9 +4365,9 @@ UE：消息门槛±0.10%：A—D方程及16张图
 <h6 class="anchored" data-anchor-id="rolling-body-ever_big4-ue-d">D｜审计组×事件时间FE＋审计组×交易日FE</h6>
 <p><span class="math display">\[
 \begin{aligned}
-\ln P_{e\tau}&amp;=\alpha_{e,w}+\lambda^D_{B_e,\tau,w}+\mu^D_{B_e,d(e,\tau),w}\\
-&amp;\quad+\sum_{s\in\{b,g\}}\sum_{k\in K}\left[\beta^{D}_{sk,w}+\delta^{D}_{sk,w}B_e\right]\\
-&amp;\qquad\times1(C_e=s)1(\tau=k)+\varepsilon^{D}_{e\tau,w}.
+\ln P_{e\tau}&amp;=\text{Announcement FE}+\text{Big4 group × Event time FE}+\text{Big4 group × Trading date FE}\\
+&amp;\quad+\sum_{s\in\{b,g\}}\sum_{k\in K}\left[\beta^{D}_{sk,w}+\delta^{D}_{sk,w}Big4_e\right]\\
+&amp;\qquad\times1(NewsGroup_e=s)1(\tau=k)+\varepsilon^{D}_{e\tau,w}.
 \end{aligned}
 \]</span></p>
 <p><strong>本模型的基准：</strong> 相对各组自身中间消息的响应。</p>
@@ -4409,9 +4409,9 @@ ES：消息门槛±10%：A—D方程及16张图
 <h6 class="anchored" data-anchor-id="rolling-body-ever_big4-es-a">A｜共同事件时间FE＋共同交易日FE</h6>
 <p><span class="math display">\[
 \begin{aligned}
-\ln P_{e\tau}&amp;=\alpha_{e,w}+\lambda^A_{\tau,w}+\mu^A_{d(e,\tau),w}\\
-&amp;\quad+\sum_{s\in\{b,g\}}\sum_{k\in K}\left[\beta^{A}_{sk,w}+\delta^{A}_{sk,w}B_e\right]\\
-&amp;\qquad\times1(C_e=s)1(\tau=k)+\varepsilon^{A}_{e\tau,w}.
+\ln P_{e\tau}&amp;=\text{Announcement FE}+\text{Event time FE}+\text{Trading date FE}\\
+&amp;\quad+\sum_{s\in\{b,g\}}\sum_{k\in K}\left[\beta^{A}_{sk,w}+\delta^{A}_{sk,w}Big4_e\right]\\
+&amp;\qquad\times1(NewsGroup_e=s)1(\tau=k)+\varepsilon^{A}_{e\tau,w}.
 \end{aligned}
 \]</span></p>
 <p><strong>本模型的基准：</strong> 共同中间消息事件时间路径约束下的模型响应。</p>
@@ -4444,9 +4444,9 @@ ES：消息门槛±10%：A—D方程及16张图
 <h6 class="anchored" data-anchor-id="rolling-body-ever_big4-es-b">B｜审计组×事件时间FE＋共同交易日FE</h6>
 <p><span class="math display">\[
 \begin{aligned}
-\ln P_{e\tau}&amp;=\alpha_{e,w}+\lambda^B_{B_e,\tau,w}+\mu^B_{d(e,\tau),w}\\
-&amp;\quad+\sum_{s\in\{b,g\}}\sum_{k\in K}\left[\beta^{B}_{sk,w}+\delta^{B}_{sk,w}B_e\right]\\
-&amp;\qquad\times1(C_e=s)1(\tau=k)+\varepsilon^{B}_{e\tau,w}.
+\ln P_{e\tau}&amp;=\text{Announcement FE}+\text{Big4 group × Event time FE}+\text{Trading date FE}\\
+&amp;\quad+\sum_{s\in\{b,g\}}\sum_{k\in K}\left[\beta^{B}_{sk,w}+\delta^{B}_{sk,w}Big4_e\right]\\
+&amp;\qquad\times1(NewsGroup_e=s)1(\tau=k)+\varepsilon^{B}_{e\tau,w}.
 \end{aligned}
 \]</span></p>
 <p><strong>本模型的基准：</strong> 相对各组自身中间消息的响应。</p>
@@ -4479,9 +4479,9 @@ ES：消息门槛±10%：A—D方程及16张图
 <h6 class="anchored" data-anchor-id="rolling-body-ever_big4-es-c">C｜共同事件时间FE＋审计组×交易日FE</h6>
 <p><span class="math display">\[
 \begin{aligned}
-\ln P_{e\tau}&amp;=\alpha_{e,w}+\lambda^C_{\tau,w}+\mu^C_{B_e,d(e,\tau),w}\\
-&amp;\quad+\sum_{s\in\{b,g\}}\sum_{k\in K}\left[\beta^{C}_{sk,w}+\delta^{C}_{sk,w}B_e\right]\\
-&amp;\qquad\times1(C_e=s)1(\tau=k)+\varepsilon^{C}_{e\tau,w}.
+\ln P_{e\tau}&amp;=\text{Announcement FE}+\text{Event time FE}+\text{Big4 group × Trading date FE}\\
+&amp;\quad+\sum_{s\in\{b,g\}}\sum_{k\in K}\left[\beta^{C}_{sk,w}+\delta^{C}_{sk,w}Big4_e\right]\\
+&amp;\qquad\times1(NewsGroup_e=s)1(\tau=k)+\varepsilon^{C}_{e\tau,w}.
 \end{aligned}
 \]</span></p>
 <p><strong>本模型的基准：</strong> 共同中间消息事件时间路径约束下的模型响应。</p>
@@ -4514,9 +4514,9 @@ ES：消息门槛±10%：A—D方程及16张图
 <h6 class="anchored" data-anchor-id="rolling-body-ever_big4-es-d">D｜审计组×事件时间FE＋审计组×交易日FE</h6>
 <p><span class="math display">\[
 \begin{aligned}
-\ln P_{e\tau}&amp;=\alpha_{e,w}+\lambda^D_{B_e,\tau,w}+\mu^D_{B_e,d(e,\tau),w}\\
-&amp;\quad+\sum_{s\in\{b,g\}}\sum_{k\in K}\left[\beta^{D}_{sk,w}+\delta^{D}_{sk,w}B_e\right]\\
-&amp;\qquad\times1(C_e=s)1(\tau=k)+\varepsilon^{D}_{e\tau,w}.
+\ln P_{e\tau}&amp;=\text{Announcement FE}+\text{Big4 group × Event time FE}+\text{Big4 group × Trading date FE}\\
+&amp;\quad+\sum_{s\in\{b,g\}}\sum_{k\in K}\left[\beta^{D}_{sk,w}+\delta^{D}_{sk,w}Big4_e\right]\\
+&amp;\qquad\times1(NewsGroup_e=s)1(\tau=k)+\varepsilon^{D}_{e\tau,w}.
 \end{aligned}
 \]</span></p>
 <p><strong>本模型的基准：</strong> 相对各组自身中间消息的响应。</p>
@@ -4555,11 +4555,11 @@ ES：消息门槛±10%：A—D方程及16张图
 <p><strong>本节为当前选定的短窗展示规格。</strong> 在同样使用过四大的早上市公司池中，允许两组拥有各自时间路径后，早期好消息增量差为正，后期好消息和坏消息增量差均为负。</p>
 <p><strong>比较对象与模型。</strong> 只保留2012年前上市、2001—2024年至少一年使用四大的公司，按公告当年的实际审计师区分四大与非四大；不要求每家公司在两期都有合格公告。采用公告前严格180天预测中位数，<span class="math inline">\(UE=(EPS-F)/P_{pre}\)</span>；坏消息为<span class="math inline">\(UE&lt;-0.001\)</span>，中间组为<span class="math inline">\(UE\in[-0.001,0.001]\)</span>，好消息为<span class="math inline">\(UE&gt;0.001\)</span>。不剔除重组、不匹配。以公告前1日为基期，在[−5,+5]交易日窗口内分别估计2001—2011和2012—2024财年的D模型：</p>
 <p><span class="math display">\[
-\ln P_{e\tau}=\alpha_e+\lambda_{B_e,\tau}+\mu_{B_e,t}
+\ln P_{e\tau}=\text{Announcement FE}+\text{Big4 group × Event time FE}+\text{Big4 group × Trading date FE}
 +\sum_{c\in\{bad,good\}}\sum_{k\ne-1}
-[\beta_{ck}(1-B_e)+\gamma_{ck}B_e]1(C_e=c)1(\tau=k)+\varepsilon_{e\tau}.
+[\beta_{ck}(1-Big4_e)+\gamma_{ck}Big4_e]1(NewsGroup_e=c)1(\tau=k)+\varepsilon_{e\tau}.
 \]</span></p>
-<p><span class="math inline">\(B_e\)</span>为当年四大身份。吸收报告事件FE、审计组×相对事件日FE、审计组×实际交易日FE，允许两组各有中间消息基准路径和交易日冲击。标准误按报告（公司年）聚类，无其他财务控制或连续UE幅度控制。非四大、四大的组内增量分别为<span class="math inline">\(\beta_{ck}\)</span>、<span class="math inline">\(\gamma_{ck}\)</span>，直接组间差为<span class="math inline">\(\gamma_{ck}-\beta_{ck}\)</span>。下述数值为第0日相对−1日的对数价格响应乘100，近似百分点。</p>
+<p><span class="math inline">\(Big4_e\)</span>为当年四大身份。吸收报告事件FE、审计组×相对事件日FE、审计组×实际交易日FE，允许两组各有中间消息基准路径和交易日冲击。标准误按报告（公司年）聚类，无其他财务控制或连续UE幅度控制。非四大、四大的组内增量分别为<span class="math inline">\(\beta_{ck}\)</span>、<span class="math inline">\(\gamma_{ck}\)</span>，直接组间差为<span class="math inline">\(\gamma_{ck}-\beta_{ck}\)</span>。下述数值为第0日相对−1日的对数价格响应乘100，近似百分点。</p>
 <p><strong>结果。</strong> 2012年前，四大好消息相对自身中间组的响应为0.915（SE=0.279，p=0.0010），非四大为0.042（SE=0.349，p=0.9052）；四大额外增量为0.874（SE=0.446，p=0.0504），达到10%水平。2012年起，四大好消息增量为0.169（SE=0.213，p=0.4265），非四大为0.931（SE=0.260，p=0.0004）；直接差值为−0.762（SE=0.336，p=0.0235）。</p>
 <p>坏消息方面，早期四大、非四大相对自身中间组的响应分别为0.148（SE=0.318）和−0.306（SE=0.347），差值0.454（SE=0.471，p=0.3352）。后期分别为−0.662（SE=0.220，p=0.0026）和0.293（SE=0.255，p=0.2504），差值−0.956（SE=0.337，p=0.0046）。这个公司池中，早期呈现较强的四大好消息奖励，后期呈现较弱的好消息奖励及较负的坏消息响应。</p>
 <div class="quarto-figure quarto-figure-center">
@@ -4619,9 +4619,9 @@ ES：消息门槛±10%：A—D方程及16张图
 <p>保持上文公司池：2012年前上市、2001—2024至少一年使用四大，按公告所属财年的实际审计师分组；不要求公司两期都用四大。严格公告前180天预测、不剔除重组、不匹配。改用<span class="math inline">\(ES=(EPS-F)/|F|\)</span>，好消息为<span class="math inline">\(ES&gt;0.10\)</span>，中间组为<span class="math inline">\(ES\in[-0.10,0.10]\)</span>，坏消息为<span class="math inline">\(ES&lt;-0.10\)</span>。后期2份报告的预测中位数<span class="math inline">\(F=0\)</span>，无法定义ES而退出。</p>
 <p>两期分别估计同一D模型，好消息与坏消息在一个回归中联合估计：</p>
 <p><span class="math display">\[
-\ln P_{e\tau}=\alpha_e+\lambda_{B_e,\tau}+\mu_{B_e,t}
+\ln P_{e\tau}=\text{Announcement FE}+\text{Big4 group × Event time FE}+\text{Big4 group × Trading date FE}
 +\sum_{c\in\{\mathrm{good,bad}\}}\sum_{k\ne-1}
-[\beta_{ck}+\delta_{ck}B_e]1(C_e=c)1(\tau=k)+\varepsilon_{e\tau}.
+[\beta_{ck}+\delta_{ck}Big4_e]1(NewsGroup_e=c)1(\tau=k)+\varepsilon_{e\tau}.
 \]</span></p>
 <p>报告事件FE、审计组×相对事件日FE、审计组×真实交易日FE均保留；标准误按报告（公司年）聚类，无财务controls或连续ES幅度控制。非四大相对自身中间组的反应为<span class="math inline">\(\beta\)</span>，四大为<span class="math inline">\(\beta+\delta\)</span>，组间差为<span class="math inline">\(\delta\)</span>。窗口为[−5,+5]，第−1日为基期；第0日系数是相对价格响应，不是CAR[−1,0]。以下系数及标准误均乘100。</p>
 <p><strong>好消息。</strong> 2001—2011年，四大为0.537（SE=0.228，p=0.0185），非四大为−0.004（SE=0.297，p=0.9903），差值0.540（SE=0.374，p=0.1492）。2012—2024年，四大为0.183（SE=0.167，p=0.2721），非四大为0.776（SE=0.227，p=0.0006），差值−0.593（SE=0.281，p=0.0353）。后期四大的好消息增量低于非四大。</p>
@@ -4685,17 +4685,17 @@ ES：消息门槛±10%：A—D方程及16张图
 <section id="market-positive-main" class="level4">
 <h4 class="anchored" data-anchor-id="market-positive-main">2.1.1 基准结果：同一完整交互模型的组内响应与组间差异</h4>
 <p><strong>本轮仅修改基准短窗interaction的时间固定效应。</strong> 原分组组内模型保持不变，作为一致性核对基准。新共同模型C同时吸收审计组×事件日及审计组×实际交易日期固定效应，组内图与组间差值图从同一模型提取；原受限式A保留在本节末。长窗、ERC、门槛扫描、滚动窗口及其他既有补充未在本轮切换规格。</p>
-<p><strong>Y、消息与样本。</strong> Y为原始日收盘价自然对数；预测为公告前180天券商预测中位数，实际EPS沿用已核实原报恢复后的口径。<span class="math inline">\(S=(EPS_{actual}-EPS_{forecast,180})/|EPS_{forecast,180}|\)</span>；好消息为<span class="math inline">\(S&gt;0.10\)</span>、中性为<span class="math inline">\(-0.10\leq S\leq0.10\)</span>，排除坏消息。沿用原完整[−5,+5]候选公告构造，共20,411份；原受限共同模型A实际使用20,408份。新模型不增加控制或额外筛选，按新FE结构迭代剔除单例，实际样本是原A有效样本的子集。分期按财年划分2001—2011及2012—2024；各模型实际e(sample)及单例损失见后表。</p>
+<p><strong>Y、消息与样本。</strong> Y为原始日收盘价自然对数；预测为公告前180天券商预测中位数，实际EPS沿用已核实原报恢复后的口径。<span class="math inline">\(S=(EPS_{actual}-EPS_{forecast,180})/|EPS_{forecast,180}|\)</span>；好消息为<span class="math inline">\(ES&gt;0.10\)</span>、中性为<span class="math inline">\(-0.10\leq S\leq0.10\)</span>，排除坏消息。沿用原完整[−5,+5]候选公告构造，共20,411份；原受限共同模型A实际使用20,408份。新模型不增加控制或额外筛选，按新FE结构迭代剔除单例，实际样本是原A有效样本的子集。分期按财年划分2001—2011及2012—2024；各模型实际e(sample)及单例损失见后表。</p>
 <section id="组内响应保持原分组模型统一提取与检验" class="level5">
 <h5 class="anchored" data-anchor-id="组内响应保持原分组模型统一提取与检验">组内响应：保持原分组模型，统一提取与检验</h5>
 <p>原来在每个审计组<span class="math inline">\(g\)</span>内分别估计的方程为：</p>
 <p><span id="eq-market-separate-paths"><span class="math display">\[
-\ln P_{ifd}=\alpha_{if}^{(g)}+\delta_k^{(g)}+\lambda_d^{(g)}
+\ln P_{ifd}=\text{Announcement FE}+\text{Event time FE}+\text{Trading date FE}
 +\sum_{k\in\mathcal K}b_{gk}Good_{if}D^k_{ifd}+\varepsilon_{ifd},\qquad(i,f,d)\in\mathcal S_g.
 \tag{3}\]</span></span></p>
 <p>这里每组本来就拥有自己的事件日和交易日期效应。新共同模型C保留同样的自由度结构：</p>
 <p><span id="eq-market-short-saturated"><span class="math display">\[
-\ln P_{ifd}=\alpha_{if}+\delta_{g(if),k(ifd)}+\lambda_{g(if),d}
+\ln P_{ifd}=\text{Announcement FE}+\text{Audit group × Event time FE}+\text{Audit group × Trading date FE}
 +\sum_{g\in\mathcal G}\sum_{k\in\mathcal K}\beta_{gk}A^g_{if}Good_{if}D^k_{ifd}
 +\varepsilon_{ifd}.
 \tag{4}\]</span></span></p>
@@ -4965,13 +4965,13 @@ ES：消息门槛±10%：A—D方程及16张图
 原受限式A与原11张图：保留作规格对照
 </summary>
 <p>原模型共享事件日FE和实际日期FE；下列旧数值、显著性及图形仍属于原受限式A，不能作为新模型C的结果。旧方程 <a href="#eq-market-threshold" class="quarto-xref">式&nbsp;5</a> 也用于后面的既有分位数、门槛扫描与滚动对照。</p>
-<p><strong>消息、Y与事件样本。</strong> <span class="math inline">\(S_{if}=(EPS_{actual}-EPS_{forecast,180})/|EPS_{forecast,180}|\)</span>，预测取年报公告前180天券商预测中位数，实际EPS使用已核实原报修复后的口径，未核实记录保留数据库值。<span class="math inline">\(Good_{if}=1\{S_{if}&gt;0.10\}\)</span>，中性为<span class="math inline">\(-0.10\leq S_{if}\leq0.10\)</span>，坏消息不进入比较。Y为原始日收盘价自然对数<span class="math inline">\(\ln P_{ifd}\)</span>；窗口为[−5,+5]共11个市场交易日，以−1日为基期，保留完整价格窗口。全样本沿用20,408份公告；分期按财年，2012年前为2001—2011，2012年起为2012—2024。</p>
+<p><strong>消息、Y与事件样本。</strong> <span class="math inline">\(ES_{if}=(EPS_{actual}-EPS_{forecast,180})/|EPS_{forecast,180}|\)</span>，预测取年报公告前180天券商预测中位数，实际EPS使用已核实原报修复后的口径，未核实记录保留数据库值。<span class="math inline">\(Good_{if}=1\{ES_{if}&gt;0.10\}\)</span>，中性为<span class="math inline">\(-0.10\leq ES_{if}\leq0.10\)</span>，坏消息不进入比较。Y为原始日收盘价自然对数<span class="math inline">\(\ln P_{ifd}\)</span>；窗口为[−5,+5]共11个市场交易日，以−1日为基期，保留完整价格窗口。全样本沿用20,408份公告；分期按财年，2012年前为2001—2011，2012年起为2012—2024。</p>
 <p>两类模型均使用公司×财年、相对事件日、实际交易日期固定效应，公司×财年聚类，无额外控制。二组分类为四大／非四大，非四大包括本土八大与Other；三组分类为四大／本土八大／Other。组内图和interaction图区分展示。</p>
 <section id="组内分别估计各组的好消息相对中性消息响应" class="level6">
 <h6 class="anchored" data-anchor-id="组内分别估计各组的好消息相对中性消息响应">组内分别估计：各组的好消息相对中性消息响应</h6>
 <p><strong>回归方程。</strong> <span class="math inline">\(i\)</span>为公司、<span class="math inline">\(f\)</span>为财年、<span class="math inline">\(d\)</span>为实际交易日期，<span class="math inline">\(k(i,f,d)\)</span>为相对公告交易日，<span class="math inline">\(D^k_{ifd}=1\{k(i,f,d)=k\}\)</span>，<span class="math inline">\(\mathcal K=\{-5,-4,-3,-2,0,1,2,3,4,5\}\)</span>。在每个审计组<span class="math inline">\(g\)</span>的子样本<span class="math inline">\(\mathcal S_g\)</span>内分别估计：</p>
 <p><span class="math display">\[
-\ln P_{ifd}=\alpha_{if}^{(g)}+\delta_{k(i,f,d)}^{(g)}+\lambda_d^{(g)}
+\ln P_{ifd}=\text{Announcement FE}+\text{Event time FE}+\text{Trading date FE}
 +\sum_{k\in\mathcal K}b_{gk}Good_{if}D^k_{ifd}+\varepsilon_{ifd},
 \qquad(i,f,d)\in\mathcal S_g.
 \]</span></p>
@@ -5014,7 +5014,7 @@ ES：消息门槛±10%：A—D方程及16张图
 <h6 class="anchored" data-anchor-id="共同interaction直接检验审计组之间的消息响应差">共同interaction：直接检验审计组之间的消息响应差</h6>
 <p><strong>回归方程。</strong> 在每个时期的完整好消息与中性消息样本<span class="math inline">\(\mathcal S\)</span>中，使用共同固定效应估计：</p>
 <p><span id="eq-market-threshold"><span class="math display">\[
-\ln P_{ifd}=\alpha_{if}+\delta_{k(i,f,d)}+\lambda_d
+\ln P_{ifd}=\text{Announcement FE}+\text{Event time FE}+\text{Trading date FE}
 +\sum_{g\in\mathcal G}\sum_{k\in\mathcal K}
 \beta_{gk}^{\mathcal S}A^g_{if}Good_{if}D^k_{ifd}+\varepsilon_{ifd},
 \qquad(i,f,d)\in\mathcal S.
@@ -5086,7 +5086,7 @@ ES：消息门槛±10%：A—D方程及16张图
 <section id="共同分位数组完整事件路径" class="level4">
 <h4 class="anchored" data-anchor-id="共同分位数组完整事件路径">2.1.2 共同分位数组：完整事件路径</h4>
 <p><strong>原受限式A的补充对照。</strong> 本小节及后面的门槛扫描、滚动结果沿用原共同时间FE，未在本轮重估；它们与本节主规格C分别解释。</p>
-<p>沿用 <a href="#eq-market-threshold" class="quarto-xref">式&nbsp;5</a>，只将<span class="math inline">\(T_{if}\)</span>改为<span class="math inline">\(\mathbf{1}\{S_{if}&gt;P75\}\)</span>，并在<span class="math inline">\(\mathcal S\)</span>中保留<span class="math inline">\(S_{if}\geq P25\)</span>；固定效应、聚类与系数差定义保持一致。</p>
+<p>沿用 <a href="#eq-market-threshold" class="quarto-xref">式&nbsp;5</a>，只将<span class="math inline">\(T_{if}\)</span>改为<span class="math inline">\(\mathbf{1}\{ES_{if}&gt;P75\}\)</span>，并在<span class="math inline">\(\mathcal S\)</span>中保留<span class="math inline">\(ES_{if}\geq P25\)</span>；固定效应、聚类与系数差定义保持一致。</p>
 <p>共同分位点从修复后全时期30,064个完整候选年报事件一次计算：P25为-15.0805%，P75为5.9957%。正向组为top25%（<span class="math inline">\(S&gt;P75\)</span>），中性组为中间50%（<span class="math inline">\(P25\leq S\leq P75\)</span>），最低25%排除。全样本与2012年前、二组与三组以及7年滚动均固定使用这组全时期分位点；不按组别或窗口重算。</p>
 <section id="全样本" class="level5">
 <h5 class="anchored" data-anchor-id="全样本">全样本</h5>
@@ -5121,7 +5121,7 @@ ES：消息门槛±10%：A—D方程及16张图
 </section>
 <section id="消息门槛扫描全样本与2012年前" class="level4">
 <h4 class="anchored" data-anchor-id="消息门槛扫描全样本与2012年前">2.1.3 消息门槛扫描：全样本与2012年前</h4>
-<p>对每个<span class="math inline">\(c\)</span>分别估计 <a href="#eq-market-threshold" class="quarto-xref">式&nbsp;5</a>，令<span class="math inline">\(T_{if}(c)=\mathbf{1}\{S_{if}&gt;c\}\)</span>，样本限定为<span class="math inline">\(S_{if}\geq-c\)</span>。因此扫描图画的是<span class="math inline">\(\Delta_k(c)\)</span>；每个<span class="math inline">\(c\)</span>都重新拟合，各门槛对应独立的分组回归。全样本与2012年前不另写方程。</p>
+<p>对每个<span class="math inline">\(c\)</span>分别估计 <a href="#eq-market-threshold" class="quarto-xref">式&nbsp;5</a>，令<span class="math inline">\(T_{if}(c)=\mathbf{1}\{ES_{if}&gt;c\}\)</span>，样本限定为<span class="math inline">\(ES_{if}\geq-c\)</span>。因此扫描图画的是<span class="math inline">\(\Delta_k(c)\)</span>；每个<span class="math inline">\(c\)</span>都重新拟合，各门槛对应独立的分组回归。全样本与2012年前不另写方程。</p>
 <p>横轴为固定surprise比率门槛 <strong>5%—25%</strong>。每个门槛<span class="math inline">\(c\)</span>重新定义正向组<span class="math inline">\(S&gt;c\)</span>和中性组<span class="math inline">\(-c\leq S\leq c\)</span>，分别展示第0、+1、+2和+5日相对−1日的组间反应差值。右轴为各组实际回归样本中“正向／（正向＋中性）”的比例。每个点对应该门槛下的有效样本及组间反应差。</p>
 <section id="全样本-1" class="level5">
 <h5 class="anchored" data-anchor-id="全样本-1">全样本</h5>
@@ -5200,7 +5200,7 @@ ES：消息门槛±10%：A—D方程及16张图
 </section>
 <section id="时间变化10门槛的7年滚动结果" class="level4">
 <h4 class="anchored" data-anchor-id="时间变化10门槛的7年滚动结果">2.1.4 时间变化：10%门槛的7年滚动结果</h4>
-<p>仍使用 <a href="#eq-market-threshold" class="quarto-xref">式&nbsp;5</a>，在中心财年<span class="math inline">\(m\)</span>对应的<span class="math inline">\(\mathcal S_m=\{(i,f,t):m-3\leq f\leq m+3\}\)</span>内单独估计，令<span class="math inline">\(T_{if}=\mathbf{1}\{S_{if}&gt;0.10\}\)</span>并保留<span class="math inline">\(S_{if}\geq-0.10\)</span>。横轴各点为不同<span class="math inline">\(\mathcal S_m\)</span>的<span class="math inline">\(\Delta_k(m)\)</span>；各窗口分别估计。</p>
+<p>仍使用 <a href="#eq-market-threshold" class="quarto-xref">式&nbsp;5</a>，在中心财年<span class="math inline">\(m\)</span>对应的<span class="math inline">\(\mathcal S_m=\{(i,f,t):m-3\leq f\leq m+3\}\)</span>内单独估计，令<span class="math inline">\(T_{if}=\mathbf{1}\{ES_{if}&gt;0.10\}\)</span>并保留<span class="math inline">\(ES_{if}\geq-0.10\)</span>。横轴各点为不同<span class="math inline">\(\mathcal S_m\)</span>的<span class="math inline">\(\Delta_k(m)\)</span>；各窗口分别估计。</p>
 <p>沿用正向惊喜超过10%、中性惊喜在±10%内的分组。横轴为7年窗口的中心财年，每次向前移动一年，例如中心2008对应2005—2011财年。仅展示完整窗口：中心2004—2020；中心2003需要2000年数据，未纳入。各图分别显示第0、+1、+2、+3日相对−1日的差值；纵轴为对数股价的系数差。</p>
 <section id="各组自身的响应差距收窄来自哪里" class="level5">
 <h5 class="anchored" data-anchor-id="各组自身的响应差距收窄来自哪里">各组自身的响应：差距收窄来自哪里？</h5>
@@ -5289,7 +5289,7 @@ ES：消息门槛±10%：A—D方程及16张图
 </section>
 <section id="时间变化共同分位数组的7年滚动结果" class="level4">
 <h4 class="anchored" data-anchor-id="时间变化共同分位数组的7年滚动结果">2.1.5 时间变化：共同分位数组的7年滚动结果</h4>
-<p>同样在<span class="math inline">\(\mathcal S_m\)</span>内估计 <a href="#eq-market-threshold" class="quarto-xref">式&nbsp;5</a>，但使用固定全时期分位点<span class="math inline">\(T_{if}=\mathbf{1}\{S_{if}&gt;P75\}\)</span>、<span class="math inline">\(S_{if}\geq P25\)</span>。固定效应与聚类沿用前式。</p>
+<p>同样在<span class="math inline">\(\mathcal S_m\)</span>内估计 <a href="#eq-market-threshold" class="quarto-xref">式&nbsp;5</a>，但使用固定全时期分位点<span class="math inline">\(T_{if}=\mathbf{1}\{ES_{if}&gt;P75\}\)</span>、<span class="math inline">\(ES_{if}\geq P25\)</span>。固定效应与聚类沿用前式。</p>
 <p>改用上述全时期共同top25%对中间50%分组，固定P25与P75。横轴为7年窗口的中心财年，每次向前移动一年，例如中心2008对应2005—2011财年。仅展示完整窗口：中心2004—2020；中心2003需要2000年数据，未纳入。各图分别显示第0、+1、+2、+3日相对−1日的差值；纵轴为对数股价的系数差。</p>
 <section id="四大非四大-1" class="level5">
 <h5 class="anchored" data-anchor-id="四大非四大-1">四大−非四大</h5>
@@ -5362,9 +5362,9 @@ ES：消息门槛±10%：A—D方程及16张图
 补充检验：连续消息、消息可比性与年度CAR曲线（2.1.6—2.1.8）
 </summary>
 <p><strong>2.1.6 连续消息检验</strong></p>
-<p><strong>连续消息模型。</strong> 以下三组模型以Other为参照，记<span class="math inline">\(\mathcal H=\{Local8,Big4\}\)</span>，<span class="math inline">\(x_{if}=S_{if}/0.10\)</span>，<span class="math inline">\(F_{ift}=\text{firm × year FE}+\text{event time FE}+\text{trading date FE}\)</span>。线性与分段线性回归统一写为：</p>
+<p><strong>连续消息模型。</strong> 以下三组模型以Other为参照，记<span class="math inline">\(\mathcal H=\{Local8,Big4\}\)</span>，<span class="math inline">\(x_{if}=ES_{if}/0.10\)</span>，<span class="math inline">\(\text{Firm × Fiscal year FE}+\text{Event time FE}+\text{Trading date FE}=\text{Firm × year FE}+\text{Event time FE}+\text{Trading date FE}\)</span>。线性与分段线性回归统一写为：</p>
 <p><span id="eq-market-continuous"><span class="math display">\[
-Y_{ift}=F_{ift}+\sum_{k\in\mathcal K}D^k_{ift}
+Y_{ift}=\text{Firm × Fiscal year FE}+\text{Event time FE}+\text{Trading date FE}+\sum_{k\in\mathcal K}D^k_{ift}
 \left[
 \sum_{g\in\mathcal H}a_{gk}A^g_{if}
 +\sum_{j=1}^{J}\left(b_{jk}+\sum_{g\in\mathcal H}c_{gjk}A^g_{if}\right)B_j(x_{if})
@@ -5396,15 +5396,15 @@ Y_{ift}=F_{ift}+\sum_{k\in\mathcal K}D^k_{ift}
 </figure>
 </div>
 <p><strong>2.1.7 其他规格与消息可比性</strong></p>
-<p><strong>二组完整交互模型。</strong> 记<span class="math inline">\(Big4_{if}=\mathbf{1}\{Big4\}\)</span>、<span class="math inline">\(T_{if}=\mathbf{1}\{S_{if}&gt;0.10\}\)</span>，保留<span class="math inline">\(S_{if}\geq-0.10\)</span>：</p>
+<p><strong>二组完整交互模型。</strong> 记<span class="math inline">\(Big4_{if}=\mathbf{1}\{Big4\}\)</span>、<span class="math inline">\(T_{if}=\mathbf{1}\{ES_{if}&gt;0.10\}\)</span>，保留<span class="math inline">\(ES_{if}\geq-0.10\)</span>：</p>
 <p><span id="eq-market-full-binary"><span class="math display">\[
-Y_{ift}=F_{ift}+\sum_{k\in\mathcal K}D^k_{ift}
+Y_{ift}=\text{Firm × Fiscal year FE}+\text{Event time FE}+\text{Trading date FE}+\sum_{k\in\mathcal K}D^k_{ift}
 \left[\theta_kT_{if}+\eta_kBig4_{if}+\delta_kT_{if}Big4_{if}\right]+u_{ift}.
 \tag{7}\]</span></span></p>
-<p>按公司×财年聚类，<span class="math inline">\(Y\)</span>分别为log price或累计市场调整CAR的百分点值。<span class="math inline">\(\eta_k\)</span>允许四大与非四大中性组有不同事件路径；<span class="math inline">\(\delta_k\)</span>才是两组各自正向对中性反应差的差值。该差值基于放开中性路径后的模型，与 <a href="#eq-market-threshold" class="quarto-xref">式&nbsp;5</a> 的受限系数差分别解释。</p>
+<p>按公司×财年聚类，<span class="math inline">\(Y\)</span>分别为log price或累计市场调整CAR的百分点值。<span class="math inline">\(\eta_k\)</span>允许四大与非四大中性组有不同事件路径；<span class="math inline">\(\text{Event time FE}\)</span>才是两组各自正向对中性反应差的差值。该差值基于放开中性路径后的模型，与 <a href="#eq-market-threshold" class="quarto-xref">式&nbsp;5</a> 的受限系数差分别解释。</p>
 <p><strong>控制变量比较。</strong> 在 <a href="#eq-market-threshold" class="quarto-xref">式&nbsp;5</a> 中加入控制变量与事件日的交互：</p>
 <p><span id="eq-market-controlled"><span class="math display">\[
-\log P_{ift}=F_{ift}
+\log P_{ift}=\text{Firm × Fiscal year FE}+\text{Event time FE}+\text{Trading date FE}
 +\sum_{k\in\mathcal K}\sum_{g\in\mathcal G}\beta_{gk}A^g_{if}T_{if}D^k_{ift}
 +\sum_{k\in\mathcal K}D^k_{ift}\,\boldsymbol\gamma_k'\mathbf X_{if}
 +u_{ift}.
@@ -5422,12 +5422,12 @@ Y_{ift}=F_{ift}+\sum_{k\in\mathcal K}D^k_{ift}
 <p><strong>2.1.8 年度CAR曲线</strong></p>
 <p><strong>一行一事件的年度CAR模型。</strong> 对窗口<span class="math inline">\([-1,d]\)</span>，<span class="math inline">\(d\in\{0,1,2,3\}\)</span>，分别拟合：</p>
 <p><span id="eq-market-annual-car"><span class="math display">\[
-CAR_{if}^{[-1,d]}=\text{firm FE}+\text{year FE}
+CAR_{if}^{[-1,d]}=\text{Firm FE}+\text{Year FE}
 +\sum_{g\in\mathcal H}\zeta_g^{(d)}A^g_{if}
-+\sum_{j=1}^{4}\left[\pi_j^{(d)}+\sum_{g\in\mathcal H}\omega_{gj}^{(d)}A^g_{if}\right]\widetilde B_j(S_{if})
++\sum_{j=1}^{4}\left[\pi_j^{(d)}+\sum_{g\in\mathcal H}\omega_{gj}^{(d)}A^g_{if}\right]\widetilde B_j(ES_{if})
 +e_{if}^{(d)}.
 \tag{9}\]</span></span></p>
-<p><span class="math inline">\(\text{firm FE}\)</span>、<span class="math inline">\(\text{year FE}\)</span>为公司与财年固定效应，Other为参照，<span class="math inline">\(\widetilde B_j\)</span>是基于原始surprise及共同P25/P50/P75节点的四个分段线性基函数。<span class="math inline">\(CAR_{if}^{[-1,d]}=\sum_{k=-1}^{d}(r_{ifk}-r_{mk})\)</span>，使用已确认的市场调整收益、小数单位。四个收益窗口共用这一方程，分别估计系数，不重复列式。图中三条条件预测曲线将吸收的固定效应设为共同估计样本均值；标准误按公司×财年聚类，一行一公司财年时这一聚类不覆盖同一公司的跨年相关性。</p>
+<p><span class="math inline">\(\text{Firm FE}\)</span>、<span class="math inline">\(\text{Year FE}\)</span>为公司与财年固定效应，Other为参照，<span class="math inline">\(\widetilde B_j\)</span>是基于原始surprise及共同P25/P50/P75节点的四个分段线性基函数。<span class="math inline">\(CAR_{if}^{[-1,d]}=\sum_{k=-1}^{d}(r_{ifk}-r_{mk})\)</span>，使用已确认的市场调整收益、小数单位。四个收益窗口共用这一方程，分别估计系数，不重复列式。图中三条条件预测曲线将吸收的固定效应设为共同估计样本均值；标准误按公司×财年聚类，一行一公司财年时这一聚类不覆盖同一公司的跨年相关性。</p>
 <p>年度四窗口CAR图使用29,397公司年度、4,181公司、24财年，吸收公司和财年FE，按公司×财年聚类，纵轴为小数收益而非百分点。它展示一行一事件的窗口收益，区别于前面的日度累计路径；图中为95%逐点置信区间。</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -5563,7 +5563,7 @@ C^{size}_{ik}=\sum_{s=-59}^{k}\left[r^{TR}_{i,s}-r^{size}_{g(i,t(i,s)),t(i,s)}\r
 <h4 class="anchored" data-anchor-id="market-long-within">2.2.3 各审计组内部的好消息响应</h4>
 <p>回归沿用20,408份好消息与中性消息公告队列。<span class="math inline">\(Good=1\{S&gt;0.10\}\)</span>，中性为<span class="math inline">\(-0.10\leq S\leq0.10\)</span>；不含坏消息。价格Y为供应商含分红可比价格的log，保留各日可观察价格。每个审计组分别估计：</p>
 <p><span class="math display">\[
-Y_{ik}=\alpha_{i,t}+\delta_k+\lambda_{date(i,k)}
+Y_{ik}=\text{Announcement FE}+\text{Event time FE}+\text{Trading date FE}
 +\sum_{k\ne-60}\theta_{gk}Good_iD_k+\varepsilon_{ik}.
 \]</span></p>
 <p>固定效应为公司×财年、相对事件日和实际交易日期，按公司×财年聚类，不加额外控制。曲线为各组“好消息−中性消息”相对−60日的响应，价格图纵轴为100倍系数。它衡量组内消息响应，不是该组客户整体价格增长。</p>
@@ -5661,7 +5661,7 @@ Y_{ik}=\alpha_{i,t}+\delta_k+\lambda_{date(i,k)}
 <h4 class="anchored" data-anchor-id="market-long-interaction">2.2.4 审计组之间的消息响应差异</h4>
 <p>使用同一队列、Y、固定效应与公司×财年聚类，沿用原受限共同回归：</p>
 <p><span class="math display">\[
-Y_{ik}=\alpha_{i,t}+\delta_k+\lambda_{date(i,k)}
+Y_{ik}=\text{Announcement FE}+\text{Event time FE}+\text{Trading date FE}
 +\sum_g\sum_{k\ne-60}\beta_{gk}A_{ig}Good_iD_k+\varepsilon_{ik}.
 \]</span></p>
 <p>二组图画<span class="math inline">\(\beta_{Big4,k}-\beta_{NonBig4,k}\)</span>；三组图画四大−Other、本土八大−Other。该规格没有独立的<span class="math inline">\(A_{ig}D_k\)</span>项，中性消息各审计组共享相对事件路径。组内分别回归允许每组单独估计固定效应，其曲线不能机械相减来复现共同模型。</p>
@@ -5846,7 +5846,7 @@ C_{ik}=\sum_{j=-5}^{k}AR_{ij}-\sum_{j=-5}^{-1}AR_{ij},\qquad C_{i,-1}=0.
 <h5 class="anchored" data-anchor-id="a好消息内部的四大非四大路径差">A：好消息内部的四大−非四大路径差</h5>
 <p>只保留<span class="math inline">\(S_i&gt;0.10\)</span>，估计</p>
 <p><span class="math display">\[
-C_{ij}=\text{firm × year FE}+\text{event time FE}+\text{trading date FE}
+C_{ij}=\text{Firm × year FE}+\text{Event time FE}+\text{Trading date FE}
 +\sum_{k\ne-1}\theta_k Big4_iD_{jk}+\varepsilon_{ij}.
 \]</span></p>
 <p>图画<span class="math inline">\(\theta_k\)</span>，即好消息样本中四大相对非四大的累计路径差。实际样本为3,826份年报，其中四大602份、非四大3,224份，涉及1,714家公司、252,270条日度观测。未控制正向组内部的惊喜幅度。</p>
@@ -5861,7 +5861,7 @@ C_{ij}=\text{firm × year FE}+\text{event time FE}+\text{trading date FE}
 <h5 class="anchored" data-anchor-id="b正向相对中性的组间反应差">B：正向相对中性的组间反应差</h5>
 <p>保留正向及中性组，沿用原pooled交互项结构，估计</p>
 <p><span class="math display">\[
-C_{ij}=\text{firm × year FE}+\text{event time FE}+\text{trading date FE}
+C_{ij}=\text{Firm × year FE}+\text{Event time FE}+\text{Trading date FE}
 +\sum_{k\ne-1}\left[\beta_{B,k}Big4_iT_iD_{jk}
 +\beta_{N,k}(1-Big4_i)T_iD_{jk}\right]+\varepsilon_{ij}.
 \]</span></p>
@@ -5948,7 +5948,7 @@ C_{ij}=\text{firm × year FE}+\text{event time FE}+\text{trading date FE}
 <p><strong>变量与样本。</strong> <span class="math inline">\(UE=(EPS_{used}-EPS_{forecast})/P_{-1}\)</span>，预测取公告前180天中位数，<span class="math inline">\(P_{-1}\)</span>为公告前一交易日收盘价；实际EPS按上文已核实原报修复，未核实保留FAR优先及缺失补算；价格不以年末值补缺。Y为市场调整CAR的小数收益，分别使用[−1,+1]、[−2,+2]、[−3,+3]完整交易日窗口，不缩尾。</p>
 <p><strong>回归方程。</strong> 非四大为基准，主规格为：</p>
 <p><span id="eq-big4-erc"><span class="math display">\[
-CAR_{it}=\text{firm FE}+\text{year FE}+\delta Big4_{it}+\beta UE_{it}
+CAR_{it}=\text{Firm FE}+\text{Year FE}+\delta Big4_{it}+\beta UE_{it}
 +\theta(Big4_{it}\times UE_{it})+\gamma'X_{it}+\varepsilon_{it}.
 \tag{10}\]</span></span></p>
 <p><span class="math inline">\(X\)</span>为市值、MB和预测覆盖的主项，标准误按公司聚类；另外报告无FE／无控制、仅firm FE和year FE两套规格，各用其有效样本。非四大的ERC为<span class="math inline">\(\beta\)</span>，四大为<span class="math inline">\(\beta+\theta\)</span>，表中“四大−非四大”就是斜率差<span class="math inline">\(\theta\)</span>；非四大包括本土八大和其他事务所；三组模型则分别比较四大−Other、八大−Other。</p>
@@ -6005,7 +6005,7 @@ d_{ij}=\sqrt{\frac12\left[\left(\frac{\overline{Size}_i-\overline{Size}_j}{s_{Si
 <p><strong>估计口径。</strong> 本处保留2026年11月1日的冻结结果，不重新匹配或估计。严格公告前180天、每家券商取窗口内最新预测，再取预测中位数<span class="math inline">\(F\)</span>；<span class="math inline">\(UE=(EPS-F)/P_{pre}\)</span>。使用原EPS、市场调整CAR、不缩尾。沿用冻结批次当时的重组排除：对完成重组年份<span class="math inline">\(c\)</span>，剔除披露自然年为<span class="math inline">\(c-1\)</span>或<span class="math inline">\(c\)</span>的报告；这早于后续按报告财年修正的口径。此旧公司池没有新增“2012年前上市”的限制。它与当前“2012年前上市、全期曾用四大且不剔除重组”的公司池不同。</p>
 <p>三个窗口分别估计：</p>
 <p><span class="math display">\[
-CAR_{it}^{w}=\alpha_i+\lambda_t+\delta B_{it}+\beta UE_{it}+\theta(B_{it}\times UE_{it})+\gamma'X^c_{it}+[\eta'(UE_{it}\times X^c_{it})]+\varepsilon_{it}.
+CAR_{it}^{w}=\text{Firm FE}+\text{Fiscal year FE}+\delta Big4_{it}+\beta UE_{it}+\theta(Big4_{it}\times UE_{it})+\gamma'X^c_{it}+[\eta'(UE_{it}\times X^c_{it})]+\varepsilon_{it}.
 \]</span></p>
 <p><span class="math inline">\(X\)</span>为市值对数、MB和严格180天预测覆盖的<span class="math inline">\(1/N\)</span>，在实际样本均值处中心化；方括号仅在全交互版加入。两版均有公司和财年FE，按公司聚类，同一公司池各列使用相同样本。核心系数<span class="math inline">\(\theta\)</span>是四大−非四大的ERC斜率差。</p>
 <div class="quarto-figure quarto-figure-center">
@@ -6284,7 +6284,7 @@ FractionRevised&amp;=n^{-1}\sum_j\mathbf1\{|r_j|&gt;10^{-10}\},\\
 <p>主线是Fin重述与实际失败；其他质量指标、费用和准实验用于判断改善的范围与解释。</p>
 <p><strong>平均DID、动态DID与样本。</strong> 换入者与全观察期始终非四大客户比较，换出者与始终四大客户比较。批次c为换所财年，处理指示为<span class="math inline">\(G_{ic}\)</span>，<span class="math inline">\(Post_{ct}=1\{t\ge c\}\)</span>；Y为相应口径的重述、违规或未预警综合失败指示变量。平均方程为</p>
 <p><span id="eq-big4-stacked-did"><span class="math display">\[
-Y_{ict}=\text{firm × cohort FE}+\text{cohort × industry × year FE}
+Y_{ict}=\text{Firm × cohort FE}+\text{Cohort × industry × year FE}
 +\beta G_{ic}Post_{ct}+X'_{it}\gamma+\varepsilon_{ict}.
 \tag{14}\]</span></span></p>
 <p>批次堆叠的PSM-DID吸收批次×公司、批次×行业×年份FE，按原公司聚类；未堆叠的自然样本DID用公司和行业×年份FE，两类回归分别报告实际样本与系数。<span class="math inline">\(X\)</span>保留九项及<code>mis_dummy</code>。动态版将平均处理项替换为</p>
@@ -6298,7 +6298,7 @@ Y_{ict}=\text{firm × cohort FE}+\text{cohort × industry × year FE}
 <h3 class="anchored" data-anchor-id="识别检验换入和换出四大后是否改善">3.1 同一客户变化：换入与换出四大</h3>
 <p><strong>未堆叠DID方程。</strong> <span class="math inline">\(G_i=1\)</span>表示相应换入或换出处理公司，<span class="math inline">\(Post_{it}\)</span>从其换所财年起取1；Y为重述、违规或未预警综合失败指示变量：</p>
 <p><span class="math display">\[
-Y_{it}=\text{firm FE}+\text{industry}\times\text{year FE}+\tau(G_i\times Post_{it})+\gamma'X_{it}+\varepsilon_{it}.
+Y_{it}=\text{Firm FE}+\text{industry}\times\text{Year FE}+\tau(G_i\times Post_{it})+\gamma'X_{it}+\varepsilon_{it}.
 \]</span></p>
 <p>换入回归包含204家处理公司、4,993家始终非四大对照，64,707个公司年度；换出包含117家处理、189家始终四大对照，3,664个公司年度。</p>
 <p>换入以始终非四大客户为对照，换出以始终四大客户为对照，保留既有稳定事件要求、九项controls、公司及行业×年份FE和公司聚类。当前自然样本换入严格综合失败−2.37个百分点（SE=1.09，p=0.030），严格重述−1.09（SE=0.77，p=0.158），违规−1.58（SE=0.85，p=0.062）。中间综合失败与重述分别−8.58和−8.08，宽口径分别−9.52和−8.96；换出未出现同样清楚的对称上升。</p>
@@ -6314,7 +6314,7 @@ Switching DID Across Restatement Definitions · <a href="tables/big4_regression_
 <h3 class="anchored" data-anchor-id="匹配后的客户变化基准-psm-did">3.2 匹配后的客户变化：基准 PSM-DID</h3>
 <p><strong>平均与动态方程。</strong> 在进入批次c的匹配样本中，处理组为进入四大的公司，对照为同年事前倾向最接近的非四大公司；G表示处理身份，Post从进入财年取1：</p>
 <p><span class="math display">\[
-Y_{ict}=\text{firm}\times\text{cohort FE}+\text{cohort}\times\text{industry}\times\text{year FE}+\tau(G_{ic}\times Post_{ct})+\gamma'X_{it}+\varepsilon_{ict}.
+Y_{ict}=\text{firm}\times\text{Cohort FE}+\text{cohort}\times\text{industry}\times\text{Year FE}+\tau(G_{ic}\times Post_{ct})+\gamma'X_{it}+\varepsilon_{ict}.
 \]</span></p>
 <p>动态版将平均处理项替换为</p>
 <p><span class="math display">\[
@@ -6427,7 +6427,7 @@ Switch-in DID Before and After Baseline Matching · <a href="tables/big4_regress
 <p><strong>Fin实际财务重述也显著下降，表明未预警重述的变化包含实际问题减少。</strong> 我们将每个失败指标分为实际失败 <span class="math inline">\(F\)</span>、未预警失败 <span class="math inline">\(F(1-M)\)</span> 和已预警失败 <span class="math inline">\(FM\)</span>，其中 <span class="math inline">\(M=1\)</span> 表示 MAO，并单独估计 MAO 的变化。四项回归使用同一最终样本，满足 <span class="math inline">\(F=F(1-M)+FM\)</span>，因此能够直接区分失败事件减少与意见覆盖变化。</p>
 <p><strong>结果方程。</strong></p>
 <p><span class="math display">\[
-Y_{ict}=\text{firm}\times\text{cohort FE}+\text{cohort}\times\text{industry}\times\text{year FE}+\tau(G_{ic}\times Post_{ct})+\gamma'X^{(-Y)}_{it}+\varepsilon_{ict}.
+Y_{ict}=\text{firm}\times\text{Cohort FE}+\text{cohort}\times\text{industry}\times\text{Year FE}+\tau(G_{ic}\times Post_{ct})+\gamma'X^{(-Y)}_{it}+\varepsilon_{ict}.
 \]</span></p>
 <p><span class="math inline">\(Y\in\{F,F(1-M),FM,M\}\)</span>，分别为实际失败、未预警失败、已预警失败及MAO。 窗口为[−4,+4]财年，<span class="math inline">\(Post\)</span>从进入年取1，标准误按公司聚类；失败分解、留任及风险匹配回归保留完整九项控制。</p>
 <p>原加权PSM-DID中，Fin实际重述概率下降8.01个百分点（p=0.015），未预警重述概率下降10.04个百分点（p&lt;0.001），已预警重述概率上升2.04个百分点（p=0.095）。Fin实际综合失败概率下降9.34个百分点（p=0.019）；其未预警部分下降12.59个百分点（p&lt;0.001），已预警部分上升3.25个百分点（p=0.035）。MAO概率下降2.03个百分点（p=0.570），不显著。这组结果将改善证据从未预警失败扩展到实际失败，并显示实际失败减少与意见覆盖变化同时存在。Strict实际重述概率下降3.73个百分点（p=0.023）；Raw实际重述和违规的匹配平均变化未达到5%显著水平。</p>
@@ -6486,7 +6486,7 @@ Fin Restatement and Opinion Cells · <a href="tables/big4_selection_supplement/f
 <p><strong>取消未来留任要求后，Fin 与 Raw 重述仍显著下降。</strong> 原事件资格要求换入后连续留在四大；这里仅要求进入当年使用四大、此前连续三年使用非四大，取首次符合条件的进入。后来退出四大的公司仍保留，未来年份缺失不视为退出。对照组仍为始终非四大公司，并要求换所前一年可观察。窗口保持 −4 至 +4，九项 controls、<code>mis_dummy</code>、批次×公司和批次×行业×年份固定效应及公司聚类均不变。</p>
 <p><strong>结果方程。</strong></p>
 <p><span class="math display">\[
-Y_{ict}=\text{firm}\times\text{cohort FE}+\text{cohort}\times\text{industry}\times\text{year FE}+\tau(G_{ic}\times Post_{ct})+\gamma'X^{(-Y)}_{it}+\varepsilon_{ict}.
+Y_{ict}=\text{firm}\times\text{Cohort FE}+\text{cohort}\times\text{industry}\times\text{Year FE}+\tau(G_{ic}\times Post_{ct})+\gamma'X^{(-Y)}_{it}+\varepsilon_{ict}.
 \]</span></p>
 <p><span class="math inline">\(Y\)</span>为Fin、Raw及Strict口径的未预警重述或综合失败，<span class="math inline">\(G_{ic}\)</span>按不要求未来留任的进入事件定义。 窗口为[−4,+4]财年，<span class="math inline">\(Post\)</span>从进入年取1，标准误按公司聚类；失败分解、留任及风险匹配回归保留完整九项控制。</p>
 <p>新的资格包含279家进入公司，比原定义增加75家，另有4家进入批次提前。全批次最终回归包含414,556条堆叠观测、271家处理公司和4,993家对照公司。Fin未预警重述概率下降5.33个百分点（p&lt;0.001），Raw下降6.87个百分点（p&lt;0.001）；Fin和Raw综合失败概率分别下降6.32和7.64个百分点，均p&lt;0.001。仅保留与原设计共有的进入批次时，Fin与Raw重述概率分别下降5.62和7.32个百分点，均p&lt;0.001，结果并非新增批次单独驱动。Strict重述和违规未达到5%显著水平。</p>
@@ -6647,7 +6647,7 @@ Violation: Common entry cohorts
 <p>保留全部候选事件，公告历史按可覆盖年份计算均值，加入覆盖年数及<code>mis_dummy</code>。重述与违规公告来源最早分别为 2001 年和 2000 年；原 204 个进入事件中，46 个的前三年重述历史不足三年，12 个没有覆盖。未覆盖年份记缺失而不记零；零覆盖均值沿用既定中位数插补并保留标记。匹配仍采用合并 Logit、同年 1:1 最近邻、有放回、不设卡尺，回归口径保持原基准。</p>
 <p><strong>结果方程。</strong></p>
 <p><span class="math display">\[
-Y_{ict}=\text{firm}\times\text{cohort FE}+\text{cohort}\times\text{industry}\times\text{year FE}+\tau(G_{ic}\times Post_{ct})+\gamma'X^{(-Y)}_{it}+\varepsilon_{ict}.
+Y_{ict}=\text{firm}\times\text{Cohort FE}+\text{cohort}\times\text{industry}\times\text{Year FE}+\tau(G_{ic}\times Post_{ct})+\gamma'X^{(-Y)}_{it}+\varepsilon_{ict}.
 \]</span></p>
 <p><span class="math inline">\(Y\)</span>为相应未预警失败指标；<span class="math inline">\(G_{ic}\)</span>及匹配权重来自加入换所前财务状况和公开风险历史的匹配模型。 窗口为[−4,+4]财年，<span class="math inline">\(Post\)</span>从进入年取1，标准误按公司聚类；失败分解、留任及风险匹配回归保留完整九项控制。</p>
 <p>风险路径匹配后，Fin未预警重述概率下降5.30个百分点（SE=2.76个百分点，95%CI=[−10.73,0.14]个百分点，p=0.056），达到10%显著水平。处理后五个年份的点估计均为负；事前联合检验p=0.484。原匹配下降10.04个百分点，新增匹配后的降幅较小。两种匹配使用的对照公司与权重也有变化，因此这个比较同时反映新增匹配信息和比较样本的变化。Fin综合失败概率下降5.03个百分点（p=0.199）；Strict、Raw和违规均未达到5%显著水平。</p>
@@ -6759,7 +6759,7 @@ Violation: Risk-path PSM-DID
 <p><strong>审计失败下降没有伴随四项财务指标的一致显著改善，为区分财报质量变化与同步经营改善提供了对照证据。</strong> 我们把原始 ROA、杠杆率、收入增长率和亏损概率分别作为结果变量，沿用原匹配名单与权重，不插补结果变量。每项回归从九项 controls 中移除其自身及对应<code>mis_dummy</code>，其他控制保留。分别报告各指标有效样本与四项指标共同有效样本，动态路径使用共同样本。</p>
 <p><strong>结果方程。</strong></p>
 <p><span class="math display">\[
-Y_{ict}=\text{firm}\times\text{cohort FE}+\text{cohort}\times\text{industry}\times\text{year FE}+\tau(G_{ic}\times Post_{ct})+\gamma'X^{(-Y)}_{it}+\varepsilon_{ict}.
+Y_{ict}=\text{firm}\times\text{Cohort FE}+\text{cohort}\times\text{industry}\times\text{Year FE}+\tau(G_{ic}\times Post_{ct})+\gamma'X^{(-Y)}_{it}+\varepsilon_{ict}.
 \]</span></p>
 <p><span class="math inline">\(Y\in\{ROA,Leverage,RevenueGrowth,Loss\}\)</span>；<span class="math inline">\(X^{(-Y)}\)</span>从九项控制中移除Y自身及对应缺失标记。 窗口为[−4,+4]财年，<span class="math inline">\(Post\)</span>从进入年取1，标准误按公司聚类；失败分解、留任及风险匹配回归保留完整九项控制。</p>
 <p>共同样本的加权 PSM-DID 包含 1,678 条观测。ROA 为 <strong>−0.0061</strong>（SE=0.0116，p=0.597），杠杆率为 <strong>−0.0116</strong>（SE=0.0216，p=0.594），收入增长率为 <strong>−0.8357</strong>（SE=0.6100，p=0.172），亏损概率下降6.20个百分点（SE=4.32个百分点，p=0.152）。对应事前联合检验 p 值为 0.818、0.959、0.872 和 0.578。共同样本的未匹配及匹配不加权平均结果同样未达到 5% 显著水平；各指标有效样本中，未匹配杠杆率显著上升（+0.2509，p=0.026），其余结果未达到 5%。因此，这组结果没有呈现出足以直接解释重述下降的普遍经营改善模式。</p>
@@ -6882,7 +6882,7 @@ Loss: Unweighted PSM-DID
 <p>审计费用与公司市值</p>
 <p><strong>费用及估值的换所方程。</strong></p>
 <p><span class="math display">\[
-Y_{it}=\text{firm FE}+\text{industry}\times\text{year FE}+\tau DID_{it}+\gamma'X_{it}+\varepsilon_{it}.
+Y_{it}=\text{Firm FE}+\text{industry}\times\text{Year FE}+\tau DID_{it}+\gamma'X_{it}+\varepsilon_{it}.
 \]</span></p>
 <p>换入组与始终非四大比较，换出组与始终四大比较；<span class="math inline">\(DID\)</span>为处理组×换所后。Y分别为<span class="math inline">\(\log(1+AuditFee)\)</span>、<span class="math inline">\(\log(1+FeeIncrease)\)</span>及log市值，控制按费用或估值结果设置，标准误按公司聚类。换入三项N为62,596、48,583、63,602，换出为57,388、44,793、57,592。</p>
 <p>审计收费随身份变化：换入四大后审计费用对数增加约 0.370（约高出 45%），换出后减少约 0.242。同时，换入后企业市值对数上升 0.104。</p>
@@ -6909,7 +6909,7 @@ Big 4 Auditors, Audit Fees, and Market Value · <a href="tables/big4_regression_
 <h5 class="anchored" data-anchor-id="应计与真实盈余管理">应计与真实盈余管理</h5>
 <p><strong>盈余质量的换所方程。</strong></p>
 <p><span class="math display">\[
-EQ_{it}=\text{firm FE}+\text{industry}\times\text{year FE}+\tau DID_{it}+\gamma'X^{EQ}_{it}+\varepsilon_{it}.
+EQ_{it}=\text{Firm FE}+\text{industry}\times\text{Year FE}+\tau DID_{it}+\gamma'X^{EQ}_{it}+\varepsilon_{it}.
 \]</span></p>
 <p><span class="math inline">\(EQ\)</span>为Jones、DD、非线性异常应计及REM绝对值，使用七项盈余质量控制及mis_dummy，按公司聚类。换入四项N为56,646、49,928、52,309、52,175，换出为51,605、45,633、47,328、47,485。</p>
 <p>换入四大后，Jones 异常应计与真实盈余管理未见系统性下降；Dechow-Dichev 异常应计绝对值反而略升 0.034（<span class="math inline">\(p=0.006\)</span>）。</p>
@@ -6937,8 +6937,8 @@ Big 4 Auditors and Earnings Quality · <a href="tables/big4_regression_columns/1
 <p><strong>门槛样本及方程。</strong> ROE为净资产收益率。只保留门槛左右各1个百分点的公司年度，以右侧指示<span class="math inline">\(R_{it}=1\)</span>、左侧为0：0%门槛使用截至2020年的[−1%,1%)，6%门槛使用2002年起[5%,7%)，10%门槛使用截至2001年的[9%,11%)。合并门槛样本合并这些有效记录。门槛聚集与盈余指标分别估计：</p>
 <p><span class="math display">\[
 \begin{aligned}
-R_{it}&amp;=FE+\beta Big4_{it}+\gamma'X^{Failure}_{it}+\varepsilon_{it},\\
-EQ_{it}&amp;=FE+\beta Big4_{it}+\delta R_{it}+\theta(Big4_{it}\times R_{it})+\gamma'X^{EQ}_{it}+u_{it}.
+R_{it}&amp;=\underbrace{\text{Industry FE}+\text{Year FE}}_{\text{10 percent threshold: Year FE only}}+\beta Big4_{it}+\gamma'X^{Failure}_{it}+\varepsilon_{it},\\
+EQ_{it}&amp;=\underbrace{\text{Industry FE}+\text{Year FE}}_{\text{10 percent threshold: Year FE only}}+\beta Big4_{it}+\delta R_{it}+\theta(Big4_{it}\times R_{it})+\gamma'X^{EQ}_{it}+u_{it}.
 \end{aligned}
 \]</span></p>
 <p>第一式控制九项客户特征，第二式的Y为有符号或绝对DD应计及REM，控制七项盈余质量特征；均含mis_dummy。FE为行业和年份，10%门槛因历史样本支持只使用year FE；按公司聚类，N按各门槛有效记录列于表中。<span class="math inline">\(\beta\)</span>检验四大客户是否更常位于门槛右侧，<span class="math inline">\(\theta\)</span>检验门槛两侧的盈余指标差异是否随四大身份变化。</p>
@@ -6972,7 +6972,7 @@ Table 18: Big 4 Auditors and Inventory Impairment · <a href="tables/big4_effect
 <h5 class="anchored" data-anchor-id="失败严重程度与文本挖掘">失败严重程度与文本挖掘</h5>
 <p><strong>严重程度的方程与Y。</strong> 延续公司及行业×年份FE的类别或换所方程，加入九项客户特征及mis_dummy，按公司聚类：</p>
 <p><span class="math display">\[
-Severity_{it}=\text{firm FE}+\text{industry}\times\text{year FE}+\beta Big4_{it}+\gamma'X_{it}+\varepsilon_{it},
+Severity_{it}=\text{Firm FE}+\text{industry}\times\text{Year FE}+\beta Big4_{it}+\gamma'X_{it}+\varepsilon_{it},
 \]</span></p>
 <p>换所列将<span class="math inline">\(Big4\)</span>替换为处理组×换所后。Y包括严重重述、严重违规、被监管推动更正及舞弊文本的联合未预警指示；金额以万元计、涉及年度数保留全样本零值，并分别取<span class="math inline">\(\log(1+x)\)</span>。各指标按有效样本分别估计，实际N见表。</p>
 <p>严重违规的固定效应差异为 <span class="math inline">\(-1.78\)</span> 个百分点；换入四大的系数为 <span class="math inline">\(-1.66\)</span> 个百分点（10% 水平边缘显著）。严重程度的抑制证据主要局限于违规，在重述上未见显著改变。</p>
@@ -7027,7 +7027,7 @@ Big 4 Auditors and Log Magnitudes of Unwarned Failures · <a href="tables/big4_r
 <h5 class="anchored" data-anchor-id="子样本换所-did">子样本换所 DID</h5>
 <p><strong>子样本设计。</strong> 在亏损、低Z-score或长期审计任期等限定样本内，分别估计</p>
 <p><span class="math display">\[
-Y_{it}=\text{firm FE}+\text{industry}\times\text{year FE}+\tau DID_{it}+\gamma'X_{it}+\varepsilon_{it}.
+Y_{it}=\text{Firm FE}+\text{industry}\times\text{Year FE}+\tau DID_{it}+\gamma'X_{it}+\varepsilon_{it}.
 \]</span></p>
 <p>Y为未预警综合失败、重述或违规，九项客户控制及mis_dummy、公司聚类；各子样本的筛选及实际N列于表中。</p>
 <p>在财务困境（当年亏损或 Z-score 偏低）与长期任期子样本中，换入四大的失败率系数部分为负，但伴随较宽的置信区间。</p>
@@ -7095,7 +7095,7 @@ Switching Big 4 Auditors and Unwarned Failures: Subsamples · <a href="tables/bi
 <p>本节使用供应链伙伴转入四大与分所扩张两类冲击，分别估计企业<strong>当年聘用四大</strong>与审计结果的关系。两类冲击分别进入模型；每个工具口径分别估计 TWFE-2SLS 和分批年度 DID-IV，并报告全时期与截至2012年的结果。控制变量与审计失败主模型一致。</p>
 <section id="两系列冲击实际处理与审计结果" class="level4">
 <h4 class="anchored" data-anchor-id="两系列冲击实际处理与审计结果">两系列冲击、实际处理与审计结果</h4>
-<p>令 <span class="math inline">\(S_i^k\)</span> 为企业 <span class="math inline">\(i\)</span> 在工具口径 <span class="math inline">\(k\)</span> 下首次受到冲击的年份，无冲击记为 <span class="math inline">\(\infty\)</span>。供应链包含<strong>供应商、客户、客户或供应商并集</strong>三个口径：事件来自匹配伙伴从非四大实际转入任一家四大，关系剔除招投标来源；并集取两端最早事件年。分所包含<strong>本省、本省及邻省</strong>两个口径：事件为相关地域首次出现任一家四大分所。两系列均将四大作为整体，实际处理为 <span class="math inline">\(D_{it}=\mathbf{1}\{\text{企业当年由任一家四大审计}\}\)</span>。</p>
+<p>令 <span class="math inline">\(S_i^k\)</span> 为企业 <span class="math inline">\(i\)</span> 在工具口径 <span class="math inline">\(k\)</span> 下首次受到冲击的年份，无冲击记为 <span class="math inline">\(\infty\)</span>。供应链包含<strong>供应商、客户、客户或供应商并集</strong>三个口径：事件来自匹配伙伴从非四大实际转入任一家四大，关系剔除招投标来源；并集取两端最早事件年。分所包含<strong>本省、本省及邻省</strong>两个口径：事件为相关地域首次出现任一家四大分所。两系列均将四大作为整体，实际处理为 <span class="math inline">\(Big4_{it}=\mathbf{1}\{\text{企业当年由任一家四大审计}\}\)</span>。</p>
 <p>三个 <span class="math inline">\(Y^m_{it}\)</span> 分别为综合失败、Fin口径财务重述、违规与 <span class="math inline">\(MAO_{it}=0\)</span> 的联合指标，均为0/1变量。结果在四大与非四大企业中共同观测。<span class="math inline">\(X_{it}\)</span> 包含规模、杠杆、亏损、ROA、Z-score、杠杆变化、报告滞后、经营现金流、企业年龄，以及九项缺失指示变量；补值沿用审计失败主程序。<span class="math inline">\(j(i,t)\)</span> 表示企业当年的行业。</p>
 <p>分所每个地域口径分别删除因迁址而导致冲击批次变化的企业全部年份，并分别报告保留客户与剔除事前最大客户两版。最大客户名单按相应开所事件前一年当地上市企业的境内审计费识别，并列最大全部列入；删除名单内企业的全部年份。实际删除沿用已保存的事件名单，缺少事前地址或审计费的案例保留原缺失记录。缺失地址先沿时间延续最近已知地址，再以最早可得地址补齐开头年份（企业内 <code>ffill().bfill()</code>），补齐位置作为地址代理。</p>
 </section>
@@ -7104,16 +7104,16 @@ Switching Big 4 Auditors and Unwarned Failures: Subsamples · <a href="tables/bi
 <p>以 <span class="math inline">\(Z_{it}^k=\mathbf{1}\{t\geq S_i^k\}\)</span> 为工具。有冲击企业保留 <span class="math inline">\(-5\leq t-S_i^k\leq5\)</span>，无冲击企业保留全部合格年份；因此在实际样本中，<span class="math inline">\(Z_{it}^k\)</span> 等于冲击后0—5年的指示变量。供应链另沿用原 QMD 的共同资格样本。对各 <span class="math inline">\(k\)</span> 分别估计第一阶段、约化式与第二阶段：</p>
 <p><span id="eq-network-branch-twfe-iv"><span class="math display">\[
 \begin{aligned}
-D_{it}
-&amp;=\alpha_i^D+\lambda_{j(i,t),t}^D+\pi_k Z_{it}^k+X_{it}'\gamma_k+u_{it},\\
+Big4_{it}
+&amp;=\text{Firm FE}+\text{Industry × Year FE}+\pi_k Z_{it}^k+X_{it}'\gamma_k+u_{it},\\
 Y^m_{it}
-&amp;=\alpha_i^{R,m}+\lambda_{j(i,t),t}^{R,m}+\rho_k^m Z_{it}^k+X_{it}'\delta_k^m+v^m_{it},\\
+&amp;=\text{Firm FE}+\text{Industry × Year FE}+\rho_k^m Z_{it}^k+X_{it}'\delta_k^m+v^m_{it},\\
 Y^m_{it}
-&amp;=\alpha_i^{Y,m}+\lambda_{j(i,t),t}^{Y,m}+\beta_k^m D_{it}+X_{it}'\theta_k^m+\varepsilon^m_{it},
-\quad D_{it}\text{ 以 }Z_{it}^k\text{ 为工具}.
+&amp;=\text{Firm FE}+\text{Industry × Year FE}+\beta_k^m Big4_{it}+X_{it}'\theta_k^m+\varepsilon^m_{it},
+\quad Big4_{it}\text{ 以 }Z_{it}^k\text{ 为工具}.
 \end{aligned}
 \tag{15}\]</span></span></p>
-<p><span class="math inline">\(\alpha_i\)</span> 为企业固定效应，<span class="math inline">\(\lambda_{j(i,t),t}\)</span> 为行业×年份固定效应。第一阶段 <span class="math inline">\(\pi_k\)</span>、约化式 <span class="math inline">\(\rho_k^m\)</span> 和第二阶段 <span class="math inline">\(\beta_k^m\)</span> 在每套规格内共用相同观测与控制列空间，恰好识别时 <span class="math inline">\(\widehat\beta_k^m=\widehat\rho_k^m/\widehat\pi_k\)</span>。标准误按企业聚类；表中报告 KP F。</p>
+<p><span class="math inline">\(\text{Firm FE}\)</span> 为企业固定效应，<span class="math inline">\(\lambda_{j(i,t),t}\)</span> 为行业×年份固定效应。第一阶段 <span class="math inline">\(\pi_k\)</span>、约化式 <span class="math inline">\(\rho_k^m\)</span> 和第二阶段 <span class="math inline">\(\beta_k^m\)</span> 在每套规格内共用相同观测与控制列空间，恰好识别时 <span class="math inline">\(\widehat\beta_k^m=\widehat\rho_k^m/\widehat\pi_k\)</span>。标准误按企业聚类；表中报告 KP F。</p>
 </section>
 <section id="方法二按冲击批次与期限构造的年度-did-iv" class="level4">
 <h4 class="anchored" data-anchor-id="方法二按冲击批次与期限构造的年度-did-iv">方法二：按冲击批次与期限构造的年度 DID-IV</h4>
@@ -7121,17 +7121,17 @@ Y^m_{it}
 <p>定义 <span class="math inline">\(T_i^g=\mathbf{1}\{S_i^k=g\}\)</span>，<span class="math inline">\(\Delta_{g,h}V_i=V_{i,g+h}-V_{i,g-1}\)</span>。各单元内的第一阶段与第二阶段为：</p>
 <p><span id="eq-network-branch-cohort-iv"><span class="math display">\[
 \begin{aligned}
-\Delta_{g,h}D_i
+\Delta_{g,h}Big4_i
 &amp;=a^D_{g,h}+\pi_{g,h}^k T_i^g
 +(\Delta_{g,h}X_i)'\gamma^D_{g,h}
-+(F_i^{g,h})'\eta^D_{g,h}+u_i^{g,h},\\
++\Delta_{g,h}\text{Industry × Year FE}+u_i^{g,h},\\
 \Delta_{g,h}Y_i^m
-&amp;=a^{Y,m}_{g,h}+\beta_{g,h}^{k,m}\Delta_{g,h}D_i
+&amp;=a^{Y,m}_{g,h}+\beta_{g,h}^{k,m}\Delta_{g,h}Big4_i
 +(\Delta_{g,h}X_i)'\gamma^{Y,m}_{g,h}
-+(F_i^{g,h})'\eta^{Y,m}_{g,h}+\varepsilon_i^{g,h,m},
++\Delta_{g,h}\text{Industry × Year FE}+\varepsilon_i^{g,h,m},
 \end{aligned}
 \tag{16}\]</span></span></p>
-<p>第二式以 <span class="math inline">\(T_i^g\)</span> 工具化 <span class="math inline">\(\Delta_{g,h}D_i\)</span>。<span class="math inline">\(F_i^{g,h}\)</span> 包含期末行业指示变量及负的基期行业指示变量，对应行业×年份固定效应的两期差分；企业固定效应通过差分消去，共同时间变化由单元截距吸收。行业改变的企业保留两端行业信息。各单元的控制系数、行业系数分别估计。将第二式中的 <span class="math inline">\(\Delta_{g,h}D_i\)</span> 换成 <span class="math inline">\(T_i^g\)</span>，得到约化式系数 <span class="math inline">\(\rho_{g,h}^{k,m}\)</span>；单元内 Wald 比率为 <span class="math inline">\(\widehat\rho_{g,h}^{k,m}/\widehat\pi_{g,h}^k\)</span>。</p>
+<p>第二式以 <span class="math inline">\(T_i^g\)</span> 工具化 <span class="math inline">\(\Delta_{g,h}Big4_i\)</span>。<span class="math inline">\(F_i^{g,h}\)</span> 包含期末行业指示变量及负的基期行业指示变量，对应行业×年份固定效应的两期差分；企业固定效应通过差分消去，共同时间变化由单元截距吸收。行业改变的企业保留两端行业信息。各单元的控制系数、行业系数分别估计。将第二式中的 <span class="math inline">\(\Delta_{g,h}Big4_i\)</span> 换成 <span class="math inline">\(T_i^g\)</span>，得到约化式系数 <span class="math inline">\(\rho_{g,h}^{k,m}\)</span>；单元内 Wald 比率为 <span class="math inline">\(\widehat\rho_{g,h}^{k,m}/\widehat\pi_{g,h}^k\)</span>。</p>
 <p>表中报告冲击后0—5年的汇总。令 <span class="math inline">\(n_g^0\)</span> 为该批次在 <span class="math inline">\(g-1\)</span> 年有记录的企业数，<span class="math inline">\(\mathcal C_k\)</span> 为通过样本及可识别性检查的批次—期限单元，并定义 <span class="math inline">\(a_{g,h}^k=n_g^0/\sum_{(r,s)\in\mathcal C_k}n_r^0\)</span>。程序先汇总第一阶段和约化式，再取比值：</p>
 <p><span class="math display">\[
 \widehat\pi_k^{0:5}=\sum_{(g,h)\in\mathcal C_k}a_{g,h}^k\widehat\pi_{g,h}^k,
@@ -7237,8 +7237,8 @@ Y^m_{it}
 </figure>
 </div>
 <p>一阶段与二阶段分别为：</p>
-<p><span class="math display">\[D_{it}=\alpha_i^D+\lambda_t^D+\pi Z_{it}+X_{it}'\gamma+v_{it},\]</span></p>
-<p><span class="math display">\[Y_{it}^m=\alpha_i^m+\lambda_t^m+\beta_m D_{it}+X_{it}'\theta_m+\varepsilon_{it}^m,\qquad D_{it}\text{以单个}Z_{it}\text{工具化}.\]</span></p>
+<p><span class="math display">\[Big4_{it}=\text{Firm FE}+\text{Year FE}+\pi Z_{it}+X_{it}'\gamma+v_{it},\]</span></p>
+<p><span class="math display">\[Y_{it}^m=\text{Firm FE}+\text{Year FE}+\beta_m Big4_{it}+X_{it}'\theta_m+\varepsilon_{it}^m,\qquad Big4_{it}\text{以单个}Z_{it}\text{工具化}.\]</span></p>
 <p><span class="math inline">\(D\)</span>为当年聘用任一家四大的0/1状态。<span class="math inline">\(Y^m\)</span>分别为未预警重述、违规和任一审计失败，均沿用失败事件与MAO=0联合的冻结口径。<span class="math inline">\(X\)</span>包含规模、杠杆、亏损、ROA、Z-score、杠杆变化、报告滞后、经营现金流、年龄，以及九项各自的缺失标记，共18列。吸收公司与年份固定效应，按公司聚类；常规2SLS使用small选项的t推断。每列一工具、一内生变量，恰好识别，没有过度识别检验。这里没有套用省域事件窗口、g−6资格或行业×年固定效应。</p>
 </section>
 <section id="一阶段近距离dummy与品牌汇总指标" class="level5">
@@ -7285,7 +7285,7 @@ Y^m_{it}
 <section id="开所提前关联距离控制与g6资格的探索" class="level5">
 <h5 class="anchored" data-anchor-id="开所提前关联距离控制与g6资格的探索">开所提前关联：距离控制与g−6资格的探索</h5>
 <p>省域事件路径与上述年度距离TWFE是两套规格。省域设计逐批次、逐期限比较 <span class="math inline">\(g-1\)</span> 与 <span class="math inline">\(g+h\)</span>，对照为该比较期末仍未受冲击的企业，<span class="math inline">\(h=-5,\ldots,5\)</span>，以−1为基期。两期方程为：</p>
-<p><span class="math display">\[\Delta_{g,h}D_i=a_{g,h}+\pi_{g,h}T_i^g+\Delta_{g,h}X_i'\gamma_{g,h}+F_i^{g,h\prime}\eta_{g,h}+U_i^{g,h\prime}\theta_{g,h}+e_i^{g,h}.\]</span></p>
+<p><span class="math display">\[\Delta_{g,h}Big4_i=a_{g,h}+\pi_{g,h}T_i^g+\Delta_{g,h}X_i'\gamma_{g,h}+\Delta_{g,h}\text{Industry × Year FE}+U_i^{g,h\prime}\theta_{g,h}+e_i^{g,h}.\]</span></p>
 <p><span class="math inline">\(T_i^g\)</span>为该批次处理身份；<span class="math inline">\(F\)</span>是期末行业dummy与负基期行业dummy的列空间，对应两期行业×年效应，公司不变项通过差分消除；<span class="math inline">\(X\)</span>为上列18项控制，<span class="math inline">\(U\)</span>分别为空、距离/100的两期变化或log距离的两期变化。按基期处理企业数量加权汇总各批次，合并公司影响函数后按基期省聚类。每个期限有自己的配对支持，不能用单一N代表整条路径。</p>
 <p>原全期保留客户版的提前项联合p为本省0.000464、本省及邻省0.026325。控制当期距离后，邻省p变为0.368785，但本省仍为0.000421；未在两渠道和全部版本稳定解决提前关联。当期距离本身可能是开所作用渠道，因此控制后的变化也不能直接解释为识别改善。</p>
 <div class="quarto-figure quarto-figure-center">
@@ -7314,18 +7314,18 @@ Y^m_{it}
 <p>固定2001财年大华的46家客户，以2002财年实际转入四大为处理时点，估计收购暴露DID及以该暴露预测四大身份的IV，不按事后留任筛选35家承接客户。剔除转入年后，四大采用概率的第一阶段估计为上升38.13个百分点（SE=5.85个百分点，KP F=42.56），但未预警综合失败概率的DID估计为下降1.70个百分点（SE=2.02个百分点，p=0.401），2SLS估计为下降4.45个百分点（SE=5.35个百分点，p=0.406），重述与违规也不显著；综合失败的事前联合检验p=0.022，因果解释仍受事前趋势差异限制。市场反应检验中，分析师盈利消息的最终样本仅有2条处理组事前事件，交互项IV较弱（KP F约1.37—1.49），尚未形成稳健的市场认证因果证据。收购专用匹配版因倾向得分未收敛暂停，不影响已完成的公司换所PSM-DID。</p>
 <section id="审计结果回归方程与单位" class="level4">
 <h4 class="anchored" data-anchor-id="审计结果回归方程与单位">审计结果：回归方程与单位</h4>
-<p>令 <span class="math inline">\(G_i=1\)</span> 表示公司是2001财年固定名单中的大华客户，<span class="math inline">\(Post_t=\mathbf{1}(t\geq2002)\)</span>，工具变量为 <span class="math inline">\(Z_{it}=G_i\times Post_t\)</span>。<span class="math inline">\(Big4_{it}=\mathbf{1}(\text{当年由四大审计})\)</span> 是实际四大身份，<span class="math inline">\(Y_{it}\)</span> 分别为三个未预警失败指标，均取0或1。<span class="math inline">\(C_{it}\)</span> 包含既定九项控制及<code>mis_dummy</code>；<span class="math inline">\(\text{firm FE}\)</span> 为公司固定效应，<span class="math inline">\(\text{industry × year FE}\)</span> 为行业×年份固定效应。</p>
+<p>令 <span class="math inline">\(G_i=1\)</span> 表示公司是2001财年固定名单中的大华客户，<span class="math inline">\(Post_t=\mathbf{1}(t\geq2002)\)</span>，工具变量为 <span class="math inline">\(Z_{it}=G_i\times Post_t\)</span>。<span class="math inline">\(Big4_{it}=\mathbf{1}(\text{当年由四大审计})\)</span> 是实际四大身份，<span class="math inline">\(Y_{it}\)</span> 分别为三个未预警失败指标，均取0或1。<span class="math inline">\(C_{it}\)</span> 包含既定九项控制及<code>mis_dummy</code>；<span class="math inline">\(\text{Firm FE}\)</span> 为公司固定效应，<span class="math inline">\(\text{Industry × year FE}\)</span> 为行业×年份固定效应。</p>
 <p><strong>第一阶段：用收购暴露预测四大采用。</strong> 因变量是四大身份dummy，采用线性概率模型：</p>
 <p><span class="math display">\[
-Big4_{it}=\pi Z_{it}+C_{it}'\gamma+\text{firm FE}+\text{industry × year FE}+v_{it}.
+Big4_{it}=\pi Z_{it}+C_{it}'\gamma+\text{Firm FE}+\text{Industry × year FE}+v_{it}.
 \]</span></p>
 <p><strong>DID／reduce form：收购暴露对审计结果的影响。</strong></p>
 <p><span class="math display">\[
-Y_{it}=\delta Z_{it}+C_{it}'\theta+\text{firm FE}+\text{industry × year FE}+u_{it}.
+Y_{it}=\delta Z_{it}+C_{it}'\theta+\text{Firm FE}+\text{Industry × year FE}+u_{it}.
 \]</span></p>
 <p><strong>二阶段：用第一阶段预测的四大身份估计结果变化。</strong></p>
 <p><span class="math display">\[
-Y_{it}=\beta\widehat{Big4}_{it}+C_{it}'\eta+\text{firm FE}+\text{industry × year FE}+\varepsilon_{it}.
+Y_{it}=\beta\widehat{Big4}_{it}+C_{it}'\eta+\text{Firm FE}+\text{Industry × year FE}+\varepsilon_{it}.
 \]</span></p>
 <p>因变量是0/1的四大身份，系数衡量控制客户特征及固定效应后，事前大华客户的四大采用概率在转入前后的变化相对于对照组的差异。与单年度35／46承接比例不同，回归比较多个前后财年、调整对照变化，并剔除了2002转入年。三个失败结果的有效样本相同，所以第一阶段重复相同数值。在本项恰好识别、同样本IV中，<span class="math inline">\(\widehat\beta=\widehat\delta/\widehat\pi\)</span>；综合失败为 <span class="math inline">\(-0.01695/0.38129\approx-0.04445\)</span>，即表中的二阶段系数。标准误按公司聚类，由2SLS程序计算。</p>
 <figure class="latex-table figure" style="overflow-x:auto;">
@@ -7342,7 +7342,7 @@ Y_{it}=\beta\widehat{Big4}_{it}+C_{it}'\eta+\text{firm FE}+\text{industry × yea
 <p><strong>样本与对照。</strong> 每个转入批次固定前一年非四大签字人员—客户关系，处理组为人员及其客户共同转入四大的关系；对照来自该批次没有转入四大的签字人员所服务的既有客户关系。对照关系实际转入四大后不再作为未处理对照。Y为Fin未预警失败、实际重述或违规、Jones与DD绝对应计，实际观测数分别列于表中。</p>
 <p>保持同一签字人员—客户关系，考察其从非四大转四大的变化，尝试减少人员和客户同时变化造成的解释。<strong>人员ID识别签字人员，合伙人职位尚待核实</strong>；关系留存仍可能内生。固定前一年关系，在±2／±5财年窗口内分别估计全部批次和排除2002批次。</p>
 <p><span id="eq-big4-person-did"><span class="math display">\[
-Y_{pct}=\text{relationship × cohort FE}+\text{cohort × industry × year FE}
+Y_{pct}=\text{Relationship × cohort FE}+\text{Cohort × industry × year FE}
 +\beta G_{pc}Post_{ct}+X'_{it}\gamma+e_{pct}.
 \tag{17}\]</span></span></p>
 <p><span class="math inline">\(p\)</span>为人员—客户关系；吸收关系×批次、批次×行业×年份FE，九项控制，公司聚类、不缩尾。匹配版在转入前一年用九项、行业和批次预测项，按同批次最近邻固定权重，随后使用同一方程。</p>
@@ -7366,12 +7366,12 @@ Y_{pct}=\text{relationship × cohort FE}+\text{cohort × industry × year FE}
 <h2 class="anchored" data-anchor-id="客户筛选四大如何形成高质量的客户组合">4. 客户筛选：四大如何形成高质量的客户组合？</h2>
 <p>客户筛选分为两步：先比较客户事前特征，再考察审计意见与进入、退出的关系。年度匹配首先估计当年四大身份的选择概率：</p>
 <p><span id="eq-big4-client-selection"><span class="math display">\[
-P(Big4_{it}=1\mid W_{it})=\Lambda(a+W'_{it}\pi+\text{industry FE}+\text{year FE}),
+P(Big4_{it}=1\mid W_{it})=\Lambda(a+W'_{it}\pi+\text{Industry FE}+\text{Year FE}),
 \tag{18}\]</span></span></p>
 <p><span class="math inline">\(W\)</span>为五项／九项特征及<code>mis_dummy</code>，行业和年份进入Logit，不是精确匹配约束。年度PSM比较当年身份，换所PSM-DID比较进入批次，回答不同问题。匹配后质量差异仍可能包含服务和未测量选择，服务与未测量选择的份额仍待分解。</p>
 <p>意见—风险回归方程为</p>
 <p><span id="eq-big4-warning-risk"><span class="math display">\[
-Risk_{it\text{或}t+1}=\text{firm FE}+\text{industry × year FE}
+Risk_{it\text{或}t+1}=\text{Firm FE}+\text{Industry × year FE}
 +bBig4_{it}+dM_{it}+hBig4_{it}M_{it}+X'_{it}\gamma+e_{it}.
 \tag{19}\]</span></span></p>
 <p><span class="math inline">\(M\)</span>分别取MAO或GC；预警客户内四大差异是<span class="math inline">\(b+h\)</span>，意见关系的组间差异是<span class="math inline">\(h\)</span>，两者不是同一检验。进入／退出方程在各自风险集中以次年进入或退出指示为Y，用<span class="math inline">\(M\)</span>及原控制解释；当前四大组的退出为次年非四大，四大之间换所不是退出。缺次年身份不能记退出。</p>
@@ -7487,8 +7487,8 @@ Risk_{it\text{或}t+1}=\text{firm FE}+\text{industry × year FE}
 <p><span id="eq-big4-nested-adjustment"><span class="math display">\[
 \begin{aligned}
 Y_{it}&amp;=a+b_1Big4_{it}+e_{it},\\
-Y_{it}&amp;=\text{firm FE}+\text{industry × year FE}+b_2Big4_{it}+e_{it},\\
-Y_{it}&amp;=\text{firm FE}+\text{industry × year FE}+b_3Big4_{it}+X'_{it}\gamma+e_{it}.
+Y_{it}&amp;=\text{Firm FE}+\text{Industry × year FE}+b_2Big4_{it}+e_{it},\\
+Y_{it}&amp;=\text{Firm FE}+\text{Industry × year FE}+b_3Big4_{it}+X'_{it}\gamma+e_{it}.
 \end{aligned}
 \tag{20}\]</span></span></p>
 <p>三列的<span class="math inline">\(b\)</span>均衡量同样本中的四大差异：第一列为原始差异，第二列调整公司和行业年度共同因素，第三列再调整当期客户特征。列间变化用于观察结果对调整的敏感性。</p>
@@ -7554,7 +7554,7 @@ Annual Client Matching: Five and Nine Selection Controls · <a href="tables/big4
 <p>Johnstone 与 Bedard（2004）直接观察事务所的客户接受和终止决定；本节使用公共数据刻画进入与退出，接受或终止的发起方需结合公告识别。</p>
 <p><strong>流动回归。</strong> 分别在当前四大与当前非四大客户中估计：</p>
 <p><span class="math display">\[
-Transition_{i,t+1}=\text{firm FE}+\text{industry}\times\text{year FE}+\beta Signal_{it}+\gamma'X_{it}+\varepsilon_{it}.
+Transition_{i,t+1}=\text{Firm FE}+\text{industry}\times\text{Year FE}+\beta Signal_{it}+\gamma'X_{it}+\varepsilon_{it}.
 \]</span></p>
 <p>当前四大组的<span class="math inline">\(Transition\)</span>是次年退出，当前非四大组是次年进入；<span class="math inline">\(Signal\)</span>分别为MAO、GC、违规公告或未预警综合失败。只保留相邻两年身份可观察的公司，控制九项客户特征及mis_dummy，按公司聚类。</p>
 <p>相邻年度风险集中，非四大进入为342/61,459（0.56%），四大退出为283/4,396（6.44%）。MAO四大客户44/103次年退出（42.72%），非MAO客户239/4,293（5.57%）；44个事件涉及40家公司，其中一个后任事务所名称与ID缺失。没有次年观测不能记为退出。</p>
@@ -7630,7 +7630,7 @@ L^m_{it}=\mathbf1\{\exists e:m_e=m,\ d_{it}&lt;a_{ie}\le d_{it}+3\text{年}\}.
 <h4 class="anchored" data-anchor-id="a未来进入者是否已有较少的历史问题">A．未来进入者是否已有较少的历史问题？</h4>
 <p>风险集为当前非四大、下一财年身份可观察；<span class="math inline">\(Enter_{i,t+1}=1\)</span>指次年四大，对照为次年仍非四大，不要求永远非四大，也不要求未来留任。估计</p>
 <p><span id="eq-big4-historical-entry"><span class="math display">\[
-H^m_{it}=\text{firm FE}+\text{industry × year FE}+\beta_m Enter_{i,t+1}
+H^m_{it}=\text{Firm FE}+\text{Industry × year FE}+\beta_m Enter_{i,t+1}
 +X'_{it}\gamma_m+e^m_{it}.
 \tag{22}\]</span></span></p>
 <p>最终45,494公司年、4,179公司簇，247转入／45,247未转入。历史违规概率低1.72个百分点（p=0.0917），Strict／Fin／Raw历史重述均不显著。事前风险选择的支持集中于违规，后任审计师也可能影响历史问题的发现。</p>
@@ -7644,7 +7644,7 @@ H^m_{it}=\text{firm FE}+\text{industry × year FE}+\beta_m Enter_{i,t+1}
 <section id="b四大意见对后来披露问题的关系是否更强" class="level4">
 <h4 class="anchored" data-anchor-id="b四大意见对后来披露问题的关系是否更强">B．四大意见对后来披露问题的关系是否更强？</h4>
 <p><span id="eq-big4-later-warning"><span class="math display">\[
-L^m_{it}=\text{firm FE}+\text{industry × year FE}+b_m Big4_{it}+d_m M_{it}
+L^m_{it}=\text{Firm FE}+\text{Industry × year FE}+b_m Big4_{it}+d_m M_{it}
 +h_m Big4_{it}M_{it}+X'_{it}\gamma_m+e^m_{it}.
 \tag{23}\]</span></span></p>
 <p>非四大意见关系为<span class="math inline">\(d_m\)</span>，四大为<span class="math inline">\(d_m+h_m\)</span>，组间差异为<span class="math inline">\(h_m\)</span>，后两项使用完整聚类协方差推断。最终49,049公司年、4,390公司簇；MAO四大67／非四大2,860，GC四大35／非四大1,529。MAO×Big4对Raw重述为0.163487（p=0.0360），GC×Big4为0.232141（p=0.0317）；其他重述口径和违规交互不显著。交互项直接检验两组预测关系的差异；后续重述同时包含发现与纠正过程。</p>
@@ -7659,10 +7659,10 @@ MAO／GC：三年后续披露关系及组间交互检验 · <a href="tables/mond
 <h4 class="anchored" data-anchor-id="c退出者与留任者的风险究竟有何差异">C．退出者与留任者的风险究竟有何差异？</h4>
 <p>风险集为当前四大、下一财年身份可观察，<span class="math inline">\(Exit_{i,t+1}=1\)</span>指次年非四大。总体和意见交互分别估计</p>
 <p><span class="math display">\[
-Y^m_{it}=\text{firm FE}+\text{industry × year FE}+b_m Exit_{i,t+1}
+Y^m_{it}=\text{Firm FE}+\text{Industry × year FE}+b_m Exit_{i,t+1}
 +X'_{it}\gamma_m+e^m_{it},
 \]</span> <span id="eq-big4-exit-risk"><span class="math display">\[
-Y^m_{it}=\text{firm FE}+\text{industry × year FE}+b_m Exit_{i,t+1}+d_mM_{it}
+Y^m_{it}=\text{Firm FE}+\text{Industry × year FE}+b_m Exit_{i,t+1}+d_mM_{it}
 +h_m Exit_{i,t+1}M_{it}+X'_{it}\gamma_m+e^m_{it}.
 \tag{24}\]</span></span></p>
 <p><span class="math inline">\(Y\)</span>分别取后来违规<span class="math inline">\(L\)</span>和历史违规<span class="math inline">\(H\)</span>。意见组内退出−留任为<span class="math inline">\(b_m+h_m\)</span>，不单独截取极小意见子样本改变FE。最终2,944公司年、418公司簇；132退出／2,812留任，MAO19／30，GC8／17。</p>
@@ -7690,7 +7690,7 @@ Y^m_{it}=\text{firm FE}+\text{industry × year FE}+b_m Exit_{i,t+1}+d_mM_{it}
 <p><strong>匹配加权ERC结果。</strong> 调整可观察客户特征后，四大客户仍具有显著更高的盈利反应系数。car_m1_p1、car_m2_p2和car_m3_p3的ERC差值分别为0.144427（SE=0.040920，p=0.0004）、0.199523（SE=0.052339，p=0.0001）和0.190738（SE=0.050244，p=0.0002）。估计使用完整正负消息样本；UE增加0.01时，三个窗口中四大相对非四大的额外CAR反应分别约为0.1444、0.1995和0.1907个百分点。</p>
 <p><strong>加权ERC方程。</strong></p>
 <p><span class="math display">\[
-CAR_{it}^{(w)}=\text{firm FE}+\text{year FE}+\delta Big4_{it}+\beta UE_{it}+\theta_w(Big4_{it}\times UE_{it})+\gamma'X_{it}+\varepsilon_{it}.
+CAR_{it}^{(w)}=\text{Firm FE}+\text{Year FE}+\delta Big4_{it}+\beta UE_{it}+\theta_w(Big4_{it}\times UE_{it})+\gamma'X_{it}+\varepsilon_{it}.
 \]</span></p>
 <p><span class="math inline">\(UE=(EPS_{actual}-EPS_{forecast})/P_{-1}\)</span>，预测为公告前180天中位数；<span class="math inline">\(w\)</span>依次为[−1,+1]、[−2,+2]、[−3,+3]，Y为市场调整CAR。<span class="math inline">\(X\)</span>包含市值对数、MB及预测覆盖对数，以匹配权重估计，按公司聚类。</p>
 <p><strong>做法。</strong> 将前文审计结果年度客户 PSM 的匹配步骤扩展到市场样本：以当年四大身份为处理状态，非四大合并本土八大与Other，Logit包含规模、杠杆、亏损、ROA、Z-score、杠杆变化、报告时滞、经营现金流、年龄及原始<code>mis_dummy</code>，并加入行业与年份预测项。沿用按年份中位数、必要时全样本中位数插补的规则；采用1:1最近邻、有放回、无卡尺，并列匹配分摊权重。行业和年份进入Logit，<strong>不是行业×年份内精确匹配</strong>。四大事件权重为1，对照权重为被选中的累计匹配份额。匹配后用这些权重估计本节加权ERC方程，保留公司与财年固定效应、原三项控制和公司聚类；不缩尾。</p>
@@ -7737,7 +7737,7 @@ CAR_{it}^{(w)}=\text{firm FE}+\text{year FE}+\delta Big4_{it}+\beta UE_{it}+\the
 <p><strong>匹配后回归方程。</strong> 使用 <a href="#eq-big4-erc" class="quarto-xref">式&nbsp;10</a> 的完整主项和交互，保留公司／财年FE、三项控制与公司聚类，回归按固定匹配权重<span class="math inline">\(w_{it}\)</span>最小化</p>
 <p><span id="eq-big4-weighted-erc"><span class="math display">\[
 \sum_{it\in\mathcal S_{match}}w_{it}
-\left[CAR_{it}-\text{firm FE}-\text{year FE}-\delta Big4_{it}-\beta UE_{it}
+\left[CAR_{it}-\text{Firm FE}-\text{Year FE}-\delta Big4_{it}-\beta UE_{it}
 -\theta Big4_{it}UE_{it}-X'_{it}\gamma\right]^2.
 \tag{25}\]</span></span></p>
 <p>匹配在全部正负消息共同可估计样本上进行，整体ERC沿用这一匹配样本。正向消息子样本的组间可比性需要在该子样本中另行检查。</p>
@@ -7747,7 +7747,7 @@ CAR_{it}^{(w)}=\text{firm FE}+\text{year FE}+\delta Big4_{it}+\beta UE_{it}+\the
 <p><strong>识别思路。</strong> 在既有客户中考察审计师声誉消息公布后的价格反应。中国消息到达时点、事件日客户身份和共同冲击仍需核查。主消息为安达信2002年1月10日公开承认销毁安然审计文件，中国暂对齐1月11日，[0,+2]为1月11、14、15日。</p>
 <p><span id="eq-big4-andersen-car"><span class="math display">\[
 CAR_i^{[0,2]}=a+\delta_A Andersen_i+\delta_B Big4_i
-+\text{industry FE}+e_i,\qquad
++\text{Industry FE}+e_i,\qquad
 CAR_i^{[0,2]}=\sum_{d\in\{1/11,1/14,1/15\}}(r_{id}-r_{md}).
 \tag{26}\]</span></span></p>
 <p>其他非四大（含本土八大）为基准，安达信相对四大为<span class="math inline">\(\delta_A-\delta_B\)</span>。行业FE、HC1标准误、不缩尾，系数保留小数收益单位。名单为2001财年末批客户，不按事件日前独立名册构造，存在事后留任选择。剔除江西铜业600362，因为其1月11日A股上市首日约+103%收益混淆比较。</p>
@@ -7776,12 +7776,12 @@ CAR_i^{[0,2]}=\sum_{d\in\{1/11,1/14,1/15\}}(r_{id}-r_{md}).
 <p><span id="eq-big4-andersen-eps"><span class="math display">\[
 UE_i=\frac{EPS_{2001}-EPS_{2000}}{P_{公告前}},\quad
 CAR_i=a+\delta_A A_i+\delta_B Big4_i+\beta UE_i
-+\theta_A A_iUE_i+\theta_B Big4_iUE_i+\text{industry FE}+e_i.
++\theta_A A_iUE_i+\theta_B Big4_iUE_i+\text{Industry FE}+e_i.
 \tag{27}\]</span></span></p>
 <p>EPS年度差已对核实年度应用本轮原报还原，未核实年度仍保留数据库值，不另作拆股调整；该量不是分析师surprise。年报CAR[−1,+1]仍要求三日完整、按公司聚类。行业FE下，安达信−四大斜率差为：any：0.260661（SE=0.258713，p=0.3139），N=953；domestic：0.206669（SE=0.270094，p=0.4444），N=947。无公司FE。</p>
 <p>年报event study以EPS增加／不变或下降分组，令<span class="math inline">\(T_i=1\{\Delta EPS_i&gt;0\}\)</span>、<span class="math inline">\(A_i^g\)</span>表示安达信／四大／其他组，原受限方程为</p>
 <p><span id="eq-big4-andersen-annual-path"><span class="math display">\[
-\log P_{ik}=\text{firm FE}+\text{event time FE}+\text{trading date FE}
+\log P_{ik}=\text{Firm FE}+\text{Event time FE}+\text{Trading date FE}
 +\sum_{k\ne-1}\sum_g\beta_{gk}A_i^gT_iD^k+e_{ik}.
 \tag{28}\]</span></span></p>
 <p>窗口−5至+5、−1基期，原方程不加组别×事件日低阶项；公司、事件日和实际交易日FE，公司聚类。更新后的事前路径联合检验p值为0.0044、0.0443、0.0027、0.0222；与事件期系数同时判断，不能只看公告后的差值。</p>
@@ -7794,23 +7794,23 @@ CAR_i=a+\delta_A A_i+\delta_B Big4_i+\beta UE_i
 <h3 class="anchored" data-anchor-id="ey-dahua-market">5.3 安永—大华：市场消息斜率的DID与IV</h3>
 <p><strong>处理与样本。</strong> 固定2001财年46家大华客户为处理组，以同年其他非四大客户为对照；<span class="math inline">\(G_i\)</span>为处理身份，<span class="math inline">\(Post_t=1\{t\ge2002\}\)</span>，<span class="math inline">\(Z_{it}=G_iPost_t\)</span>。审计收购面板覆盖1997—2007财年，市场回归再要求公告消息、完整CAR窗口及控制有效。分析师消息版三个窗口分别有1,049、1,007、984条事件，处理组事前仅2条；年度EPS变化代理版有8,094、7,977、7,867条，处理组事前分别163、162、162条。</p>
 <p>分析师消息为实际EPS减公告前180天预测中位数，再除公告前股价；代理消息为<span class="math inline">\((EPS_t-EPS_{t-1})/P_{-1}\)</span>。Y为[−1,+1]、[−2,+2]、[−3,+3]市场调整CAR。</p>
-<p>令 <span class="math inline">\(U_{it}\)</span> 为按公告前价格缩放的盈利消息，<span class="math inline">\(CAR_{it}^{(w)}\)</span> 为窗口 <span class="math inline">\(w\)</span> 的公告累计收益；<span class="math inline">\(M_{it}\)</span> 包含市值对数、市净率，分析师消息版本另加预测数对数。市场回归使用公司固定效应 <span class="math inline">\(\text{firm FE}\)</span>、年份固定效应 <span class="math inline">\(\text{year FE}\)</span>，按公司聚类。</p>
+<p>令 <span class="math inline">\(UE_{it}\)</span> 为按公告前价格缩放的盈利消息，<span class="math inline">\(CAR_{it}^{(w)}\)</span> 为窗口 <span class="math inline">\(w\)</span> 的公告累计收益；<span class="math inline">\(M_{it}\)</span> 包含市值对数、市净率，分析师消息版本另加预测数对数。市场回归使用公司固定效应 <span class="math inline">\(\text{Firm FE}\)</span>、年份固定效应 <span class="math inline">\(\text{Year FE}\)</span>，按公司聚类。</p>
 <p><span class="math display">\[
 \begin{aligned}
-CAR_{it}^{(w)}={}&amp;\delta_0 Z_{it}+\delta_1 Z_{it}U_{it}
-+aU_{it}+bG_iU_{it}+cPost_tU_{it}\\
-&amp;+M_{it}'\theta+\text{firm FE}+\text{year FE}+e_{it}.
+CAR_{it}^{(w)}={}&amp;\delta_0 Z_{it}+\delta_1 Z_{it}UE_{it}
++aUE_{it}+bG_iUE_{it}+cPost_tUE_{it}\\
+&amp;+M_{it}'\theta+\text{Firm FE}+\text{Year FE}+e_{it}.
 \end{aligned}
 \]</span></p>
-<p>表中“DID × earnings news”报告 <span class="math inline">\(\delta_1\)</span>，即处理组相对对照组在转入前后的盈利消息反应斜率变化。IV则把实际四大身份 <span class="math inline">\(Big4_{it}\)</span> 和交互项 <span class="math inline">\(Big4_{it}U_{it}\)</span> 都视为内生变量，用 <span class="math inline">\(Z_{it}\)</span> 和 <span class="math inline">\(Z_{it}U_{it}\)</span> 两个工具联合预测。令 <span class="math inline">\(X_{1,it}=Big4_{it}\)</span>、<span class="math inline">\(X_{2,it}=Big4_{it}U_{it}\)</span>，<span class="math inline">\(W_{it}=(U_{it},G_iU_{it},Post_tU_{it},M_{it}')'\)</span>，两条第一阶段与二阶段为：</p>
+<p>表中“DID × earnings news”报告 <span class="math inline">\(\delta_1\)</span>，即处理组相对对照组在转入前后的盈利消息反应斜率变化。IV则把实际四大身份 <span class="math inline">\(Big4_{it}\)</span> 和交互项 <span class="math inline">\(Big4_{it}UE_{it}\)</span> 都视为内生变量，用 <span class="math inline">\(Z_{it}\)</span> 和 <span class="math inline">\(Z_{it}UE_{it}\)</span> 两个工具联合预测。令 <span class="math inline">\(X_{1,it}=Big4_{it}\)</span>、<span class="math inline">\(X_{2,it}=Big4_{it}UE_{it}\)</span>，<span class="math inline">\(W_{it}=(UE_{it},G_iUE_{it},Post_tUE_{it},M_{it}')'\)</span>，两条第一阶段与二阶段为：</p>
 <p><span class="math display">\[
-X_{k,it}=\pi_{k1}Z_{it}+\pi_{k2}Z_{it}U_{it}+W_{it}'\gamma_k+\text{firm FE}+\text{year FE}+v_{k,it},\quad k=1,2,
+X_{k,it}=\pi_{k1}Z_{it}+\pi_{k2}Z_{it}UE_{it}+W_{it}'\gamma_k+\text{Firm FE}+\text{Year FE}+v_{k,it},\quad k=1,2,
 \]</span></p>
 <p><span class="math display">\[
-CAR_{it}^{(w)}=\beta_0\widehat X_{1,it}+\beta_1\widehat X_{2,it}+W_{it}'\eta+\text{firm FE}+\text{year FE}+\varepsilon_{it}.
+CAR_{it}^{(w)}=\beta_0\widehat X_{1,it}+\beta_1\widehat X_{2,it}+W_{it}'\eta+\text{Firm FE}+\text{Year FE}+\varepsilon_{it}.
 \]</span></p>
 <p><strong>主要结果。</strong> 分析师消息和年度EPS变化代理均按修复后的EPS重算；DID与IV交互的精确结果及KP诊断见更新表。处理组事前分析师消息支持仍很少，不能据个别显著项形成稳定认证因果结论。</p>
-<p>表中“IV: Big4 × earnings news”报告 <span class="math inline">\(\beta_1\)</span>。交互项由它自己的第一阶段预测，不能用 <span class="math inline">\(\widehat{Big4}_{it}\times U_{it}\)</span> 替代。市场表保留原始斜率单位；市场模型按双内生变量计算KP诊断，审计结果模型的42.56则对应另一第一阶段。</p>
+<p>表中“IV: Big4 × earnings news”报告 <span class="math inline">\(\beta_1\)</span>。交互项由它自己的第一阶段预测，不能用 <span class="math inline">\(\widehat{Big4}_{it}\times UE_{it}\)</span> 替代。市场表保留原始斜率单位；市场模型按双内生变量计算KP诊断，审计结果模型的42.56则对应另一第一阶段。</p>
 </section>
 </section>
 <section id="big4-synthesis" class="level2">

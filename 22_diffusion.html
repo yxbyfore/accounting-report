@@ -272,7 +272,7 @@ window.Quarto = {
 <p><strong>回归方程与设定</strong></p>
 <p>对供应商和客户冲击分别估计两向固定效应模型：</p>
 <p><span class="math display">\[
-\operatorname{Big4}_{it} = \sum_{k \in \{-5,\ldots,5\} \setminus \{-1\}} \beta_k^s \cdot \mathbf{1}\{t - T_i^s = k\} + \alpha_i + \lambda_t + \varepsilon_{it}, \qquad s \in \{\mathrm{supplier}, \mathrm{client}\}.
+\operatorname{Big4}_{it} = \sum_{k \in \{-5,\ldots,5\} \setminus \{-1\}} \beta_k^s \cdot \mathbf{1}\{t - T_i^s = k\} + \text{Firm FE} + \text{Year FE} + \varepsilon_{it}, \qquad s \in \{\mathrm{supplier}, \mathrm{client}\}.
 \]</span></p>
 <p>因变量 <span class="math inline">\(\operatorname{Big4}_{it}\)</span> 为焦点公司 <span class="math inline">\(i\)</span> 在 <span class="math inline">\(t\)</span> 年是否聘请四大；<span class="math inline">\(T_i^s\)</span> 为其供应链伙伴首次转向四大的年份。事件窗口取 <span class="math inline">\([-5, +5]\)</span> 并对两端做 endpoint binning（合并 <span class="math inline">\(k \le -5\)</span> 与 <span class="math inline">\(k \ge 5\)</span>），基期为 <span class="math inline">\(k = -1\)</span>。模型吸收 firm FE 和 year FE，标准误在 firm level 进行 cluster。基准回归未加入额外财务控制变量。</p>
 <p><strong>样本</strong></p>
@@ -307,9 +307,9 @@ window.Quarto = {
 <p><strong>回归／统计设定。</strong> 单位为焦点公司—年，因变量为事务所类别采用。伙伴事件虚拟变量进入 TWFE，公司和年份 FE、公司聚类；当前年度命令无额外控制。 <a href="#settings-03_diffusion">变量与回归设定</a>。</p>
 <p>设 <span class="math inline">\(PartnerBig4_{it}^k\)</span> 表示公司 <span class="math inline">\(i\)</span> 的客户或供应商在相对事件时间 <span class="math inline">\(k\)</span> 首次转向四大的暴露指标，<span class="math inline">\(Y_{it}\)</span> 为公司 <span class="math inline">\(i\)</span> 在年份 <span class="math inline">\(t\)</span> 的审计师采用指标。主回归为：</p>
 <p><span class="math display">\[
-Y_{it}=\sum_{k\neq -1}\beta_k PartnerBig4_{it}^k+X_{it}'\gamma+\mu_i+\lambda_t+\varepsilon_{it}.
+Y_{it}=\sum_{k\neq -1}\beta_k PartnerBig4_{it}^k+X_{it}'\gamma+\text{Firm FE}+\text{Year FE}+\varepsilon_{it}.
 \]</span></p>
-<p>其中，<span class="math inline">\(k=-1\)</span> 为事件前一年，<span class="math inline">\(X_{it}\)</span> 为当前规格的时变控制变量，<span class="math inline">\(\mu_i\)</span> 和 <span class="math inline">\(\lambda_t\)</span> 分别为公司与年份固定效应。基准结果令 <span class="math inline">\(Y_{it}=Big4_{it}\)</span>。</p>
+<p>其中，<span class="math inline">\(k=-1\)</span> 为事件前一年，<span class="math inline">\(X_{it}\)</span> 为当前规格的时变控制变量，<span class="math inline">\(\text{Firm FE}\)</span> 和 <span class="math inline">\(\text{Year FE}\)</span> 分别为公司与年份固定效应。基准结果令 <span class="math inline">\(Y_{it}=Big4_{it}\)</span>。</p>
 <p>识别网络传导需要区分伙伴换所的影响与双方共同面对的融资、国际化或行业冲击。后文结合关系定义、相对规模与随机事件时点进行诊断。</p>
 <p><span id="full-03_diffusion-2"></span></p>
 </section>
